@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 
 const postsDirectory = path.join(process.cwd(), 'md');
 
-export function getSortedPostsData() {
+export default function getSortedPostsData() {
     const fileNames = fs.readdirSync(postsDirectory);
     const allPostsData = fileNames.map(fileName => {
         const id = fileName.replace(/\.md$/, ''); // 从文件名中提取 id

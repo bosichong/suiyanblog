@@ -1,11 +1,11 @@
-import { getSortedPostsData } from '@/utils/parseMd';
-import Layout from '@/components/layout';
+import getSortedPostsData from '../utils/parseMd';
+import Layout from '../components/layout';
 import { Pagination } from '@nextui-org/react';
 import React, { useState } from 'react';
-import formatDate from "@/utils/formatDate";
-import { Card, CardHeader, CardBody, CardFooter, Divider, Link, Image } from '@nextui-org/react';
+import formatDate from "../utils/formatDate";
+import { Card, CardHeader, CardBody, CardFooter, Link } from '@nextui-org/react';
 import Head from "next/head.js";
-import config from "@/config";
+import config from "../config";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();

@@ -1,5 +1,5 @@
-import Layout from "@/components/Layout";
-import config from "@/config.js";
+import Layout from "../components/Layout";
+import config from "../config.js";
 import Head from "next/head";
 import {Link} from "@nextui-org/react";
 import {Image} from "@nextui-org/react";

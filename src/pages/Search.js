@@ -1,10 +1,10 @@
-import { getSortedPostsData } from '@/utils/parseMd';
+import getSortedPostsData from '../utils/parseMd';
 import Head from 'next/head';
 import React, { useState, useEffect } from 'react';
 import {Input, Link} from '@nextui-org/react';
-import Layout from "@/components/Layout";
-import SearchIco from "@/components/ico/Search";
-import config from "@/config.js";
+import Layout from "../components/Layout";
+import SearchIco from "../components/ico/Search";
+import config from "../config.js";
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData();

@@ -1,10 +1,13 @@
 // pages/posts/[id].js
 // 导入用于获取排序后的文章数据的函数
-import { getSortedPostsData } from '@/utils/parseMd';
+
 import ReactMarkdown from 'react-markdown';
-import Layout from "@/components/Layout";
+
+import getSortedPostsData  from "../../utils/parseMd";
+
+import Layout from "../../components/layout";
 import styles from './[id].module.css';
-import formatDate from "@/utils/formatDate";
+import formatDate from "../../utils/formatDate";
 
 /**
  * 获取静态路径的函数

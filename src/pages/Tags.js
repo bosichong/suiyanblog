@@ -1,9 +1,9 @@
-import { getSortedPostsData } from '@/utils/parseMd';
+import getSortedPostsData from '../utils/parseMd';
 import Head from 'next/head';
 import React, { useState } from 'react';
-import Layout from '@/components/layout';
+import Layout from '../components/layout';
 import {Button, Link} from "@nextui-org/react";
-import config from "@/config.js";
+import config from "../config.js";
 
 function createTagsData(blogData) {
     const tagDict = {};

@@ -1,9 +1,11 @@
-import { getSortedPostsData } from '@/utils/parseMd';
+import getSortedPostsData from '../utils/parseMd';
+import Layout from '../components/layout';
+import config from "../config.js";
+
 import React from 'react';
-import Layout from '@/components/layout';
 import {Link} from "@nextui-org/react";
 import Head from 'next/head';
-import config from "@/config.js";
+
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData();

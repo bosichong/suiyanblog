@@ -3,7 +3,7 @@ import RSS from 'rss';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { getSortedPostsData } from './src/utils/parseMd.js'; // 确保这个路径是正确的
+import getSortedPostsData from './src/utils/parseMd.js'; // 确保这个路径是正确的
 import  config from './src/config.js';
 
 // 获取当前文件的路径
