@@ -1,0 +1,43 @@
+{
+  "title": "JavaScript基础题",
+  "description": "JavaScript基础题，测试案例。",
+  "time": 2000,
+  "questions": [
+    {
+      "type": "单选题",
+      "question": "以下哪个关键字可以用于声明变量？",
+      "options": [
+        "const",
+        "let",
+        "set",
+        "get"
+      ],
+      "answer": "let"
+    },
+    {
+      "type": "多选题",
+      "question": "以下哪些条件会让if语句执行代码块内的内容",
+      "options": [
+        "条件表达式为true",
+        "条件表达式为非空字符串",
+        "条件表达式为非零数字",
+        "没有条件表达式"
+      ],
+      "answer": [
+        "条件表达式为true",
+        "条件表达式为非空字符串",
+        "条件表达式为非零数字"
+      ]
+    },
+    {
+      "type": "判断题",
+      "question": "JavaScript是一种强类型语言。",
+      "answer": "错误"
+    },
+    {
+      "type": "简答题",
+      "question": "HTML页面中写JavaScript时，会用到HTML的一个标签，它是",
+      "answer": "script"
+    }
+  ]
+}

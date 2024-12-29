@@ -1,0 +1,171 @@
+/* Blog Detail Page CSS Style */
+
+/* Container for the blog post */
+.blog_post_container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Blog post title */
+.blog_post_title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Blog post meta information */
+.blog_post_meta {
+    font-size: 0.875rem;
+    margin-bottom: 20px;
+}
+
+/* Blog post content */
+.blog_post_content {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Paragraphs */
+.blog_post_content p {
+    margin-bottom: 1em;
+}
+
+/* Headings */
+.blog_post_content h1,
+.blog_post_content h2,
+.blog_post_content h3,
+.blog_post_content h4,
+.blog_post_content h5,
+.blog_post_content h6 {
+    font-weight: bold;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.blog_post_content h2{
+    font-size: 1.5em;
+}
+
+.blog_post_content h3{
+    font-size: 1.3em;
+}
+
+.blog_post_content h4,
+.blog_post_content h5,
+.blog_post_content h6{
+    font-size: 1.2em;
+}
+
+
+/* Images */
+.blog_post_content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+
+
+
+
+
+/* Code blocks */
+.blog_post_content pre {
+    background-color: #282c34; /* 暗色背景，适合代码高亮 */
+    color: #abb2bf; /* 亮色文字，提高对比度 */
+    font-family: 'Source Code Pro', 'Monaco', 'Courier New', monospace; /* 等宽字体 */
+    padding: 20px;
+    border-radius: 8px; /* 圆角边框 */
+    overflow-x: auto; /* 水平滚动条 */
+    line-height: 1.4; /* 行高 */
+    white-space: pre-wrap; /* 保持空格和换行 */
+    word-wrap: break-word; /* 长单词换行 */
+    tab-size: 4; /* 制表符宽度 */
+}
+
+.blog_post_content pre code {
+    font-size: 0.875rem; /* 代码字体大小 */
+}
+
+/* 行号样式，如果使用 */
+.blog_post_content pre.line-numbers {
+    position: relative;
+    padding-left: 40px; /* 留出空间显示行号 */
+}
+
+.blog_post_content pre.line-numbers code {
+    position: relative;
+}
+
+/* 行号本身 */
+.line-numbers .line-number::before {
+    content: attr(line-number);
+    position: absolute;
+    left: 0;
+    text-align: right;
+    width: 30px;
+    opacity: 0.5; /* 行号颜色淡一些 */
+}
+
+/* 高亮当前行 */
+.blog_post_content pre .highlight-line {
+    background-color: #3e4451; /* 当前行高亮背景色 */
+}
+
+/* 特定语言的高亮样式，例如 JavaScript */
+.blog_post_content pre code.language-javascript {
+    /* 特定语言的高亮样式 */
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .blog_post_content pre {
+        border-radius: 0;
+        padding: 10px;
+    }
+}
+
+
+
+
+
+
+/* Blockquotes */
+.blog_post_content blockquote {
+    border-left: 4px solid #ddd;
+    padding-left: 15px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 1em;
+}
+
+/* Tables */
+.blog_post_content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+
+.blog_post_content th,
+.blog_post_content td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Links */
+.blog_post_content a {
+    text-decoration: none;
+}
+
+.blog_post_content a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .blog_post_container {
+        padding: 10px;
+    }
+}
