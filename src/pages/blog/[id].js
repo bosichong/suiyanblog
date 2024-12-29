@@ -5,7 +5,7 @@ import ReactMarkdown from 'react-markdown';
 
 import getSortedPostsData  from "../../utils/parseMd";
 
-import Layout from "../../components/layout";
+import Layout from "../../components/Layout";
 import styles from './[id].module.css';
 import formatDate from "../../utils/formatDate";
 

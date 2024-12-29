@@ -1,5 +1,5 @@
 import getSortedPostsData from '../utils/parseMd';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import { Pagination } from '@nextui-org/react';
 import React, { useState } from 'react';
 import formatDate from "../utils/formatDate";

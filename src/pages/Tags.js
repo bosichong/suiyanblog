@@ -1,7 +1,7 @@
 import getSortedPostsData from '../utils/parseMd';
 import Head from 'next/head';
 import React, { useState } from 'react';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import {Button, Link} from "@nextui-org/react";
 import config from "../config.js";
 

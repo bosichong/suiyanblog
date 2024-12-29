@@ -1,5 +1,5 @@
 import getSortedPostsData from '../utils/parseMd';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import config from "../config.js";
 
 import React from 'react';
