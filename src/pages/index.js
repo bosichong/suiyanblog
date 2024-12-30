@@ -49,7 +49,7 @@ function Home({ allPostsData }) {
                     <p className={'text-md'}>{post.description}</p>
                   </CardBody>
 
-                  <CardFooter>
+                  <CardFooter className={'text-sm'}>
                     <Link href={`/blog/${post.id}`} className="block justify-start w-1/2">
                       阅读全文 ➞
                     </Link>

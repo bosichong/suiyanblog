@@ -12,7 +12,7 @@ export default function Footer (){
                 <ul className="mt-4 flex justify-center gap-6 md:gap-8">
                     <li>
                         <a
-                            href="https://github.com/bosichong/suiyan"
+                            href="https://github.com/bosichong/"
                             rel="noreferrer"
                             target="_blank"
                             className="artlist m-auto"
@@ -96,7 +96,7 @@ export default function Footer (){
 
                     <li>
                         <a
-                            href="https://suiyan.cc/rss.xml"
+                            href="https://www.suiyan.cc/rss.xml"
                             rel="noreferrer"
                             target="_blank"
                             className="artlist m-auto"
