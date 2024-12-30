@@ -13,6 +13,20 @@ def git_push():
 
 def main():
     try:
+        # 运行 node gs.js
+        subprocess.check_call(['node', 'gs.js'])
+    except subprocess.CalledProcessError as e:
+        print(f"Node gs.js failed with error {e}.")
+        return
+
+    try:
+        # 运行 node gr.js
+        subprocess.check_call(['node', 'gr.js'])
+    except subprocess.CalledProcessError as e:
+        print(f"Node gr.js failed with error {e}.")
+        return
+
+    try:
         subprocess.check_call(['git', 'add', '.'])
         print("Git add successful.")
     except subprocess.CalledProcessError as e:
