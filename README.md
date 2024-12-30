@@ -1,3 +1,3 @@
 # 碎言博客
 
-简介稍后更新
+https//www.suiyan.cc

@@ -1,6 +1,7 @@
 {
   "name": "suiyanblog",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,11 +10,13 @@
     "rss": "node rssGenerator.js",
     "map": "next-sitemap",
     "start": "next start",
+    "nb": "node scripts/createBlog.js",
     "lint": "next lint"
   },
   "dependencies": {
     "@nextui-org/react": "^2.6.10",
     "date-fns": "^4.1.0",
+    "dateformat": "^5.0.3",
     "framer-motion": "^11.15.0",
     "gray-matter": "^4.0.3",
     "next": "15.1.2",
