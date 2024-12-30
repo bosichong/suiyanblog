@@ -1,14 +1,12 @@
 {
   "name": "suiyanblog",
   "version": "0.1.0",
-  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "postbuild": "next-sitemap",
-    "rss": "node rssGenerator.js",
-    "map": "next-sitemap",
+    "rss": "node gr.js && node gs.js",
     "start": "next start",
     "nb": "node scripts/createBlog.js",
     "lint": "next lint"
