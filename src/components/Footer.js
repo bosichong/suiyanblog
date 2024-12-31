@@ -1,4 +1,4 @@
-
+import ScrollToTopButton from "./ScrollToTopButton";
 
 export default function Footer (){
     return(
@@ -119,7 +119,9 @@ export default function Footer (){
                 <div className={'mx-auto mt-4 max-w-md text-center text-xs '}>&copy; 2017 - 2025 <a href="https://www.suiyan.cc">SuiYan 碎言博客</a></div>
 
             </div>
-
+    <ScrollToTopButton>
+        ▲
+    </ScrollToTopButton>
         </footer>
     )
 }
