@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@giscus/react": "^3.0.0",
     "@nextui-org/react": "^2.6.10",
     "date-fns": "^4.1.0",
     "dateformat": "^5.0.3",

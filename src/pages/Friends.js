@@ -3,6 +3,9 @@ import config from "../config.js";
 import Head from "next/head";
 import {Link} from "@nextui-org/react";
 import {Image} from "@nextui-org/react";
+import giscusConfig from "@/giscusConfigs";
+import Giscus from "@giscus/react";
+import React from "react";
 
 const Friends = () => {
     const links = config.links;
@@ -54,6 +57,19 @@ const Friends = () => {
                         ))}
                     </div>
                 </div>
+                <Giscus
+                    repo={giscusConfig.repo}
+                    repoId={giscusConfig.repoId}
+                    category={giscusConfig.category}
+                    categoryId={giscusConfig.categoryId}
+                    mapping={giscusConfig.mapping}
+                    lang={giscusConfig.lang}
+                    strict="0"
+                    reactionsEnabled="1"
+                    emitMetadata="0"
+                    inputPosition="bottom"
+                    theme="dark_dimmed"
+                />
             </main>
         </Layout>
     );

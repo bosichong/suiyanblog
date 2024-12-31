@@ -46,7 +46,7 @@ function Home({ allPostsData }) {
                   </CardHeader>
 
                   <CardBody>
-                    <p className={'text-md'}>{post.description}</p>
+                    <p className={'text-sm'}>{post.description}</p>
                   </CardBody>
 
                   <CardFooter className={'text-sm'}>

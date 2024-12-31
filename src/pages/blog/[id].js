@@ -9,6 +9,12 @@ import Layout from "../../components/Layout";
 import styles from './[id].module.css';
 import formatDate from "../../utils/formatDate";
 
+import Giscus from '@giscus/react';
+import giscusConfig from '../../giscusConfigs';
+import config from "@/config";
+import Head from "next/head";
+import React from "react";
+
 /**
  * 获取静态路径的函数
  * @returns {Object} 包含路径和回退策略的对象
@@ -58,6 +64,10 @@ export async function getStaticProps({ params }) {
 function Post({ post }) {
     return (
         <Layout>
+            <Head>
+                <title>{post.title} | {config.BLOG_NAME_EN} {config.BLOG_NAME}</title>
+                <meta name="description" content={post.description}/>
+            </Head>
             <main className={'container max-w-3xl mx-auto leading-normal text-lg font-extralight'}>
                 <div className={'p-4'}>
                     <h1 className={styles.blog_post_title}>{post.title}</h1>
@@ -68,16 +78,31 @@ function Post({ post }) {
                         </div>
                     </div>
 
-                <div className={styles.blog_post_content}>
-                    <ReactMarkdown>{post.content}</ReactMarkdown>
+                    <div className={styles.blog_post_content}>
+                        <ReactMarkdown>{post.content}</ReactMarkdown>
+                    </div>
+
+                    <Giscus
+                        repo={giscusConfig.repo}
+                        repoId={giscusConfig.repoId}
+                        category={giscusConfig.category}
+                        categoryId={giscusConfig.categoryId}
+                        mapping={giscusConfig.mapping}
+                        lang={giscusConfig.lang}
+                        strict="0"
+                        reactionsEnabled="1"
+                        emitMetadata="0"
+                        inputPosition="bottom"
+                        theme="dark_dimmed"
+                    />
+
                 </div>
 
-            </div>
+            </main>
 
-        </main>
-</Layout>
-)
-    ;
+        </Layout>
+    )
+        ;
 }
 
 // 导出文章页面组件
