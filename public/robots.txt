@@ -2,11 +2,3 @@
 User-agent: *
 Allow: /
 
-# Host
-Host: https://www.suiyan.cc
-
-# Sitemaps
-Sitemap: https://www.suiyan.cc/sitemap.xml
-
-# RSS Feed
-RSS: https://www.suiyan.cc/rss.xml
