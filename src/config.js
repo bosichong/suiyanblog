@@ -82,9 +82,9 @@ const config = {
         },
         {
             "site_name": "诺依阁的日常记录",
-            "site_url": "https://blog.nuoyis.com/",
+            "site_url": "https://blog.nuoyis.net/",
             "site_description": "更多好玩有趣的内容都在这里",
-            "site_avatar": "https://blog.nuoyis.com/favicon.ico"
+            "site_avatar": "https://blog.nuoyis.net/favicon.ico"
         },
         {
             "site_name": "图灵技术域",
