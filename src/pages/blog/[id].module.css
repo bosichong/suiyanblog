@@ -10,8 +10,8 @@
 /* Blog post title */
 .blog_post_title {
     font-size: 2rem;
-    font-weight: bold;
     margin-bottom: 20px;
+    color: #F7B750;
 }
 
 /* Blog post meta information */
@@ -38,9 +38,10 @@
 .blog_post_content h4,
 .blog_post_content h5,
 .blog_post_content h6 {
-    font-weight: bold;
+
     margin-top: 1.5em;
     margin-bottom: 0.5em;
+    color: #F7B750;
 }
 
 .blog_post_content h2{

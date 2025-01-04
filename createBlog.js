@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
 
-const ARTICLES_DIR = path.join(__dirname, '../md');
-const config = require('../src/config.js'); // 直接使用 require 加载配置文件
+const ARTICLES_DIR = path.join('./md');
+
 
 const createFileDir = (dir) => {
   if (!fs.existsSync(dir)) {
@@ -21,7 +21,7 @@ const createBlog = async (title = '博客标题', author = '', tag = '', filedir
     tag = "未分类";
   }
   if (!author) {
-    author = config.BLOG_AUTHOR; // 直接使用已加载的配置
+    author = "J.sky"; // 直接使用已加载的配置
   }
   const blogFilePath = path.join(ARTICLES_DIR, `${filedir}/${pagename}.md`);
   createFileDir(path.dirname(blogFilePath));
