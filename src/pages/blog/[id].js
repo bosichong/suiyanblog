@@ -69,7 +69,7 @@ function Post({ post }) {
                 <meta name="description" content={post.description}/>
             </Head>
             <main className={'container max-w-3xl mx-auto leading-normal text-lg font-extralight'}>
-                <div className={'p-4'}>
+                <article className={'p-4'}>
                     <h1 className={styles.blog_post_title}>{post.title}</h1>
                     <div className={"text-sm flex flex-wrap my-2"}>
                         作者:<span>{post.author}</span> · 发表于:
@@ -98,7 +98,7 @@ function Post({ post }) {
                         theme="dark_dimmed"
                     />
 
-                </div>
+                </article>
 
             </main>
 

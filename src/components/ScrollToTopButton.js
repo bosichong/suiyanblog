@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from "@nextui-org/react";
+import GoUp from "@/components/ico/GoUp";
 
 const ScrollToTopButton = ({ children }) => {
     const [isVisible, setIsVisible] = useState(false);
@@ -26,9 +27,9 @@ const ScrollToTopButton = ({ children }) => {
 
     return (
         isVisible && (
-            <Button size={"sm"} radius={"full"} onClick={scrollToTop} className="fixed w-8 bottom-4 right-4 p-2 focus:outline-none">
-                {children}
-            </Button>
+            <label size={"sm"} radius={"full"} onClick={scrollToTop} className="fixed w-8 bottom-4 right-4 p-2 transition-opacity hover:opacity-80 cursor-pointer">
+                <GoUp />
+            </label>
         )
     );
 };

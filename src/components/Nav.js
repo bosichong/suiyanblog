@@ -11,6 +11,7 @@ import {
 } from "@nextui-org/react";
 import {ThemeSwitcher} from "@/components/ThemeSwitcher";
 import config from "@/config";
+import HomeIco from "@/components/ico/HomeIco";
 
 
 export default function Nav() {
