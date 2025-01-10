@@ -19,7 +19,7 @@ export function ThemeSwitcher() {
     return (
         <div>
 
-            <label className={"group relative max-w-fit touch-none tap-highlight-transparent select-none p-1 w-8 transition-opacity hover:opacity-80 cursor-pointer border-1 border-default-200 rounded-full h-full min-w-8 min-h-8 flex items-center justify-center"}
+            <label className={"animate-pulse group relative max-w-fit touch-none tap-highlight-transparent select-none p-1 w-8 transition-opacity hover:opacity-80 cursor-pointer border-1 border-default-200 rounded-full h-full min-w-8 min-h-8 flex items-center justify-center"}
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
                     <IconComponent />
             </label>

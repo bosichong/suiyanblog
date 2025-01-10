@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {
     Navbar,
     NavbarBrand,
@@ -11,17 +11,24 @@ import {
 } from "@nextui-org/react";
 import {ThemeSwitcher} from "@/components/ThemeSwitcher";
 import config from "@/config";
-import HomeIco from "@/components/ico/HomeIco";
 
 
 export default function Nav() {
+
+
+    const [randomIndex, setRandomIndex] = useState(null);
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+    useEffect(() => {
+        // 生成一个随机索引
+        setRandomIndex(Math.floor(Math.random() * config.menuItems.length));
+    }, []); // 空依赖数组确保只在组件挂载时运行一次
     return (
         <Navbar onMenuOpenChange={setIsMenuOpen}>
             <NavbarContent>
 
                 <NavbarBrand>
-                    <Link color="primary" href={'/'} >{config.BLOG_NAME_EN}</Link>
+                    <Link color="primary" href={'/'} className={'hover:animate-bounce'}>{config.BLOG_NAME_EN}</Link>
                 </NavbarBrand>
             </NavbarContent>
 
@@ -32,7 +39,11 @@ export default function Nav() {
                         isActive={item.isActive}
                     >
                         <Link
-                            className="w-full"
+                            className={
+                                index === randomIndex
+                                    ? "w-full animate-bounce hover:animate-none"
+                                    : "w-full hover:animate-bounce"
+                            }
                             href={`${item.href}`}
                             size="lg"
                         >

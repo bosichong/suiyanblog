@@ -38,7 +38,7 @@ function Home({ allPostsData }) {
         <main className="container max-w-3xl mx-auto leading-normal text-lg font-extralight">
           <div className="p-4">
             {currentPosts.map((post) => (
-                <Card className="my-4">
+                <Card className="my-4 hover:animate-pulse">
                   <CardHeader className="flex gap-3">
                     <Link href={`/blog/${post.id}`} className="flex flex-col">
                       <h3 className="text-xl">{post.title}</h3>
