@@ -39,7 +39,7 @@ function Home({ allPostsData }) {
   useEffect(() => {
 
     animateListItems();
-  }, []);
+  }, [currentPosts]);
 
 
   return (

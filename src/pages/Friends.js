@@ -22,7 +22,7 @@ const Friends = () => {
     useEffect(() => {
 
         animateListItems();
-    }, []);
+    }, [links]);
 
     return (
         <Layout>
