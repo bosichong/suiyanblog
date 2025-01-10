@@ -7,6 +7,14 @@
                 <description>Latest posts from SuiYan</description>
                 
         <item>
+            <title>tailwindcss-motion 一个简单、功能强大的动画库</title>
+            <link>https://www.suiyan.cc/20250110131923</link>
+            <guid>https://www.suiyan.cc/20250110131923</guid>
+            <pubDate>Fri, 10 Jan 2025 13:19:23 GMT</pubDate>
+            <description>今天盯着博客的页面，就觉的少点什么？对，就是动画，一动不动的太死板了，得搞些动画，但是如果手动编写JavaScript和CSS动画，不符合现代前端的构建方式，所以就搜了一下tailwind相关的动画插件，最终选定：tailwindcss-motion</description>
+        </item>
+    
+        <item>
             <title>Heroicons由Tailwind CSS创始人开发免费的开源图标库</title>
             <link>https://www.suiyan.cc/20250109005603</link>
             <guid>https://www.suiyan.cc/20250109005603</guid>
