@@ -5,10 +5,15 @@ import {Link} from "@nextui-org/react";
 import {Image} from "@nextui-org/react";
 import giscusConfig from "@/giscusConfigs";
 import Giscus from "@giscus/react";
-import React from "react";
+import React, {useEffect} from "react";
+import animateListItems from "@/utils/animateListItems";
 
 const Friends = () => {
     const links = config.links;
+    useEffect(() => {
+
+        animateListItems();
+    }, []);
 
     return (
         <Layout>
@@ -27,7 +32,7 @@ const Friends = () => {
                     </div>
                     <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
                         {links.map((link) => (
-                            <div key={link.site_name} className={'rounded-lg p-4 hover:animate-pulse'} >
+                            <div key={link.site_name} className={'hidden list_item rounded-lg p-4 hover:animate-pulse'} >
                                 <div key={link.site_name} className="rounded-lg ">
                                     <div className="hidden sm:block sm:shrink-0">
                                         <Image src={link.site_avatar}

@@ -1,11 +1,12 @@
 import getSortedPostsData from '../utils/parseMd';
 import Layout from '../components/Layout';
 import { Pagination } from '@nextui-org/react';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import formatDate from "../utils/formatDate";
 import { Card, CardHeader, CardBody, CardFooter, Link } from '@nextui-org/react';
-import Head from "next/head.js";
+import Head from "next/head";
 import config from "../config";
+import animateListItems from "@/utils/animateListItems";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -26,19 +27,24 @@ function Home({ allPostsData }) {
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
+  useEffect(() => {
+
+    animateListItems();
+  }, []);
+
 
   return (
       <Layout>
         <Head>
           <title>Home 首页 | {config.BLOG_NAME_EN} {config.BLOG_NAME}</title>
-          <meta name="description" content={config.META_DESCRIPTION}/>
-          <meta name="keywords" content={config.META_KEYWORDS}/>
-          <meta content={config.BLOG_AUTHOR} name="author"/>
+          <meta name="description" content={config.META_DESCRIPTION} />
+          <meta name="keywords" content={config.META_KEYWORDS} />
+          <meta content={config.BLOG_AUTHOR} name="author" />
         </Head>
         <main className="container max-w-3xl mx-auto leading-normal text-lg font-extralight">
           <div className="p-4">
             {currentPosts.map((post) => (
-                <Card className="my-4 hover:animate-pulse">
+                <Card className="list_item hidden my-4 hover:animate-pulse" key={post.id}>
                   <CardHeader className="flex gap-3">
                     <Link href={`/blog/${post.id}`} className="flex flex-col">
                       <h3 className="text-xl">{post.title}</h3>
@@ -46,10 +52,10 @@ function Home({ allPostsData }) {
                   </CardHeader>
 
                   <CardBody>
-                    <p className={'text-sm'}>{post.description}</p>
+                    <p className="text-sm">{post.description}</p>
                   </CardBody>
 
-                  <CardFooter className={'text-sm'}>
+                  <CardFooter className="text-sm">
                     <Link href={`/blog/${post.id}`} className="block justify-start w-1/2">
                       阅读全文 ➞
                     </Link>

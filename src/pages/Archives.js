@@ -2,9 +2,10 @@ import getSortedPostsData from '../utils/parseMd';
 import Layout from '../components/Layout';
 import config from "../config.js";
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Link} from "@nextui-org/react";
 import Head from 'next/head';
+import animateListItems from "@/utils/animateListItems";
 
 
 export async function getStaticProps() {
@@ -34,6 +35,11 @@ const Archives = ({ allPostsData, postsByYearMonth }) => {
     const totalPosts = allPostsData.length;
     const lastUpdated = new Date(allPostsData[0].time).toLocaleDateString();
 
+    useEffect(() => {
+
+        animateListItems();
+    }, []);
+
     return (
         <Layout>
             <Head>
@@ -46,7 +52,7 @@ const Archives = ({ allPostsData, postsByYearMonth }) => {
                     <p className={'text-sm'}>共有文章：{totalPosts} 篇，最后更新时间：{lastUpdated}</p>
                     <div className="w-full">
                         {Object.keys(postsByYearMonth).map((yearMonth) => (
-                            <div className={'mx-2 my-12'} key={yearMonth}>
+                            <div className={'mx-2 my-12 list_item hidden'} key={yearMonth}>
                                 <h2 className={'text-xl font-light my-6'}>{yearMonth}</h2>
                                 <ul className={'list-group'}>
                                     {postsByYearMonth[yearMonth].map((post) => (
