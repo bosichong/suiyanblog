@@ -1,15 +1,10 @@
 import ScrollToTopButton from "./ScrollToTopButton";
-import { Link } from '@nextui-org/react';
+import {Link,Image} from "@nextui-org/react";
 
 export default function Footer (){
     return(
         <footer className={'container max-w-3xl mx-auto leading-normal text-lg font-extralight'}>
             <div className={'mx-auto max-w-5xl p-2'}>
-                <p className="mx-auto mt-4 max-w-md text-center leading-relaxed text-gray-300 text-xs">
-                    本站采用<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">知识共享署名-相同方式共享
-                    4.0 国际许可协议</a>进行许可，转载请保留原文链接及署名。
-                </p>
-
                 <ul className="mt-4 flex justify-center gap-6 md:gap-8">
                     <li>
                         <Link
@@ -117,12 +112,18 @@ export default function Footer (){
 
                 </ul>
 
-                <div className={'mx-auto mt-4 max-w-md text-center text-xs motion-preset-typewriter-[36] '}>&copy; 2017 - 2025 <Link href="https://www.suiyan.cc">SuiYan 碎言博客</Link></div>
-
+                <div className={'mx-auto mt-4 max-w-md text-center text-xs '}>&copy; 2017 - 2025 <Link
+                    className={'text-center text-xs'} href="https://www.suiyan.cc">SuiYan 碎言博客</Link></div>
+                <div className="flex justify-center my-4">
+                    <a href="https://creativecommons.org/licenses/by-nc/4.0/" target={'_blank'}>
+                        <Image decoding="async" loading="lazy" src="/assets/images/by-nc.png"
+                             width="60" height="20" alt={'知识共享署名-非商业性使用4.0 国际'} />
+                    </a>
+                </div>
             </div>
-    <ScrollToTopButton>
-        ▲
-    </ScrollToTopButton>
+            <ScrollToTopButton>
+                ▲
+            </ScrollToTopButton>
         </footer>
     )
 }
