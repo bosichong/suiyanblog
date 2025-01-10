@@ -6,7 +6,6 @@ import formatDate from "../utils/formatDate";
 import { Card, CardHeader, CardBody, CardFooter, Link } from '@nextui-org/react';
 import Head from "next/head";
 import config from "../config";
-import animateListItems from "@/utils/animateListItems";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -26,6 +25,16 @@ function Home({ allPostsData }) {
   const currentPosts = allPostsData.slice(indexOfFirstPost, indexOfLastPost);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  const animateListItems =  () => {
+    const listItems = document.querySelectorAll('.list_item');
+    listItems.forEach((item, index) => {
+      setTimeout(() => {
+        item.classList.remove('hidden');
+        item.classList.add('animate-fade-in');
+      }, index * 300); // 每个元素间隔 300 毫秒显示
+    });
+  }
 
   useEffect(() => {
 

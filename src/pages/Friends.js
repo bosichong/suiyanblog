@@ -6,10 +6,19 @@ import {Image} from "@nextui-org/react";
 import giscusConfig from "@/giscusConfigs";
 import Giscus from "@giscus/react";
 import React, {useEffect} from "react";
-import animateListItems from "@/utils/animateListItems";
 
 const Friends = () => {
     const links = config.links;
+
+    const animateListItems =  () => {
+        const listItems = document.querySelectorAll('.list_item');
+        listItems.forEach((item, index) => {
+            setTimeout(() => {
+                item.classList.remove('hidden');
+                item.classList.add('animate-fade-in');
+            }, index * 300); // 每个元素间隔 300 毫秒显示
+        });
+    }
     useEffect(() => {
 
         animateListItems();
