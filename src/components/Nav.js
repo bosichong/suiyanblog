@@ -28,7 +28,7 @@ export default function Nav() {
             <NavbarContent>
 
                 <NavbarBrand>
-                    <Link color="primary" href={'/'} className={'hover:animate-bounce'}>{config.BLOG_NAME_EN}</Link>
+                    <Link color="primary" href={'/'} className={'hover:motion-preset-flomoji-🚀'}>{config.BLOG_NAME_EN}</Link>
                 </NavbarBrand>
             </NavbarContent>
 
@@ -41,8 +41,8 @@ export default function Nav() {
                         <Link
                             className={
                                 index === randomIndex
-                                    ? "w-full animate-bounce hover:animate-none"
-                                    : "w-full hover:animate-bounce"
+                                    ? "w-full motion-preset-seesaw hover:animate-none"
+                                    : "w-full hover:motion-preset-shake "
                             }
                             href={`${item.href}`}
                             size="lg"

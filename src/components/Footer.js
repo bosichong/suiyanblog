@@ -55,7 +55,7 @@ export default function Footer (){
                             href="mailto:285911@gmail.com"
                             rel="noreferrer"
                             target="_blank"
-                            className="artlist m-auto"
+                            className="artlist m-auto motion-preset-seesaw "
                         >
                             <span className="sr-only">Mail</span>
                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-mail-filled"

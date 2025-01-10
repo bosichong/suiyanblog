@@ -15,7 +15,7 @@ const Friends = () => {
         listItems.forEach((item, index) => {
             setTimeout(() => {
                 item.classList.remove('hidden');
-                item.classList.add('animate-fade-in');
+                item.classList.add('motion-preset-focus');
             }, index * 300); // 每个元素间隔 300 毫秒显示
         });
     }
@@ -39,11 +39,11 @@ const Friends = () => {
                             <p className="text-sm">联系我：<Link href="mailto:285911@gmail.com">285911@gmail.com</Link></p>
                         </div>
                     </div>
-                    <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
+                    <div className="grid grid-cols-2 gap-4 lg:grid-cols-3 lg:gap-8">
                         {links.map((link) => (
                             <div key={link.site_name} className={'hidden list_item rounded-lg p-4 hover:animate-pulse'} >
                                 <div key={link.site_name} className="rounded-lg ">
-                                    <div className="hidden sm:block sm:shrink-0">
+                                    <div className=" sm:shrink-0">
                                         <Image src={link.site_avatar}
                                                alt={link.site_name}
                                                className={"h-20 w-20 rounded-lg object-cover shadow-sm"}

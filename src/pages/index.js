@@ -31,7 +31,7 @@ function Home({ allPostsData }) {
     listItems.forEach((item, index) => {
       setTimeout(() => {
         item.classList.remove('hidden');
-        item.classList.add('animate-fade-in');
+        item.classList.add('motion-preset-blur-right');
       }, index * 300); // 每个元素间隔 300 毫秒显示
     });
   }

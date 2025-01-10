@@ -27,7 +27,7 @@ const ScrollToTopButton = ({ children }) => {
 
     return (
         isVisible && (
-            <label size={"sm"} radius={"full"} onClick={scrollToTop} className="fixed w-8 bottom-4 right-4 p-2 animate-bounce transition-opacity hover:opacity-80 cursor-pointer">
+            <label size={"sm"} radius={"full"} onClick={scrollToTop} className="motion-preset-confetti fixed w-8 bottom-4 right-4 p-2 animate-bounce transition-opacity hover:opacity-80 cursor-pointer">
                 <GoUp />
             </label>
         )
