@@ -117,7 +117,7 @@ export default function Footer (){
 
                 </ul>
 
-                <div className={'mx-auto mt-4 max-w-md text-center text-xs '}>&copy; 2017 - 2025 <Link href="https://www.suiyan.cc">SuiYan 碎言博客</Link></div>
+                <div className={'mx-auto mt-4 max-w-md text-center text-xs motion-preset-typewriter-[36] '}>&copy; 2017 - 2025 <Link href="https://www.suiyan.cc">SuiYan 碎言博客</Link></div>
 
             </div>
     <ScrollToTopButton>
