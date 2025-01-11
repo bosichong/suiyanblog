@@ -1,19 +1,16 @@
 // pages/posts/[id].js
 // 导入用于获取排序后的文章数据的函数
-
 import ReactMarkdown from 'react-markdown';
-
 import getSortedPostsData  from "../../utils/parseMd";
-
 import Layout from "../../components/Layout";
 import styles from './[id].module.css';
 import formatDate from "../../utils/formatDate";
-
 import Giscus from '@giscus/react';
 import giscusConfig from '../../giscusConfigs';
 import config from "@/config";
 import Head from "next/head";
 import React from "react";
+import {Link} from "@nextui-org/react";
 
 /**
  * 获取静态路径的函数
@@ -48,10 +45,28 @@ export async function getStaticProps({ params }) {
             notFound: true,
         };
     }
-    // 返回文章属性
+
+    // 获取当前文章的索引
+    const currentIndex = posts.findIndex(p => p.id === post.id);
+
+    // 获取上一篇和下一篇文章
+    const prevPost = currentIndex > 0 ? posts[currentIndex - 1] : null;
+    const nextPost = currentIndex < posts.length - 1 ? posts[currentIndex + 1] : null;
+
+    // 获取相关文章
+    const tags = post.tag.split(',').map(t => t.trim());
+    const relatedPosts = posts.filter(p => {
+        const postTags = p.tag.split(',').map(t => t.trim());
+        return tags.some(tag => postTags.includes(tag)) && p.id !== post.id;
+    });
+
+    // 返回文章属性和相关文章
     return {
         props: {
             post,
+            relatedPosts,
+            prevPost,
+            nextPost,
         }, // will be passed to the page component as props
     };
 }
@@ -59,9 +74,12 @@ export async function getStaticProps({ params }) {
 /**
  * 展示文章的组件
  * @param {Object} post - 文章对象
+ * @param {Array} relatedPosts - 相关文章数组
+ * @param prevPost
+ * @param nextPost
  * @returns {JSX.Element} 渲染的文章组件
  */
-function Post({ post }) {
+function Post({ post, relatedPosts,prevPost,nextPost }) {
     return (
         <Layout>
             <Head>
@@ -82,6 +100,37 @@ function Post({ post }) {
                         <ReactMarkdown>{post.content}</ReactMarkdown>
                     </div>
 
+                    <div className={'py-4 flex flex-col gap-4'}>
+                        {prevPost && (
+                            <Link href={`/blog/${prevPost.id}`} className={'block text-ellipsis overflow-hidden whitespace-nowrap'}>
+                                <span>上一篇：</span>
+                                <span>{prevPost.title}</span>
+                            </Link>
+                        )}
+                        {nextPost && (
+                            <Link href={`/blog/${nextPost.id}`} className={'block text-ellipsis overflow-hidden whitespace-nowrap'}>
+                                <span>下一篇：</span>
+                                <span>{nextPost.title}</span>
+                            </Link>
+                        )}
+                    </div>
+
+                    <div className={'py-4'}>
+                        <h2 >相关文章</h2>
+                        {relatedPosts.length > 0 ? (
+                            <ul className={styles.related_posts_list}>
+                                {relatedPosts.map((relatedPost, index) => (
+                                    <li key={index} className={styles.related_post_item}>
+                                        <Link href={`/blog/${relatedPost.id}`} className={styles.related_post_link}>
+                                            {relatedPost.title}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        ) : (
+                            <p className={'text-gray-500'}>暂无相关文章</p>
+                        )}
+                    </div>
 
 
                     <Giscus
@@ -99,6 +148,7 @@ function Post({ post }) {
                     />
 
                 </article>
+
 
             </main>
 
