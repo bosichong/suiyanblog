@@ -89,11 +89,10 @@ function Post({ post, relatedPosts,prevPost,nextPost }) {
             <main className={'container max-w-3xl mx-auto leading-normal text-lg font-extralight'}>
                 <article className={'p-4'}>
                     <h1 className={styles.blog_post_title}>{post.title}</h1>
-                    <div className={"text-sm flex flex-wrap my-2"}>
-                        作者:<span>{post.author}</span> · 发表于:
-                        <div>
-                            <span>{formatDate(post.time)}</span>
-                        </div>
+                    <div className={"text-sm flex justify-between mb-4"}>
+                        <span>{post.author}</span>
+                        <span>{formatDate(post.time)}</span>
+  
                     </div>
 
                     <div className={styles.blog_post_content}>

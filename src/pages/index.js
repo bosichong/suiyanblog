@@ -65,11 +65,10 @@ function Home({ allPostsData }) {
                   </CardBody>
 
                   <CardFooter className="text-sm">
-                    <Link href={`/blog/${post.id}`} className="block justify-start w-1/2">
-                      阅读全文 ➞
+                    <Link href={`/blog/${post.id}`} className="block justify-start w-1/2 flex">
+                      阅读全文 <span className='motion-preset-wobble block'> ➞ </span>
                     </Link>
                     <p className="flex justify-end w-1/2">
-                      发表于:
                       <span className="cr-time">{formatDate(post.time)}</span>
                     </p>
                   </CardFooter>
