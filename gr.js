@@ -45,7 +45,7 @@ function generateRSS() {
         <item>
             <title>${post.title}</title>
             <link>https://www.suiyan.cc/blog/${post.id}</link>
-            <guid>https://www.suiyan.cc/${post.id}</guid>
+            <guid>https://www.suiyan.cc/blog/${post.id}</guid>
             <pubDate>${new Date(post.time).toUTCString()}</pubDate>
             <description>${post.summary || post.description || ''}</description>
         </item>
