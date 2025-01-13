@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import {Button, Link} from "@nextui-org/react";
 import config from "../config.js";
+import getRandomColor from "../utils/randomColor";
 
 function createTagsData(blogData) {
     const tagDict = {};
@@ -41,13 +42,6 @@ const Tags = ({ tagsData }) => {
         }
     };
 
-    // 定义颜色数组
-    const colors = ["default", "primary", "secondary", "success", "warning", "danger"];
-
-    // 生成随机颜色的函数
-    const getRandomColor = () => {
-        return colors[Math.floor(Math.random() * colors.length)];
-    };
 
     return (
         <Layout>

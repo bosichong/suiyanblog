@@ -10,9 +10,11 @@ import giscusConfig from '../../giscusConfigs';
 import config from "@/config";
 import Head from "next/head";
 import React from "react";
-import {Link} from "@nextui-org/react";
+import {Chip, Link} from "@nextui-org/react";
 import BlogTime from "@/components/ico/BlogTime";
 import User from "@/components/ico/User";
+import TagIco from "@/components/ico/TagIco";
+import getRandomColor from "../../utils/randomColor";
 
 /**
  * 获取静态路径的函数
@@ -92,8 +94,16 @@ function Post({ post, relatedPosts,prevPost,nextPost }) {
                 <article className={'p-4'}>
                     <h1 className={styles.blog_post_title}>{post.title}</h1>
                     <div className={"text-sm flex justify-between mb-4"}>
-                        <div className={'flex items-center'}><User/><span
-                            className={'ml-2'}>{post.author}</span></div>
+                        <span className={'flex items-center'}><User/><span
+                            className={'ml-2'}>{post.author}</span>
+                            {
+                                post.tag.split(',').map((tag, index) => (
+                                    <Chip size={'sm'} startContent={<TagIco />} variant="flat" color={getRandomColor()} key={index} className={'block ml-2 flex items-center text-sm'}>{tag}</Chip>
+                                ))
+                            }
+
+                        </span>
+
                         <div className={'flex items-center'}><BlogTime/><span
                             className={'ml-2'}>{formatDate(post.time)}</span></div>
 
