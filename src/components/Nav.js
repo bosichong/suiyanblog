@@ -45,7 +45,7 @@ export default function Nav() {
                                     : "w-full hover:motion-preset-shake "
                             }
                             href={`${item.href}`}
-                            size="lg"
+                            size="md"
                         >
                             {item.name}
                         </Link>
@@ -68,7 +68,7 @@ export default function Nav() {
                         <Link
                             className="w-full"
                             href={`${item.href}`}
-                            size="lg"
+                            size="md"
                         >
                             {item.name}
                         </Link>

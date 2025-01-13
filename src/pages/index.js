@@ -6,6 +6,7 @@ import formatDate from "../utils/formatDate";
 import { Card, CardHeader, CardBody, CardFooter, Link } from '@nextui-org/react';
 import Head from "next/head";
 import config from "../config";
+import BlogTime from "../components/ico/BlogTime";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -68,9 +69,9 @@ function Home({ allPostsData }) {
                     <Link href={`/blog/${post.id}`} className="block justify-start w-1/2 flex">
                       阅读全文 <span className='motion-preset-wobble block'> ➞ </span>
                     </Link>
-                    <p className="flex justify-end w-1/2">
-                      <span className="cr-time">{formatDate(post.time)}</span>
-                    </p>
+                    <div className="flex justify-end w-1/2">
+                      <div className={'flex items-center'}><BlogTime /><span className={'ml-2'}>{formatDate(post.time)}</span></div>
+                    </div>
                   </CardFooter>
                 </Card>
             ))}
