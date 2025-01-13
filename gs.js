@@ -42,7 +42,7 @@ function isValidDate(dateStr) {
 function generateSitemap() {
     const allPostsData = getSortedPostsData();
     const urls = allPostsData.map(post => ({
-        url: `https://www.suiyan.cc/${post.id}`,
+        url: `https://www.suiyan.cc/blog/${post.id}`,
         lastModified: new Date(post.time).toISOString(),
         changeFrequency: 'monthly',
         priority: 0.8,
