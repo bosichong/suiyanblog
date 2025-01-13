@@ -170,3 +170,9 @@
         padding: 10px;
     }
 }
+
+.rainbow_text {
+    background: linear-gradient(-90deg, #602ce5 0%, #2ce597 30%, #e7bb18 50%, #ff7657 70%, #45c1ee 90%, #2ce597 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
