@@ -2,19 +2,19 @@ const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
 
-// 假设你的 Markdown 文件夹位于项目根目录下的 'md' 文件夹中
 const postsDirectory = path.join(process.cwd(), 'md');
+const publicDir = path.join(process.cwd(), 'public');
 
 function getSortedPostsData() {
+    // ... (This function remains the same as before)
     const fileNames = fs.readdirSync(postsDirectory);
     return fileNames.map(fileName => {
-        const id = fileName.replace(/\.md$/, ''); // 从文件名中提取 id
+        const id = fileName.replace(/\.md$/, '');
         const filePath = path.join(postsDirectory, fileName);
         const fileContent = fs.readFileSync(filePath, 'utf8');
         const matterResult = matter(fileContent);
         const { data } = matterResult;
 
-        // 检查日期字段是否存在且有效
         if (!data.time || !isValidDate(data.time)) {
             console.error(`Invalid date in file: ${fileName}`);
             return null;
@@ -26,11 +26,10 @@ function getSortedPostsData() {
             content: matterResult.content,
         };
     }).filter(post => post !== null).sort((a, b) => {
-        // 确保 time 字段存在且是有效的日期格式
         if (!a.time || !b.time) {
-            return 0; // 或者根据你的需求处理错误
+            return 0;
         }
-        return new Date(b.time) - new Date(a.time); // 颠倒排序，最新的在前
+        return new Date(b.time) - new Date(a.time);
     });
 }
 
@@ -59,12 +58,26 @@ function generateSitemap() {
 `).join('')}</urlset>
 `;
 
-    // 保存 sitemap.xml 到 public 目录下
-    const publicDir = path.join(process.cwd(), 'public');
-    const sitemapPath = path.join(publicDir, 'sitemap.xml');
-    fs.writeFileSync(sitemapPath, xmlContent);
+    // 保存 sitemap_blogs.xml
+    const sitemapBlogsPath = path.join(publicDir, 'sitemap_blogs.xml');
+    fs.writeFileSync(sitemapBlogsPath, xmlContent);
 
-    console.log('Sitemap generated successfully!');
+    // 生成 sitemap.xml 索引文件
+    const sitemapIndexPath = path.join(publicDir, 'sitemap.xml');
+    const now = new Date().toISOString(); // 获取当前时间
+
+    const sitemapIndexContent = `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <sitemap>
+        <loc>https://www.suiyan.cc/sitemap_blogs.xml</loc>
+        <lastmod>${now}</lastmod>
+    </sitemap>
+</sitemapindex>
+`;
+    fs.writeFileSync(sitemapIndexPath, sitemapIndexContent);
+
+
+    console.log('Sitemap and sitemap index generated successfully!');
 }
 
 generateSitemap();
