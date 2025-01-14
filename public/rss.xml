@@ -7,6 +7,14 @@
                 <description>Latest posts from SuiYan</description>
                 
         <item>
+            <title>博客程序重构回忆录</title>
+            <link>https://www.suiyan.cc/blog/20250114000256</link>
+            <guid>https://www.suiyan.cc/blog/20250114000256</guid>
+            <pubDate>Tue, 14 Jan 2025 00:02:56 GMT</pubDate>
+            <description>去年一直想从python过度到JavaScript，尤其是在前端美化方面，上个版本的Blog由于模块引用一直采用老旧落后的CDN引用模式导致很多功能无法继续开发，所以长痛不如短痛，我决定进行重构！</description>
+        </item>
+    
+        <item>
             <title>Lucy是一只优秀的陪伴犬</title>
             <link>https://www.suiyan.cc/blog/20250113040326</link>
             <guid>https://www.suiyan.cc/blog/20250113040326</guid>
