@@ -11,7 +11,7 @@
             <link>https://www.suiyan.cc/blog/20250114112644</link>
             <guid>https://www.suiyan.cc/blog/20250114112644</guid>
             <pubDate>Tue, 14 Jan 2025 11:26:44 GMT</pubDate>
-            <description>博文的简介</description>
+            <description>有时我们在编写前端项目的时候会加入大量的模块来进行功能测试，久而久之就会有些模块因为功能的缺失或弃用而闲置，如何找到这些闲置的模块并且删除掉呢？</description>
         </item>
     
         <item>
