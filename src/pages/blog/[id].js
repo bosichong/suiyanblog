@@ -92,7 +92,7 @@ function Post({ post, relatedPosts,prevPost,nextPost }) {
             </Head>
             <main className={'container max-w-3xl mx-auto leading-normal text-lg font-extralight'}>
                 <article className={'p-4'}>
-                    <h1 className={`${styles.blog_post_title} ${styles.rainbow_text}`}>{post.title}</h1>
+                    <h1 className={`${styles.blog_post_title} rainbow_text`}>{post.title}</h1>
                     <div className={"text-sm flex justify-between mb-4"}>
                         <span className={'flex items-center'}><User/><span
                             className={'ml-2'}>{post.author}</span>

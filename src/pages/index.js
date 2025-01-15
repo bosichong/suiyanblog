@@ -57,7 +57,7 @@ function Home({ allPostsData }) {
                 <Card className="list_item hidden my-4 hover:animate-pulse" key={post.id}>
                   <CardHeader className="flex gap-3">
                     <Link href={`/blog/${post.id}`} className="flex flex-col">
-                      <h3 className="text-2xl">{post.title}</h3>
+                      <h3 className="text-2xl rainbow_text">{post.title}</h3>
                     </Link>
                   </CardHeader>
 
