@@ -28,7 +28,7 @@ export default function Nav() {
             <NavbarContent>
 
                 <NavbarBrand>
-                    <Link color="primary" href={'/'} className={'hover:motion-preset-flomoji-🚀'}>{config.BLOG_NAME_EN}</Link>
+                    <Link color="primary" href={'/'} >{config.BLOG_NAME_EN}</Link>
                 </NavbarBrand>
             </NavbarContent>
 
