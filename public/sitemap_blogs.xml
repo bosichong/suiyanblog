@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
+        <loc>https://www.suiyan.cc/blog/20250119001052</loc>
+        <lastmod>2025-01-19T00:10:52.030Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
         <loc>https://www.suiyan.cc/blog/20250118121259</loc>
         <lastmod>2025-01-18T12:12:59.895Z</lastmod>
         <changefreq>monthly</changefreq>
