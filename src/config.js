@@ -33,6 +33,12 @@ const config = {
     ],
     "links": [
         {
+            "site_name": "二丫讲梵",
+            "site_url": "https://wiki.eryajf.net/",
+            "site_description": "💻学习📝记录🔗分享",
+            "site_avatar": "https://wiki.eryajf.net/img/logo.png"
+        },
+        {
             "site_name": "碎片壁纸",
             "site_url": "https://www.suipian.cc/",
             "site_description": "精美高清壁纸站",
