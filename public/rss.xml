@@ -7,6 +7,14 @@
                 <description>Latest posts from SuiYan</description>
                 
         <item>
+            <title>阅读随感</title>
+            <link>https://www.suiyan.cc/blog/20250120132739</link>
+            <guid>https://www.suiyan.cc/blog/20250120132739</guid>
+            <pubDate>Mon, 20 Jan 2025 13:27:39 GMT</pubDate>
+            <description>今天在微信读书上啃《JavaScript语言精髓与编程实践》，这是一本极其深入详细讲解JavaScript基础理论的神书。它不同于我们平时在互联网上看到的那些教程，不愧是资深程序员大佬爱民老师的巨作。</description>
+        </item>
+    
+        <item>
             <title>读完《React进阶之路》闲聊几句</title>
             <link>https://www.suiyan.cc/blog/20250119120215</link>
             <guid>https://www.suiyan.cc/blog/20250119120215</guid>
