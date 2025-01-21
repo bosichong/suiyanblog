@@ -11,6 +11,7 @@ const config = {
     "BLOG_AUTHOR": "J.sky",
     // 博客英文描述
     "BLOG_DESCRIPTION_EN": "You see see you , This one day day di.",
+    "POSTS_PER_PAGE": 16,
     // 博客标签
     "BLOG_TYPED": [
         "积硅步以致千里",
