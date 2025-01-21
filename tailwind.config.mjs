@@ -33,7 +33,7 @@ export default {
         colors: {
           primary: {
             DEFAULT: "#333",
-            foreground: "#000000",
+            foreground: "#fff",
           },
           focus: "#333",
         },
