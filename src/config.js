@@ -26,11 +26,11 @@ const config = {
     // 头像图片路径
     "PROFILE_IMAGE": "assets/images/avatar.png",
     'menuItems' : [
-        {name:'Archives',href:'/Archives'},
-        {name:'Tags',href:'/Tags'},
-        {name:'Search',href:'/Search'},
-        {name:'Friends',href:'/Friends'},
-        {name:'About Me',href:'/blog/1'},
+        {name:'归档',href:'/Archives'},
+        {name:'标签',href:'/Tags'},
+        {name:'搜索',href:'/Search'},
+        {name:'友链',href:'/Friends'},
+        {name:'关于',href:'/blog/1'},
     ],
     "links": [
         {

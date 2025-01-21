@@ -32,7 +32,7 @@ export default function Nav() {
                 </NavbarBrand>
             </NavbarContent>
 
-            <NavbarContent className="hidden sm:flex gap-4" justify="center">
+            <NavbarContent className="hidden sm:flex gap-6" justify="center">
                 {config.menuItems.map((item, index) => (
                     <NavbarMenuItem
                         key={`${item}-${index}`}

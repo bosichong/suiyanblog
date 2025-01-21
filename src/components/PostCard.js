@@ -17,11 +17,11 @@ export default function PostCard({ post }) {
             </CardBody>
 
             <CardFooter className="text-sm">
-                <Link href={`/blog/${post.id}`} className="block justify-start w-1/2 flex">
-                    阅读全文 <span className="motion-preset-wobble block">➞</span>
+                <Link href={`/blog/${post.id}`} className="block text-sm justify-start w-1/2 flex">
+                    阅读全文 <span className="motion-preset-wobble block text-sm">➞</span>
                 </Link>
                 <div className="flex justify-end w-1/2">
-                    <div className="flex items-center">
+                    <div className="flex items-center text-sm">
                         <BlogTime />
                         <span className="ml-2">{formatDate(post.time)}</span>
                     </div>
