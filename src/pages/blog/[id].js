@@ -9,7 +9,7 @@ import Giscus from '@giscus/react';
 import giscusConfig from '../../giscusConfigs';
 import config from "@/config";
 import Head from "next/head";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {Chip, Link} from "@nextui-org/react";
 import BlogTime from "@/components/ico/BlogTime";
 import User from "@/components/ico/User";
@@ -84,6 +84,13 @@ export async function getStaticProps({ params }) {
  * @returns {JSX.Element} 渲染的文章组件
  */
 function Post({ post, relatedPosts,prevPost,nextPost }) {
+    const [giscusTheme, setGiscusTheme] = useState('');
+
+    useEffect(() => {
+        // 在客户端获取主题并设置 Giscus 的 theme 属性
+        const savedTheme = localStorage.getItem('theme');
+        setGiscusTheme(savedTheme === 'dark' ? 'dark_dimmed' : savedTheme === 'light' ? 'light_high_contrast' : savedTheme);
+    }, []);
     return (
         <Layout>
             <Head>
@@ -157,7 +164,7 @@ function Post({ post, relatedPosts,prevPost,nextPost }) {
                         reactionsEnabled="1"
                         emitMetadata="0"
                         inputPosition="bottom"
-                        theme="dark_dimmed"
+                        theme={giscusTheme} // 使用动态设置的主题
                     />
 
                 </article>

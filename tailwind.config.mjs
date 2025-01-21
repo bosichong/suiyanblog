@@ -31,6 +31,11 @@ export default {
       },
       light: {
         colors: {
+          primary: {
+            DEFAULT: "#333",
+            foreground: "#000000",
+          },
+          focus: "#333",
         },
       },
     },

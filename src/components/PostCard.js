@@ -5,7 +5,7 @@ import BlogTime from './ico/BlogTime';
 
 export default function PostCard({ post }) {
     return (
-        <Card className="list_item my-4 hover:animate-pulse" key={post.id}>
+        <Card className="my-4 hover:motion-preset-blur-right " key={post.id}>
             <CardHeader className="flex gap-3">
                 <Link href={`/blog/${post.id}`} className="flex flex-col">
                     <h3 className="text-2xl rainbow_text">{post.title}</h3>
