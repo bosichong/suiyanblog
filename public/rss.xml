@@ -11,7 +11,7 @@
             <link>https://www.suiyan.cc/blog/20250123005146</link>
             <guid>https://www.suiyan.cc/blog/20250123005146</guid>
             <pubDate>Thu, 23 Jan 2025 00:51:46 GMT</pubDate>
-            <description>博文的简介</description>
+            <description>之前一直在使用giscus作为blog的评论系统，个人评价giscus接入方便、使用简便，依托全世界最大的代码平台Github，其在评论系统商的功能可以说是非常的丰富和完善的，而且稳定可靠，不用操心。之前的blog只有一个主题，所以giscus也选择了对应的主题，后来blog增加明暗主题的切换，但是giscus主题却没有跟随系统的样式进行切换，所以下边的内容就是如何解决giscus的样式跟随主题切换。</description>
         </item>
     
         <item>
