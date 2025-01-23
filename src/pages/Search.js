@@ -38,8 +38,8 @@ const Search = ({ allPostsData }) => {
                 <title>Search | {config.BLOG_NAME_EN} {config.BLOG_NAME}</title>
                 <meta name="description" content="站内搜索，可以按文章标题搜索"/>
             </Head>
-            <main className="container max-w-3xl mx-auto leading-normal text-lg font-extralight">
-                <div className="p-4">
+
+                <div className="p-4 min-h-[500px]">
                     <div className="container mx-auto">
                         {/* 添加放大镜图标 */}
                         <Input
@@ -61,7 +61,6 @@ const Search = ({ allPostsData }) => {
                         </ul>
                     </div>
                 </div>
-            </main>
         </Layout>
 );
 };

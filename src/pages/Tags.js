@@ -49,7 +49,6 @@ const Tags = ({ tagsData }) => {
                 <title>Tags 标签 | {config.BLOG_NAME_EN} {config.BLOG_NAME}</title>
                 <meta name="description" content="文章分类标签"/>
             </Head>
-            <main className="container max-w-3xl mx-auto leading-normal text-lg font-extralight">
                 <div className="p-4">
 
 
@@ -90,7 +89,7 @@ const Tags = ({ tagsData }) => {
                 )}
             </div>
 
-            </main>
+
         </Layout>
     );
 };

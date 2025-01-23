@@ -41,7 +41,7 @@ const Archives = ({ allPostsData, postsByYearMonth }) => {
                 <title>Archives 文章归档 |  {config.BLOG_NAME_EN} {config.BLOG_NAME} </title>
                 <meta name="description" content="碎言博客的所有文章归档"/>
             </Head>
-            <main className="container max-w-3xl mx-auto leading-normal text-lg font-extralight">
+
                 <div className="p-4">
                     <h1 className={'text-3xl mb-4'}>文章归档</h1>
                     <p className={'text-sm'}>共有文章：{totalPosts} 篇，最后更新时间：{lastUpdated}</p>
@@ -61,7 +61,7 @@ const Archives = ({ allPostsData, postsByYearMonth }) => {
                         ))}
                     </div>
                     </div>
-            </main>
+
         </Layout>
 );
 };

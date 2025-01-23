@@ -13,7 +13,7 @@ export default function PostCard({ post }) {
             </CardHeader>
 
             <CardBody>
-                <p className="text-sm">{post.description}</p>
+                <p className="text-md">{post.description}</p>
             </CardBody>
 
             <CardFooter className="text-sm">

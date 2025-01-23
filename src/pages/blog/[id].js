@@ -102,7 +102,6 @@ function Post({ post, relatedPosts,prevPost,nextPost }) {
                 <title>{post.title} | {config.BLOG_NAME_EN} {config.BLOG_NAME}</title>
                 <meta name="description" content={post.description}/>
             </Head>
-            <main className={'container max-w-3xl mx-auto leading-normal text-lg font-extralight'}>
                 <article className={'p-4'}>
                     <h1 className={`${styles.blog_post_title} rainbow_text`}>{post.title}</h1>
                     <div className={"text-sm flex justify-between mb-4"}>
@@ -175,7 +174,6 @@ function Post({ post, relatedPosts,prevPost,nextPost }) {
                 </article>
 
 
-            </main>
 
         </Layout>
     )

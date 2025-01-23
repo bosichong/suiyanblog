@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from "@nextui-org/react";
 import GoUp from "@/components/ico/GoUp";
+import {ThemeSwitcher} from "@/components/ThemeSwitcher";
 
 const ScrollToTopButton = ({ children }) => {
     const [isVisible, setIsVisible] = useState(false);
@@ -26,11 +27,20 @@ const ScrollToTopButton = ({ children }) => {
     }, []);
 
     return (
-        isVisible && (
-            <label size={"sm"} radius={"full"} onClick={scrollToTop} className="motion-preset-confetti fixed w-8 bottom-4 right-4 p-2 animate-bounce transition-opacity hover:opacity-80 cursor-pointer">
-                <GoUp />
-            </label>
-        )
+        <>
+            <div className="hidden md:block fixed w-8 bottom-20 right-5 p-2  hover:opacity-80 cursor-pointer">
+                <ThemeSwitcher  />
+            </div>
+
+            {isVisible && (
+                <label size={"sm"} radius={"full"} onClick={scrollToTop}
+                       className="fixed w-8 bottom-10 right-4 p-2 transition-opacity hover:opacity-80 cursor-pointer">
+                    <GoUp/>
+                </label>
+            )
+            }
+        </>
+
     );
 };
 

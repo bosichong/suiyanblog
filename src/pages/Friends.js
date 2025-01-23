@@ -5,13 +5,16 @@ import {Link} from "@nextui-org/react";
 import {Image} from "@nextui-org/react";
 import giscusConfig from "@/giscusConfigs";
 import Giscus from "@giscus/react";
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 
 const Friends = () => {
     const links = config.links;
+    // 定义一个状态变量 giscusTheme，用于存储 Giscus 的主题
+    const [giscusTheme, setGiscusTheme] = useState('');
 
     const animateListItems =  () => {
         const listItems = document.querySelectorAll('.list_item');
+
         listItems.forEach((item, index) => {
             setTimeout(() => {
                 item.classList.remove('hidden');
@@ -20,6 +23,12 @@ const Friends = () => {
         });
     }
     useEffect(() => {
+        // 在客户端获取主题并设置 Giscus 的 theme 属性
+        const savedTheme = localStorage.getItem('theme');
+        // 如果主题为 dark，则设置 Giscus 的 theme 属性为 dark_dimmed
+        // 如果主题为 light，则设置 Giscus 的 theme 属性为 light_high_contrast
+        // 否则，设置 Giscus 的 theme 属性为 savedTheme
+        setGiscusTheme(savedTheme === 'dark' ? 'dark_dimmed' : savedTheme === 'light' ? 'light_high_contrast' : savedTheme);
 
         animateListItems();
     }, [links]);
@@ -30,7 +39,7 @@ const Friends = () => {
                 <title>Friends 友情链接 | {config.BLOG_NAME_EN} {config.BLOG_NAME}</title>
                 <meta name="description" content="碎言博客的友情链接"/>
             </Head>
-            <main className="container max-w-3xl mx-auto leading-normal text-lg font-extralight">
+
                 <div className="p-4">
                     <div>
                         <h1 className="text-3xl">友情链接</h1>
@@ -82,9 +91,9 @@ const Friends = () => {
                     reactionsEnabled="1"
                     emitMetadata="0"
                     inputPosition="bottom"
-                    theme="dark_dimmed"
+                    theme={giscusTheme} // 使用动态设置的主题
                 />
-            </main>
+
         </Layout>
     );
 };

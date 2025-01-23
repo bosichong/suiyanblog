@@ -40,7 +40,7 @@ function Home({ currentPosts, totalPages }) {
           <meta name="keywords" content={config.META_KEYWORDS} />
           <meta content={config.BLOG_AUTHOR} name="author" />
         </Head>
-        <main className="container max-w-3xl mx-auto leading-normal text-lg font-extralight">
+
           <div className="p-4">
             {currentPosts.map((post) => (
                 <PostCard key={post.id} post={post} />
@@ -54,7 +54,6 @@ function Home({ currentPosts, totalPages }) {
                 onChange={(page) => paginate(page)}
             />
           </div>
-        </main>
       </Layout>
   );
 }
