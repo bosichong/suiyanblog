@@ -1,4 +1,4 @@
-import ScrollToTopButton from "./ScrollToTopButton";
+
 import {Link,Image} from "@nextui-org/react";
 
 export default function Footer (){
@@ -14,9 +14,7 @@ export default function Footer (){
                     </a>
                 </div>
             </div>
-            <ScrollToTopButton>
-                ▲
-            </ScrollToTopButton>
+
         </footer>
     )
 }
