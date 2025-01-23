@@ -84,11 +84,16 @@ export async function getStaticProps({ params }) {
  * @returns {JSX.Element} 渲染的文章组件
  */
 function Post({ post, relatedPosts,prevPost,nextPost }) {
+    // 定义一个状态变量 giscusTheme，用于存储 Giscus 的主题
     const [giscusTheme, setGiscusTheme] = useState('');
 
+    // 在组件挂载后执行副作用函数
     useEffect(() => {
         // 在客户端获取主题并设置 Giscus 的 theme 属性
         const savedTheme = localStorage.getItem('theme');
+        // 如果主题为 dark，则设置 Giscus 的 theme 属性为 dark_dimmed
+        // 如果主题为 light，则设置 Giscus 的 theme 属性为 light_high_contrast
+        // 否则，设置 Giscus 的 theme 属性为 savedTheme
         setGiscusTheme(savedTheme === 'dark' ? 'dark_dimmed' : savedTheme === 'light' ? 'light_high_contrast' : savedTheme);
     }, []);
     return (
