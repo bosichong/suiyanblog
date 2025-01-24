@@ -7,7 +7,6 @@ import styles from './[id].module.css';
 import formatDate from "../../utils/formatDate";
 import Giscus from '@giscus/react';
 import giscusConfig from '../../giscusConfigs';
-import config from "@/config";
 import Head from "next/head";
 import React, {useEffect, useState} from "react";
 import {Chip, Link} from "@nextui-org/react";
@@ -99,7 +98,7 @@ function Post({ post, relatedPosts,prevPost,nextPost }) {
     return (
         <Layout>
             <Head>
-                <title>{post.title} | {config.BLOG_NAME_EN} {config.BLOG_NAME}</title>
+                <title>{post.title} | SuiYan 碎言 </title>
                 <meta name="description" content={post.description}/>
             </Head>
                 <article className={'p-4'}>

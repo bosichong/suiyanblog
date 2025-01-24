@@ -52,7 +52,7 @@ function Page({ currentPosts, currentPage, totalPages }) {
     return (
         <Layout>
             <Head>
-                <title>文章列表 - 第{currentPage}页 | {config.BLOG_NAME} {config.BLOG_NAME_EN}</title>
+                <title>文章列表 - 第{currentPage}页 | SuiYan 碎言 </title>
                 <meta name="description" content={config.META_DESCRIPTION} />
                 <meta name="keywords" content={config.META_KEYWORDS} />
                 <meta content={config.BLOG_AUTHOR} name="author" />

@@ -35,7 +35,7 @@ const Search = ({ allPostsData }) => {
     return (
         <Layout>
             <Head>
-                <title>Search | {config.BLOG_NAME_EN} {config.BLOG_NAME}</title>
+                <title>Search | SuiYan 碎言 </title>
                 <meta name="description" content="站内搜索，可以按文章标题搜索"/>
             </Head>
 

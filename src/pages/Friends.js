@@ -36,7 +36,7 @@ const Friends = () => {
     return (
         <Layout>
             <Head>
-                <title>Friends 友情链接 | {config.BLOG_NAME_EN} {config.BLOG_NAME}</title>
+                <title>Friends 友情链接 | SuiYan 碎言 </title>
                 <meta name="description" content="碎言博客的友情链接"/>
             </Head>
 

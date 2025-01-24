@@ -35,7 +35,7 @@ function Home({ currentPosts, totalPages }) {
   return (
       <Layout>
         <Head>
-          <title>Home 首页 | {config.BLOG_NAME} {config.BLOG_NAME_EN}</title>
+          <title>Home 首页 | SuiYan 碎言 </title>
           <meta name="description" content={config.META_DESCRIPTION} />
           <meta name="keywords" content={config.META_KEYWORDS} />
           <meta content={config.BLOG_AUTHOR} name="author" />

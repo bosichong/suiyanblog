@@ -3,7 +3,6 @@ import Head from 'next/head';
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import {Button, Link} from "@nextui-org/react";
-import config from "../config.js";
 import getRandomColor from "../utils/randomColor";
 
 function createTagsData(blogData) {
@@ -46,7 +45,7 @@ const Tags = ({ tagsData }) => {
     return (
         <Layout>
             <Head>
-                <title>Tags 标签 | {config.BLOG_NAME_EN} {config.BLOG_NAME}</title>
+                <title>Tags 标签 | SuiYan 碎言 </title>
                 <meta name="description" content="文章分类标签"/>
             </Head>
                 <div className="p-4">

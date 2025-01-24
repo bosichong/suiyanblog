@@ -1,6 +1,5 @@
 import getSortedPostsData from '../utils/parseMd';
 import Layout from '../components/Layout';
-import config from "../config.js";
 
 import React, {useEffect} from 'react';
 import {Link} from "@nextui-org/react";
@@ -38,7 +37,7 @@ const Archives = ({ allPostsData, postsByYearMonth }) => {
     return (
         <Layout>
             <Head>
-                <title>Archives 文章归档 |  {config.BLOG_NAME_EN} {config.BLOG_NAME} </title>
+                <title>Archives 文章归档 |  SuiYan 碎言 </title>
                 <meta name="description" content="碎言博客的所有文章归档"/>
             </Head>
 
