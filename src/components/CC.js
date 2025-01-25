@@ -12,26 +12,6 @@ export default function CC () {
     style={{ display: 'inline-block' }}
   >
     CC BY-NC-SA 4.0
-    <img
-      style={{ height: '22px !important', marginLeft: '3px', verticalAlign: 'text-bottom' }}
-      src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"
-      alt=""
-    />
-    <img
-      style={{ height: '22px !important', marginLeft: '3px', verticalAlign: 'text-bottom' }}
-      src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"
-      alt=""
-    />
-    <img
-      style={{ height: '22px !important', marginLeft: '3px', verticalAlign: 'text-bottom' }}
-      src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"
-      alt=""
-    />
-    <img
-      style={{ height: '22px !important', marginLeft: '3px', verticalAlign: 'text-bottom' }}
-      src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"
-      alt=""
-    />
   </Link>版权协议，转载请附上原文出处链接和本声明。
 </p>
         </blockquote>
