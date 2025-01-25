@@ -13,6 +13,7 @@ import {Chip, Link} from "@nextui-org/react";
 import BlogTime from "@/components/ico/BlogTime";
 import User from "@/components/ico/User";
 import TagIco from "@/components/ico/TagIco";
+import CC from '@/components/CC';
 import getRandomColor from "../../utils/randomColor";
 
 /**
@@ -121,6 +122,10 @@ function Post({ post, relatedPosts,prevPost,nextPost }) {
 
                     <div className={styles.blog_post_content}>
                         <ReactMarkdown>{post.content}</ReactMarkdown>
+                    </div>
+
+                    <div>
+                        <CC />
                     </div>
 
                     <div className={'py-4 flex flex-col gap-4'}>
