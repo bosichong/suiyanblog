@@ -9,6 +9,8 @@ import MenuItem from './MenuItem';
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import SNSList from "@/components/SNSList";
 
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 const Layout = ({ children }) => {
     const [randomIndex, setRandomIndex] = useState(null);
 
@@ -43,6 +45,7 @@ const Layout = ({ children }) => {
             </nav>
             <main className={'w-full px-2 py-4 leading-normal font-extralight md:max-w-4xl'}>
                 {children}
+                <SpeedInsights />
                 <Footer/>
             </main>
 
