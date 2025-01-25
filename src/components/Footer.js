@@ -1,6 +1,7 @@
 
 import {Link} from "@nextui-org/react";
 
+
 export default function Footer (){
     return(
         <footer className={'container max-w-3xl mx-auto leading-normal font-extralight'}>

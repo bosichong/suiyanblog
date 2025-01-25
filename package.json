@@ -12,6 +12,7 @@
   "dependencies": {
     "@giscus/react": "^3.0.0",
     "@nextui-org/react": "^2.6.10",
+    "@vercel/speed-insights": "^1.1.0",
     "framer-motion": "^11.15.0",
     "gray-matter": "^4.0.3",
     "next": "15.1.2",
