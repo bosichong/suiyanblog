@@ -1,7 +1,7 @@
 // MenuItem.js
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import { Link } from '@nextui-org/react';
-import config from "@/config";
+
 
 const MenuItem = ({ item, index, randomIndex }) => {
 
