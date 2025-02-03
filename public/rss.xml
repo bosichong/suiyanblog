@@ -7,6 +7,14 @@
                 <description>Latest posts from SuiYan</description>
                 
         <item>
+            <title>在Windows下用Chatbox和Ollama部署DeepSeek-1:14b</title>
+            <link>https://www.suiyan.cc/blog/20250203045150</link>
+            <guid>https://www.suiyan.cc/blog/20250203045150</guid>
+            <pubDate>Mon, 03 Feb 2025 04:51:50 GMT</pubDate>
+            <description>博在本地部署大模型的过程中，我曾尝试在Windows Docker下安装Open WebUI。然而，这个过程并不顺利。Docker的配置、模型的加载以及与GPU的适配等问题，让我遇到了不少坑。经过一番折腾后，我意识到，或许需要一种更简洁、更高效的方式来实现本地部署。于是，我转向了Chatbox和Ollama的组合。</description>
+        </item>
+    
+        <item>
             <title>DeepSeek官方暂时恢复了访问</title>
             <link>https://www.suiyan.cc/blog/20250201234913</link>
             <guid>https://www.suiyan.cc/blog/20250201234913</guid>
