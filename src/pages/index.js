@@ -2,7 +2,7 @@
 import getSortedPostsData from '../utils/parseMd';
 import Layout from '../components/Layout';
 import { Pagination } from '@nextui-org/react';
-import React from 'react';
+import React, {useEffect} from 'react';
 import Head from 'next/head';
 import config from '../config'; // 引入配置文件
 import PostCard from '../components/PostCard';
@@ -24,6 +24,18 @@ export async function getStaticProps() {
 }
 
 function Home({ currentPosts, totalPages }) {
+  const animateListItems =  () => {
+    const listItems = document.querySelectorAll('.list_item');
+
+    listItems.forEach((item, index) => {
+        setTimeout(() => {
+            item.classList.remove('hidden');
+            item.classList.add('motion-preset-focus');
+        }, index * 100);
+    });
+}
+
+
   const paginate = (pageNumber) => {
     if (pageNumber === 1) {
       window.location.href = '/';
@@ -31,6 +43,11 @@ function Home({ currentPosts, totalPages }) {
       window.location.href = `/page/${pageNumber}`;
     }
   };
+
+
+  useEffect(() => {
+    animateListItems();
+  }, [currentPosts]);
 
   return (
       <Layout>
@@ -43,7 +60,11 @@ function Home({ currentPosts, totalPages }) {
 
           <div className="p-4">
             {currentPosts.map((post) => (
-                <PostCard key={post.id} post={post} />
+                <div className={"list_item hidden"}>
+                  <PostCard key={post.id} post={post}  />
+
+                </div>
+
             ))}
           </div>
           <div className="mt-4 flex justify-center">

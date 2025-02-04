@@ -19,7 +19,7 @@ const Friends = () => {
             setTimeout(() => {
                 item.classList.remove('hidden');
                 item.classList.add('motion-preset-focus');
-            }, index * 300); // 每个元素间隔 300 毫秒显示
+            }, index * 100); // 每个元素间隔 300 毫秒显示
         });
     }
     useEffect(() => {
