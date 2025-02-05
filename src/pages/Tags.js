@@ -48,7 +48,7 @@ const Tags = ({ tagsData }) => {
                 <title>Tags 标签 | SuiYan 碎言 </title>
                 <meta name="description" content="文章分类标签"/>
             </Head>
-                <div className="p-4">
+                <div className="p-4 min-h-[500px]">
 
 
                     <div>

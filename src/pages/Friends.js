@@ -12,16 +12,7 @@ const Friends = () => {
     // 定义一个状态变量 giscusTheme，用于存储 Giscus 的主题
     const [giscusTheme, setGiscusTheme] = useState('');
 
-    const animateListItems =  () => {
-        const listItems = document.querySelectorAll('.list_item');
 
-        listItems.forEach((item, index) => {
-            setTimeout(() => {
-                item.classList.remove('hidden');
-                item.classList.add('motion-preset-focus');
-            }, index * 100); // 每个元素间隔 300 毫秒显示
-        });
-    }
     useEffect(() => {
         // 在客户端获取主题并设置 Giscus 的 theme 属性
         const savedTheme = localStorage.getItem('theme');
@@ -30,7 +21,6 @@ const Friends = () => {
         // 否则，设置 Giscus 的 theme 属性为 savedTheme
         setGiscusTheme(savedTheme === 'dark' ? 'dark_dimmed' : savedTheme === 'light' ? 'light_high_contrast' : savedTheme);
 
-        animateListItems();
     }, [links]);
 
     return (
@@ -50,7 +40,7 @@ const Friends = () => {
                     </div>
                     <div className="grid grid-cols-2 gap-4 lg:grid-cols-3 lg:gap-8">
                         {links.map((link) => (
-                            <div key={link.site_name} className={'hidden list_item rounded-lg p-4 hover:animate-pulse'} >
+                            <div key={link.site_name} className={'rounded-lg p-4 hover:animate-pulse'} >
                                 <div key={link.site_name} className="rounded-lg ">
                                     <div className=" sm:shrink-0">
                                         <Image src={link.site_avatar}

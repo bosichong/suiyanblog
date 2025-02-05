@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from '@nextui-org/react';
 
 
-const MenuItem = ({ item, index, randomIndex }) => {
+const MenuItem = ({ item, index }) => {
 
   return (
     <li
@@ -12,9 +12,7 @@ const MenuItem = ({ item, index, randomIndex }) => {
     >
       <Link
         className={
-          index === randomIndex
-            ? "w-full motion-preset-seesaw hover:animate-none flex justify-center"
-            : "w-full hover:motion-preset-shake flex justify-center"
+          "w-full hover:motion-preset-shake flex justify-center"
         }
         href={item.href}
         size="md"

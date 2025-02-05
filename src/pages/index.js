@@ -24,16 +24,6 @@ export async function getStaticProps() {
 }
 
 function Home({ currentPosts, totalPages }) {
-  const animateListItems =  () => {
-    const listItems = document.querySelectorAll('.list_item');
-
-    listItems.forEach((item, index) => {
-        setTimeout(() => {
-            item.classList.remove('hidden');
-            item.classList.add('motion-preset-focus');
-        }, index * 100);
-    });
-}
 
 
   const paginate = (pageNumber) => {
@@ -44,10 +34,6 @@ function Home({ currentPosts, totalPages }) {
     }
   };
 
-
-  useEffect(() => {
-    animateListItems();
-  }, [currentPosts]);
 
   return (
       <Layout>
@@ -60,11 +46,7 @@ function Home({ currentPosts, totalPages }) {
 
           <div className="p-4">
             {currentPosts.map((post) => (
-                <div className={"list_item hidden"}>
                   <PostCard key={post.id} post={post}  />
-
-                </div>
-
             ))}
           </div>
           <div className="mt-4 flex justify-center">
