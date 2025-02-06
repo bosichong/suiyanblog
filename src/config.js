@@ -20,9 +20,9 @@ const config = {
         "其实已经甩你很远了！"
     ],
     // 元描述，用于搜索引擎优化
-    "META_DESCRIPTION": "记录并分享个人学习Python、blender的过程和笔记,定期分享原创壁纸。Life is short, You need blender and Python！",
+    "META_DESCRIPTION": "记录并分享个人学习Python、JavaScript的过程,分享AI辅助编程的一些经验,以及一些碎碎念。",
     // 元关键词，用于搜索引擎优化
-    "META_KEYWORDS": "壁纸,设计师,Blender,Python,JavaScript,程序员,人生苦短,我用Python",
+    "META_KEYWORDS": "Python,JavaScript,程序员,AI辅助编程,deepseek",
     // 头像图片路径
     "PROFILE_IMAGE": "assets/images/avatar.png",
     'menuItems' : [
