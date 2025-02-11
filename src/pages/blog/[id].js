@@ -1,15 +1,15 @@
 // pages/posts/[id].js
 // 导入用于获取排序后的文章数据的函数
 import ReactMarkdown from 'react-markdown';
-import getSortedPostsData  from "../../utils/parseMd";
+import getSortedPostsData from "../../utils/parseMd";
 import Layout from "../../components/Layout";
 import styles from './[id].module.css';
 import formatDate from "../../utils/formatDate";
 import Giscus from '@giscus/react';
 import giscusConfig from '../../giscusConfigs';
 import Head from "next/head";
-import React, {useEffect, useState} from "react";
-import {Chip, Link} from "@nextui-org/react";
+import React, { useEffect, useState } from "react";
+import { Chip, Link } from "@nextui-org/react";
 import BlogTime from "@/components/ico/BlogTime";
 import User from "@/components/ico/User";
 import TagIco from "@/components/ico/TagIco";
@@ -83,7 +83,7 @@ export async function getStaticProps({ params }) {
  * @param nextPost
  * @returns {JSX.Element} 渲染的文章组件
  */
-function Post({ post, relatedPosts,prevPost,nextPost }) {
+function Post({ post, relatedPosts, prevPost, nextPost }) {
     // 定义一个状态变量 giscusTheme，用于存储 Giscus 的主题
     const [giscusTheme, setGiscusTheme] = useState('');
 
@@ -100,82 +100,85 @@ function Post({ post, relatedPosts,prevPost,nextPost }) {
         <Layout>
             <Head>
                 <title>{post.title} | SuiYan 碎言 </title>
-                <meta name="description" content={post.description}/>
+                <meta name="description" content={post.description} />
             </Head>
-                <article className={'p-4'}>
-                    <h1 className={`${styles.blog_post_title} rainbow_text`}>{post.title}</h1>
-                    <div className={"text-sm flex justify-between mb-4"}>
-                        <span className={'flex items-center'}><User/><span
-                            className={'ml-2'}>{post.author}</span>
-                            {
-                                post.tag.split(',').map((tag, index) => (
-                                    <Chip size={'sm'} startContent={<TagIco />} variant="flat" color={getRandomColor()} key={index} className={'block ml-2 flex items-center text-sm'}>{tag}</Chip>
-                                ))
-                            }
-
-                        </span>
-
-                        <div className={'flex items-center'}><BlogTime/><span
-                            className={'ml-2'}>{formatDate(post.time)}</span></div>
-
+            <article className={'p-4'}>
+                <h1 className={`${styles.blog_post_title} rainbow_text`}>{post.title}</h1>
+                <div className="text-sm flex flex-wrap justify-between mb-4">
+                    <span className="flex items-center">
+                        <User />
+                        <span className="ml-2">{post.author}</span>
+                        {
+                            post.tag.split(',').map((tag, index) => (
+                                <Chip size="sm" startContent={<TagIco />} variant="flat" color={getRandomColor()} key={index} className="block ml-2 flex items-center text-sm">
+                                    {tag}
+                                </Chip>
+                            ))
+                        }
+                    </span>
+                    <div className="flex items-center">
+                        <BlogTime />
+                        <span className="ml-2">{formatDate(post.time)}</span>
                     </div>
-
-                    <div className={styles.blog_post_content}>
-                        <ReactMarkdown>{post.content}</ReactMarkdown>
-                    </div>
-
-                    <div>
-                        <CC />
-                    </div>
-
-                    <div className={'py-4 flex flex-col gap-4'}>
-                        {prevPost && (
-                            <Link href={`/blog/${prevPost.id}`} className={'block text-ellipsis overflow-hidden whitespace-nowrap'}>
-                                <span>上一篇：</span>
-                                <span>{prevPost.title}</span>
-                            </Link>
-                        )}
-                        {nextPost && (
-                            <Link href={`/blog/${nextPost.id}`} className={'block text-ellipsis overflow-hidden whitespace-nowrap'}>
-                                <span>下一篇：</span>
-                                <span>{nextPost.title}</span>
-                            </Link>
-                        )}
-                    </div>
-
-                    <div className={'py-4'}>
-                        <h2 >相关文章</h2>
-                        {relatedPosts.length > 0 ? (
-                            <ul className={styles.related_posts_list}>
-                                {relatedPosts.map((relatedPost, index) => (
-                                    <li key={index} className={styles.related_post_item}>
-                                        <Link href={`/blog/${relatedPost.id}`} className={styles.related_post_link}>
-                                            {relatedPost.title}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        ) : (
-                            <p className={'text-gray-500'}>暂无相关文章</p>
-                        )}
-                    </div>
+                </div>
 
 
-                    <Giscus
-                        repo={giscusConfig.repo}
-                        repoId={giscusConfig.repoId}
-                        category={giscusConfig.category}
-                        categoryId={giscusConfig.categoryId}
-                        mapping={giscusConfig.mapping}
-                        lang={giscusConfig.lang}
-                        strict="0"
-                        reactionsEnabled="1"
-                        emitMetadata="0"
-                        inputPosition="bottom"
-                        theme={giscusTheme} // 使用动态设置的主题
-                    />
+                <div className={styles.blog_post_content}>
+                    <ReactMarkdown>{post.content}</ReactMarkdown>
+                </div>
 
-                </article>
+                <div>
+                    <CC />
+                </div>
+
+                <div className={'py-4 flex flex-col gap-4'}>
+                    {prevPost && (
+                        <Link href={`/blog/${prevPost.id}`} className={'block text-ellipsis overflow-hidden whitespace-nowrap'}>
+                            <span>上一篇：</span>
+                            <span>{prevPost.title}</span>
+                        </Link>
+                    )}
+                    {nextPost && (
+                        <Link href={`/blog/${nextPost.id}`} className={'block text-ellipsis overflow-hidden whitespace-nowrap'}>
+                            <span>下一篇：</span>
+                            <span>{nextPost.title}</span>
+                        </Link>
+                    )}
+                </div>
+
+                <div className={'py-4'}>
+                    <h2 >相关文章</h2>
+                    {relatedPosts.length > 0 ? (
+                        <ul className={styles.related_posts_list}>
+                            {relatedPosts.map((relatedPost, index) => (
+                                <li key={index} className={styles.related_post_item}>
+                                    <Link href={`/blog/${relatedPost.id}`} className={styles.related_post_link}>
+                                        {relatedPost.title}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    ) : (
+                        <p className={'text-gray-500'}>暂无相关文章</p>
+                    )}
+                </div>
+
+
+                <Giscus
+                    repo={giscusConfig.repo}
+                    repoId={giscusConfig.repoId}
+                    category={giscusConfig.category}
+                    categoryId={giscusConfig.categoryId}
+                    mapping={giscusConfig.mapping}
+                    lang={giscusConfig.lang}
+                    strict="0"
+                    reactionsEnabled="1"
+                    emitMetadata="0"
+                    inputPosition="bottom"
+                    theme={giscusTheme} // 使用动态设置的主题
+                />
+
+            </article>
 
 
 
