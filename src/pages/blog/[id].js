@@ -104,10 +104,11 @@ function Post({ post, relatedPosts, prevPost, nextPost }) {
             </Head>
             <article className={'p-4'}>
                 <h1 className={`${styles.blog_post_title} rainbow_text`}>{post.title}</h1>
-                <div className="text-sm flex flex-wrap justify-between mb-4">
-                    <span className="flex items-center">
+                <div className="text-sm flex flex-wrap mb-4">
+                    <div className="flex items-center">
                         <User />
-                        <span className="ml-2">{post.author}</span>
+                        <span className="ml-2 flex">{post.author}</span>
+                    </div>
                         {
                             post.tag.split(',').map((tag, index) => (
                                 <Chip size="sm" startContent={<TagIco />} variant="flat" color={getRandomColor()} key={index} className="block ml-2 flex items-center text-sm">
@@ -115,7 +116,6 @@ function Post({ post, relatedPosts, prevPost, nextPost }) {
                                 </Chip>
                             ))
                         }
-                    </span>
                     <div className="flex items-center">
                         <BlogTime />
                         <span className="ml-2">{formatDate(post.time)}</span>
