@@ -7,6 +7,14 @@
                 <description>Latest posts from SuiYan</description>
                 
         <item>
+            <title>code : 无法将“code”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。</title>
+            <link>https://www.suiyan.cc/blog/20250221005728</link>
+            <guid>https://www.suiyan.cc/blog/20250221005728</guid>
+            <pubDate>Fri, 21 Feb 2025 00:57:28 GMT</pubDate>
+            <description>今天像往常一样运行了终端命令，正常来说会使用`code`命令在vscode中打开新建的md文件，但是今天运行了命令，报错了。</description>
+        </item>
+    
+        <item>
             <title>trea支持Windows了,赶紧试试吧！</title>
             <link>https://www.suiyan.cc/blog/20250217124533</link>
             <guid>https://www.suiyan.cc/blog/20250217124533</guid>
