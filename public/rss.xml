@@ -7,6 +7,14 @@
                 <description>Latest posts from SuiYan</description>
                 
         <item>
+            <title>分享自己维护了12年的开源程序：BabyLog 宝贝日记</title>
+            <link>https://www.suiyan.cc/blog/20250302060242</link>
+            <guid>https://www.suiyan.cc/blog/20250302060242</guid>
+            <pubDate>Sun, 02 Mar 2025 06:02:42 GMT</pubDate>
+            <description>这个程序写在12年之前，当时和一些有孩子的亲属朋友聊天，他们总是说孩子几个月就会走路了，一岁就会背古诗了，但这明显就是在吹牛逼，让他们拿出一些证据却拿不出来。我想或许他们记得这些事，但是不记得具体的时间和细节，如果有一个可以记录这些的与孩子相关的日记，那会是一件很有意义的事。于是，我就开始编写这个程序：BabyLog。</description>
+        </item>
+    
+        <item>
             <title>域名续费前将域名转移到了Dynadot</title>
             <link>https://www.suiyan.cc/blog/20250225235722</link>
             <guid>https://www.suiyan.cc/blog/20250225235722</guid>
