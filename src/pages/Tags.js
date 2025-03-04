@@ -80,8 +80,8 @@ const Tags = ({ tagsData }) => {
                             {tagsData
                                 .find((tagObj) => tagObj.tag === selectedTag)
                                 .data.map((post, index) => (
-                                    <li className={'list-group-item  hover:animate-bounce'}  key={index}>
-                                        <Link href={`/blog/${post.id}`} className="block text-ellipsis overflow-hidden whitespace-nowrap">{post.title}</Link>
+                                    <li className="transition-all duration-200 hover:translate-x-1" key={index}>
+                                        <Link href={`/blog/${post.id}`} className="group flex items-center text-ellipsis overflow-hidden whitespace-nowrap">{post.title}</Link>
                                     </li>
                                 ))}
                         </ul>

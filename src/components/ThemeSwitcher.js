@@ -32,15 +32,31 @@ export function ThemeSwitcher() {
     const IconComponent = theme === "dark" ? Sun : Moon;
 
     return (
-        <div>
-            <label className={"group relative max-w-fit touch-none tap-highlight-transparent select-none p-1 w-8 transition-opacity hover:opacity-80 cursor-pointer rounded-full h-full min-w-8 min-h-8 flex items-center justify-center"}
+        <div className="relative">
+            <button
+                aria-label="切换主题"
+                className={`
+                    relative
+                    w-10 h-10
+                    rounded-full
+                    flex items-center justify-center
+                    bg-content2/50 dark:bg-content3/50
+                    hover:bg-content3/80 dark:hover:bg-content2/80
+                    transition-all duration-300 ease-in-out
+                    transform hover:scale-110
+                    focus:outline-none
+                    shadow-sm hover:shadow-md
+                `}
                 onClick={() => {
                     const newTheme = theme === "dark" ? "light" : "dark";
                     setTheme(newTheme);
                     saveThemeToLocalStorage(newTheme);
-                }}>
-                <IconComponent />
-            </label>
+                }}
+            >
+                <div className="transform transition-transform duration-300 ease-in-out hover:rotate-12">
+                    <IconComponent className="w-5 h-5 text-foreground" />
+                </div>
+            </button>
         </div>
     );
 }

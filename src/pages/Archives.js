@@ -41,28 +41,38 @@ const Archives = ({ allPostsData, postsByYearMonth }) => {
                 <meta name="description" content="碎言博客的所有文章归档"/>
             </Head>
 
-                <div className="p-4">
-                    <h1 className={'text-3xl mb-4'}>文章归档</h1>
-                    <p className={'text-sm'}>共有文章：{totalPosts} 篇，最后更新时间：{lastUpdated}</p>
-                    <div className="w-full">
-                        {Object.keys(postsByYearMonth).map((yearMonth) => (
-                            <div className={'mx-2 my-12'} key={yearMonth}>
-                                <h2 className={'text-xl font-light my-6'}>{yearMonth}</h2>
-                                <ul className={'list-group'}>
-                                    {postsByYearMonth[yearMonth].map((post) => (
-                                        <li className={'list-group-item  hover:animate-bounce'} key={post.id}>
-                                          <Link href={`/blog/${post.id}`} className="block text-ellipsis overflow-hidden whitespace-nowrap">{post.title}</Link>
-
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
-                    </div>
-                    </div>
-
+            <div className="max-w-4xl mx-auto p-6">
+                <div className="mb-8 border-b pb-4">
+                    <h1 className="text-3xl font-bold mb-3">文章归档</h1>
+                    <p className="text-sm opacity-80">共有文章：{totalPosts} 篇，最后更新时间：{lastUpdated}</p>
+                </div>
+                
+                <div className="space-y-10">
+                    {Object.keys(postsByYearMonth).map((yearMonth) => (
+                        <div className="archive-year-section" key={yearMonth}>
+                            <h2 className="text-xl font-medium mb-4 inline-block relative">
+                                {yearMonth}
+                                <span className="ml-3 text-sm opacity-70">({postsByYearMonth[yearMonth].length}篇)</span>
+                            </h2>
+                            
+                            <ul className="space-y-2 ml-4 mt-4">
+                                {postsByYearMonth[yearMonth].map((post) => (
+                                    <li className="transition-all duration-200 hover:translate-x-1" key={post.id}>
+                                        <Link 
+                                            href={`/blog/${post.id}`} 
+                                            className="group flex items-center text-ellipsis overflow-hidden whitespace-nowrap"
+                                        >
+                                            {post.title}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </Layout>
-);
+    );
 };
 
 export default Archives;

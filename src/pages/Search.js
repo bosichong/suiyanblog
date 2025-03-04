@@ -39,8 +39,9 @@ const Search = ({ allPostsData }) => {
                 <meta name="description" content="站内搜索，可以按文章标题搜索"/>
             </Head>
 
-                <div className="p-4 min-h-[500px]">
-                    <div className="container mx-auto">
+                <div className="max-w-4xl mx-auto p-6">
+                    <div className="mb-8 pb-4">
+                        <h1 className="text-3xl font-bold mb-3">站内搜索</h1>
                         {/* 添加放大镜图标 */}
                         <Input
                             placeholder="JavaScript"
@@ -50,15 +51,20 @@ const Search = ({ allPostsData }) => {
                             clearable
                             className="mb-4"
                             endContent={<SearchIco />}
-
                         />
-                        <ul>
-                            {filteredPosts.map((post, index) => (
-                                <li className={'list-group-item  hover:animate-bounce'}  key={index}>
-                                    <Link href={`/blog/${post.id}`} className="block text-ellipsis overflow-hidden whitespace-nowrap">{post.title}</Link>
-                                </li>
-                            ))}
-                        </ul>
+                    </div>
+                    
+                    <div className="space-y-2 ml-4">
+                        {filteredPosts.map((post, index) => (
+                            <div className="transition-all duration-200 hover:translate-x-1" key={index}>
+                                <Link 
+                                    href={`/blog/${post.id}`} 
+                                    className="group flex items-center text-ellipsis overflow-hidden whitespace-nowrap"
+                                >
+                                    {post.title}
+                                </Link>
+                            </div>
+                        ))}
                     </div>
                 </div>
         </Layout>

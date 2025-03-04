@@ -27,7 +27,7 @@ export default function Nav() {
 
 
     return (
-        <Navbar onMenuOpenChange={setIsMenuOpen} className={'block md:hidden'}>
+        <Navbar onMenuOpenChange={setIsMenuOpen} className={'block md:hidden max-w-full'} maxWidth="sm">
             <NavbarContent>
 
                 <NavbarBrand className={'block md:hidden'}>

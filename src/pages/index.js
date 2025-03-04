@@ -44,18 +44,22 @@ function Home({ currentPosts, totalPages }) {
           <meta content={config.BLOG_AUTHOR} name="author" />
         </Head>
 
-          <div className="p-4">
-            {currentPosts.map((post) => (
-                  <PostCard key={post.id} post={post}  />
-            ))}
-          </div>
-          <div className="mt-4 flex justify-center">
-            <Pagination
-                color="primary"
-                total={totalPages}
-                initialPage={1}
-                onChange={(page) => paginate(page)}
-            />
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+            <div className="grid gap-6">
+              {currentPosts.map((post) => (
+                    <PostCard key={post.id} post={post} />
+              ))}
+            </div>
+            <div className="mt-8 mb-4 flex justify-center">
+              <Pagination
+                  color="primary"
+                  total={totalPages}
+                  initialPage={1}
+                  onChange={(page) => paginate(page)}
+                  className="shadow-sm"
+                  size="lg"
+              />
+            </div>
           </div>
       </Layout>
   );
