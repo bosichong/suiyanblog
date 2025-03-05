@@ -5,8 +5,9 @@ import Nav from "./Nav";
 import config from "@/config";
 import Avatar from "@/components/Avatar";
 import MenuItem from './MenuItem';
-import ScrollToTopButton from "@/components/ScrollToTopButton";
+import ThemeButton from "@/components/ThemeButton";
 import SNSList from "@/components/SNSList";
+import BackToTop from "@/components/BackToTop";
 
 
 const Layout = ({ children }) => {// 空依赖数组确保只在组件挂载时运行一次
@@ -43,7 +44,8 @@ const Layout = ({ children }) => {// 空依赖数组确保只在组件挂载时�
 
         </div>
 
-            <ScrollToTopButton />
+            <ThemeButton />
+            <BackToTop />
 
         </>
     )
