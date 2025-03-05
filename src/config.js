@@ -82,12 +82,6 @@ const config = {
             "site_avatar": "https://cdn.jsdelivr.net/gh/Borber/PublicPic1/headImg/head.png"
         },
         {
-            "site_name": "胡涂说",
-            "site_url": "https://hutusi.com/",
-            "site_description": "中文独立博客，任抛星汉归园圃，留取乾坤盛酒囊。",
-            "site_avatar": "http://www.suiyan.cc/assets/images/user_circle.png"
-        },
-        {
             "site_name": "诺依阁的日常记录",
             "site_url": "https://blog.nuoyis.net/",
             "site_description": "更多好玩有趣的内容都在这里",
