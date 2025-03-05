@@ -42,7 +42,7 @@ const Archives = ({ allPostsData, postsByYearMonth }) => {
             </Head>
 
             <div className="max-w-4xl mx-auto p-6">
-                <div className="mb-8 border-b pb-4">
+                <div className="mb-8 pb-4">
                     <h1 className="text-3xl font-bold mb-3">文章归档</h1>
                     <p className="text-sm opacity-80">共有文章：{totalPosts} 篇，最后更新时间：{lastUpdated}</p>
                 </div>

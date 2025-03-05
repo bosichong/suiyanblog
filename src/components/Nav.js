@@ -56,9 +56,9 @@ export default function Nav() {
                     <li className={'mb-4'}>
                         <SNSList/>
                     </li>
-
+                    
                     {config.menuItems.map((item, index) => (
-                        <MenuItem key={`${item}-${index}`} item={item} index={index} randomIndex={randomIndex}  />
+                        <MenuItem key={`${item}-${index}`} item={item} index={index} />
                     ))}
                 </ul>
             </NavbarMenu>

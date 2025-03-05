@@ -4,10 +4,8 @@ import { Link } from '@nextui-org/react';
 
 
 const MenuItem = ({ item, index }) => {
-
   return (
     <li
-      key={`${item}-${index}`}
       className={'mb-4'}
     >
       <Link
