@@ -3,20 +3,13 @@
 import Footer from "./Footer";
 import Nav from "./Nav";
 import config from "@/config";
-import React, {useEffect, useState} from "react";
 import Avatar from "@/components/Avatar";
 import MenuItem from './MenuItem';
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import SNSList from "@/components/SNSList";
 
 
-const Layout = ({ children }) => {
-    const [randomIndex, setRandomIndex] = useState(null);
-
-    useEffect(() => {
-        // 生成一个随机索引
-        setRandomIndex(Math.floor(Math.random() * config.menuItems.length));
-    }, []); // 空依赖数组确保只在组件挂载时运行一次
+const Layout = ({ children }) => {// 空依赖数组确保只在组件挂载时运行一次
     return (
         <>
 
@@ -35,7 +28,7 @@ const Layout = ({ children }) => {
                     </li>
 
                     {config.menuItems.map((item, index) => (
-                        <MenuItem key={`${item}-${index}`} item={item} index={index} randomIndex={randomIndex}  />
+                        <MenuItem key={`${item}-${index}`} item={item} index={index} />
                     ))}
                 </ul>
 
@@ -50,9 +43,7 @@ const Layout = ({ children }) => {
 
         </div>
 
-            <ScrollToTopButton>
-                ▲
-            </ScrollToTopButton>
+            <ScrollToTopButton />
 
         </>
     )

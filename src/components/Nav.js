@@ -31,7 +31,7 @@ export default function Nav() {
             <NavbarContent>
 
                 <NavbarBrand className={'block md:hidden'}>
-                    <Link color="primary" href={'/'} >{config.BLOG_NAME_EN}</Link>
+                    <Link color="primary" href={'/'} className="text-lg">{config.BLOG_NAME_EN}</Link>
                 </NavbarBrand>
             </NavbarContent>
 
@@ -41,24 +41,28 @@ export default function Nav() {
                 <NavbarItem className={'block md:hidden'}>
                     <ThemeSwitcher />
                 </NavbarItem>
-                    <NavbarMenuToggle
-                        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                        className="md:hidden"
-                    />
-
+                <NavbarMenuToggle
+                    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                    className="md:hidden"
+                />
             </NavbarContent>
-            <NavbarMenu>
-                <ul className={'flex flex-col justify-between'}>
-                    <li className={'mb-4'}>
+            <NavbarMenu className="pt-6 pb-6 gap-4 bg-background/70 backdrop-blur-lg dark:bg-default-100/50">
+                <ul className={'flex flex-col justify-between space-y-4 px-2'}>
+                    <li className={'mb-4 flex justify-center'}>
                         <Avatar />
                     </li>
 
-                    <li className={'mb-4'}>
+                    <li className={'mb-4 flex justify-center'}>
                         <SNSList/>
                     </li>
                     
                     {config.menuItems.map((item, index) => (
-                        <MenuItem key={`${item}-${index}`} item={item} index={index} />
+                        <MenuItem 
+                            key={`${item}-${index}`} 
+                            item={item} 
+                            index={index}
+                            onClick={() => setIsMenuOpen(false)}
+                        />
                     ))}
                 </ul>
             </NavbarMenu>

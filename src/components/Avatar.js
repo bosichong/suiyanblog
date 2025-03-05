@@ -9,7 +9,7 @@ export default function Avatar () {
             size="md"
         >
             <Image src="/assets/images/avatar.jpg" width={80} height={80} alt="avatar"
-                   className={'rounded-full hover:motion-preset-focus '}/>
+                   className={'rounded-full'}/>
         </Link>
     );
 }
