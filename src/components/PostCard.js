@@ -5,7 +5,7 @@ import BlogTime from './ico/BlogTime';
 
 export default function PostCard({ post }) {
     return (
-        <Card className="my-4 hover:motion-preset-blur-right " key={post.id}>
+        <Card className="my-2 hover:animate-pulse" key={post.id}>
             <CardHeader className="flex gap-3">
                 <Link href={`/blog/${post.id}`} className="flex flex-col">
                     <h3 className="text-2xl rainbow_text">{post.title}</h3>
@@ -18,7 +18,7 @@ export default function PostCard({ post }) {
 
             <CardFooter className="text-sm">
                 <Link href={`/blog/${post.id}`} className="block text-sm justify-start w-1/2 flex">
-                    阅读全文 <span className="motion-preset-wobble block text-sm">➞</span>
+                    阅读全文 <span className="block text-sm">➞</span>
                 </Link>
                 <div className="flex justify-end w-1/2">
                     <div className="flex items-center text-sm">

@@ -9,7 +9,7 @@ export default function Avatar () {
             size="md"
         >
             <Image src="/assets/images/avatar.jpg" width={80} height={80} alt="avatar"
-                   className={'rounded-full'}/>
+                   className={'rounded-full hover:animate-pulse'}/>
         </Link>
     );
 }

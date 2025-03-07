@@ -151,7 +151,7 @@ function Post({ post, relatedPosts, prevPost, nextPost }) {
                     {relatedPosts.length > 0 ? (
                         <ul className={styles.related_posts_list}>
                             {relatedPosts.map((relatedPost, index) => (
-                                <li key={index} className={styles.related_post_item}>
+                                <li key={index} className={styles.related_post_item+'transition-all duration-200 hover:translate-x-1'}>
                                     <Link href={`/blog/${relatedPost.id}`} className={styles.related_post_link}>
                                         {relatedPost.title}
                                     </Link>

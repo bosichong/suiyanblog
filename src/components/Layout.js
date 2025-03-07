@@ -18,7 +18,7 @@ const Layout = ({ children }) => {// 空依赖数组确保只在组件挂载时�
         <div className={'flex h-full flex-col items-center justify-start font-sans md:relative md:flex-row md:items-start md:justify-center'}>
 
 
-            <nav className="top-36 ml-8 hidden w-32 motion-preset-blur-right md:sticky md:block">
+            <nav className="top-36 ml-8 hidden w-32 md:sticky md:block">
                 <ul className={'flex flex-col justify-between'}>
                     <li className={'mb-4'}>
                         <Avatar />

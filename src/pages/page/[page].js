@@ -57,8 +57,8 @@ function Page({ currentPosts, currentPage, totalPages }) {
                 <meta name="keywords" content={config.META_KEYWORDS} />
                 <meta content={config.BLOG_AUTHOR} name="author" />
             </Head>
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-                <div className="grid gap-6">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-4 max-w-4xl">
+                <div className="grid gap-4">
                     {currentPosts.map((post) => (
                         <PostCard key={post.id} post={post} />
                     ))}
