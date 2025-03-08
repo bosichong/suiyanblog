@@ -39,7 +39,7 @@ const Search = ({ allPostsData }) => {
                 <meta name="description" content="站内搜索，可以按文章标题搜索"/>
             </Head>
 
-                <div className="max-w-4xl mx-auto p-6">
+                <div className="p-4 min-h-[500px]">
                     <div className="mb-8 pb-4">
                         <h1 className="text-3xl font-bold mb-3">站内搜索</h1>
                         {/* 添加放大镜图标 */}
