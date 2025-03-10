@@ -68,17 +68,17 @@ function generateRSS() {
     xmlns:content="http://purl.org/rss/1.0/modules/content/"
     xmlns:dc="http://purl.org/dc/elements/1.1/">
     <channel>
-        <title>随言 - SuiYan Blog</title>
+        <title>碎言 - SuiYan Blog</title>
         <link>https://www.suiyan.cc</link>
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
-        <description>随言博客 - 分享技术、生活和思考</description>
+        <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
         <lastBuildDate>${now}</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
             <url>https://www.suiyan.cc/favicon.ico</url>
-            <title>随言 - SuiYan Blog</title>
+            <title>碎言 - SuiYan Blog</title>
             <link>https://www.suiyan.cc</link>
         </image>
         ${rssItems}
