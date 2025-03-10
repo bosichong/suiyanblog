@@ -45,8 +45,18 @@ const Tags = ({ tagsData }) => {
     return (
         <Layout>
             <Head>
-                <title>Tags 标签 | SuiYan 碎言 </title>
-                <meta name="description" content="文章分类标签"/>
+                <title>Tags 标签 | SuiYan 碎言 - 个人技术博客</title>
+                <meta name="description" content="碎言博客的文章分类标签，按主题分类的技术文章和随笔"/>
+                <meta name="keywords" content="文章标签,博客分类,技术标签,碎言博客,主题分类" />
+                <link rel="canonical" href="https://www.suiyan.cc/Tags" />
+                <meta property="og:title" content="Tags 标签 | SuiYan 碎言 - 个人技术博客" />
+                <meta property="og:description" content="碎言博客的文章分类标签，按主题分类的技术文章和随笔" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.suiyan.cc/Tags" />
+                <meta property="og:site_name" content="SuiYan 碎言" />
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:title" content="Tags 标签 | SuiYan 碎言" />
+                <meta name="twitter:description" content="碎言博客的文章分类标签，按主题分类的技术文章和随笔" />
             </Head>
                 <div className="p-4 min-h-[500px]">
 

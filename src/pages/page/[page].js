@@ -52,10 +52,19 @@ function Page({ currentPosts, currentPage, totalPages }) {
     return (
         <Layout>
             <Head>
-                <title>文章列表 - 第{currentPage}页 | SuiYan 碎言 </title>
-                <meta name="description" content={config.META_DESCRIPTION} />
+                <title>文章列表 - 第{currentPage}页 | SuiYan 碎言 - 个人技术博客</title>
+                <meta name="description" content={`碎言博客文章列表第${currentPage}页 - ${config.META_DESCRIPTION}`} />
                 <meta name="keywords" content={config.META_KEYWORDS} />
                 <meta content={config.BLOG_AUTHOR} name="author" />
+                <link rel="canonical" href={`https://www.suiyan.cc/page/${currentPage}`} />
+                <meta property="og:title" content={`文章列表 - 第${currentPage}页 | SuiYan 碎言 - 个人技术博客`} />
+                <meta property="og:description" content={`碎言博客文章列表第${currentPage}页 - ${config.META_DESCRIPTION}`} />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={`https://www.suiyan.cc/page/${currentPage}`} />
+                <meta property="og:site_name" content="SuiYan 碎言" />
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:title" content={`文章列表 - 第${currentPage}页 | SuiYan 碎言`} />
+                <meta name="twitter:description" content={`碎言博客文章列表第${currentPage}页 - ${config.META_DESCRIPTION}`} />
             </Head>
             <div className="container mx-auto px-4 sm:px-6 lg:px-4 max-w-4xl">
                 <div className="grid gap-4">

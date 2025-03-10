@@ -99,8 +99,20 @@ function Post({ post, relatedPosts, prevPost, nextPost }) {
     return (
         <Layout>
             <Head>
-                <title>{post.title} | SuiYan 碎言 </title>
+                <title>{post.title} | SuiYan 碎言 - 个人技术博客</title>
                 <meta name="description" content={post.description} />
+                <meta name="keywords" content={post.tag.replace(/,/g, ',')} />
+                <meta name="author" content={post.author} />
+                <link rel="canonical" href={`https://www.suiyan.cc/blog/${post.id}`} />
+                <meta property="og:title" content={`${post.title} | SuiYan 碎言`} />
+                <meta property="og:description" content={post.description} />
+                <meta property="og:type" content="article" />
+                <meta property="og:url" content={`https://www.suiyan.cc/blog/${post.id}`} />
+                <meta property="og:site_name" content="SuiYan 碎言" />
+                <meta property="article:published_time" content={post.time} />
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:title" content={`${post.title} | SuiYan 碎言`} />
+                <meta name="twitter:description" content={post.description} />
             </Head>
             <article className={'p-4'}>
                 <h1 className={`${styles.blog_post_title} rainbow_text`}>{post.title}</h1>

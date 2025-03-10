@@ -38,10 +38,19 @@ function Home({ currentPosts, totalPages }) {
   return (
       <Layout>
         <Head>
-          <title>Home 首页 | SuiYan 碎言 </title>
+          <title>Home 首页 | SuiYan 碎言 - 个人技术博客</title>
           <meta name="description" content={config.META_DESCRIPTION} />
           <meta name="keywords" content={config.META_KEYWORDS} />
           <meta content={config.BLOG_AUTHOR} name="author" />
+          <link rel="canonical" href="https://www.suiyan.cc/" />
+          <meta property="og:title" content="SuiYan 碎言 - 个人技术博客" />
+          <meta property="og:description" content={config.META_DESCRIPTION} />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://www.suiyan.cc/" />
+          <meta property="og:site_name" content="SuiYan 碎言" />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:title" content="SuiYan 碎言 - 个人技术博客" />
+          <meta name="twitter:description" content={config.META_DESCRIPTION} />
         </Head>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-4 max-w-4xl">

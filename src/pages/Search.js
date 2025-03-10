@@ -35,8 +35,18 @@ const Search = ({ allPostsData }) => {
     return (
         <Layout>
             <Head>
-                <title>Search | SuiYan 碎言 </title>
-                <meta name="description" content="站内搜索，可以按文章标题搜索"/>
+                <title>Search 搜索 | SuiYan 碎言 - 个人技术博客</title>
+                <meta name="description" content="碎言博客站内搜索功能，可以按文章标题搜索博客内容"/>
+                <meta name="keywords" content="站内搜索,博客搜索,文章查找,碎言博客" />
+                <link rel="canonical" href="https://www.suiyan.cc/Search" />
+                <meta property="og:title" content="Search 搜索 | SuiYan 碎言 - 个人技术博客" />
+                <meta property="og:description" content="碎言博客站内搜索功能，可以按文章标题搜索博客内容" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.suiyan.cc/Search" />
+                <meta property="og:site_name" content="SuiYan 碎言" />
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:title" content="Search 搜索 | SuiYan 碎言" />
+                <meta name="twitter:description" content="碎言博客站内搜索功能，可以按文章标题搜索博客内容" />
             </Head>
 
                 <div className="p-4 min-h-[500px]">

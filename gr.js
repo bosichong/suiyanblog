@@ -41,26 +41,49 @@ function isValidDate(dateStr) {
 
 function generateRSS() {
     const allPostsData = getSortedPostsData();
-    const rssItems = allPostsData.map(post => `
+    const now = new Date().toUTCString();
+    const rssItems = allPostsData.map(post => {
+        // 确保内容描述不为空，并进行HTML转义
+        const description = (post.summary || post.description || '').replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&apos;');
+            
+        return `
         <item>
             <title>${post.title}</title>
             <link>https://www.suiyan.cc/blog/${post.id}</link>
-            <guid>https://www.suiyan.cc/blog/${post.id}</guid>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/${post.id}</guid>
             <pubDate>${new Date(post.time).toUTCString()}</pubDate>
-            <description>${post.summary || post.description || ''}</description>
+            <description><![CDATA[${description}]]></description>
+            ${post.tags ? `<category>${post.tags}</category>` : ''}
+            ${post.author ? `<author>${post.author}</author>` : ''}
         </item>
-    `).join('');
+    `}).join('');
 
     const rssContent = `<?xml version="1.0" encoding="UTF-8"?>
-        <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-            <channel>
-                <title>SuiYan RSS Feed</title>
-                <link>https://www.suiyan.cc</link>
-                <atom:link href="https://www.suiyan.cc/rss.xml" rel="self"/>
-                <description>Latest posts from SuiYan</description>
-                ${rssItems}
-            </channel>
-        </rss>`;
+<rss version="2.0" 
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>随言 - SuiYan Blog</title>
+        <link>https://www.suiyan.cc</link>
+        <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
+        <description>随言博客 - 分享技术、生活和思考</description>
+        <language>zh-CN</language>
+        <lastBuildDate>${now}</lastBuildDate>
+        <generator>SuiYan Blog RSS Generator</generator>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <image>
+            <url>https://www.suiyan.cc/favicon.ico</url>
+            <title>随言 - SuiYan Blog</title>
+            <link>https://www.suiyan.cc</link>
+        </image>
+        ${rssItems}
+    </channel>
+</rss>`;
 
     // 保存 rss.xml 到 public 目录下
     const publicDir = path.join(process.cwd(), 'public');

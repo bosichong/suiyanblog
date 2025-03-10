@@ -45,15 +45,25 @@ function generateSitemap() {
         lastModified: new Date(post.time).toISOString(),
         changeFrequency: 'monthly',
         priority: 0.8,
+        // 添加可选的标题和标签信息，用于增强搜索引擎对内容的理解
+        title: post.title || '',
+        tags: post.tags || ''
     }));
 
+    // 添加更多命名空间以支持扩展功能
     const xmlContent = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map(url =>`
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">${urls.map(url =>`
     <url>
         <loc>${url.url}</loc>
         <lastmod>${url.lastModified}</lastmod>
         <changefreq>${url.changeFrequency}</changefreq>
         <priority>${url.priority}</priority>
+        ${url.tags ? `<!-- 标签: ${url.tags} -->` : ''}
     </url>
 `).join('')}</urlset>
 `;
