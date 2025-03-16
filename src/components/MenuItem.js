@@ -10,7 +10,7 @@ const MenuItem = ({ item, index, onClick }) => {
     >
       <Link
         className={
-          "w-full flex justify-center hover:animate-pulse"
+          "w-full flex justify-center transition-all duration-200 hover:translate-x-0.5"
         }
         href={item.href}
         size="md"
