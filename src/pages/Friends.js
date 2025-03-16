@@ -2,10 +2,10 @@ import Layout from "../components/Layout";
 import config from "../config.js";
 import Head from "next/head";
 import {Link} from "@nextui-org/react";
-import {Image} from "@nextui-org/react";
 import giscusConfig from "@/giscusConfigs";
 import Giscus from "@giscus/react";
 import React, {useEffect, useState} from "react";
+import FriendCard from "../components/FriendCard";
 
 const Friends = () => {
     const links = config.links;
@@ -40,37 +40,7 @@ const Friends = () => {
                     </div>
                     <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
                       {links.map((link) => (
-                        <div 
-                          key={link.site_name} 
-                          className="group rounded-xl p-4 transition-all duration-300 hover:shadow-lg dark:bg-default-50"
-                        >
-                          <div className="flex flex-col items-center space-y-4">
-                            <Image
-                              src={link.site_avatar}
-                              alt={link.site_name}
-                              className="h-24 w-24 rounded-full object-cover shadow-md"
-                            />
-                            <h3 className="text-xl font-semibold text-foreground">
-                              <Link href={link.site_url} color="primary">
-                                {link.site_name}
-                              </Link>
-                            </h3>
-                            <p className="text-center text-sm leading-relaxed text-default-600 line-clamp-3">
-                              {link.site_description}
-                            </p>
-                            <Link
-                              href={link.site_url}
-                              color="primary"
-                              className="mt-2 transition-transform duration-200 hover:translate-x-1"
-                              underline="hover"
-                            >
-                              <span className="flex items-center gap-1 text-sm">
-                                访问博客
-                                <span className="i-mdi-arrow-right-thin transition-transform duration-200 group-hover:translate-x-0.5" />
-                              </span>
-                            </Link>
-                          </div>
-                        </div>
+                        <FriendCard key={link.site_name} link={link} />
                       ))}
                     </div>
                 </div>
