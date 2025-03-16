@@ -10,7 +10,7 @@ const MenuItem = ({ item, index, onClick }) => {
     >
       <Link
         className={
-          "w-full flex justify-center transition-all duration-200 hover:translate-x-0.5"
+          "rainbow_hover w-full flex justify-center transition-all duration-200 hover:translate-x-1 "
         }
         href={item.href}
         size="md"

@@ -70,7 +70,7 @@ const Archives = ({ allPostsData, postsByYearMonth }) => {
                                     <li className="transition-all duration-200 hover:translate-x-1" key={post.id}>
                                         <Link 
                                             href={`/blog/${post.id}`} 
-                                            className="group flex items-center text-ellipsis overflow-hidden whitespace-nowrap"
+                                            className="rainbow_hover group flex items-center text-ellipsis overflow-hidden whitespace-nowrap"
                                         >
                                             {post.title}
                                         </Link>

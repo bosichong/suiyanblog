@@ -47,7 +47,7 @@ const BackToTop = () => {
                 `}
                 onClick={scrollToTop}
             >
-                <div className="transform transition-transform duration-300 ease-in-out hover:rotate-12">
+                <div className="transform transition-transform duration-300 ease-in-out">
                     <GoUp className="w-5 h-5 text-foreground" />
                 </div>
             </button>
