@@ -65,8 +65,7 @@ function generateSitemap() {
         <priority>${url.priority}</priority>
         ${url.tags ? `<!-- 标签: ${url.tags} -->` : ''}
     </url>
-`).join('')}</urlset>
-`;
+`).join('')}</urlset>`;
 
     // 保存 sitemap_blogs.xml
     const sitemapBlogsPath = path.join(publicDir, 'sitemap_blogs.xml');
