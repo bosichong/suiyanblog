@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Tue, 18 Mar 2025 13:53:54 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 19 Mar 2025 12:36:31 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -33,7 +33,7 @@
             <link>https://www.suiyan.cc/blog/20250317142354</link>
             <guid isPermaLink="true">https://www.suiyan.cc/blog/20250317142354</guid>
             <pubDate>Mon, 17 Mar 2025 14:23:54 GMT</pubDate>
-            <description><![CDATA[对比deepseek14B,Gemma3:12b的回答更加快速，在某些问题的回答上也更加准确。当然，这也是我个人的简介，建议大家可以下载部署体验一下。]]></description>
+            <description><![CDATA[对比deepseek 14B,Gemma3 12b的回答更加快速，在某些问题的回答上也更加准确。当然，这也是我个人的见解，建议大家可以下载部署体验一下。]]></description>
             
             <author>J.sky</author>
         </item>
