@@ -81,8 +81,7 @@ function generateSitemap() {
         <loc>https://www.suiyan.cc/sitemap_blogs.xml</loc>
         <lastmod>${now}</lastmod>
     </sitemap>
-</sitemapindex>
-`;
+</sitemapindex>`;
     fs.writeFileSync(sitemapIndexPath, sitemapIndexContent);
 
 
