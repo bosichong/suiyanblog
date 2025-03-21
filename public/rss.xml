@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Wed, 19 Mar 2025 12:56:51 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 21 Mar 2025 14:10:36 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>Phaser3 学习笔记</title>
+            <link>https://www.suiyan.cc/blog/20250321131137</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20250321131137</guid>
+            <pubDate>Fri, 21 Mar 2025 13:11:37 GMT</pubDate>
+            <description><![CDATA[起因是一直在关注「極客死亡計劃」最近写的几篇博客，前几天他终于发布他的游戏大作「为战斗献上心脏！」看的心痒痒，又想写游戏了，为什么要说有又？因为以前懵懵的编写过一些小游戏，但是大多都是按着实际的案例照抄，主要是学习游戏的编写，具体自己完整的构思和制作并没有体验过，所以就有了这篇Phaser3的学习笔记。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>没有信号的焦虑--手机的SIM卡坏了</title>
             <link>https://www.suiyan.cc/blog/20250318131205</link>
