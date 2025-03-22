@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Fri, 21 Mar 2025 14:10:36 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 22 Mar 2025 02:39:40 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>Phaser3 游戏开发环境搭建</title>
+            <link>https://www.suiyan.cc/blog/20250322013314</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20250322013314</guid>
+            <pubDate>Sat, 22 Mar 2025 01:33:14 GMT</pubDate>
+            <description><![CDATA[Phaser3的游戏开发环境搭建其实很简单的，如果你引入CDN的话，只需要一个HTML页面即可，但是这里我并不推荐使用CDN搭建，这里我推荐使用Vite。对于代码编写我推荐trae或vscode。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>Phaser3 学习笔记</title>
             <link>https://www.suiyan.cc/blog/20250321131137</link>
