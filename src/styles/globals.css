@@ -15,3 +15,26 @@
     color: transparent;
 }
 
+/* Atropos卡片样式修复 */
+.atropos-card {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* 修复亮色模式下四角灰色边线问题 */
+.light .atropos-inner {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.light .atropos-card {
+    border: none !important;
+    background-color: #f5f5f5 !important; /* 添加浅灰色背景，增强与站点背景的对比度 */
+    /* 移除box-shadow: none !important，允许Atropos的阴影效果显示 */
+}
+
+/* 确保阴影效果在暗色模式下正常显示 */
+.dark .atropos-card {
+    border: none !important;
+}
+

@@ -5,7 +5,7 @@ import {Link} from "@nextui-org/react";
 import giscusConfig from "@/giscusConfigs";
 import Giscus from "@giscus/react";
 import React, {useEffect, useState} from "react";
-import FriendCard from "../components/FriendCard";
+import AtroposFriendCard from "../components/AtroposFriendCard";
 
 const Friends = () => {
     const links = config.links;
@@ -40,7 +40,7 @@ const Friends = () => {
                     </div>
                     <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
                       {links.map((link) => (
-                        <FriendCard key={link.site_name} link={link} />
+                        <AtroposFriendCard key={link.site_name} link={link} />
                       ))}
                     </div>
                 </div>

@@ -5,7 +5,7 @@ import { Pagination } from '@nextui-org/react';
 import React, {useEffect} from 'react';
 import Head from 'next/head';
 import config from '../config'; // 引入配置文件
-import PostCard from '../components/PostCard';
+import AtroposPostCard from '../components/AtroposPostCard';
 
 // 使用 config.POSTS_PER_PAGE
 const postsPerPage = config.POSTS_PER_PAGE;
@@ -56,7 +56,7 @@ function Home({ currentPosts, totalPages }) {
           <div className="container mx-auto px-4 sm:px-6 lg:px-4 max-w-4xl">
             <div className="grid gap-4">
               {currentPosts.map((post) => (
-                    <PostCard key={post.id} post={post} />
+                    <AtroposPostCard key={post.id} post={post} />
               ))}
             </div>
             <div className="mt-8 mb-4 flex justify-center">
