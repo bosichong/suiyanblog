@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Mon, 24 Mar 2025 14:52:20 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 30 Mar 2025 05:21:53 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>突然想做一个模拟养成类的游戏</title>
+            <link>https://www.suiyan.cc/blog/20250330051804</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20250330051804</guid>
+            <pubDate>Sun, 30 Mar 2025 05:18:04 GMT</pubDate>
+            <description><![CDATA[前几天一直在各个游戏引擎的框架选择中飘忽不定，同时也在纠结和构思制作一个什么样的游戏，简单的在头脑中构思跑了一遍就觉得没意思了，太难的复杂的又觉得制作起来遥遥无期。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>蠢事三则</title>
             <link>https://www.suiyan.cc/blog/20250323073926</link>
