@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sun, 30 Mar 2025 05:21:53 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 09 Apr 2025 23:55:04 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>游戏开发中的取舍纠结</title>
+            <link>https://www.suiyan.cc/blog/20250409233731</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20250409233731</guid>
+            <pubDate>Wed, 09 Apr 2025 23:37:31 GMT</pubDate>
+            <description><![CDATA[使用godot开发游戏的进度还在缓慢的推进中，本以为大部分时间会在绘制场景和制作动画上了，但是我确卡在了游戏的世界观设计上了，痛定思过，决定先把游戏的世界观设计好了，再开始绘制场景和制作动画。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>突然想做一个模拟养成类的游戏</title>
             <link>https://www.suiyan.cc/blog/20250330051804</link>
