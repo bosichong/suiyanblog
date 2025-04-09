@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Wed, 09 Apr 2025 23:55:04 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 09 Apr 2025 23:55:40 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -19,7 +19,7 @@
         </image>
         
         <item>
-            <title>游戏开发中的取舍纠结</title>
+            <title>游戏开发中的断离舍</title>
             <link>https://www.suiyan.cc/blog/20250409233731</link>
             <guid isPermaLink="true">https://www.suiyan.cc/blog/20250409233731</guid>
             <pubDate>Wed, 09 Apr 2025 23:37:31 GMT</pubDate>
