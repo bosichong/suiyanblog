@@ -34,10 +34,10 @@ const config = {
     ],
     "links": [
         {
-            "site_name": "@友友",
-            "site_url": "https://iteuu.com",
-            "site_description": "藏不住了！@友友带你探索有趣的世界。",
-            "site_avatar": "https://img.erq.cc/biubiu/logo.png"
+            "site_name": "堆叶博客",
+            "site_url": " https://duiye.cn",
+            "site_description": "「堆叶博客」把知识堆起来",
+            "site_avatar": "https://img.erq.cc/biubiu/logo.webp"
         },
         {
             "site_name": "二丫讲梵",
