@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Mon, 21 Apr 2025 03:05:46 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 29 Apr 2025 15:07:29 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>中老年游戏:《暗黑破坏神III》国服技术测试现已开启</title>
+            <link>https://www.suiyan.cc/blog/20250429145547</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20250429145547</guid>
+            <pubDate>Tue, 29 Apr 2025 14:55:47 GMT</pubDate>
+            <description><![CDATA[本来以为大萝卜3国服这辈子都不可能重启了，结果网易已经在4月16日正式开启了技术测试，前几天闲着没事就下载了这款养老的中老年经典游戏玩了一个星期。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>又到了流鼻涕流眼泪的季节了</title>
             <link>https://www.suiyan.cc/blog/20250421024909</link>
