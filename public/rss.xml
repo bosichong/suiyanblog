@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Fri, 09 May 2025 01:10:05 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 11 Jun 2025 23:49:37 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>做个游戏做到开始怀疑人生了</title>
+            <link>https://www.suiyan.cc/blog/20250611233730</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20250611233730</guid>
+            <pubDate>Wed, 11 Jun 2025 23:37:30 GMT</pubDate>
+            <description><![CDATA[一晃俩月过去了，我的游戏开发进度真是惨不忍睹，从信心满满的开始，到折磨的崩溃，再到开始怀疑人生。从做好一个游戏到把这个游戏做完，这真是一个自我折磨的过程。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>纠结的五月</title>
             <link>https://www.suiyan.cc/blog/20250509005137</link>
