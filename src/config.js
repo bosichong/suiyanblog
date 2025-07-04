@@ -34,10 +34,10 @@ const config = {
     ],
     "links": [
         {
-            "site_name": "堆叶博客",
-            "site_url": " https://duiye.cn",
-            "site_description": "「堆叶博客」把知识堆起来",
-            "site_avatar": "https://img.erq.cc/biubiu/logo.webp"
+            "site_name": "堆新",
+            "site_url": "https://duinew.com/",
+            "site_description": "堆行成路•新途无界（DUINEW）",
+            "site_avatar": "https://d.duinew.com/logo.webp"
         },
         {
             "site_name": "二丫讲梵",

@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Wed, 11 Jun 2025 23:49:37 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 04 Jul 2025 02:28:05 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>琐事不断的老年程序员</title>
+            <link>https://www.suiyan.cc/blog/20250704021309</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20250704021309</guid>
+            <pubDate>Fri, 04 Jul 2025 02:13:09 GMT</pubDate>
+            <description><![CDATA[都说程序员过了35岁就会被裁员，35岁确实是一个坎，这个年龄段大部分人都会结婚生子。我觉得影响程序员工作能力的主要原因就是：琐事。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>做个游戏做到开始怀疑人生了</title>
             <link>https://www.suiyan.cc/blog/20250611233730</link>
