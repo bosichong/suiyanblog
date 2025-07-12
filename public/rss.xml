@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Fri, 04 Jul 2025 02:28:05 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 12 Jul 2025 15:07:55 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>抽象的理想和具体的现实</title>
+            <link>https://www.suiyan.cc/blog/20250712144920</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20250712144920</guid>
+            <pubDate>Sat, 12 Jul 2025 14:49:20 GMT</pubDate>
+            <description><![CDATA[最近一直在构思一些游戏的中的细节，有的时候想了几天都没有具体实现的方式，不过，大部分游戏的场景最终都还是找到了具体实现的方法。这期间，我的思绪不断地回到这个游戏构思的初期，那个抽象出来的理想中的游戏世界。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>琐事不断的老年程序员</title>
             <link>https://www.suiyan.cc/blog/20250704021309</link>
