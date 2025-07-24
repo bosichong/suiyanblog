@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sun, 13 Jul 2025 13:52:57 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 24 Jul 2025 01:15:15 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>Godot游戏开发《我的博客》记录01</title>
+            <link>https://www.suiyan.cc/blog/20250724005122</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20250724005122</guid>
+            <pubDate>Thu, 24 Jul 2025 00:51:22 GMT</pubDate>
+            <description><![CDATA[游戏开发已经有段时日了，我决定在我的博客记录这个游戏开发过程，一方面是督促自己抓紧开发游戏的各个环节，记录游戏开发的过程和学习使用Godot开发游戏的经验，另一方面也是希望能够吸引到对这个游戏感兴趣的玩家，当然如果能够有高手指点一下更好啦。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>抽象的理想和具体的现实</title>
             <link>https://www.suiyan.cc/blog/20250712144920</link>
