@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Thu, 24 Jul 2025 01:15:15 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 02 Aug 2025 07:36:11 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>Godot游戏开发《我的博客》记录02-缓慢的进度</title>
+            <link>https://www.suiyan.cc/blog/20250802071522</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20250802071522</guid>
+            <pubDate>Sat, 02 Aug 2025 07:15:22 GMT</pubDate>
+            <description><![CDATA[今天一看时间，都是八月份了，上次我记录游戏开发的时候还是7月末，简单的说下游戏开发的进度和一些细节吧。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>Godot游戏开发《我的博客》记录01</title>
             <link>https://www.suiyan.cc/blog/20250724005122</link>
