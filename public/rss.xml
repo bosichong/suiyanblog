@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sat, 02 Aug 2025 07:36:11 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 03 Aug 2025 01:11:15 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>Godot游戏开发《我的博客》记录03-关于游戏的场景绘制风格的选择</title>
+            <link>https://www.suiyan.cc/blog/20250803005406</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20250803005406</guid>
+            <pubDate>Sun, 03 Aug 2025 00:54:06 GMT</pubDate>
+            <description><![CDATA[只要有空余的时间我就在思考游戏的场景的绘制风格的选择，最开始的时候选择了像素风格，后来换成3D风格采用blender建模，但是感觉3d风格在颜色、材质和动画方面的控制碍于技术原因十分有限，而且风格极难把握，最终还是放弃了，选择了2D风格，但是具体的画风还需要筛选。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>Godot游戏开发《我的博客》记录02-缓慢的进度</title>
             <link>https://www.suiyan.cc/blog/20250802071522</link>
