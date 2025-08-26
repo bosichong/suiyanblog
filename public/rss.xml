@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sun, 17 Aug 2025 12:02:54 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 26 Aug 2025 15:43:50 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>Godot游戏开发《我的博客》记录05-游戏的主线任务代码基本完成</title>
+            <link>https://www.suiyan.cc/blog/20250826152522</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20250826152522</guid>
+            <pubDate>Tue, 26 Aug 2025 15:25:22 GMT</pubDate>
+            <description><![CDATA[经过这个暑假的忙碌，终于基本上完成了游戏的主线代码，也就是模拟博客博主的自身属性的提升，以及发布博文后一些访问量数据的变化，同事模拟了广告联盟的收入，另外测试性的添加了二个随机事件，总之一切还算顺利。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>Godot游戏开发《我的博客》记录04-终于完成了主场景的绘制</title>
             <link>https://www.suiyan.cc/blog/20250817080520</link>
