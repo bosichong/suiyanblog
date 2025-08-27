@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Tue, 26 Aug 2025 15:43:50 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 27 Aug 2025 15:29:44 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>Godot游戏开发《我的博客》记录06-游戏中的博客联盟</title>
+            <link>https://www.suiyan.cc/blog/20250827145453</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20250827145453</guid>
+            <pubDate>Wed, 27 Aug 2025 14:54:53 GMT</pubDate>
+            <description><![CDATA[着手开始构建游戏中的博客联盟功能，这让我想起很多当下的博客联盟，目前我比较关注的博客联盟有：十年之约，BlogFinder，博友圈以及记忆中比较认可的就是已经关门大吉的积薪。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>Godot游戏开发《我的博客》记录05-游戏的主线任务代码基本完成</title>
             <link>https://www.suiyan.cc/blog/20250826152522</link>
