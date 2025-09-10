@@ -6,6 +6,13 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
+        <loc>https://www.suiyan.cc/blog/20250910000235</loc>
+        <lastmod>2025-09-10T00:02:35.529Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        
+    </url>
+    <url>
         <loc>https://www.suiyan.cc/blog/20250827145453</loc>
         <lastmod>2025-08-27T14:54:53.241Z</lastmod>
         <changefreq>monthly</changefreq>
