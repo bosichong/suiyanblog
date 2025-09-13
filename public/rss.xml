@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Wed, 10 Sep 2025 01:02:36 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 13 Sep 2025 01:24:16 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>发小——久违小聚</title>
+            <link>https://www.suiyan.cc/blog/20250913005315</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20250913005315</guid>
+            <pubDate>Sat, 13 Sep 2025 00:53:15 GMT</pubDate>
+            <description><![CDATA[我有几个非常不错的发小，我们都还生活在这个八县的小城里，每隔一段时间我们就会小聚一下，分享一下自己的生活，也会吐槽一下最近的苦衷。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>Godot游戏开发《我的博客》记录07-复盘与展望</title>
             <link>https://www.suiyan.cc/blog/20250910000235</link>
