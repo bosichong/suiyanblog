@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sat, 13 Sep 2025 01:24:16 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 20 Sep 2025 00:56:07 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>Godot游戏开发《我的博客》记录08-第一个有意愿想玩这款游戏的玩家</title>
+            <link>https://www.suiyan.cc/blog/20250920003603</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20250920003603</guid>
+            <pubDate>Sat, 20 Sep 2025 00:36:03 GMT</pubDate>
+            <description><![CDATA[几天前，突然收到了一封来自博客文章评论的邮件提示，内容是：「这个有些期待啊，什么时候好啊？到时候我也想玩一下」，来自网友xpp9的评论。 这是开发这款游戏以来第一位有意愿想玩它的玩家。因为虽然我在博客里记录了游戏制作的过程，但是游戏的具体内容我并没有发布，能有人期待也算是超出了我的意料。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>发小——久违小聚</title>
             <link>https://www.suiyan.cc/blog/20250913005315</link>
