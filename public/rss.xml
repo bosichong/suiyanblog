@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sat, 20 Sep 2025 00:56:07 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 23 Sep 2025 14:57:20 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>记一次惊险的磁盘操作</title>
+            <link>https://www.suiyan.cc/blog/20250923142034</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20250923142034</guid>
+            <pubDate>Tue, 23 Sep 2025 14:20:34 GMT</pubDate>
+            <description><![CDATA[今天安装一个微软的组件库，必须安装在C盘，结果提示我100G的C盘可用容量不足。看了看我可怜的C盘，就只有几百MB的可用容量，清理C盘的软件不是收费就是不好用，只好铤而走险的试试一些奇特的方法了！]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>Godot游戏开发《我的博客》记录08-第一个有意愿想玩这款游戏的玩家</title>
             <link>https://www.suiyan.cc/blog/20250920003603</link>
