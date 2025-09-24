@@ -34,6 +34,12 @@ const config = {
     ],
     "links": [
         {
+            "site_name": "秋风于渭水",
+            "site_url": "https://www.tjsky.net/",
+            "site_description": "“秋风于渭水” 小站！别看名字整得挺文艺范儿，其实本质就是个 佛系码农（伪）的小窝。",
+            "site_avatar": "https://www.tjsky.net/wp-content/uploads/2024/02/logo.png"
+        },
+        {
             "site_name": "八对星星",
             "site_url": "https://8dui.com",
             "site_description": "极目星视穹苍无界•足履行者大地有疆",
