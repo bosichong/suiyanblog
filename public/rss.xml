@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Thu, 25 Sep 2025 14:46:56 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 29 Sep 2025 07:59:29 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>Godot游戏开发《我的博客》记录09-完成了游戏中所有重要的场景模拟代码</title>
+            <link>https://www.suiyan.cc/blog/20250929073315</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20250929073315</guid>
+            <pubDate>Mon, 29 Sep 2025 07:33:15 GMT</pubDate>
+            <description><![CDATA[这几天终于把游戏内主要的几个场景UI以及功能的代码都写完了，目前来说，游戏可以运行知道结束，除了没有剧情和任务外，一个博客的日常操作基本模拟的差不多了。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>记一次惊险的磁盘操作</title>
             <link>https://www.suiyan.cc/blog/20250923142034</link>
