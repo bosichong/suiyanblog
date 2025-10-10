@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Mon, 29 Sep 2025 08:31:20 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 10 Oct 2025 08:27:55 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>Godot游戏开发《我的博客》记录09-关于游戏的主线任务的思考：独立博客的终极意义</title>
+            <link>https://www.suiyan.cc/blog/20251010075131</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20251010075131</guid>
+            <pubDate>Fri, 10 Oct 2025 07:51:31 GMT</pubDate>
+            <description><![CDATA[随着代码编写的推进，终于进入到了任务和事件的编写，感觉绕了一大圈又回到了起点。我想起了我创建这个游戏的初衷。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>Godot游戏开发《我的博客》记录09-完成了游戏中所有重要的场景模拟代码</title>
             <link>https://www.suiyan.cc/blog/20250929073315</link>
