@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Fri, 10 Oct 2025 09:38:05 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 18 Oct 2025 00:10:06 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>Godot游戏开发《我的博客》记录11-里程碑与成就任务的持续开发</title>
+            <link>https://www.suiyan.cc/blog/20251017235222</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20251017235222</guid>
+            <pubDate>Fri, 17 Oct 2025 23:52:22 GMT</pubDate>
+            <description><![CDATA[这几天搭建好了里程碑成就系统，然后就开始着手编写相应的成就任务了，粗略的算了下，大约会有百十个左右的成就任务。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>Godot游戏开发《我的博客》记录10-关于游戏的主线任务的思考：独立博客的终极意义</title>
             <link>https://www.suiyan.cc/blog/20251010075131</link>
