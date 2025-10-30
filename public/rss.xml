@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sat, 18 Oct 2025 00:10:06 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 30 Oct 2025 01:03:39 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>Godot游戏开发《我的博客》记录11-游戏剧本怎么写？</title>
+            <link>https://www.suiyan.cc/blog/20251030003841</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20251030003841</guid>
+            <pubDate>Thu, 30 Oct 2025 00:38:41 GMT</pubDate>
+            <description><![CDATA[上个星期，重写了游戏中的技能升级的方法，改用自己编写的任务系统来触发技能升级，优化了代码和任务的触发，虽然花了些时间，但也是很值得的，但是同时也陷入了整个游戏的剧本编写的深坑。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>Godot游戏开发《我的博客》记录11-里程碑与成就任务的持续开发</title>
             <link>https://www.suiyan.cc/blog/20251017235222</link>
