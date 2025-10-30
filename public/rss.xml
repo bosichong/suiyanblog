@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Thu, 30 Oct 2025 01:03:39 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 30 Oct 2025 01:14:36 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -19,7 +19,7 @@
         </image>
         
         <item>
-            <title>Godot游戏开发《我的博客》记录11-游戏剧本怎么写？</title>
+            <title>Godot游戏开发《我的博客》记录12-游戏剧本怎么写？</title>
             <link>https://www.suiyan.cc/blog/20251030003841</link>
             <guid isPermaLink="true">https://www.suiyan.cc/blog/20251030003841</guid>
             <pubDate>Thu, 30 Oct 2025 00:38:41 GMT</pubDate>
