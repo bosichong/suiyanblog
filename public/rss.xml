@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Fri, 07 Nov 2025 02:09:10 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 15 Nov 2025 14:13:03 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>在 Godot 4.4 中构建灵活的有限状态机 (FSM)</title>
+            <link>https://www.suiyan.cc/blog/20251114010459</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20251114010459</guid>
+            <pubDate>Fri, 14 Nov 2025 01:04:59 GMT</pubDate>
+            <description><![CDATA[在游戏开发中，角色的行为（如站立、行走、跳跃、攻击）通常需要复杂的逻辑来控制。如果不使用状态机，代码会充斥着大量的 if/else 或 match 语句，导致代码难以阅读、维护和扩展，这就是所谓的“意大利面条式代码”。有限状态机（FSM）提供了一种优雅的解决方案。它将角色的每一个行为定义为一个状态（State），并清晰地定义了状态之间的转换（Transition）规则。本教程将基于 godotfsmtest 项目的代码结构，向您展示如何在 Godot 4.4 中实现一个结构清晰、基于类的 FSM。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>Godot游戏开发《我的博客》记录13-完成了游戏的启动与过场</title>
             <link>https://www.suiyan.cc/blog/20251107014030</link>
