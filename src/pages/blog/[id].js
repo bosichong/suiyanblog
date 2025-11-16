@@ -175,8 +175,11 @@ function Post({ post, relatedPosts, prevPost, nextPost }) {
                     )}
                 </div>
 
-                <div className={'py-4 justify-center'}>
+                <div className={'py-4 text-center'}>
                     <p>英雄请留步！对我博客最大的鼓励来自于你的评论！欢迎留言！</p>
+                
+                </div>
+
                 <Giscus
                     repo={giscusConfig.repo}
                     repoId={giscusConfig.repoId}
@@ -190,7 +193,6 @@ function Post({ post, relatedPosts, prevPost, nextPost }) {
                     inputPosition="bottom"
                     theme={giscusTheme} // 使用动态设置的主题
                 />
-                </div>
 
 
 
