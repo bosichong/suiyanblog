@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sun, 16 Nov 2025 15:55:32 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 23 Nov 2025 14:48:26 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>无聊的家长会与「资本家」班主任</title>
+            <link>https://www.suiyan.cc/blog/20251123135354</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20251123135354</guid>
+            <pubDate>Sun, 23 Nov 2025 13:53:54 GMT</pubDate>
+            <description><![CDATA[孩子上八年级了，这周末期中考试后学校组织开了一次家长会，我觉得挺无聊的而且挺压抑，觉得这个家长会对家长和孩子的帮助并不是很大，反而让人有些反感，大体就是憋得慌那种感觉吧。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>在 Godot 4.4 中构建灵活的有限状态机 (FSM)</title>
             <link>https://www.suiyan.cc/blog/20251114010459</link>
