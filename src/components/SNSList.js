@@ -6,6 +6,28 @@ export default function SNSList() {
         <ul className="mt-4 flex justify-center gap-2">
             <li>
                 <Link
+                    href="https://space.bilibili.com/275991552"
+                    rel="noreferrer"
+                    target="_blank"
+                    className="artlist m-auto"
+                >
+                    <span className="sr-only">bilibili</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" />
+                        <path d="M8 3l2 3" />
+                        <path d="M16 3l-2 3" />
+                        <path d="M9 13v-2" />
+                        <path d="M15 11v2" />
+                    </svg>
+                </Link>
+            </li>
+
+
+
+
+            <li>
+                <Link
                     href="https://github.com/bosichong/"
                     rel="noreferrer"
                     target="_blank"
@@ -82,6 +104,8 @@ export default function SNSList() {
                     </svg>
                 </Link>
             </li>
+
+
 
 
         </ul>
