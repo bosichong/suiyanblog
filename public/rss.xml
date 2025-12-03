@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Mon, 01 Dec 2025 01:42:48 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 03 Dec 2025 01:46:46 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,26 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>Godot游戏开发《我的博客》记录14-游戏的制作仍在继续</title>
+            <link>https://www.suiyan.cc/blog/20251203013509</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20251203013509</guid>
+            <pubDate>Wed, 03 Dec 2025 01:35:09 GMT</pubDate>
+            <description><![CDATA[断断续续的仍在编写游戏中的逻辑代码，一直在缝缝补补中。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
+        <item>
+            <title>Godot4中的整除报错:Expected expression after "/" operator.</title>
+            <link>https://www.suiyan.cc/blog/20251203012735</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20251203012735</guid>
+            <pubDate>Wed, 03 Dec 2025 01:27:35 GMT</pubDate>
+            <description><![CDATA[Godot4中的整除和python的不同，容易在使用中造成麻烦，这里记录一下，也方便遇到这类问题的朋友了解一下。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>Godot4 学习资源教程推荐</title>
             <link>https://www.suiyan.cc/blog/20251201013459</link>
