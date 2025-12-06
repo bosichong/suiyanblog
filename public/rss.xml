@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Wed, 03 Dec 2025 01:48:23 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 06 Dec 2025 00:50:10 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>快说！电影票买错日期的这种蠢事不是只有我一个人做过！</title>
+            <link>https://www.suiyan.cc/blog/20251206003957</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20251206003957</guid>
+            <pubDate>Sat, 06 Dec 2025 00:39:57 GMT</pubDate>
+            <description><![CDATA[说点不开心的事，让大家开心一下：昨天周五，本来想买一场周六播放的《疯狂动物城2》的三张电影票，结果今天早上起来，满心欢喜的看看票，确定播放时间，才发现昨天神不知鬼不觉的买成了当天周五的票，票面显示：影片已播放！]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>Godot游戏开发《我的博客》记录14-游戏的制作仍在继续</title>
             <link>https://www.suiyan.cc/blog/20251203013509</link>
