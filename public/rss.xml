@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sun, 14 Dec 2025 14:35:35 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 16 Dec 2025 14:46:43 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>Godot 4 实用视频教程中文版</title>
+            <link>https://www.suiyan.cc/blog/20251216144340</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20251216144340</guid>
+            <pubDate>Tue, 16 Dec 2025 14:43:40 GMT</pubDate>
+            <description><![CDATA[最近几个月，我一直在开发我的第一款独立游戏《我的博客》，在游戏制作中也算是积累了一些经验与心得，所以，我打算制作一个Godot的中文版教程。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>快说！电影票买错日期的这种蠢事不是只有我一个人做过！</title>
             <link>https://www.suiyan.cc/blog/20251206003957</link>
