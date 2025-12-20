@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Wed, 17 Dec 2025 00:12:05 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 20 Dec 2025 01:20:01 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>冬至不吃饺子？</title>
+            <link>https://www.suiyan.cc/blog/20251220005628</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20251220005628</guid>
+            <pubDate>Sat, 20 Dec 2025 00:56:28 GMT</pubDate>
+            <description><![CDATA[前天，和老丈人一起吃饭的时候聊到马上快冬至了，可以包饺子了，老爷子突然来了一句，冬至不吃饺子，我就问他这是从哪得到的信息？他说抖音上看到的。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>Godot 4 实用视频教程中文版</title>
             <link>https://www.suiyan.cc/blog/20251216144340</link>
