@@ -158,23 +158,6 @@ function Post({ post, relatedPosts, prevPost, nextPost }) {
                     )}
                 </div>
 
-                <div className={'py-4'}>
-                    <h2 >相关文章</h2>
-                    {relatedPosts.length > 0 ? (
-                        <ul className={styles.related_posts_list}>
-                            {relatedPosts.map((relatedPost, index) => (
-                                <li key={index} className={styles.related_post_item+'transition-all duration-200 hover:translate-x-1'}>
-                                    <Link href={`/blog/${relatedPost.id}`} className={'rainbow_hover'}>
-                                        {relatedPost.title}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    ) : (
-                        <p className={'text-gray-500'}>暂无相关文章</p>
-                    )}
-                </div>
-
                 <div className={'py-4 text-center'}>
                     <p>英雄请留步！欢迎在下方留言交流！</p>
                 
@@ -193,6 +176,25 @@ function Post({ post, relatedPosts, prevPost, nextPost }) {
                     inputPosition="bottom"
                     theme={giscusTheme} // 使用动态设置的主题
                 />
+
+                <div className={'py-4'}>
+                    <h2 >相关文章</h2>
+                    {relatedPosts.length > 0 ? (
+                        <ul className={styles.related_posts_list}>
+                            {relatedPosts.map((relatedPost, index) => (
+                                <li key={index} className={styles.related_post_item+'transition-all duration-200 hover:translate-x-1'}>
+                                    <Link href={`/blog/${relatedPost.id}`} className={'rainbow_hover'}>
+                                        {relatedPost.title}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    ) : (
+                        <p className={'text-gray-500'}>暂无相关文章</p>
+                    )}
+                </div>
+
+
 
 
 
