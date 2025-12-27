@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sat, 20 Dec 2025 11:02:03 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 27 Dec 2025 11:51:01 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>油条豆腐脑，总结要趁早｜我的2025年度小记</title>
+            <link>https://www.suiyan.cc/blog/20251227113006</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20251227113006</guid>
+            <pubDate>Sat, 27 Dec 2025 11:30:06 GMT</pubDate>
+            <description><![CDATA[2025年最后一个周六，我起来的比平时要晚很多，八点多我驱车来到离家不到二里地的早市觅食，嗯？这么近为啥要开车？因为太冷了！体感温度大约-25°左右，东北的三九天是真冷啊！用我们这的方言说：这天儿，嘎嘎地冷🥶。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>冬至不吃饺子？</title>
             <link>https://www.suiyan.cc/blog/20251220005628</link>
