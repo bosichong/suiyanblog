@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sat, 27 Dec 2025 11:51:01 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 29 Dec 2025 12:22:28 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>解放双手用嘴写博客？试试豆包输入法，真的香！</title>
+            <link>https://www.suiyan.cc/blog/20251229121732</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20251229121732</guid>
+            <pubDate>Mon, 29 Dec 2025 12:17:32 GMT</pubDate>
+            <description><![CDATA[这几天闲着没事翻别人的博客，看到有个博主说，他这篇文章是躺在床上，用豆包输入法“说”出来的。我一看这操作挺新鲜，立马也在手机上下载了一个试试水。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>油条豆腐脑，总结要趁早｜我的2025年度小记</title>
             <link>https://www.suiyan.cc/blog/20251227113006</link>
