@@ -136,7 +136,23 @@ function Post({ post, relatedPosts, prevPost, nextPost }) {
 
 
                 <div className={styles.blog_post_content}>
-                    <ReactMarkdown>{post.content}</ReactMarkdown>
+                     <ReactMarkdown
+                            rehypePlugins={[rehypeRaw]} // 👈 启用原始 HTML
+                            // 可选：限制 iframe 来源更安全
+                            components={{
+                            iframe: ({ node, ...props }) => {
+                                const src = props.src as string;
+                                // 仅允许 B站的 iframe
+                                if (typeof src === 'string' && (src.includes('player.bilibili.com') || src.includes('//player.bilibili.com'))) {
+                                return <iframe {...props} />;
+                                }
+                                // 其他 iframe 不渲染（防 XSS）
+                                return null;
+                            }
+                            }}
+                        >
+                            {post.content}
+                        </ReactMarkdown>
                 </div>
 
                 <div>

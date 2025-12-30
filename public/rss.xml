@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Tue, 30 Dec 2025 12:51:41 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 30 Dec 2025 12:55:04 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -19,7 +19,7 @@
         </image>
         
         <item>
-            <title>博客标题</title>
+            <title>Godot 4 信号（Signal）的使用入门</title>
             <link>https://www.suiyan.cc/blog/20251230122510</link>
             <guid isPermaLink="true">https://www.suiyan.cc/blog/20251230122510</guid>
             <pubDate>Tue, 30 Dec 2025 12:25:10 GMT</pubDate>
