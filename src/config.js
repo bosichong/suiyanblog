@@ -34,6 +34,12 @@ const config = {
     ],
     "links": [
         {
+            "site_name": "Obaby",
+            "site_url": "https://oba.by/",
+            "site_description": "黑客程序媛 / 逆向工程师 / 人工智能学徒 / 用爱发电的独立开发者",
+            "site_avatar": "https://oba.by/wp-content/uploads/2025/05/WechatIMG1530.jpg"
+        },
+        {
             "site_name": "秋风于渭水",
             "site_url": "https://www.tjsky.net/",
             "site_description": "“秋风于渭水” 小站！别看名字整得挺文艺范儿，其实本质就是个 佛系码农（伪）的小窝。",
