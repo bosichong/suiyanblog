@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Mon, 29 Dec 2025 12:22:28 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 30 Dec 2025 12:35:59 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>博客标题</title>
+            <link>https://www.suiyan.cc/blog/20251230122510</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20251230122510</guid>
+            <pubDate>Tue, 30 Dec 2025 12:25:10 GMT</pubDate>
+            <description><![CDATA[信号（Signal）是Godot引擎中最强大、最重要的机制之一，它实现了观察者模式，让节点之间可以松耦合地通信。本教程将通过实际案例，带你全面掌握Godot中的信号使用方法。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>解放双手用嘴写博客？试试豆包输入法，真的香！</title>
             <link>https://www.suiyan.cc/blog/20251229121732</link>
