@@ -1,5 +1,6 @@
 // pages/posts/[id].js
 // 导入用于获取排序后的文章数据的函数
+import rehypeRaw from 'rehype-raw';
 import ReactMarkdown from 'react-markdown';
 import getSortedPostsData from "../../utils/parseMd";
 import Layout from "../../components/Layout";
