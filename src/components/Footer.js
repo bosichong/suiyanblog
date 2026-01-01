@@ -11,9 +11,6 @@ export default function Footer (){
                 <div className={'mx-auto mt-4 max-w-md text-center text-sm'}>
                     Built with <Link href="https://nextjs.org/" target="_blank">Next.js</Link> Powered by <Link href="https://vercel.com" target="_blank">Vercel</Link>
                     </div>
-                <div className={'mx-auto mt-4 max-w-md text-center text-sm'}>
-                    <Link href="https://follow.it/suiyan?leanpub" target="_blank"><img src="https://www.suiyan.cc/assets/images/follow.it.png" width={89} height={25} /></Link>
-                </div>
             </div>
 
         </footer>
