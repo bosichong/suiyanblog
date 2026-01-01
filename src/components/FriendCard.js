@@ -11,16 +11,8 @@ const FriendCard = ({ link }) => {
         <Image
           src={link.site_avatar}
           alt={link.site_name}
-          className="h-24 w-24 rounded-full object-cover shadow-md transition-all duration-300 group-hover:shadow-lg group-hover:scale-110 group-hover:rotate-3"
+          className="h-16 w-16 rounded-full object-cover shadow-md transition-all duration-300 group-hover:shadow-lg group-hover:scale-110 group-hover:rotate-3"
         />
-        <h3 className="text-xl font-semibold text-foreground transition-all duration-300 group-hover:text-primary">
-          <Link href={link.site_url} color="primary" target='_blank'>
-            {link.site_name}
-          </Link>
-        </h3>
-        <p className="text-center text-sm leading-relaxed text-default-600 line-clamp-3 transition-all duration-300 group-hover:text-default-800 dark:group-hover:text-default-400">
-          {link.site_description}
-        </p>
         <Link
           href={link.site_url}
           color="primary"
@@ -29,10 +21,14 @@ const FriendCard = ({ link }) => {
           target='_blank'
         >
           <span className="flex items-center gap-1 text-sm">
-            访问博客
+            {link.site_name}
             <span className="i-mdi-arrow-right-thin transition-transform duration-200 group-hover:translate-x-0.5" />
           </span>
         </Link>
+        <p className="text-center text-sm leading-relaxed text-default-600 line-clamp-3 transition-all duration-300 group-hover:text-default-800 dark:group-hover:text-default-400">
+          {link.site_description}
+        </p>
+
       </div>
     </div>
   );
