@@ -20,9 +20,9 @@ const config = {
         "其实已经甩你很远了！"
     ],
     // 元描述，用于搜索引擎优化
-    "META_DESCRIPTION": "记录并分享个人学习Python、JavaScript的过程,分享AI辅助编程的一些经验,以及一些碎碎念。",
+    "META_DESCRIPTION": "记录并分享个人学习编程的过程和笔记，记录一些平淡的日常。",
     // 元关键词，用于搜索引擎优化
-    "META_KEYWORDS": "Python,JavaScript,程序员,AI辅助编程,deepseek",
+    "META_KEYWORDS": "Python,JavaScript,程序员,Godot,编程,技术博客,学习笔记,碎言",
     // 头像图片路径
     "PROFILE_IMAGE": "assets/images/avatar.png",
     'menuItems' : [
@@ -102,7 +102,7 @@ const config = {
         {
             "site_name": "碎言",
             "site_url": "https://www.suiyan.cc",
-            "site_description": "记录并分享个人学习Python、JavaScript的过程和笔记。Life is short, You need JavaScript and Python！",
+            "site_description": "记录并分享个人学习编程的过程和笔记，记录一些平淡的日常。",
             "site_avatar": "https://www.suiyan.cc/assets/images/avatar.jpg"
         }
     ]
