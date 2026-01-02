@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Thu, 01 Jan 2026 14:41:15 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 02 Jan 2026 13:07:20 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>写在2026的岁首</title>
+            <link>https://www.suiyan.cc/blog/20260102023233</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20260102023233</guid>
+            <pubDate>Fri, 02 Jan 2026 02:32:33 GMT</pubDate>
+            <description><![CDATA[新的一年，新的展望，除了每年的总结，也应该对新的一年有所期望。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>Godot 4 信号（Signal）的使用入门</title>
             <link>https://www.suiyan.cc/blog/20251230122510</link>
