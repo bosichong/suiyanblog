@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Wed, 07 Jan 2026 01:31:01 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 07 Jan 2026 01:52:16 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -23,7 +23,7 @@
             <link>https://www.suiyan.cc/blog/20260107012506</link>
             <guid isPermaLink="true">https://www.suiyan.cc/blog/20260107012506</guid>
             <pubDate>Wed, 07 Jan 2026 01:25:06 GMT</pubDate>
-            <description><![CDATA[博文的简介]]></description>
+            <description><![CDATA[昨天闲来无事，把我2023年写的一个终端rss私人订阅器用AI美化了一下，感觉还挺可爱的。]]></description>
             
             <author>J.sky</author>
         </item>
