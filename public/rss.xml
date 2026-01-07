@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Tue, 06 Jan 2026 23:50:29 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 07 Jan 2026 00:13:57 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>在Next.js安装部署 Vercel Web Analytics 与 Speed Insights</title>
+            <link>https://www.suiyan.cc/blog/20260106235522</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20260106235522</guid>
+            <pubDate>Tue, 06 Jan 2026 23:55:22 GMT</pubDate>
+            <description><![CDATA[如果你的项目托管在Vercel，那么 Web Analytics 与 Speed Insights 是Vercel提供的非常不错的网络分析与用户体验分析工具，值得在项目中安装部署。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>写在2026的岁首</title>
             <link>https://www.suiyan.cc/blog/20260102023233</link>
