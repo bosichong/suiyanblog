@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sat, 10 Jan 2026 01:34:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 10 Jan 2026 11:38:01 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>异常的冬天</title>
+            <link>https://www.suiyan.cc/blog/20260110113717</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20260110113717</guid>
+            <pubDate>Sat, 10 Jan 2026 11:37:17 GMT</pubDate>
+            <description><![CDATA[今天早上照常早起，带着狗狗出门散步。一推开门，发现外面竟然下雪了！]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>oba.by怎么这个样子了？</title>
             <link>https://www.suiyan.cc/blog/20260109141240</link>
