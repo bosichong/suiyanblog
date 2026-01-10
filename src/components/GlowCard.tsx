@@ -20,7 +20,7 @@ const GlowCard = ({ children, className = '', borderWidth = 3, borderRadius = '6
   if (!mounted) {
     return (
       <div className={`glow-card ${className}`} style={{ padding: `${borderWidth}px`, borderRadius }} {...props}>
-        <div className="glow-card-inner" style={{ background: '#ffffff', borderRadius }}>
+        <div className="glow-card-inner" style={{ background: 'transparent', borderRadius }}>
           {children}
         </div>
       </div>
