@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sat, 10 Jan 2026 14:37:19 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 11 Jan 2026 11:08:33 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>一些无聊的想法</title>
+            <link>https://www.suiyan.cc/blog/20260111110226</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20260111110226</guid>
+            <pubDate>Sun, 11 Jan 2026 11:02:26 GMT</pubDate>
+            <description><![CDATA[博文的今天可真冷啊，不愧是东北的三九天。我干脆窝在家里看书，哪儿也不想去。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>异常的冬天</title>
             <link>https://www.suiyan.cc/blog/20260110113717</link>
