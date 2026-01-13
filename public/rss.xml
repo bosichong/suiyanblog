@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Tue, 13 Jan 2026 01:07:13 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 13 Jan 2026 10:58:59 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>氛围编程之升级老代码</title>
+            <link>https://www.suiyan.cc/blog/20260113104932</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20260113104932</guid>
+            <pubDate>Tue, 13 Jan 2026 10:49:32 GMT</pubDate>
+            <description><![CDATA[今天闲来无事，花了点时间升级一下老程序老代码，让这些老家伙换发一下青春。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>脑机接口的另类用途</title>
             <link>https://www.suiyan.cc/blog/20260113010331</link>
