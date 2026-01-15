@@ -9,30 +9,39 @@ import { Post } from '../types';
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData();
 
-    // 按年份和月份归类
-    const postsByYearMonth: { [key: string]: Post[] } = {};
+    // 按年份归类
+    const postsByYear: { [key: string]: Post[] } = {};
     allPostsData.forEach((post) => {
-        const yearMonth = post.time ? post.time.split('-').slice(0, 2).join('-') : ''; // 假设日期格式为 'YYYY-MM-DD'
-        if (!postsByYearMonth[yearMonth]) {
-            postsByYearMonth[yearMonth] = [];
+        const year = post.time ? post.time.split('-')[0] : '';
+        if (!postsByYear[year]) {
+            postsByYear[year] = [];
         }
-        postsByYearMonth[yearMonth].push(post);
+        postsByYear[year].push(post);
     });
 
     return {
         props: {
             allPostsData,
-            postsByYearMonth, // 将按年份和月份归类的数据传递给组件
+            postsByYear, // 将按年份归类的数据传递给组件
         },
     };
 }
 
 
 
-const Archives = ({ allPostsData, postsByYearMonth }: { allPostsData: Post[], postsByYearMonth: { [key: string]: Post[] } }) => {
+const Archives = ({ allPostsData, postsByYear }: { allPostsData: Post[], postsByYear: { [key: string]: Post[] } }) => {
     const totalPosts = allPostsData.length;
     const lastUpdated = allPostsData[0]?.time ? new Date(allPostsData[0].time).toLocaleDateString() : '';
 
+    // 格式化日期显示
+    const formatDate = (dateStr: string) => {
+        if (!dateStr) return '';
+        const date = new Date(dateStr);
+        const month = date.toLocaleString('en-US', { month: 'short' });
+        const day = date.getDate();
+        const year = date.getFullYear();
+        return `${month} ${day}, ${year}`;
+    };
 
     return (
         <Layout>
@@ -52,34 +61,42 @@ const Archives = ({ allPostsData, postsByYearMonth }: { allPostsData: Post[], po
             </Head>
 
             <div className="max-w-4xl mx-auto p-6">
-                <div className="mb-8 pb-4">
-                    <h1 className="text-3xl font-bold mb-3">文章归档</h1>
-                    <p className="text-sm opacity-80">共有文章：{totalPosts} 篇，最后更新时间：{lastUpdated}</p>
+                {/* 顶部介绍区域 */}
+                <div className="mb-12">
+                    <h4 className="font-medium m-0 mb-1">文章归档</h4>
+                    <p className="text-sm opacity-80 mb-0">共有文章：{totalPosts} 篇，最后更新于 {lastUpdated}</p>
                 </div>
 
-                <div className="space-y-10">
-                    {Object.keys(postsByYearMonth).map((yearMonth) => (
-                        <div className="archive-year-section" key={yearMonth}>
-                            <h2 className="text-xl font-medium mb-4 inline-block relative">
-                                {yearMonth}
-                                <span className="ml-3 text-sm opacity-70">({postsByYearMonth[yearMonth].length}篇)</span>
-                            </h2>
+                {/* 文章列表区域 - grid 布局 */}
+                <ul className="list-none m-0 !p-0 space-y-16">
+                    {Object.keys(postsByYear).sort((a, b) => parseInt(b) - parseInt(a)).map((year) => (
+                        <li className="grid items-baseline md:grid-cols-3 m-0" key={year}>
+                            {/* 左侧年份 - sticky 定位 */}
+                            <p className="left-0 top-6 z-40 m-0 tabular-nums tracking-tight opacity-60 lg:sticky">
+                                {year}
+                            </p>
 
-                            <ul className="space-y-2 ml-4 mt-4">
-                                {postsByYearMonth[yearMonth].map((post) => (
-                                    <li className="transition-all duration-200 hover:translate-x-1" key={post.id}>
+                            {/* 右侧文章列表 */}
+                            <ul className="list-none space-y-3 col-span-2 m-0">
+                                {postsByYear[year].map((post) => (
+                                    <li className="group grid grid-flow-col m-0 p-0 items-baseline" key={post.id}>
                                         <Link
                                             href={`/blog/${post.id}`}
-                                            className="rainbow_hover group flex items-center text-ellipsis overflow-hidden whitespace-nowrap"
+                                            className="rainbow_hover items-center m-0 flex"
                                         >
-                                            {post.title}
+                                            <h2 className="font-body m-0 transition group-hover:opacity-100">
+                                                {post.title}
+                                            </h2>
                                         </Link>
+                                        <p className="m-0 text-right opacity-60 transition group-hover:opacity-100">
+                                            {formatDate(post.time)}
+                                        </p>
                                     </li>
                                 ))}
                             </ul>
-                        </div>
+                        </li>
                     ))}
-                </div>
+                </ul>
             </div>
         </Layout>
     );
