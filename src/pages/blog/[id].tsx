@@ -14,6 +14,7 @@ import User from "@/components/ico/User";
 import TagIco from "@/components/ico/TagIco";
 import CC from '@/components/CC';
 import getRandomColor from "../../utils/randomColor";
+import readingTime from 'reading-time';
 import type { Post } from '../../types';
 
 /**
@@ -66,14 +67,33 @@ export async function getStaticProps({ params }: { params: { id: string } }) {
  */
 function Post({ post, relatedPosts, prevPost, nextPost }: { post: Post; relatedPosts: Post[]; prevPost: Post | null; nextPost: Post | null }) {
     const [giscusTheme, setGiscusTheme] = useState('');
+    const [scrollProgress, setScrollProgress] = useState(0);
 
     useEffect(() => {
         const savedTheme = localStorage.getItem('theme');
         setGiscusTheme(savedTheme === 'dark' ? 'dark_dimmed' : savedTheme === 'light' ? 'light_high_contrast' : savedTheme || 'dark_dimmed');
     }, []);
 
+    // 监听滚动事件，更新阅读进度
+    useEffect(() => {
+        const handleScroll = () => {
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight - windowHeight;
+            const scrolled = window.scrollY;
+            const progress = (scrolled / documentHeight) * 100;
+            setScrollProgress(Math.min(progress, 100));
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    // 计算文章字数和阅读时间
+    const stats = readingTime(post.content || '');
+
     return (
         <Layout>
+            <div className={styles.reading_progress_bar} style={{ width: `${scrollProgress}%` }}></div>
             <Head>
                 <title>{post.title} | SuiYan 碎言 - 个人技术博客</title>
                 <meta name="description" content={post.description} />
@@ -107,6 +127,11 @@ function Post({ post, relatedPosts, prevPost, nextPost }: { post: Post; relatedP
                     <div className="flex items-center">
                         <BlogTime />
                         <span className="ml-2">{formatDate(post.time || '')}</span>
+                    </div>
+                    <div className="flex items-center">
+                        <span className="ml-2 text-sm text-gray-500">
+                            {stats.words} 字 · 预计阅读 {stats.text}
+                        </span>
                     </div>
                 </div>
 

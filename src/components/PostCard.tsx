@@ -7,7 +7,7 @@ import { PostCardProps } from '../types';
 export default function PostCard({ post }: PostCardProps) {
     return (
         <GlowCard key={post.id} borderWidth={2}>
-            <Card className="hover:animate-pulse">
+            <Card className="hover:animate-pulse bg-transparent shadow-none">
                 <CardHeader className="flex gap-3">
                     <Link href={`/blog/${post.id}`} className="flex flex-col">
                         <h3 className="text-2xl rainbow_text">{post.title}</h3>
