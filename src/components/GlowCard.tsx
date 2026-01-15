@@ -29,12 +29,12 @@ const GlowCard = ({ children, className = '', borderWidth = 3, borderRadius = '6
 
   const isDark = resolvedTheme === 'dark';
 
-  // 浅色模式：浅灰色背景 + 灰色系渐变
+  // 浅色模式：暖白色背景 + 金色系渐变
   // 深色模式：深色背景 + 暖色调渐变
-  const lightBg = '#ffffff';
-  const lightGradient1 = '#a0aec0';
-  const lightGradient2 = '#718096';
-  const lightGradient3 = '#4a5568';
+  const lightBg = '#fffbf5';
+  const lightGradient1 = '#c9a66b';
+  const lightGradient2 = '#d4a574';
+  const lightGradient3 = '#e5c49e';
 
   const darkBg = '#1a1a1a';
   const darkGradient1 = '#F7B750';
