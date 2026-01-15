@@ -89,21 +89,21 @@
     --bg-content: #1a1a1a;
 }
 
-/* 亮色主题覆盖 - 浅灰色系 */
+/* 亮色主题覆盖 - 温暖米色系 */
 .light {
-    --color-text-primary: #2d3748;
-    --color-text-secondary: #4a5568;
-    --color-text-tertiary: #718096;
-    --color-border: #e2e8f0;
-    --color-background: #f7fafc;
-    --color-surface: #edf2f7;
-    --bg-content: #ffffff;
+    --color-text-primary: #2d1f14;
+    --color-text-secondary: #5c4a3a;
+    --color-text-tertiary: #8b7355;
+    --color-border: #d4c4b0;
+    --color-background: rgb(252, 245, 230);
+    --color-surface: #fff9f0;
+    --bg-content: #fffbf5;
 
-    --color-primary: #4a5568;
-    --color-primary-hover: #2d3748;
-    --color-primary-light: rgba(74, 85, 104, 0.1);
-    --blockquote-bg: rgba(74, 85, 104, 0.05);
-    --table-header-bg: rgba(74, 85, 104, 0.05);
+    --color-primary: #c9a66b;
+    --color-primary-hover: #b8955a;
+    --color-primary-light: rgba(201, 166, 107, 0.15);
+    --blockquote-bg: rgba(201, 166, 107, 0.1);
+    --table-header-bg: rgba(201, 166, 107, 0.1);
 }
 
 /* ==================== 全局样式 ==================== */
