@@ -165,8 +165,19 @@ button:focus:not(:focus-visible),
 input:focus:not(:focus-visible),
 textarea:focus:not(:focus-visible),
 select:focus:not(:focus-visible),
-a:focus:not(:focus-visible) {
+a:focus:not(:focus-visible),
+a:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* 移除所有链接的默认焦点样式 */
+a {
     outline: none;
+}
+
+a::-moz-focus-inner {
+    border: 0;
 }
 
 /* 减少动画对敏感用户的影响 */
