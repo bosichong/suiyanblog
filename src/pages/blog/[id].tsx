@@ -152,7 +152,14 @@ function Post({ post, relatedPosts, prevPost, nextPost }: { post: Post; relatedP
 
                 <div className={'py-4 text-center'}>
                     <p>英雄请留步！欢迎在下方留言交流！</p>
-
+                    <p className={'relative inline-block mt-2 cursor-help group'}>
+                        赞赏作者一杯咖啡 ❤️
+                        <img
+                            src="https://www.suiyan.cc/assets/images/zs.jpg"
+                            alt="赞赏码"
+                            className={'absolute left-1/2 -translate-x-1/2 top-full mt-2 w-48 h-auto rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50'}
+                        />
+                    </p>
                 </div>
 
                 <Giscus
