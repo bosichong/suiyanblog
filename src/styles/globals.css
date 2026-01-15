@@ -2,6 +2,121 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ==================== CSS 变量系统 ==================== */
+
+:root {
+    /* 字体家族 */
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+                 'Helvetica Neue', Arial, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Source Code Pro', 'Monaco',
+                 'Consolas', monospace;
+
+    /* 字重层级 */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* 字号比例系统（基于 1.2 黄金比例） */
+    --text-xs: 0.75rem;    /* 12px */
+    --text-sm: 0.875rem;   /* 14px */
+    --text-base: 1rem;     /* 16px - 基准 */
+    --text-lg: 1.125rem;   /* 18px */
+    --text-xl: 1.25rem;    /* 20px */
+    --text-2xl: 1.5rem;    /* 24px */
+    --text-3xl: 1.875rem;  /* 30px */
+    --text-4xl: 2.25rem;   /* 36px */
+    --text-5xl: 3rem;      /* 48px */
+
+    /* 间距比例系统（基于 4px 基准） */
+    --space-1: 0.25rem;  /* 4px */
+    --space-2: 0.5rem;   /* 8px */
+    --space-3: 0.75rem;  /* 12px */
+    --space-4: 1rem;     /* 16px */
+    --space-5: 1.25rem;  /* 20px */
+    --space-6: 1.5rem;   /* 24px */
+    --space-8: 2rem;     /* 32px */
+    --space-10: 2.5rem;  /* 40px */
+    --space-12: 3rem;    /* 48px */
+    --space-16: 4rem;    /* 64px */
+
+    /* 行高比例系统 */
+    --leading-none: 1;
+    --leading-tight: 1.25;
+    --leading-snug: 1.375;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+    --leading-loose: 2;
+
+    /* 主色调 */
+    --color-primary: #F7B750;
+    --color-primary-hover: #e5a93d;
+    --color-primary-light: rgba(247, 183, 80, 0.1);
+
+    /* 中性色 */
+    --color-text-primary: #1a1a1a;
+    --color-text-secondary: #666666;
+    --color-text-tertiary: #999999;
+    --color-border: #e5e5e5;
+    --color-background: #ffffff;
+    --color-surface: #f5f5f5;
+
+    /* 语义色 */
+    --color-success: #10b981;
+    --color-warning: #f59e0b;
+    --color-error: #ef4444;
+    --color-info: #3b82f6;
+
+    /* 博客内容背景 */
+    --bg-content: #ffffff;
+
+    /* 引用块背景 */
+    --blockquote-bg: rgba(247, 183, 80, 0.1);
+
+    /* 表头背景 */
+    --table-header-bg: rgba(247, 183, 80, 0.1);
+}
+
+/* 暗色主题 */
+.dark {
+    --color-text-primary: #e5e5e5;
+    --color-text-secondary: #a3a3a3;
+    --color-text-tertiary: #737373;
+    --color-border: #404040;
+    --color-background: #0a0a0a;
+    --color-surface: #1a1a1a;
+    --bg-content: #1a1a1a;
+}
+
+/* 亮色主题覆盖 - 浅灰色系 */
+.light {
+    --color-text-primary: #2d3748;
+    --color-text-secondary: #4a5568;
+    --color-text-tertiary: #718096;
+    --color-border: #e2e8f0;
+    --color-background: #f7fafc;
+    --color-surface: #edf2f7;
+    --bg-content: #ffffff;
+
+    --color-primary: #4a5568;
+    --color-primary-hover: #2d3748;
+    --color-primary-light: rgba(74, 85, 104, 0.1);
+    --blockquote-bg: rgba(74, 85, 104, 0.05);
+    --table-header-bg: rgba(74, 85, 104, 0.05);
+}
+
+/* ==================== 全局样式 ==================== */
+
+body {
+    font-family: var(--font-sans);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--leading-normal);
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+}
+
+/* ==================== 自定义样式 ==================== */
 
 .rainbow_text {
     background: linear-gradient(-90deg, #602ce5 0%, #2ce597 30%, #e7bb18 50%, #ff7657 70%, #45c1ee 90%, #2ce597 100%);
@@ -29,12 +144,38 @@
 
 .light .atropos-card {
     border: none !important;
-    background-color: #f5f5f5 !important; /* 添加浅灰色背景，增强与站点背景的对比度 */
-    /* 移除box-shadow: none !important，允许Atropos的阴影效果显示 */
+    background-color: #f5f5f5 !important;
 }
 
 /* 确保阴影效果在暗色模式下正常显示 */
 .dark .atropos-card {
     border: none !important;
+}
+
+/* ==================== 可访问性优化 ==================== */
+
+/* 只在键盘导航时显示焦点状态 */
+*:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* 移除鼠标点击后的焦点框 */
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible),
+select:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* 减少动画对敏感用户的影响 */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
