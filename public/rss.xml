@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Fri, 16 Jan 2026 00:00:50 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 16 Jan 2026 01:17:36 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>Dead Simple Sites 极简网站的搜集与发现</title>
+            <link>https://www.suiyan.cc/blog/20260116011428</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20260116011428</guid>
+            <pubDate>Fri, 16 Jan 2026 01:14:28 GMT</pubDate>
+            <description><![CDATA[Dead Simple Sites,DSS 是我浏览网页是偶然间发现的，它是一个极简网站的搜集与发现的站点。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>改变并非很难</title>
             <link>https://www.suiyan.cc/blog/20260115082245</link>
