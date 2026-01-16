@@ -42,7 +42,7 @@ export default function Nav() {
                 </NavbarItem>
                 <NavbarMenuToggle
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                    className="md:hidden"
+                    className="md:hidden outline-none focus:outline-none"
                 />
             </NavbarContent>
             <NavbarMenu className="pt-6 pb-6 gap-4 bg-background/70 backdrop-blur-lg dark:bg-default-100/50">
