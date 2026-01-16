@@ -15,7 +15,9 @@ export default function PostCard({ post }: PostCardProps) {
                 </CardHeader>
 
                 <CardBody>
-                    <p className="text-md">{post.description}</p>
+                    <p className="text-md">
+                        {post.description.length > 40 ? post.description.substring(0, 40) + '...' : post.description}
+                    </p>
                 </CardBody>
 
                 <CardFooter className="text-sm">
