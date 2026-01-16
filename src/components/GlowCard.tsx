@@ -81,11 +81,11 @@ const GlowCard = ({ children, className = '', borderWidth = 3, borderRadius = '6
         .glow-card-inner {
           position: relative;
           z-index: 1;
-          transition: all 0.3s ease;
+          transition: margin 0.3s ease;
         }
 
         .glow-card:hover .glow-card-inner {
-          padding: 4px;
+          margin: 1px;
         }
 
         @keyframes spin {
