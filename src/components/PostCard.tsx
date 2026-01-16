@@ -16,7 +16,7 @@ export default function PostCard({ post }: PostCardProps) {
 
                 <CardBody>
                     <p className="text-md">
-                        {post.description.length > 40 ? post.description.substring(0, 40) + '...' : post.description}
+                        {post.description}
                     </p>
                 </CardBody>
 
