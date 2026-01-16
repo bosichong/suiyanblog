@@ -12,9 +12,17 @@ export default function getSortedPostsData(): Post[] {
         const filePath = path.join(postsDirectory, fileName);
         const fileContent = fs.readFileSync(filePath, 'utf8');
         const matterResult = matter(fileContent);
+        
+        // 截断 description 字段
+        let description = matterResult.data.description;
+        if (description && typeof description === 'string' && description.length > 40) {
+            description = description.substring(0, 40) + '...';
+        }
+        
         return {
             id, // 添加 id 属性
             ...matterResult.data,
+            description,
             content: matterResult.content,
         };
     });
