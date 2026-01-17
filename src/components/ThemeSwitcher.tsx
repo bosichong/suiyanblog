@@ -1,7 +1,7 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import Sun from "@/components/ico/Sun";
-import Moon from "@/components/ico/Moon";
+import { SunIcon } from "@/components/icons/SunIcon";
+import { MoonIcon } from "@/components/icons/MoonIcon";
 
 export function ThemeSwitcher() {
     const [mounted, setMounted] = useState(false);
@@ -29,7 +29,7 @@ export function ThemeSwitcher() {
     if (!mounted) return null;
 
     // 根据当前主题显示相应的图标
-    const IconComponent = theme === "dark" ? Sun : Moon;
+    const IconComponent = theme === "dark" ? SunIcon : MoonIcon;
 
     return (
         <div className="relative">
@@ -53,9 +53,7 @@ export function ThemeSwitcher() {
                     saveThemeToLocalStorage(newTheme);
                 }}
             >
-                <div className="transform transition-transform duration-300 ease-in-out hover:rotate-12">
-                    <IconComponent className="w-5 h-5 text-foreground" />
-                </div>
+                <IconComponent size={20} className="text-foreground" />
             </button>
         </div>
     );

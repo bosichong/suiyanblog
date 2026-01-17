@@ -1,6 +1,6 @@
 import { Card, CardHeader, CardBody, CardFooter, Link } from '@nextui-org/react';
 import formatDate from '../utils/formatDate';
-import BlogTime from './ico/BlogTime';
+import { CalendarDaysIcon } from './icons/CalendarDaysIcon';
 import GlowCard from './GlowCard';
 import { PostCardProps } from '../types';
 
@@ -26,7 +26,7 @@ export default function PostCard({ post }: PostCardProps) {
                     </Link>
                     <div className="flex justify-end w-1/2">
                         <div className="flex items-center text-sm">
-                            <BlogTime />
+                            <CalendarDaysIcon size={16} />
                             <span className="ml-2">{formatDate(post.time || '')}</span>
                         </div>
                     </div>

@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sat, 17 Jan 2026 02:04:18 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 17 Jan 2026 13:15:50 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>这个开源动画图标库，让界面瞬间动起来！</title>
+            <link>https://www.suiyan.cc/blog/20260117131006</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20260117131006</guid>
+            <pubDate>Sat, 17 Jan 2026 13:10:06 GMT</pubDate>
+            <description><![CDATA[最近偶然发现了一个宝藏网站，用了一段时间后，真心觉得它值得每一位开发者、设计师甚至产品经理都试试看！]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>与孩子一起看《阿甘正传》</title>
             <link>https://www.suiyan.cc/blog/20260117013926</link>

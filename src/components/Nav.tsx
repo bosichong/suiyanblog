@@ -4,8 +4,6 @@ import {
     NavbarBrand,
     NavbarContent,
     NavbarItem,
-    NavbarMenuToggle,
-    NavbarMenu,
     Link,
 } from "@nextui-org/react";
 import {ThemeSwitcher} from "@/components/ThemeSwitcher";
@@ -13,6 +11,8 @@ import config from "@/config";
 import MenuItem from './MenuItem';
 import Avatar from './Avatar';
 import SNSList from "./SNSList";
+import { MenuIcon } from "./icons/MenuIcon";
+import { XIcon } from "./icons/XIcon";
 
 export default function Nav() {
 
@@ -26,45 +26,52 @@ export default function Nav() {
 
 
     return (
-        <Navbar onMenuOpenChange={setIsMenuOpen} className={'block md:hidden max-w-full'} maxWidth="sm">
+        <Navbar className="block md:hidden max-w-full" maxWidth="sm">
             <NavbarContent>
 
-                <NavbarBrand className={'block md:hidden'}>
-                    <Link color="primary" href={'/'} className="text-lg">{config.BLOG_NAME_EN}</Link>
+                <NavbarBrand className="block md:hidden">
+                    <Link color="primary" href="/" className="text-lg">{config.BLOG_NAME_EN}</Link>
                 </NavbarBrand>
             </NavbarContent>
 
             <NavbarContent className="hidden sm:flex gap-6" justify="center">
             </NavbarContent>
             <NavbarContent justify="end">
-                <NavbarItem className={'block md:hidden'}>
+                <NavbarItem className="block md:hidden">
                     <ThemeSwitcher />
                 </NavbarItem>
-                <NavbarMenuToggle
-                    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                    className="md:hidden outline-none focus:outline-none"
-                />
+                <NavbarItem className="block md:hidden">
+                    <button
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        className="relative w-10 h-10 rounded-full flex items-center justify-center bg-content2/50 dark:bg-content3/50 hover:bg-content3/80 dark:hover:bg-content2/80 transition-all duration-300 ease-in-out transform hover:scale-110 focus:outline-none shadow-sm hover:shadow-md"
+                        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                    >
+                        {isMenuOpen ? <XIcon size={20} className="text-foreground" /> : <MenuIcon size={20} className="text-foreground" />}
+                    </button>
+                </NavbarItem>
             </NavbarContent>
-            <NavbarMenu className="pt-6 pb-6 gap-4 bg-background/70 backdrop-blur-lg dark:bg-default-100/50">
-                <ul className={'flex flex-col justify-between space-y-4 px-2'}>
-                    <li className={'mb-4 flex justify-center'}>
-                        <Avatar />
-                    </li>
+            {isMenuOpen && (
+                <div className="absolute top-full left-0 right-0 p-4 flex flex-col gap-4 bg-content1 dark:bg-content1 border-t border-divider shadow-lg">
+                    <ul className="flex flex-col justify-between space-y-4 px-2">
+                        <li className="mb-4 flex justify-center">
+                            <Avatar />
+                        </li>
 
-                    <li className={'mb-4 flex justify-center'}>
-                        <SNSList/>
-                    </li>
+                        <li className="mb-4 flex justify-center">
+                            <SNSList/>
+                        </li>
 
-                    {config.menuItems.map((item, index) => (
-                        <MenuItem
-                            key={`${item}-${index}`}
-                            item={item}
-                            index={index}
-                            onClick={() => setIsMenuOpen(false)}
-                        />
-                    ))}
-                </ul>
-            </NavbarMenu>
+                        {config.menuItems.map((item, index) => (
+                            <MenuItem
+                                key={`${item}-${index}`}
+                                item={item}
+                                index={index}
+                                onClick={() => setIsMenuOpen(false)}
+                            />
+                        ))}
+                    </ul>
+                </div>
+            )}
         </Navbar>
     );
 }
