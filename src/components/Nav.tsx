@@ -51,7 +51,7 @@ export default function Nav() {
                 </NavbarItem>
             </NavbarContent>
             {isMenuOpen && (
-                <div className="absolute top-full left-0 right-0 p-4 flex flex-col gap-4 bg-content1 dark:bg-content1 border-t border-divider shadow-lg">
+                <div className="absolute h-[100vh] top-full left-0 right-0 p-4 flex flex-col gap-4 bg-default-100 dark:bg-default-50 border-t border-divider shadow-lg">
                     <ul className="flex flex-col justify-between space-y-4 px-2">
                         <li className="mb-4 flex justify-center">
                             <Avatar />
