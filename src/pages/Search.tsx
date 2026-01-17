@@ -3,7 +3,7 @@ import Head from 'next/head';
 import React, { useState, useEffect } from 'react';
 import {Input, Link} from '@nextui-org/react';
 import Layout from "../components/Layout";
-import SearchIco from "../components/ico/Search";
+import { SearchIcon } from "../components/icons/SearchIcon";
 import config from "../config";
 import { Post } from '../types';
 
@@ -61,7 +61,7 @@ const Search = ({ allPostsData }: { allPostsData: Post[] }) => {
                             onChange={(e) => setSearchQuery(e.target.value)}
                             isClearable
                             className="mb-4"
-                            endContent={<SearchIco />}
+                            endContent={<SearchIcon size={24} />}
                         />
                     </div>
 

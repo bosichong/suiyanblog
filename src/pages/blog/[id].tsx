@@ -9,9 +9,9 @@ import giscusConfig from '../../giscusConfigs';
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import { Chip, Link } from "@nextui-org/react";
-import BlogTime from "@/components/ico/BlogTime";
-import User from "@/components/ico/User";
-import TagIco from "@/components/ico/TagIco";
+import { CalendarDaysIcon } from "@/components/icons/CalendarDaysIcon";
+import { UserIcon } from "@/components/icons/UserIcon";
+import { BookmarkIcon } from "@/components/icons/BookmarkIcon";
 import CC from '@/components/CC';
 import getRandomColor from "../../utils/randomColor";
 import readingTime from 'reading-time';
@@ -114,18 +114,18 @@ function Post({ post, relatedPosts, prevPost, nextPost }: { post: Post; relatedP
                 <h1 className={`${styles.blog_post_title} rainbow_text`}>{post.title}</h1>
                 <div className="text-sm flex flex-wrap mb-4">
                     <div className="flex items-center">
-                        <User />
+                        <UserIcon size={16} />
                         <span className="ml-2 flex">{post.author}</span>
                     </div>
                         {
                             post.tag?.split(',').map((tag: string, index: number) => (
-                                <Chip size="sm" startContent={<TagIco />} variant="flat" key={index} className="block ml-2 flex items-center text-sm">
+                                <Chip size="sm" startContent={<BookmarkIcon size={14} />} variant="flat" key={index} className="block ml-2 flex items-center text-sm">
                                     {tag}
                                 </Chip>
                             ))
                         }
                     <div className="flex items-center">
-                        <BlogTime />
+                        <CalendarDaysIcon size={16} />
                         <span className="ml-2">{formatDate(post.time || '')}</span>
                     </div>
                     <div className="flex items-center">

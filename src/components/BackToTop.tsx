@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import GoUp from '@/components/ico/GoUp';
+import { ArrowUpIcon } from '@/components/icons/ArrowUpIcon';
 
 const BackToTop = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -47,9 +47,7 @@ const BackToTop = () => {
                 `}
                 onClick={scrollToTop}
             >
-                <div className="transform transition-transform duration-300 ease-in-out">
-                    <GoUp className="w-5 h-5 text-foreground" />
-                </div>
+                <ArrowUpIcon size={20} className="text-foreground" />
             </button>
         </div>
     );
