@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Fri, 16 Jan 2026 13:31:22 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 17 Jan 2026 01:42:16 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>与孩子一起看《阿甘正传》</title>
+            <link>https://www.suiyan.cc/blog/20260117013926</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20260117013926</guid>
+            <pubDate>Sat, 17 Jan 2026 01:39:26 GMT</pubDate>
+            <description><![CDATA[东北的三九天，出门玩不太现实。总不能让孩子整天刷手机、打游戏吧？于是想着，不如一起看点经典电影。脑子里第一个蹦出来的，就是《阿甘正传》。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>Dead Simple Sites 极简网站的搜集与发现</title>
             <link>https://www.suiyan.cc/blog/20260116011428</link>
