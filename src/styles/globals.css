@@ -91,21 +91,28 @@
     --bg-content: #1a1a1a;
 }
 
-/* 亮色主题覆盖 - 温暖米色系 */
+/* 亮色主题覆盖 - mijndertstuij.nl 配色 */
 .light {
-    --color-text-primary: #2d1f14;
-    --color-text-secondary: #5c4a3a;
-    --color-text-tertiary: #8b7355;
-    --color-border: #d4c4b0;
-    --color-background: rgb(252, 245, 230);
-    --color-surface: #fff9f0;
-    --bg-content: #fffbf5;
+    --color-text-primary: #15141A;
+    --color-text-secondary: #666;
+    --color-text-tertiary: #999;
+    --color-border: rgb(227 218 197);
+    --color-background: #eee9dc;
+    --color-surface: #e6e1d2;
+    --bg-content: #eee9dc;
 
-    --color-primary: #c9a66b;
-    --color-primary-hover: #b8955a;
-    --color-primary-light: rgba(201, 166, 107, 0.15);
-    --blockquote-bg: rgba(201, 166, 107, 0.1);
-    --table-header-bg: rgba(201, 166, 107, 0.1);
+    --color-primary: #003eaa;
+    --color-primary-hover: #003eaa;
+    --color-primary-light: rgba(0, 62, 170, 0.1);
+    --blockquote-bg: rgba(91, 91, 102, 0.1);
+    --table-header-bg: rgba(0, 62, 170, 0.08);
+
+    /* 浅色模式代码块背景 - 更柔和的颜色 */
+    --code-bg: #f8f6f3;
+    --code-border: #e6e1d2;
+
+    /* 浅色模式表格边框 - 更柔和 */
+    --table-border: #d4cdc0;
 }
 
 /* ==================== 全局样式 ==================== */

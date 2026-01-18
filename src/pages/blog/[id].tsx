@@ -1,4 +1,5 @@
 import rehypeRaw from 'rehype-raw';
+import remarkGfm from 'remark-gfm';
 import ReactMarkdown from 'react-markdown';
 import getSortedPostsData from "../../utils/parseMd";
 import Layout from "../../components/Layout";
@@ -109,6 +110,93 @@ function Post({ post, relatedPosts, prevPost, nextPost }: { post: Post; relatedP
     // 计算文章字数和阅读时间
     const stats = readingTime(post.content || '');
 
+    // 处理代码块复制功能
+    useEffect(() => {
+        const addCopyButtons = () => {
+            const codeBlocks = document.querySelectorAll('pre');
+            codeBlocks.forEach((block) => {
+                const button = block.querySelector('.copy-button');
+                if (!button) {
+                    const copyButton = document.createElement('button');
+                    copyButton.className = 'copy-button';
+                    copyButton.textContent = '复制';
+
+                    // 检测当前主题
+                    const isLightTheme = document.documentElement.classList.contains('light');
+
+                    // 根据主题设置样式
+                    const defaultBg = isLightTheme ? 'rgba(0, 62, 170, 0.12)' : 'rgba(247, 183, 80, 0.2)';
+                    const defaultColor = isLightTheme ? '#003eaa' : '#F7B750';
+
+                    copyButton.style.cssText = `
+                        position: absolute;
+                        top: var(--space-2);
+                        right: var(--space-2);
+                        padding: var(--space-1) var(--space-2);
+                        background: ${defaultBg};
+                        color: ${defaultColor};
+                        font-size: var(--text-xs);
+                        border-radius: 4px;
+                        cursor: pointer;
+                        transition: all 0.2s;
+                        border: none;
+                        z-index: 10;
+                    `;
+
+                    copyButton.addEventListener('click', async () => {
+                        const code = block.querySelector('code');
+                        if (code) {
+                            try {
+                                await navigator.clipboard.writeText(code.textContent || '');
+                                copyButton.textContent = '已复制!';
+                                copyButton.style.background = 'rgba(16, 185, 129, 0.2)';
+                                copyButton.style.color = '#10b981';
+                                setTimeout(() => {
+                                    copyButton.textContent = '复制';
+                                    copyButton.style.background = defaultBg;
+                                    copyButton.style.color = defaultColor;
+                                }, 2000);
+                            } catch (err) {
+                                console.error('复制失败:', err);
+                                copyButton.textContent = '复制失败';
+                                copyButton.style.background = 'rgba(239, 68, 68, 0.2)';
+                                copyButton.style.color = '#ef4444';
+                                setTimeout(() => {
+                                    copyButton.textContent = '复制';
+                                    copyButton.style.background = defaultBg;
+                                    copyButton.style.color = defaultColor;
+                                }, 2000);
+                            }
+                        }
+                    });
+
+                    block.appendChild(copyButton);
+                }
+            });
+        };
+
+        // 初始添加复制按钮
+        addCopyButtons();
+
+        // 使用 MutationObserver 监听 DOM 变化（适用于动态加载的内容）
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.addedNodes.length > 0) {
+                    addCopyButtons();
+                }
+            });
+        });
+
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true,
+        });
+
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
+
     return (
         <Layout>
             <div className={styles.reading_progress_bar} style={{ width: `${scrollProgress}%` }}></div>
@@ -161,6 +249,7 @@ function Post({ post, relatedPosts, prevPost, nextPost }: { post: Post; relatedP
 
                 <div className={styles.blog_post_content}>
                        <ReactMarkdown
+                            remarkPlugins={[remarkGfm]}
                             rehypePlugins={[rehypeRaw]}
                             components={{
                             iframe: ({ node, ...props }: any) => {
