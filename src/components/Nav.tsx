@@ -81,7 +81,7 @@ export default function Nav() {
                             className="fixed top-0 right-0 h-full w-3/4 max-w-sm bg-background dark:bg-background shadow-2xl z-50 md:hidden overflow-y-auto will-change-transform"
                         >
                             <div className="p-6">
-                                <div className="flex justify-between items-center mb-8">
+                                <div className="flex justify-between items-center mb-2">
                                     <h2 className="text-xl font-bold text-primary"> </h2>
                                     <motion.button
                                         onClick={() => setIsMenuOpen(false)}
@@ -102,7 +102,7 @@ export default function Nav() {
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ delay: 0.05 }}
-                                        className="flex justify-center py-4"
+                                        className="flex justify-center py-2"
                                     >
                                         <Avatar />
                                     </motion.li>
@@ -111,7 +111,7 @@ export default function Nav() {
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ delay: 0.1 }}
-                                        className="flex justify-center py-4"
+                                        className="flex justify-center py-2"
                                     >
                                         <SNSList/>
                                     </motion.li>
