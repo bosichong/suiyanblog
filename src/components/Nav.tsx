@@ -21,7 +21,7 @@ export default function Nav() {
 
     return (
         <>
-            <nav className="block md:hidden w-full px-4 py-3 bg-background/80 backdrop-blur-md sticky top-0 z-40">
+            <nav className="block md:hidden w-full px-4 py-3 bg-background/80 backdrop-blur-md sticky top-0 z-40 will-change-transform">
                 <div className="flex items-center justify-between">
                     <Link href="/" className="text-lg font-medium text-primary">
                         {config.BLOG_NAME_EN}
@@ -69,7 +69,7 @@ export default function Nav() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            transition={{ duration: 0.3 }}
+                            transition={{ duration: 0.2 }}
                             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden"
                             onClick={() => setIsMenuOpen(false)}
                         />
@@ -77,8 +77,8 @@ export default function Nav() {
                             initial={{ x: "100%" }}
                             animate={{ x: 0 }}
                             exit={{ x: "100%" }}
-                            transition={{ duration: 0.3, ease: "easeInOut" }}
-                            className="fixed top-0 right-0 h-full w-3/4 max-w-sm bg-background dark:bg-background shadow-2xl z-50 md:hidden overflow-y-auto"
+                            transition={{ duration: 0.2, ease: "easeInOut" }}
+                            className="fixed top-0 right-0 h-full w-3/4 max-w-sm bg-background dark:bg-background shadow-2xl z-50 md:hidden overflow-y-auto will-change-transform"
                         >
                             <div className="p-6">
                                 <div className="flex justify-between items-center mb-8">
@@ -95,13 +95,13 @@ export default function Nav() {
                                 <motion.ul
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
-                                    transition={{ delay: 0.2 }}
+                                    transition={{ delay: 0.1 }}
                                     className="flex flex-col space-y-6"
                                 >
                                     <motion.li
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: 0.1 }}
+                                        transition={{ delay: 0.05 }}
                                         className="flex justify-center py-4"
                                     >
                                         <Avatar />
@@ -110,7 +110,7 @@ export default function Nav() {
                                     <motion.li
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: 0.15 }}
+                                        transition={{ delay: 0.1 }}
                                         className="flex justify-center py-4"
                                     >
                                         <SNSList/>
@@ -121,7 +121,7 @@ export default function Nav() {
                                             key={`${item}-${index}`}
                                             initial={{ opacity: 0, x: 20 }}
                                             animate={{ opacity: 1, x: 0 }}
-                                            transition={{ delay: 0.2 + index * 0.05 }}
+                                            transition={{ delay: 0.15 + index * 0.03 }}
                                         >
                                             <MenuItem
                                                 item={item}

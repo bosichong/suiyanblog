@@ -4,12 +4,20 @@ import {Analytics} from "@vercel/analytics/next";
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { AppProps } from 'next/app';
 
+function AnalyticsWrapper() {
+  return <Analytics />;
+}
+
+function SpeedInsightsWrapper() {
+  return <SpeedInsights />;
+}
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
       <NextThemesProvider attribute="class" defaultTheme="dark">
           <Component {...pageProps} />
-          <Analytics />
-          <SpeedInsights />
+          <AnalyticsWrapper />
+          <SpeedInsightsWrapper />
       </NextThemesProvider>
 );
 }

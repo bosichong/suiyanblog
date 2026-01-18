@@ -22,7 +22,8 @@
     z-index: 9999;
     transition: width 0.1s ease-out;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    will-change: width;
+    will-change: width, transform;
+    contain: strict;
 }
 
 /* Container for the blog post */
