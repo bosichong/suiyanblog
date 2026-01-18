@@ -6,6 +6,13 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
+        <loc>https://www.suiyan.cc/blog/20260118111831</loc>
+        <lastmod>2026-01-18T11:18:31.654Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <!-- 标签: Godot教程,动画 -->
+    </url>
+    <url>
         <loc>https://www.suiyan.cc/blog/20260117131006</loc>
         <lastmod>2026-01-17T13:10:06.815Z</lastmod>
         <changefreq>monthly</changefreq>
@@ -2428,6 +2435,20 @@
         <!-- 标签: 站长吐槽 -->
     </url>
     <url>
+        <loc>https://www.suiyan.cc/tags/godot教程</loc>
+        <lastmod>2026-01-18T11:18:31.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+        <!-- 标签: godot教程 -->
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/tags/动画</loc>
+        <lastmod>2026-01-18T11:18:31.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+        <!-- 标签: 动画 -->
+    </url>
+    <url>
         <loc>https://www.suiyan.cc/tags/图标</loc>
         <lastmod>2026-01-17T13:10:06.815Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -2524,13 +2545,6 @@
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
         <!-- 标签: signal -->
-    </url>
-    <url>
-        <loc>https://www.suiyan.cc/tags/godot教程</loc>
-        <lastmod>2025-12-30T12:25:10.532Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-        <!-- 标签: godot教程 -->
     </url>
     <url>
         <loc>https://www.suiyan.cc/tags/大模型</loc>

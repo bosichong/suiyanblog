@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Sun, 18 Jan 2026 03:42:02 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 18 Jan 2026 11:33:02 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>Godot 4 补间动画 (Tween) 指北</title>
+            <link>https://www.suiyan.cc/blog/20260118111831</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20260118111831</guid>
+            <pubDate>Sun, 18 Jan 2026 11:18:31 GMT</pubDate>
+            <description><![CDATA[Godot 4 带来的全新 Tween 系统，摒弃了传统的节点式操作，改用全代码驱动，更加简洁且强大。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>这个开源动画图标库，让界面瞬间动起来！</title>
             <link>https://www.suiyan.cc/blog/20260117131006</link>
