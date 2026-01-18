@@ -27,7 +27,7 @@ const Giscus = dynamic(() => import('@giscus/react'), {
     )
 });
 
-const giscusConfig = require('../../giscusConfigs');
+import giscusConfig from '../../giscusConfigs';
 
 /**
  * 获取静态路径的函数
