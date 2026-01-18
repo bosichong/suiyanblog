@@ -23,7 +23,7 @@ const Layout = ({ children }: LayoutProps) => {
                         className={'mb-4'}
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.3, delay: 0.1 }}
+                        transition={{ duration: 0.2, delay: 0.05 }}
                     >
                         <Avatar />
                     </motion.li>
@@ -32,7 +32,7 @@ const Layout = ({ children }: LayoutProps) => {
                         className={'mb-4'}
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.3, delay: 0.2 }}
+                        transition={{ duration: 0.2, delay: 0.1 }}
                     >
                         <SNSList/>
                     </motion.li>
@@ -42,7 +42,7 @@ const Layout = ({ children }: LayoutProps) => {
                             key={`${item}-${index}`}
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.3, delay: 0.3 + index * 0.1 }}
+                            transition={{ duration: 0.2, delay: 0.15 + index * 0.05 }}
                         >
                             <MenuItem item={item} index={index} />
                         </motion.div>

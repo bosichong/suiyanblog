@@ -5,11 +5,13 @@
 /* ==================== CSS 变量系统 ==================== */
 
 :root {
-    /* 字体家族 */
+    /* 字体家族 - 使用系统字体栈优化加载速度 */
     --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-                 'Helvetica Neue', Arial, sans-serif;
-    --font-mono: 'JetBrains Mono', 'Source Code Pro', 'Monaco',
-                 'Consolas', monospace;
+                 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+                 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+                 'Noto Color Emoji';
+    --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas,
+                 'Liberation Mono', monospace;
 
     /* 字重层级 */
     --font-weight-light: 300;
@@ -289,5 +291,37 @@ a::-moz-focus-inner {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
+}
+
+/* ==================== 性能优化 ==================== */
+
+/* 优化滚动性能 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 减少重排重绘 */
+.glow-card,
+.glow-card-inner,
+.blog_post_content img {
+    will-change: transform;
+}
+
+/* 优化文本渲染 */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* 优化层叠上下层 */
+.rainbow_text,
+.rainbow_hover:hover {
+    will-change: background-clip, color;
+}
+
+/* 优化动画元素 */
+motion\:div, motion\:button, motion\:li {
+    will-change: transform, opacity;
 }
 

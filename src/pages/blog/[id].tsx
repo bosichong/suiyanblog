@@ -4,8 +4,7 @@ import getSortedPostsData from "../../utils/parseMd";
 import Layout from "../../components/Layout";
 import styles from './[id].module.css';
 import formatDate from "../../utils/formatDate";
-import Giscus from '@giscus/react';
-import giscusConfig from '../../giscusConfigs';
+import dynamic from 'next/dynamic';
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import Link from 'next/link';
@@ -16,6 +15,18 @@ import CC from '@/components/CC';
 import getRandomColor from "../../utils/randomColor";
 import readingTime from 'reading-time';
 import type { Post } from '../../types';
+
+// 动态导入 Giscus 组件以延迟加载
+const Giscus = dynamic(() => import('@giscus/react'), {
+    ssr: false,
+    loading: () => (
+        <div className="flex items-center justify-center py-8">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+        </div>
+    )
+});
+
+const giscusConfig = require('../../giscusConfigs');
 
 /**
  * 获取静态路径的函数
@@ -74,17 +85,24 @@ function Post({ post, relatedPosts, prevPost, nextPost }: { post: Post; relatedP
         setGiscusTheme(savedTheme === 'dark' ? 'dark_dimmed' : savedTheme === 'light' ? 'light_high_contrast' : savedTheme || 'dark_dimmed');
     }, []);
 
-    // 监听滚动事件，更新阅读进度
+    // 监听滚动事件，更新阅读进度（优化性能）
     useEffect(() => {
+        let ticking = false;
         const handleScroll = () => {
-            const windowHeight = window.innerHeight;
-            const documentHeight = document.documentElement.scrollHeight - windowHeight;
-            const scrolled = window.scrollY;
-            const progress = (scrolled / documentHeight) * 100;
-            setScrollProgress(Math.min(progress, 100));
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const windowHeight = window.innerHeight;
+                    const documentHeight = document.documentElement.scrollHeight - windowHeight;
+                    const scrolled = window.scrollY;
+                    const progress = (scrolled / documentHeight) * 100;
+                    setScrollProgress(Math.min(progress, 100));
+                    ticking = false;
+                });
+                ticking = true;
+            }
         };
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
