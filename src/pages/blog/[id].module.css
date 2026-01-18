@@ -146,23 +146,19 @@
     border-bottom-left-radius: 8px;
 }
 
-/* 复制按钮 */
-.blog_post_content pre::after {
-    content: '复制';
-    position: absolute;
-    top: var(--space-2);
-    right: 3.5rem;
-    padding: var(--space-1) var(--space-2);
-    background: rgba(247, 183, 80, 0.2);
-    color: #F7B750;
-    font-size: var(--text-xs);
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.2s;
+/* ==================== 浅色模式样式覆盖 ==================== */
+
+/* 浅色模式代码块优化 */
+:global(html.light) .blog_post_content pre {
+    background-color: var(--code-bg, #f8f6f3) !important;
+    color: #3a3a3a !important;
+    border: 1px solid var(--code-border, #e6e1d2) !important;
 }
 
-.blog_post_content pre::after:hover {
-    background: rgba(247, 183, 80, 0.4);
+/* 浅色模式语言标签 */
+:global(html.light) .blog_post_content pre::before {
+    background: rgba(0, 62, 170, 0.08) !important;
+    color: #666 !important;
 }
 
 /* Blockquotes */
@@ -234,6 +230,30 @@
     background-color: var(--color-primary);
     color: #000;
     font-weight: var(--font-weight-semibold);
+}
+
+/* ==================== 浅色模式表格样式覆盖 ==================== */
+
+/* 浅色模式表格边框 */
+:global(html.light) .blog_post_content th,
+:global(html.light) .blog_post_content td {
+    border: 1px solid var(--table-border, #d4cdc0) !important;
+}
+
+/* 浅色模式斑马纹 - 更柔和 */
+:global(html.light) .blog_post_content tr:nth-child(even) {
+    background-color: rgba(0, 62, 170, 0.03) !important;
+}
+
+/* 浅色模式悬停效果 */
+:global(html.light) .blog_post_content tr:hover {
+    background-color: rgba(0, 62, 170, 0.08) !important;
+}
+
+/* 浅色模式表头 - 更柔和的背景色 */
+:global(html.light) .blog_post_content th {
+    background-color: var(--table-header-bg, rgba(0, 62, 170, 0.08)) !important;
+    color: #003eaa !important;
 }
 
 /* Links */

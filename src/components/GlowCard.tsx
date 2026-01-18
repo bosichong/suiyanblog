@@ -29,17 +29,10 @@ const GlowCard = ({ children, className = '', borderWidth = 3, borderRadius = '6
 
   const isDark = resolvedTheme === 'dark';
 
-  // 浅色模式：暖白色背景 + 金色系渐变
-  // 深色模式：深色背景 + 暖色调渐变
-  const lightBg = '#fffbf5';
-  const lightGradient1 = '#c9a66b';
-  const lightGradient2 = '#d4a574';
-  const lightGradient3 = '#e5c49e';
-
+  // 统一使用彩虹色渐变，不分主题
+  const lightBg = '#e6e1d2';
   const darkBg = '#1a1a1a';
-  const darkGradient1 = '#F7B750';
-  const darkGradient2 = '#ff9f43';
-  const darkGradient3 = '#ee5a24';
+  const rainbowGradient = 'linear-gradient(-90deg, #602ce5 0%, #2ce597 30%, #e7bb18 50%, #ff7657 70%, #45c1ee 90%, #2ce597 100%)';
 
   return (
     <div className={`glow-card ${className}`} style={{ padding: `${borderWidth}px`, borderRadius }} {...props}>
@@ -57,10 +50,12 @@ const GlowCard = ({ children, className = '', borderWidth = 3, borderRadius = '6
           width: 150%;
           height: 150%;
           background: conic-gradient(
-            ${isDark ? darkGradient1 : lightGradient1},
-            ${isDark ? darkGradient2 : lightGradient2} 33%,
-            ${isDark ? darkGradient3 : lightGradient3} 66%,
-            ${isDark ? darkGradient1 : lightGradient1}
+            #602ce5,
+            #2ce597 33%,
+            #e7bb18 66%,
+            #ff7657,
+            #45c1ee,
+            #602ce5
           );
           position: absolute;
           z-index: 0;

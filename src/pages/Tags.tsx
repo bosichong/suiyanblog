@@ -85,24 +85,42 @@ const Tags = ({ tagsData }: { tagsData: Array<TagData & { bgColor: string }> }) 
                 <meta name="twitter:description" content="碎言博客的文章分类标签，按主题分类的技术文章和随笔" />
             </Head>
             <div className="p-4 min-h-[500px]">
-                <div>
-                    <h1 className="text-3xl">TAGS</h1>
-                    <div>
-                        <span className="text-sm">共有标签：{tagsData.length}个</span>
+                <div className="mb-8">
+                    <h1 className="text-3xl font-bold mb-2">
+                        TAGS
+                    </h1>
+                    <div className="flex items-center gap-2">
+                        <span className="text-sm text-default-500">共有标签：</span>
+                        <span className="text-lg font-semibold">{tagsData.length}</span>
+                        <span className="text-sm text-default-500">个</span>
                     </div>
                 </div>
 
-                <div className="flex gap-4 flex-wrap py-4">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
                     {tagsData.map((tagObj) => (
                         <Link
                             key={tagObj.tag}
                             href={`/tags/${tagObj.tag}`}
-                            className="tag text-white px-2 py-1 rounded-lg hover:animate-bounce transition-all font-medium hover:scale-105 transform"
+                            className="tag-item px-3 py-2 rounded-lg border transition-all duration-200 hover:scale-105 hover:shadow-md text-center"
                             style={{
-                                backgroundColor: tagObj.bgColor,
+                                borderColor: 'var(--color-border)',
+                                color: 'var(--color-text-primary)',
+                            }}
+                            onMouseEnter={(e) => {
+                                e.currentTarget.style.backgroundColor = tagObj.bgColor;
+                                e.currentTarget.style.color = 'white';
+                                e.currentTarget.style.borderColor = tagObj.bgColor;
+                            }}
+                            onMouseLeave={(e) => {
+                                e.currentTarget.style.backgroundColor = 'transparent';
+                                e.currentTarget.style.color = 'var(--color-text-primary)';
+                                e.currentTarget.style.borderColor = 'var(--color-border)';
                             }}
                         >
-                            {tagObj.tag} ({tagObj.data.length})
+                            <div className="flex items-center justify-center gap-1 text-sm font-medium">
+                                <span className="truncate">{tagObj.tag}</span>
+                                <span className="text-xs opacity-75 whitespace-nowrap">({tagObj.data.length})</span>
+                            </div>
                         </Link>
                     ))}
                 </div>
