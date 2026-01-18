@@ -300,6 +300,7 @@ function Post({ post, relatedPosts, prevPost, nextPost }: { post: Post; relatedP
                 </div>
 
                 <Giscus
+                    key={post.id}
                     repo={giscusConfig.repo as `${string}/${string}`}
                     repoId={giscusConfig.repoId}
                     category={giscusConfig.category}
