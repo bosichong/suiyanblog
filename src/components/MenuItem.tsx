@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from '@nextui-org/react';
+import Link from 'next/link';
 import { MenuItemProps } from '../types';
 
 const MenuItem = ({ item, index, onClick }: MenuItemProps & { onClick?: () => void }) => {
@@ -12,7 +12,6 @@ const MenuItem = ({ item, index, onClick }: MenuItemProps & { onClick?: () => vo
           "rainbow_hover w-full flex justify-center transition-all duration-200 hover:translate-x-1 "
         }
         href={item.href}
-        size="md"
         onClick={onClick}
       >
         {item.name}

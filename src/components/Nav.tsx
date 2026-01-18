@@ -1,18 +1,12 @@
 import React, {useEffect, useState} from "react";
-import {
-    Navbar,
-    NavbarBrand,
-    NavbarContent,
-    NavbarItem,
-    Link,
-} from "@nextui-org/react";
+import Link from 'next/link';
+import { motion, AnimatePresence } from "motion/react";
+import { Menu, X } from "lucide-react";
 import {ThemeSwitcher} from "@/components/ThemeSwitcher";
 import config from "@/config";
 import MenuItem from './MenuItem';
 import Avatar from './Avatar';
 import SNSList from "./SNSList";
-import { MenuIcon } from "./icons/MenuIcon";
-import { XIcon } from "./icons/XIcon";
 
 export default function Nav() {
 
@@ -26,52 +20,122 @@ export default function Nav() {
 
 
     return (
-        <Navbar className="block md:hidden max-w-full" maxWidth="sm">
-            <NavbarContent>
+        <>
+            <nav className="block md:hidden w-full px-4 py-3 bg-background/80 backdrop-blur-md sticky top-0 z-40">
+                <div className="flex items-center justify-between">
+                    <Link href="/" className="text-lg font-medium text-primary">
+                        {config.BLOG_NAME_EN}
+                    </Link>
 
-                <NavbarBrand className="block md:hidden">
-                    <Link color="primary" href="/" className="text-lg">{config.BLOG_NAME_EN}</Link>
-                </NavbarBrand>
-            </NavbarContent>
-
-            <NavbarContent className="hidden sm:flex gap-6" justify="center">
-            </NavbarContent>
-            <NavbarContent justify="end">
-                <NavbarItem className="block md:hidden">
-                    <ThemeSwitcher />
-                </NavbarItem>
-                <NavbarItem className="block md:hidden">
-                    <button
-                        onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        className="relative w-10 h-10 rounded-full flex items-center justify-center bg-content2/50 dark:bg-content3/50 hover:bg-content3/80 dark:hover:bg-content2/80 transition-all duration-300 ease-in-out transform hover:scale-110 focus:outline-none shadow-sm hover:shadow-md"
-                        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                    >
-                        {isMenuOpen ? <XIcon size={20} className="text-foreground" /> : <MenuIcon size={20} className="text-foreground" />}
-                    </button>
-                </NavbarItem>
-            </NavbarContent>
-            {isMenuOpen && (
-                <div className="absolute h-[100vh] top-full left-0 right-0 p-4 flex flex-col gap-4 bg-default-100 dark:bg-default-50 border-t border-divider shadow-lg">
-                    <ul className="flex flex-col justify-between space-y-4 px-2">
-                        <li className="mb-4 flex justify-center">
-                            <Avatar />
-                        </li>
-
-                        <li className="mb-4 flex justify-center">
-                            <SNSList/>
-                        </li>
-
-                        {config.menuItems.map((item, index) => (
-                            <MenuItem
-                                key={`${item}-${index}`}
-                                item={item}
-                                index={index}
-                                onClick={() => setIsMenuOpen(false)}
-                            />
-                        ))}
-                    </ul>
+                    <div className="flex items-center gap-4">
+                        <ThemeSwitcher />
+                        <motion.button
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            className="relative w-10 h-10 rounded-full flex items-center justify-center bg-default-100 dark:bg-default-50 hover:bg-primary hover:text-white transition-all duration-300 ease-in-out transform hover:scale-110 focus:outline-none shadow-sm hover:shadow-md"
+                            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            <AnimatePresence mode="wait">
+                                {isMenuOpen ? (
+                                    <motion.div
+                                        key="close"
+                                        initial={{ rotate: -90, opacity: 0 }}
+                                        animate={{ rotate: 0, opacity: 1 }}
+                                        exit={{ rotate: 90, opacity: 0 }}
+                                        transition={{ duration: 0.2 }}
+                                    >
+                                        <X size={20} className="text-foreground" />
+                                    </motion.div>
+                                ) : (
+                                    <motion.div
+                                        key="menu"
+                                        initial={{ rotate: 90, opacity: 0 }}
+                                        animate={{ rotate: 0, opacity: 1 }}
+                                        exit={{ rotate: -90, opacity: 0 }}
+                                        transition={{ duration: 0.2 }}
+                                    >
+                                        <Menu size={20} className="text-foreground" />
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+                        </motion.button>
+                    </div>
                 </div>
-            )}
-        </Navbar>
+            </nav>
+            <AnimatePresence>
+                {isMenuOpen && (
+                    <>
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden"
+                            onClick={() => setIsMenuOpen(false)}
+                        />
+                        <motion.div
+                            initial={{ x: "100%" }}
+                            animate={{ x: 0 }}
+                            exit={{ x: "100%" }}
+                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                            className="fixed top-0 right-0 h-full w-3/4 max-w-sm bg-background dark:bg-background shadow-2xl z-50 md:hidden overflow-y-auto"
+                        >
+                            <div className="p-6">
+                                <div className="flex justify-between items-center mb-8">
+                                    <h2 className="text-xl font-bold text-primary"> </h2>
+                                    <motion.button
+                                        onClick={() => setIsMenuOpen(false)}
+                                        className="w-10 h-10 rounded-full flex items-center justify-center bg-default-100 dark:bg-default-50 hover:bg-primary hover:text-white transition-all duration-300"
+                                        whileTap={{ scale: 0.95 }}
+                                    >
+                                        <X size={20} className="text-foreground" />
+                                    </motion.button>
+                                </div>
+
+                                <motion.ul
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ delay: 0.2 }}
+                                    className="flex flex-col space-y-6"
+                                >
+                                    <motion.li
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.1 }}
+                                        className="flex justify-center py-4"
+                                    >
+                                        <Avatar />
+                                    </motion.li>
+
+                                    <motion.li
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.15 }}
+                                        className="flex justify-center py-4"
+                                    >
+                                        <SNSList/>
+                                    </motion.li>
+
+                                    {config.menuItems.map((item, index) => (
+                                        <motion.li
+                                            key={`${item}-${index}`}
+                                            initial={{ opacity: 0, x: 20 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ delay: 0.2 + index * 0.05 }}
+                                        >
+                                            <MenuItem
+                                                item={item}
+                                                index={index}
+                                                onClick={() => setIsMenuOpen(false)}
+                                            />
+                                        </motion.li>
+                                    ))}
+                                </motion.ul>
+                            </div>
+                        </motion.div>
+                    </>
+                )}
+            </AnimatePresence>
+        </>
     );
 }

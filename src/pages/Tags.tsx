@@ -1,8 +1,8 @@
 import getSortedPostsData from '../utils/parseMd';
 import Head from 'next/head';
-import React, { useState } from 'react';
+import React from 'react';
 import Layout from '../components/Layout';
-import {Button, Link} from "@nextui-org/react";
+import Link from 'next/link';
 import getRandomColor from "../utils/randomColor";
 import { Post } from '../types';
 
@@ -68,17 +68,6 @@ export async function getStaticProps() {
 }
 
 const Tags = ({ tagsData }: { tagsData: Array<TagData & { bgColor: string }> }) => {
-    const [selectedTag, setSelectedTag] = useState<string | null>(null);
-
-    const handleTagClick = (tag: string) => {
-        if (selectedTag === tag) {
-            setSelectedTag(null);
-        } else {
-            setSelectedTag(tag);
-        }
-    };
-
-
     return (
         <Layout>
             <Head>
@@ -95,46 +84,29 @@ const Tags = ({ tagsData }: { tagsData: Array<TagData & { bgColor: string }> }) 
                 <meta name="twitter:title" content="Tags 标签 | SuiYan 碎言" />
                 <meta name="twitter:description" content="碎言博客的文章分类标签，按主题分类的技术文章和随笔" />
             </Head>
-                <div className="p-4 min-h-[500px]">
-
-
+            <div className="p-4 min-h-[500px]">
+                <div>
+                    <h1 className="text-3xl">TAGS</h1>
                     <div>
-                        <h1 className="text-3xl">TAGS</h1>
-                        <div>
-                            <span className="text-sm">共有标签：{tagsData.length}个</span>
-                        </div>
+                        <span className="text-sm">共有标签：{tagsData.length}个</span>
                     </div>
+                </div>
 
-                    <div className="flex gap-4 flex-wrap py-4">
-                        {tagsData.map((tagObj) => (
-                                <button
-                                    key={tagObj.tag}
-                                    className={`tag text-white ${selectedTag === tagObj.tag ? 'selected' : ''} px-2 py-1 rounded-lg hover:animate-bounce transition-all font-medium`}
-                                    style={{
-                                        backgroundColor: tagObj.bgColor,
-                                        display: selectedTag && selectedTag !== tagObj.tag ? 'none' : 'inline-block',
-                                    }}
-                                    onClick={() => handleTagClick(tagObj.tag)}
-                                >
-                                    {tagObj.tag}
-                                </button>
-                        ))}
-                    </div>
-                    {selectedTag && (
-
-                        <ul>
-                            {tagsData
-                                .find((tagObj) => tagObj.tag === selectedTag)
-                                ?.data.map((post, index) => (
-                                    <li className="transition-all duration-200 hover:translate-x-1" key={index}>
-                                        <Link href={`/blog/${post.id}`} className="rainbow_hover group flex items-center text-ellipsis overflow-hidden whitespace-nowrap">{post.title}</Link>
-                                    </li>
-                                ))}
-                        </ul>
-                )}
+                <div className="flex gap-4 flex-wrap py-4">
+                    {tagsData.map((tagObj) => (
+                        <Link
+                            key={tagObj.tag}
+                            href={`/tags/${tagObj.tag}`}
+                            className="tag text-white px-2 py-1 rounded-lg hover:animate-bounce transition-all font-medium hover:scale-105 transform"
+                            style={{
+                                backgroundColor: tagObj.bgColor,
+                            }}
+                        >
+                            {tagObj.tag} ({tagObj.data.length})
+                        </Link>
+                    ))}
+                </div>
             </div>
-
-
         </Layout>
     );
 };

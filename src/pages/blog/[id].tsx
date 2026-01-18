@@ -8,7 +8,7 @@ import Giscus from '@giscus/react';
 import giscusConfig from '../../giscusConfigs';
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
-import { Chip, Link } from "@nextui-org/react";
+import Link from 'next/link';
 import { CalendarDaysIcon } from "@/components/icons/CalendarDaysIcon";
 import { UserIcon } from "@/components/icons/UserIcon";
 import { BookmarkIcon } from "@/components/icons/BookmarkIcon";
@@ -119,9 +119,14 @@ function Post({ post, relatedPosts, prevPost, nextPost }: { post: Post; relatedP
                     </div>
                         {
                             post.tag?.split(',').map((tag: string, index: number) => (
-                                <Chip size="sm" startContent={<BookmarkIcon size={14} />} variant="flat" key={index} className="block ml-2 flex items-center text-sm">
+                                <Link
+                                    key={index}
+                                    href={`/tags/${tag.trim().toLowerCase()}`}
+                                    className="block ml-2 flex items-center text-sm px-2 py-1 rounded-full bg-primary-light text-primary hover:bg-primary hover:text-white transition-all"
+                                >
+                                    <BookmarkIcon size={14} className="mr-1" />
                                     {tag}
-                                </Chip>
+                                </Link>
                             ))
                         }
                     <div className="flex items-center">
@@ -162,13 +167,13 @@ function Post({ post, relatedPosts, prevPost, nextPost }: { post: Post; relatedP
 
                 <div className={'py-4 flex flex-col gap-4'}>
                     {prevPost && (
-                        <Link href={`/blog/${prevPost.id}`} className={'block text-ellipsis overflow-hidden whitespace-nowrap'}>
+                        <Link href={`/blog/${prevPost.id}`} className={'block text-ellipsis overflow-hidden whitespace-nowrap rainbow_hover'}>
                             <span>上一篇：</span>
                             <span>{prevPost.title}</span>
                         </Link>
                     )}
                     {nextPost && (
-                        <Link href={`/blog/${nextPost.id}`} className={'block text-ellipsis overflow-hidden whitespace-nowrap'}>
+                        <Link href={`/blog/${nextPost.id}`} className={'block text-ellipsis overflow-hidden whitespace-nowrap rainbow_hover'}>
                             <span>下一篇：</span>
                             <span>{nextPost.title}</span>
                         </Link>
@@ -178,10 +183,10 @@ function Post({ post, relatedPosts, prevPost, nextPost }: { post: Post; relatedP
                 <div className={'py-4 text-center'}>
                     <p>英雄请留步！欢迎在下方留言交流！</p>
                     <p className={'relative inline-block mt-2 cursor-help group'}>
-                        赞赏作者一杯咖啡 ❤️
+                        赏赏作者一杯咖啡 ❤️
                         <img
                             src="https://www.suiyan.cc/assets/images/zs.jpg"
-                            alt="赞赏码"
+                            alt="赏码"
                             className={'absolute left-1/2 -translate-x-1/2 top-full mt-2 w-48 h-auto rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50'}
                         />
                     </p>

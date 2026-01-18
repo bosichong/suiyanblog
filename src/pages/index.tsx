@@ -1,6 +1,5 @@
 import getSortedPostsData from '../utils/parseMd';
 import Layout from '../components/Layout';
-import { Pagination } from '@nextui-org/react';
 import React, {useEffect} from 'react';
 import Head from 'next/head';
 import config from '../config';
@@ -33,6 +32,40 @@ function Home({ currentPosts, totalPages }: { currentPosts: Post[]; totalPages: 
     }
   };
 
+  const renderPagination = () => {
+    const pages = [];
+    const maxVisible = 5;
+    let startPage = 1;
+    let endPage = totalPages;
+
+    if (totalPages > maxVisible) {
+      const middle = Math.ceil(maxVisible / 2);
+      startPage = Math.max(1, 1 - middle + 1);
+      endPage = Math.min(totalPages, startPage + maxVisible - 1);
+
+      if (endPage - startPage + 1 < maxVisible) {
+        startPage = Math.max(1, endPage - maxVisible + 1);
+      }
+    }
+
+    for (let i = startPage; i <= endPage; i++) {
+      pages.push(
+        <button
+          key={i}
+          onClick={() => paginate(i)}
+          className={`px-4 py-2 rounded-lg transition-all ${
+            i === 1
+              ? 'bg-primary text-white hover:bg-primary-hover'
+              : 'bg-default-100 dark:bg-default-50 hover:bg-primary hover:text-white'
+          }`}
+        >
+          {i}
+        </button>
+      );
+    }
+
+    return pages;
+  };
 
   return (
       <Layout>
@@ -58,15 +91,8 @@ function Home({ currentPosts, totalPages }: { currentPosts: Post[]; totalPages: 
                     <PostCard key={post.id} post={post} />
               ))}
             </div>
-            <div className="mt-8 mb-4 flex justify-center">
-              <Pagination
-                  color="primary"
-                  total={totalPages}
-                  initialPage={1}
-                  onChange={(page) => paginate(page)}
-                  className="shadow-sm"
-                  size="lg"
-              />
+            <div className="mt-8 mb-4 flex justify-center gap-2">
+              {renderPagination()}
             </div>
           </div>
       </Layout>

@@ -7,6 +7,7 @@ import ThemeButton from "@/components/ThemeButton";
 import SNSList from "@/components/SNSList";
 import BackToTop from "@/components/BackToTop";
 import { LayoutProps } from '../types';
+import { motion } from "motion/react";
 
 const Layout = ({ children }: LayoutProps) => {
     return (
@@ -18,16 +19,33 @@ const Layout = ({ children }: LayoutProps) => {
 
             <nav className="ml-8 hidden w-32 md:sticky md:top-36 md:block">
                 <ul className={'flex flex-col justify-between'}>
-                    <li className={'mb-4'}>
+                    <motion.li
+                        className={'mb-4'}
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.3, delay: 0.1 }}
+                    >
                         <Avatar />
-                    </li>
+                    </motion.li>
 
-                    <li className={'mb-4'}>
+                    <motion.li
+                        className={'mb-4'}
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.3, delay: 0.2 }}
+                    >
                         <SNSList/>
-                    </li>
+                    </motion.li>
 
                     {config.menuItems.map((item, index) => (
-                        <MenuItem key={`${item}-${index}`} item={item} index={index} />
+                        <motion.div
+                            key={`${item}-${index}`}
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.3, delay: 0.3 + index * 0.1 }}
+                        >
+                            <MenuItem item={item} index={index} />
+                        </motion.div>
                     ))}
                 </ul>
 

@@ -1,4 +1,4 @@
-import {Link,Image} from "@nextui-org/react"
+import Link from 'next/link';
 
 export default function CC () {
     return(
@@ -9,7 +9,7 @@ export default function CC () {
     href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1"
     target="_blank"
     rel="license noopener noreferrer"
-    style={{ display: 'inline-block' }}
+    className="text-primary hover:text-primary-hover rainbow_hover"
   >
     CC BY-NC-SA 4.0
   </Link>版权协议，转载请附上原文出处链接和本声明。

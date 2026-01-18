@@ -1,4 +1,4 @@
-import {Link} from "@nextui-org/react";
+import Link from 'next/link';
 import { GithubIcon } from "./icons/GithubIcon";
 import { MailCheckIcon } from "./icons/MailCheckIcon";
 import { RssIcon } from "./icons/RssIcon";
@@ -12,7 +12,7 @@ export default function SNSList() {
                     href="https://space.bilibili.com/275991552"
                     rel="noreferrer"
                     target="_blank"
-                    className="artlist m-auto"
+                    className="artlist m-auto text-primary hover:text-primary-hover"
                 >
                     <span className="sr-only">bilibili</span>
                     <YoutubeIcon size={24} />
@@ -24,7 +24,7 @@ export default function SNSList() {
                     href="https://github.com/bosichong/"
                     rel="noreferrer"
                     target="_blank"
-                    className="artlist m-auto"
+                    className="artlist m-auto text-primary hover:text-primary-hover"
                 >
                     <span className="sr-only">GitHub</span>
                     <GithubIcon size={24} />
@@ -36,7 +36,7 @@ export default function SNSList() {
                     href="mailto:285911@gmail.com"
                     rel="noreferrer"
                     target="_blank"
-                    className="artlist m-auto"
+                    className="artlist m-auto text-primary hover:text-primary-hover"
                 >
                     <span className="sr-only">Mail</span>
                     <MailCheckIcon size={24} />
@@ -48,7 +48,7 @@ export default function SNSList() {
                     href="https://www.suiyan.cc/rss.xml"
                     rel="noreferrer"
                     target="_blank"
-                    className="artlist m-auto"
+                    className="artlist m-auto text-primary hover:text-primary-hover"
                 >
                     <span className="sr-only">RSS</span>
                     <RssIcon size={24} />
