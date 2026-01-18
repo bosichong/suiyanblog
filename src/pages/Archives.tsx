@@ -2,7 +2,7 @@ import getSortedPostsData from '../utils/parseMd';
 import Layout from '../components/Layout';
 
 import React, {useEffect} from 'react';
-import {Link} from "@nextui-org/react";
+import Link from 'next/link';
 import Head from 'next/head';
 import { Post } from '../types';
 

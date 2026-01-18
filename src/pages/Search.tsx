@@ -1,7 +1,7 @@
 import getSortedPostsData from '../utils/parseMd';
 import Head from 'next/head';
 import React, { useState, useEffect } from 'react';
-import {Input, Link} from '@nextui-org/react';
+import Link from 'next/link';
 import Layout from "../components/Layout";
 import { SearchIcon } from "../components/icons/SearchIcon";
 import config from "../config";
@@ -54,15 +54,26 @@ const Search = ({ allPostsData }: { allPostsData: Post[] }) => {
                     <div className="mb-8 pb-4">
                         <h1 className="text-3xl font-bold mb-3">站内搜索</h1>
                         {/* 添加放大镜图标 */}
-                        <Input
-                            placeholder="JavaScript"
-                            variant="bordered"
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                            isClearable
-                            className="mb-4"
-                            endContent={<SearchIcon size={24} />}
-                        />
+                        <div className="relative mb-4">
+                            <input
+                                type="text"
+                                placeholder="JavaScript"
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
+                                className="w-full px-4 py-3 pr-12 rounded-lg border border-border bg-default-100 dark:bg-default-50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                            />
+                            <div className="absolute right-4 top-1/2 -translate-y-1/2 text-default-500">
+                                <SearchIcon size={24} />
+                            </div>
+                            {searchQuery && (
+                                <button
+                                    onClick={() => setSearchQuery('')}
+                                    className="absolute right-12 top-1/2 -translate-y-1/2 text-default-500 hover:text-default-700"
+                                >
+                                    ✕
+                                </button>
+                            )}
+                        </div>
                     </div>
 
                     <div className="space-y-2 ml-4">

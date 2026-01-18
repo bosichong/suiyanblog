@@ -116,6 +116,16 @@ body {
     background-color: var(--color-background);
 }
 
+/* 链接默认颜色 - 与 SNS 图标颜色一致 */
+a {
+    color: var(--color-primary);
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--color-primary-hover);
+}
+
 /* ==================== 自定义样式 ==================== */
 
 .rainbow_text {
@@ -150,6 +160,96 @@ body {
 /* 确保阴影效果在暗色模式下正常显示 */
 .dark .atropos-card {
     border: none !important;
+}
+
+/* ==================== Tailwind 工具类扩展 ==================== */
+
+.bg-default-100 {
+    background-color: var(--color-surface);
+}
+
+.dark .bg-default-100 {
+    background-color: var(--color-surface);
+}
+
+.bg-default-50 {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.dark .bg-default-50 {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.text-default-500 {
+    color: var(--color-text-secondary);
+}
+
+.text-default-600 {
+    color: var(--color-text-secondary);
+}
+
+.text-default-800 {
+    color: var(--color-text-primary);
+}
+
+.dark .text-default-800 {
+    color: var(--color-text-primary);
+}
+
+.text-default-700 {
+    color: var(--color-text-primary);
+}
+
+.text-default-400 {
+    color: var(--color-text-tertiary);
+}
+
+.dark .text-default-400 {
+    color: var(--color-text-tertiary);
+}
+
+.text-foreground {
+    color: var(--color-text-primary);
+}
+
+.bg-content2\/50 {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.dark .bg-content2\/50 {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bg-content3\/50 {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dark .bg-content3\/50 {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.bg-content3\/80 {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dark .bg-content3\/80 {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.bg-content2\/80 {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.dark .bg-content2\/80 {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.border-border {
+    border-color: var(--color-border);
+}
+
+.border-divider {
+    border-color: var(--color-border);
 }
 
 /* ==================== 可访问性优化 ==================== */

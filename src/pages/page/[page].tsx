@@ -1,6 +1,5 @@
 import getSortedPostsData from '../../utils/parseMd';
 import Layout from '../../components/Layout';
-import { Pagination } from '@nextui-org/react';
 import React from 'react';
 import Head from 'next/head';
 import config from '../../config';
@@ -48,6 +47,35 @@ function Page({ currentPosts, currentPage, totalPages }: { currentPosts: Post[];
         }
     };
 
+    const renderPagination = () => {
+        const pages = [];
+        const maxVisible = 5;
+        let startPage = Math.max(1, currentPage - Math.floor(maxVisible / 2));
+        let endPage = Math.min(totalPages, startPage + maxVisible - 1);
+
+        if (endPage - startPage + 1 < maxVisible) {
+            startPage = Math.max(1, endPage - maxVisible + 1);
+        }
+
+        for (let i = startPage; i <= endPage; i++) {
+            pages.push(
+                <button
+                    key={i}
+                    onClick={() => paginate(i)}
+                    className={`px-4 py-2 rounded-lg transition-all ${
+                        i === currentPage
+                            ? 'bg-primary text-white hover:bg-primary-hover'
+                            : 'bg-default-100 dark:bg-default-50 hover:bg-primary hover:text-white'
+                    }`}
+                >
+                    {i}
+                </button>
+            );
+        }
+
+        return pages;
+    };
+
     return (
         <Layout>
             <Head>
@@ -71,15 +99,8 @@ function Page({ currentPosts, currentPage, totalPages }: { currentPosts: Post[];
                         <PostCard key={post.id} post={post} />
                     ))}
                 </div>
-                <div className="mt-8 mb-4 flex justify-center">
-                    <Pagination
-                        color="primary"
-                        total={totalPages}
-                        initialPage={currentPage}
-                        onChange={(page) => paginate(page)}
-                        className="shadow-sm"
-                        size="lg"
-                    />
+                <div className="mt-8 mb-4 flex justify-center gap-2">
+                    {renderPagination()}
                 </div>
             </div>
         </Layout>
