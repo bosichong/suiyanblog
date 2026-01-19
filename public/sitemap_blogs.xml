@@ -6,6 +6,13 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
+        <loc>https://www.suiyan.cc/blog/20260119104503</loc>
+        <lastmod>2026-01-19T10:45:03.760Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <!-- 标签: 心情日记 -->
+    </url>
+    <url>
         <loc>https://www.suiyan.cc/blog/20260118111831</loc>
         <lastmod>2026-01-18T11:18:31.654Z</lastmod>
         <changefreq>monthly</changefreq>
@@ -2435,6 +2442,13 @@
         <!-- 标签: 站长吐槽 -->
     </url>
     <url>
+        <loc>https://www.suiyan.cc/tags/心情日记</loc>
+        <lastmod>2026-01-19T10:45:03.760Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+        <!-- 标签: 心情日记 -->
+    </url>
+    <url>
         <loc>https://www.suiyan.cc/tags/godot教程</loc>
         <lastmod>2026-01-18T11:18:31.654Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -2496,13 +2510,6 @@
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
         <!-- 标签: 氛围编程 -->
-    </url>
-    <url>
-        <loc>https://www.suiyan.cc/tags/心情日记</loc>
-        <lastmod>2026-01-13T01:03:31.074Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-        <!-- 标签: 心情日记 -->
     </url>
     <url>
         <loc>https://www.suiyan.cc/tags/灵光一闪</loc>

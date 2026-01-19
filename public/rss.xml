@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Mon, 19 Jan 2026 08:14:15 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 19 Jan 2026 10:49:36 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>戒烟半个多月，我用AI写代码、用语音写博客</title>
+            <link>https://www.suiyan.cc/blog/20260119104503</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20260119104503</guid>
+            <pubDate>Mon, 19 Jan 2026 10:45:03 GMT</pubDate>
+            <description><![CDATA[昨天晚上做了个特别真实的梦：梦见遇到一位老朋友，也是个老烟枪。他递给我一根烟，我接过来，抽了一口——真爽啊！聊了几句家常，临走时突然一激灵：“哎呀，我戒烟了！”]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>Godot 4 补间动画 (Tween) 指北</title>
             <link>https://www.suiyan.cc/blog/20260118111831</link>
