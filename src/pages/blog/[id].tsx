@@ -12,6 +12,7 @@ import Link from 'next/link';
 import { CalendarDaysIcon } from "@/components/icons/CalendarDaysIcon";
 import { UserIcon } from "@/components/icons/UserIcon";
 import { BookmarkIcon } from "@/components/icons/BookmarkIcon";
+import { CoffeeIcon } from "@/components/icons/CoffeeIcon";
 import CC from '@/components/CC';
 import getRandomColor from "../../utils/randomColor";
 import readingTime from 'reading-time';
@@ -289,8 +290,8 @@ function Post({ post, relatedPosts, prevPost, nextPost }: { post: Post; relatedP
 
                 <div className={'py-4 text-center'}>
                     <p>英雄请留步！欢迎在下方留言交流！</p>
-                    <p className={'relative inline-block mt-2 cursor-help group'}>
-                        赏赏作者一杯咖啡 ❤️
+                    <p className={'relative inline-block mt-2 cursor-help group w-48'}>
+                        <CoffeeIcon size={28} title="❤️赞赏作者一杯咖啡❤️" />
                         <img
                             src="https://www.suiyan.cc/assets/images/zs.jpg"
                             alt="赏码"
