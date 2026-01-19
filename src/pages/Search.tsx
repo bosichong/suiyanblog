@@ -3,6 +3,7 @@ import Head from 'next/head';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Layout from "../components/Layout";
+import Breadcrumb from "../components/Breadcrumb";
 import { SearchIcon } from "../components/icons/SearchIcon";
 import config from "../config";
 import { Post } from '../types';
@@ -49,6 +50,8 @@ const Search = ({ allPostsData }: { allPostsData: Post[] }) => {
                 <meta name="twitter:title" content="Search 搜索 | SuiYan 碎言" />
                 <meta name="twitter:description" content="碎言博客站内搜索功能，可以按文章标题搜索博客内容" />
             </Head>
+
+            <Breadcrumb type="search" />
 
                 <div className="p-4 min-h-[500px]">
                     <div className="mb-8 pb-4">

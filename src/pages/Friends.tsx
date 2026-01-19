@@ -1,6 +1,7 @@
 import Layout from "../components/Layout";
 import config from "../config";
 import Head from "next/head";
+import Breadcrumb from "../components/Breadcrumb";
 import giscusConfig from "@/giscusConfigs";
 import Giscus from "@giscus/react";
 import React, {useEffect, useState} from "react";
@@ -28,6 +29,8 @@ const Friends = () => {
                 <title>Friends 友情链接 | SuiYan 碎言 </title>
                 <meta name="description" content="碎言博客的友情链接"/>
             </Head>
+
+            <Breadcrumb type="friends" />
 
             <div className="max-w-4xl mx-auto px-6 py-8">
                 <div className="mb-8">
