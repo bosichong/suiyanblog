@@ -28,7 +28,7 @@ export default function PostCard({ post }: PostCardProps) {
                                     tagsArray = post.tags;
                                 } else if (post.tag) {
                                     // 处理逗号分隔的字符串标签
-                                    tagsArray = post.tag.split(',').map(t => t.trim());
+                                    tagsArray = post.tag.split(',').map((t: string) => t.trim());
                                 }
                                 return tagsArray.map((tag, index) => (
                                     <Link key={index} href={`/tags/${encodeURIComponent(tag)}`} className="rainbow_hover">
