@@ -13,10 +13,10 @@ export default function getSortedPostsData(): Post[] {
         const fileContent = fs.readFileSync(filePath, 'utf8');
         const matterResult = matter(fileContent);
         
-        // 截断 description 字段
+        // 截断 description 字段（SEO最佳实践：150字符）
         let description = matterResult.data.description;
-        if (description && typeof description === 'string' && description.length > 40) {
-            description = description.substring(0, 40) + '...';
+        if (description && typeof description === 'string' && description.length > 150) {
+            description = description.substring(0, 150) + '...';
         }
         
         return {

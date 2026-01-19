@@ -2,6 +2,7 @@ import getSortedPostsData from '../../utils/parseMd';
 import Layout from '../../components/Layout';
 import React from 'react';
 import Head from 'next/head';
+import Breadcrumb from '../../components/Breadcrumb';
 import config from '../../config';
 import PostCard from '../../components/PostCard';
 import { Post } from '../../types';
@@ -93,6 +94,7 @@ function Page({ currentPosts, currentPage, totalPages }: { currentPosts: Post[];
                 <meta name="twitter:title" content={`文章列表 - 第${currentPage}页 | SuiYan 碎言`} />
                 <meta name="twitter:description" content={`碎言博客文章列表第${currentPage}页 - ${config.META_DESCRIPTION}`} />
             </Head>
+            <Breadcrumb type="page" pageNum={currentPage} />
             <div className="container mx-auto px-4 sm:px-6 lg:px-4 max-w-4xl">
                 <div className="grid gap-4">
                     {currentPosts.map((post) => (

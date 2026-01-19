@@ -14,6 +14,7 @@ import { UserIcon } from "@/components/icons/UserIcon";
 import { BookmarkIcon } from "@/components/icons/BookmarkIcon";
 import { CoffeeIcon } from "@/components/icons/CoffeeIcon";
 import CC from '@/components/CC';
+import Breadcrumb from '@/components/Breadcrumb';
 import getRandomColor from "../../utils/randomColor";
 import readingTime from 'reading-time';
 import type { Post } from '../../types';
@@ -217,6 +218,11 @@ function Post({ post, relatedPosts, prevPost, nextPost }: { post: Post; relatedP
                 <meta name="twitter:title" content={`${post.title} | SuiYan 碎言`} />
                 <meta name="twitter:description" content={post.description} />
             </Head>
+            <Breadcrumb 
+                type="blog" 
+                title={post.title || ''} 
+                tag={post.tag ? post.tag.split(',')[0].trim() : ''} 
+            />
             <article className={'p-4'}>
                 <h1 className={`${styles.blog_post_title} rainbow_text`}>{post.title}</h1>
                 <div className="text-sm flex flex-wrap mb-4">
@@ -253,6 +259,23 @@ function Post({ post, relatedPosts, prevPost, nextPost }: { post: Post; relatedP
                             remarkPlugins={[remarkGfm]}
                             rehypePlugins={[rehypeRaw]}
                             components={{
+                            p: ({ children, ...props }: any) => {
+                                // 检查子元素是否包含块级元素（如div、iframe等）
+                                const hasBlockElement = React.Children.toArray(children).some((child: any) => {
+                                    if (React.isValidElement(child)) {
+                                        const type = typeof child.type === 'string' ? child.type : child.type?.name || '';
+                                        return ['div', 'iframe', 'video', 'pre', 'blockquote', 'ul', 'ol', 'table', 'figure'].includes(type);
+                                    }
+                                    return false;
+                                });
+                                
+                                // 如果包含块级元素，直接返回children，不包裹p标签
+                                if (hasBlockElement) {
+                                    return <>{children}</>;
+                                }
+                                
+                                return <p {...props}>{children}</p>;
+                            },
                             iframe: ({ node, ...props }: any) => {
                                 const src = props.src;
                                 if (typeof src === 'string' && (

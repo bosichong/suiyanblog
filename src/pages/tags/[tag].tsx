@@ -2,6 +2,7 @@ import getSortedPostsData from '../../utils/parseMd';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 import Head from 'next/head';
+import Breadcrumb from '../../components/Breadcrumb';
 import { Post } from '../../types';
 
 export async function getStaticPaths() {
@@ -83,6 +84,8 @@ const TagDetail = ({ tag, tagPosts, postsByYear }: { tag: string; tagPosts: Post
                 <meta name="twitter:title" content={`标签: ${tag} - SuiYan 碎言`} />
                 <meta name="twitter:description" content={`碎言博客中标签为 ${tag} 的文章列表，共 ${totalPosts} 篇文章`} />
             </Head>
+
+            <Breadcrumb type="tag" tag={tag} />
 
             <div className="max-w-4xl mx-auto p-6">
                 {/* 顶部介绍区域 */}

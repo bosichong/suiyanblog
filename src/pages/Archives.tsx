@@ -4,6 +4,7 @@ import Layout from '../components/Layout';
 import React, {useEffect} from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
+import Breadcrumb from '../components/Breadcrumb';
 import { Post } from '../types';
 
 export async function getStaticProps() {
@@ -59,6 +60,8 @@ const Archives = ({ allPostsData, postsByYear }: { allPostsData: Post[], postsBy
                 <meta name="twitter:title" content="Archives 文章归档 | SuiYan 碎言" />
                 <meta name="twitter:description" content="碎言博客的所有文章归档，按时间顺序整理的全部技术文章和随笔" />
             </Head>
+
+            <Breadcrumb type="archives" />
 
             <div className="max-w-4xl mx-auto p-6">
                 {/* 顶部介绍区域 */}

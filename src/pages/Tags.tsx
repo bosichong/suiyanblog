@@ -3,6 +3,7 @@ import Head from 'next/head';
 import React from 'react';
 import Layout from '../components/Layout';
 import Link from 'next/link';
+import Breadcrumb from '../components/Breadcrumb';
 import getRandomColor from "../utils/randomColor";
 import { Post } from '../types';
 
@@ -84,6 +85,7 @@ const Tags = ({ tagsData }: { tagsData: Array<TagData & { bgColor: string }> }) 
                 <meta name="twitter:title" content="Tags 标签 | SuiYan 碎言" />
                 <meta name="twitter:description" content="碎言博客的文章分类标签，按主题分类的技术文章和随笔" />
             </Head>
+            <Breadcrumb type="tags" />
             <div className="p-4 min-h-[500px]">
                 <div className="mb-8">
                     <h1 className="text-3xl font-bold mb-2">
