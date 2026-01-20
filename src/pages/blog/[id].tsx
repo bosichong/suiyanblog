@@ -66,12 +66,32 @@ export async function getStaticProps({ params }: { params: { id: string } }) {
         return tags.some((tag: string) => postTags.includes(tag)) && p.id !== post.id;
     });
 
+    // 那年今日：筛选出往年同月同日的文章（排除今年今日的所有文章）
+    const currentPostDate = new Date(post.time || '');
+    const currentMonth = currentPostDate.getMonth();
+    const currentDay = currentPostDate.getDate();
+    const currentYear = currentPostDate.getFullYear();
+
+    const sameDayPosts = posts.filter(p => {
+        if (!p.time) return false;
+        const postDate = new Date(p.time);
+        const postYear = postDate.getFullYear();
+        // 排除今年今日的所有文章（包括当前文章本身）
+        if (postYear === currentYear) return false;
+        // 只保留月份和日期相同的文章
+        return postDate.getMonth() === currentMonth && postDate.getDate() === currentDay;
+    }).sort((a: Post, b: Post) => {
+        // 按时间由近到远排序
+        return new Date(b.time || '').getTime() - new Date(a.time || '').getTime();
+    });
+
     return {
         props: {
             post,
             relatedPosts,
             prevPost,
             nextPost,
+            sameDayPosts,
         },
     };
 }
@@ -79,7 +99,7 @@ export async function getStaticProps({ params }: { params: { id: string } }) {
 /**
  * 展示文章的组件
  */
-function Post({ post, relatedPosts, prevPost, nextPost }: { post: Post; relatedPosts: Post[]; prevPost: Post | null; nextPost: Post | null }) {
+function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: Post; relatedPosts: Post[]; prevPost: Post | null; nextPost: Post | null; sameDayPosts: Post[] }) {
     const [giscusTheme, setGiscusTheme] = useState('');
     const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -360,6 +380,24 @@ function Post({ post, relatedPosts, prevPost, nextPost }: { post: Post; relatedP
                         </ul>
                     ) : (
                         <p className={'text-gray-500'}>暂无相关文章</p>
+                    )}
+                </div>
+
+                <div className={'py-4'}>
+                    <h2 >那年今日</h2>
+                    {sameDayPosts.length > 0 ? (
+                        <ul className={styles.related_posts_list}>
+                            {sameDayPosts.map((sameDayPost, index) => (
+                                <li key={index} className={styles.related_post_item+'transition-all duration-200 hover:translate-x-1'}>
+                                    <span className="text-gray-500 text-sm mr-2">{formatDate(sameDayPost.time || '')}</span>
+                                    <Link href={`/blog/${sameDayPost.id}`} className={'rainbow_hover'}>
+                                        {sameDayPost.title}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    ) : (
+                        <p className={'text-gray-500'}>暂无那年今日的文章</p>
                     )}
                 </div>
 
