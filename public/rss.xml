@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Tue, 20 Jan 2026 12:02:11 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 20 Jan 2026 14:32:45 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>使用AI重构我8年前的一个项目:PyDirectoryComparison</title>
+            <link>https://www.suiyan.cc/blog/20260120142316</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20260120142316</guid>
+            <pubDate>Tue, 20 Jan 2026 14:23:16 GMT</pubDate>
+            <description><![CDATA[一边玩原神一边就把程序重构了，这个程序是我8年前学习python的时候构建的，当时整整写了一个多星期，BUG很多，界面也是无从下手。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>如何做一个有逼格的博客？</title>
             <link>https://www.suiyan.cc/blog/20260120060836</link>

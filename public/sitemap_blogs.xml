@@ -6,6 +6,13 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
+        <loc>https://www.suiyan.cc/blog/20260120142316</loc>
+        <lastmod>2026-01-20T14:23:16.207Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <!-- 标签: AI重构,我的项目 -->
+    </url>
+    <url>
         <loc>https://www.suiyan.cc/blog/20260120060836</loc>
         <lastmod>2026-01-20T06:08:36.103Z</lastmod>
         <changefreq>monthly</changefreq>
@@ -59,7 +66,7 @@
         <lastmod>2026-01-13T10:49:32.784Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-        <!-- 标签: 氛围编程 -->
+        <!-- 标签: 氛围编程,我的项目 -->
     </url>
     <url>
         <loc>https://www.suiyan.cc/blog/20260113010331</loc>
@@ -2447,6 +2454,20 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <!-- 标签: 站长吐槽 -->
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/tags/ai重构</loc>
+        <lastmod>2026-01-20T14:23:16.207Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+        <!-- 标签: ai重构 -->
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/tags/我的项目</loc>
+        <lastmod>2026-01-20T14:23:16.207Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+        <!-- 标签: 我的项目 -->
     </url>
     <url>
         <loc>https://www.suiyan.cc/tags/博客</loc>
