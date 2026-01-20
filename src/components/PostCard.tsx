@@ -15,11 +15,7 @@ export default function PostCard({ post }: PostCardProps) {
                     </Link>
                 </div>
 
-                <div className="mb-4 flex items-center gap-3 text-sm">
-                    <div className="flex items-center">
-                        <CalendarDaysIcon size={16} />
-                        <span className="ml-2">{formatDate(post.time || '')}</span>
-                    </div>
+                <div className="mb-4 flex items-center justify-between text-sm">
                     {(post.tags || post.tag) && (
                         <div className="flex items-center gap-2">
                             {(() => {
@@ -38,6 +34,10 @@ export default function PostCard({ post }: PostCardProps) {
                             })()}
                         </div>
                     )}
+                    <div className="flex items-center">
+                        <CalendarDaysIcon size={16} />
+                        <span className="ml-2">{formatDate(post.time || '')}</span>
+                    </div>
                 </div>
 
                 <div className="mb-4">
