@@ -27,6 +27,7 @@ const config: Config = {
     "META_KEYWORDS": "Python,JavaScript,程序员,Godot,编程,技术博客,学习笔记,碎言",
     // 头像图片路径
     "PROFILE_IMAGE": "assets/images/avatar.png",
+
     'menuItems' : [
         {name:'归档',href:'/Archives'},
         {name:'标签',href:'/Tags'},
@@ -34,6 +35,15 @@ const config: Config = {
         {name:'友链',href:'/Friends'},
         {name:'关于',href:'/blog/1'},
     ],
+
+        // 友链页面标题
+    "FRIENDS_PAGE_TITLE": "友情链接",
+    // 友链页面描述
+    "FRIENDS_PAGE_DESCRIPTION": "一部分是我自己喜欢的博客，一部分是友情链接。申请友情链接，请在底部评论区留言。",
+    // 博客聚合标题
+    "BLOG_AGGREGATION_TITLE": "博客聚合",
+    // 博客聚合描述
+    "BLOG_AGGREGATION_DESCRIPTION": "这里是一些优秀的博客聚合平台，可以发现更多有趣的独立博客。",
     "links": [
         {
             "site_name": "Obaby",
@@ -106,6 +116,28 @@ const config: Config = {
             "site_url": "https://www.suiyan.cc",
             "site_description": "记录并分享个人学习编程的过程和笔记，记录一些平淡的日常。",
             "site_avatar": "https://www.suiyan.cc/assets/images/avatar.jpg"
+        }
+    ],
+    "blogAggregations": [
+        {
+            "site_name": "十年之约",
+            "site_url": "https://www.foreverblog.cn/",
+            "site_description": "十年之约 · 一个人的寂寞，一群人的狂欢。"
+        },
+        {
+            "site_name": "博友圈",
+            "site_url": "https://www.boyouquan.com/",
+            "site_description": "博客人的朋友圈，将一个个散落在各处的孤岛连接成一片广袤无垠的新大陆！"
+        },
+        {
+            "site_name": "BlogFinder",
+            "site_url": "https://bf.zzxworld.com/",
+            "site_description": "聚合优秀的个人博客，发掘优质的个人博客文章和内容。"
+        },
+        {
+            "site_name": "个站商店",
+            "site_url": "https://storeweb.cn/",
+            "site_description": "一个精致的，带社交元素的个人网站发布平台，博客收录网站"
         }
     ]
 };

@@ -21,8 +21,13 @@ export interface Config {
   META_DESCRIPTION: string;
   META_KEYWORDS: string;
   PROFILE_IMAGE: string;
+  FRIENDS_PAGE_TITLE: string;
+  FRIENDS_PAGE_DESCRIPTION: string;
+  BLOG_AGGREGATION_TITLE: string;
+  BLOG_AGGREGATION_DESCRIPTION: string;
   menuItems: MenuItem[];
   links: Link[];
+  blogAggregations: BlogAggregation[];
 }
 
 // 菜单项类型
@@ -37,6 +42,13 @@ export interface Link {
   site_url: string;
   site_description: string;
   site_avatar: string;
+}
+
+// 博客聚合类型
+export interface BlogAggregation {
+  site_name: string;
+  site_url: string;
+  site_description: string;
 }
 
 // Giscus配置类型
