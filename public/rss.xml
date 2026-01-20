@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Mon, 19 Jan 2026 15:11:28 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 20 Jan 2026 06:13:11 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>如何做一个有逼格的博客？</title>
+            <link>https://www.suiyan.cc/blog/20260120060836</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20260120060836</guid>
+            <pubDate>Tue, 20 Jan 2026 06:08:36 GMT</pubDate>
+            <description><![CDATA[一定得选最冷门的开源框架，雇海外独立设计师，搭就得搭最高调性的静态博客。域名得是 .io 后缀的，服务器直接搁硅谷，存储空间最小也得200G。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>戒烟半个多月，我用AI写代码、用语音写博客</title>
             <link>https://www.suiyan.cc/blog/20260119104503</link>
