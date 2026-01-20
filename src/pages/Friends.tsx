@@ -6,9 +6,11 @@ import giscusConfig from "@/giscusConfigs";
 import Giscus from "@giscus/react";
 import React, {useEffect, useState} from "react";
 import FriendCard from "../components/FriendCard";
+import BlogAggregationCard from "../components/BlogAggregationCard";
 
 const Friends = () => {
     const links = config.links;
+    const aggregations = config.blogAggregations;
     // 定义一个状态变量 giscusTheme，用于存储 Giscus 的主题
     const [giscusTheme, setGiscusTheme] = useState('');
 
@@ -34,14 +36,25 @@ const Friends = () => {
 
             <div className="max-w-4xl mx-auto px-6 py-8">
                 <div className="mb-8">
-                    <h1 className="text-3xl font-bold mb-3">友情链接</h1>
+                    <h1 className="text-3xl font-bold mb-3">{config.FRIENDS_PAGE_TITLE}</h1>
                     <p className="text-sm text-default-600">
-                        一部分是我自己喜欢的博客，一部分是友情链接。申请友情链接，请在底部评论区留言。
+                        {config.FRIENDS_PAGE_DESCRIPTION}
+                    </p>
+                </div>
+                <div className="border border-border rounded-lg overflow-hidden mb-12">
+                    {links.map((link, index) => (
+                        <FriendCard key={link.site_name} link={link} />
+                    ))}
+                </div>
+                <div className="mb-8">
+                    <h2 className="text-2xl font-bold mb-3">{config.BLOG_AGGREGATION_TITLE}</h2>
+                    <p className="text-sm text-default-600">
+                        {config.BLOG_AGGREGATION_DESCRIPTION}
                     </p>
                 </div>
                 <div className="border border-border rounded-lg overflow-hidden">
-                    {links.map((link, index) => (
-                        <FriendCard key={link.site_name} link={link} />
+                    {aggregations.map((aggregation, index) => (
+                        <BlogAggregationCard key={aggregation.site_name} aggregation={aggregation} />
                     ))}
                 </div>
             </div>
