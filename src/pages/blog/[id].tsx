@@ -220,35 +220,26 @@ function Post({ post, relatedPosts, prevPost, nextPost }: { post: Post; relatedP
             </Head>
             <Breadcrumb 
                 type="blog" 
-                title={post.title || ''} 
+                title="正文" 
                 tag={post.tag ? post.tag.split(',')[0].trim() : ''} 
             />
             <article className={'p-4'}>
                 <h1 className={`${styles.blog_post_title} rainbow_text`}>{post.title}</h1>
-                <div className="text-sm flex flex-wrap mb-4">
-                    <div className="flex items-center">
-                        <UserIcon size={16} />
-                        <span className="ml-2 flex">{post.author}</span>
-                    </div>
-                        {
-                            post.tag?.split(',').map((tag: string, index: number) => (
-                                <Link
-                                    key={index}
-                                    href={`/tags/${tag.trim().toLowerCase()}`}
-                                    className="block ml-2 flex items-center text-sm px-2 py-1 rounded-full bg-primary-light text-primary hover:bg-primary hover:text-white transition-all"
-                                >
-                                    <BookmarkIcon size={14} className="mr-1" />
-                                    {tag}
-                                </Link>
-                            ))
-                        }
-                    <div className="flex items-center">
-                        <CalendarDaysIcon size={16} />
-                        <span className="ml-2">{formatDate(post.time || '')}</span>
+                <div className="text-sm flex justify-between items-center mb-4">
+                    <div className="flex items-center gap-4">
+                        <div className="flex items-center">
+                            <UserIcon size={16} />
+                            <span className="ml-2 flex">{post.author}</span>
+                        </div>
+                        <div className="flex items-center">
+                            <span className="text-sm text-gray-500">
+                                {stats.words} 字 · 预计阅读 {stats.text}
+                            </span>
+                        </div>
                     </div>
                     <div className="flex items-center">
-                        <span className="ml-2 text-sm text-gray-500">
-                            {stats.words} 字 · 预计阅读 {stats.text}
+                        <span className="text-sm text-gray-500">
+                            {formatDate(post.time || '')}
                         </span>
                     </div>
                 </div>
@@ -294,6 +285,23 @@ function Post({ post, relatedPosts, prevPost, nextPost }: { post: Post; relatedP
 
                 <div>
                     <CC />
+                </div>
+
+                <div className="text-sm mb-4">
+                    {post.tag && (
+                        <div className="flex flex-wrap items-center">
+                            <span>标签:</span>
+                            {post.tag.split(',').map((tag: string, index: number) => (
+                                <Link
+                                    key={index}
+                                    href={`/tags/${tag.trim().toLowerCase()}`}
+                                    className="ml-2 text-primary hover:underline"
+                                >
+                                    {tag.trim()}
+                                </Link>
+                            ))}
+                        </div>
+                    )}
                 </div>
 
                 <div className={'py-4 flex flex-col gap-4'}>
