@@ -286,7 +286,7 @@
     }
 
     .blog_post_content {
-        font-size: var(--text-base);
+        font-size: var(--text-mobile-content);
     }
 
     .blog_post_content pre {

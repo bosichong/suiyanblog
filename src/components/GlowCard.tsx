@@ -20,7 +20,7 @@ const GlowCard = ({ children, className = '', borderWidth = 3, borderRadius = '6
   if (!mounted) {
     return (
       <div className={`glow-card ${className}`} style={{ padding: `${borderWidth}px`, borderRadius }} {...props}>
-        <div className="glow-card-inner" style={{ background: 'transparent', borderRadius }}>
+        <div className="glow-card-inner" style={{ background: 'transparent', borderRadius, padding: '1px' }}>
           {children}
         </div>
       </div>
@@ -36,7 +36,7 @@ const GlowCard = ({ children, className = '', borderWidth = 3, borderRadius = '6
 
   return (
     <div className={`glow-card ${className}`} style={{ padding: `${borderWidth}px`, borderRadius }} {...props}>
-      <div className="glow-card-inner" style={{ background: isDark ? darkBg : lightBg, borderRadius }}>
+      <div className="glow-card-inner" style={{ background: isDark ? darkBg : lightBg, borderRadius, padding: '1px' }}>
         {children}
       </div>
       <style jsx>{`
@@ -76,11 +76,6 @@ const GlowCard = ({ children, className = '', borderWidth = 3, borderRadius = '6
         .glow-card-inner {
           position: relative;
           z-index: 1;
-          transition: margin 0.3s ease;
-        }
-
-        .glow-card:hover .glow-card-inner {
-          margin: 1px;
         }
 
         @keyframes spin {
