@@ -6,6 +6,13 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
+        <loc>https://www.suiyan.cc/blog/20260122111009</loc>
+        <lastmod>2026-01-22T11:10:09.995Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <!-- 标签: Godot,游戏开发,《我的博客》 -->
+    </url>
+    <url>
         <loc>https://www.suiyan.cc/blog/20260122010424</loc>
         <lastmod>2026-01-22T01:04:24.264Z</lastmod>
         <changefreq>monthly</changefreq>
@@ -2470,6 +2477,27 @@
         <!-- 标签: 站长吐槽 -->
     </url>
     <url>
+        <loc>https://www.suiyan.cc/tags/godot</loc>
+        <lastmod>2026-01-22T11:10:09.995Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+        <!-- 标签: godot -->
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/tags/游戏开发</loc>
+        <lastmod>2026-01-22T11:10:09.995Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+        <!-- 标签: 游戏开发 -->
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/tags/《我的博客》</loc>
+        <lastmod>2026-01-22T11:10:09.995Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+        <!-- 标签: 《我的博客》 -->
+    </url>
+    <url>
         <loc>https://www.suiyan.cc/tags/ai</loc>
         <lastmod>2026-01-22T01:04:24.264Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -2657,27 +2685,6 @@
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
         <!-- 标签: 站长吐槽 -->
-    </url>
-    <url>
-        <loc>https://www.suiyan.cc/tags/godot</loc>
-        <lastmod>2025-12-16T14:43:40.083Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-        <!-- 标签: godot -->
-    </url>
-    <url>
-        <loc>https://www.suiyan.cc/tags/游戏开发</loc>
-        <lastmod>2025-12-16T14:43:40.083Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-        <!-- 标签: 游戏开发 -->
-    </url>
-    <url>
-        <loc>https://www.suiyan.cc/tags/《我的博客》</loc>
-        <lastmod>2025-12-03T01:35:09.982Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-        <!-- 标签: 《我的博客》 -->
     </url>
     <url>
         <loc>https://www.suiyan.cc/tags/磁盘操作</loc>
