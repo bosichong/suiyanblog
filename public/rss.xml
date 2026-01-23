@@ -9,7 +9,7 @@
         <atom:link href="https://www.suiyan.cc/rss.xml" rel="self" type="application/rss+xml"/>
         <description>碎言博客 - 分享技术、生活和思考</description>
         <language>zh-CN</language>
-        <lastBuildDate>Thu, 22 Jan 2026 11:40:08 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 23 Jan 2026 01:34:18 GMT</lastBuildDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <image>
@@ -18,6 +18,16 @@
             <link>https://www.suiyan.cc</link>
         </image>
         
+        <item>
+            <title>那些幼稚的过往，都是成长的温柔印记</title>
+            <link>https://www.suiyan.cc/blog/20260123012927</link>
+            <guid isPermaLink="true">https://www.suiyan.cc/blog/20260123012927</guid>
+            <pubDate>Fri, 23 Jan 2026 01:29:27 GMT</pubDate>
+            <description><![CDATA[前几天关注了一个博客，那位博主竟然把自己的所有数据都给炸了，以至于我还没有来得及翻看以前的内容，真是可惜了。不过昨天浏览发现博客有重新开放了，也算是一件好事。]]></description>
+            
+            <author>J.sky</author>
+        </item>
+    
         <item>
             <title>Godot游戏开发《我的博客》记录15 使用AI分析游戏后续开发并给出建议</title>
             <link>https://www.suiyan.cc/blog/20260122111009</link>
