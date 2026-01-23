@@ -14,8 +14,9 @@ const FriendCard = ({ link }: { link: LinkType }) => {
       <div className="flex items-start justify-between gap-4">
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1">
-            <h3 className="font-medium text-primary group-hover:text-primary-hover transition-colors">
+            <h3 className={`font-medium transition-colors ${link.is_active === false ? 'line-through text-default-400' : 'text-primary group-hover:text-primary-hover'}`}>
               {link.site_name}
+              {link.is_active === false && <span className="ml-2 text-xs text-default-400">链接失效？</span>}
             </h3>
             <ExternalLink size={14} className="text-default-500 opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>

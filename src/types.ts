@@ -42,6 +42,7 @@ export interface Link {
   site_url: string;
   site_description: string;
   site_avatar: string;
+  is_active?: boolean;
 }
 
 // 博客聚合类型
