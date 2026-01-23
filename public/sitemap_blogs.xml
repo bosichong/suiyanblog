@@ -6,6 +6,13 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
+        <loc>https://www.suiyan.cc/blog/20260123012927</loc>
+        <lastmod>2026-01-23T01:29:27.105Z</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <!-- 标签: 心情日记,站长吐槽 -->
+    </url>
+    <url>
         <loc>https://www.suiyan.cc/blog/20260122111009</loc>
         <lastmod>2026-01-22T11:10:09.995Z</lastmod>
         <changefreq>monthly</changefreq>
@@ -2477,6 +2484,20 @@
         <!-- 标签: 站长吐槽 -->
     </url>
     <url>
+        <loc>https://www.suiyan.cc/tags/心情日记</loc>
+        <lastmod>2026-01-23T01:29:27.105Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+        <!-- 标签: 心情日记 -->
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/tags/站长吐槽</loc>
+        <lastmod>2026-01-23T01:29:27.105Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+        <!-- 标签: 站长吐槽 -->
+    </url>
+    <url>
         <loc>https://www.suiyan.cc/tags/godot</loc>
         <lastmod>2026-01-22T11:10:09.995Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -2545,13 +2566,6 @@
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
         <!-- 标签: 设计 -->
-    </url>
-    <url>
-        <loc>https://www.suiyan.cc/tags/心情日记</loc>
-        <lastmod>2026-01-19T10:45:03.760Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-        <!-- 标签: 心情日记 -->
     </url>
     <url>
         <loc>https://www.suiyan.cc/tags/godot教程</loc>
@@ -2678,13 +2692,6 @@
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
         <!-- 标签: 年度总结 -->
-    </url>
-    <url>
-        <loc>https://www.suiyan.cc/tags/站长吐槽</loc>
-        <lastmod>2025-12-20T00:56:28.969Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-        <!-- 标签: 站长吐槽 -->
     </url>
     <url>
         <loc>https://www.suiyan.cc/tags/磁盘操作</loc>
