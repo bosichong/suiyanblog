@@ -83,6 +83,36 @@ function Home({ currentPosts, totalPages }: { currentPosts: Post[]; totalPages: 
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:title" content="SuiYan 碎言 - 个人技术博客" />
           <meta name="twitter:description" content={config.META_DESCRIPTION} />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "SuiYan 碎言",
+                "alternateName": "碎言",
+                "url": "https://www.suiyan.cc/",
+                "description": config.META_DESCRIPTION,
+                "author": {
+                  "@type": "Person",
+                  "name": config.BLOG_AUTHOR
+                },
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "SuiYan 碎言",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.suiyan.cc/assets/images/avatar.jpg"
+                  }
+                },
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": "https://www.suiyan.cc/Search?q={search_term_string}",
+                  "query-input": "required name=search_term_string"
+                }
+              })
+            }}
+          />
         </Head>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-4 max-w-4xl">

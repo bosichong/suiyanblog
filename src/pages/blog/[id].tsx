@@ -237,6 +237,39 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                 <meta name="twitter:card" content="summary" />
                 <meta name="twitter:title" content={`${post.title} | SuiYan 碎言`} />
                 <meta name="twitter:description" content={post.description} />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "BlogPosting",
+                            "headline": post.title,
+                            "description": post.description,
+                            "author": {
+                                "@type": "Person",
+                                "name": post.author
+                            },
+                            "datePublished": post.time,
+                            "dateModified": post.time,
+                            "url": `https://www.suiyan.cc/blog/${post.id}`,
+                            "mainEntityOfPage": {
+                                "@type": "WebPage",
+                                "@id": `https://www.suiyan.cc/blog/${post.id}`
+                            },
+                            "publisher": {
+                                "@type": "Organization",
+                                "name": "SuiYan 碎言",
+                                "logo": {
+                                    "@type": "ImageObject",
+                                    "url": "https://www.suiyan.cc/assets/images/avatar.jpg"
+                                }
+                            },
+                            "keywords": post.tag?.split(',').map((t: string) => t.trim()),
+                            "wordCount": stats.words,
+                            "timeRequired": stats.text
+                        })
+                    }}
+                />
             </Head>
             <Breadcrumb 
                 type="blog" 
