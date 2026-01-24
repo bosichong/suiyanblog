@@ -12,7 +12,8 @@ export async function getStaticPaths() {
     allPostsData.forEach((post) => {
         if (post.tag) {
             post.tag.split(',').forEach((tag: string) => {
-                tags.add(tag.trim().toLowerCase());
+                const optimizedTag = tag.trim().toLowerCase().replace(/\s+/g, '');
+                tags.add(optimizedTag);
             });
         }
     });
@@ -29,11 +30,11 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: { params: { tag: string } }) {
     const allPostsData = getSortedPostsData();
-    const tag = params.tag.toLowerCase();
+    const tag = params.tag;
 
     const tagPosts = allPostsData.filter((post) => {
         if (!post.tag) return false;
-        return post.tag.split(',').map((t: string) => t.trim().toLowerCase()).includes(tag);
+        return post.tag.split(',').map((t: string) => t.trim().toLowerCase().replace(/\s+/g, '')).includes(tag);
     });
 
     // 按年份归类
@@ -46,16 +47,28 @@ export async function getStaticProps({ params }: { params: { tag: string } }) {
         postsByYear[year].push(post);
     });
 
+    // 获取原始标签名称（从第一个匹配的文章中获取）
+    let originalTag = tag;
+    if (tagPosts.length > 0 && tagPosts[0].tag) {
+        const matchedTag = tagPosts[0].tag.split(',').find((t: string) => 
+            t.trim().toLowerCase().replace(/\s+/g, '') === tag
+        );
+        if (matchedTag) {
+            originalTag = matchedTag.trim();
+        }
+    }
+
     return {
         props: {
             tag,
+            originalTag,
             tagPosts,
             postsByYear,
         },
     };
 }
 
-const TagDetail = ({ tag, tagPosts, postsByYear }: { tag: string; tagPosts: Post[]; postsByYear: { [key: string]: Post[] } }) => {
+const TagDetail = ({ tag, originalTag, tagPosts, postsByYear }: { tag: string; originalTag: string; tagPosts: Post[]; postsByYear: { [key: string]: Post[] } }) => {
     const totalPosts = tagPosts.length;
 
     // 格式化日期显示
@@ -71,18 +84,18 @@ const TagDetail = ({ tag, tagPosts, postsByYear }: { tag: string; tagPosts: Post
     return (
         <Layout>
             <Head>
-                <title>标签: {tag} - SuiYan 碎言 - 个人技术博客</title>
-                <meta name="description" content={`碎言博客中标签为 ${tag} 的文章列表，共 ${totalPosts} 篇文章`}/>
-                <meta name="keywords" content={`${tag},文章标签,博客分类,碎言博客`} />
+                <title>标签: {originalTag} - SuiYan 碎言 - 个人技术博客</title>
+                <meta name="description" content={`碎言博客中标签为 ${originalTag} 的文章列表，共 ${totalPosts} 篇文章`}/>
+                <meta name="keywords" content={`${originalTag},文章标签,博客分类,碎言博客`} />
                 <link rel="canonical" href={`https://www.suiyan.cc/tags/${tag}`} />
-                <meta property="og:title" content={`标签: ${tag} - SuiYan 碎言`} />
-                <meta property="og:description" content={`碎言博客中标签为 ${tag} 的文章列表，共 ${totalPosts} 篇文章`} />
+                <meta property="og:title" content={`标签: ${originalTag} - SuiYan 碎言`} />
+                <meta property="og:description" content={`碎言博客中标签为 ${originalTag} 的文章列表，共 ${totalPosts} 篇文章`} />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={`https://www.suiyan.cc/tags/${tag}`} />
                 <meta property="og:site_name" content="SuiYan 碎言" />
                 <meta name="twitter:card" content="summary" />
-                <meta name="twitter:title" content={`标签: ${tag} - SuiYan 碎言`} />
-                <meta name="twitter:description" content={`碎言博客中标签为 ${tag} 的文章列表，共 ${totalPosts} 篇文章`} />
+                <meta name="twitter:title" content={`标签: ${originalTag} - SuiYan 碎言`} />
+                <meta name="twitter:description" content={`碎言博客中标签为 ${originalTag} 的文章列表，共 ${totalPosts} 篇文章`} />
             </Head>
 
             <Breadcrumb type="tag" tag={tag} />
@@ -93,7 +106,7 @@ const TagDetail = ({ tag, tagPosts, postsByYear }: { tag: string; tagPosts: Post
                     <Link href="/Tags" className="text-sm text-primary hover:text-primary-hover mb-4 inline-block">
                         ← 返回标签列表
                     </Link>
-                    <h1 className="text-3xl font-bold mb-2">标签: {tag}</h1>
+                    <h1 className="text-3xl font-bold mb-2">标签: {originalTag}</h1>
                     <p className="text-sm opacity-80 mb-0">共有文章：{totalPosts} 篇</p>
                 </div>
 

@@ -9,6 +9,7 @@ import { Post } from '../types';
 
 interface TagData {
     tag: string;
+    originalTag: string;
     data: Post[];
 }
 
@@ -17,11 +18,12 @@ function createTagsData(blogData: Post[]): TagData[] {
     blogData.forEach(item => {
         const tmpTags = item.tag ? item.tag.split(",") : [];
         tmpTags.forEach((tag: string) => {
-            tag = tag.trim().toLowerCase();
-            if (!tagDict[tag]) {
-                tagDict[tag] = { tag, data: [] };
+            const originalTag = tag.trim();
+            const optimizedTag = originalTag.toLowerCase().replace(/\s+/g, '');
+            if (!tagDict[optimizedTag]) {
+                tagDict[optimizedTag] = { tag: optimizedTag, originalTag, data: [] };
             }
-            tagDict[tag].data.push(item);
+            tagDict[optimizedTag].data.push(item);
         });
     });
     return Object.values(tagDict);
@@ -120,7 +122,7 @@ const Tags = ({ tagsData }: { tagsData: Array<TagData & { bgColor: string }> }) 
                             }}
                         >
                             <div className="flex items-center justify-center gap-1 text-sm font-medium">
-                                <span className="truncate">{tagObj.tag}</span>
+                                <span className="truncate">{tagObj.originalTag}</span>
                                 <span className="text-xs opacity-75 whitespace-nowrap">({tagObj.data.length})</span>
                             </div>
                         </Link>

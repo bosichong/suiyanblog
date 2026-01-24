@@ -91,7 +91,7 @@ const Archives = ({ allPostsData, postsByYear }: { allPostsData: Post[], postsBy
                                                 {post.title}
                                             </h2>
                                         </Link>
-                                        <p className="m-0 text-right opacity-60 transition group-hover:opacity-100">
+                                        <p className="m-0 text-sm text-right opacity-60 transition group-hover:opacity-100">
                                             {formatDate(post.time || '')}
                                         </p>
                                     </li>

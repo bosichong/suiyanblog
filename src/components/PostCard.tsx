@@ -1,9 +1,7 @@
 import formatDate from '../utils/formatDate';
-import { CalendarDaysIcon } from './icons/CalendarDaysIcon';
 import GlowCard from './GlowCard';
 import { PostCardProps } from '../types';
 import Link from 'next/link';
-import { ArrowRightIcon } from './icons/ArrowRightIcon';
 
 export default function PostCard({ post }: PostCardProps) {
     return (
@@ -11,7 +9,7 @@ export default function PostCard({ post }: PostCardProps) {
             <div className="hover:animate-pulse bg-transparent rounded-xl p-4">
                 <div className="mb-4">
                     <Link href={`/blog/${post.id}`} className="flex flex-col">
-                        <h3 className="text-2xl rainbow_text">{post.title}</h3>
+                        <h3 className="text-xl rainbow_text">{post.title}</h3>
                     </Link>
                 </div>
 
@@ -34,23 +32,13 @@ export default function PostCard({ post }: PostCardProps) {
                             })()}
                         </div>
                     )}
-                    <div className="flex items-center">
-                        <CalendarDaysIcon size={16} />
-                        <span className="ml-2">{formatDate(post.time || '')}</span>
-                    </div>
+                    <span className='text-sm opacity-60 transition group-hover:opacity-100'>{formatDate(post.time || '')}</span>
                 </div>
 
                 <div className="mb-4">
-                    <p className="text-md">
+                    <p className="text-sm">
                         {post.description}
                     </p>
-                </div>
-
-                <div className="text-sm">
-                    <Link href={`/blog/${post.id}`} className="flex items-center gap-2 rainbow_hover">
-                        <span>阅读</span>
-                        <ArrowRightIcon size={16} />
-                    </Link>
                 </div>
             </div>
         </GlowCard>

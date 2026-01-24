@@ -314,7 +314,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                             {post.tag.split(',').map((tag: string, index: number) => (
                                 <Link
                                     key={index}
-                                    href={`/tags/${tag.trim().toLowerCase()}`}
+                                    href={`/tags/${tag.trim().toLowerCase().replace(/\s+/g, '')}`}
                                     className="ml-2 text-primary hover:underline"
                                 >
                                     {tag.trim()}
