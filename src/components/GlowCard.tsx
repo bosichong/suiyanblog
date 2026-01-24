@@ -47,8 +47,8 @@ const GlowCard = ({ children, className = '', borderWidth = 3, borderRadius = '6
 
         .glow-card::before {
           content: "";
-          width: 500%;
-          height: 500%;
+          width: 1000%;
+          height: 1000%;
           background: conic-gradient(
             #602ce5,
             #2ce597 33%,
