@@ -59,6 +59,27 @@ const Archives = ({ allPostsData, postsByYear }: { allPostsData: Post[], postsBy
                 <meta name="twitter:card" content="summary" />
                 <meta name="twitter:title" content="Archives 文章归档 | SuiYan 碎言" />
                 <meta name="twitter:description" content="碎言博客的所有文章归档，按时间顺序整理的全部技术文章和随笔" />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "CollectionPage",
+                            "name": "文章归档",
+                            "description": "碎言博客的所有文章归档，按时间顺序整理的全部技术文章和随笔",
+                            "url": "https://www.suiyan.cc/Archives",
+                            "numberOfItems": totalPosts,
+                            "itemListElement": allPostsData.map((post, index) => ({
+                                "@type": "BlogPosting",
+                                "position": index + 1,
+                                "name": post.title,
+                                "url": `https://www.suiyan.cc/blog/${post.id}`,
+                                "datePublished": post.time,
+                                "author": post.author
+                            }))
+                        })
+                    }}
+                />
             </Head>
 
             <Breadcrumb type="archives" />
