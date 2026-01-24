@@ -94,14 +94,14 @@ const Archives = ({ allPostsData, postsByYear }: { allPostsData: Post[], postsBy
                 {/* 文章列表区域 - grid 布局 */}
                 <ul className="list-none m-0 !p-0 space-y-16">
                     {Object.keys(postsByYear).sort((a, b) => parseInt(b) - parseInt(a)).map((year) => (
-                        <li className="grid items-baseline md:grid-cols-3 m-0" key={year}>
+                        <li className="grid items-baseline md:grid-cols-[auto_1fr] gap-4 m-0" key={year}>
                             {/* 左侧年份 - sticky 定位 */}
-                            <p className="left-0 top-6 z-40 m-0 tabular-nums tracking-tight opacity-60 lg:sticky">
+                            <p className="left-0 top-6 z-40 m-0 tabular-nums tracking-tight opacity-60 lg:sticky whitespace-nowrap">
                                 {year}
                             </p>
 
                             {/* 右侧文章列表 */}
-                            <ul className="list-none space-y-3 col-span-2 m-0">
+                            <ul className="list-none space-y-3 m-0">
                                 {postsByYear[year].map((post) => (
                                     <li className="group grid grid-flow-col m-0 p-0 items-baseline" key={post.id}>
                                         <Link

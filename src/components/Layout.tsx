@@ -52,7 +52,7 @@ const Layout = ({ children }: LayoutProps) => {
 
 
             </nav>
-            <main className={'w-full px-2 py-4 leading-normal font-extralight md:max-w-4xl'}>
+            <main className={'w-full px-2 py-4 leading-normal font-extralight md:max-w-[720px]'}>
                 {children}
                 <Footer/>
             </main>

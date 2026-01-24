@@ -30,7 +30,7 @@ const GlowCard = ({ children, className = '', borderWidth = 3, borderRadius = '6
   const isDark = resolvedTheme === 'dark';
 
   // 统一使用彩虹色渐变，不分主题
-  const lightBg = '#e6e1d2';
+  const lightBg = '#e5e5e5';
   const darkBg = '#1a1a1a';
   const rainbowGradient = 'linear-gradient(-90deg, #602ce5 0%, #2ce597 30%, #e7bb18 50%, #ff7657 70%, #45c1ee 90%, #2ce597 100%)';
 
