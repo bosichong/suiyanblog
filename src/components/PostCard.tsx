@@ -9,7 +9,7 @@ export default function PostCard({ post }: PostCardProps) {
             <div className="hover:animate-pulse bg-transparent rounded-xl p-4">
                 <div className="mb-4">
                     <Link href={`/blog/${post.id}`} className="flex flex-col">
-                        <h3 className="text-xl rainbow_text">{post.title}</h3>
+                        <h3 className="text-2xl rainbow_text">{post.title}</h3>
                     </Link>
                 </div>
 
@@ -36,7 +36,7 @@ export default function PostCard({ post }: PostCardProps) {
                 </div>
 
                 <div className="mb-4">
-                    <p className="text-sm">
+                    <p className="text-md">
                         {post.description}
                     </p>
                 </div>
