@@ -92,28 +92,38 @@
     --bg-content: #1a1a1a;
 }
 
-/* 亮色主题覆盖 - mijndertstuij.nl 配色 */
+/* 亮色主题覆盖 - 黑白灰配色 */
 .light {
-    --color-text-primary: #15141A;
-    --color-text-secondary: #666;
-    --color-text-tertiary: #999;
-    --color-border: rgb(227 218 197);
-    --color-background: #eee9dc;
-    --color-surface: #e6e1d2;
-    --bg-content: #eee9dc;
+    --lh: 1.5em;
+    --textLight: #555;
+    --textColor: #000;
+    --bgColor: #eee;
+    --borderColor: #949494;
+    --highlightColor: #e5e5e5;
+    --selectionBg: #ddd;
+    --selectionColor: #000;
+    --badgeColor: #555;
 
-    --color-primary: #003eaa;
-    --color-primary-hover: #003eaa;
-    --color-primary-light: rgba(0, 62, 170, 0.1);
-    --blockquote-bg: rgba(91, 91, 102, 0.1);
-    --table-header-bg: rgba(0, 62, 170, 0.08);
+    --color-text-primary: #000;
+    --color-text-secondary: #555;
+    --color-text-tertiary: #949494;
+    --color-border: #949494;
+    --color-background: #eee;
+    --color-surface: #e5e5e5;
+    --bg-content: #eee;
 
-    /* 浅色模式代码块背景 - 更柔和的颜色 */
-    --code-bg: #f8f6f3;
-    --code-border: #e6e1d2;
+    --color-primary: #333;
+    --color-primary-hover: #000;
+    --color-primary-light: rgba(0, 0, 0, 0.05);
+    --blockquote-bg: rgba(0, 0, 0, 0.05);
+    --table-header-bg: rgba(0, 0, 0, 0.05);
 
-    /* 浅色模式表格边框 - 更柔和 */
-    --table-border: #d4cdc0;
+    /* 浅色模式代码块背景 */
+    --code-bg: #e5e5e5;
+    --code-border: #949494;
+
+    /* 浅色模式表格边框 */
+    --table-border: #949494;
 }
 
 /* ==================== 全局样式 ==================== */

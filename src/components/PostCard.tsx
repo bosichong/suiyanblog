@@ -2,14 +2,17 @@ import formatDate from '../utils/formatDate';
 import GlowCard from './GlowCard';
 import { PostCardProps } from '../types';
 import Link from 'next/link';
+import { useTheme } from 'next-themes';
 
 export default function PostCard({ post }: PostCardProps) {
+    const { resolvedTheme } = useTheme();
+
     return (
         <GlowCard key={post.id} borderWidth={2}>
-            <div className="hover:animate-pulse bg-transparent rounded-xl p-4">
+            <div className="bg-transparent rounded-xl p-4">
                 <div className="mb-4">
                     <Link href={`/blog/${post.id}`} className="flex flex-col">
-                        <h3 className="text-2xl rainbow_text">{post.title}</h3>
+                        <h3 className="text-xl rainbow_text">{post.title}</h3>
                     </Link>
                 </div>
 
@@ -25,7 +28,11 @@ export default function PostCard({ post }: PostCardProps) {
                                     tagsArray = post.tag.split(',').map((t: string) => t.trim());
                                 }
                                 return tagsArray.map((tag, index) => (
-                                    <Link key={index} href={`/tags/${encodeURIComponent(tag)}`} className="rainbow_hover">
+                                    <Link
+                                        key={index}
+                                        href={`/tags/${encodeURIComponent(tag)}`}
+                                        className={resolvedTheme === 'dark' ? "rainbow_hover" : "hover:text-black transition"}
+                                    >
                                         <span>#{tag}</span>
                                     </Link>
                                 ));
