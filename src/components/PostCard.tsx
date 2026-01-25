@@ -12,7 +12,7 @@ export default function PostCard({ post }: PostCardProps) {
             <div className="bg-transparent rounded-xl p-4">
                 <div className="mb-4">
                     <Link href={`/blog/${post.id}`} className="flex flex-col">
-                        <h3 className={`text-xl ${resolvedTheme === 'dark' ? 'rainbow_text' : ''}`}>{post.title}</h3>
+                        <h3 className="text-xl rainbow_text">{post.title}</h3>
                     </Link>
                 </div>
 
