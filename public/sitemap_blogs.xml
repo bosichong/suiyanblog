@@ -7,39 +7,45 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <url>
         <loc>https://www.suiyan.cc/</loc>
-        <lastmod>2026-01-25T00:29:26Z</lastmod>
+        <lastmod>2026-01-25T08:12:53Z</lastmod>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
     <url>
         <loc>https://www.suiyan.cc/Archives</loc>
-        <lastmod>2026-01-25T00:29:26Z</lastmod>
+        <lastmod>2026-01-25T08:12:53Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://www.suiyan.cc/Tags</loc>
-        <lastmod>2026-01-25T00:29:26Z</lastmod>
+        <lastmod>2026-01-25T08:12:53Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.suiyan.cc/Search</loc>
-        <lastmod>2026-01-25T00:29:26Z</lastmod>
+        <lastmod>2026-01-25T08:12:53Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://www.suiyan.cc/Friends</loc>
-        <lastmod>2026-01-25T00:29:26Z</lastmod>
+        <lastmod>2026-01-25T08:12:53Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
         <loc>https://www.suiyan.cc/blog/1</loc>
-        <lastmod>2026-01-25T00:29:26Z</lastmod>
+        <lastmod>2026-01-25T08:12:53Z</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/blog/20260125074853</loc>
+        <lastmod>2026-01-25T07:48:53Z</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
     </url>
     <url>
         <loc>https://www.suiyan.cc/blog/20260123012927</loc>
@@ -2166,6 +2172,18 @@
         <priority>0.5</priority>
     </url>
     <url>
+        <loc>https://www.suiyan.cc/tags/godot</loc>
+        <lastmod>2026-01-25T07:48:53Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/tags/vibe coding</loc>
+        <lastmod>2026-01-25T07:48:53Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
         <loc>https://www.suiyan.cc/tags/心情日记</loc>
         <lastmod>2026-01-23T01:29:27Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -2174,12 +2192,6 @@
     <url>
         <loc>https://www.suiyan.cc/tags/站长吐槽</loc>
         <lastmod>2026-01-23T01:29:27Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://www.suiyan.cc/tags/godot</loc>
-        <lastmod>2026-01-22T11:10:09Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
