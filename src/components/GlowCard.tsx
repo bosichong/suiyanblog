@@ -5,11 +5,12 @@ interface GlowCardProps {
     children: React.ReactNode;
     className?: string;
     borderWidth?: number;
+    blurRadius?: number;
     borderRadius?: string;
     [key: string]: any;
 }
 
-const GlowCard = ({ children, className = '', borderWidth = 3, borderRadius = '6px', ...props }: GlowCardProps) => {
+const GlowCard = ({ children, className = '', borderWidth = 2, blurRadius = 5, borderRadius = '6px', ...props }: GlowCardProps) => {
   const { theme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -20,7 +21,7 @@ const GlowCard = ({ children, className = '', borderWidth = 3, borderRadius = '6
   if (!mounted) {
     return (
       <div className={`glow-card ${className}`} style={{ padding: `${borderWidth}px`, borderRadius }} {...props}>
-        <div className="glow-card-inner" style={{ background: 'transparent', borderRadius, padding: '1px' }}>
+        <div className="glow-card-inner" style={{ background: 'transparent', borderRadius }}>
           {children}
         </div>
       </div>
@@ -36,41 +37,34 @@ const GlowCard = ({ children, className = '', borderWidth = 3, borderRadius = '6
 
   return (
     <div className={`glow-card ${className}`} style={{ padding: `${borderWidth}px`, borderRadius }} {...props}>
-      <div className="glow-card-inner" style={{ background: isDark ? darkBg : lightBg, borderRadius, padding: '1px' }}>
+      <div className="glow-card-inner" style={{ background: isDark ? darkBg : lightBg, borderRadius }}>
         {children}
       </div>
       <style jsx>{`
         .glow-card {
           position: relative;
-          overflow: hidden;
         }
 
         .glow-card::before {
           content: "";
-          width: 1000%;
-          height: 1000%;
-          background: conic-gradient(
-            #602ce5,
-            #2ce597 33%,
-            #e7bb18 66%,
-            #ff7657,
-            #45c1ee,
-            #602ce5
-          );
           position: absolute;
+          top: calc(-1 * ${borderWidth}px);
+          left: calc(-1 * ${borderWidth}px);
+          right: calc(-1 * ${borderWidth}px);
+          bottom: calc(-1 * ${borderWidth}px);
+          background: linear-gradient(45deg, #602ce5, #2ce597, #e7bb18, #ff7657, #45c1ee, #602ce5);
+          background-size: 400%;
           z-index: 0;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
+          filter: blur(${blurRadius}px);
+          border-radius: ${typeof borderRadius === 'number' ? `${borderRadius + blurRadius}px` : borderRadius};
+          animation: move-gradient 8s linear infinite;
           opacity: 0;
-          transition: opacity 0.3s ease;
-          animation: spin 3s linear infinite;
-          animation-play-state: paused;
+          transition: opacity 0.3s ease-in-out;
         }
 
-        .glow-card:hover::before {
+        .glow-card:hover::before,
+        .glow-card:focus-within::before {
           opacity: 1;
-          animation-play-state: running;
         }
 
         .glow-card-inner {
@@ -78,12 +72,15 @@ const GlowCard = ({ children, className = '', borderWidth = 3, borderRadius = '6
           z-index: 1;
         }
 
-        @keyframes spin {
+        @keyframes move-gradient {
           0% {
-            transform: translate(-50%, -50%) rotate(0deg);
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
           }
           100% {
-            transform: translate(-50%, -50%) rotate(360deg);
+            background-position: 0% 50%;
           }
         }
       `}</style>
