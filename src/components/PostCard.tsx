@@ -33,15 +33,19 @@ export default function PostCard({ post }: PostCardProps) {
                                     // 处理逗号分隔的字符串标签
                                     tagsArray = post.tag.split(',').map((t: string) => t.trim());
                                 }
-                                return tagsArray.map((tag, index) => (
-                                    <Link
-                                        key={index}
-                                        href={`/tags/${encodeURIComponent(tag)}`}
-                                        className={mounted && resolvedTheme === 'dark' ? "rainbow_hover" : "hover:text-black transition"}
-                                    >
-                                        <span>#{tag}</span>
-                                    </Link>
-                                ));
+                                return tagsArray.map((tag, index) => {
+                                    const originalTag = tag;
+                                    const optimizedTag = originalTag.toLowerCase().replace(/\s+/g, '');
+                                    return (
+                                        <Link
+                                            key={index}
+                                            href={`/tags/${optimizedTag}`}
+                                            className={mounted && resolvedTheme === 'dark' ? "rainbow_hover" : "hover:text-black transition"}
+                                        >
+                                            <span>#{originalTag}</span>
+                                        </Link>
+                                    );
+                                });
                             })()}
                         </div>
                     )}
