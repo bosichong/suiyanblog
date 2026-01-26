@@ -96,13 +96,13 @@ export default function Nav() {
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     transition={{ delay: 0.1 }}
-                                    className="flex flex-col space-y-6"
+                                    className="flex flex-col space-y-2"
                                 >
                                     <motion.li
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ delay: 0.05 }}
-                                        className="flex justify-center py-2"
+                                        className="flex justify-center"
                                     >
                                         <Avatar />
                                     </motion.li>
@@ -111,7 +111,7 @@ export default function Nav() {
                                         initial={{ opacity: 0, y: 20 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ delay: 0.1 }}
-                                        className="flex justify-center py-2"
+                                        className="flex justify-center"
                                     >
                                         <SNSList/>
                                     </motion.li>

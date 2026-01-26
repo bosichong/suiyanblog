@@ -3,9 +3,15 @@ import GlowCard from './GlowCard';
 import { PostCardProps } from '../types';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
 
 export default function PostCard({ post }: PostCardProps) {
     const { resolvedTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     return (
         <GlowCard key={post.id} borderWidth={2}>
@@ -31,7 +37,7 @@ export default function PostCard({ post }: PostCardProps) {
                                     <Link
                                         key={index}
                                         href={`/tags/${encodeURIComponent(tag)}`}
-                                        className={resolvedTheme === 'dark' ? "rainbow_hover" : "hover:text-black transition"}
+                                        className={mounted && resolvedTheme === 'dark' ? "rainbow_hover" : "hover:text-black transition"}
                                     >
                                         <span>#{tag}</span>
                                     </Link>
