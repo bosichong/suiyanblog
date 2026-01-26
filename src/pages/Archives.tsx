@@ -2,9 +2,9 @@ import getSortedPostsData from '../utils/parseMd';
 import Layout from '../components/Layout';
 
 import React, {useEffect} from 'react';
-import Link from 'next/link';
 import Head from 'next/head';
 import Breadcrumb from '../components/Breadcrumb';
+import RainbowLink from '../components/RainbowLink';
 import { Post } from '../types';
 
 export async function getStaticProps() {
@@ -94,25 +94,20 @@ const Archives = ({ allPostsData, postsByYear }: { allPostsData: Post[], postsBy
                 {/* 文章列表区域 - grid 布局 */}
                 <ul className="list-none m-0 !p-0 space-y-16">
                     {Object.keys(postsByYear).sort((a, b) => parseInt(b) - parseInt(a)).map((year) => (
-                        <li className="grid items-baseline md:grid-cols-[auto_1fr] gap-4 m-0" key={year}>
+                        <li className="flex flex-col md:grid md:grid-cols-[auto_1fr] md:items-baseline gap-4 m-0" key={year}>
                             {/* 左侧年份 - sticky 定位 */}
                             <p className="left-0 top-6 z-40 m-0 tabular-nums tracking-tight opacity-60 lg:sticky whitespace-nowrap">
                                 {year}
                             </p>
 
                             {/* 右侧文章列表 */}
-                            <ul className="list-none space-y-3 m-0">
+                            <ul className="list-none space-y-2 m-0 w-full">
                                 {postsByYear[year].map((post) => (
-                                    <li className="group grid grid-flow-col m-0 p-0 items-baseline" key={post.id}>
-                                        <Link
-                                            href={`/blog/${post.id}`}
-                                            className="rainbow_hover items-center m-0 flex"
-                                        >
-                                            <h2 className="font-body m-0 transition group-hover:opacity-100">
-                                                {post.title}
-                                            </h2>
-                                        </Link>
-                                        <p className="m-0 text-sm text-right opacity-60 transition group-hover:opacity-100">
+                                    <li className="transition-all duration-200 flex items-center justify-between" key={post.id}>
+                                        <RainbowLink href={`/blog/${post.id}`} className="flex-1 text-ellipsis overflow-hidden whitespace-nowrap">
+                                            {post.title}
+                                        </RainbowLink>
+                                        <p className="m-0 text-sm text-right opacity-60 whitespace-nowrap ml-4">
                                             {formatDate(post.time || '')}
                                         </p>
                                     </li>

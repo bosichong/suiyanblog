@@ -1,22 +1,16 @@
 import React from 'react';
-import Link from 'next/link';
 import { MenuItemProps } from '../types';
+import RainbowLink from './RainbowLink';
 
 const MenuItem = ({ item, index, onClick }: MenuItemProps & { onClick?: () => void }) => {
   return (
-    <li key={index}
-      className={'mb-4'}
+    <RainbowLink
+      href={item.href}
+      className="w-full flex justify-center transition-all duration-200 px-4 py-2"
+      onClick={onClick}
     >
-      <Link
-        className={
-          "rainbow_hover w-full flex justify-center transition-all duration-200 hover:translate-x-1 "
-        }
-        href={item.href}
-        onClick={onClick}
-      >
-        {item.name}
-      </Link>
-    </li>
+      {item.name}
+    </RainbowLink>
   );
 };
 

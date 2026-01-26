@@ -7,16 +7,39 @@ interface GlowCardProps {
     borderWidth?: number;
     blurRadius?: number;
     borderRadius?: string;
+    displayDuration?: number;
+    fadeDuration?: number;
     [key: string]: any;
 }
 
-const GlowCard = ({ children, className = '', borderWidth = 2, blurRadius = 5, borderRadius = '6px', ...props }: GlowCardProps) => {
+const GlowCard = ({ children, className = '', borderWidth = 2, blurRadius = 5, borderRadius = '6px', displayDuration = 500, fadeDuration = 400, ...props }: GlowCardProps) => {
   const { theme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const [showGlow, setShowGlow] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  useEffect(() => {
+    if (isHovered) {
+      setShowGlow(true);
+      const timer = setTimeout(() => {
+        setShowGlow(false);
+      }, displayDuration);
+      return () => clearTimeout(timer);
+    }
+  }, [isHovered, displayDuration]);
+
+  useEffect(() => {
+    if (!isHovered && showGlow) {
+      const timer = setTimeout(() => {
+        setShowGlow(false);
+      }, displayDuration);
+      return () => clearTimeout(timer);
+    }
+  }, [isHovered, showGlow, displayDuration]);
 
   if (!mounted) {
     return (
@@ -36,7 +59,13 @@ const GlowCard = ({ children, className = '', borderWidth = 2, blurRadius = 5, b
   const rainbowGradient = 'linear-gradient(-90deg, #602ce5 0%, #2ce597 30%, #e7bb18 50%, #ff7657 70%, #45c1ee 90%, #2ce597 100%)';
 
   return (
-    <div className={`glow-card ${className}`} style={{ padding: `${borderWidth}px`, borderRadius }} {...props}>
+    <div 
+      className={`glow-card ${className}`} 
+      style={{ padding: `${borderWidth}px`, borderRadius }} 
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      {...props}
+    >
       <div className="glow-card-inner" style={{ background: isDark ? darkBg : lightBg, borderRadius }}>
         {children}
       </div>
@@ -52,19 +81,14 @@ const GlowCard = ({ children, className = '', borderWidth = 2, blurRadius = 5, b
           left: calc(-1 * ${borderWidth}px);
           right: calc(-1 * ${borderWidth}px);
           bottom: calc(-1 * ${borderWidth}px);
-          background: linear-gradient(45deg, #602ce5, #2ce597, #e7bb18, #ff7657, #45c1ee, #602ce5);
+          background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
           background-size: 400%;
           z-index: 0;
           filter: blur(${blurRadius}px);
           border-radius: ${typeof borderRadius === 'number' ? `${borderRadius + blurRadius}px` : borderRadius};
           animation: move-gradient 8s linear infinite;
-          opacity: 0;
-          transition: opacity 0.3s ease-in-out;
-        }
-
-        .glow-card:hover::before,
-        .glow-card:focus-within::before {
-          opacity: 1;
+          opacity: ${showGlow ? 1 : 0};
+          transition: opacity ${fadeDuration}ms ease-in-out;
         }
 
         .glow-card-inner {
