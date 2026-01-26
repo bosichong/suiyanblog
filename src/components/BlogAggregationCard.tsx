@@ -15,7 +15,7 @@ const BlogAggregationCard = ({ aggregation }: { aggregation: BlogAggregation }) 
       <div className="flex items-start justify-between gap-4">
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1">
-            <RainbowLink href={aggregation.site_url} className="font-medium">
+            <RainbowLink href={aggregation.site_url} className="font-medium" target='_blank'>
               {aggregation.site_name}
             </RainbowLink>
             <ExternalLink size={14} className="text-default-500 opacity-0 group-hover:opacity-100 transition-opacity" />

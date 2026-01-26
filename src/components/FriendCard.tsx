@@ -15,7 +15,7 @@ const FriendCard = ({ link }: { link: LinkType }) => {
       <div className="flex items-start justify-between gap-4">
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1">
-            <RainbowLink href={link.site_url} className="font-medium">
+            <RainbowLink href={link.site_url} className="font-medium" target='_blank'>
               {link.site_name}
             </RainbowLink>
             {link.is_active === false && <span className="ml-2 text-xs text-default-400">链接失效？</span>}
