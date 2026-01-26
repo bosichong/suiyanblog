@@ -20,16 +20,15 @@ const Layout = ({ children }: LayoutProps) => {
             <nav className="ml-8 hidden w-32 md:sticky md:top-36 md:block">
                 <ul className={'flex flex-col justify-between'}>
                     <motion.li
-                        className={'mb-4'}
+                        
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.2, delay: 0.05 }}
                     >
                         <Avatar />
                     </motion.li>
-
                     <motion.li
-                        className={'mb-4'}
+                        
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.2, delay: 0.1 }}
@@ -38,14 +37,14 @@ const Layout = ({ children }: LayoutProps) => {
                     </motion.li>
 
                     {config.menuItems.map((item, index) => (
-                        <motion.div
+                        <motion.li
                             key={`${item}-${index}`}
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.2, delay: 0.15 + index * 0.05 }}
                         >
                             <MenuItem item={item} index={index} />
-                        </motion.div>
+                        </motion.li>
                     ))}
                 </ul>
 
