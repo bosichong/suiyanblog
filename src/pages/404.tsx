@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Layout from '../components/Layout';
 import styles from './404.module.css';
 import { useTheme } from 'next-themes';
 
@@ -8,8 +7,8 @@ export default function Custom404() {
     const { theme } = useTheme();
 
     return (
-        <Layout>
-            <Head>
+        <>
+         <Head>
                 <title>404 - 页面走丢了 | SuiYan 碎言</title>
                 <meta name="description" content="抱歉，您访问的页面不存在" />
             </Head>
@@ -32,6 +31,6 @@ export default function Custom404() {
                     回到首页
                 </Link>
             </div>
-        </Layout>
+            </>
     );
 }
