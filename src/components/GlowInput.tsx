@@ -1,9 +1,11 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useState, useEffect } from 'react';
 
 interface GlowInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
     borderWidth?: number;
     blurRadius?: number;
     borderRadius?: string;
+    displayDuration?: number;
+    fadeDuration?: number;
 }
 
 const GlowInput = forwardRef<HTMLInputElement, GlowInputProps>(
@@ -13,15 +15,34 @@ const GlowInput = forwardRef<HTMLInputElement, GlowInputProps>(
             borderWidth = 3,
             blurRadius = 5,
             borderRadius = '25px',
+            displayDuration = 1000,
+            fadeDuration = 500,
             ...props
         },
         ref
     ) => {
+        const [isFocused, setIsFocused] = useState(false);
+        const [showGlow, setShowGlow] = useState(false);
+
+        useEffect(() => {
+            if (isFocused) {
+                setShowGlow(true);
+                const timer = setTimeout(() => {
+                    setShowGlow(false);
+                }, displayDuration);
+                return () => clearTimeout(timer);
+            }
+        }, [isFocused, displayDuration]);
         return (
             <div className="search-container">
                 <input
                     ref={ref}
                     className={`search-input ${className}`}
+                    onFocus={() => setIsFocused(true)}
+                    onBlur={() => {
+                        setIsFocused(false);
+                        setShowGlow(false);
+                    }}
                     {...props}
                 />
                 <style jsx global>{`
@@ -52,13 +73,8 @@ const GlowInput = forwardRef<HTMLInputElement, GlowInputProps>(
                         filter: blur(${blurRadius}px);
                         border-radius: 0.5rem;
                         animation: move-gradient 8s linear infinite;
-                        opacity: 0;
-                        transition: opacity 0.3s ease-in-out;
-                    }
-
-                    .search-container:focus-within::before,
-                    .search-container:hover::before {
-                        opacity: 1;
+                        opacity: ${showGlow ? 1 : 0};
+                        transition: opacity ${fadeDuration}ms ease-in-out;
                     }
 
                     @keyframes move-gradient {

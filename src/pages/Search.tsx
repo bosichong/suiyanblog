@@ -1,13 +1,13 @@
 import getSortedPostsData from '../utils/parseMd';
 import Head from 'next/head';
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
 import Layout from "../components/Layout";
 import Breadcrumb from "../components/Breadcrumb";
 import { SearchIcon } from "../components/icons/SearchIcon";
 import config from "../config";
 import { Post } from '../types';
 import GlowInput from "../components/GlowInput";
+import RainbowLink from "../components/RainbowLink";
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData();
@@ -84,13 +84,10 @@ const Search = ({ allPostsData }: { allPostsData: Post[] }) => {
 
                     <div className="space-y-2 ml-4">
                         {filteredPosts.map((post, index) => (
-                            <div className="transition-all duration-200 hover:translate-x-1" key={index}>
-                                <Link
-                                    href={`/blog/${post.id}`}
-                                    className="rainbow_hover group flex items-center text-ellipsis overflow-hidden whitespace-nowrap"
-                                >
+                            <div className="transition-all duration-200" key={index}>
+                                <RainbowLink href={`/blog/${post.id}`} className="flex items-center text-ellipsis overflow-hidden whitespace-nowrap">
                                     {post.title}
-                                </Link>
+                                </RainbowLink>
                             </div>
                         ))}
                     </div>

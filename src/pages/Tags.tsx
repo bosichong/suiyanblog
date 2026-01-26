@@ -4,7 +4,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import Link from 'next/link';
 import Breadcrumb from '../components/Breadcrumb';
-import getRandomColor from "../utils/randomColor";
+import GlowCard from '../components/GlowCard';
 import { Post } from '../types';
 
 interface TagData {
@@ -29,34 +29,8 @@ function createTagsData(blogData: Post[]): TagData[] {
     return Object.values(tagDict);
 }
 
-function createTagsWithColors(tagsData: TagData[]): Array<TagData & { bgColor: string }> {
-    const colorMap: { [key: string]: string } = {
-        'bg-red-500': '#ef4444',
-        'bg-orange-500': '#f97316',
-        'bg-amber-500': '#f59e0b',
-        'bg-yellow-500': '#eab308',
-        'bg-lime-500': '#84cc16',
-        'bg-green-500': '#22c55e',
-        'bg-emerald-500': '#10b981',
-        'bg-teal-500': '#14b8a6',
-        'bg-cyan-500': '#06b6d4',
-        'bg-sky-500': '#0ea5e9',
-        'bg-blue-500': '#3b82f6',
-        'bg-indigo-500': '#6366f1',
-        'bg-violet-500': '#8b5cf6',
-        'bg-purple-500': '#a855f7',
-        'bg-fuchsia-500': '#d946ef',
-        'bg-pink-500': '#ec4899',
-        'bg-rose-500': '#f43f5e',
-    };
-
-    return tagsData.map(tagObj => {
-        const colorClass = getRandomColor();
-        return {
-            ...tagObj,
-            bgColor: colorMap[colorClass] || '#3b82f6'
-        };
-    });
+function createTagsWithColors(tagsData: TagData[]): TagData[] {
+    return tagsData;
 }
 
 export async function getStaticProps() {
@@ -70,7 +44,7 @@ export async function getStaticProps() {
     };
 }
 
-const Tags = ({ tagsData }: { tagsData: Array<TagData & { bgColor: string }> }) => {
+const Tags = ({ tagsData }: { tagsData: TagData[] }) => {
     return (
         <Layout>
             <Head>
@@ -102,30 +76,17 @@ const Tags = ({ tagsData }: { tagsData: Array<TagData & { bgColor: string }> }) 
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
                     {tagsData.map((tagObj) => (
-                        <Link
-                            key={tagObj.tag}
-                            href={`/tags/${tagObj.tag}`}
-                            className="tag-item px-3 py-2 rounded-lg border transition-all duration-200 hover:scale-105 hover:shadow-md text-center"
-                            style={{
-                                borderColor: 'var(--color-border)',
-                                color: 'var(--color-text-primary)',
-                            }}
-                            onMouseEnter={(e) => {
-                                e.currentTarget.style.backgroundColor = tagObj.bgColor;
-                                e.currentTarget.style.color = 'white';
-                                e.currentTarget.style.borderColor = tagObj.bgColor;
-                            }}
-                            onMouseLeave={(e) => {
-                                e.currentTarget.style.backgroundColor = 'transparent';
-                                e.currentTarget.style.color = 'var(--color-text-primary)';
-                                e.currentTarget.style.borderColor = 'var(--color-border)';
-                            }}
-                        >
-                            <div className="flex items-center justify-center gap-1 text-sm font-medium">
-                                <span className="truncate">{tagObj.originalTag}</span>
-                                <span className="text-xs opacity-75 whitespace-nowrap">({tagObj.data.length})</span>
-                            </div>
-                        </Link>
+                        <GlowCard key={tagObj.tag} borderWidth={1} blurRadius={2} borderRadius="8px" displayDuration={500} fadeDuration={400} className="w-full">
+                            <Link
+                                href={`/tags/${tagObj.tag}`}
+                                className="block px-3 py-2 text-center transition-all duration-200"
+                            >
+                                <div className="flex items-center justify-center gap-1 text-sm font-medium">
+                                    <span className="truncate">{tagObj.originalTag}</span>
+                                    <span className="text-xs opacity-75 whitespace-nowrap">({tagObj.data.length})</span>
+                                </div>
+                            </Link>
+                        </GlowCard>
                     ))}
                 </div>
             </div>

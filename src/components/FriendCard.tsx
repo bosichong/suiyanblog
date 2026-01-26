@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { ExternalLink } from 'lucide-react';
 import { Link as LinkType } from '../types';
+import RainbowLink from './RainbowLink';
 
 const FriendCard = ({ link }: { link: LinkType }) => {
   return (
@@ -14,10 +15,10 @@ const FriendCard = ({ link }: { link: LinkType }) => {
       <div className="flex items-start justify-between gap-4">
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1">
-            <h3 className={`font-medium transition-colors ${link.is_active === false ? 'line-through text-default-400' : 'text-primary group-hover:text-primary-hover'}`}>
+            <RainbowLink href={link.site_url} className="font-medium">
               {link.site_name}
-              {link.is_active === false && <span className="ml-2 text-xs text-default-400">链接失效？</span>}
-            </h3>
+            </RainbowLink>
+            {link.is_active === false && <span className="ml-2 text-xs text-default-400">链接失效？</span>}
             <ExternalLink size={14} className="text-default-500 opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>
           <p className="text-sm text-default-600 line-clamp-2 leading-relaxed">
