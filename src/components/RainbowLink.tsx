@@ -8,9 +8,11 @@ interface RainbowLinkProps {
     className?: string;
     displayDuration?: number;
     fadeDuration?: number;
+    target?: string;
+    onClick?: () => void;
 }
 
-const RainbowLink = ({ href, children, className = '', displayDuration = 500, fadeDuration = 300 }: RainbowLinkProps) => {
+const RainbowLink = ({ href, children, className = '', displayDuration = 500, fadeDuration = 300, target, onClick }: RainbowLinkProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const [showEffect, setShowEffect] = useState(false);
 
@@ -30,8 +32,10 @@ const RainbowLink = ({ href, children, className = '', displayDuration = 500, fa
   }, [isHovered, showEffect, displayDuration]);
 
   return (
-    <Link 
-      href={href} 
+    <Link
+      href={href}
+      target={target}
+      onClick={onClick}
       className={`group ${className}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
