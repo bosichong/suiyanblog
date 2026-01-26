@@ -256,6 +256,13 @@
     color: #003eaa !important;
 }
 
+/* Strong text (markdown **text**) */
+.blog_post_content strong {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    border-bottom: 2px dashed var(--color-primary);
+}
+
 /* Links */
 .blog_post_content a {
     color: var(--color-primary);
