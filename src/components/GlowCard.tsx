@@ -9,20 +9,26 @@ interface GlowCardProps {
     borderRadius?: string;
     displayDuration?: number;
     fadeDuration?: number;
+    alwaysShowGlow?: boolean;
+    glowOpacity?: number;
     [key: string]: any;
 }
 
-const GlowCard = ({ children, className = '', borderWidth = 2, blurRadius = 5, borderRadius = '6px', displayDuration = 500, fadeDuration = 400, ...props }: GlowCardProps) => {
+const GlowCard = ({ children, className = '', borderWidth = 2, blurRadius = 5, borderRadius = '6px', displayDuration = 500, fadeDuration = 400, alwaysShowGlow = false, glowOpacity = 0.6, ...props }: GlowCardProps) => {
   const { theme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-  const [showGlow, setShowGlow] = useState(false);
+  const [showGlow, setShowGlow] = useState(alwaysShowGlow);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
   useEffect(() => {
+    if (alwaysShowGlow) {
+      setShowGlow(true);
+      return;
+    }
     if (isHovered) {
       setShowGlow(true);
       const timer = setTimeout(() => {
@@ -30,16 +36,17 @@ const GlowCard = ({ children, className = '', borderWidth = 2, blurRadius = 5, b
       }, displayDuration);
       return () => clearTimeout(timer);
     }
-  }, [isHovered, displayDuration]);
+  }, [isHovered, displayDuration, alwaysShowGlow]);
 
   useEffect(() => {
+    if (alwaysShowGlow) return;
     if (!isHovered && showGlow) {
       const timer = setTimeout(() => {
         setShowGlow(false);
       }, displayDuration);
       return () => clearTimeout(timer);
     }
-  }, [isHovered, showGlow, displayDuration]);
+  }, [isHovered, showGlow, displayDuration, alwaysShowGlow]);
 
   if (!mounted) {
     return (
@@ -87,7 +94,7 @@ const GlowCard = ({ children, className = '', borderWidth = 2, blurRadius = 5, b
           filter: blur(${blurRadius}px);
           border-radius: ${typeof borderRadius === 'number' ? `${borderRadius + blurRadius}px` : borderRadius};
           animation: move-gradient 8s linear infinite;
-          opacity: ${showGlow ? 1 : 0};
+          opacity: ${showGlow ? glowOpacity : 0};
           transition: opacity ${fadeDuration}ms ease-in-out;
         }
 
