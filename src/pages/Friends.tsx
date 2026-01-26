@@ -3,10 +3,15 @@ import config from "../config";
 import Head from "next/head";
 import Breadcrumb from "../components/Breadcrumb";
 import giscusConfig from "@/giscusConfigs";
-import Giscus from "@giscus/react";
+import dynamic from "next/dynamic";
 import React, {useEffect, useState} from "react";
 import FriendCard from "../components/FriendCard";
 import BlogAggregationCard from "../components/BlogAggregationCard";
+
+// 动态导入 Giscus，禁用服务端渲染
+const Giscus = dynamic(() => import("@giscus/react").then((mod) => mod.default), {
+    ssr: false,
+});
 
 const Friends = () => {
     const links = config.links;
