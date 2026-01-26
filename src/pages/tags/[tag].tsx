@@ -3,6 +3,7 @@ import Layout from '../../components/Layout';
 import Link from 'next/link';
 import Head from 'next/head';
 import Breadcrumb from '../../components/Breadcrumb';
+import RainbowLink from '../../components/RainbowLink';
 import { Post } from '../../types';
 
 export async function getStaticPaths() {
@@ -103,9 +104,9 @@ const TagDetail = ({ tag, originalTag, tagPosts, postsByYear }: { tag: string; o
             <div className="max-w-4xl mx-auto p-6">
                 {/* 顶部介绍区域 */}
                 <div className="mb-12">
-                    <Link href="/Tags" className="text-sm text-primary hover:text-primary-hover mb-4 inline-block">
+                    <RainbowLink href="/Tags" className="text-sm text-primary mb-4 inline-block">
                         ← 返回标签列表
-                    </Link>
+                    </RainbowLink>
                     <h1 className="text-3xl font-bold mb-2">标签: {originalTag}</h1>
                     <p className="text-sm opacity-80 mb-0">共有文章：{totalPosts} 篇</p>
                 </div>
@@ -114,25 +115,20 @@ const TagDetail = ({ tag, originalTag, tagPosts, postsByYear }: { tag: string; o
                 {totalPosts > 0 ? (
                     <ul className="list-none m-0 !p-0 space-y-16">
                         {Object.keys(postsByYear).sort((a, b) => parseInt(b) - parseInt(a)).map((year) => (
-                            <li className="grid items-baseline md:grid-cols-3 m-0" key={year}>
+                            <li className="flex flex-col md:grid md:grid-cols-[auto_1fr] md:items-baseline gap-4 m-0" key={year}>
                                 {/* 左侧年份 - sticky 定位 */}
-                                <p className="left-0 top-6 z-40 m-0 tabular-nums tracking-tight opacity-60 lg:sticky">
+                                <p className="left-0 top-6 z-40 m-0 tabular-nums tracking-tight opacity-60 lg:sticky whitespace-nowrap">
                                     {year}
                                 </p>
 
                                 {/* 右侧文章列表 */}
-                                <ul className="list-none space-y-3 col-span-2 m-0">
+                                <ul className="list-none space-y-2 m-0 w-full">
                                     {postsByYear[year].map((post) => (
-                                        <li className="group grid grid-flow-col m-0 p-0 items-baseline" key={post.id}>
-                                            <Link
-                                                href={`/blog/${post.id}`}
-                                                className="rainbow_hover items-center m-0 flex"
-                                            >
-                                                <h2 className="font-body m-0 transition group-hover:opacity-100">
-                                                    {post.title}
-                                                </h2>
-                                            </Link>
-                                            <p className="m-0 text-right opacity-60 transition group-hover:opacity-100">
+                                        <li className="transition-all duration-200 flex items-center justify-between" key={post.id}>
+                                            <RainbowLink href={`/blog/${post.id}`} className="flex-1 text-ellipsis overflow-hidden whitespace-nowrap">
+                                                {post.title}
+                                            </RainbowLink>
+                                            <p className="m-0 text-right opacity-60 whitespace-nowrap ml-4">
                                                 {formatDate(post.time || '')}
                                             </p>
                                         </li>

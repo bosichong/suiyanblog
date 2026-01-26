@@ -5,6 +5,7 @@ import Head from 'next/head';
 import Breadcrumb from '../../components/Breadcrumb';
 import config from '../../config';
 import PostCard from '../../components/PostCard';
+import GlowCard from '../../components/GlowCard';
 import { Post } from '../../types';
 
 const postsPerPage = config.POSTS_PER_PAGE;
@@ -59,18 +60,29 @@ function Page({ currentPosts, currentPage, totalPages }: { currentPosts: Post[];
         }
 
         for (let i = startPage; i <= endPage; i++) {
+            const isCurrentPage = i === currentPage;
             pages.push(
-                <button
-                    key={i}
-                    onClick={() => paginate(i)}
-                    className={`px-4 py-2 rounded-lg transition-all ${
-                        i === currentPage
-                            ? 'bg-primary text-white hover:bg-primary-hover'
-                            : 'bg-default-100 dark:bg-default-50 hover:bg-primary hover:text-white'
-                    }`}
+                <GlowCard 
+                    key={i} 
+                    borderWidth={1} 
+                    blurRadius={4} 
+                    borderRadius="8px" 
+                    displayDuration={isCurrentPage ? 999999 : 500} 
+                    fadeDuration={400} 
+                    className="inline-block"
+                    alwaysShowGlow={isCurrentPage}
                 >
-                    {i}
-                </button>
+                    <button
+                        onClick={() => paginate(i)}
+                        className={`px-4 py-2 rounded-lg transition-all ${
+                            isCurrentPage
+                                ? 'bg-transparent text-primary'
+                                : 'bg-default-100 dark:bg-default-50'
+                        }`}
+                    >
+                        {i}
+                    </button>
+                </GlowCard>
             );
         }
 

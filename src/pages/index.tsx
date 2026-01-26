@@ -4,6 +4,7 @@ import React, {useEffect} from 'react';
 import Head from 'next/head';
 import config from '../config';
 import PostCard from '../components/PostCard';
+import GlowCard from '../components/GlowCard';
 import { Post } from '../types';
 
 const postsPerPage = config.POSTS_PER_PAGE;
@@ -49,18 +50,29 @@ function Home({ currentPosts, totalPages }: { currentPosts: Post[]; totalPages: 
     }
 
     for (let i = startPage; i <= endPage; i++) {
+      const isCurrentPage = i === 1;
       pages.push(
-        <button
-          key={i}
-          onClick={() => paginate(i)}
-          className={`px-4 py-2 rounded-lg transition-all ${
-            i === 1
-              ? 'bg-primary text-white hover:bg-primary-hover'
-              : 'bg-default-100 dark:bg-default-50 hover:bg-primary hover:text-white'
-          }`}
+        <GlowCard 
+          key={i} 
+          borderWidth={1} 
+          blurRadius={4} 
+          borderRadius="8px" 
+          displayDuration={isCurrentPage ? 999999 : 500} 
+          fadeDuration={400} 
+          className="inline-block"
+          alwaysShowGlow={isCurrentPage}
         >
-          {i}
-        </button>
+          <button
+            onClick={() => paginate(i)}
+            className={`px-4 py-2 rounded-lg transition-all ${
+              isCurrentPage
+                ? 'bg-transparent text-primary'
+                : 'bg-default-100 dark:bg-default-50'
+            }`}
+          >
+            {i}
+          </button>
+        </GlowCard>
       );
     }
 

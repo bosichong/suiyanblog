@@ -18,6 +18,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import getRandomColor from "../../utils/randomColor";
 import readingTime from 'reading-time';
 import type { Post } from '../../types';
+import RainbowLink from '@/components/RainbowLink';
 
 // 动态导入 Giscus 组件以延迟加载
 const Giscus = dynamic(() => import('@giscus/react'), {
@@ -345,13 +346,13 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                         <div className="flex flex-wrap items-center">
                             <span>标签:</span>
                             {post.tag.split(',').map((tag: string, index: number) => (
-                                <Link
+                                <RainbowLink
                                     key={index}
                                     href={`/tags/${tag.trim().toLowerCase().replace(/\s+/g, '')}`}
-                                    className="ml-2 text-primary hover:underline"
+                                    className="ml-2"
                                 >
                                     {tag.trim()}
-                                </Link>
+                                </RainbowLink>
                             ))}
                         </div>
                     )}
@@ -359,16 +360,16 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
 
                 <div className={'py-4 flex flex-col gap-4'}>
                     {prevPost && (
-                        <Link href={`/blog/${prevPost.id}`} className={'block text-ellipsis overflow-hidden whitespace-nowrap rainbow_hover'}>
+                        <RainbowLink href={`/blog/${prevPost.id}`} className={'block text-ellipsis overflow-hidden whitespace-nowrap'}>
                             <span>上一篇：</span>
                             <span>{prevPost.title}</span>
-                        </Link>
+                        </RainbowLink>
                     )}
                     {nextPost && (
-                        <Link href={`/blog/${nextPost.id}`} className={'block text-ellipsis overflow-hidden whitespace-nowrap rainbow_hover'}>
+                        <RainbowLink href={`/blog/${nextPost.id}`} className={'block text-ellipsis overflow-hidden whitespace-nowrap'}>
                             <span>下一篇：</span>
                             <span>{nextPost.title}</span>
-                        </Link>
+                        </RainbowLink>
                     )}
                 </div>
 
@@ -404,10 +405,10 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                     {relatedPosts.length > 0 ? (
                         <ul className={styles.related_posts_list}>
                             {relatedPosts.map((relatedPost, index) => (
-                                <li key={index} className={styles.related_post_item+'transition-all duration-200 hover:translate-x-1'}>
-                                    <Link href={`/blog/${relatedPost.id}`} className={'rainbow_hover'}>
+                                <li key={index} className={styles.related_post_item}>
+                                    <RainbowLink href={`/blog/${relatedPost.id}`}>
                                         {relatedPost.title}
-                                    </Link>
+                                    </RainbowLink>
                                 </li>
                             ))}
                         </ul>
@@ -421,11 +422,11 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                     {sameDayPosts.length > 0 ? (
                         <ul className={styles.related_posts_list}>
                             {sameDayPosts.map((sameDayPost, index) => (
-                                <li key={index} className={styles.related_post_item+'transition-all duration-200 hover:translate-x-1'}>
+                                <li key={index} className={styles.related_post_item}>
                                     <span className="text-gray-500 text-sm mr-2">{formatDate(sameDayPost.time || '')}</span>
-                                    <Link href={`/blog/${sameDayPost.id}`} className={'rainbow_hover'}>
+                                    <RainbowLink href={`/blog/${sameDayPost.id}`}>
                                         {sameDayPost.title}
-                                    </Link>
+                                    </RainbowLink>
                                 </li>
                             ))}
                         </ul>
