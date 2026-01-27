@@ -12,8 +12,6 @@
   "dependencies": {
     "@giscus/react": "^3.0.0",
     "@theme-toggles/react": "^4.1.0",
-    "@vercel/analytics": "^1.6.1",
-    "@vercel/speed-insights": "^1.3.1",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.562.0",
     "motion": "^12.26.2",
