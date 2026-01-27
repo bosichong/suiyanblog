@@ -31,7 +31,7 @@ const config: Config = {
     'menuItems' : [
         {name:'归档',href:'/Archives'},
         {name:'标签',href:'/Tags'},
-        {name:'搜索',href:'/Search'},
+        {name:'搜索',href:'/search'},
         {name:'友链',href:'/Friends'},
         {name:'关于',href:'/blog/1'},
     ],

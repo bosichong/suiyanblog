@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node gs.js && next build",
+    "build": "next build",
     "start": "next start",
     "nb": "node createBlog.js",
     "lint": "next lint"
