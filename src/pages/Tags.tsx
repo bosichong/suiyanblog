@@ -23,7 +23,8 @@ function createTagsData(blogData: Post[]): TagData[] {
             if (!tagDict[optimizedTag]) {
                 tagDict[optimizedTag] = { tag: optimizedTag, originalTag, data: [] };
             }
-            tagDict[optimizedTag].data.push(item);
+            // 只存储必要的信息，而不是完整的文章对象
+            tagDict[optimizedTag].data.push({ id: item.id });
         });
     });
     return Object.values(tagDict);

@@ -19,7 +19,8 @@ export async function getStaticPaths() {
         if (post.title) {
             const words = post.title.toLowerCase().split(/[\s,，、。]+/);
             words.forEach((word) => {
-                if (word.length >= 2) { // 只保留长度大于等于2的关键词
+                // 过滤掉包含特殊字符的关键词
+                if (word.length >= 2 && !/[\"\'\\\/\?\*\[\]\(\)\{\}\|<>`~!@#$%\^&\+\=\:]/.test(word)) {
                     keywords.add(word);
                 }
             });
@@ -45,32 +46,43 @@ export async function getStaticProps({ params }: { params: { query: string } }) 
         post.title?.toLowerCase().includes(query)
     );
 
+    // 只传递必要的字段，减少数据大小
+    const minimalPosts = filteredPosts.map(post => {
+        const result: any = {
+            id: post.id,
+            title: post.title,
+        };
+        if (post.date !== undefined) {
+            result.date = post.date;
+        }
+        return result;
+    });
+
     return {
         props: {
-            allPostsData,
             initialQuery: params.query,
-            initialFilteredPosts: filteredPosts,
+            filteredPosts: minimalPosts,
         },
     };
 }
 
-const SearchPage = ({ allPostsData, initialQuery, initialFilteredPosts }: { allPostsData: Post[]; initialQuery: string; initialFilteredPosts: Post[] }) => {
+const SearchPage = ({ initialQuery, filteredPosts }: { initialQuery: string; filteredPosts: Post[] }) => {
     const router = useRouter();
     const [searchQuery, setSearchQuery] = useState(initialQuery);
-    const [filteredPosts, setFilteredPosts] = useState<Post[]>(initialFilteredPosts);
+    const [localFilteredPosts, setLocalFilteredPosts] = useState<Post[]>(filteredPosts);
 
-    // 监听搜索查询的变化，并更新过滤后的文章列表
+    // 实时搜索：当搜索查询变化时，过滤结果
     useEffect(() => {
         if (searchQuery.trim()) {
             const lowerCaseQuery = searchQuery.toLowerCase();
-            const filtered = allPostsData.filter(post =>
+            const filtered = filteredPosts.filter(post =>
                 post.title?.toLowerCase().includes(lowerCaseQuery)
             );
-            setFilteredPosts(filtered);
+            setLocalFilteredPosts(filtered);
         } else {
-            setFilteredPosts([]);
+            setLocalFilteredPosts(filteredPosts);
         }
-    }, [searchQuery, allPostsData]);
+    }, [searchQuery, filteredPosts]);
 
     // 处理搜索输入
     const handleSearch = (value: string) => {
@@ -144,12 +156,12 @@ const SearchPage = ({ allPostsData, initialQuery, initialFilteredPosts }: { allP
                 </div>
 
                 <div className="space-y-2 ml-4">
-                    {filteredPosts.length > 0 ? (
+                    {localFilteredPosts.length > 0 ? (
                         <>
                             <p className="text-sm opacity-60 mb-4">
-                                找到 {filteredPosts.length} 篇文章
+                                找到 {localFilteredPosts.length} 篇文章
                             </p>
-                            {filteredPosts.map((post, index) => (
+                            {localFilteredPosts.map((post, index) => (
                                 <div className="transition-all duration-200" key={index}>
                                     <RainbowLink href={`/blog/${post.id}`} className="flex items-center text-ellipsis overflow-hidden whitespace-nowrap">
                                         {post.title}

@@ -1,24 +1,18 @@
-import getSortedPostsData from '../../utils/parseMd';
 import Head from 'next/head';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Layout from "../../components/Layout";
 import Breadcrumb from "../../components/Breadcrumb";
 import { SearchIcon } from "../../components/icons/SearchIcon";
-import { Post } from '../../types';
 import GlowInput from "../../components/GlowInput";
-import RainbowLink from "../../components/RainbowLink";
 import { useRouter } from 'next/router';
 
 export async function getStaticProps() {
-    const allPostsData = getSortedPostsData();
     return {
-        props: {
-            allPostsData,
-        },
+        props: {},
     };
 }
 
-const Search = ({ allPostsData }: { allPostsData: Post[] }) => {
+const Search = () => {
     const router = useRouter();
     const [searchQuery, setSearchQuery] = useState('');
 
