@@ -55,30 +55,44 @@ def main():
     # 先检查是否有新文章
     new_articles = get_new_articles()
 
+    # 检查工作目录状态
     try:
-        subprocess.check_call(['git', 'add', '.'])
-        print("Git add successful.")
-    except subprocess.CalledProcessError as e:
-        print(f"Git add failed with error {e}.")
-        return
+        status_result = subprocess.check_output(
+            ['git', 'status', '--porcelain'],
+            text=True
+        )
 
-    # 生成提交信息
-    if new_articles:
-        article_info = []
-        for article in new_articles:
-            if article['time']:
-                article_info.append(f"{article['title']} ({article['time']})")
+        # 如果工作目录有更改，则添加并提交
+        if status_result.strip():
+            try:
+                subprocess.check_call(['git', 'add', '.'])
+                print("Git add successful.")
+            except subprocess.CalledProcessError as e:
+                print(f"Git add failed with error {e}.")
+                return
+
+            # 生成提交信息
+            if new_articles:
+                article_info = []
+                for article in new_articles:
+                    if article['time']:
+                        article_info.append(f"{article['title']} ({article['time']})")
+                    else:
+                        article_info.append(article['title'])
+                commit_message = f"新增文章: {', '.join(article_info)}"
             else:
-                article_info.append(article['title'])
-        commit_message = f"新增文章: {', '.join(article_info)}"
-    else:
-        commit_message = f"更新 - {datetime.now().strftime('%Y-%m-%d %H:%M')}"
+                commit_message = f"更新 - {datetime.now().strftime('%Y-%m-%d %H:%M')}"
 
-    try:
-        subprocess.check_call(['git', 'commit', '-m', commit_message])
-        print(f"Git commit successful: {commit_message}")
+            try:
+                subprocess.check_call(['git', 'commit', '-m', commit_message])
+                print(f"Git commit successful: {commit_message}")
+            except subprocess.CalledProcessError as e:
+                print(f"Git commit failed with error {e}.")
+                return
+        else:
+            print("工作目录干净，没有需要提交的更改。")
     except subprocess.CalledProcessError as e:
-        print(f"Git commit failed with error {e}.")
+        print(f"检查 git status 失败: {e}")
         return
 
     git_push()
