@@ -17,6 +17,9 @@ export default function Footer (){
                 </div>
             </div>
 
+            <script data-goatcounter="https://suiyan.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
         </footer>
     )
 }
