@@ -34,44 +34,6 @@ export default function Document() {
         <body className="antialiased dark:text-orange-100">
         <Main/>
         <NextScript/>
-        <script
-            dangerouslySetInnerHTML={{
-                __html: `
-                    console.log('🌟 欢迎来到碎言博客！');
-                    console.log('网站: https://www.suiyan.cc');
-                    console.log('------------------------');
-                    console.log('⚠️ 检测到控制台访问！');
-                    console.log('[警告] 已触发入侵检测系统');
-                    console.log('[进度] 正在接管你的浏览器...');
-                    setTimeout(() => {
-                        console.log('[完成] 浏览器已接管 ✓');
-                        console.log('[进度] 正在控制摄像头...');
-                    }, 500);
-                    setTimeout(() => {
-                        console.log('[完成] 摄像头已激活');
-                        console.log('[进度] 正在扫描硬盘...');
-                    }, 1000);
-                    setTimeout(() => {
-                        console.log('[发现] 找到可疑文件');
-                        console.log('[进度] 正在提取密码...');
-                    }, 1500);
-                    setTimeout(() => {
-                        console.log('[成功] 已获取所有密码');
-                        console.log('[进度] 正在加密硬盘...');
-                    }, 2000);
-                    setTimeout(() => {
-                        console.log('[警告] 加密进度: 10%...50%...90%...');
-                    }, 2500);
-                    setTimeout(() => {
-                        console.log('[完成] 硬盘加密完成！');
-                        console.log('哈哈哈哈哈哈哈哈哈哈哈哈！');
-                        console.log('🤣 开个玩笑啦！别怕！');
-                        console.log('我只是个控制台彩蛋，不会真的入侵你的电脑的！');
-                        console.log('💓 祝你今天开心！');
-                    }, 3000);
-                `
-            }}
-        />
         </body>
     </Html>
   );
