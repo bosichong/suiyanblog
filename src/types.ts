@@ -59,6 +59,7 @@ export interface GiscusConfig {
   category: string;
   categoryId: string;
   mapping: string;
+  strict: string;
   theme: string;
   lang: string;
 }
