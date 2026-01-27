@@ -119,7 +119,7 @@ function Home({ currentPosts, totalPages }: { currentPosts: Post[]; totalPages: 
                 },
                 "potentialAction": {
                   "@type": "SearchAction",
-                  "target": "https://www.suiyan.cc/Search?q={search_term_string}",
+                  "target": "https://www.suiyan.cc/search?q={search_term_string}",
                   "query-input": "required name=search_term_string"
                 }
               })

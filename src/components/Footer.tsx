@@ -18,7 +18,9 @@ export default function Footer (){
             </div>
 
             <script data-goatcounter="https://suiyan.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+        async src="https://gc.zgo.at/count.js"
+        onError={() => console.warn('GoatCounter script failed to load')}
+        ></script>
 
         </footer>
     )

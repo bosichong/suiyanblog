@@ -117,7 +117,7 @@ export async function GET() {
             priority: 0.8
         },
         {
-            url: 'https://www.suiyan.cc/Search',
+            url: 'https://www.suiyan.cc/search',
             lastModified: now,
             changeFrequency: 'monthly',
             priority: 0.7

@@ -51,7 +51,7 @@ const nextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://giscus.app https://gc.zgo.at https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob: https://www.suiyan.cc https://github.com https://cdn.jsdelivr.net https://*.githubusercontent.com; font-src 'self' data: https://fonts.googleapis.com https://fonts.gstatic.com; connect-src 'self' https://giscus.app https://gc.zgo.at https://www.google-analytics.com; frame-src https://giscus.app https://player.bilibili.com; base-uri 'self'; form-action 'self';"
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://giscus.app https://gc.zgo.at https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob: https://www.suiyan.cc https://github.com https://cdn.jsdelivr.net https://*.githubusercontent.com; font-src 'self' data: https://fonts.googleapis.com https://fonts.gstatic.com; connect-src 'self' https://giscus.app https://gc.zgo.at https://www.google-analytics.com https://suiyan.goatcounter.com; frame-src https://giscus.app https://player.bilibili.com; base-uri 'self'; form-action 'self';"
           },
           {
             key: 'Strict-Transport-Security',
