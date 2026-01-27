@@ -38,9 +38,21 @@ export async function getStaticProps({ params }: { params: { tag: string } }) {
         return post.tag.split(',').map((t: string) => t.trim().toLowerCase().replace(/\s+/g, '')).includes(tag);
     });
 
+    // 只传递必要字段，减少数据大小
+    const minimalPosts = tagPosts.map(post => {
+        const result: any = {
+            id: post.id,
+            title: post.title,
+        };
+        if (post.time !== undefined) {
+            result.time = post.time;
+        }
+        return result;
+    });
+
     // 按年份归类
-    const postsByYear: { [key: string]: Post[] } = {};
-    tagPosts.forEach((post) => {
+    const postsByYear: { [key: string]: any[] } = {};
+    minimalPosts.forEach((post) => {
         const year = post.time ? post.time.split('-')[0] : '';
         if (!postsByYear[year]) {
             postsByYear[year] = [];
@@ -51,7 +63,7 @@ export async function getStaticProps({ params }: { params: { tag: string } }) {
     // 获取原始标签名称（从第一个匹配的文章中获取）
     let originalTag = tag;
     if (tagPosts.length > 0 && tagPosts[0].tag) {
-        const matchedTag = tagPosts[0].tag.split(',').find((t: string) => 
+        const matchedTag = tagPosts[0].tag.split(',').find((t: string) =>
             t.trim().toLowerCase().replace(/\s+/g, '') === tag
         );
         if (matchedTag) {
@@ -63,7 +75,7 @@ export async function getStaticProps({ params }: { params: { tag: string } }) {
         props: {
             tag,
             originalTag,
-            tagPosts,
+            tagPosts: minimalPosts,
             postsByYear,
         },
     };

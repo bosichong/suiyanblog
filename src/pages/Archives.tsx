@@ -10,9 +10,24 @@ import { Post } from '../types';
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData();
 
+    // 只传递必要字段，减少数据大小
+    const minimalPosts = allPostsData.map(post => {
+        const result: any = {
+            id: post.id,
+            title: post.title,
+        };
+        if (post.time !== undefined) {
+            result.time = post.time;
+        }
+        if (post.author !== undefined) {
+            result.author = post.author;
+        }
+        return result;
+    });
+
     // 按年份归类
-    const postsByYear: { [key: string]: Post[] } = {};
-    allPostsData.forEach((post) => {
+    const postsByYear: { [key: string]: any[] } = {};
+    minimalPosts.forEach((post) => {
         const year = post.time ? post.time.split('-')[0] : '';
         if (!postsByYear[year]) {
             postsByYear[year] = [];
@@ -22,8 +37,8 @@ export async function getStaticProps() {
 
     return {
         props: {
-            allPostsData,
-            postsByYear, // 将按年份归类的数据传递给组件
+            allPostsData: minimalPosts,
+            postsByYear,
         },
     };
 }
