@@ -5,7 +5,7 @@ const giscusConfigs: GiscusConfig = {
     repoId: "R_kgDONjg2qw",
     category: "Announcements",
     categoryId: "DIC_kwDONjg2q84ClnrC",
-    mapping: "title",
+    mapping: 'pathname', // 改为pathname
     theme: "dark_dimmed",
     lang: "zh-CN",
 };
