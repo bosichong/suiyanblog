@@ -47,9 +47,9 @@ const config: Config = {
     "links": [
         {
             "site_name": "Obaby",
-            "site_url": "https://oba.by/",
+            "site_url": "https://zhongxiaojie.com/",
             "site_description": "黑客程序媛 / 逆向工程师 / 人工智能学徒 / 用爱发电的独立开发者",
-            "site_avatar": "https://oba.by/wp-content/uploads/2025/05/WechatIMG1530.jpg",
+            "site_avatar": "https://zhongxiaojie.com/wp-content/uploads/2025/05/WechatIMG1530.jpg",
             "is_active": true
         },
         {
