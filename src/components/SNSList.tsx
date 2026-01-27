@@ -46,7 +46,7 @@ export default function SNSList() {
 
             <GlowCard borderWidth={1} blurRadius={3} borderRadius="0" displayDuration={500} fadeDuration={300} glowOpacity={0.5} className="inline-block">
                 <Link
-                    href="https://www.suiyan.cc/rss.xml"
+                    href="https://www.suiyan.cc/feed"
                     rel="noreferrer"
                     target="_blank"
                     className="artlist m-auto text-primary block"
