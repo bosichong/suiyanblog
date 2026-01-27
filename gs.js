@@ -5,11 +5,32 @@ const matter = require('gray-matter');
 const postsDirectory = path.join(process.cwd(), 'md');
 const publicDir = path.join(process.cwd(), 'public');
 
+// 路径遍历防护函数
+function validatePath(filePath, baseDir) {
+  const resolvedPath = path.resolve(filePath);
+  const resolvedBaseDir = path.resolve(baseDir);
+  return resolvedPath.startsWith(resolvedBaseDir);
+}
+
 function getSortedPostsData() {
     const fileNames = fs.readdirSync(postsDirectory);
     return fileNames.map(fileName => {
-        const id = fileName.replace(/\.md$/, '');
-        const filePath = path.join(postsDirectory, fileName);
+        // 路径遍历防护：验证文件名
+        const normalizedFileName = path.normalize(fileName).replace(/^(\.\.(\/|\\|$))+/, '');
+        if (normalizedFileName !== fileName) {
+            console.error(`警告：文件名包含可疑路径: ${fileName}`);
+            return null;
+        }
+
+        const id = normalizedFileName.replace(/\.md$/, '');
+        const filePath = path.join(postsDirectory, normalizedFileName);
+
+        // 验证路径是否在允许范围内
+        if (!validatePath(filePath, postsDirectory)) {
+            console.error(`错误：文件路径超出允许范围: ${filePath}`);
+            return null;
+        }
+
         const fileContent = fs.readFileSync(filePath, 'utf8');
         const matterResult = matter(fileContent);
         const { data } = matterResult;

@@ -21,14 +21,12 @@ export default function Document() {
           <link rel="preconnect" href="https://giscus.app" crossOrigin="anonymous" />
           <link rel="preconnect" href="https://analytics.google.com" crossOrigin="anonymous" />
           <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
-          <link rel="preconnect" href="https://vitals.vercel-analytics.com" crossOrigin="anonymous" />
 
           {/* DNS 预取 */}
           <link rel="dns-prefetch" href="https://www.suiyan.cc" />
           <link rel="dns-prefetch" href="https://giscus.app" />
           <link rel="dns-prefetch" href="https://analytics.google.com" />
           <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-          <link rel="dns-prefetch" href="https://vitals.vercel-analytics.com" />
 
           {/* 预加载关键资源 */}
           <link rel="preload" href="/favicon.ico" />

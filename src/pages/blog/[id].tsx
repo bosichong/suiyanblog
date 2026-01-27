@@ -2,6 +2,7 @@ import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
 import ReactMarkdown from 'react-markdown';
 import getSortedPostsData from "../../utils/parseMd";
+import { sanitizeHtml } from "../../utils/sanitizeHtml";
 import Layout from "../../components/Layout";
 import styles from './[id].module.css';
 import formatDate from "../../utils/formatDate";
@@ -132,6 +133,9 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
 
     // 计算文章字数和阅读时间
     const stats = readingTime(post.content || '');
+
+    // 清理 HTML 内容，移除危险标签但保留安全的 iframe（如 Bilibili）
+    const sanitizedContent = sanitizeHtml(post.content || '');
 
     // 处理代码块复制功能
     useEffect(() => {
@@ -313,16 +317,17 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                                     }
                                     return false;
                                 });
-                                
+
                                 // 如果包含块级元素，直接返回children，不包裹p标签
                                 if (hasBlockElement) {
                                     return <>{children}</>;
                                 }
-                                
+
                                 return <p {...props}>{children}</p>;
                             },
                             iframe: ({ node, ...props }: any) => {
                                 const src = props.src;
+                                // 只允许 Bilibili iframe，并且已经通过 sanitizeHtml 清理了危险属性
                                 if (typeof src === 'string' && (
                                 src.includes('player.bilibili.com') ||
                                 src.includes('//player.bilibili.com')
@@ -333,7 +338,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                             }
                             }}
                         >
-                            {post.content}
+                            {sanitizedContent}
                         </ReactMarkdown>
                 </div>
 

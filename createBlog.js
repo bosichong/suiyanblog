@@ -23,7 +23,21 @@ const createBlog = async (title = '博客标题', author = '', tag = '', filedir
   if (!author) {
     author = "J.sky"; // 直接使用已加载的配置
   }
-  const blogFilePath = path.join(ARTICLES_DIR, `${filedir}/${pagename}.md`);
+
+  // 路径遍历防护：规范化路径并移除父目录引用
+  const normalizedFileDir = path.normalize(filedir).replace(/^(\.\.(\/|\\|$))+/, '');
+  const normalizedPageName = path.normalize(pagename).replace(/^(\.\.(\/|\\|$))+/, '');
+
+  const blogFilePath = path.join(ARTICLES_DIR, `${normalizedFileDir}/${normalizedPageName}.md`);
+
+  // 验证最终路径是否仍在 ARTICLES_DIR 内
+  const resolvedPath = path.resolve(blogFilePath);
+  const resolvedArticlesDir = path.resolve(ARTICLES_DIR);
+  if (!resolvedPath.startsWith(resolvedArticlesDir)) {
+    console.error('错误：路径超出允许范围');
+    return;
+  }
+
   createFileDir(path.dirname(blogFilePath));
 
   const blogContent = `---
@@ -45,16 +59,23 @@ description: '博文的简介'
       let vscode = true;
       const blogfile = blogFilePath; // 确保定义了 blogfile 变量
       if (vscode) {
-        exec(`code ${blogfile}`, (error, stdout, stderr) => { // 使用 blogfile 变量
-          if (error) {
-            console.error(`执行错误: ${error}`);
-            return;
+        const { spawn } = require('child_process');
+        // 使用 spawn 并设置 shell: false 来避免命令注入
+        const child = spawn('code', [blogfile], {
+          shell: false,
+          stdio: 'inherit'
+        });
+
+        child.on('error', (error) => {
+          console.error(`执行错误: ${error.message}`);
+        });
+
+        child.on('close', (code) => {
+          if (code === 0) {
+            console.log(`VS Code 已打开文件: ${blogfile}`);
+          } else {
+            console.error(`VS Code 退出，代码: ${code}`);
           }
-          if (stderr) {
-            console.error(`标准错误: ${stderr}`);
-            return;
-          }
-          console.log(`VS Code 已打开文件: ${blogfile}`);
         });
       }
     }
