@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
 import ReactMarkdown from 'react-markdown';
@@ -11,6 +11,7 @@ import Head from "next/head";
 import Link from 'next/link';
 import CC from '@/components/CC';
 import Breadcrumb from '@/components/Breadcrumb';
+import PostList from '@/components/PostList';
 import readingTime from 'reading-time';
 import type { Post } from '../../types';
 import CustomLink from '@/components/Link';
@@ -86,6 +87,7 @@ export async function getStaticProps({ params }: { params: { id: string } }) {
 function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: Post; relatedPosts: Post[]; prevPost: Post | null; nextPost: Post | null; sameDayPosts: Post[] }) {
     const stats = readingTime(post.content || '');
     const sanitizedContent = sanitizeHtml(post.content || '');
+    const [showComments, setShowComments] = useState(false);
 
     return (
         <Layout>
@@ -229,30 +231,52 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                 </nav>
 
                 <div className="mt-8 py-4 text-center border-t border-border">
-                    <p className="text-text-secondary mb-4">英雄请留步！欢迎在下方留言交流！</p>
-                    <div className="relative inline-block group w-48">
-                        <button aria-label="赞赏作者" className="text-text-secondary hover:text-text-dark">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
-                                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-                                <line x1="6" y1="1" x2="6" y2="4" />
-                                <line x1="10" y1="1" x2="10" y2="4" />
-                                <line x1="14" y1="1" x2="14" y2="4" />
-                            </svg>
-                        </button>
-                        <img
-                            src="https://www.suiyan.cc/assets/images/zs.jpg"
-                            alt="赞赏码"
-                            className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-48 h-auto rounded border border-border opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-300 z-10"
-                        />
+                    <div className="flex items-center justify-center gap-8">
+                        {/* 评论按钮 */}
+                        <div className="relative group inline-block">
+                            <button
+                                onClick={() => setShowComments(!showComments)}
+                                className="text-text-secondary hover:text-text-dark"
+                                aria-label={showComments ? "隐藏评论" : "显示评论"}
+                            >
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                                </svg>
+                            </button>
+                            {/* Hover 提示 */}
+                            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-text-primary text-bg-content text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                英雄请留步！欢迎在下方留言交流！
+                            </div>
+                        </div>
+
+                        {/* 赞赏按钮 */}
+                        <div className="relative group inline-block">
+                            <button aria-label="赞赏作者" className="text-text-secondary hover:text-text-dark">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+                                    <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                                    <line x1="6" y1="1" x2="6" y2="4" />
+                                    <line x1="10" y1="1" x2="10" y2="4" />
+                                    <line x1="14" y1="1" x2="14" y2="4" />
+                                </svg>
+                            </button>
+                            <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-48 pointer-events-none">
+                                <img
+                                    src="https://www.suiyan.cc/assets/images/zs.jpg"
+                                    alt="赞赏码"
+                                    className="w-full h-auto rounded border border-border opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-300 z-10"
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <section className="mt-8">
-                    <Giscus
-                        key={post.id}
-                        repo={giscusConfig.repo as `${string}/${string}`}
-                        repoId={giscusConfig.repoId}
+                    {showComments && (
+                        <Giscus
+                            key={post.id}
+                            repo={giscusConfig.repo as `${string}/${string}`}
+                            repoId={giscusConfig.repoId}
                         category={giscusConfig.category}
                         categoryId={giscusConfig.categoryId}
                         mapping={giscusConfig.mapping as any}
@@ -262,41 +286,21 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                         emitMetadata="0"
                         inputPosition="bottom"
                         theme="light"
-                    />
+                        />
+                    )}
                 </section>
 
-                {relatedPosts.length > 0 && (
-                    <section className="mt-8 py-4 border-t border-border">
-                        <h2 className="text-lg font-semibold mb-4 text-text-primary">相关文章</h2>
-                        <ul className="space-y-2">
-                            {relatedPosts.map((relatedPost, index) => (
-                                <li key={index}>
-                                    <CustomLink href={`/blog/${relatedPost.id}`}>
-                                        {relatedPost.title}
-                                    </CustomLink>
-                                </li>
-                            ))}
-                        </ul>
-                    </section>
-                )}
+                <PostList
+                    title="相关文章"
+                    posts={relatedPosts}
+                />
 
-                {sameDayPosts.length > 0 && (
-                    <section className="mt-8 py-4 border-t border-border">
-                        <h2 className="text-lg font-semibold mb-4 text-text-primary">那年今日</h2>
-                        <ul className="space-y-2">
-                            {sameDayPosts.map((sameDayPost, index) => (
-                                <li key={index} className="flex items-start gap-2">
-                                    <time className="text-sm text-text-tertiary whitespace-nowrap">
-                                        {formatDate(sameDayPost.time || '')}
-                                    </time>
-                                    <CustomLink href={`/blog/${sameDayPost.id}`}>
-                                        {sameDayPost.title}
-                                    </CustomLink>
-                                </li>
-                            ))}
-                        </ul>
-                    </section>
-                )}
+                <PostList
+                    title="那年今日"
+                    posts={sameDayPosts}
+                    showDate={true}
+                    formatDate={formatDate}
+                />
             </article>
         </Layout>
     );

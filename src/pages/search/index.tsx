@@ -4,6 +4,7 @@ import Layout from "../../components/Layout";
 import Breadcrumb from "../../components/Breadcrumb";
 import { useRouter } from 'next/router';
 import config from '../../config';
+import SearchBox from "../../components/SearchBox";
 
 export async function getStaticProps() {
     return {
@@ -42,21 +43,11 @@ const Search = () => {
 
             <div className="w-full">
                 <div className="mb-8">
-                    <form onSubmit={handleSubmit} className="relative">
-                        <input
-                            type="text"
-                            placeholder="输入关键词搜索..."
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full px-4 py-3 pr-24 border border-border rounded bg-bg-content focus:outline-none focus:border-text-primary"
-                        />
-                        <button
-                            type="submit"
-                            className="absolute right-2 top-1/2 -translate-y-1/2 px-4 py-1 text-sm bg-bg-body border border-border rounded hover:text-text-dark"
-                        >
-                            搜索
-                        </button>
-                    </form>
+                    <SearchBox
+                        value={searchQuery}
+                        onChange={setSearchQuery}
+                        onSubmit={handleSubmit}
+                    />
                     <p className="text-sm text-text-tertiary mt-2">
                         输入关键词后按回车或点击搜索按钮
                     </p>
