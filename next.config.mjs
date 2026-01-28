@@ -1,9 +1,61 @@
 
 
+import withBundleAnalyzer from '@next/bundle-analyzer';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   compress: true,
+  productionBrowserSourceMaps: false,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  experimental: {
+    optimizePackageImports: ['react-markdown', 'remark-gfm', 'rehype-raw', 'reading-time'],
+  },
+  turbopack: {},
+  webpack: (config, { isServer }) => {
+    // 优化生产环境打包
+    if (!isServer) {
+      config.optimization = {
+        ...config.optimization,
+        usedExports: true,
+        sideEffects: true,
+        splitChunks: {
+          chunks: 'all',
+          cacheGroups: {
+            default: false,
+            vendors: false,
+            commons: {
+              name: 'commons',
+              chunks: 'all',
+              minChunks: 2,
+              priority: 10,
+              reuseExistingChunk: true,
+              enforce: true,
+            },
+            react: {
+              name: 'react',
+              test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+              chunks: 'all',
+              priority: 20,
+              reuseExistingChunk: true,
+              enforce: true,
+            },
+            markdown: {
+              name: 'markdown',
+              test: /[\\/]node_modules[\\/](react-markdown|remark-gfm|rehype-raw|reading-time|gray-matter)[\\/]/,
+              chunks: 'all',
+              priority: 15,
+              reuseExistingChunk: true,
+              enforce: true,
+            },
+          },
+        },
+      };
+    }
+    return config;
+  },
   images: {
     remotePatterns: [
       {
@@ -79,4 +131,9 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+// 使用 withBundleAnalyzer 包装配置
+const withBundle = withBundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+});
+
+export default withBundle(nextConfig);

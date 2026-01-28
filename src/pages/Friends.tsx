@@ -4,28 +4,22 @@ import Head from "next/head";
 import Breadcrumb from "../components/Breadcrumb";
 import giscusConfig from "@/giscusConfigs";
 import dynamic from "next/dynamic";
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import LinkCard from "../components/LinkCard";
 
 // 动态导入 Giscus，禁用服务端渲染
 const Giscus = dynamic(() => import("@giscus/react").then((mod) => mod.default), {
     ssr: false,
+    loading: () => <div className="text-center py-4 text-text-secondary">加载评论中...</div>
 });
 
 const Friends = () => {
     const links = config.links;
     const aggregations = config.blogAggregations;
-    // 定义一个状态变量 giscusTheme，用于存储 Giscus 的主题
-    const [giscusTheme, setGiscusTheme] = useState('');
-
 
     useEffect(() => {
-        // 在客户端获取主题并设置 Giscus 的 theme 属性
-        const savedTheme = localStorage.getItem('theme');
         // 始终使用浅色主题
-        setGiscusTheme('light_high_contrast');
-
-    }, [links]);
+    }, []);
 
     return (
         <Layout>
@@ -82,7 +76,7 @@ const Friends = () => {
                 reactionsEnabled="1"
                 emitMetadata="0"
                 inputPosition="bottom"
-                theme={giscusTheme}
+                theme="light"
             />
 
         </Layout>
