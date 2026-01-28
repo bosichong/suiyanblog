@@ -1,63 +1,24 @@
 import formatDate from '../utils/formatDate';
-import GlowCard from './GlowCard';
 import { PostCardProps } from '../types';
-import Link from 'next/link';
-import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
+import CustomLink from './Link';
 
 export default function PostCard({ post }: PostCardProps) {
-    const { resolvedTheme } = useTheme();
-    const [mounted, setMounted] = useState(false);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
-
     return (
-        <GlowCard key={post.id} borderWidth={2}>
-            <div className="bg-transparent rounded-xl p-4">
-                <div className="mb-4">
-                    <Link href={`/blog/${post.id}`} className="flex flex-col">
-                        <h3 className="text-xl rainbow_text">{post.title}</h3>
-                    </Link>
-                </div>
-
-                <div className="mb-4 flex items-center justify-between text-sm">
-                    {(post.tags || post.tag) && (
-                        <div className="flex items-center gap-2">
-                            {(() => {
-                                let tagsArray: string[] = [];
-                                if (Array.isArray(post.tags)) {
-                                    tagsArray = post.tags;
-                                } else if (post.tag) {
-                                    // 处理逗号分隔的字符串标签
-                                    tagsArray = post.tag.split(',').map((t: string) => t.trim());
-                                }
-                                return tagsArray.map((tag, index) => {
-                                    const originalTag = tag;
-                                    const optimizedTag = originalTag.toLowerCase().replace(/\s+/g, '');
-                                    return (
-                                        <Link
-                                            key={index}
-                                            href={`/tags/${optimizedTag}`}
-                                            className={mounted && resolvedTheme === 'dark' ? "rainbow_hover" : "hover:text-black transition"}
-                                        >
-                                            <span>#{originalTag}</span>
-                                        </Link>
-                                    );
-                                });
-                            })()}
-                        </div>
-                    )}
-                    <span className='text-sm opacity-60 transition group-hover:opacity-100'>{formatDate(post.time || '')}</span>
-                </div>
-
-                <div className="mb-4">
-                    <p className="text-md">
-                        {post.description}
-                    </p>
-                </div>
+        <article className="mb-4">
+            <div className="flex items-baseline gap-2">
+                <CustomLink
+                    href={`/blog/${post.id}`}
+                    className="flex items-center gap-2 overflow-hidden"
+                >
+                    <h3 className="text-base font-normal m-0 text-text-link group-hover:text-text-dark flex-shrink-0">
+                        {post.title}
+                    </h3>
+                </CustomLink>
+                <div className="flex-1 min-w-0 border-b border-dashed border-border"></div>
+                <time className="text-sm text-text-tertiary whitespace-nowrap flex-shrink-0">
+                    {formatDate(post.time || '')}
+                </time>
             </div>
-        </GlowCard>
+        </article>
     );
 }

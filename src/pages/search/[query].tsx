@@ -4,37 +4,33 @@ import React, { useState, useEffect } from 'react';
 import Layout from "../../components/Layout";
 import Breadcrumb from "../../components/Breadcrumb";
 import { SearchIcon } from "../../components/icons/SearchIcon";
-import config from "../../config";
 import { Post } from '../../types';
-import GlowInput from "../../components/GlowInput";
-import RainbowLink from "../../components/RainbowLink";
+import CustomLink from '../../components/Link';
 import { useRouter } from 'next/router';
+import config from '../../config';
 
 export async function getStaticPaths() {
     const allPostsData = getSortedPostsData();
     const keywords = new Set<string>();
 
-    // 从所有文章标题中提取关键词
     allPostsData.forEach((post) => {
         if (post.title) {
             const words = post.title.toLowerCase().split(/[\s,，、。]+/);
             words.forEach((word) => {
-                // 过滤掉包含特殊字符的关键词
-                if (word.length >= 2 && !/[\"\'\\\/\?\*\[\]\(\)\{\}\|<>`~!@#$%\^&\+\=\:]/.test(word)) {
+                if (word.length >= 2 && !/["'\\/?*\[\]()\{\}|<>`~!@#$%^&\+=:]/.test(word)) {
                     keywords.add(word);
                 }
             });
         }
     });
 
-    // 限制生成的路径数量，避免过多
     const paths = Array.from(keywords).slice(0, 100).map((query) => ({
         params: { query },
     }));
 
     return {
         paths,
-        fallback: 'blocking', // 允许动态生成新页面
+        fallback: 'blocking',
     };
 }
 
@@ -46,17 +42,10 @@ export async function getStaticProps({ params }: { params: { query: string } }) 
         post.title?.toLowerCase().includes(query)
     );
 
-    // 只传递必要的字段，减少数据大小
-    const minimalPosts = filteredPosts.map(post => {
-        const result: any = {
-            id: post.id,
-            title: post.title,
-        };
-        if (post.date !== undefined) {
-            result.date = post.date;
-        }
-        return result;
-    });
+    const minimalPosts = filteredPosts.map(post => ({
+        id: post.id,
+        title: post.title,
+    }));
 
     return {
         props: {
@@ -66,12 +55,11 @@ export async function getStaticProps({ params }: { params: { query: string } }) 
     };
 }
 
-const SearchPage = ({ initialQuery, filteredPosts }: { initialQuery: string; filteredPosts: Post[] }) => {
+const SearchPage = ({ initialQuery, filteredPosts }: { initialQuery: string; filteredPosts: any[] }) => {
     const router = useRouter();
     const [searchQuery, setSearchQuery] = useState(initialQuery);
-    const [localFilteredPosts, setLocalFilteredPosts] = useState<Post[]>(filteredPosts);
+    const [localFilteredPosts, setLocalFilteredPosts] = useState<any[]>(filteredPosts);
 
-    // 实时搜索：当搜索查询变化时，过滤结果
     useEffect(() => {
         if (searchQuery.trim()) {
             const lowerCaseQuery = searchQuery.toLowerCase();
@@ -84,97 +72,77 @@ const SearchPage = ({ initialQuery, filteredPosts }: { initialQuery: string; fil
         }
     }, [searchQuery, filteredPosts]);
 
-    // 处理搜索输入
     const handleSearch = (value: string) => {
         setSearchQuery(value);
     };
 
-    // 处理搜索提交（跳转到动态路由）
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         if (searchQuery.trim()) {
-            router.push(`/search/${encodeURIComponent(searchQuery.trim())}`);
+            router.push(`/Search/${encodeURIComponent(searchQuery.trim())}`);
         }
     };
 
     return (
         <Layout>
             <Head>
-                <title>{searchQuery ? `搜索: ${searchQuery}` : 'Search 搜索'} | SuiYan 碎言 - 个人技术博客</title>
+                <title>{searchQuery ? `搜索: ${searchQuery}` : '搜索'} | {config.BLOG_NAME}</title>
                 <meta name="description" content="碎言博客站内搜索功能，可以按文章标题搜索博客内容"/>
-                <meta name="keywords" content="站内搜索,博客搜索,文章查找,碎言博客" />
-                <link rel="canonical" href={`https://www.suiyan.cc/search/${encodeURIComponent(searchQuery)}`} />
-                <meta property="og:title" content={`${searchQuery ? `搜索: ${searchQuery}` : 'Search 搜索'} | SuiYan 碎言 - 个人技术博客`} />
+                <meta name="keywords" content="站内搜索,博客搜索,文章查找" />
+                <link rel="canonical" href={`https://www.suiyan.cc/Search/${encodeURIComponent(searchQuery)}`} />
+                <meta property="og:title" content={`${searchQuery ? `搜索: ${searchQuery}` : '搜索'} | ${config.BLOG_NAME}`} />
                 <meta property="og:description" content="碎言博客站内搜索功能，可以按文章标题搜索博客内容" />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content={`https://www.suiyan.cc/search/${encodeURIComponent(searchQuery)}`} />
-                <meta property="og:site_name" content="SuiYan 碎言" />
+                <meta property="og:url" content={`https://www.suiyan.cc/Search/${encodeURIComponent(searchQuery)}`} />
                 <meta name="twitter:card" content="summary" />
-                <meta name="twitter:title" content={`${searchQuery ? `搜索: ${searchQuery}` : 'Search 搜索'} | SuiYan 碎言`} />
+                <meta name="twitter:title" content={`${searchQuery ? `搜索: ${searchQuery}` : '搜索'} | ${config.BLOG_NAME}`} />
                 <meta name="twitter:description" content="碎言博客站内搜索功能，可以按文章标题搜索博客内容" />
             </Head>
 
             <Breadcrumb type="search" />
 
-            <div className="p-4 min-h-[500px]">
-                <div className="mb-8 pb-4">
-                    <h1 className="text-3xl font-bold mb-3">
+            <div className="w-full">
+                <div className="mb-8">
+                    <h1 className="text-2xl font-semibold mb-4 text-text-primary">
                         {searchQuery ? `搜索结果: ${searchQuery}` : '站内搜索'}
                     </h1>
-                    {/* 搜索输入框 */}
-                    <form onSubmit={handleSubmit} className="relative mb-4">
-                        <GlowInput
+                    <form onSubmit={handleSubmit} className="relative">
+                        <input
                             type="text"
-                            placeholder="JavaScript"
+                            placeholder="输入关键词搜索..."
                             value={searchQuery}
                             onChange={(e) => handleSearch(e.target.value)}
-                            className="px-4 py-3 pr-12 rounded-lg border border-border bg-default-100 dark:bg-default-50 focus:outline-none transition-all"
-                            borderWidth={3}
-                            blurRadius={5}
+                            className="w-full px-4 py-3 pr-24 border border-border rounded bg-bg-content focus:outline-none focus:border-text-primary"
                         />
                         <button
                             type="submit"
-                            className="absolute right-4 top-1/2 -translate-y-1/2 text-default-500 hover:text-default-700 z-10 transition-colors"
-                            aria-label="搜索"
+                            className="absolute right-2 top-1/2 -translate-y-1/2 px-4 py-1 text-sm bg-bg-body border border-border rounded hover:text-text-dark"
                         >
-                            <SearchIcon size={24} />
+                            搜索
                         </button>
-                        {searchQuery && (
-                            <button
-                                type="button"
-                                onClick={() => {
-                                    setSearchQuery('');
-                                    router.push('/search');
-                                }}
-                                className="absolute right-12 top-1/2 -translate-y-1/2 text-default-500 hover:text-default-700 z-10"
-                                aria-label="清除"
-                            >
-                                ✕
-                            </button>
-                        )}
                     </form>
                 </div>
 
-                <div className="space-y-2 ml-4">
+                <ul className="space-y-2 no-padding-left">
                     {localFilteredPosts.length > 0 ? (
                         <>
-                            <p className="text-sm opacity-60 mb-4">
+                            <p className="text-sm text-text-tertiary mb-4">
                                 找到 {localFilteredPosts.length} 篇文章
                             </p>
                             {localFilteredPosts.map((post, index) => (
-                                <div className="transition-all duration-200" key={index}>
-                                    <RainbowLink href={`/blog/${post.id}`} className="flex items-center text-ellipsis overflow-hidden whitespace-nowrap">
+                                <li key={index} className="flex items-center justify-between">
+                                    <CustomLink href={`/blog/${post.id}`} className="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
                                         {post.title}
-                                    </RainbowLink>
-                                </div>
+                                    </CustomLink>
+                                </li>
                             ))}
                         </>
                     ) : searchQuery ? (
-                        <div className="text-center py-12">
-                            <p className="text-lg opacity-60">未找到匹配的文章</p>
-                        </div>
+                        <li className="text-center py-12">
+                            <p className="text-lg text-text-secondary">未找到匹配的文章</p>
+                        </li>
                     ) : null}
-                </div>
+                </ul>
             </div>
         </Layout>
     );
