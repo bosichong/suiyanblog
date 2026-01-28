@@ -4,6 +4,7 @@ import Head from 'next/head';
 import config from '../config';
 import PostCard from '../components/PostCard';
 import Pagination from '../components/Pagination';
+import AboutMe from '../components/AboutMe';
 import { Post } from '../types';
 
 const postsPerPage = config.POSTS_PER_PAGE;
@@ -61,6 +62,10 @@ function Home({ currentPosts, totalPages }: { currentPosts: Post[]; totalPages: 
             }}
           />
         </Head>
+
+        <div className="w-full mb-8">
+          <AboutMe />
+        </div>
 
         <div className="w-full">
           <div className="flex flex-col gap-4">

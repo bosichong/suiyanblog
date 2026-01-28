@@ -16,6 +16,7 @@ export interface Config {
   BLOG_NAME_EN: string;
   BLOG_AUTHOR: string;
   BLOG_DESCRIPTION_EN: string;
+  ABOUT_ME: string;
   POSTS_PER_PAGE: number;
   BLOG_TYPED: string[];
   META_DESCRIPTION: string;

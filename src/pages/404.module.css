@@ -6,16 +6,8 @@
     min-height: 100vh;
     padding: var(--space-8);
     text-align: center;
-}
-
-/* 亮色主题 */
-.container.light {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-}
-
-/* 暗色主题 */
-.container.dark {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    background-color: var(--bg-body);
+    color: var(--text-primary);
 }
 
 .illustration {
@@ -34,7 +26,7 @@
 }
 
 .circle {
-    color: var(--color-primary);
+    color: var(--text-link);
     animation: pulse 2s ease-in-out infinite;
     will-change: opacity;
 }
@@ -49,103 +41,54 @@
 }
 
 .eye {
-    color: var(--color-text-primary);
-}
-
-.container.light .eye {
-    color: #2d3748;
-}
-
-.container.dark .eye {
-    color: #e2e8f0;
+    color: var(--text-primary);
 }
 
 .mouth {
-    color: var(--color-text-primary);
-}
-
-.container.light .mouth {
-    color: #2d3748;
-}
-
-.container.dark .mouth {
-    color: #e2e8f0;
+    color: var(--text-primary);
 }
 
 .text404 {
-    color: var(--color-primary);
-    font-weight: var(--font-weight-bold);
+    color: var(--text-link);
+    font-weight: var(--font-weight-semibold);
 }
 
 .title {
-    font-size: var(--text-4xl);
-    font-weight: var(--font-weight-light);
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-normal);
     margin-bottom: var(--space-6);
-    color: var(--color-primary);
-}
-
-.container.light .title {
-    color: #2d3748;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.container.dark .title {
-    color: #e2e8f0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: var(--text-primary);
 }
 
 .message {
     font-size: var(--text-lg);
     line-height: var(--leading-relaxed);
     margin-bottom: var(--space-10);
-    color: var(--color-text-primary);
+    color: var(--text-secondary);
     max-width: 600px;
 }
 
-.container.light .message {
-    color: #4a5568;
-}
-
-.container.dark .message {
-    color: #cbd5e0;
-}
-
 .homeButton {
-    padding: var(--space-3) var(--space-8);
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
-    color: white;
+    padding: var(--space-3) var(--space-6);
+    background-color: var(--text-link);
+    color: var(--bg-content);
     text-decoration: none;
-    border-radius: 25px;
-    font-size: var(--text-lg);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-base);
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(247, 183, 80, 0.3);
-    will-change: transform, box-shadow;
-}
-
-.container.light .homeButton {
-    box-shadow: 0 4px 15px rgba(247, 183, 80, 0.4);
-}
-
-.container.dark .homeButton {
-    box-shadow: 0 4px 15px rgba(247, 183, 80, 0.5);
+    border: 1px solid var(--border-color);
 }
 
 .homeButton:hover {
+    background-color: var(--text-link-hover);
+    color: var(--bg-content);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(247, 183, 80, 0.4);
-}
-
-.container.light .homeButton:hover {
-    box-shadow: 0 6px 20px rgba(247, 183, 80, 0.5);
-}
-
-.container.dark .homeButton:hover {
-    box-shadow: 0 6px 20px rgba(247, 183, 80, 0.6);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
     .title {
-        font-size: var(--text-3xl);
+        font-size: var(--text-xl);
     }
 
     .message {

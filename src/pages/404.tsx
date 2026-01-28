@@ -9,8 +9,9 @@ export default function Custom404() {
             <Head>
                 <title>404 - 页面走丢了 | {config.BLOG_NAME}</title>
                 <meta name="description" content="抱歉，您访问的页面不存在" />
+                <meta name="robots" content="noindex, follow" />
             </Head>
-            <div className={`${styles.container} light`}>
+            <div className={styles.container}>
                 <div className={styles.illustration}>
                     <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="100" cy="100" r="90" stroke="currentColor" strokeWidth="2" className={styles.circle} />

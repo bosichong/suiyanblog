@@ -13,6 +13,8 @@ const config: Config = {
     "BLOG_AUTHOR": "J.sky",
     // 博客英文描述
     "BLOG_DESCRIPTION_EN": "You see see you , This one day day di.",
+    // 关于我简介
+    "ABOUT_ME": "「碎言」取自碎言片语。博客始于2017年，suiyan.cc 注册于2020年。自研博客与主题，是对表达自由的坚持。阅读，写作，复盘，终生学习——将固执留给有意义的事。",
     "POSTS_PER_PAGE": 16,
     // 博客标签
     "BLOG_TYPED": [
@@ -32,8 +34,7 @@ const config: Config = {
         {name:'归档',href:'/Archives'},
         {name:'标签',href:'/Tags'},
         {name:'搜索',href:'/search'},
-        {name:'友链',href:'/Friends'},
-        {name:'关于',href:'/blog/1'},
+        {name:'邻居',href:'/Friends'},
     ],
 
         // 友链页面标题
