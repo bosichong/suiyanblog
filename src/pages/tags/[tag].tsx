@@ -2,6 +2,7 @@ import getSortedPostsData from '../../utils/parseMd';
 import Layout from '../../components/Layout';
 import Head from 'next/head';
 import Breadcrumb from '../../components/Breadcrumb';
+import PostListItem from '../../components/PostListItem';
 import CustomLink from '../../components/Link';
 import { Post } from '../../types';
 import config from '../../config';
@@ -121,14 +122,13 @@ const TagDetail = ({ tag, originalTag, tagPosts, postsByYear }: { tag: string; o
                                 <p className="text-sm font-normal mb-3 text-text-tertiary">{year}</p>
                                 <ul className="space-y-2 no-padding-left">
                                     {postsByYear[year].map((post) => (
-                                        <li key={post.id} className="flex items-baseline gap-2">
-                                            <CustomLink href={`/blog/${post.id}`} className="flex-shrink-0">
-                                                {post.title}
-                                            </CustomLink>
-                                            <div className="flex-1 min-w-0 border-b border-dashed border-border"></div>
-                                            <time className="text-sm text-text-tertiary whitespace-nowrap flex-shrink-0">
-                                                {formatDate(post.time || '')}
-                                            </time>
+                                        <li key={post.id}>
+                                            <PostListItem
+                                                id={post.id}
+                                                title={post.title || ''}
+                                                time={post.time || ''}
+                                                formatDate={formatDate}
+                                            />
                                         </li>
                                     ))}
                                 </ul>

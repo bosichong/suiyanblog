@@ -2,7 +2,7 @@ import getSortedPostsData from '../utils/parseMd';
 import Layout from '../components/Layout';
 import Head from 'next/head';
 import Breadcrumb from '../components/Breadcrumb';
-import CustomLink from '../components/Link';
+import PostListItem from '../components/PostListItem';
 import { Post } from '../types';
 import config from '../config';
 
@@ -94,18 +94,17 @@ const Archives = ({ allPostsData, postsByYear }: { allPostsData: any[]; postsByY
 
                 <ul className="space-y-6 no-padding-left">
                     {Object.keys(postsByYear).sort((a, b) => parseInt(b) - parseInt(a)).map((year) => (
-                        <li key={year}>
-                            <p className="text-sm font-normal mb-3 text-text-tertiary">{year}</p>
+                        <li key={year} className="post-list-group">
+                            <p className="post-list-group-title">{year}</p>
                             <ul className="space-y-2 no-padding-left">
                                 {postsByYear[year].map((post) => (
-                                    <li key={post.id} className="flex items-baseline gap-2">
-                                        <CustomLink href={`/blog/${post.id}`} className="flex-shrink-0">
-                                            {post.title}
-                                        </CustomLink>
-                                        <div className="flex-1 min-w-0 border-b border-dashed border-border"></div>
-                                        <time className="text-sm text-text-tertiary whitespace-nowrap flex-shrink-0">
-                                            {formatDate(post.time || '')}
-                                        </time>
+                                    <li key={post.id}>
+                                        <PostListItem
+                                            id={post.id}
+                                            title={post.title || ''}
+                                            time={post.time || ''}
+                                            formatDate={formatDate}
+                                        />
                                     </li>
                                 ))}
                             </ul>
