@@ -24,7 +24,7 @@
     --text-link-hover: #000000;
 
     /* 边框颜色 */
-    --border-color: #E5E5E5;
+    --border-color: #CCCCCC;
     --border-link: #CCCCCC;
 
     /* 字号 */
@@ -56,6 +56,13 @@
     /* 字重 */
     --font-weight-normal: 400;
     --font-weight-semibold: 600;
+
+    /* 文章列表样式变量 */
+    --list-title-size: var(--text-base);
+    --list-title-weight: var(--font-weight-normal);
+    --list-date-size: var(--text-sm);
+    --list-date-color: var(--text-tertiary);
+    --list-gap: var(--space-2);
 }
 
 /* ==================== 全局样式 ==================== */
@@ -81,9 +88,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
 }
-
-/* 链接样式 */
-/* 链接样式已移至 Tailwind 类控制 */
 
 /* ==================== 排版样式 ==================== */
 
@@ -300,4 +304,61 @@ button {
 
 .mb-6 {
     margin-bottom: var(--space-6);
+}
+
+/* ==================== 文章列表通用样式 ==================== */
+
+/* 文章列表项布局 */
+.post-list-item {
+    display: flex;
+    align-items: baseline;
+    gap: var(--list-gap);
+    overflow: hidden;
+}
+
+/* 文章列表标题 */
+.post-list-title {
+    font-size: var(--list-title-size);
+    font-weight: var(--list-title-weight);
+    margin: 0;
+    color: var(--text-link);
+    flex-shrink: 0;
+}
+
+/* 文章列表标题 hover 效果 */
+.post-list-title-hover:hover {
+    color: var(--text-link-hover);
+}
+
+/* 文章列表分隔线 */
+.post-list-divider {
+    flex: 1;
+    min-width: 0;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+/* 文章列表日期 */
+.post-list-date {
+    font-size: var(--list-date-size);
+    color: var(--list-date-color);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* 文章列表卡片 */
+.post-card {
+    margin-bottom: var(--space-4);
+}
+
+/* 文章列表分组 */
+.post-list-group {
+    margin-bottom: var(--space-6);
+}
+
+/* 文章列表分组标题 */
+.post-list-group-title {
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-normal);
+    margin-bottom: var(--space-3);
+    color: var(--text-tertiary);
 }
