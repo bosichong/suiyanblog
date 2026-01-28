@@ -30,7 +30,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ type, title, tag, pageNum }) =>
                 }
                 break;
             case 'search':
-                items.push({ label: '搜索', href: '/Search' });
+                items.push({ label: '搜索', href: '/search' });
                 break;
             case 'friends':
                 items.push({ label: '友情链接', href: '/Friends' });
