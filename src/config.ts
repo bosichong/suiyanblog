@@ -151,6 +151,29 @@ const config: Config = {
             "site_url": "https://storeweb.cn/",
             "site_description": "一个精致的，带社交元素的个人网站发布平台，博客收录网站"
         }
+    ],
+
+    "snsLinks": [
+        {
+            "name": "Bilibili",
+            "url": "https://space.bilibili.com/275991552",
+            "iconComponent": "BilibiliIcon"
+        },
+        {
+            "name": "GitHub",
+            "url": "https://github.com/bosichong/",
+            "iconComponent": "GithubIcon"
+        },
+        {
+            "name": "Email",
+            "url": "mailto:285911@gmail.com",
+            "iconComponent": "EmailIcon"
+        },
+        {
+            "name": "RSS",
+            "url": "https://www.suiyan.cc/feed",
+            "iconComponent": "RssIcon"
+        }
     ]
 };
 

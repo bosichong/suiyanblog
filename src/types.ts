@@ -28,6 +28,7 @@ export interface Config {
   menuItems: MenuItem[];
   links: Link[];
   blogAggregations: BlogAggregation[];
+  snsLinks: SnsLink[];
 }
 
 // 菜单项类型
@@ -52,6 +53,13 @@ export interface BlogAggregation {
   site_description: string;
 }
 
+// SNS链接类型
+export interface SnsLink {
+  name: string;
+  url: string;
+  iconComponent: string;
+}
+
 // Giscus配置类型
 export interface GiscusConfig {
   repo: string;
@@ -71,15 +79,6 @@ export interface LayoutProps {
 
 export interface PostCardProps {
   post: Post;
-}
-
-export interface MenuItemProps {
-  item: MenuItem;
-  index: number;
-}
-
-export interface FriendCardProps {
-  link: Link;
 }
 
 export interface PaginationProps {

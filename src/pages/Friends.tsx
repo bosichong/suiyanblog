@@ -5,8 +5,7 @@ import Breadcrumb from "../components/Breadcrumb";
 import giscusConfig from "@/giscusConfigs";
 import dynamic from "next/dynamic";
 import React, {useEffect, useState} from "react";
-import FriendCard from "../components/FriendCard";
-import BlogAggregationCard from "../components/BlogAggregationCard";
+import LinkCard from "../components/LinkCard";
 
 // 动态导入 Giscus，禁用服务端渲染
 const Giscus = dynamic(() => import("@giscus/react").then((mod) => mod.default), {
@@ -46,7 +45,13 @@ const Friends = () => {
                 </div>
                 <div className="border border-border rounded-lg overflow-hidden mb-12">
                     {links.map((link, index) => (
-                        <FriendCard key={link.site_name} link={link} />
+                        <LinkCard
+                            key={link.site_name}
+                            site_name={link.site_name}
+                            site_url={link.site_url}
+                            site_description={link.site_description}
+                            is_active={link.is_active}
+                        />
                     ))}
                 </div>
                 <div className="mb-8">
@@ -57,7 +62,12 @@ const Friends = () => {
                 </div>
                 <div className="border border-border rounded-lg overflow-hidden">
                     {aggregations.map((aggregation, index) => (
-                        <BlogAggregationCard key={aggregation.site_name} aggregation={aggregation} />
+                        <LinkCard
+                            key={aggregation.site_name}
+                            site_name={aggregation.site_name}
+                            site_url={aggregation.site_url}
+                            site_description={aggregation.site_description}
+                        />
                     ))}
                 </div>
             </div>

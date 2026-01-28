@@ -3,6 +3,7 @@ import Layout from '../components/Layout';
 import Head from 'next/head';
 import config from '../config';
 import PostCard from '../components/PostCard';
+import Pagination from '../components/Pagination';
 import { Post } from '../types';
 
 const postsPerPage = config.POSTS_PER_PAGE;
@@ -21,52 +22,6 @@ export async function getStaticProps() {
 }
 
 function Home({ currentPosts, totalPages }: { currentPosts: Post[]; totalPages: number }) {
-  const paginate = (pageNumber: number) => {
-    if (pageNumber === 1) {
-      window.location.href = '/';
-    } else {
-      window.location.href = `/page/${pageNumber}`;
-    }
-  };
-
-  const renderPagination = () => {
-    const pages = [];
-    const maxVisible = 5;
-    let startPage = 1;
-    let endPage = totalPages;
-
-    if (totalPages > maxVisible) {
-      const middle = Math.ceil(maxVisible / 2);
-      startPage = Math.max(1, 1 - middle + 1);
-      endPage = Math.min(totalPages, startPage + maxVisible - 1);
-
-      if (endPage - startPage + 1 < maxVisible) {
-        startPage = Math.max(1, endPage - maxVisible + 1);
-      }
-    }
-
-    for (let i = startPage; i <= endPage; i++) {
-      const isCurrentPage = i === 1;
-      pages.push(
-        <button
-          key={i}
-          onClick={() => paginate(i)}
-          className={`px-3 py-1 text-sm border border-border rounded ${
-            isCurrentPage
-              ? 'bg-bg-body text-text-primary'
-              : 'bg-bg-content text-text-secondary hover:text-text-dark'
-          }`}
-          aria-label={`第 ${i} 页`}
-          aria-current={isCurrentPage ? 'page' : undefined}
-        >
-          {i}
-        </button>
-      );
-    }
-
-    return pages;
-  };
-
   return (
       <Layout>
         <Head>
@@ -113,11 +68,11 @@ function Home({ currentPosts, totalPages }: { currentPosts: Post[]; totalPages: 
               <PostCard key={post.id} post={post} />
             ))}
           </div>
-          {totalPages > 1 && (
-            <nav className="mt-8 mb-4 flex justify-center gap-2" aria-label="分页导航">
-              {renderPagination()}
-            </nav>
-          )}
+          <Pagination
+            currentPage={1}
+            totalPages={totalPages}
+            basePath=""
+          />
         </div>
       </Layout>
   );

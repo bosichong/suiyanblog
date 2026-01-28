@@ -3,7 +3,7 @@ import Head from 'next/head';
 import React, { useState, useEffect } from 'react';
 import Layout from "../../components/Layout";
 import Breadcrumb from "../../components/Breadcrumb";
-import { SearchIcon } from "../../components/icons/SearchIcon";
+import SearchBox from "../../components/SearchBox";
 import { Post } from '../../types';
 import CustomLink from '../../components/Link';
 import { useRouter } from 'next/router';
@@ -106,21 +106,11 @@ const SearchPage = ({ initialQuery, filteredPosts }: { initialQuery: string; fil
                     <h1 className="text-2xl font-semibold mb-4 text-text-primary">
                         {searchQuery ? `搜索结果: ${searchQuery}` : '站内搜索'}
                     </h1>
-                    <form onSubmit={handleSubmit} className="relative">
-                        <input
-                            type="text"
-                            placeholder="输入关键词搜索..."
-                            value={searchQuery}
-                            onChange={(e) => handleSearch(e.target.value)}
-                            className="w-full px-4 py-3 pr-24 border border-border rounded bg-bg-content focus:outline-none focus:border-text-primary"
-                        />
-                        <button
-                            type="submit"
-                            className="absolute right-2 top-1/2 -translate-y-1/2 px-4 py-1 text-sm bg-bg-body border border-border rounded hover:text-text-dark"
-                        >
-                            搜索
-                        </button>
-                    </form>
+                    <SearchBox
+                        value={searchQuery}
+                        onChange={handleSearch}
+                        onSubmit={handleSubmit}
+                    />
                 </div>
 
                 <ul className="space-y-2 no-padding-left">

@@ -64,7 +64,7 @@ const Tags = ({ tagsData }: { tagsData: TagData[] }) => {
                     </div>
                 </header>
 
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
                     {tagsData.map((tagObj) => (
                         <CustomLink
                             key={tagObj.tag}

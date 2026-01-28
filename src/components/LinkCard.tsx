@@ -1,15 +1,21 @@
 import React from 'react';
 import Link from 'next/link';
-import { Link as LinkType } from '../types';
 
-const FriendCard = ({ link }: { link: LinkType }) => {
+interface LinkCardProps {
+    site_name: string;
+    site_url: string;
+    site_description: string;
+    is_active?: boolean;
+}
+
+const LinkCard = ({ site_name, site_url, site_description, is_active = true }: LinkCardProps) => {
     return (
         <Link
-            href={link.site_url}
+            href={site_url}
             target='_blank'
             rel="noopener noreferrer"
             className={`block p-4 border-b border-border ${
-                link.is_active === false
+                is_active === false
                     ? 'text-text-tertiary'
                     : 'group hover:bg-bg-body'
             }`}
@@ -17,19 +23,19 @@ const FriendCard = ({ link }: { link: LinkType }) => {
             <div className="flex items-start justify-between gap-4">
                 <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
-                        {link.is_active === false ? (
+                        {is_active === false ? (
                             <span className="font-medium text-text-tertiary">
-                                {link.site_name}
+                                {site_name}
                             </span>
                         ) : (
-                            <span className="font-medium text-text-primary hover:text-text-dark">
-                                {link.site_name}
+                            <span className="font-medium text-text-link hover:text-text-dark hover:underline no-underline">
+                                {site_name}
                             </span>
                         )}
-                        {link.is_active === false && (
+                        {is_active === false && (
                             <span className="ml-2 text-xs text-text-tertiary">链接失效</span>
                         )}
-                        {link.is_active !== false && (
+                        {is_active !== false && (
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-text-tertiary">
                                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                                 <polyline points="15 3 21 3 21 9" />
@@ -38,9 +44,9 @@ const FriendCard = ({ link }: { link: LinkType }) => {
                         )}
                     </div>
                     <p className={`text-sm line-clamp-2 leading-relaxed ${
-                        link.is_active === false ? 'text-text-tertiary line-through' : 'text-text-secondary'
+                        is_active === false ? 'text-text-tertiary line-through' : 'text-text-secondary'
                     }`}>
-                        {link.site_description}
+                        {site_description}
                     </p>
                 </div>
             </div>
@@ -48,4 +54,4 @@ const FriendCard = ({ link }: { link: LinkType }) => {
     );
 };
 
-export default FriendCard;
+export default LinkCard;
