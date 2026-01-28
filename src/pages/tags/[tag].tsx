@@ -6,6 +6,7 @@ import PostListItem from '../../components/PostListItem';
 import CustomLink from '../../components/Link';
 import { Post } from '../../types';
 import config from '../../config';
+import formatDate from '../../utils/formatDate';
 
 export async function getStaticPaths() {
     const allPostsData = getSortedPostsData();
@@ -76,15 +77,6 @@ export async function getStaticProps({ params }: { params: { tag: string } }) {
 
 const TagDetail = ({ tag, originalTag, tagPosts, postsByYear }: { tag: string; originalTag: string; tagPosts: any[]; postsByYear: { [key: string]: any[] } }) => {
     const totalPosts = tagPosts.length;
-
-    const formatDate = (dateStr: string) => {
-        if (!dateStr) return '';
-        const date = new Date(dateStr);
-        const month = date.toLocaleString('en-US', { month: 'short' });
-        const day = date.getDate();
-        const year = date.getFullYear();
-        return `${month} ${day}, ${year}`;
-    };
 
     return (
         <Layout>
