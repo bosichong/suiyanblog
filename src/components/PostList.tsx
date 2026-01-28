@@ -22,7 +22,7 @@ const PostList: React.FC<PostListProps> = ({ title, posts, showDate = false, for
                 {posts.map((post, index) => (
                     <li key={index} className="overflow-hidden">
                         {showDate && formatDate ? (
-                            <div className="flex items-start gap-2">
+                            <div className="flex items-start gap-2 overflow-hidden">
                                 <time className="text-sm text-text-tertiary whitespace-nowrap flex-shrink-0">
                                     {formatDate(post.time || '')}
                                 </time>

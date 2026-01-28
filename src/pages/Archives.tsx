@@ -5,6 +5,7 @@ import Breadcrumb from '../components/Breadcrumb';
 import PostListItem from '../components/PostListItem';
 import { Post } from '../types';
 import config from '../config';
+import formatDate from '../utils/formatDate';
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData();
@@ -35,16 +36,7 @@ export async function getStaticProps() {
 
 const Archives = ({ allPostsData, postsByYear }: { allPostsData: any[]; postsByYear: { [key: string]: any[] } }) => {
     const totalPosts = allPostsData.length;
-    const lastUpdated = allPostsData[0]?.time ? new Date(allPostsData[0].time).toLocaleDateString() : '';
-
-    const formatDate = (dateStr: string) => {
-        if (!dateStr) return '';
-        const date = new Date(dateStr);
-        const month = date.toLocaleString('en-US', { month: 'short' });
-        const day = date.getDate();
-        const year = date.getFullYear();
-        return `${month} ${day}, ${year}`;
-    };
+    const lastUpdated = allPostsData[0]?.time ? formatDate(allPostsData[0].time) : '';
 
     return (
         <Layout>
