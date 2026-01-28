@@ -23,10 +23,8 @@ const Friends = () => {
     useEffect(() => {
         // 在客户端获取主题并设置 Giscus 的 theme 属性
         const savedTheme = localStorage.getItem('theme');
-        // 如果主题为 dark，则设置 Giscus 的 theme 属性为 dark_dimmed
-        // 如果主题为 light，则设置 Giscus 的 theme 属性为 light_high_contrast
-        // 否则，设置 Giscus 的 theme 属性为 savedTheme
-        setGiscusTheme(savedTheme === 'dark' ? 'dark_dimmed' : savedTheme === 'light' ? 'light_high_contrast' : savedTheme || 'dark_dimmed');
+        // 始终使用浅色主题
+        setGiscusTheme('light_high_contrast');
 
     }, [links]);
 
@@ -41,7 +39,7 @@ const Friends = () => {
 
             <div className="max-w-4xl mx-auto px-6 py-8">
                 <div className="mb-8">
-                    <h1 className="text-3xl font-bold mb-3">{config.FRIENDS_PAGE_TITLE}</h1>
+                    <div className="mb-3">{config.FRIENDS_PAGE_TITLE}</div>
                     <p className="text-sm text-default-600">
                         {config.FRIENDS_PAGE_DESCRIPTION}
                     </p>
@@ -52,7 +50,7 @@ const Friends = () => {
                     ))}
                 </div>
                 <div className="mb-8">
-                    <h2 className="text-2xl font-bold mb-3">{config.BLOG_AGGREGATION_TITLE}</h2>
+                    <div className="mb-3">{config.BLOG_AGGREGATION_TITLE}</div>
                     <p className="text-sm text-default-600">
                         {config.BLOG_AGGREGATION_DESCRIPTION}
                     </p>

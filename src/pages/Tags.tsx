@@ -1,11 +1,10 @@
 import getSortedPostsData from '../utils/parseMd';
 import Head from 'next/head';
-import React from 'react';
 import Layout from '../components/Layout';
-import Link from 'next/link';
 import Breadcrumb from '../components/Breadcrumb';
-import GlowCard from '../components/GlowCard';
+import CustomLink from '../components/Link';
 import { Post } from '../types';
+import config from '../config';
 
 interface TagData {
     tag: string;
@@ -23,24 +22,18 @@ function createTagsData(blogData: Post[]): TagData[] {
             if (!tagDict[optimizedTag]) {
                 tagDict[optimizedTag] = { tag: optimizedTag, originalTag, data: [] };
             }
-            // 只存储必要的信息，而不是完整的文章对象
             tagDict[optimizedTag].data.push({ id: item.id });
         });
     });
     return Object.values(tagDict);
 }
 
-function createTagsWithColors(tagsData: TagData[]): TagData[] {
-    return tagsData;
-}
-
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData();
     const tagsData = createTagsData(allPostsData);
-    const tagsWithColors = createTagsWithColors(tagsData);
     return {
         props: {
-            tagsData: tagsWithColors,
+            tagsData,
         },
     };
 }
@@ -49,45 +42,44 @@ const Tags = ({ tagsData }: { tagsData: TagData[] }) => {
     return (
         <Layout>
             <Head>
-                <title>Tags 标签 | SuiYan 碎言 - 个人技术博客</title>
+                <title>标签 | {config.BLOG_NAME}</title>
                 <meta name="description" content="碎言博客的文章分类标签，按主题分类的技术文章和随笔"/>
-                <meta name="keywords" content="文章标签,博客分类,技术标签,碎言博客,主题分类" />
+                <meta name="keywords" content="文章标签,博客分类,技术标签,主题分类" />
                 <link rel="canonical" href="https://www.suiyan.cc/Tags" />
-                <meta property="og:title" content="Tags 标签 | SuiYan 碎言 - 个人技术博客" />
+                <meta property="og:title" content={`标签 | ${config.BLOG_NAME}`} />
                 <meta property="og:description" content="碎言博客的文章分类标签，按主题分类的技术文章和随笔" />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://www.suiyan.cc/Tags" />
-                <meta property="og:site_name" content="SuiYan 碎言" />
                 <meta name="twitter:card" content="summary" />
-                <meta name="twitter:title" content="Tags 标签 | SuiYan 碎言" />
+                <meta name="twitter:title" content={`标签 | ${config.BLOG_NAME}`} />
                 <meta name="twitter:description" content="碎言博客的文章分类标签，按主题分类的技术文章和随笔" />
             </Head>
             <Breadcrumb type="tags" />
-            <div className="p-4 min-h-[500px]">
-                <div className="mb-8">
-                    <h1 className="text-3xl font-bold mb-2">
-                        TAGS
-                    </h1>
-                    <div className="flex items-center gap-2">
-                        <span className="text-sm text-default-500">共有标签：</span>
-                        <span className="text-lg font-semibold">{tagsData.length}</span>
-                        <span className="text-sm text-default-500">个</span>
+            <div className="w-full">
+                <header className="mb-8">
+                    <div className="flex items-center gap-2 text-sm text-text-secondary">
+                        <span>共有标签：</span>
+                        <span className="text-text-primary">{tagsData.length}</span>
+                        <span>个</span>
                     </div>
-                </div>
+                </header>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+                <div className="grid grid-cols-2 gap-3">
                     {tagsData.map((tagObj) => (
-                        <GlowCard key={tagObj.tag} borderWidth={1} blurRadius={2} borderRadius="8px" displayDuration={500} fadeDuration={400} className="w-full">
-                            <Link
-                                href={`/tags/${tagObj.tag}`}
-                                className="block px-3 py-2 text-center transition-all duration-200"
-                            >
-                                <div className="flex items-center justify-center gap-1 text-sm font-medium">
-                                    <span className="truncate">{tagObj.originalTag}</span>
-                                    <span className="text-xs opacity-75 whitespace-nowrap">({tagObj.data.length})</span>
-                                </div>
-                            </Link>
-                        </GlowCard>
+                        <CustomLink
+                            key={tagObj.tag}
+                            href={`/tags/${tagObj.tag}`}
+                            className="block px-4 py-3 border border-border rounded hover:border-text-tertiary"
+                        >
+                            <div className="flex items-center justify-between gap-2">
+                                <span className="text-sm font-normal text-text-primary truncate flex-1 min-w-0">
+                                    {tagObj.originalTag}
+                                </span>
+                                <span className="text-xs text-text-tertiary whitespace-nowrap">
+                                    ({tagObj.data.length})
+                                </span>
+                            </div>
+                        </CustomLink>
                     ))}
                 </div>
             </div>

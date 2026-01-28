@@ -5,278 +5,216 @@
 /* ==================== CSS 变量系统 ==================== */
 
 :root {
-    /* 字体家族 - 使用系统字体栈优化加载速度 */
+    /* 字体家族 - 系统字体栈优化加载速度 */
     --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-                 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
-                 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-                 'Noto Color Emoji';
+                 'Helvetica Neue', Arial, 'PingFang SC', 'Hiragino Sans GB',
+                 'Microsoft YaHei', sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas,
                  'Liberation Mono', monospace;
 
-    /* 字重层级 */
-    --font-weight-light: 300;
+    /* 背景色 */
+    --bg-body: #F8F8F8;
+    --bg-content: #FFFFFF;
+
+    /* 文字颜色 */
+    --text-primary: #1A1A1A;
+    --text-secondary: #666666;
+    --text-tertiary: #999999;
+    --text-link: #555555;
+    --text-link-hover: #000000;
+
+    /* 边框颜色 */
+    --border-color: #E5E5E5;
+    --border-link: #CCCCCC;
+
+    /* 字号 */
+    --text-xs: 12px;
+    --text-sm: 14px;
+    --text-base: 16px;
+    --text-lg: 18px;
+    --text-xl: 20px;
+    --text-2xl: 24px;
+
+    /* 间距 */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-6: 24px;
+    --space-8: 32px;
+
+    /* 圆角 */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+
+    /* 行高 */
+    --leading-tight: 1.3;
+    --leading-normal: 1.6;
+    --leading-relaxed: 1.8;
+
+    /* 字重 */
     --font-weight-normal: 400;
-    --font-weight-medium: 500;
     --font-weight-semibold: 600;
-    --font-weight-bold: 700;
-
-    /* 字号比例系统（基于 1.2 黄金比例） */
-    --text-xs: 0.75rem;    /* 12px */
-    --text-sm: 0.875rem;   /* 14px */
-    --text-base: 1rem;     /* 16px - 基准 */
-    --text-mobile-content: 1.125rem;  /* 18px - 移动端文章内容 */
-    --text-lg: 1.125rem;   /* 18px */
-    --text-xl: 1.25rem;    /* 20px */
-    --text-2xl: 1.5rem;    /* 24px */
-    --text-3xl: 1.875rem;  /* 30px */
-    --text-4xl: 2.25rem;   /* 36px */
-    --text-5xl: 3rem;      /* 48px */
-
-    /* 间距比例系统（基于 4px 基准） */
-    --space-1: 0.25rem;  /* 4px */
-    --space-2: 0.5rem;   /* 8px */
-    --space-3: 0.75rem;  /* 12px */
-    --space-4: 1rem;     /* 16px */
-    --space-5: 1.25rem;  /* 20px */
-    --space-6: 1.5rem;   /* 24px */
-    --space-8: 2rem;     /* 32px */
-    --space-10: 2.5rem;  /* 40px */
-    --space-12: 3rem;    /* 48px */
-    --space-16: 4rem;    /* 64px */
-
-    /* 行高比例系统 */
-    --leading-none: 1;
-    --leading-tight: 1.25;
-    --leading-snug: 1.375;
-    --leading-normal: 1.5;
-    --leading-relaxed: 1.625;
-    --leading-loose: 2;
-
-    /* 主色调 */
-    --color-primary: #F7B750;
-    --color-primary-hover: #e5a93d;
-    --color-primary-light: rgba(247, 183, 80, 0.1);
-
-    /* 中性色 */
-    --color-text-primary: #1a1a1a;
-    --color-text-secondary: #666666;
-    --color-text-tertiary: #999999;
-    --color-border: #e5e5e5;
-    --color-background: #ffffff;
-    --color-surface: #f5f5f5;
-
-    /* 语义色 */
-    --color-success: #10b981;
-    --color-warning: #f59e0b;
-    --color-error: #ef4444;
-    --color-info: #3b82f6;
-
-    /* 博客内容背景 */
-    --bg-content: #ffffff;
-
-    /* 引用块背景 */
-    --blockquote-bg: rgba(247, 183, 80, 0.1);
-
-    /* 表头背景 */
-    --table-header-bg: rgba(247, 183, 80, 0.1);
-}
-
-/* 暗色主题 */
-.dark {
-    --color-text-primary: #e5e5e5;
-    --color-text-secondary: #a3a3a3;
-    --color-text-tertiary: #737373;
-    --color-border: #404040;
-    --color-background: #0a0a0a;
-    --color-surface: #1a1a1a;
-    --bg-content: #1a1a1a;
-}
-
-/* 亮色主题覆盖 - 黑白灰配色 */
-.light {
-    --lh: 1.5em;
-    --textLight: #555;
-    --textColor: #000;
-    --bgColor: #eee;
-    --borderColor: #949494;
-    --highlightColor: #e5e5e5;
-    --selectionBg: #ddd;
-    --selectionColor: #000;
-    --badgeColor: #555;
-
-    --color-text-primary: #000;
-    --color-text-secondary: #555;
-    --color-text-tertiary: #949494;
-    --color-border: #949494;
-    --color-background: #eee;
-    --color-surface: #e5e5e5;
-    --bg-content: #eee;
-
-    --color-primary: #333;
-    --color-primary-hover: #000;
-    --color-primary-light: rgba(0, 0, 0, 0.05);
-    --blockquote-bg: rgba(0, 0, 0, 0.05);
-    --table-header-bg: rgba(0, 0, 0, 0.05);
-
-    /* 浅色模式代码块背景 */
-    --code-bg: #e5e5e5;
-    --code-border: #949494;
-
-    /* 浅色模式表格边框 */
-    --table-border: #949494;
 }
 
 /* ==================== 全局样式 ==================== */
 
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--font-sans);
     font-weight: var(--font-weight-normal);
+    font-size: var(--text-base);
     line-height: var(--leading-normal);
-    color: var(--color-text-primary);
-    background-color: var(--color-background);
+    color: var(--text-primary);
+    background-color: var(--bg-body);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
-/* 链接默认颜色 - 与 SNS 图标颜色一致 */
-a {
-    color: var(--color-primary);
-    transition: color 0.2s ease;
+/* 链接样式 */
+/* 链接样式已移至 Tailwind 类控制 */
+
+/* ==================== 排版样式 ==================== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--font-weight-semibold);
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-4);
+    line-height: var(--leading-tight);
+    color: var(--text-primary);
 }
 
-a:hover {
-    color: var(--color-primary-hover);
+h1 {
+    font-size: var(--text-2xl);
 }
 
-/* ==================== 自定义样式 ==================== */
-
-.rainbow_text {
-    background: linear-gradient(-90deg, #602ce5 0%, #2ce597 30%, #e7bb18 50%, #ff7657 70%, #45c1ee 90%, #2ce597 100%);
-    -webkit-background-clip: text;
-    color: transparent;
+h2 {
+    font-size: var(--text-xl);
 }
 
-.rainbow_hover:hover {
-    background: linear-gradient(-90deg, #602ce5 0%, #2ce597 30%, #e7bb18 50%, #ff7657 70%, #45c1ee 90%, #2ce597 100%);
-    -webkit-background-clip: text;
-    color: transparent;
+h3 {
+    font-size: var(--text-lg);
 }
 
-/* Atropos卡片样式修复 */
-.atropos-card {
-    border-radius: 12px;
-    overflow: hidden;
+p {
+    margin-top: 0;
+    margin-bottom: var(--space-6);
 }
 
-/* 修复亮色模式下四角灰色边线问题 */
-.light .atropos-inner {
-    border-radius: 12px;
-    overflow: hidden;
+/* 中文段落首行缩进 */
+.blog_post_content > p {
+    text-indent: 2em;
 }
 
-.light .atropos-card {
-    border: none !important;
-    background-color: #f5f5f5 !important;
+/* 中文段落首行不缩进的元素 */
+.blog_post_content > p:first-child,
+.blog_post_content > p.no-indent {
+    text-indent: 0;
 }
 
-/* 确保阴影效果在暗色模式下正常显示 */
-.dark .atropos-card {
-    border: none !important;
+/* 列表样式 */
+ul, ol {
+    margin-top: 0;
+    margin-bottom: var(--space-6);
+    padding-left: var(--space-8);
 }
 
-/* ==================== Tailwind 工具类扩展 ==================== */
-
-.bg-default-100 {
-    background-color: var(--color-surface);
+/* 文章列表（无左边距） */
+ul.no-padding-left, ol.no-padding-left {
+    padding-left: 0;
 }
 
-.dark .bg-default-100 {
-    background-color: var(--color-surface);
+li {
+    margin-bottom: var(--space-2);
 }
 
-.bg-default-50 {
-    background-color: rgba(255, 255, 255, 0.5);
+/* 引用块 */
+blockquote {
+    margin: var(--space-6) 0;
+    padding: var(--space-4) var(--space-6);
+    border-left: 4px solid var(--border-color);
+    background-color: var(--bg-content);
+    color: var(--text-secondary);
 }
 
-.dark .bg-default-50 {
-    background-color: rgba(0, 0, 0, 0.5);
+blockquote p {
+    margin-bottom: 0;
 }
 
-.text-default-500 {
-    color: var(--color-text-secondary);
+/* 代码块 */
+code {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    background-color: var(--bg-body);
+    padding: 0.2em 0.4em;
+    border-radius: var(--radius-sm);
 }
 
-.text-default-600 {
-    color: var(--color-text-secondary);
+pre {
+    margin: var(--space-6) 0;
+    padding: var(--space-4);
+    background-color: var(--bg-body);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow-x: auto;
 }
 
-.text-default-800 {
-    color: var(--color-text-primary);
+pre code {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
 }
 
-.dark .text-default-800 {
-    color: var(--color-text-primary);
+/* 表格样式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-6) 0;
+    font-size: var(--text-sm);
 }
 
-.text-default-700 {
-    color: var(--color-text-primary);
+th, td {
+    padding: var(--space-3) var(--space-4);
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
 }
 
-.text-default-400 {
-    color: var(--color-text-tertiary);
+th {
+    font-weight: var(--font-weight-semibold);
+    background-color: var(--bg-body);
 }
 
-.dark .text-default-400 {
-    color: var(--color-text-tertiary);
+/* 图片样式 */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: var(--space-6) 0;
 }
 
-.text-foreground {
-    color: var(--color-text-primary);
+/* 分隔线 */
+hr {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: var(--space-8) 0;
 }
 
-.bg-content2\/50 {
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-.dark .bg-content2\/50 {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.bg-content3\/50 {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.dark .bg-content3\/50 {
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-.bg-content3\/80 {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.dark .bg-content3\/80 {
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-.bg-content2\/80 {
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-.dark .bg-content2\/80 {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.border-border {
-    border-color: var(--color-border);
-}
-
-.border-divider {
-    border-color: var(--color-border);
-}
-
-/* ==================== 可访问性优化 ==================== */
+/* ==================== 无障碍优化 ==================== */
 
 /* 只在键盘导航时显示焦点状态 */
 *:focus-visible {
-    outline: 2px solid var(--color-primary);
+    outline: 2px solid var(--text-primary);
     outline-offset: 2px;
 }
 
@@ -288,58 +226,78 @@ select:focus:not(:focus-visible),
 a:focus:not(:focus-visible),
 a:focus {
     outline: none !important;
-    box-shadow: none !important;
 }
 
-/* 移除所有链接的默认焦点样式 */
-a {
+/* ==================== 输入框样式 ==================== */
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+textarea {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-base);
+    font-family: var(--font-sans);
+    color: var(--text-primary);
+    background-color: var(--bg-content);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-4);
+}
+
+input:focus,
+textarea:focus {
     outline: none;
+    border-color: var(--text-primary);
 }
 
-a::-moz-focus-inner {
-    border: 0;
+/* ==================== 按钮样式 ==================== */
+
+button {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+    color: inherit;
 }
 
-/* 减少动画对敏感用户的影响 */
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
+/* ==================== 辅助类 ==================== */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
 
-/* ==================== 性能优化 ==================== */
-
-/* 优化滚动性能 */
-html {
-    scroll-behavior: smooth;
+.text-muted {
+    color: var(--text-secondary);
 }
 
-/* 减少重排重绘 */
-.glow-card,
-.glow-card-inner,
-.blog_post_content img {
-    will-change: transform;
+.text-small {
+    font-size: var(--text-sm);
 }
 
-/* 优化文本渲染 */
-body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
+.text-center {
+    text-align: center;
 }
 
-/* 优化层叠上下层 */
-.rainbow_text,
-.rainbow_hover:hover {
-    will-change: background-clip, color;
+.mt-4 {
+    margin-top: var(--space-4);
 }
 
-/* 优化动画元素 */
-motion\:div, motion\:button, motion\:li {
-    will-change: transform, opacity;
+.mb-4 {
+    margin-bottom: var(--space-4);
 }
 
+.mb-6 {
+    margin-bottom: var(--space-6);
+}

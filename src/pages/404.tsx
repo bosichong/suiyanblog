@@ -1,18 +1,16 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import styles from './404.module.css';
-import { useTheme } from 'next-themes';
+import config from '../config';
 
 export default function Custom404() {
-    const { theme } = useTheme();
-
     return (
         <>
-         <Head>
-                <title>404 - 页面走丢了 | SuiYan 碎言</title>
+            <Head>
+                <title>404 - 页面走丢了 | {config.BLOG_NAME}</title>
                 <meta name="description" content="抱歉，您访问的页面不存在" />
             </Head>
-            <div className={`${styles.container} ${styles[theme || 'dark']}`}>
+            <div className={`${styles.container} light`}>
                 <div className={styles.illustration}>
                     <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="100" cy="100" r="90" stroke="currentColor" strokeWidth="2" className={styles.circle} />
@@ -31,6 +29,6 @@ export default function Custom404() {
                     回到首页
                 </Link>
             </div>
-            </>
+        </>
     );
 }

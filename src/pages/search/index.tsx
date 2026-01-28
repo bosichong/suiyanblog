@@ -2,9 +2,8 @@ import Head from 'next/head';
 import React, { useState } from 'react';
 import Layout from "../../components/Layout";
 import Breadcrumb from "../../components/Breadcrumb";
-import { SearchIcon } from "../../components/icons/SearchIcon";
-import GlowInput from "../../components/GlowInput";
 import { useRouter } from 'next/router';
+import config from '../../config';
 
 export async function getStaticProps() {
     return {
@@ -16,66 +15,49 @@ const Search = () => {
     const router = useRouter();
     const [searchQuery, setSearchQuery] = useState('');
 
-    // 处理搜索提交（跳转到动态路由）
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         if (searchQuery.trim()) {
-            router.push(`/search/${encodeURIComponent(searchQuery.trim())}`);
+            router.push(`/Search/${encodeURIComponent(searchQuery.trim())}`);
         }
     };
 
     return (
         <Layout>
             <Head>
-                <title>Search 搜索 | SuiYan 碎言 - 个人技术博客</title>
+                <title>搜索 | {config.BLOG_NAME}</title>
                 <meta name="description" content="碎言博客站内搜索功能，可以按文章标题搜索博客内容"/>
-                <meta name="keywords" content="站内搜索,博客搜索,文章查找,碎言博客" />
-                <link rel="canonical" href="https://www.suiyan.cc/search" />
-                <meta property="og:title" content="Search 搜索 | SuiYan 碎言 - 个人技术博客" />
+                <meta name="keywords" content="站内搜索,博客搜索,文章查找" />
+                <link rel="canonical" href="https://www.suiyan.cc/Search" />
+                <meta property="og:title" content={`搜索 | ${config.BLOG_NAME}`} />
                 <meta property="og:description" content="碎言博客站内搜索功能，可以按文章标题搜索博客内容" />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://www.suiyan.cc/search" />
-                <meta property="og:site_name" content="SuiYan 碎言" />
+                <meta property="og:url" content="https://www.suiyan.cc/Search" />
                 <meta name="twitter:card" content="summary" />
-                <meta name="twitter:title" content="Search 搜索 | SuiYan 碎言" />
+                <meta name="twitter:title" content={`搜索 | ${config.BLOG_NAME}`} />
                 <meta name="twitter:description" content="碎言博客站内搜索功能，可以按文章标题搜索博客内容" />
             </Head>
 
             <Breadcrumb type="search" />
 
-            <div className="p-4 min-h-[500px]">
-                <div className="mb-8 pb-4">
-                    <h1 className="text-3xl font-bold mb-3">站内搜索</h1>
-                    {/* 搜索输入框 */}
-                    <form onSubmit={handleSubmit} className="relative mb-4">
-                        <GlowInput
+            <div className="w-full">
+                <div className="mb-8">
+                    <form onSubmit={handleSubmit} className="relative">
+                        <input
                             type="text"
-                            placeholder="JavaScript"
+                            placeholder="输入关键词搜索..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="px-4 py-3 pr-12 rounded-lg border border-border bg-default-100 dark:bg-default-50 focus:outline-none transition-all"
-                            borderWidth={3}
-                            blurRadius={5}
+                            className="w-full px-4 py-3 pr-24 border border-border rounded bg-bg-content focus:outline-none focus:border-text-primary"
                         />
                         <button
                             type="submit"
-                            className="absolute right-4 top-1/2 -translate-y-1/2 text-default-500 hover:text-default-700 z-10 transition-colors"
-                            aria-label="搜索"
+                            className="absolute right-2 top-1/2 -translate-y-1/2 px-4 py-1 text-sm bg-bg-body border border-border rounded hover:text-text-dark"
                         >
-                            <SearchIcon size={24} />
+                            搜索
                         </button>
-                        {searchQuery && (
-                            <button
-                                type="button"
-                                onClick={() => setSearchQuery('')}
-                                className="absolute right-12 top-1/2 -translate-y-1/2 text-default-500 hover:text-default-700 z-10"
-                                aria-label="清除"
-                            >
-                                ✕
-                            </button>
-                        )}
                     </form>
-                    <p className="text-sm opacity-60">
+                    <p className="text-sm text-text-tertiary mt-2">
                         输入关键词后按回车或点击搜索按钮
                     </p>
                 </div>

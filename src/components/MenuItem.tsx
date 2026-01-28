@@ -1,17 +1,15 @@
 import React from 'react';
 import { MenuItemProps } from '../types';
-import RainbowLink from './RainbowLink';
 
-const MenuItem = ({ item, index, onClick }: MenuItemProps & { onClick?: () => void }) => {
-  return (
-    <RainbowLink
-      href={item.href}
-      className="w-full flex justify-center transition-all duration-200 px-4 py-2"
-      onClick={onClick}
-    >
-      {item.name}
-    </RainbowLink>
-  );
+const MenuItem = ({ item }: MenuItemProps) => {
+    return (
+        <a
+            href={item.href}
+            className="text-text-secondary hover:text-text-dark hover:underline no-underline"
+        >
+            {item.name}
+        </a>
+    );
 };
 
 export default MenuItem;

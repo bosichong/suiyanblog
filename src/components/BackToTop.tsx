@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from 'react';
 import { ArrowUpIcon } from '@/components/icons/ArrowUpIcon';
 
@@ -30,16 +32,16 @@ const BackToTop = () => {
     };
 
     return (
-        <div className={`fixed bottom-24 right-5 z-50 transition-all duration-300 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none hidden'}`}>
+        <div className={`fixed bottom-24 right-5 z-50 transition-all duration-300 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
             <button
                 aria-label="返回顶部"
                 className={`
                     relative
-                    w-10 h-10
+                    w-8 h-8
                     rounded-full
                     flex items-center justify-center
-                    bg-content2/50 dark:bg-content3/50
-                    hover:bg-content3/80 dark:hover:bg-content2/80
+                    bg-bg-content/50
+                    hover:bg-bg-content/80
                     transition-all duration-300 ease-in-out
                     transform hover:scale-110
                     focus:outline-none
@@ -47,7 +49,7 @@ const BackToTop = () => {
                 `}
                 onClick={scrollToTop}
             >
-                <ArrowUpIcon size={20} className="text-foreground" />
+                <ArrowUpIcon size={16} className="text-text-primary" />
             </button>
         </div>
     );
