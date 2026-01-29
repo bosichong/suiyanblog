@@ -127,6 +127,12 @@ p {
     text-indent: 0;
 }
 
+/* 文章内容中粗体文本样式 - 添加虚线下划线 */
+.blog_post_content strong {
+    border-bottom: 1px dashed var(--border-color);
+    padding-bottom: 1px;
+}
+
 /* 列表样式 */
 ul, ol {
     margin-top: 0;
