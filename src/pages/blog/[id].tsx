@@ -197,7 +197,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                 </div>
 
                 <div className="mt-8">
-                    <CC />
+                    <CC title={post.title} author={post.author} id={post.id} />
                 </div>
 
                 {post.tag && (
@@ -245,7 +245,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                             </button>
                             {/* Hover 提示 */}
                             <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-text-primary text-bg-content text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                                英雄请留步！欢迎在下方留言交流！
+                                英雄请留步！欢迎点击图标，留言交流！
                             </div>
                         </div>
 
