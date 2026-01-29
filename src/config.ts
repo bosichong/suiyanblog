@@ -149,7 +149,7 @@ const config: Config = {
         },
         {
             "site_name": "BlogsClub",
-            "site_url": "https://www.blogsclub.org/",
+            "site_url": "https://www.blogsclub.org/apply.html?inviteCode=8f2cd654",
             "site_description": "致力于为每一位博主提供一个展示自我、互动交流的绝佳平台。"
         },
         {
