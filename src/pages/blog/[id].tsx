@@ -197,7 +197,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                 </div>
 
                 <div className="mt-8">
-                    <CC title={post.title} author={post.author} id={post.id} />
+                    <CC title={post.title || ''} author={post.author || ''} id={post.id || ''} />
                 </div>
 
                 {post.tag && (
