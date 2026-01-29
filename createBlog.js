@@ -60,9 +60,9 @@ description: '博文的简介'
       const blogfile = blogFilePath; // 确保定义了 blogfile 变量
       if (vscode) {
         const { spawn } = require('child_process');
-        // 使用 spawn 并设置 shell: false 来避免命令注入
+        // 使用 spawn 并设置 shell: true 以便正确执行 .cmd 文件
         const child = spawn('code', [blogfile], {
-          shell: false,
+          shell: true,
           stdio: 'inherit'
         });
 
