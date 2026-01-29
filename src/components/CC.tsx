@@ -1,9 +1,15 @@
 import Link from 'next/link';
 
-export default function CC () {
+interface CCProps {
+    title: string;
+    author: string;
+    id: string;
+}
+
+export default function CC({ title, author, id }: CCProps) {
     return(
-        <blockquote className={'border-l-4 border-gray-400 pl-4 italic my-4 text-gray-600 dark:text-gray-300'}>
-            <p className={'text-sm'}>
+        <blockquote className={'border-l-4 border-gray-400 pl-4 my-4 text-sm text-gray-600 dark:text-gray-300'}>
+            <p className={'mb-2'}>
   本文为原创文章，遵循:{' '}
   <Link
     href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1"
@@ -12,7 +18,12 @@ export default function CC () {
     className="text-primary hover:text-primary-hover rainbow_hover"
   >
     CC BY-NC-SA 4.0
-  </Link>版权协议，转载请附上原文出处链接和本声明。
+  </Link>版权协议。
+</p>
+            <p className="text-xs space-y-1">
+  <span>标题：{title}</span><br />
+  <span>作者：{author}</span><br />
+  <span>链接：https://www.suiyan.cc/blog/{id}</span>
 </p>
         </blockquote>
 
