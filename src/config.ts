@@ -158,6 +158,11 @@ const config: Config = {
             "site_description": "每一个博客，都是精神的驿站。我们不同行，但彼此照亮。在此驻足，便积蓄前行的力量。"
         },
         {
+            "site_name": "中文独立博客导航",
+            "site_url": "https://www.ygz.ink/",
+            "site_description": "收录优质中文独立博客，探索网络世界的个性表达与深度思考，为您提供聚合平台、博客目录和个人博客资源。"
+        },
+        {
             "site_name": "个站商店",
             "site_url": "https://storeweb.cn/",
             "site_description": "一个精致的，带社交元素的个人网站发布平台，博客收录网站"
