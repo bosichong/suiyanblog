@@ -148,6 +148,11 @@ const config: Config = {
             "site_description": "聚合优秀的个人博客，发掘优质的个人博客文章和内容。"
         },
         {
+            "site_name": "BlogsClub",
+            "site_url": "https://www.blogsclub.org/",
+            "site_description": "致力于为每一位博主提供一个展示自我、互动交流的绝佳平台。"
+        },
+        {
             "site_name": "个站商店",
             "site_url": "https://storeweb.cn/",
             "site_description": "一个精致的，带社交元素的个人网站发布平台，博客收录网站"
