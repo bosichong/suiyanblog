@@ -153,6 +153,11 @@ const config: Config = {
             "site_description": "致力于为每一位博主提供一个展示自我、互动交流的绝佳平台。"
         },
         {
+            "site_name": "若梦博客",
+            "site_url": "https://www.rmbk.cc/",
+            "site_description": "每一个博客，都是精神的驿站。我们不同行，但彼此照亮。在此驻足，便积蓄前行的力量。"
+        },
+        {
             "site_name": "个站商店",
             "site_url": "https://storeweb.cn/",
             "site_description": "一个精致的，带社交元素的个人网站发布平台，博客收录网站"
