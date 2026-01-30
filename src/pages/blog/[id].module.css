@@ -63,6 +63,11 @@
     color: var(--color-text-primary);
 }
 
+.blog_post_content a {
+    text-decoration: underline;
+    color: var(--color-primary);
+}
+
 /* Paragraphs */
 .blog_post_content p {
     margin-bottom: var(--space-6);
@@ -136,14 +141,14 @@
     font-weight: normal;
 }
 
-/* 段落首字下沉效果 */
-.blog_post_content p:first-of-type::first-letter {
+/* 段落首字下沉效果 - 只对正文的第一个段落 */
+.blog_post_content > p:first-of-type:first-child::first-letter {
     font-size: 3em;
     font-weight: 700;
     float: left;
     line-height: 1;
     margin-right: 0.1em;
-    color: var(--color-primary);
+    color: #ff6600;
     text-transform: uppercase;
 }
 
@@ -154,7 +159,7 @@
     float: left;
     line-height: 1;
     margin-right: 0.1em;
-    color: var(--color-primary);
+    color: #ff6600;
     text-transform: uppercase;
 }
 
@@ -550,7 +555,6 @@
 /* 脚注样式 */
 .blog_post_content sup.footnote-ref a {
     color: var(--color-primary);
-    text-decoration: none;
     font-size: 0.8em;
     vertical-align: super;
 }
@@ -619,41 +623,37 @@
 }
 
 /* Links */
-.blog_post_content > p > a,
-.blog_post_content > li > a,
-.blog_post_content > td > a,
-.blog_post_content > th > a,
-.blog_post_content > div > a,
-.blog_post_content > a:not(.no-underline) {
+:not(:where(.not *)) .blog_post_content > p > a,
+:not(:where(.not *)) .blog_post_content > li > a,
+:not(:where(.not *)) .blog_post_content > td > a,
+:not(:where(.not *)) .blog_post_content > th > a,
+:not(:where(.not *)) .blog_post_content > div > a,
+:not(:where(.not *)) .blog_post_content > a:not(.no-underline) {
     color: var(--color-primary) !important;
-    -webkit-text-decoration: underline !important;
-    text-decoration: underline !important;
-    text-decoration-thickness: 1px !important;
-    text-decoration-line: underline !important;
-    text-underline-offset: 2px !important;
+    border-bottom: 1px solid var(--color-primary) !important;
     transition: all 0.2s ease;
     position: relative !important;
     padding-right: 1.5em !important;
     display: inline !important;
 }
 
-.blog_post_content > p > a:hover,
-.blog_post_content > li > a:hover,
-.blog_post_content > td > a:hover,
-.blog_post_content > th > a:hover,
-.blog_post_content > div > a:hover,
-.blog_post_content > a:not(.no-underline):hover {
+:not(:where(.not *)) .blog_post_content > p > a:hover,
+:not(:where(.not *)) .blog_post_content > li > a:hover,
+:not(:where(.not *)) .blog_post_content > td > a:hover,
+:not(:where(.not *)) .blog_post_content > th > a:hover,
+:not(:where(.not *)) .blog_post_content > div > a:hover,
+:not(:where(.not *)) .blog_post_content > a:not(.no-underline):hover {
     color: var(--color-primary-hover) !important;
-    text-decoration-thickness: 2px !important;
+    border-bottom-width: 2px !important;
 }
 
 /* 右侧箭头图标 */
-.blog_post_content > p > a::after,
-.blog_post_content > li > a::after,
-.blog_post_content > td > a::after,
-.blog_post_content > th > a::after,
-.blog_post_content > div > a::after,
-.blog_post_content > a:not(.no-underline)::after {
+:not(:where(.not *)) .blog_post_content > p > a::after,
+:not(:where(.not *)) .blog_post_content > li > a::after,
+:not(:where(.not *)) .blog_post_content > td > a::after,
+:not(:where(.not *)) .blog_post_content > th > a::after,
+:not(:where(.not *)) .blog_post_content > div > a::after,
+:not(:where(.not *)) .blog_post_content > a:not(.no-underline)::after {
     content: '→' !important;
     position: absolute !important;
     right: 0.2em !important;
@@ -666,12 +666,12 @@
     color: var(--color-primary-hover) !important;
 }
 
-.blog_post_content > p > a:hover::after,
-.blog_post_content > li > a:hover::after,
-.blog_post_content > td > a:hover::after,
-.blog_post_content > th > a:hover::after,
-.blog_post_content > div > a:hover::after,
-.blog_post_content > a:not(.no-underline):hover::after {
+:not(:where(.not *)) .blog_post_content > p > a:hover::after,
+:not(:where(.not *)) .blog_post_content > li > a:hover::after,
+:not(:where(.not *)) .blog_post_content > td > a:hover::after,
+:not(:where(.not *)) .blog_post_content > th > a:hover::after,
+:not(:where(.not *)) .blog_post_content > div > a:hover::after,
+:not(:where(.not *)) .blog_post_content > a:not(.no-underline):hover::after {
     opacity: 1 !important;
     right: 0 !important;
 }
