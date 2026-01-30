@@ -21,9 +21,9 @@ export default function CC({ title, author, id }: CCProps) {
   </Link>版权协议。
 </p>
             <p className="text-xs space-y-1">
-  <span>标题：{title}</span><br />
-  <span>作者：{author}</span><br />
-  <span>链接：https://www.suiyan.cc/blog/{id}</span>
+  {/* <span>标题：{title}</span><br />
+  <span>作者：{author}</span><br /> */}
+  <span>本文链接：https://www.suiyan.cc/blog/{id}</span>
 </p>
         </blockquote>
 
