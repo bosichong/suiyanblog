@@ -28,7 +28,7 @@ const sponsorConfig = {
     // 赞赏历史记录
     records: [
         {
-            name: "熬夜可乐熊",
+            name: "熬夜可乐xiong",
             amount: "¥6.66",
             date: "2026-01-02",
             message: "新年快乐！"
@@ -49,7 +49,7 @@ const sponsorConfig = {
             name: "匿名",
             amount: "¥18.88",
             date: "2025-01-05",
-            message: "你的文章帮我解决了一个大问题，感谢！"
+            message: "支持!"
         },
         {
             name: "豆子",
@@ -58,10 +58,10 @@ const sponsorConfig = {
             message: "感谢博主分享"
         },
         {
-            name: "Zzxl",
-            amount: "¥9.99",
+            name: "Zzxlb",
+            amount: "¥1.99",
             date: "2024-11-08",
-            message: "啊哈，支持一下"
+            message: "...123"
         }
     ] as SponsorRecord[]
 };
