@@ -16,6 +16,7 @@ import readingTime from 'reading-time';
 import type { Post } from '../../types';
 import CustomLink from '@/components/Link';
 import config from '@/config';
+import ArticleStats from '@/components/ArticleStats';
 
 // 动态导入 Giscus 组件以延迟加载
 const Giscus = dynamic(() => import('@giscus/react'), {
@@ -179,6 +180,9 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                                 {formatDate(post.time || '')}
                             </time>
                         </div>
+                        <div className="flex items-center gap-2">
+                            <ArticleStats slug={`/blog/${post.id}`} mode="views" />
+                        </div>
                     </div>
                 </header>
 
@@ -253,31 +257,37 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                 </nav>
 
                 <div className="mt-8 py-4 text-center border-t border-border">
-                    <div className="flex items-center justify-center gap-8">
-                        {/* 评论按钮 */}
-                        <div className="relative group inline-block">
-                            <button
-                                onClick={() => setShowComments(!showComments)}
-                                className="text-text-secondary hover:text-text-dark"
-                                aria-label={showComments ? "隐藏评论" : "显示评论"}
-                            >
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
-                                </svg>
-                                {/* 评论数角标 */}
-                                {commentCount > 0 && (
-                                    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-semibold">
-                                        {commentCount}
-                                    </span>
-                                )}
-                            </button>
-                            {/* Hover 提示 */}
-                            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-text-primary text-bg-content text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                                英雄请留步！欢迎点击图标，留言交流！
+                    <div className="flex items-center justify-between">
+                        {/* 左侧：评论和喜欢按钮 */}
+                        <div className="flex items-center justify-center gap-6">
+                            {/* 评论按钮 */}
+                            <div className="relative group inline-block">
+                                <button
+                                    onClick={() => setShowComments(!showComments)}
+                                    className="text-text-secondary hover:text-text-dark"
+                                    aria-label={showComments ? "隐藏评论" : "显示评论"}
+                                >
+                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                                    </svg>
+                                    {/* 评论数角标 */}
+                                    {commentCount > 0 && (
+                                        <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-semibold">
+                                            {commentCount}
+                                        </span>
+                                    )}
+                                </button>
+                                {/* Hover 提示 */}
+                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-text-primary text-bg-content text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                    英雄请留步！欢迎点击图标，留言交流！
+                                </div>
                             </div>
+
+                            {/* 喜欢按钮 */}
+                            <ArticleStats slug={`/blog/${post.id}`} />
                         </div>
 
-                        {/* 赞赏按钮 */}
+                        {/* 右侧：赞赏按钮 */}
                         <div className="relative group inline-block">
                             <button aria-label="赞赏作者" className="text-text-secondary hover:text-text-dark">
                                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -288,7 +298,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                                     <line x1="14" y1="1" x2="14" y2="4" />
                                 </svg>
                             </button>
-                            <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-48 pointer-events-none">
+                            <div className="absolute right-0 top-full mt-2 w-48 pointer-events-none">
                                 <img
                                     src="https://www.suiyan.cc/assets/images/zs.jpg"
                                     alt="赞赏码"

@@ -11,7 +11,10 @@
     "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
+    "@fingerprintjs/fingerprintjs": "^5.0.1",
     "@giscus/react": "^3.0.0",
+    "@supabase/ssr": "^0.8.0",
+    "@supabase/supabase-js": "^2.93.3",
     "gray-matter": "^4.0.3",
     "next": "^16.0.7",
     "react": "^18.3.1",
