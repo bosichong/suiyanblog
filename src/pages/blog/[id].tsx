@@ -88,6 +88,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
     const stats = readingTime(post.content || '');
     const sanitizedContent = sanitizeHtml(post.content || '');
     const [showComments, setShowComments] = useState(false);
+    const [commentCount, setCommentCount] = useState(0);
 
     return (
         <Layout>
@@ -242,6 +243,12 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                     <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
                                 </svg>
+                                {/* 评论数角标 */}
+                                {commentCount > 0 && (
+                                    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-semibold">
+                                        {commentCount}
+                                    </span>
+                                )}
                             </button>
                             {/* Hover 提示 */}
                             <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-text-primary text-bg-content text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
@@ -283,9 +290,12 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                         lang={giscusConfig.lang}
                         strict="0"
                         reactionsEnabled="1"
-                        emitMetadata="0"
+                        emitMetadata="1"
                         inputPosition="bottom"
                         theme="light"
+                        onComment={() => {
+                            setCommentCount(prev => prev + 1);
+                        }}
                         />
                     )}
                 </section>
