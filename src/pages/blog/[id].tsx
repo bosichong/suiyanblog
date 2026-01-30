@@ -90,6 +90,23 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
     const [showComments, setShowComments] = useState(false);
     const [commentCount, setCommentCount] = useState(0);
 
+    // 监听 Giscus 的消息事件来获取评论数
+    React.useEffect(() => {
+        const handleMessage = (event: MessageEvent) => {
+            if (event.origin !== 'https://giscus.app') return;
+            if (!(typeof event.data === 'object' && event.data.giscus)) return;
+
+            const giscusData = event.data.giscus;
+
+            if (giscusData.discussion && giscusData.discussion.totalCommentCount !== undefined) {
+                setCommentCount(giscusData.discussion.totalCommentCount);
+            }
+        };
+
+        window.addEventListener('message', handleMessage);
+        return () => window.removeEventListener('message', handleMessage);
+    }, []);
+
     return (
         <Layout>
             <Head>
@@ -279,7 +296,8 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                 </div>
 
                 <section className="mt-8">
-                    {showComments && (
+                    {/* Giscus 组件始终渲染，但根据 showComments 控制显示/隐藏 */}
+                    <div className={showComments ? '' : 'hidden'}>
                         <Giscus
                             key={post.id}
                             repo={giscusConfig.repo as `${string}/${string}`}
@@ -293,11 +311,8 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                         emitMetadata="1"
                         inputPosition="bottom"
                         theme="light"
-                        onComment={() => {
-                            setCommentCount(prev => prev + 1);
-                        }}
                         />
-                    )}
+                    </div>
                 </section>
 
                 <PostList
