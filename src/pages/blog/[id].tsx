@@ -17,6 +17,8 @@ import type { Post } from '../../types';
 import CustomLink from '@/components/Link';
 import config from '@/config';
 import ArticleStats from '@/components/ArticleStats';
+import SponsorButton from '@/components/SponsorButton';
+import CommentButton from '@/components/CommentButton';
 import styles from './[id].module.css';
 
 // 动态导入 Giscus 组件以延迟加载
@@ -262,42 +264,18 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                         {/* 左侧：评论和喜欢按钮 */}
                         <div className="flex items-center justify-center gap-6">
                             {/* 评论按钮 */}
-                            <div className="relative group inline-block">
-                                <button
-                                    onClick={() => setShowComments(!showComments)}
-                                    className="text-text-secondary hover:text-text-dark"
-                                    aria-label={showComments ? "隐藏评论" : "显示评论"}
-                                >
-                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
-                                    </svg>
-                                    {/* 评论数角标 */}
-                                    {commentCount > 0 && (
-                                        <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-semibold">
-                                            {commentCount}
-                                        </span>
-                                    )}
-                                </button>
-                                {/* Hover 提示 */}
-                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-text-primary text-bg-content text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                                    英雄请留步！欢迎点击图标，留言交流！
-                                </div>
-                            </div>
+                            <CommentButton
+                                showComments={showComments}
+                                commentCount={commentCount}
+                                onToggle={() => setShowComments(!showComments)}
+                            />
 
                             {/* 喜欢按钮 */}
                             <ArticleStats slug={`/blog/${post.id}`} />
                         </div>
 
                         {/* 右侧：赞赏按钮 */}
-                        <Link href="/Sponsors" className="inline-block text-text-secondary hover:text-text-dark" aria-label="赞赏作者">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
-                                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-                                <line x1="6" y1="1" x2="6" y2="4" />
-                                <line x1="10" y1="1" x2="10" y2="4" />
-                                <line x1="14" y1="1" x2="14" y2="4" />
-                            </svg>
-                        </Link>
+                        <SponsorButton />
                     </div>
                 </div>
 

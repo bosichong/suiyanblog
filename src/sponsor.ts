@@ -35,13 +35,13 @@ const sponsorConfig = {
         },
         {
             name: "密斯特Li",
-            amount: "¥8.88",
+            amount: "¥1.8",
             date: "2025-11-20",
             message: "坚持写博客不容易，支持一下"
         },
         {
             name: "yyf520",
-            amount: "¥3.33",
+            amount: "¥1.23",
             date: "2025-05-12",
             message: "加油"
         },
@@ -53,7 +53,7 @@ const sponsorConfig = {
         },
         {
             name: "豆子",
-            amount: "¥5.20",
+            amount: "¥5",
             date: "2024-12-15",
             message: "感谢博主分享"
         },

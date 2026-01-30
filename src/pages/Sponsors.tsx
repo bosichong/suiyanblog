@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import Head from 'next/head';
+import Breadcrumb from '../components/Breadcrumb';
 import sponsorConfig from '../sponsor';
 import config from '../config';
 
@@ -14,11 +15,7 @@ function Sponsors() {
 
             <article className="w-full">
                 {/* 面包屑导航 */}
-                <div className="mb-8 text-sm text-text-secondary">
-                    <span>首页</span>
-                    <span className="mx-2">/</span>
-                    <span className="text-text-primary">赞赏</span>
-                </div>
+                <Breadcrumb type="sponsors" />
 
                 {/* 页面标题 */}
                 <h1 className="text-2xl font-semibold mb-8 text-text-primary">

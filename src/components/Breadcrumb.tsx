@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 interface BreadcrumbProps {
-    type: 'home' | 'archives' | 'tags' | 'tag' | 'search' | 'friends' | 'page' | 'blog';
+    type: 'home' | 'archives' | 'tags' | 'tag' | 'search' | 'friends' | 'page' | 'blog' | 'sponsors';
     title?: string;
     tag?: string;
     pageNum?: number;
@@ -40,6 +40,9 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ type, title, tag, pageNum }) =>
                 break;
             case 'blog':
                 items.push({ label: title || '文章', href: '' });
+                break;
+            case 'sponsors':
+                items.push({ label: '赞赏', href: '/Sponsors' });
                 break;
             default:
                 return null;
