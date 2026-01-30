@@ -33,14 +33,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(400).json({ error: 'Slug and fingerprint required' })
     }
 
-    const { data } = await supabaseAdmin
-      .from('user_likes')
-      .select('id')
-      .eq('slug', slug)
-      .eq('fingerprint', fingerprint)
-      .maybeSingle()
+    // 并行查询：当前用户是否喜欢 + 文章总喜欢数
+    const [userLikeData, statsData] = await Promise.all([
+      supabaseAdmin
+        .from('user_likes')
+        .select('id')
+        .eq('slug', slug)
+        .eq('fingerprint', fingerprint)
+        .maybeSingle(),
+      supabaseAdmin
+        .from('article_stats')
+        .select('like_count')
+        .eq('slug', slug)
+        .maybeSingle()
+    ])
 
-    return res.json({ liked: !!data })
+    return res.json({
+      liked: !!userLikeData.data,
+      likes: statsData.data?.like_count || 0
+    })
   }
 
   res.setHeader('Allow', ['GET', 'POST'])
