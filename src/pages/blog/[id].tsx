@@ -98,8 +98,8 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
 
             const giscusData = event.data.giscus;
 
-            if (giscusData.discussion && giscusData.discussion.totalCommentCount !== undefined) {
-                setCommentCount(giscusData.discussion.totalCommentCount);
+            if (giscusData.discussion && giscusData.discussion.totalCount !== undefined) {
+                setCommentCount(giscusData.discussion.totalCount);
             }
         };
 
