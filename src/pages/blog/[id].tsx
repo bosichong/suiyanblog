@@ -98,8 +98,12 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
 
             const giscusData = event.data.giscus;
 
-            if (giscusData.discussion && giscusData.discussion.totalCount !== undefined) {
-                setCommentCount(giscusData.discussion.totalCount);
+            // 获取顶级评论数（不含回复）
+            const count = giscusData.discussion?.totalCommentCount ||
+                         giscusData.totalCommentCount;
+
+            if (typeof count === 'number') {
+                setCommentCount(count);
             }
         };
 
