@@ -289,24 +289,15 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                         </div>
 
                         {/* 右侧：赞赏按钮 */}
-                        <div className="relative group inline-block">
-                            <button aria-label="赞赏作者" className="text-text-secondary hover:text-text-dark">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
-                                    <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-                                    <line x1="6" y1="1" x2="6" y2="4" />
-                                    <line x1="10" y1="1" x2="10" y2="4" />
-                                    <line x1="14" y1="1" x2="14" y2="4" />
-                                </svg>
-                            </button>
-                            <div className="absolute right-0 top-full mt-2 w-48 pointer-events-none">
-                                <img
-                                    src="https://www.suiyan.cc/assets/images/zs.jpg"
-                                    alt="赞赏码"
-                                    className="w-full h-auto rounded border border-border opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-300 z-10"
-                                />
-                            </div>
-                        </div>
+                        <Link href="/Sponsors" className="inline-block text-text-secondary hover:text-text-dark" aria-label="赞赏作者">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+                                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                                <line x1="6" y1="1" x2="6" y2="4" />
+                                <line x1="10" y1="1" x2="10" y2="4" />
+                                <line x1="14" y1="1" x2="14" y2="4" />
+                            </svg>
+                        </Link>
                     </div>
                 </div>
 
