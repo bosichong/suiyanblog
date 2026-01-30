@@ -162,6 +162,11 @@ const config: Config = {
             "site_url": "https://www.ygz.ink/",
             "site_description": "收录优质中文独立博客，探索网络世界的个性表达与深度思考，为您提供聚合平台、博客目录和个人博客资源。"
         },
+                {
+            "site_name": "友链展示站",
+            "site_url": "https://peng.you/",
+            "site_description": "发现优质博客与网站,友链展示站致力于为博客作者和网站运营者提供一个简洁、现代的友情链接展示平台"
+        },
         {
             "site_name": "个站商店",
             "site_url": "https://storeweb.cn/",
