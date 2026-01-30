@@ -116,22 +116,7 @@ p {
     margin-bottom: var(--space-6);
 }
 
-/* 中文段落首行缩进 */
-.blog_post_content > p {
-    text-indent: 2em;
-}
 
-/* 中文段落首行不缩进的元素 */
-.blog_post_content > p:first-child,
-.blog_post_content > p.no-indent {
-    text-indent: 0;
-}
-
-/* 文章内容中粗体文本样式 - 添加虚线下划线 */
-.blog_post_content strong {
-    border-bottom: 1px dashed var(--border-color);
-    padding-bottom: 1px;
-}
 
 /* 列表样式 */
 ul, ol {
@@ -162,7 +147,7 @@ blockquote p {
     margin-bottom: 0;
 }
 
-/* 代码块 */
+/* 代码块 - 全局样式(非文章内容) */
 code {
     font-family: var(--font-mono);
     font-size: 0.9em;

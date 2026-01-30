@@ -10,7 +10,7 @@ def get_new_articles():
         # 获取 git status，查找新增的 md 文件
         result = subprocess.check_output(
             ['git', 'status', '--porcelain'],
-            text=True
+            encoding='utf-8'
         )
 
         new_articles = []
@@ -59,7 +59,7 @@ def main():
     try:
         status_result = subprocess.check_output(
             ['git', 'status', '--porcelain'],
-            text=True
+            encoding='utf-8'
         )
 
         # 如果工作目录有更改，则添加并提交
