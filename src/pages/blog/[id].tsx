@@ -17,6 +17,7 @@ import type { Post } from '../../types';
 import CustomLink from '@/components/Link';
 import config from '@/config';
 import ArticleStats from '@/components/ArticleStats';
+import styles from './[id].module.css';
 
 // 动态导入 Giscus 组件以延迟加载
 const Giscus = dynamic(() => import('@giscus/react'), {
@@ -186,7 +187,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                     </div>
                 </header>
 
-                <div className="blog_post_content">
+                <div className={styles.blog_post_content}>
                     <ReactMarkdown
                         remarkPlugins={[remarkGfm]}
                         rehypePlugins={[rehypeRaw]}
