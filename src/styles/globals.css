@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ==================== 覆盖 Tailwind 样式 ==================== */
+
+/* 覆盖 Tailwind preflight 对链接的 text-decoration 重置 */
+a {
+    text-decoration: underline !important;
+}
+
 /* ==================== CSS 变量系统 ==================== */
 
 :root {
@@ -22,6 +29,11 @@
     --text-tertiary: #999999;
     --text-link: #555555;
     --text-link-hover: #000000;
+
+    /* 主题颜色 */
+    --color-primary: #0066cc;
+    --color-primary-hover: #0052a3;
+    --color-primary-light: rgba(0, 102, 204, 0.1);
 
     /* 边框颜色 */
     --border-color: #CCCCCC;
@@ -116,7 +128,9 @@ p {
     margin-bottom: var(--space-6);
 }
 
-
+a {
+    text-decoration: none;
+}
 
 /* 列表样式 */
 ul, ol {
