@@ -46,6 +46,8 @@ a {
     --text-lg: 1.125em;
     --text-xl: 1.25em;
     --text-2xl: 1.5em;
+    --text-3xl: 1.875em;
+    --text-4xl: 2.25em;
 
     /* 间距 */
     --space-1: 4px;
