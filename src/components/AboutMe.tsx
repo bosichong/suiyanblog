@@ -2,7 +2,7 @@ import config from '../config';
 
 const AboutMe = () => {
   return (
-    <div className="mb-8 p-6 bg-bg-content rounded-lg border border-border">
+    <div className="mb-8 p-6 rounded-lg border border-border">
       <div className="prose dark:prose-invert max-w-none">
         <p className="text-gray-700 dark:text-gray-300 whitespace-pre-line">{config.ABOUT_ME}</p>
         <div className="mt-4 text-right">

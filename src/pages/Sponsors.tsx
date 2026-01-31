@@ -23,7 +23,7 @@ function Sponsors() {
                 </h1>
 
                 {/* 赞赏简介 */}
-                <div className="mb-8 p-6 bg-bg-content rounded-lg border border-border">
+                <div className="mb-8 p-6 rounded-lg border border-border">
                     <div className="prose prose-sm max-w-none text-text-secondary whitespace-pre-line">
                         {sponsorConfig.description}
                     </div>

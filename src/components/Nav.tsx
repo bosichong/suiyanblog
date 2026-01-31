@@ -13,7 +13,7 @@ export default function Nav() {
                 {/* 站点标题 */}
                 <Link
                     href="/"
-                    className="text-base font-normal text-text-primary no-underline hover:text-text-dark hover:underline"
+                    className="text-lg font-normal text-text-primary no-underline hover:text-text-dark hover:underline"
                     aria-label="返回首页"
                 >
                     {config.BLOG_NAME_EN}
@@ -30,7 +30,7 @@ export default function Nav() {
                             )}
                             <Link
                                 href={item.href}
-                                className="text-text-secondary hover:text-text-dark hover:underline no-underline"
+                                className="text-lg text-text-secondary hover:text-text-dark hover:underline no-underline"
                             >
                                 {item.name}
                             </Link>
