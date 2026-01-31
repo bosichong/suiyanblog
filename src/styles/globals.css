@@ -40,12 +40,12 @@ a {
     --border-link: #CCCCCC;
 
     /* 字号 */
-    --text-xs: 12px;
-    --text-sm: 14px;
-    --text-base: 16px;
-    --text-lg: 18px;
-    --text-xl: 20px;
-    --text-2xl: 24px;
+    --text-xs: 0.75em;
+    --text-sm: 0.875em;
+    --text-base: 1em;
+    --text-lg: 1.125em;
+    --text-xl: 1.25em;
+    --text-2xl: 1.5em;
 
     /* 间距 */
     --space-1: 4px;
@@ -70,7 +70,7 @@ a {
     --font-weight-semibold: 600;
 
     /* 文章列表样式变量 */
-    --list-title-size: var(--text-base);
+    --list-title-size: var(--text-lg);
     --list-title-weight: var(--font-weight-normal);
     --list-date-size: var(--text-sm);
     --list-date-color: var(--text-secondary);
