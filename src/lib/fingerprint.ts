@@ -14,8 +14,9 @@ export async function getFingerprint(): Promise<string> {
 // 确保只在浏览器环境中调用
 export function getSimpleFingerprint(): string {
   if (typeof window === 'undefined' || typeof navigator === 'undefined') {
-    // 服务端回退：使用时间戳 + 随机数
-    return `server-${Date.now()}-${Math.random().toString(36).substring(7)}`
+    // 服务端回退：返回固定值，避免 hydration 不匹配
+    // 客户端会重新调用并生成真实的 fingerprint
+    return 'server-placeholder'
   }
   
   const seed = navigator.userAgent + navigator.language + screen.width + screen.height
