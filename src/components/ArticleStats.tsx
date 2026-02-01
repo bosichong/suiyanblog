@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState, useCallback } from 'react'
-import { motion } from 'framer-motion'
 import { getFingerprint, getSimpleFingerprint } from '@/lib/fingerprint'
 
 interface ArticleStatsProps {
@@ -155,29 +154,19 @@ export default function ArticleStats({ slug, mode = 'like' }: ArticleStatsProps)
   if (mode === 'like') {
     return (
       <div className="relative group inline-block">
-        <motion.button
+        <button
           onClick={handleLike}
-          className={stats.liked ? 'text-red-500' : 'text-text-secondary'}
+          className={`transition-all duration-200 ${
+            stats.liked 
+              ? 'text-red-500' 
+              : 'text-text-secondary hover:text-text-dark'
+          }`}
           aria-label={stats.liked ? '取消喜欢' : '喜欢'}
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.9 }}
-          animate={stats.liked ? {
-            scale: 1.15,
-            rotate: 10
-          } : {
-            scale: 1,
-            rotate: 0
-          }}
-          transition={{
-            type: "spring",
-            stiffness: 400,
-            damping: 17
-          }}
         >
-          <svg
-            className="w-7 h-7"
-            fill={stats.liked ? 'currentColor' : 'none'}
-            stroke="currentColor"
+          <svg 
+            className={`w-7 h-7 transition-transform duration-200 ${stats.liked ? 'scale-110' : ''}`}
+            fill={stats.liked ? 'currentColor' : 'none'} 
+            stroke="currentColor" 
             viewBox="0 0 24 24"
             strokeWidth="2"
             strokeLinecap="round"
@@ -185,17 +174,12 @@ export default function ArticleStats({ slug, mode = 'like' }: ArticleStatsProps)
           >
             <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
           </svg>
-        </motion.button>
+        </button>
         {/* 喜欢数量徽标 */}
         {stats.likes > 0 && (
-          <motion.span
-            className="absolute -top-1 -right-2 flex items-center justify-center min-w-[18px] h-[18px] px-1 bg-red-500 text-white text-xs font-bold rounded-full"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ type: "spring", stiffness: 500, damping: 30 }}
-          >
+          <span className="absolute -top-1 -right-2 flex items-center justify-center min-w-[18px] h-[18px] px-1 bg-red-500 text-white text-xs font-bold rounded-full">
             {stats.likes > 99 ? '99+' : stats.likes}
-          </motion.span>
+          </span>
         )}
         {/* Hover 提示 */}
         <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-text-primary text-bg-content text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
@@ -221,29 +205,19 @@ export default function ArticleStats({ slug, mode = 'like' }: ArticleStatsProps)
 
       {/* 喜欢按钮 */}
       <div className="relative group inline-block">
-        <motion.button
+        <button
           onClick={handleLike}
-          className={stats.liked ? 'text-red-500' : 'text-text-secondary'}
+          className={`transition-all duration-200 ${
+            stats.liked 
+              ? 'text-red-500' 
+              : 'text-text-secondary hover:text-text-dark'
+          }`}
           aria-label={stats.liked ? '取消喜欢' : '喜欢'}
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.9 }}
-          animate={stats.liked ? {
-            scale: 1.15,
-            rotate: 10
-          } : {
-            scale: 1,
-            rotate: 0
-          }}
-          transition={{
-            type: "spring",
-            stiffness: 400,
-            damping: 17
-          }}
         >
-          <svg
-            className="w-7 h-7"
-            fill={stats.liked ? 'currentColor' : 'none'}
-            stroke="currentColor"
+          <svg 
+            className={`w-7 h-7 transition-transform duration-200 ${stats.liked ? 'scale-110' : ''}`}
+            fill={stats.liked ? 'currentColor' : 'none'} 
+            stroke="currentColor" 
             viewBox="0 0 24 24"
             strokeWidth="2"
             strokeLinecap="round"
@@ -251,17 +225,12 @@ export default function ArticleStats({ slug, mode = 'like' }: ArticleStatsProps)
           >
             <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
           </svg>
-        </motion.button>
+        </button>
         {/* 喜欢数量徽标 */}
         {stats.likes > 0 && (
-          <motion.span
-            className="absolute -top-1 -right-2 flex items-center justify-center min-w-[18px] h-[18px] px-1 bg-red-500 text-white text-xs font-bold rounded-full"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ type: "spring", stiffness: 500, damping: 30 }}
-          >
+          <span className="absolute -top-1 -right-2 flex items-center justify-center min-w-[18px] h-[18px] px-1 bg-red-500 text-white text-xs font-bold rounded-full">
             {stats.likes > 99 ? '99+' : stats.likes}
-          </motion.span>
+          </span>
         )}
         {/* Hover 提示 */}
         <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-text-primary text-bg-content text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">

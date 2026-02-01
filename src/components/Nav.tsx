@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import config from '@/config';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 
 export default function Nav() {
     return (
@@ -11,13 +10,9 @@ export default function Nav() {
             role="navigation"
             aria-label="主导航"
         >
-            {/* Logo 动画 */}
-            <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-            >
-                <Link href="/" aria-label="返回首页" title={config.BLOG_NAME}>
+            {/* Logo */}
+            <Link href="/" aria-label="返回首页" title={config.BLOG_NAME}>
+                
                     <Image
                         src={`/${config.PROFILE_IMAGE}`}
                         alt={config.BLOG_NAME}
@@ -25,8 +20,8 @@ export default function Nav() {
                         height={48}
                         className="rounded-full my-2"
                     />
-                </Link>
-            </motion.div>
+                
+            </Link>
 
             {/* 导航菜单 */}
             <div className="flex items-center text-sm text-text-secondary">
@@ -37,18 +32,12 @@ export default function Nav() {
                                 /
                             </span>
                         )}
-                        <motion.div
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.3, ease: "easeOut", delay: index * 0.05 }}
+                        <Link
+                            href={item.href}
+                            className="text-lg text-text-secondary hover:text-text-dark hover:underline no-underline"
                         >
-                            <Link
-                                href={item.href}
-                                className="text-lg text-text-secondary hover:text-text-dark hover:underline no-underline"
-                            >
-                                {item.name}
-                            </Link>
-                        </motion.div>
+                            {item.name}
+                        </Link>
                     </React.Fragment>
                 ))}
             </div>

@@ -6,7 +6,6 @@ import PostCard from '../components/PostCard';
 import AboutMe from '../components/AboutMe';
 import { Post } from '../types';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 
 const postsPerPage = config.POSTS_PER_PAGE;
 
@@ -67,31 +66,11 @@ function Home({ currentPosts }: { currentPosts: Post[] }) {
         </div>
 
         <div className="w-full">
-          <motion.div
-            className="flex flex-col gap-4"
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: {},
-              visible: {
-                transition: {
-                  staggerChildren: 0.04 // 每个子元素之间延迟0.08秒
-                }
-              }
-            }}
-          >
-            {currentPosts.map((post, index) => (
-              <motion.div
-                key={post.id}
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease: "easeOut" } }
-                }}
-              >
-                <PostCard post={post} />
-              </motion.div>
+          <div className="flex flex-col gap-4">
+            {currentPosts.map((post) => (
+              <PostCard key={post.id} post={post} />
             ))}
-          </motion.div>
+          </div>
           <div className="mt-8 text-center">
             <Link href="/Archives" className="text-primary hover:text-primary-dark transition-colors duration-200">
               更多文章
