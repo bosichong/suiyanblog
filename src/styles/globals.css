@@ -211,7 +211,7 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: var(--space-6) 0;
+    margin: var(--space-4) 0;
 }
 
 /* 分隔线 */
