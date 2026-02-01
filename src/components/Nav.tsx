@@ -12,13 +12,15 @@ export default function Nav() {
         >
             {/* Logo */}
             <Link href="/" aria-label="返回首页" title={config.BLOG_NAME}>
-                <Image
-                    src={`/${config.PROFILE_IMAGE}`}
-                    alt={config.BLOG_NAME}
-                    width={48}
-                    height={48}
-                    className="rounded-full"
-                />
+                <div className="relative w-12 h-12">
+                    <Image
+                        src={`/${config.PROFILE_IMAGE}`}
+                        alt={config.BLOG_NAME}
+                        fill
+                        className="rounded-full object-cover"
+                        sizes="48px"
+                    />
+                </div>
             </Link>
 
             {/* 导航菜单 */}

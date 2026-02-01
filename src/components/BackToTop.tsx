@@ -4,10 +4,15 @@ import React, { useState, useEffect } from 'react';
 import { ArrowUpIcon } from '@/components/icons/ArrowUpIcon';
 
 const BackToTop = () => {
+    // 初始化为 false，确保服务端和客户端渲染一致
     const [isVisible, setIsVisible] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
 
-    // 监听滚动事件，控制按钮显示/隐藏
+    // 组件挂载后再启用滚动监听
     useEffect(() => {
+        setIsMounted(true);
+        
+        // 初始检查滚动位置
         const toggleVisibility = () => {
             if (window.scrollY > 500) {
                 setIsVisible(true);
@@ -15,6 +20,9 @@ const BackToTop = () => {
                 setIsVisible(false);
             }
         };
+
+        // 立即检查一次
+        toggleVisibility();
 
         window.addEventListener('scroll', toggleVisibility);
 
@@ -30,6 +38,11 @@ const BackToTop = () => {
             behavior: 'smooth'
         });
     };
+
+    // 组件未挂载前不渲染，避免水合不匹配
+    if (!isMounted) {
+        return null;
+    }
 
     return (
         <div className={`fixed bottom-24 right-5 z-50 transition-all duration-300 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
