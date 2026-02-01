@@ -1,6 +1,4 @@
 import getSortedPostsData from '../utils/parseMd';
-import PostCard from '../components/PostCard';
-import { Post } from '../types';
 import Link from 'next/link';
 
 const postsPerPage = 25;
@@ -16,12 +14,16 @@ export async function getStaticProps() {
   };
 }
 
-function Test({ currentPosts }: { currentPosts: Post[] }) {
+function Test({ currentPosts }: { currentPosts: any[] }) {
   return (
     <div className="w-full">
       <div className="flex flex-col gap-4">
         {currentPosts.map((post) => (
-          <PostCard key={post.id} post={post} />
+          <div key={post.id} className="border-b border-border py-4">
+            <Link href={`/blog/${post.id}`} className="text-lg hover:text-text-dark">
+              {post.title}
+            </Link>
+          </div>
         ))}
       </div>
       <div className="mt-8 text-center">
