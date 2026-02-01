@@ -14,8 +14,8 @@ const config: Config = {
     // 博客英文描述
     "BLOG_DESCRIPTION_EN": "You see see you , This one day day di.",
     // 关于我简介
-    "ABOUT_ME": "「碎言」取自碎言片语。博客始于2017年，suiyan.cc 注册于2020年。自研博客与主题，是对表达自由的坚持。阅读，写作，复盘，终生学习——将固执留给有意义的事。",
-    "POSTS_PER_PAGE": 16,
+    "ABOUT_ME": "坚持深度阅读，持续写作输出，复盘技术实践。以终生学习对抗不确定性，把固执与坚持，All in 在值得的事情上。",
+    "POSTS_PER_PAGE": 25,
     // 博客标签
     "BLOG_TYPED": [
         "积硅步以致千里",
@@ -24,7 +24,7 @@ const config: Config = {
         "其实已经甩你很远了！"
     ],
     // 元描述，用于搜索引擎优化
-    "META_DESCRIPTION": "记录并分享个人学习编程的过程和笔记，记录一些平淡的日常。",
+    "META_DESCRIPTION": "坚持深度阅读，持续写作输出，复盘技术实践。以终生学习对抗不确定性，把固执与坚持，All in 在值得的事情上。",
     // 元关键词，用于搜索引擎优化
     "META_KEYWORDS": "Python,JavaScript,程序员,Godot,编程,技术博客,学习笔记,碎言",
     // 头像图片路径
