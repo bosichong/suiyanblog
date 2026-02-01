@@ -7,15 +7,17 @@ interface LinkProps {
     className?: string;
     target?: string;
     rel?: string;
+    underline?: boolean;
 }
 
-const CustomLink = ({ href, children, className = '', target, rel }: LinkProps) => {
+const CustomLink = ({ href, children, className = '', target, rel, underline = false }: LinkProps) => {
     const isExternal = href.startsWith('http');
+    const underlineClass = underline ? 'underline' : 'hover:underline';
 
     return (
         <Link
             href={href}
-            className={`text-text-link hover:text-text-dark hover:underline no-underline ${className}`}
+            className={`text-text-link hover:text-text-dark ${underlineClass} ${className}`}
             target={target || (isExternal ? '_blank' : undefined)}
             rel={rel || (isExternal ? 'noopener noreferrer' : undefined)}
         >
