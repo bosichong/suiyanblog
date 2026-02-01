@@ -4,7 +4,7 @@ import SnsIcons from './SnsIcons';
 
 export default function Footer() {
     return (
-        <footer className="mt-16 mb-8">
+        <footer className="mt-8 mb-8">
             <div className="flex flex-col items-center gap-4 text-text-secondary">
                 {/* SNS 图标 */}
                 <SnsIcons />

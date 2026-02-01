@@ -3,26 +3,24 @@ import Layout from '../components/Layout';
 import Head from 'next/head';
 import config from '../config';
 import PostCard from '../components/PostCard';
-import Pagination from '../components/Pagination';
 import AboutMe from '../components/AboutMe';
 import { Post } from '../types';
+import Link from 'next/link';
 
 const postsPerPage = config.POSTS_PER_PAGE;
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   const currentPosts = allPostsData.slice(0, postsPerPage);
-  const totalPages = Math.ceil(allPostsData.length / postsPerPage);
 
   return {
     props: {
       currentPosts,
-      totalPages,
     },
   };
 }
 
-function Home({ currentPosts, totalPages }: { currentPosts: Post[]; totalPages: number }) {
+function Home({ currentPosts }: { currentPosts: Post[] }) {
   return (
       <Layout>
         <Head>
@@ -73,11 +71,11 @@ function Home({ currentPosts, totalPages }: { currentPosts: Post[]; totalPages: 
               <PostCard key={post.id} post={post} />
             ))}
           </div>
-          <Pagination
-            currentPage={1}
-            totalPages={totalPages}
-            basePath=""
-          />
+          <div className="mt-8 text-center">
+            <Link href="/Archives" className="text-primary hover:text-primary-dark transition-colors duration-200">
+              更多文章
+            </Link>
+          </div>
         </div>
       </Layout>
   );
