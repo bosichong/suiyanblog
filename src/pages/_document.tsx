@@ -25,6 +25,7 @@ export default function Document() {
             <body>
                 <Main />
                 <NextScript />
+                <script data-goatcounter="https://suiyan.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
             </body>
         </Html>
     );

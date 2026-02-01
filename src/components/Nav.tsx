@@ -24,7 +24,7 @@ export default function Nav() {
             {/* 导航菜单 */}
             <div className="flex items-center text-sm text-text-secondary">
                 {config.menuItems.map((item, index) => (
-                    <React.Fragment key={`${item.name}-${index}`}>
+                    <React.Fragment key={item.name}>
                         {index > 0 && (
                             <span className="mx-2 text-border" aria-hidden="true">
                                 /
