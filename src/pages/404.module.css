@@ -70,8 +70,8 @@
 
 .homeButton {
     padding: var(--space-3) var(--space-6);
-    background-color: var(--text-link);
-    color: var(--bg-content);
+    background: none;
+    color: var(--text-primary);
     text-decoration: none;
     border-radius: var(--radius-sm);
     font-size: var(--text-base);

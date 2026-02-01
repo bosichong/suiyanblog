@@ -8,8 +8,11 @@ interface PostListItemProps {
     formatDate?: (date: string) => string;
 }
 
+// 默认格式化函数，提取到组件外部避免每次渲染创建新函数
+const defaultFormatDate = (date: string): string => date;
+
 const PostListItem: React.FC<PostListItemProps> = ({ id, title, time, formatDate }) => {
-    const formatDateFn = formatDate || ((date: string) => date);
+    const formatDateFn = formatDate || defaultFormatDate;
 
     return (
         <div className="post-list-item">

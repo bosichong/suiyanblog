@@ -26,7 +26,7 @@ export default function Custom404() {
                     就像人生一样，有时候你也会走到死胡同。<br />
                     别担心，这只是个页面，不是你的人生。
                 </p>
-                <Link href="/" className={styles.homeButton}>
+                <Link href="/" className={`${styles.homeButton} my-2`}>
                     回到首页
                 </Link>
             </div>
