@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import CustomLink from './Link';
 
 interface PostListItemProps {
@@ -16,13 +16,9 @@ const defaultFormatDate = (date: string): string => {
 };
 
 const PostListItem: React.FC<PostListItemProps> = ({ id, title, time, formatDate }) => {
-    const [displayTime, setDisplayTime] = useState<string>(defaultFormatDate(time));
-    
-    useEffect(() => {
-        // 客户端挂载后再应用自定义格式化
-        const formatDateFn = formatDate || defaultFormatDate;
-        setDisplayTime(formatDateFn(time));
-    }, [time, formatDate]);
+    // 直接使用传入的 formatDate 或默认格式，避免水合不匹配
+    const formatDateFn = formatDate || defaultFormatDate;
+    const displayTime = formatDateFn(time);
 
     return (
         <div className="post-list-item">

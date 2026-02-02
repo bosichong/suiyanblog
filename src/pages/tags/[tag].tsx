@@ -6,7 +6,7 @@ import PostListItem from '../../components/PostListItem';
 import CustomLink from '../../components/Link';
 import { Post } from '../../types';
 import config from '../../config';
-import formatDate from '../../utils/formatDate';
+import dayjs from 'dayjs';
 
 export async function getStaticPaths() {
     const allPostsData = getSortedPostsData();
@@ -119,7 +119,7 @@ const TagDetail = ({ tag, originalTag, tagPosts, postsByYear }: { tag: string; o
                                                 id={post.id}
                                                 title={post.title || ''}
                                                 time={post.time || ''}
-                                                formatDate={formatDate}
+                                                formatDate={(date) => dayjs(date).format('MM/DD')}
                                             />
                                         </li>
                                     ))}
