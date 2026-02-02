@@ -4,10 +4,11 @@ import Link from 'next/link'
 
 export default function SponsorButton() {
     return (
-        <div className="relative group inline-block">
+        <div className="relative inline-block">
             <Link
                 href="/Sponsors"
                 className="inline-block text-text-secondary hover:text-text-dark transition-colors duration-200"
+                title="赞赏作者"
                 aria-label="赞赏作者"
             >
                 <svg
@@ -28,10 +29,6 @@ export default function SponsorButton() {
                     <line x1="14" y1="1" x2="14" y2="4" />
                 </svg>
             </Link>
-            {/* Hover 提示 */}
-            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-text-primary text-bg-content text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                赞赏作者
-            </div>
         </div>
     )
 }

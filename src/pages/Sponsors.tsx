@@ -24,7 +24,7 @@ function Sponsors() {
 
                 {/* 赞赏简介 */}
                 <div className="mb-8 p-6 rounded-lg border border-border">
-                    <div className="prose prose-sm max-w-none text-text-secondary whitespace-pre-line">
+                    <div className="max-w-none text-text-secondary whitespace-pre-line">
                         {sponsorConfig.description}
                     </div>
                 </div>
