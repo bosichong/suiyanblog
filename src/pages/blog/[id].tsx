@@ -5,7 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import getSortedPostsData from "../../utils/parseMd";
 import { sanitizeHtml } from "../../utils/sanitizeHtml";
 import Layout from "../../components/Layout";
-import formatDate from "../../utils/formatDate";
+import dayjs from 'dayjs';
 import dynamic from 'next/dynamic';
 import Head from "next/head";
 import Link from 'next/link';
@@ -180,7 +180,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                         </div>
                         <div className="flex items-center gap-2">
                             <time dateTime={post.time}>
-                                {formatDate(post.time || '')}
+                                {dayjs(post.time || '').format('YYYY/MM/DD')}
                             </time>
                         </div>
                         <div className="flex items-center gap-2">
@@ -305,7 +305,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                     title="那年今日"
                     posts={sameDayPosts}
                     showDate={true}
-                    formatDate={formatDate}
+                    formatDate={(date) => dayjs(date).format('YYYY/MM/DD')}
                 />
             </article>
         </Layout>

@@ -5,7 +5,7 @@ import Breadcrumb from '../components/Breadcrumb';
 import PostListItem from '../components/PostListItem';
 import { Post } from '../types';
 import config from '../config';
-import formatDate from '../utils/formatDate';
+import dayjs from 'dayjs';
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData();
@@ -36,7 +36,12 @@ export async function getStaticProps() {
 
 const Archives = ({ allPostsData, postsByYear }: { allPostsData: any[]; postsByYear: { [key: string]: any[] } }) => {
     const totalPosts = allPostsData.length;
-    const lastUpdated = allPostsData[0]?.time ? formatDate(allPostsData[0].time) : '';
+    const lastUpdated = allPostsData[0]?.time ? dayjs(allPostsData[0].time).format('YYYY/MM/DD') : '';
+
+    // 归档页使用 MM/DD 格式，不显示年份
+    const archiveFormatDate = (dateString: string): string => {
+        return dayjs(dateString).format('MM/DD');
+    };
 
     return (
         <Layout>
@@ -95,7 +100,7 @@ const Archives = ({ allPostsData, postsByYear }: { allPostsData: any[]; postsByY
                                             id={post.id}
                                             title={post.title || ''}
                                             time={post.time || ''}
-                                            formatDate={formatDate}
+                                            formatDate={archiveFormatDate}
                                         />
                                     </li>
                                 ))}
