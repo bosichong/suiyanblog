@@ -6,7 +6,7 @@ import Image from 'next/image';
 export default function Nav() {
     return (
         <nav
-            className="w-full max-w-2xl bg-bg-body/80 backdrop-blur-md border-b border-border/50 flex justify-between items-center px-4 py-2"
+            className="w-full max-w-2xl bg-bg-body/80 backdrop-blur-md border-b border-border/50 flex justify-between items-center px-4 py-4"
             role="navigation"
             aria-label="主导航"
         >
@@ -16,9 +16,9 @@ export default function Nav() {
                     <Image
                         src={`/${config.PROFILE_IMAGE}`}
                         alt={config.BLOG_NAME}
-                        width={48}
-                        height={48}
-                        className="rounded-full my-2"
+                        width={40}
+                        height={40}
+                        className="rounded-full m-0"
                     />
                 
             </Link>

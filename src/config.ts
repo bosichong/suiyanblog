@@ -40,7 +40,7 @@ const config: Config = {
         // 友链页面标题
     "FRIENDS_PAGE_TITLE": "友情链接",
     // 友链页面描述
-    "FRIENDS_PAGE_DESCRIPTION": "一部分是我自己喜欢的博客，一部分是友情链接。申请友情链接，请在底部评论区留言。对于链接失效超过三个月的友链，我会定期清理。",
+    "FRIENDS_PAGE_DESCRIPTION": "一部分是我自己喜欢的博客，一部分是友情链接。申请友情链接，请在底部评论区留言。对于链接失效超过一个月的友链，我会定期清理。",
     // 博客聚合标题
     "BLOG_AGGREGATION_TITLE": "博客聚合",
     // 博客聚合描述
@@ -73,20 +73,6 @@ const config: Config = {
             "site_description": "💻学习📝记录🔗分享",
             "site_avatar": "https://wiki.eryajf.net/img/logo.png",
             "is_active": true
-        },
-        {
-            "site_name": "小林笔记",
-            "site_url": "https://m.senlinm.cn",
-            "site_description": "轻生活，秒上签",
-            "site_avatar": "https://senlinm.s3.us-east-005.backblazeb2.com/01.png",
-            "is_active": false
-        },
-        {
-            "site_name": "zhangpingcloud",
-            "site_url": "https://www.zhangpingcloud.tech/",
-            "site_description": "编程爱好者，帅哥一个。",
-            "site_avatar": "http://www.suiyan.cc/assets/images/user_circle.png",
-            "is_active": false
         },
         {
             "site_name": "特立独行的异类",
