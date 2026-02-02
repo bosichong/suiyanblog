@@ -189,7 +189,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                     </div>
                 </header>
 
-                <div className={styles.blog_post_content}>
+                <div className={`prose prose-slate`}>
                     <ReactMarkdown
                         remarkPlugins={[remarkGfm]}
                         rehypePlugins={[rehypeRaw]}

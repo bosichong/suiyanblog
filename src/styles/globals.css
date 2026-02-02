@@ -150,61 +150,6 @@ li {
     margin-bottom: var(--space-2);
 }
 
-/* 引用块 */
-blockquote {
-    margin: var(--space-6) 0;
-    padding: var(--space-4) var(--space-6);
-    border-left: 4px solid var(--border-color);
-    background-color: var(--bg-content);
-    color: var(--text-secondary);
-}
-
-blockquote p {
-    margin-bottom: 0;
-}
-
-/* 代码块 - 全局样式(非文章内容) */
-code {
-    font-family: var(--font-mono);
-    font-size: 0.9em;
-    background-color: var(--bg-body);
-    padding: 0.2em 0.4em;
-    border-radius: var(--radius-sm);
-}
-
-pre {
-    margin: var(--space-6) 0;
-    padding: var(--space-4);
-    background-color: var(--bg-body);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-md);
-    overflow-x: auto;
-}
-
-pre code {
-    background-color: transparent;
-    padding: 0;
-    border-radius: 0;
-}
-
-/* 表格样式 */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: var(--space-6) 0;
-    font-size: var(--text-sm);
-}
-
-th, td {
-    padding: var(--space-3) var(--space-4);
-    text-align: left;
-    border-bottom: 1px solid var(--border-color);
-}
-
-th {
-    font-weight: var(--font-weight-semibold);
-    background-color: var(--bg-body);
-}
 
 /* 图片样式 */
 img {
