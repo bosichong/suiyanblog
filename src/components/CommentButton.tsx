@@ -8,10 +8,11 @@ interface CommentButtonProps {
 
 export default function CommentButton({ showComments, commentCount, onToggle }: CommentButtonProps) {
     return (
-        <div className="relative group inline-block">
+        <div className="relative inline-block">
             <button
                 onClick={onToggle}
                 className="text-text-secondary hover:text-text-dark"
+                title="英雄请留步！欢迎点击图标，留言交流！"
                 aria-label={showComments ? "隐藏评论" : "显示评论"}
             >
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -24,10 +25,6 @@ export default function CommentButton({ showComments, commentCount, onToggle }: 
                     </span>
                 )}
             </button>
-            {/* Hover 提示 */}
-            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-text-primary text-bg-content text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                英雄请留步！欢迎点击图标，留言交流！
-            </div>
         </div>
     )
 }

@@ -153,7 +153,7 @@ export default function ArticleStats({ slug, mode = 'like' }: ArticleStatsProps)
   // 只显示喜欢按钮
   if (mode === 'like') {
     return (
-      <div className="relative group inline-block">
+      <div className="relative inline-block">
         <button
           onClick={handleLike}
           className={`transition-all duration-200 ${
@@ -161,6 +161,7 @@ export default function ArticleStats({ slug, mode = 'like' }: ArticleStatsProps)
               ? 'text-red-500' 
               : 'text-text-secondary hover:text-text-dark'
           }`}
+          title={stats.liked ? '已喜欢' : '喜欢这篇文章'}
           aria-label={stats.liked ? '取消喜欢' : '喜欢'}
         >
           <svg 
@@ -181,10 +182,6 @@ export default function ArticleStats({ slug, mode = 'like' }: ArticleStatsProps)
             {stats.likes > 99 ? '99+' : stats.likes}
           </span>
         )}
-        {/* Hover 提示 */}
-        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 bg-text-primary text-bg-content text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          {stats.liked ? '已喜欢' : '喜欢这篇文章'}
-        </div>
       </div>
     )
   }

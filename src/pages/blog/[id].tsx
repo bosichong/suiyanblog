@@ -189,7 +189,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                     </div>
                 </header>
 
-                <div className={`prose prose-slate`}>
+                <div className={`prose prose-slate max-w-none`}>
                     <ReactMarkdown
                         remarkPlugins={[remarkGfm]}
                         rehypePlugins={[rehypeRaw]}
@@ -260,21 +260,18 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                 </nav>
 
                 <div className="mt-8 py-4 text-center border-t border-border">
-                    <div className="flex items-center justify-between">
-                        {/* 左侧：评论和喜欢按钮 */}
-                        <div className="flex items-center justify-center gap-6">
-                            {/* 评论按钮 */}
-                            <CommentButton
-                                showComments={showComments}
-                                commentCount={commentCount}
-                                onToggle={() => setShowComments(!showComments)}
-                            />
+                    <div className="flex items-center justify-center gap-6">
+                        {/* 评论按钮 */}
+                        <CommentButton
+                            showComments={showComments}
+                            commentCount={commentCount}
+                            onToggle={() => setShowComments(!showComments)}
+                        />
 
-                            {/* 喜欢按钮 */}
-                            <ArticleStats slug={`/blog/${post.id}`} />
-                        </div>
+                        {/* 喜欢按钮 */}
+                        <ArticleStats slug={`/blog/${post.id}`} />
 
-                        {/* 右侧：赞赏按钮 */}
+                        {/* 赞赏按钮 */}
                         <SponsorButton />
                     </div>
                 </div>
