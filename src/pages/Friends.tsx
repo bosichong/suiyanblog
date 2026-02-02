@@ -13,6 +13,41 @@ const Giscus = dynamic(() => import("@giscus/react").then((mod) => mod.default),
     loading: () => <div className="text-center py-4 text-text-secondary">加载评论中...</div>
 });
 
+interface LinkSectionProps {
+    title: string;
+    description: string;
+    links: Array<{
+        site_name: string;
+        site_url: string;
+        site_description: string;
+        is_active?: boolean;
+    }>;
+}
+
+const LinkSection = ({ title, description, links }: LinkSectionProps) => {
+    return (
+        <>
+            <div className="mb-8">
+                <h3 className="mb-3 text-lg font-semibold">{title}</h3>
+                <p className="text-sm text-default-600">
+                    {description}
+                </p>
+            </div>
+            <div className="overflow-hidden mb-12">
+                {links.map((link) => (
+                    <LinkCard
+                        key={link.site_name}
+                        site_name={link.site_name}
+                        site_url={link.site_url}
+                        site_description={link.site_description}
+                        is_active={link.is_active}
+                    />
+                ))}
+            </div>
+        </>
+    );
+};
+
 const Friends = () => {
     const links = config.links;
     const aggregations = config.blogAggregations;
@@ -31,39 +66,17 @@ const Friends = () => {
             <Breadcrumb type="friends" />
 
             <div className="max-w-4xl mx-auto px-6 py-8">
-                <div className="mb-8">
-                    <div className="mb-3">{config.FRIENDS_PAGE_TITLE}</div>
-                    <p className="text-sm text-default-600">
-                        {config.FRIENDS_PAGE_DESCRIPTION}
-                    </p>
-                </div>
-                <div className="border border-border rounded-lg overflow-hidden mb-12">
-                    {links.map((link, index) => (
-                        <LinkCard
-                            key={link.site_name}
-                            site_name={link.site_name}
-                            site_url={link.site_url}
-                            site_description={link.site_description}
-                            is_active={link.is_active}
-                        />
-                    ))}
-                </div>
-                <div className="mb-8">
-                    <div className="mb-3">{config.BLOG_AGGREGATION_TITLE}</div>
-                    <p className="text-sm text-default-600">
-                        {config.BLOG_AGGREGATION_DESCRIPTION}
-                    </p>
-                </div>
-                <div className="border border-border rounded-lg overflow-hidden">
-                    {aggregations.map((aggregation, index) => (
-                        <LinkCard
-                            key={aggregation.site_name}
-                            site_name={aggregation.site_name}
-                            site_url={aggregation.site_url}
-                            site_description={aggregation.site_description}
-                        />
-                    ))}
-                </div>
+                <LinkSection
+                    title={config.FRIENDS_PAGE_TITLE}
+                    description={config.FRIENDS_PAGE_DESCRIPTION}
+                    links={links}
+                />
+                <hr className="my-8 border-t border-default-200" />
+                <LinkSection
+                    title={config.BLOG_AGGREGATION_TITLE}
+                    description={config.BLOG_AGGREGATION_DESCRIPTION}
+                    links={aggregations}
+                />
             </div>
             <Giscus
                 repo={giscusConfig.repo as `${string}/${string}`}
