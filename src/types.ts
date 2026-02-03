@@ -7,6 +7,7 @@ export interface Post {
   tags?: string[];
   description?: string;
   content?: string;
+  ai_label?: number;
   [key: string]: any;
 }
 

@@ -74,8 +74,8 @@ function Home({ currentPosts }: { currentPosts: Post[] }) {
           <div className="mt-8 text-center">
             <Link href="/Archives" className="inline-flex items-center gap-1 text-primary hover:text-primary-dark transition-colors duration-200">
               全部文章
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-4 h-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
               </svg>
             </Link>
           </div>
