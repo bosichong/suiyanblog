@@ -19,11 +19,15 @@ export default function getSortedPostsData(): Post[] {
             description = description.substring(0, 150) + '...';
         }
         
+        // 获取 ai_label 属性，默认为 0
+        const aiLabel = matterResult.data.ai_label !== undefined ? parseInt(matterResult.data.ai_label) : 0;
+        
         return {
             id, // 添加 id 属性
             ...matterResult.data,
             description,
             content: matterResult.content,
+            ai_label: aiLabel,
         };
     });
     return allPostsData.sort((a: Post, b: Post) => {

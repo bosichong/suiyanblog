@@ -19,6 +19,7 @@ import config from '@/config';
 import ArticleStats from '@/components/ArticleStats';
 import SponsorButton from '@/components/SponsorButton';
 import CommentButton from '@/components/CommentButton';
+import AILabelBadge from '@/components/AILabelBadge';
 import styles from './[id].module.css';
 
 // 动态导入 Giscus 组件以延迟加载
@@ -169,22 +170,29 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                     <h1 className="text-2xl font-semibold mb-4 text-text-primary">
                         {post.title}
                     </h1>
-                    <div className="flex flex-wrap items-center gap-4 text-sm text-text-secondary">
-                        <div className="flex items-center gap-2">
-                            <span>作者: {post.author}</span>
+                    <div className="flex flex-col gap-2 text-sm text-text-secondary">
+                        <div className="flex flex-wrap items-center gap-4">
+                            <div className="flex items-center gap-2">
+                                <span>作者: {post.author}</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <time dateTime={post.time}>
+                                    {dayjs(post.time || '').format('YYYY/MM/DD')}
+                                </time>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <AILabelBadge level={post.ai_label || 0} />
+                            </div>
                         </div>
-                        <div className="flex items-center gap-2">
-                            <span>{stats.words} 字</span>
-                            <span>·</span>
-                            <span>预计阅读 {stats.text}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <time dateTime={post.time}>
-                                {dayjs(post.time || '').format('YYYY/MM/DD')}
-                            </time>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <ArticleStats slug={`/blog/${post.id}`} mode="views" />
+                        <div className="flex flex-wrap items-center gap-4">
+                            <div className="flex items-center gap-2">
+                                <span>{stats.words} 字</span>
+                                <span>·</span>
+                                <span>预计阅读 {stats.text}</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <ArticleStats slug={`/blog/${post.id}`} mode="views" />
+                            </div>
                         </div>
                     </div>
                 </header>

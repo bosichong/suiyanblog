@@ -190,7 +190,7 @@ export default function ArticleStats({ slug, mode = 'like' }: ArticleStatsProps)
   return (
     <div className="flex items-center gap-6">
       {/* 阅读量 */}
-      <div className="flex items-center gap-2 text-text-secondary">
+      <div className="flex items-center gap-2 text-text-secondary" title={`阅读量：${stats.views.toLocaleString()} 次`}>
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
                 d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
