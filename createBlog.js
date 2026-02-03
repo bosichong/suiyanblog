@@ -11,7 +11,7 @@ const createFileDir = (dir) => {
   }
 };
 
-const createBlog = async (title = '博客标题', author = '', tag = '', filedir = '', pagename = '') => {
+const createBlog = async (title = '博客标题', author = '', tag = '', filedir = '', pagename = '', ai_label = 0) => {
   const create_time = new Date().toISOString();
 
   if (!pagename) {
@@ -22,6 +22,9 @@ const createBlog = async (title = '博客标题', author = '', tag = '', filedir
   }
   if (!author) {
     author = "J.sky"; // 直接使用已加载的配置
+  }
+  if (typeof ai_label !== 'number') {
+    ai_label = 0;
   }
 
   // 路径遍历防护：规范化路径并移除父目录引用
@@ -45,6 +48,7 @@ title: '${title}'
 author: '${author}'
 time: '${create_time}'
 tag: '${tag}'
+ai_label: ${ai_label}
 description: '博文的简介'
 ---
 
@@ -82,4 +86,11 @@ description: '博文的简介'
   });
 };
 
-createBlog();
+createBlog(
+  process.argv[2] || '博客标题',
+  process.argv[3] || '',
+  process.argv[4] || '',
+  process.argv[5] || '',
+  process.argv[6] || '',
+  parseInt(process.argv[7]) || 0
+);
