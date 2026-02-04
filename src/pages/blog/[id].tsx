@@ -197,7 +197,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                     </div>
                 </header>
 
-                <div className={`prose prose-slate max-w-none`}>
+                <div className={`prose prose-zinc md:prose-lg max-w-none`}>
                     <ReactMarkdown
                         remarkPlugins={[remarkGfm]}
                         rehypePlugins={[rehypeRaw]}
