@@ -199,6 +199,13 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                     <ReactMarkdown
                         remarkPlugins={[remarkGfm]}
                         rehypePlugins={[rehypeRaw]}
+                        components={{
+                            a: ({ href, children }) => (
+                                <CustomLink href={href || ''}>
+                                    {children}
+                                </CustomLink>
+                            ),
+                        }}
                     >
                         {sanitizedContent}
                     </ReactMarkdown>
