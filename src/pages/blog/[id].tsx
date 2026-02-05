@@ -197,7 +197,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                     </div>
                 </header>
 
-                <div className={`prose-lg prose-zinc max-w-none`}>
+                <div className="prose prose-lg prose-zinc max-w-none">
                     <ReactMarkdown
                         remarkPlugins={[remarkGfm]}
                         rehypePlugins={[rehypeRaw]}
@@ -226,7 +226,31 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                                     return <iframe {...props} />;
                                 }
                                 return null;
-                            }
+                            },
+                            table: ({ children }: any) => (
+                                <div className="overflow-x-auto my-4">
+                                    <table className="min-w-full max-w-full">{children}</table>
+                                </div>
+                            ),
+                            th: ({ children }: any) => (
+                                <th className="px-4 py-2 border bg-gray-50 font-semibold text-left whitespace-nowrap">{children}</th>
+                            ),
+                            td: ({ children }: any) => (
+                                <td className="px-4 py-2 border max-w-xs break-all">{children}</td>
+                            ),
+                            a: ({ children }: any) => (
+                                <a className="break-all text-blue-600 hover:text-blue-800 underline">{children}</a>
+                            ),
+                            code: ({ children, className }: any) => {
+                                const isInline = !className;
+                                if (isInline) {
+                                    return <code className="bg-gray-100 px-1.5 py-0.5 rounded text-sm break-all">{children}</code>;
+                                }
+                                return <code className={className}>{children}</code>;
+                            },
+                            pre: ({ children }: any) => (
+                                <pre className="overflow-x-auto">{children}</pre>
+                            )
                         }}
                     >
                         {sanitizedContent}
