@@ -167,7 +167,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                 />
 
                 <header className="mb-8">
-                    <h1 className="text-2xl font-semibold mb-4 text-text-primary">
+                    <h1 className="font-semibold mb-4 text-text-primary">
                         {post.title}
                     </h1>
                     <div className="flex flex-col gap-2 text-sm text-text-secondary">
@@ -279,14 +279,14 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                 <nav className="mt-8 py-4 flex flex-col gap-4 border-t border-border">
                     {prevPost && (
                         <CustomLink href={`/blog/${prevPost.id}`} className="block">
-                            <span className="text-text-secondary">上一篇：</span>
-                            <span className="text-text-primary">{prevPost.title}</span>
+                            <span className="">上一篇：</span>
+                            <span className="">{prevPost.title}</span>
                         </CustomLink>
                     )}
                     {nextPost && (
                         <CustomLink href={`/blog/${nextPost.id}`} className="block">
-                            <span className="text-text-secondary">下一篇：</span>
-                            <span className="text-text-primary">{nextPost.title}</span>
+                            <span className="">下一篇：</span>
+                            <span className="">{nextPost.title}</span>
                         </CustomLink>
                     )}
                 </nav>

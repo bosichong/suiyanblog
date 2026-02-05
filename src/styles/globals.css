@@ -28,26 +28,22 @@ a {
     --text-secondary: #666666;
     --text-tertiary: #999999;
     --text-link: #555555;
-    --text-link-hover: #000000;
+    --text-link-hover: #ff6b00 ;
 
-    /* 主题颜色 */
-    --color-primary: #0066cc;
-    --color-primary-hover: #0052a3;
-    --color-primary-light: rgba(0, 102, 204, 0.1);
 
     /* 边框颜色 */
     --border-color: #CCCCCC;
     --border-link: #CCCCCC;
 
     /* 字号 */
-    --text-xs: 0.75em;
-    --text-sm: 0.875em;
-    --text-base: 1em;
-    --text-lg: 1.125em;
-    --text-xl: 1.25em;
-    --text-2xl: 1.5em;
-    --text-3xl: 1.875em;
-    --text-4xl: 2.25em;
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
 
     /* 间距 */
     --space-1: 4px;
@@ -133,6 +129,12 @@ p {
 a {
     text-decoration: none;
 }
+
+/* 通用链接 hover 效果 - 使用 !important 覆盖 Tailwind 类 */
+a:hover {
+    color: var(--text-link-hover) !important;
+}
+
 
 /* 列表样式 */
 ul, ol {
@@ -222,18 +224,6 @@ button {
 
 /* ==================== 辅助类 ==================== */
 
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-}
-
 /* Footer 链接下划线样式，提高可辨识性 */
 footer a {
     text-decoration: underline;
@@ -251,22 +241,6 @@ footer a:hover {
 
 .text-small {
     font-size: var(--text-sm);
-}
-
-.text-center {
-    text-align: center;
-}
-
-.mt-4 {
-    margin-top: var(--space-4);
-}
-
-.mb-4 {
-    margin-bottom: var(--space-4);
-}
-
-.mb-6 {
-    margin-bottom: var(--space-6);
 }
 
 /* ==================== 文章列表通用样式 ==================== */
@@ -292,6 +266,8 @@ footer a:hover {
 .post-list-title-hover:hover {
     color: var(--text-link-hover);
 }
+
+
 
 /* 文章列表分隔线 */
 .post-list-divider {

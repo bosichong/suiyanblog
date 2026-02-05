@@ -23,7 +23,7 @@ const PostListItem: React.FC<PostListItemProps> = ({ id, title, time, formatDate
     return (
         <div className="post-list-item">
             <CustomLink href={`/blog/${id}`} className="group overflow-hidden block">
-                <h3 className="post-list-title group-hover:text-text-dark truncate">
+                <h3 className="post-list-title post-list-title-hover truncate">
                     {title}
                 </h3>
             </CustomLink>
