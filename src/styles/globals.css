@@ -4,11 +4,6 @@
 
 /* ==================== 覆盖 Tailwind 样式 ==================== */
 
-/* 覆盖 Tailwind preflight 对链接的 text-decoration 重置 */
-a {
-    text-decoration: underline !important;
-}
-
 /* ==================== CSS 变量系统 ==================== */
 
 :root {
@@ -132,7 +127,7 @@ a {
 
 /* 通用链接 hover 效果 - 使用 !important 覆盖 Tailwind 类 */
 a:hover {
-    color: var(--text-link-hover) !important;
+    color: var(--text-link-hover);
 }
 
 
