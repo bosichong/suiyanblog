@@ -244,7 +244,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                             code: ({ children, className }: any) => {
                                 const isInline = !className;
                                 if (isInline) {
-                                    return <code className="bg-gray-100 px-1.5 py-0.5 rounded text-sm break-all">{children}</code>;
+                                    return <code className="px-1.5 py-0.5 rounded text-sm break-all">{children}</code>;
                                 }
                                 return <code className={className}>{children}</code>;
                             },
