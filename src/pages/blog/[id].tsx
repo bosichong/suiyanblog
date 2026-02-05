@@ -200,10 +200,51 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                         remarkPlugins={[remarkGfm]}
                         rehypePlugins={[rehypeRaw]}
                         components={{
+                            iframe: ({ node, ...props }: any) => {
+                                const src = props.src;
+                                if (typeof src === 'string' && (
+                                    src.includes('player.bilibili.com') ||
+                                    src.includes('//player.bilibili.com')
+                                )) {
+                                    const fixedSrc = src.startsWith('//') ? `https:${src}` : src;
+                                    return (
+                                        <iframe
+                                            {...props}
+                                            src={fixedSrc}
+                                            allowFullScreen
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            style={{ width: '100%', minHeight: '400px' }}
+                                        />
+                                    );
+                                }
+                                return null;
+                            },
+
                             a: ({ href, children }) => (
-                                <CustomLink href={href || ''}>
+                                <CustomLink className="break-all underline" href={href || ''}>
                                     {children}
                                 </CustomLink>
+                            ),
+                            table: ({ children }: any) => (
+                                <div className="overflow-x-auto my-4">
+                                    <table className="min-w-full max-w-full">{children}</table>
+                                </div>
+                            ),
+                            th: ({ children }: any) => (
+                                <th className="px-4 py-2 border bg-gray-50 font-semibold text-left whitespace-nowrap">{children}</th>
+                            ),
+                            td: ({ children }: any) => (
+                                <td className="px-4 py-2 border max-w-xs break-all">{children}</td>
+                            ),
+                            code: ({ children, className }: any) => {
+                                const isInline = !className;
+                                if (isInline) {
+                                    return <code className="px-1.5 py-0.5 rounded text-sm break-all">{children}</code>;
+                                }
+                                return <code className={className}>{children}</code>;
+                            },
+                            pre: ({ children }: any) => (
+                                <pre className="overflow-x-auto">{children}</pre>
                             ),
                         }}
                     >
