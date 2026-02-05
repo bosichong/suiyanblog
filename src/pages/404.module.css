@@ -4,14 +4,14 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    padding: var(--space-8);
+    padding: 32px;
     text-align: center;
     background-color: var(--bg-body);
     color: var(--text-primary);
 }
 
 .illustration {
-    margin-bottom: var(--space-8);
+    margin-bottom: 32px;
     animation: float 3s ease-in-out infinite;
     will-change: transform;
 }
@@ -50,26 +50,26 @@
 
 .text404 {
     color: var(--text-link);
-    font-weight: var(--font-weight-semibold);
+    font-weight: 600;
 }
 
 .title {
     font-size: var(--text-2xl);
-    font-weight: var(--font-weight-normal);
-    margin-bottom: var(--space-6);
+    font-weight: 400;
+    margin-bottom: 24px;
     color: var(--text-primary);
 }
 
 .message {
     font-size: var(--text-lg);
     line-height: var(--leading-relaxed);
-    margin-bottom: var(--space-10);
+    margin-bottom: 40px;
     color: var(--text-secondary);
     max-width: 600px;
 }
 
 .homeButton {
-    padding: var(--space-3) var(--space-6);
+    padding: 12px 24px;
     background: none;
     color: var(--text-primary);
     text-decoration: none;

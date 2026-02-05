@@ -17,17 +17,17 @@ const LinkCard = ({ site_name, site_url, site_description, is_active = true }: L
             className={`block ${
                 is_active === false
                     ? 'text-text-tertiary'
-                    : 'group'
+                    : 'text-text-link'
             }`}
         >
             <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-1">
                     {is_active === false ? (
-                        <span className="font-medium text-text-tertiary">
+                        <span className="font-medium">
                             {site_name}
                         </span>
                     ) : (
-                        <span className="font-medium text-text-link hover:text-text-dark hover:underline no-underline">
+                        <span className="font-medium">
                             {site_name}
                         </span>
                     )}
@@ -42,7 +42,7 @@ const LinkCard = ({ site_name, site_url, site_description, is_active = true }: L
                         </svg>
                     )}
                 </div>
-                <p className={`text-sm line-clamp-2 leading-relaxed ${
+                <p className={`text-sm line-clamp-2 leading-relaxed no-underline  ${
                     is_active === false ? 'text-text-tertiary line-through' : 'text-text-secondary'
                 }`}>
                     {site_description}
