@@ -69,16 +69,11 @@ const Tags = ({ tagsData }: { tagsData: TagData[] }) => {
                         <CustomLink
                             key={tagObj.tag}
                             href={`/tags/${tagObj.tag}`}
-                            className="block px-4 py-3 border border-border rounded hover:border-text-tertiary"
+                            className="group inline-flex items-center justify-between gap-2 text-sm font-normal"
                         >
-                            <div className="flex items-center justify-between gap-2">
-                                <span className="text-sm font-normal text-text-primary truncate flex-1 min-w-0">
-                                    {tagObj.originalTag}
-                                </span>
-                                <span className="text-xs text-text-tertiary whitespace-nowrap">
-                                    ({tagObj.data.length})
-                                </span>
-                            </div>
+                            <span className="truncate flex-1 min-w-0">
+                               # {tagObj.originalTag} ({tagObj.data.length})
+                            </span>
                         </CustomLink>
                     ))}
                 </div>
