@@ -53,8 +53,8 @@ const BackToTop = () => {
                     w-8 h-8
                     rounded-full
                     flex items-center justify-center
-                    bg-bg-content/50
-                    hover:bg-bg-content/80
+                    bg-black
+                    hover:bg-black/80
                     transition-all duration-300 ease-in-out
                     transform hover:scale-110
                     focus:outline-none
@@ -62,7 +62,7 @@ const BackToTop = () => {
                 `}
                 onClick={scrollToTop}
             >
-                <ArrowUpIcon size={16} className="text-text-primary" />
+                <ArrowUpIcon size={16} className="text-white" />
             </button>
         </div>
     );
