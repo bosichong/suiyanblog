@@ -238,8 +238,16 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                             td: ({ children }: any) => (
                                 <td className="px-4 py-2 border max-w-xs break-all">{children}</td>
                             ),
-                            a: ({ children }: any) => (
-                                <a className="break-all text-blue-600 hover:text-blue-800 underline">{children}</a>
+                            a: ({ children, href, target, rel, ...props }: any) => (
+                                <a
+                                    href={href}
+                                    target={target || (href?.startsWith('http') ? '_blank' : undefined)}
+                                    rel={rel || (href?.startsWith('http') ? 'noopener noreferrer' : undefined)}
+                                    className="break-all text-blue-600 hover:text-blue-800 underline"
+                                    {...props}
+                                >
+                                    {children}
+                                </a>
                             ),
                             code: ({ children, className }: any) => {
                                 const isInline = !className;
