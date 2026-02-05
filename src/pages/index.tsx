@@ -5,7 +5,7 @@ import config from '../config';
 import PostCard from '../components/PostCard';
 import AboutMe from '../components/AboutMe';
 import { Post } from '../types';
-import Link from 'next/link';
+import Link from '../components/Link';
 
 const postsPerPage = config.POSTS_PER_PAGE;
 
