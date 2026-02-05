@@ -8,7 +8,6 @@ import Layout from "../../components/Layout";
 import dayjs from 'dayjs';
 import dynamic from 'next/dynamic';
 import Head from "next/head";
-import Link from 'next/link';
 import CC from '@/components/CC';
 import Breadcrumb from '@/components/Breadcrumb';
 import PostList from '@/components/PostList';
@@ -20,7 +19,6 @@ import ArticleStats from '@/components/ArticleStats';
 import SponsorButton from '@/components/SponsorButton';
 import CommentButton from '@/components/CommentButton';
 import AILabelBadge from '@/components/AILabelBadge';
-import styles from './[id].module.css';
 
 // 动态导入 Giscus 组件以延迟加载
 const Giscus = dynamic(() => import('@giscus/react'), {
@@ -167,7 +165,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                 />
 
                 <header className="mb-8">
-                    <h1 className="font-semibold mb-4 text-text-primary">
+                    <h1 className="text-2xl font-semibold mb-4 text-text-primary">
                         {post.title}
                     </h1>
                     <div className="flex flex-col gap-2 text-sm text-text-secondary">
@@ -197,69 +195,10 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                     </div>
                 </header>
 
-                <div className="prose prose-lg prose-zinc max-w-none">
+                <div className="prose prose-lg prose-slate">
                     <ReactMarkdown
                         remarkPlugins={[remarkGfm]}
                         rehypePlugins={[rehypeRaw]}
-                        components={{
-                            p: ({ children, ...props }: any) => {
-                                const hasBlockElement = React.Children.toArray(children).some((child: any) => {
-                                    if (React.isValidElement(child)) {
-                                        const type = typeof child.type === 'string' ? child.type : child.type?.name || '';
-                                        return ['div', 'iframe', 'video', 'pre', 'blockquote', 'ul', 'ol', 'table', 'figure'].includes(type);
-                                    }
-                                    return false;
-                                });
-
-                                if (hasBlockElement) {
-                                    return <>{children}</>;
-                                }
-
-                                return <p {...props}>{children}</p>;
-                            },
-                            iframe: ({ node, ...props }: any) => {
-                                const src = props.src;
-                                if (typeof src === 'string' && (
-                                    src.includes('player.bilibili.com') ||
-                                    src.includes('//player.bilibili.com')
-                                )) {
-                                    return <iframe {...props} />;
-                                }
-                                return null;
-                            },
-                            table: ({ children }: any) => (
-                                <div className="overflow-x-auto my-4">
-                                    <table className="min-w-full max-w-full">{children}</table>
-                                </div>
-                            ),
-                            th: ({ children }: any) => (
-                                <th className="px-4 py-2 border bg-gray-50 font-semibold text-left whitespace-nowrap">{children}</th>
-                            ),
-                            td: ({ children }: any) => (
-                                <td className="px-4 py-2 border max-w-xs break-all">{children}</td>
-                            ),
-                            a: ({ children, href, target, rel, ...props }: any) => (
-                                <a
-                                    href={href}
-                                    target={target || (href?.startsWith('http') ? '_blank' : undefined)}
-                                    rel={rel || (href?.startsWith('http') ? 'noopener noreferrer' : undefined)}
-                                    className="break-all text-blue-600 hover:text-blue-800 underline"
-                                    {...props}
-                                >
-                                    {children}
-                                </a>
-                            ),
-                            code: ({ children, className }: any) => {
-                                const isInline = !className;
-                                if (isInline) {
-                                    return <code className="px-1.5 py-0.5 rounded text-sm break-all">{children}</code>;
-                                }
-                                return <code className={className}>{children}</code>;
-                            },
-                            pre: ({ children }: any) => (
-                                <pre className="overflow-x-auto">{children}</pre>
-                            )
-                        }}
                     >
                         {sanitizedContent}
                     </ReactMarkdown>

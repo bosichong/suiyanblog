@@ -69,7 +69,7 @@ const Tags = ({ tagsData }: { tagsData: TagData[] }) => {
                         <CustomLink
                             key={tagObj.tag}
                             href={`/tags/${tagObj.tag}`}
-                            className="group inline-flex items-center justify-between gap-2 text-sm font-normal"
+                            className=""
                         >
                             <span className="truncate flex-1 min-w-0">
                                # {tagObj.originalTag} ({tagObj.data.length})

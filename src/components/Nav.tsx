@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import config from '@/config';
 import Image from 'next/image';
+import CustomLink from './Link';
 
 export default function Nav() {
     return (
@@ -32,12 +33,12 @@ export default function Nav() {
                                 /
                             </span>
                         )}
-                        <Link
+                        <CustomLink
                             href={item.href}
-                            className="text-lg text-text-secondary hover:text-text-dark hover:underline no-underline"
+                            className="text-base"
                         >
                             {item.name}
-                        </Link>
+                        </CustomLink>
                     </React.Fragment>
                 ))}
             </div>

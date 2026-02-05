@@ -21,14 +21,14 @@ const PostListItem: React.FC<PostListItemProps> = ({ id, title, time, formatDate
     const displayTime = formatDateFn(time);
 
     return (
-        <div className="post-list-item">
+        <div className="flex items-baseline gap-2 overflow-hidden">
             <CustomLink href={`/blog/${id}`} className="group overflow-hidden block">
-                <h3 className="post-list-title post-list-title-hover truncate">
+                <h3 className="text-lg truncate">
                     {title}
                 </h3>
             </CustomLink>
-            <div className="post-list-divider"></div>
-            <time className="post-list-date" dateTime={time}>
+            <div className="flex-1 min-w-0 border-b border-dashed border-neutral-400"></div>
+            <time className="text-sm text-neutral-600 whitespace-nowrap" dateTime={time}>
                 {displayTime}
             </time>
         </div>
