@@ -25,13 +25,19 @@ export async function getStaticPaths() {
 
     return {
         paths,
-        fallback: false,
+        fallback: 'blocking',
     };
 }
 
-export async function getStaticProps({ params }: { params: { tag: string } }) {
+export async function getStaticProps({ params }: { params?: { tag: string } } = {}) {
     const allPostsData = getSortedPostsData();
-    const tag = params.tag;
+    const tag = params?.tag;
+
+    if (!tag) {
+        return {
+            notFound: true,
+        };
+    }
 
     const tagPosts = allPostsData.filter((post) => {
         if (!post.tag) return false;
