@@ -90,7 +90,6 @@ export async function getStaticProps({ params }: { params?: { id: string } } = {
             nextPost,
             sameDayPosts,
         },
-        revalidate: 3600, // 每小时重新生成一次
     };
 }
 
