@@ -36,13 +36,21 @@ export async function getStaticPaths() {
         paths: posts.map(post => ({
             params: { id: post.id },
         })),
-        fallback: false,
+        fallback: 'blocking',
     };
 }
 
-export async function getStaticProps({ params }: { params: { id: string } }) {
+export async function getStaticProps({ params }: { params?: { id: string } } = {}) {
     const posts = getSortedPostsData();
-    const post = posts.find(p => p.id === params.id);
+    const id = params?.id;
+
+    if (!id) {
+        return {
+            notFound: true,
+        };
+    }
+
+    const post = posts.find(p => p.id === id);
     if (!post) {
         return {
             notFound: true,
@@ -82,6 +90,7 @@ export async function getStaticProps({ params }: { params: { id: string } }) {
             nextPost,
             sameDayPosts,
         },
+        revalidate: 3600, // 每小时重新生成一次
     };
 }
 

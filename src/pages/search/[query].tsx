@@ -34,8 +34,15 @@ export async function getStaticPaths() {
     };
 }
 
-export async function getStaticProps({ params }: { params: { query: string } }) {
+export async function getStaticProps({ params }: { params?: { query: string } } = {}) {
     const allPostsData = getSortedPostsData();
+
+    if (!params?.query) {
+        return {
+            notFound: true,
+        };
+    }
+
     const query = decodeURIComponent(params.query).toLowerCase();
 
     const filteredPosts = allPostsData.filter(post =>
