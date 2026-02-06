@@ -42,7 +42,7 @@ const Tags = ({ tagsData }: { tagsData: TagData[] }) => {
     return (
         <Layout>
             <Head>
-                <title>标签 | {config.BLOG_NAME}</title>
+                <title>{`标签 | ${config.BLOG_NAME}`}</title>
                 <meta name="description" content="碎言博客的文章分类标签，按主题分类的技术文章和随笔"/>
                 <meta name="keywords" content="文章标签,博客分类,技术标签,主题分类" />
                 <link rel="canonical" href="https://www.suiyan.cc/Tags" />

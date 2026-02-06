@@ -9,7 +9,7 @@ function Sponsors() {
     return (
         <Layout>
             <Head>
-                <title>赞赏 | {config.BLOG_NAME}</title>
+                <title>{`赞赏 | ${config.BLOG_NAME}`}</title>
                 <meta name="description" content="赞赏支持碎言博客" />
             </Head>
 

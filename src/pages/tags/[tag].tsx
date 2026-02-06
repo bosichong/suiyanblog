@@ -81,7 +81,7 @@ const TagDetail = ({ tag, originalTag, tagPosts, postsByYear }: { tag: string; o
     return (
         <Layout>
             <Head>
-                <title>标签: {originalTag} | {config.BLOG_NAME}</title>
+                <title>{`标签: ${originalTag} | ${config.BLOG_NAME}`}</title>
                 <meta name="description" content={`碎言博客中标签为 ${originalTag} 的文章列表，共 ${totalPosts} 篇文章`}/>
                 <meta name="keywords" content={`${originalTag},文章标签,博客分类`} />
                 <link rel="canonical" href={`https://www.suiyan.cc/tags/${tag}`} />

@@ -26,7 +26,7 @@ const Search = () => {
     return (
         <Layout>
             <Head>
-                <title>搜索 | {config.BLOG_NAME}</title>
+                <title>{`搜索 | ${config.BLOG_NAME}`}</title>
                 <meta name="description" content="碎言博客站内搜索功能，可以按文章标题搜索博客内容"/>
                 <meta name="keywords" content="站内搜索,博客搜索,文章查找" />
                 <link rel="canonical" href="https://www.suiyan.cc/search" />

@@ -6,7 +6,7 @@ export default function Custom404() {
     return (
         <>
             <Head>
-                <title>404 - 页面走丢了 | {config.BLOG_NAME}</title>
+                <title>{`404 - 页面走丢了 | ${config.BLOG_NAME}`}</title>
                 <meta name="description" content="抱歉，您访问的页面不存在" />
                 <meta name="robots" content="noindex, follow" />
             </Head>

@@ -46,7 +46,7 @@ const Archives = ({ allPostsData, postsByYear }: { allPostsData: any[]; postsByY
     return (
         <Layout>
             <Head>
-                <title>文章归档 | {config.BLOG_NAME}</title>
+                <title>{`文章归档 | ${config.BLOG_NAME}`}</title>
                 <meta name="description" content="碎言博客的所有文章归档，按时间顺序整理的全部技术文章和随笔"/>
                 <meta name="keywords" content="文章归档,博客归档,技术文章,时间线" />
                 <link rel="canonical" href="https://www.suiyan.cc/Archives" />

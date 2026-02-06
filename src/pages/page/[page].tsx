@@ -43,7 +43,7 @@ function Page({ currentPosts, currentPage, totalPages }: { currentPosts: Post[];
   return (
     <Layout>
       <Head>
-        <title>文章列表 - 第{currentPage}页 | {config.BLOG_NAME}</title>
+        <title>{`文章列表 - 第${currentPage}页 | ${config.BLOG_NAME}`}</title>
         <meta name="description" content={`碎言博客文章列表第${currentPage}页 - ${config.META_DESCRIPTION}`} />
         <meta name="keywords" content={config.META_KEYWORDS} />
         <meta name="author" content={config.BLOG_AUTHOR} />
