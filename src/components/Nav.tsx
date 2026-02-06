@@ -20,6 +20,7 @@ export default function Nav() {
                         width={40}
                         height={40}
                         className="rounded-full m-0"
+                        suppressHydrationWarning  // 添加这行
                     />
                 
             </Link>
