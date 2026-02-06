@@ -1,4 +1,3 @@
-import React from 'react';
 import CustomLink from './Link';
 
 interface PostListProps {

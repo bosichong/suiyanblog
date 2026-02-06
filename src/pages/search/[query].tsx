@@ -120,7 +120,7 @@ const SearchPage = ({ initialQuery, filteredPosts }: { initialQuery: string; fil
                     />
                 </div>
 
-                <ul className="space-y-2 no-padding-left">
+                <ul className="space-y-2 pl-0">
                     {localFilteredPosts.length > 0 ? (
                         <>
                             <p className="text-sm text-text-tertiary mb-4">

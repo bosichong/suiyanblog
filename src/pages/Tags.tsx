@@ -56,13 +56,9 @@ const Tags = ({ tagsData }: { tagsData: TagData[] }) => {
             </Head>
             <Breadcrumb type="tags" />
             <div className="w-full">
-                <header className="mb-8">
-                    <div className="flex items-center gap-2 text-sm text-text-secondary">
-                        <span>共有标签：</span>
-                        <span className="text-text-primary">{tagsData.length}</span>
-                        <span>个</span>
-                    </div>
-                </header>
+                <p className="mb-8 text-sm text-text-secondary">
+                    共有标签：<span className="text-text-primary">{tagsData.length}</span> 个
+                </p>
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
                     {tagsData.map((tagObj) => (

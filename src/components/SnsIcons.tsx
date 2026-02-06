@@ -1,4 +1,3 @@
-import React from 'react';
 import config from '@/config';
 import BilibiliIcon from './icons/BilibiliIcon';
 import GithubIcon from './icons/GithubIcon';

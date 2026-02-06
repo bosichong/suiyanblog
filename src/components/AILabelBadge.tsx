@@ -44,7 +44,7 @@ export default function AILabelBadge({ level }: AILabelBadgeProps) {
         >
             <span className="text-base">{aiInfo.emoji}</span>
             
-            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-text-primary text-bg-content text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-lg z-10">
+            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-black text-white text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-lg z-10">
                 <div className="font-semibold mb-1">{aiInfo.theme}</div>
                 <div className="text-xs opacity-80">{aiInfo.description}</div>
             </div>

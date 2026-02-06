@@ -96,11 +96,11 @@ const Archives = ({ allPostsData, postsByYear }: { allPostsData: any[]; postsByY
                     </p>
                 </div>
 
-                <ul className="space-y-6 no-padding-left">
+                <ul className="space-y-6 pl-0">
                     {Object.keys(postsByYear).sort((a, b) => parseInt(b) - parseInt(a)).map((year) => (
                         <li key={year} className="post-list-group">
                             <p className="post-list-group-title">{year}</p>
-                            <ul className="space-y-2 no-padding-left">
+                            <ul className="space-y-2 pl-0">
                                 {postsByYear[year].map((post) => (
                                     <li key={post.id}>
                                         <PostListItem
