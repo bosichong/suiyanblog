@@ -17,7 +17,7 @@ const CustomLink = ({ href, children, className = '', target, rel, underline = f
     return (
         <Link
             href={href}
-            className={`font-normal truncate text-neutral-700 hover:text-orange-500 hover:underline ${underlineClass} ${className}`}
+            className={`font-normal text-neutral-700 hover:text-orange-500 hover:underline ${underlineClass} ${className}`}
             target={target || (isExternal ? '_blank' : undefined)}
             rel={rel || (isExternal ? 'noopener noreferrer' : undefined)}
         >
