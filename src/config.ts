@@ -31,7 +31,7 @@ const config: Config = {
     "PROFILE_IMAGE": "assets/images/avatar.png",
 
     'menuItems' : [
-        {name:'归档',href:'/Tags'},
+        {name:'标签',href:'/Tags'},
         {name:'搜索',href:'/search'},
         {name:'邻居',href:'/Friends'},
         {name:'关于',href:'/blog/1'},
