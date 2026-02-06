@@ -61,10 +61,6 @@ function Home({ currentPosts }: { currentPosts: Post[] }) {
           />
         </Head>
 
-        <div className="w-full mb-8">
-          <AboutMe />
-        </div>
-
         <div className="w-full">
           <div className="flex flex-col gap-4">
             {currentPosts.map((post) => (
