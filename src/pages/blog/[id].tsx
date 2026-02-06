@@ -98,7 +98,6 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
     const stats = readingTime(post.content || '');
     const sanitizedContent = sanitizeHtml(post.content || '');
     const [showComments, setShowComments] = useState(false);
-    const [commentCount, setCommentCount] = useState(0);
 
     const formatDate = (dateString: string): string => {
         if (!dateString) return '';
@@ -106,27 +105,6 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
         const [year, month, day] = (parts || dateString.substring(0, 10)).split('-');
         return `${year}/${month}/${day}`;
     };
-
-    // 监听 Giscus 的消息事件来获取评论数
-    React.useEffect(() => {
-        const handleMessage = (event: MessageEvent) => {
-            if (event.origin !== 'https://giscus.app') return;
-            if (!(typeof event.data === 'object' && event.data.giscus)) return;
-
-            const giscusData = event.data.giscus;
-
-            // 获取顶级评论数（不含回复）
-            const count = giscusData.discussion?.totalCommentCount ||
-                         giscusData.totalCommentCount;
-
-            if (typeof count === 'number') {
-                setCommentCount(count);
-            }
-        };
-
-        window.addEventListener('message', handleMessage);
-        return () => window.removeEventListener('message', handleMessage);
-    }, []);
 
     return (
         <Layout>
@@ -292,7 +270,6 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                         {/* 评论按钮 */}
                         <CommentButton
                             showComments={showComments}
-                            commentCount={commentCount}
                             onToggle={() => setShowComments(!showComments)}
                         />
 
@@ -302,23 +279,23 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                 </div>
 
                 <section className="mt-8">
-                    {/* Giscus 组件始终渲染，但根据 showComments 控制显示/隐藏 */}
-                    <div className={showComments ? '' : 'hidden'}>
+                    {/* 只在 showComments 为 true 时才渲染 Giscus 组件 */}
+                    {showComments && (
                         <Giscus
                             key={post.id}
                             repo={giscusConfig.repo as `${string}/${string}`}
                             repoId={giscusConfig.repoId}
-                        category={giscusConfig.category}
-                        categoryId={giscusConfig.categoryId}
-                        mapping={giscusConfig.mapping as any}
-                        lang={giscusConfig.lang}
-                        strict="0"
-                        reactionsEnabled="1"
-                        emitMetadata="1"
-                        inputPosition="bottom"
-                        theme="light"
+                            category={giscusConfig.category}
+                            categoryId={giscusConfig.categoryId}
+                            mapping={giscusConfig.mapping as any}
+                            lang={giscusConfig.lang}
+                            strict="0"
+                            reactionsEnabled="1"
+                            emitMetadata="0"
+                            inputPosition="bottom"
+                            theme="light"
                         />
-                    </div>
+                    )}
                 </section>
 
                 <PostList
