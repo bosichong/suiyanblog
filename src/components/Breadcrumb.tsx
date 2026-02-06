@@ -58,9 +58,13 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ type, title, tag, pageNum }) =>
         <nav className="flex items-center space-x-2 text-sm text-text-secondary mb-4" role="navigation" aria-label="面包屑导航">
             {items.map((item, index) => (
                 <React.Fragment key={index}>
-                    <Link href={item.href} className="hover:text-text-dark">
-                        {item.label}
-                    </Link>
+                    {index === items.length - 1 && type === 'blog' ? (
+                        <span className="text-text-primary">{item.label}</span>
+                    ) : (
+                        <Link href={item.href} className="hover:text-text-dark">
+                            {item.label}
+                        </Link>
+                    )}
                     {index < items.length - 1 && (
                         <span className="text-border" aria-hidden="true">/</span>
                     )}
