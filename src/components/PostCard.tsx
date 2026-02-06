@@ -1,10 +1,11 @@
 import { PostCardProps } from '../types';
 import PostListItem from './PostListItem';
-import dayjs from 'dayjs';
 
-// 首页使用 MM/DD 格式，不显示年份
 const homeFormatDate = (dateString: string): string => {
-    return dayjs(dateString).format('MM/DD');
+    if (!dateString) return '';
+    const parts = dateString.split('T')[0];
+    const [year, month, day] = (parts || dateString.substring(0, 10)).split('-');
+    return `${month}/${day}`;
 };
 
 export default function PostCard({ post }: PostCardProps) {

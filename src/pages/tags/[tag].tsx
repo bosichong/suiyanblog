@@ -4,9 +4,7 @@ import Head from 'next/head';
 import Breadcrumb from '../../components/Breadcrumb';
 import PostListItem from '../../components/PostListItem';
 import CustomLink from '../../components/Link';
-import { Post } from '../../types';
 import config from '../../config';
-import dayjs from 'dayjs';
 
 export async function getStaticPaths() {
     const allPostsData = getSortedPostsData();
@@ -78,6 +76,13 @@ export async function getStaticProps({ params }: { params: { tag: string } }) {
 const TagDetail = ({ tag, originalTag, tagPosts, postsByYear }: { tag: string; originalTag: string; tagPosts: any[]; postsByYear: { [key: string]: any[] } }) => {
     const totalPosts = tagPosts.length;
 
+    const formatDate = (dateString: string): string => {
+        if (!dateString) return '';
+        const parts = dateString.split('T')[0];
+        const [year, month, day] = (parts || dateString.substring(0, 10)).split('-');
+        return `${month}/${day}`;
+    };
+
     return (
         <Layout>
             <Head>
@@ -119,7 +124,7 @@ const TagDetail = ({ tag, originalTag, tagPosts, postsByYear }: { tag: string; o
                                                 id={post.id}
                                                 title={post.title || ''}
                                                 time={post.time || ''}
-                                                formatDate={(date) => dayjs(date).format('MM/DD')}
+                                                formatDate={formatDate}
                                             />
                                         </li>
                                     ))}

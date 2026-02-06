@@ -5,7 +5,6 @@ import ReactMarkdown from 'react-markdown';
 import getSortedPostsData from "../../utils/parseMd";
 import { sanitizeHtml } from "../../utils/sanitizeHtml";
 import Layout from "../../components/Layout";
-import dayjs from 'dayjs';
 import dynamic from 'next/dynamic';
 import Head from "next/head";
 import CC from '@/components/CC';
@@ -92,6 +91,13 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
     const [showComments, setShowComments] = useState(false);
     const [commentCount, setCommentCount] = useState(0);
 
+    const formatDate = (dateString: string): string => {
+        if (!dateString) return '';
+        const parts = dateString.split('T')[0];
+        const [year, month, day] = (parts || dateString.substring(0, 10)).split('-');
+        return `${year}/${month}/${day}`;
+    };
+
     // 监听 Giscus 的消息事件来获取评论数
     React.useEffect(() => {
         const handleMessage = (event: MessageEvent) => {
@@ -171,7 +177,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                         <span>作者: {post.author}</span>
                         <span>·</span>
                         <time dateTime={post.time}>
-                            {dayjs(post.time || '').format('YYYY/MM/DD')}
+                            {formatDate(post.time || '')}
                         </time>
                         <span>·</span>
                         <span>{stats.words} 字</span>
@@ -315,7 +321,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                     title="那年今日"
                     posts={sameDayPosts}
                     showDate={true}
-                    formatDate={(date) => dayjs(date).format('YYYY/MM/DD')}
+                    formatDate={formatDate}
                 />
             </article>
         </Layout>
