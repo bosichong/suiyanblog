@@ -116,7 +116,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
     return (
         <Layout>
             <Head>
-                <title>{post.title} | {config.BLOG_NAME}</title>
+                <title>{`${post.title} | ${config.BLOG_NAME}`}</title>
                 <meta name="description" content={post.description} />
                 <meta name="keywords" content={post.tag?.replace(/,/g, ',')} />
                 <meta name="author" content={post.author} />

@@ -91,7 +91,7 @@ function AILabel() {
     return (
         <Layout>
             <Head>
-                <title>AI创作等级标识 | {config.BLOG_NAME}</title>
+                <title>{`AI创作等级标识 | ${config.BLOG_NAME}`}</title>
                 <meta name="description" content="碎言博客AI创作等级标识系统说明" />
             </Head>
 

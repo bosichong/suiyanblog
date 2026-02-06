@@ -24,7 +24,7 @@ function Home({ currentPosts }: { currentPosts: Post[] }) {
   return (
       <Layout>
         <Head>
-          <title>首页 | {config.BLOG_NAME} - {config.META_DESCRIPTION}</title>
+          <title>{`首页 | ${config.BLOG_NAME} - ${config.META_DESCRIPTION}`}</title>
           <meta name="description" content={config.META_DESCRIPTION} />
           <meta name="keywords" content={config.META_KEYWORDS} />
           <meta name="author" content={config.BLOG_AUTHOR} />
