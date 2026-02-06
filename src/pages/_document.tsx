@@ -20,7 +20,6 @@ export default function Document() {
                 <meta name="twitter:title" content={config.BLOG_NAME} />
                 <meta name="twitter:description" content={config.META_DESCRIPTION} />
                 <link rel="icon" href="/favicon.ico" />
-                <link rel="canonical" href="https://www.suiyan.cc" />
             </Head>
             <body>
                 <Main />
