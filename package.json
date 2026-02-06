@@ -13,7 +13,7 @@
   "dependencies": {
     "@giscus/react": "^3.0.0",
     "@tailwindcss/typography": "^0.5.19",
-    "dayjs": "^1.11.19",
+
     "gray-matter": "^4.0.3",
     "next": "^16.0.7",
     "react": "^18.3.1",

@@ -3,9 +3,7 @@ import Layout from '../components/Layout';
 import Head from 'next/head';
 import Breadcrumb from '../components/Breadcrumb';
 import PostListItem from '../components/PostListItem';
-import { Post } from '../types';
 import config from '../config';
-import dayjs from 'dayjs';
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData();
@@ -34,14 +32,23 @@ export async function getStaticProps() {
     };
 }
 
+const formatDateStr = (dateString: string): string => {
+    if (!dateString) return '';
+    const parts = dateString.split('T')[0];
+    const [year, month, day] = (parts || dateString.substring(0, 10)).split('-');
+    return `${month}/${day}`;
+};
+
+const formatFullDate = (dateString: string): string => {
+    if (!dateString) return '';
+    const parts = dateString.split('T')[0];
+    const [year, month, day] = (parts || dateString.substring(0, 10)).split('-');
+    return `${year}/${month}/${day}`;
+};
+
 const Archives = ({ allPostsData, postsByYear }: { allPostsData: any[]; postsByYear: { [key: string]: any[] } }) => {
     const totalPosts = allPostsData.length;
-    const lastUpdated = allPostsData[0]?.time ? dayjs(allPostsData[0].time).format('YYYY/MM/DD') : '';
-
-    // 归档页使用 MM/DD 格式，不显示年份
-    const archiveFormatDate = (dateString: string): string => {
-        return dayjs(dateString).format('MM/DD');
-    };
+    const lastUpdated = allPostsData[0]?.time ? formatFullDate(allPostsData[0].time) : '';
 
     return (
         <Layout>
@@ -100,7 +107,7 @@ const Archives = ({ allPostsData, postsByYear }: { allPostsData: any[]; postsByY
                                             id={post.id}
                                             title={post.title || ''}
                                             time={post.time || ''}
-                                            formatDate={archiveFormatDate}
+                                            formatDate={formatDateStr}
                                         />
                                     </li>
                                 ))}
