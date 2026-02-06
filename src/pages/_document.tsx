@@ -21,7 +21,7 @@ export default function Document() {
                 <meta name="twitter:description" content={config.META_DESCRIPTION} />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <body>
+            <body className='bg-zinc-50'>
                 <Main />
                 <NextScript />
             </body>
