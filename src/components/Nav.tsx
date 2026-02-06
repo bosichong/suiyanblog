@@ -26,7 +26,7 @@ export default function Nav() {
             </Link>
 
             {/* 导航菜单 */}
-            <div className="flex items-center text-sm text-text-secondary">
+            <div className="flex items-center text-sm text-text-secondary" role="navigation" aria-label="主导航菜单">
                 {config.menuItems.map((item, index) => (
                     <React.Fragment key={item.name}>
                         {index > 0 && (
@@ -37,6 +37,7 @@ export default function Nav() {
                         <CustomLink
                             href={item.href}
                             className="text-base"
+                            aria-label={`跳转到${item.name}`}
                         >
                             {item.name}
                         </CustomLink>

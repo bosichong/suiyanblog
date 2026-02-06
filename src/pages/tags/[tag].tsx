@@ -119,11 +119,11 @@ const TagDetail = ({ tag, originalTag, tagPosts, postsByYear }: { tag: string; o
                 </div>
 
                 {totalPosts > 0 ? (
-                    <ul className="space-y-6 no-padding-left">
+                    <ul className="space-y-6 pl-0">
                         {Object.keys(postsByYear).sort((a, b) => parseInt(b) - parseInt(a)).map((year) => (
                             <li key={year}>
                                 <p className="text-sm font-normal mb-3 text-text-tertiary">{year}</p>
-                                <ul className="space-y-2 no-padding-left">
+                                <ul className="space-y-2 pl-0">
                                     {postsByYear[year].map((post) => (
                                         <li key={post.id}>
                                             <PostListItem

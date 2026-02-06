@@ -1,4 +1,3 @@
-import React from 'react';
 import Layout from '../components/Layout';
 import Head from 'next/head';
 import Breadcrumb from '../components/Breadcrumb';
@@ -140,12 +139,12 @@ function AILabel() {
                 </div>
 
                 {/* 等级详解 */}
-                <div className="mb-12">
+                <section className="mb-12">
                     <h2 className="text-lg font-semibold mb-6 text-text-primary">等级详解</h2>
                     <div className="space-y-6">
                         {aiLevels.map((item) => (
-                            <div 
-                                key={item.level} 
+                            <article
+                                key={item.level}
                                 className="p-6 rounded-lg border border-border hover:shadow-md transition-shadow"
                             >
                                 <div className="flex items-center gap-3 mb-4">
@@ -165,17 +164,17 @@ function AILabel() {
                                         </li>
                                     ))}
                                 </ul>
-                            </div>
+                            </article>
                         ))}
                     </div>
-                </div>
+                </section>
 
                 {/* 使用建议 */}
-                <div className="mb-12">
+                <section className="mb-12">
                     <h2 className="text-lg font-semibold mb-6 text-text-primary">使用建议</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {usageSuggestions.map((item) => (
-                            <div 
+                            <article
                                 key={item.level}
                                 className="p-4 rounded-lg border border-border bg-bg-content/50"
                             >
@@ -184,13 +183,13 @@ function AILabel() {
                                     <span className="font-medium text-text-primary">{item.level}</span>
                                 </div>
                                 <p className="text-sm text-text-secondary">{item.scenario}</p>
-                            </div>
+                            </article>
                         ))}
                     </div>
-                </div>
+                </section>
 
                 {/* 本文标识示例 */}
-                <div className="p-6 rounded-lg bg-bg-content border border-border">
+                <section className="p-6 rounded-lg bg-bg-content border border-border">
                     <h2 className="text-lg font-semibold mb-4 text-text-primary">本文创作标识</h2>
                     <div className="flex items-center gap-4">
                         <span className="text-4xl">🤝</span>
@@ -199,7 +198,7 @@ function AILabel() {
                             <p className="text-sm text-text-secondary">人机共同创作，平等对话</p>
                         </div>
                     </div>
-                </div>
+                </section>
             </article>
         </Layout>
     );

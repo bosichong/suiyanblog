@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { ArrowUpIcon } from '@/components/icons/ArrowUpIcon';
 
 const BackToTop = () => {

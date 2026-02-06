@@ -250,19 +250,19 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                     </div>
                 )}
 
-                <nav className="mt-8 py-4 flex flex-col gap-4 border-t border-border">
-                    {prevPost && (
-                        <CustomLink href={`/blog/${prevPost.id}`} className="block">
-                            <span className="">上一篇：</span>
-                            <span className="">{prevPost.title}</span>
-                        </CustomLink>
-                    )}
-                    {nextPost && (
-                        <CustomLink href={`/blog/${nextPost.id}`} className="block">
-                            <span className="">下一篇：</span>
-                            <span className="">{nextPost.title}</span>
-                        </CustomLink>
-                    )}
+                <nav className="mt-8 py-4 border-t border-border" aria-label="文章导航">
+                    <div className="flex flex-col gap-4">
+                        {prevPost && (
+                            <CustomLink href={`/blog/${prevPost.id}`} className="block" aria-label={`上一篇：${prevPost.title}`}>
+                                上一篇：{prevPost.title}
+                            </CustomLink>
+                        )}
+                        {nextPost && (
+                            <CustomLink href={`/blog/${nextPost.id}`} className="block" aria-label={`下一篇：${nextPost.title}`}>
+                                下一篇：{nextPost.title}
+                            </CustomLink>
+                        )}
+                    </div>
                 </nav>
 
                 <div className="mt-8 py-4 text-center border-t border-border">

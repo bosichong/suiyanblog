@@ -4,7 +4,6 @@ import Head from "next/head";
 import Breadcrumb from "../components/Breadcrumb";
 import giscusConfig from "@/giscusConfigs";
 import dynamic from "next/dynamic";
-import React, {useEffect} from "react";
 import LinkCard from "../components/LinkCard";
 
 // 动态导入 Giscus，禁用服务端渲染
@@ -51,10 +50,6 @@ const LinkSection = ({ title, description, links }: LinkSectionProps) => {
 const Friends = () => {
     const links = config.links;
     const aggregations = config.blogAggregations;
-
-    useEffect(() => {
-        // 始终使用浅色主题
-    }, []);
 
     return (
         <Layout>

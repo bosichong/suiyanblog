@@ -1,4 +1,3 @@
-import React from 'react';
 import SearchIcon from './icons/SearchIcon';
 
 interface SearchBoxProps {
@@ -16,7 +15,11 @@ const SearchBox: React.FC<SearchBoxProps> = ({
 }) => {
     return (
         <form onSubmit={onSubmit} className="relative">
+            <label htmlFor="search-input" className="sr-only">
+                {placeholder}
+            </label>
             <input
+                id="search-input"
                 type="text"
                 placeholder={placeholder}
                 value={value}
