@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 interface BreadcrumbProps {
-    type: 'home' | 'archives' | 'tags' | 'tag' | 'search' | 'friends' | 'page' | 'blog' | 'sponsors' | 'ai-label';
+    type: 'home' | 'archives' | 'tags' | 'tag' | 'search' | 'friends' | 'blog' | 'sponsors' | 'ai-label';
     title?: string;
     tag?: string;
     pageNum?: number;
@@ -34,11 +34,6 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ type, title, tag, pageNum }) =>
                 break;
             case 'friends':
                 items.push({ label: '友情链接', href: '/Friends' });
-                break;
-            case 'page':
-                if (pageNum) {
-                    items.push({ label: `第${pageNum}页`, href: `/page/${pageNum}` });
-                }
                 break;
             case 'ai-label':
                 items.push({ label: 'AI标识', href: '/AI-Label' });
