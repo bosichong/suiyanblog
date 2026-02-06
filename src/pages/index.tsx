@@ -3,7 +3,6 @@ import Layout from '../components/Layout';
 import Head from 'next/head';
 import config from '../config';
 import PostCard from '../components/PostCard';
-import AboutMe from '../components/AboutMe';
 import { Post } from '../types';
 import Link from '../components/Link';
 
