@@ -34,15 +34,21 @@
   },
   "browserslist": {
     "production": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version",
-      "last 1 edge version"
+      ">0.05%",
+      "not dead",
+      "not op_mini all",
+      "not IE 11",
+      "not Safari <14",
+      "not iOS <14",
+      "not Chrome <90",
+      "not Firefox <88",
+      "not Edge <90"
     ],
     "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+      "last 1 Chrome version",
+      "last 1 Firefox version",
+      "last 1 Safari version",
+      "last 1 Edge version"
     ]
   }
 }

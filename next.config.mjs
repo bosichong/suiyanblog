@@ -15,30 +15,24 @@ const nextConfig = {
   },
   turbopack: {},
   webpack: (config, { isServer }) => {
-    // 优化生产环境打包
     if (!isServer) {
       config.optimization = {
         ...config.optimization,
         usedExports: true,
         sideEffects: true,
+        moduleIds: 'deterministic',
         splitChunks: {
           chunks: 'all',
+          maxInitialRequests: 25,
+          minSize: 20000,
           cacheGroups: {
             default: false,
             vendors: false,
-            commons: {
-              name: 'commons',
-              chunks: 'all',
-              minChunks: 2,
-              priority: 10,
-              reuseExistingChunk: true,
-              enforce: true,
-            },
             react: {
               name: 'react',
               test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
               chunks: 'all',
-              priority: 20,
+              priority: 30,
               reuseExistingChunk: true,
               enforce: true,
             },
@@ -46,9 +40,31 @@ const nextConfig = {
               name: 'markdown',
               test: /[\\/]node_modules[\\/](react-markdown|remark-gfm|rehype-raw|reading-time|gray-matter)[\\/]/,
               chunks: 'all',
-              priority: 15,
+              priority: 25,
               reuseExistingChunk: true,
               enforce: true,
+            },
+            giscus: {
+              name: 'giscus',
+              test: /[\\/]node_modules[\\/]@giscus[\\/]/,
+              chunks: 'all',
+              priority: 20,
+              reuseExistingChunk: true,
+              enforce: true,
+            },
+            styles: {
+              name: 'styles',
+              type: 'css/mini-extract',
+              chunks: 'all',
+              enforce: true,
+              priority: 5,
+            },
+            lib: {
+              name: 'lib',
+              test: /[\\/]node_modules[\\/](lodash|underscore|date-fns|moment)[\\/]/,
+              chunks: 'all',
+              priority: 15,
+              reuseExistingChunk: true,
             },
           },
         },

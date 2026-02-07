@@ -17,7 +17,7 @@ const LinkCard = ({ site_name, site_url, site_description, is_active = true }: L
                 className={`text-lg block font-medium flex items-center gap-2 mb-1 ${
                     is_active === false
                         ? 'text-neutral-500'
-                        : 'text-neutral-700 hover:text-orange-500 hover:underline hover:underline-offset-2'
+                        : 'text-neutral-700  hover:underline hover:underline-offset-2'
                 }`}
             >
                 {site_name}

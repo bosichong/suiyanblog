@@ -5,8 +5,8 @@ import Breadcrumb from "../components/Breadcrumb";
 import giscusConfig from "@/giscusConfigs";
 import dynamic from "next/dynamic";
 import LinkCard from "../components/LinkCard";
+import { useState } from "react";
 
-// 动态导入 Giscus，禁用服务端渲染
 const Giscus = dynamic(() => import("@giscus/react").then((mod) => mod.default), {
     ssr: false,
     loading: () => <div className="text-center py-4 text-text-secondary">加载评论中...</div>
@@ -50,6 +50,7 @@ const LinkSection = ({ title, description, links }: LinkSectionProps) => {
 const Friends = () => {
     const links = config.links;
     const aggregations = config.blogAggregations;
+    const [showComments, setShowComments] = useState(false);
 
     return (
         <Layout>
@@ -73,19 +74,31 @@ const Friends = () => {
                     links={aggregations}
                 />
             </div>
-            <Giscus
-                repo={giscusConfig.repo as `${string}/${string}`}
-                repoId={giscusConfig.repoId}
-                category={giscusConfig.category}
-                categoryId={giscusConfig.categoryId}
-                mapping={giscusConfig.mapping as any}
-                lang={giscusConfig.lang}
-                strict="0"
-                reactionsEnabled="1"
-                emitMetadata="0"
-                inputPosition="bottom"
-                theme="light"
-            />
+            
+            {!showComments ? (
+                <div className="text-center py-8">
+                    <button
+                        onClick={() => setShowComments(true)}
+                        className="px-6 py-2 text-text-secondary hover:text-text-primary transition-colors duration-200"
+                    >
+                        点击加载评论
+                    </button>
+                </div>
+            ) : (
+                <Giscus
+                    repo={giscusConfig.repo as `${string}/${string}`}
+                    repoId={giscusConfig.repoId}
+                    category={giscusConfig.category}
+                    categoryId={giscusConfig.categoryId}
+                    mapping={giscusConfig.mapping as any}
+                    lang={giscusConfig.lang}
+                    strict="0"
+                    reactionsEnabled="1"
+                    emitMetadata="0"
+                    inputPosition="bottom"
+                    theme="light"
+                />
+            )}
 
         </Layout>
     );
