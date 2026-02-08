@@ -104,6 +104,7 @@ ${categories}
     }).join('\n');
 
     const rssContent = `<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/rss.xsl"?>
 <rss version="2.0"
     xmlns:atom="http://www.w3.org/2005/Atom"
     xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -141,7 +142,7 @@ ${rssItems}
     return new NextResponse(rssContent, {
         status: 200,
         headers: {
-            'Content-Type': 'application/rss+xml; charset=utf-8',
+            'Content-Type': 'text/xml; charset=utf-8',
             'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',
         },
     });
