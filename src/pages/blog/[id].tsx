@@ -90,6 +90,7 @@ export async function getStaticProps({ params }: { params?: { id: string } } = {
             nextPost,
             sameDayPosts,
         },
+        revalidate: false,
     };
 }
 

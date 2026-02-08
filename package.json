@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "preview": "python -m http.server 8000 --directory out",
     "nb": "node createBlog.js",
     "lint": "next lint",
     "analyze": "ANALYZE=true next build"

@@ -3,6 +3,9 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
+export const dynamic = 'force-static';
+export const revalidate = false;
+
 const postsDirectory = path.join(process.cwd(), 'md');
 
 interface PostData {

@@ -14,6 +14,8 @@ const nextConfig = {
     optimizePackageImports: ['react-markdown', 'remark-gfm', 'rehype-raw', 'reading-time'],
   },
   turbopack: {},
+  output: 'export',
+  trailingSlash: true,
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.optimization = {
@@ -73,6 +75,7 @@ const nextConfig = {
     return config;
   },
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',

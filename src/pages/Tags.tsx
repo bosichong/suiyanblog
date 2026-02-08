@@ -35,6 +35,7 @@ export async function getStaticProps() {
         props: {
             tagsData,
         },
+        revalidate: false,
     };
 }
 
