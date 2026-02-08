@@ -14,7 +14,6 @@ export async function getStaticProps() {
     const allPosts = allPostsData.map(post => ({
         id: post.id,
         title: post.title,
-        description: post.description,
     }));
 
     return {
@@ -30,8 +29,7 @@ const Search = ({ allPosts }: { allPosts: any[] }) => {
 
     const filteredPosts = searchQuery.trim()
         ? allPosts.filter(post =>
-            post.title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            post.description?.toLowerCase().includes(searchQuery.toLowerCase())
+            post.title?.toLowerCase().includes(searchQuery.toLowerCase())
           )
         : [];
 
@@ -44,16 +42,16 @@ const Search = ({ allPosts }: { allPosts: any[] }) => {
         <Layout>
             <Head>
                 <title>{searchQuery ? `搜索: ${searchQuery} | ${config.BLOG_NAME}` : `搜索 | ${config.BLOG_NAME}`}</title>
-                <meta name="description" content="碎言博客站内搜索功能，可以按文章标题搜索博客内容"/>
+                <meta name="description" content="碎言博客站内搜索功能，可以按文章标题搜索博客"/>
                 <meta name="keywords" content="站内搜索,博客搜索,文章查找" />
                 <link rel="canonical" href="https://www.suiyan.cc/search" />
                 <meta property="og:title" content={searchQuery ? `搜索: ${searchQuery} | ${config.BLOG_NAME}` : `搜索 | ${config.BLOG_NAME}`} />
-                <meta property="og:description" content="碎言博客站内搜索功能，可以按文章标题搜索博客内容" />
+                <meta property="og:description" content="碎言博客站内搜索功能，可以按文章标题搜索博客" />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://www.suiyan.cc/search" />
                 <meta name="twitter:card" content="summary" />
                 <meta name="twitter:title" content={searchQuery ? `搜索: ${searchQuery} | ${config.BLOG_NAME}` : `搜索 | ${config.BLOG_NAME}`} />
-                <meta name="twitter:description" content="碎言博客站内搜索功能，可以按文章标题搜索博客内容" />
+                <meta name="twitter:description" content="碎言博客站内搜索功能，可以按文章标题搜索博客" />
             </Head>
 
             <Breadcrumb type="search" />
