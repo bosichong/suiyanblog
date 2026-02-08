@@ -1,26 +1,11 @@
-import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-
-export const dynamic = 'force-static';
-export const revalidate = false;
+const fs = require('fs');
+const path = require('path');
+const matter = require('gray-matter');
 
 const postsDirectory = path.join(process.cwd(), 'md');
+const outputDir = path.join(process.cwd(), 'public');
 
-interface PostData {
-    id: string;
-    title?: string;
-    time?: string;
-    description?: string;
-    summary?: string;
-    tag?: string;
-    tags?: string[];
-    author?: string;
-    content: string;
-}
-
-function getSortedPostsData(): PostData[] {
+function getSortedPostsData() {
     const fileNames = fs.readdirSync(postsDirectory);
     return fileNames.map(fileName => {
         const id = fileName.replace(/\.md$/, '');
@@ -37,8 +22,8 @@ function getSortedPostsData(): PostData[] {
             id,
             ...data,
             content: matterResult.content,
-        } as PostData;
-    }).filter((post): post is PostData => post !== null).sort((a, b) => {
+        };
+    }).filter((post) => post !== null).sort((a, b) => {
         if (!a.time || !b.time) {
             return 0;
         }
@@ -46,12 +31,12 @@ function getSortedPostsData(): PostData[] {
     });
 }
 
-function isValidDate(dateStr: string | Date): boolean {
+function isValidDate(dateStr) {
     const date = new Date(dateStr);
     return !isNaN(date.getTime());
 }
 
-function escapeXml(str: string | undefined): string {
+function escapeXml(str) {
     if (!str) return '';
     return str.toString()
         .replace(/&/g, '&amp;')
@@ -61,17 +46,18 @@ function escapeXml(str: string | undefined): string {
         .replace(/'/g, '&apos;');
 }
 
-function generateCategories(tags: string | string[] | undefined): string {
+function generateCategories(tags) {
     if (!tags) return '';
     const tagArray = typeof tags === 'string' ? tags.split(',').map(t => t.trim()) : tags;
     return tagArray.map(tag => `        <category>${escapeXml(tag)}</category>`).join('\n');
 }
 
-export async function GET() {
+function generateRSS() {
     const allPostsData = getSortedPostsData();
 
     if (allPostsData.length === 0) {
-        return new NextResponse('No posts found', { status: 404 });
+        console.log('No posts found');
+        return;
     }
 
     // 限制RSS条目数量为最新的50条
@@ -116,7 +102,7 @@ ${categories}
         <title>碎言 - SuiYan Blog</title>
         <link>https://www.suiyan.cc</link>
         <atom:link href="https://www.suiyan.cc/feed" rel="self" type="application/rss+xml"/>
-        <description>记录并分享个人学习编程的过程和笔记，记录一些平淡的日常。</description>
+        <description>坚持深度阅读，持续写作输出，复盘技术实践。以终生学习对抗不确定性，把固执与坚持，All in 在值得的事情上。</description>
         <language>zh-CN</language>
         <lastBuildDate>${lastBuildDate}</lastBuildDate>
         <pubDate>${now}</pubDate>
@@ -139,11 +125,16 @@ ${rssItems}
     </channel>
 </rss>`;
 
-    return new NextResponse(rssContent, {
-        status: 200,
-        headers: {
-            'Content-Type': 'text/xml; charset=utf-8',
-            'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',
-        },
-    });
+    // 确保输出目录存在
+    if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir, { recursive: true });
+    }
+
+    // 写入 feed.xml 文件
+    const outputPath = path.join(outputDir, 'feed.xml');
+    fs.writeFileSync(outputPath, rssContent, 'utf8');
+    console.log(`RSS feed generated successfully at: ${outputPath}`);
 }
+
+// 执行生成
+generateRSS();

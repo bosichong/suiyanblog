@@ -111,7 +111,7 @@ const config: Config = {
         {
             "site_name": "碎言",
             "site_url": "https://www.suiyan.cc",
-            "site_description": "记录并分享个人学习编程的过程和笔记，记录一些平淡的日常。",
+            "site_description": "坚持深度阅读，持续写作输出，复盘技术实践。以终生学习对抗不确定性，把固执与坚持，All in 在值得的事情上。",
             "site_avatar": "https://www.suiyan.cc/assets/images/avatar.jpg",
             "is_active": true
         }
