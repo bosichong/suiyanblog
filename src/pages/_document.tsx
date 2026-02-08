@@ -20,6 +20,7 @@ export default function Document() {
                 <meta name="twitter:title" content={config.BLOG_NAME} />
                 <meta name="twitter:description" content={config.META_DESCRIPTION} />
                 <link rel="icon" href="/favicon.ico" />
+                <link rel="alternate" type="application/rss+xml" title="碎言 - SuiYan Blog" href="/feed.xml" />
             </Head>
             <body className='bg-zinc-50'>
                 <Main />

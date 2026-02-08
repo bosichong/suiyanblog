@@ -14,7 +14,7 @@
         <description>坚持深度阅读，持续写作输出，复盘技术实践。以终生学习对抗不确定性，把固执与坚持，All in 在值得的事情上。</description>
         <language>zh-CN</language>
         <lastBuildDate>Sun, 08 Feb 2026 03:19:13 GMT</lastBuildDate>
-        <pubDate>Sun, 08 Feb 2026 04:05:08 GMT</pubDate>
+        <pubDate>Sun, 08 Feb 2026 04:56:15 GMT</pubDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <managingEditor>contact@suiyan.cc (J.sky)</managingEditor>
@@ -45,6 +45,10 @@ RSS 是博客的核心功能，但默认的 XML 格式在浏览器中看起来�
 
 
 
+在线预览：
+
+https://www.suiyan.cc/feed(https://www.suiyan.cc/feed)
+
  什么是 RSS.Beauty？
 
 RSS.Beauty 是一个在线服务，专门用于为 RSS 源生成美观的 XSLT 样式表。它的特点是：
@@ -64,13 +68,7 @@ RSS.Beauty 是一个在线服务，专门用于为 RSS 源生成美观的 XSLT �
 
  步骤 2：获取样式表链接
 
-RSS.Beauty 提供了多种样式表链接，你可以选择：
-
-选项 1：使用官方 CDN（推荐）
-
-
-选项 2：自定义样式
-点击 &quot;Custo...]]></content:encoded>
+RSS.Bea...]]></content:encoded>
         <dc:creator>contact@suiyan.cc (J.sky)</dc:creator>
         <category>RSS</category>
         <category>RSS.Beauty</category>
