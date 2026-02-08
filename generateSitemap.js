@@ -49,6 +49,18 @@ function escapeXml(str) {
 function generateSitemap() {
     const allPostsData = getSortedPostsData();
 
+    // 提取所有唯一的标签，并处理标签：转小写、去除空格
+    const uniqueTags = new Set();
+    allPostsData.forEach(post => {
+        if (post.tag) {
+            const tmpTags = post.tag.split(",");
+            tmpTags.forEach(tag => {
+                const optimizedTag = tag.trim().toLowerCase().replace(/\s+/g, '');
+                uniqueTags.add(optimizedTag);
+            });
+        }
+    });
+
     // 静态页面列表
     const staticPages = [
         { url: 'https://www.suiyan.cc/', priority: '1.0', changefreq: 'daily' },
@@ -57,6 +69,13 @@ function generateSitemap() {
         { url: 'https://www.suiyan.cc/about/', priority: '0.8', changefreq: 'monthly' },
         { url: 'https://www.suiyan.cc/feed', priority: '0.5', changefreq: 'hourly' },
     ];
+
+    // 添加所有标签页
+    const tagPages = Array.from(uniqueTags).map(tag => ({
+        url: `https://www.suiyan.cc/tags/${encodeURIComponent(tag)}`,
+        priority: '0.7',
+        changefreq: 'weekly'
+    }));
 
     // 博客文章 URL
     const blogUrls = allPostsData.map(post => {
@@ -70,7 +89,7 @@ function generateSitemap() {
     });
 
     // 合并所有 URL
-    const allUrls = [...staticPages, ...blogUrls];
+    const allUrls = [...staticPages, ...tagPages, ...blogUrls];
 
     // 生成 XML
     const xmlContent = `<?xml version="1.0" encoding="UTF-8"?>
@@ -94,7 +113,7 @@ ${allUrls.map(item => {
     const outputPath = path.join(outputDir, 'sitemap.xml');
     fs.writeFileSync(outputPath, xmlContent, 'utf8');
     console.log(`Sitemap generated successfully at: ${outputPath}`);
-    console.log(`Total URLs: ${allUrls.length}`);
+    console.log(`Total URLs: ${allUrls.length} (Static: ${staticPages.length}, Tags: ${tagPages.length}, Posts: ${blogUrls.length})`);
 }
 
 // 执行生成
