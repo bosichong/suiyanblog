@@ -10,74 +10,47 @@ import { useRouter } from 'next/router';
 import config from '../../config';
 
 export async function getStaticPaths() {
-    const allPostsData = getSortedPostsData();
-    const keywords = new Set<string>();
-
-    allPostsData.forEach((post) => {
-        if (post.title) {
-            const words = post.title.toLowerCase().split(/[\s,，、。]+/);
-            words.forEach((word) => {
-                if (word.length >= 2 && !/["'\\/?*\[\]()\{\}|<>`~!@#$%^&\+=:]/.test(word)) {
-                    keywords.add(word);
-                }
-            });
-        }
-    });
-
-    const paths = Array.from(keywords).slice(0, 100).map((query) => ({
-        params: { query },
-    }));
-
     return {
-        paths,
-        fallback: 'blocking',
+        paths: [],
+        fallback: false,
     };
 }
 
-export async function getStaticProps({ params }: { params?: { query: string } } = {}) {
+export async function getStaticProps() {
     const allPostsData = getSortedPostsData();
 
-    if (!params?.query) {
-        return {
-            notFound: true,
-        };
-    }
-
-    const query = decodeURIComponent(params.query).toLowerCase();
-
-    const filteredPosts = allPostsData.filter(post =>
-        post.title?.toLowerCase().includes(query)
-    );
-
-    const minimalPosts = filteredPosts.map(post => ({
+    // 返回所有文章的精简数据用于客户端搜索
+    const allPosts = allPostsData.map(post => ({
         id: post.id,
         title: post.title,
+        description: post.description,
     }));
 
     return {
         props: {
-            initialQuery: params.query,
-            filteredPosts: minimalPosts,
+            allPosts,
         },
+        revalidate: false,
     };
 }
 
-const SearchPage = ({ initialQuery, filteredPosts }: { initialQuery: string; filteredPosts: any[] }) => {
+const SearchPage = ({ allPosts }: { allPosts: any[] }) => {
     const router = useRouter();
-    const [searchQuery, setSearchQuery] = useState(initialQuery);
-    const [localFilteredPosts, setLocalFilteredPosts] = useState<any[]>(filteredPosts);
+    const [searchQuery, setSearchQuery] = useState('');
+    const [filteredPosts, setFilteredPosts] = useState<any[]>([]);
 
     useEffect(() => {
         if (searchQuery.trim()) {
             const lowerCaseQuery = searchQuery.toLowerCase();
-            const filtered = filteredPosts.filter(post =>
-                post.title?.toLowerCase().includes(lowerCaseQuery)
+            const filtered = allPosts.filter(post =>
+                post.title?.toLowerCase().includes(lowerCaseQuery) ||
+                post.description?.toLowerCase().includes(lowerCaseQuery)
             );
-            setLocalFilteredPosts(filtered);
+            setFilteredPosts(filtered);
         } else {
-            setLocalFilteredPosts(filteredPosts);
+            setFilteredPosts([]);
         }
-    }, [searchQuery, filteredPosts]);
+    }, [searchQuery, allPosts]);
 
     const handleSearch = (value: string) => {
         setSearchQuery(value);
@@ -121,12 +94,12 @@ const SearchPage = ({ initialQuery, filteredPosts }: { initialQuery: string; fil
                 </div>
 
                 <ul className="space-y-2 pl-0">
-                    {localFilteredPosts.length > 0 ? (
+                    {filteredPosts.length > 0 ? (
                         <>
                             <p className="text-sm text-text-tertiary mb-4">
-                                找到 {localFilteredPosts.length} 篇文章
+                                找到 {filteredPosts.length} 篇文章
                             </p>
-                            {localFilteredPosts.map((post, index) => (
+                            {filteredPosts.map((post, index) => (
                                 <li key={index} className="flex items-center justify-between">
                                     <CustomLink href={`/blog/${post.id}`} className="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
                                         {post.title}

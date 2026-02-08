@@ -29,6 +29,7 @@ export async function getStaticProps() {
             allPostsData: minimalPosts,
             postsByYear,
         },
+        revalidate: false,
     };
 }
 
