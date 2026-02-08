@@ -182,7 +182,7 @@ const config: Config = {
         },
         {
             "name": "RSS",
-            "url": "https://www.suiyan.cc/feed",
+            "url": "/feed.xml",
             "iconComponent": "RssIcon"
         }
     ]
