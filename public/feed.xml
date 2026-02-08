@@ -11,10 +11,10 @@
         <title>碎言 - SuiYan Blog</title>
         <link>https://www.suiyan.cc</link>
         <atom:link href="https://www.suiyan.cc/feed" rel="self" type="application/rss+xml"/>
-        <description>记录并分享个人学习编程的过程和笔记，记录一些平淡的日常。</description>
+        <description>坚持深度阅读，持续写作输出，复盘技术实践。以终生学习对抗不确定性，把固执与坚持，All in 在值得的事情上。</description>
         <language>zh-CN</language>
         <lastBuildDate>Sun, 08 Feb 2026 03:19:13 GMT</lastBuildDate>
-        <pubDate>Sun, 08 Feb 2026 03:56:46 GMT</pubDate>
+        <pubDate>Sun, 08 Feb 2026 04:05:08 GMT</pubDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <managingEditor>contact@suiyan.cc (J.sky)</managingEditor>
