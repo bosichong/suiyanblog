@@ -3,6 +3,7 @@ import BilibiliIcon from './icons/BilibiliIcon';
 import GithubIcon from './icons/GithubIcon';
 import EmailIcon from './icons/EmailIcon';
 import RssIcon from './icons/RssIcon';
+import MastodonIcon from './icons/MastodonIcon';
 import { SnsLink } from '@/types';
 
 // 图标组件映射
@@ -10,6 +11,7 @@ const iconComponents: Record<string, React.FC<{ className?: string }>> = {
     BilibiliIcon,
     GithubIcon,
     EmailIcon,
+    MastodonIcon,
     RssIcon,
 };
 
@@ -29,7 +31,7 @@ const SnsIcons: React.FC = () => {
                         key={sns.name}
                         href={sns.url}
                         target={isExternal ? '_blank' : undefined}
-                        rel={isExternal ? 'noopener noreferrer' : undefined}
+                        rel={sns.name === 'Mastodon' ? 'me' : (isExternal ? 'noopener noreferrer' : undefined)}
                         className="text-text-secondary hover:text-text-dark"
                         aria-label={sns.name}
                     >

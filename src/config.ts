@@ -181,6 +181,11 @@ const config: Config = {
             "iconComponent": "EmailIcon"
         },
         {
+            "name": "Mastodon",
+            "url": "https://mastodon.social/@J_sky",
+            "iconComponent": "MastodonIcon"
+        },
+        {
             "name": "RSS",
             "url": "/feed.xml",
             "iconComponent": "RssIcon"
