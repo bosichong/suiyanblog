@@ -31,7 +31,7 @@ const SnsIcons: React.FC = () => {
                         key={sns.name}
                         href={sns.url}
                         target={isExternal ? '_blank' : undefined}
-                        rel={sns.name === 'Mastodon' ? 'me' : (isExternal ? 'noopener noreferrer' : undefined)}
+                        rel={sns.name === 'Mastodon' || sns.name === 'GitHub' ? 'me' : (isExternal ? 'noopener noreferrer' : undefined)}
                         className="text-text-secondary hover:text-text-dark"
                         aria-label={sns.name}
                     >
