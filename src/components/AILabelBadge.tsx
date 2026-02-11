@@ -39,15 +39,11 @@ export default function AILabelBadge({ level }: AILabelBadgeProps) {
     return (
         <Link 
             href="/AI-Label"
-            className="relative group inline-flex items-center justify-center hover:scale-110 transition-transform duration-200"
-            title={aiInfo.description}
+            className="inline-flex items-center gap-1.5 text-sm text-text-secondary hover:text-text-link transition-colors"
         >
-            <span className="text-base">{aiInfo.emoji}</span>
-            
-            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-black text-white text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-lg z-10">
-                <div className="font-semibold mb-1">{aiInfo.theme}</div>
-                <div className="text-xs opacity-80">{aiInfo.description}</div>
-            </div>
+            <span>{aiInfo.emoji}</span>
+            <span>{aiInfo.theme}</span>
+            <span className="text-xs opacity-70">({aiInfo.description})</span>
         </Link>
     );
 }
