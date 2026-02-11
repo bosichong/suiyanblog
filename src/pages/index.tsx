@@ -5,6 +5,7 @@ import config from '../config';
 import PostCard from '../components/PostCard';
 import { Post } from '../types';
 import Link from '../components/Link';
+import PrimaryButton from '../components/PrimaryButton';
 
 const postsPerPage = config.POSTS_PER_PAGE;
 
@@ -67,13 +68,10 @@ function Home({ currentPosts }: { currentPosts: Post[] }) {
               <PostCard key={post.id} post={post} />
             ))}
           </div>
-          <div className="mt-8 text-center">
-            <Link href="/Archives" className="inline-flex items-center gap-1 text-primary hover:text-primary-dark transition-colors duration-200">
+          <div className="my-16 text-center">
+            <PrimaryButton href="/Archives">
               全部文章
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-            </Link>
+            </PrimaryButton>
           </div>
         </div>
       </Layout>
