@@ -12,36 +12,36 @@ export default function Nav() {
             aria-label="主导航"
         >
             {/* Logo */}
-            <Link href="/" aria-label="返回首页" title={config.BLOG_NAME}>
-                
-                    <Image
-                        src={`/${config.PROFILE_IMAGE}`}
-                        alt={config.BLOG_NAME}
-                        width={40}
-                        height={40}
-                        className="rounded-full m-0"
-                        suppressHydrationWarning  // 添加这行
-                    />
-                
+            <Link href="/" aria-label="返回首页" title={config.BLOG_NAME} className="group">
+                <Image
+                    src={`/${config.PROFILE_IMAGE}`}
+                    alt={config.BLOG_NAME}
+                    width={40}
+                    height={40}
+                    className="rounded-full m-0 transition-transform duration-300 group-hover:rotate-180"
+                    suppressHydrationWarning
+                />
             </Link>
 
             {/* 导航菜单 */}
-            <div className="flex items-center text-sm text-text-secondary" role="navigation" aria-label="主导航菜单">
+            <div className="inline-flex" role="navigation" aria-label="主导航菜单">
                 {config.menuItems.map((item, index) => (
-                    <React.Fragment key={item.name}>
-                        {index > 0 && (
-                            <span className="mx-2 text-border" aria-hidden="true">
-                                /
-                            </span>
-                        )}
-                        <CustomLink
-                            href={item.href}
-                            className="text-base"
-                            aria-label={`跳转到${item.name}`}
-                        >
-                            {item.name}
-                        </CustomLink>
-                    </React.Fragment>
+                    <CustomLink
+                        key={item.name}
+                        href={item.href}
+                        className={`
+                            border border-gray-200 px-3 py-2 font-medium text-text-secondary transition-colors
+                            hover:bg-gray-100
+                            focus:z-10 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white focus:outline-none
+                            ${index === 0 ? 'rounded-l-sm' : ''}
+                            ${index === config.menuItems.length - 1 ? 'rounded-r-sm' : ''}
+                            ${index > 0 ? '-ml-px' : ''}
+                        `}
+                        aria-label={`跳转到${item.name}`}
+                        underline={false}
+                    >
+                        {item.name}
+                    </CustomLink>
                 ))}
             </div>
         </nav>
