@@ -37,9 +37,9 @@ const config: Config = {
     ],
 
         // 友链页面标题
-    "FRIENDS_PAGE_TITLE": "友情链接",
+    "FRIENDS_PAGE_TITLE": "邻居",
     // 友链页面描述
-    "FRIENDS_PAGE_DESCRIPTION": "如果你想了解一个博客和他的主人，就去看看他的链接，我相信他绝对不会把自己讨厌的网站放在自己的博客里。",
+    "FRIENDS_PAGE_DESCRIPTION": "如果你想了解一个博客和他的主人，就去看看他的链接，我相信他应该不会把自己讨厌的网站放在博客的链接里。",
     // 博客聚合标题
     "BLOG_AGGREGATION_TITLE": "博客聚合",
     // 博客聚合描述
