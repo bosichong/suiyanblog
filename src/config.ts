@@ -39,12 +39,33 @@ const config: Config = {
         // 友链页面标题
     "FRIENDS_PAGE_TITLE": "友情链接",
     // 友链页面描述
-    "FRIENDS_PAGE_DESCRIPTION": "一部分是我自己喜欢的博客，一部分是友情链接。申请友情链接，请在底部评论区留言。对于链接失效超过一个月的友链，我会定期清理。",
+    "FRIENDS_PAGE_DESCRIPTION": "如果你想了解一个博客和他的主人，就去看看他的链接，我相信他绝对不会把自己讨厌的网站放在自己的博客里。",
     // 博客聚合标题
     "BLOG_AGGREGATION_TITLE": "博客聚合",
     // 博客聚合描述
-    "BLOG_AGGREGATION_DESCRIPTION": "这里是一些优秀的博客聚合平台，可以发现更多有趣的独立博客。",
+    "BLOG_AGGREGATION_DESCRIPTION": "一些优秀的博客聚合平台，可以发现更多有趣的独立博客。",
     "links": [
+        {
+            "site_name": "莫比乌斯",
+            "site_url": "https://onojyun.com/",
+            "site_description": "写作，一场自我悖驳的旅程。我写自己的生活、也写自己的讣告。",
+            "site_avatar": "https://onojyun.com/wp-content/uploads/2024/03/a2d42-cropped-mobius_icon_black-edited.png",
+            "is_active": true
+        },
+        {
+            "site_name": "極客死亡計劃",
+            "site_url": "https://www.geedea.pro/",
+            "site_description": "这里只有真情流露和赤裸的思考。",
+            "site_avatar": "https://r2.eltr.ac/geedeapro/header.avif",
+            "is_active": true
+        },
+                {
+            "site_name": "阮一峰的网络日志",
+            "site_url": "https://www.ruanyifeng.com/blog/",
+            "site_description": "这里记录每周值得分享的科技内容。",
+            "site_avatar": "https://www.ruanyifeng.com/blog/images/person2_s.jpg",
+            "is_active": true
+        },
         {
             "site_name": "Obaby",
             "site_url": "https://zhongxiaojie.com/",
@@ -59,18 +80,18 @@ const config: Config = {
             "site_avatar": "https://www.tjsky.net/wp-content/uploads/2024/02/logo.png",
             "is_active": true
         },
+                {
+            "site_name": "二丫讲梵",
+            "site_url": "https://wiki.eryajf.net/",
+            "site_description": "💻学习📝记录🔗分享",
+            "site_avatar": "https://wiki.eryajf.net/img/logo.png",
+            "is_active": true
+        },
         {
             "site_name": "八对星星",
             "site_url": "https://8dui.com",
             "site_description": "极目星视穹苍无界•足履行者大地有疆",
             "site_avatar": "https://cf.8dui.com/logo.webp",
-            "is_active": true
-        },
-        {
-            "site_name": "二丫讲梵",
-            "site_url": "https://wiki.eryajf.net/",
-            "site_description": "💻学习📝记录🔗分享",
-            "site_avatar": "https://wiki.eryajf.net/img/logo.png",
             "is_active": true
         },
         {
@@ -106,13 +127,6 @@ const config: Config = {
             "site_url": "http://www.omegaxyz.com/",
             "site_description": "徐奕的专栏-机器学习、软件工程、计算机大佬。",
             "site_avatar": "https://www.omegaxyz.com/wp-content/uploads/2020/01/AI-GIF.gif",
-            "is_active": true
-        },
-        {
-            "site_name": "碎言",
-            "site_url": "https://www.suiyan.cc",
-            "site_description": "坚持深度阅读，持续写作输出，复盘技术实践。以终生学习对抗不确定性，把固执与坚持，All in 在值得的事情上。",
-            "site_avatar": "https://www.suiyan.cc/assets/images/avatar.jpg",
             "is_active": true
         }
     ],
