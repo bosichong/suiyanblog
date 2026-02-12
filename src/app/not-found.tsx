@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import config from '../config';
 
 export const metadata = {
@@ -9,24 +10,28 @@ export const metadata = {
 
 export default function NotFound() {
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen px-8 text-center">
-            <div className="mb-8 animate-[float_3s_ease-in-out_infinite]">
-                <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="100" cy="100" r="90" stroke="currentColor" strokeWidth="2" className="text-cyan-400 animate-[pulse_2s_ease-in-out_infinite]" />
-                    <circle cx="70" cy="85" r="8" fill="currentColor" className="text-neutral-800" />
-                    <circle cx="130" cy="85" r="8" fill="currentColor" className="text-neutral-800" />
-                    <path d="M60 120 Q100 150 140 120" stroke="currentColor" strokeWidth="3" fill="none" className="text-neutral-800" />
-                    <text x="100" y="180" textAnchor="middle" fontSize="24" fill="currentColor" className="text-cyan-400 font-semibold">404</text>
-                </svg>
+        <div className="bg-white py-6 sm:py-0 min-h-screen flex items-center justify-center">
+            <div className="mx-auto max-w-screen-xl px-4 md:px-8">
+                <div className="grid gap-8 sm:grid-cols-2 sm:gap-12 items-center">
+                <div className="overflow-hidden rounded-lg bg-gray-100 shadow-lg sm:rounded-none sm:shadow-none">
+                    <Image 
+                        src="/assets/images/404.avif" 
+                        alt="404" 
+                        width={600} 
+                        height={400}
+                        className="h-full w-full object-cover object-center"
+                    />
+                </div>
+                <div className="flex flex-col items-center justify-center md:py-24 lg:py-32 xl:py-64">
+                    <p className="mb-4 text-sm font-semibold uppercase text-indigo-500 md:text-base">错误 404</p>
+                    <h1 className="mb-2 text-center text-2xl font-bold text-gray-800 md:text-3xl">页面未找到</h1>
+
+                    <p className="mb-8 text-center text-gray-500 md:text-lg">抱歉，您访问的页面不存在。</p>
+
+                    <a href="/" className="inline-block rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base">返回首页</a>
+                </div>
+                </div>
             </div>
-            <h1 className="text-2xl font-normal mb-6 text-neutral-800">页面走丢了</h1>
-            <p className="text-lg leading-relaxed mb-10 text-neutral-600 max-w-lg">
-                就像人生一样，有时候你也会走到死胡同。<br />
-                别担心，这只是个页面，不是你的人生。
-            </p>
-            <Link href="/" className="px-6 py-3 text-neutral-800 text-base border border-neutral-400 rounded-sm hover:bg-cyan-400 hover:text-white hover:-translate-y-0.5 hover:shadow-md transition-all duration-300">
-                回到首页
-            </Link>
         </div>
     );
 }
