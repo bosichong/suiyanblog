@@ -18,7 +18,7 @@ export default function Nav() {
                     alt={config.BLOG_NAME}
                     width={40}
                     height={40}
-                    className="rounded-full m-0 transition-transform duration-300 group-hover:rotate-360"
+                    className="rounded-full m-0 transition-transform duration-300 group-hover:rotate-[360deg]"
                     suppressHydrationWarning
                 />
             </Link>
