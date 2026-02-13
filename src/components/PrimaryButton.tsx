@@ -1,4 +1,6 @@
-import Link from './Link';
+
+
+import React from 'react';
 
 interface PrimaryButtonProps {
   href: string;
@@ -8,11 +10,11 @@ interface PrimaryButtonProps {
 
 export default function PrimaryButton({ href, children, className = '' }: PrimaryButtonProps) {
   return (
-    <Link
-      href={href}
-      className={`border-2 border-black bg-white px-5 py-3 font-semibold text-black shadow-[4px_4px_0_0] hover:translate-1 hover:shadow-none focus:ring-2 focus:ring-yellow-300 focus:outline-0 ${className}`}
-    >
-      {children}
-    </Link>
+    <a className={`group relative inline-block overflow-hidden border border-rose-700 px-6 py-3 ${className}`} href={href}>
+      <span className="absolute inset-x-0 bottom-0 h-0.5 bg-rose-700 transition-all group-hover:h-full"></span>
+      <span className="relative text-base  text-rose-700 transition-colors group-hover:text-white">
+        {children}
+      </span>
+    </a>
   );
 }
