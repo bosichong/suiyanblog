@@ -12,17 +12,21 @@ const BackToTop = () => {
     useEffect(() => {
         setIsMounted(true);
         
-        // 初始检查滚动位置
+        let lastScrollY = window.scrollY;
+
+        // 根据滚动方向显示/隐藏按钮
         const toggleVisibility = () => {
-            if (window.scrollY > 500) {
+            const currentScrollY = window.scrollY;
+            
+            // 只在向上滚动且滚动超过300px时显示
+            if (currentScrollY < lastScrollY && currentScrollY > 300) {
                 setIsVisible(true);
             } else {
                 setIsVisible(false);
             }
+            
+            lastScrollY = currentScrollY;
         };
-
-        // 立即检查一次
-        toggleVisibility();
 
         window.addEventListener('scroll', toggleVisibility);
 
