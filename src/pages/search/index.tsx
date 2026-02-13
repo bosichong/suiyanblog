@@ -66,9 +66,6 @@ const Search = ({ allPosts }: { allPosts: any[] }) => {
                         onChange={setSearchQuery}
                         onSubmit={handleSubmit}
                     />
-                    <p className="text-sm text-text-tertiary mt-2">
-                        输入关键词后按回车或点击搜索按钮
-                    </p>
                 </div>
 
                 <ul className="space-y-2 pl-0">
