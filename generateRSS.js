@@ -131,9 +131,14 @@ ${rssItems}
     }
 
     // 写入 feed.xml 文件
-    const outputPath = path.join(outputDir, 'feed.xml');
-    fs.writeFileSync(outputPath, rssContent, 'utf8');
-    console.log(`RSS feed generated successfully at: ${outputPath}`);
+    const feedPath = path.join(outputDir, 'feed.xml');
+    fs.writeFileSync(feedPath, rssContent, 'utf8');
+    console.log(`RSS feed generated successfully at: ${feedPath}`);
+
+    // 写入 rss.xml 文件
+    const rssPath = path.join(outputDir, 'rss.xml');
+    fs.writeFileSync(rssPath, rssContent, 'utf8');
+    console.log(`RSS feed generated successfully at: ${rssPath}`);
 }
 
 // 执行生成
