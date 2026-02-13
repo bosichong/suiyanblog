@@ -15,7 +15,7 @@ const nextConfig = {
   },
   turbopack: {},
   output: 'export',
-  trailingSlash: true,
+  trailingSlash: false,
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.optimization = {
