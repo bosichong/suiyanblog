@@ -16,8 +16,8 @@ export default function Nav() {
                 <Image
                     src={`/${config.PROFILE_IMAGE}`}
                     alt={config.BLOG_NAME}
-                    width={40}
-                    height={40}
+                    width={48}
+                    height={48}
                     className="rounded-full m-0 transition-transform duration-300 group-hover:rotate-[360deg]"
                     suppressHydrationWarning
                 />

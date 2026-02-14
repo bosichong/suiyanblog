@@ -187,11 +187,6 @@ const config: Config = {
 
     "snsLinks": [
         {
-            "name": "Bilibili",
-            "url": "https://space.bilibili.com/275991552",
-            "iconComponent": "BilibiliIcon"
-        },
-        {
             "name": "GitHub",
             "url": "https://github.com/bosichong/",
             "iconComponent": "GithubIcon"
