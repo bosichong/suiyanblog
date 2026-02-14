@@ -26,13 +26,13 @@ interface LinkSectionProps {
 const LinkSection = ({ title, description, links }: LinkSectionProps) => {
     return (
         <>
-            <div className="mb-8">
+            <div className="mb-6">
                 <h3 className="mb-3 text-2xl font-semibold">{title}</h3>
                 <p className="text-sm text-default-600">
                     {description}
                 </p>
             </div>
-            <div className="overflow-hidden mb-12">
+            <div className="overflow-hidden mb-6">
                 {links.map((link) => (
                     <LinkCard
                         key={link.site_name}
@@ -61,7 +61,7 @@ const Friends = () => {
 
             <Breadcrumb type="friends" />
 
-            <div className="max-w-4xl mx-auto px-6 py-8">
+            <div className="max-w-4xl mx-auto px-2">
                 <LinkSection
                     title={config.FRIENDS_PAGE_TITLE}
                     description={config.FRIENDS_PAGE_DESCRIPTION}
@@ -73,15 +73,16 @@ const Friends = () => {
                     description={config.BLOG_AGGREGATION_DESCRIPTION}
                     links={aggregations}
                 />
+                <hr className="my-8 border-t border-default-200" />
             </div>
             
             {!showComments ? (
-                <div className="text-center py-8">
+                <div className="text-center">
                     <button
                         onClick={() => setShowComments(true)}
-                        className="px-6 py-2 text-text-secondary hover:text-text-primary transition-colors duration-200"
+                        className="custom-btn btn-16 "
                     >
-                        点击加载评论
+                        加载评论
                     </button>
                 </div>
             ) : (
