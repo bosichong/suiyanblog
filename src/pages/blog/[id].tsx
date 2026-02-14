@@ -156,7 +156,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                     tag={post.tag ? post.tag.split(',')[0].trim() : ''}
                 />
 
-                <header className="mb-8">
+                <header className="mb-4">
                     <h1 className="text-2xl font-semibold mb-4 text-text-primary">
                         {post.title}
                     </h1>
@@ -231,12 +231,12 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                     </ReactMarkdown>
                 </div>
 
-                <div className="mt-8">
+                <div className="mt-4">
                     <CC title={post.title || ''} author={post.author || ''} id={post.id || ''} />
                 </div>
 
                 {post.tag && (
-                    <div className="mt-6 text-sm">
+                    <div className="mt-4 text-sm">
                         <span className="text-text-secondary">标签: </span>
                         {post.tag.split(',').map((tag: string, index: number) => (
                             <CustomLink
@@ -250,7 +250,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                     </div>
                 )}
 
-                <nav className="mt-8 py-4 border-t border-border" aria-label="文章导航">
+                <nav className="mt-4 py-4 border-t border-border" aria-label="文章导航">
                     <div className="flex flex-col gap-4">
                         {prevPost && (
                             <CustomLink href={`/blog/${prevPost.id}`} className="block" aria-label={`上一篇：${prevPost.title}`}>
@@ -265,7 +265,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                     </div>
                 </nav>
 
-                <div className="mt-8 py-4 text-center border-t border-border">
+                <div className="text-center border-t border-border">
                     <div className="flex items-center justify-center gap-6">
                         {/* 评论按钮 */}
                         <CommentButton
@@ -278,7 +278,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                     </div>
                 </div>
 
-                <section className="mt-4">
+                <section className="">
                     {/* 只在 showComments 为 true 时才渲染 Giscus 组件 */}
                     {showComments && (
                         <Giscus
