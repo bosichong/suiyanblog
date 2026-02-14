@@ -53,6 +53,13 @@ const config: Config = {
             "is_active": true
         },
         {
+            "site_name": "映屿",
+            "site_url": "https://www.glowisle.me/",
+            "site_description": "关于互联网、书籍、生活琐事以及那些一闪而过的念头。",
+            "site_avatar": "#",
+            "is_active": true
+        },
+        {
             "site_name": "極客死亡計劃",
             "site_url": "https://www.geedea.pro/",
             "site_description": "这里只有真情流露和赤裸的思考。",
