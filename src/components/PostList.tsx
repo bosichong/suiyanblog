@@ -15,7 +15,7 @@ const PostList: React.FC<PostListProps> = ({ title, posts, showDate = false, for
     if (!posts || posts.length === 0) return null;
 
     return (
-        <section className="mt-8 py-4 border-t border-border">
+        <section className="mt-4 py-4 border-t border-border">
             <h2 className="text-lg font-semibold mb-4 text-text-primary">{title}</h2>
             <ul className="space-y-2">
                 {posts.map((post, index) => (
