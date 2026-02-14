@@ -10,7 +10,7 @@ export default function Footer() {
                 {/* SNS 图标 */}
                 <SnsIcons />
                 {/* 版权信息 */}
-                <p className="m-0 text-center text-sm text-zinc-500">
+                <p className="m-0 text-center text-sm">
                     &copy; 2017 - 2026{'   '}{config.BLOG_NAME_EN}
 
                 </p>
