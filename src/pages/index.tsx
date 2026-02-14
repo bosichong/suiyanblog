@@ -68,7 +68,7 @@ function Home({ currentPosts }: { currentPosts: Post[] }) {
               <PostCard key={post.id} post={post} />
             ))}
           </div>
-          <div className="my-12 text-center">
+          <div className="my-8 text-center">
             <PrimaryButton href="/Archives">
               全部文章
             </PrimaryButton>
