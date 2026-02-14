@@ -278,7 +278,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                     </div>
                 </div>
 
-                <section className="mt-8">
+                <section className="mt-4">
                     {/* 只在 showComments 为 true 时才渲染 Giscus 组件 */}
                     {showComments && (
                         <Giscus
