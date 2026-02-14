@@ -7,7 +7,7 @@ import CustomLink from './Link';
 export default function Nav() {
     return (
         <nav
-            className="w-full max-w-2xl bg-bg-body/80 backdrop-blur-md border-b border-border/50 flex justify-between items-center px-4 py-4"
+            className="w-full max-w-2xl bg-bg-body/80 flex justify-between items-center px-4 pt-12"
             role="navigation"
             aria-label="主导航"
         >

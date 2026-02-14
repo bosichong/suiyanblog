@@ -8,10 +8,11 @@ const Layout = ({ children }: LayoutProps) => {
         <>
             <div className="flex flex-col items-center min-h-screen">
                 <Nav />
-                <main className="w-full max-w-2xl px-4 py-8 font-sans">
+                <main className="w-full max-w-2xl px-4 mt-12 font-sans">
                     {children}
-                    <Footer />
+                    
                 </main>
+                <Footer />
             </div>
             <BackToTop />
         </>
