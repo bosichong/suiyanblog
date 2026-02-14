@@ -3,7 +3,15 @@
 @tailwind utilities;
 
 
+/* 
+按钮特效引用自https://codepen.io/yuhomyan/pen/LYNVVNO
 
+这是一位叫做Yuhomyan的设计师在CodePen上分享的按钮特效，具有独特的阴影和动画效果，非常适合用于现代网页设计中。
+您可以根据需要调整按钮的颜色、大小和动画效果，以适应您的项目需求。
+
+她的CodePen页面上还有更多精彩的设计作品，您可以访问她的个人主页查看更多创意设计：https://codepen.io/yuhomyan
+
+*/
 
 button {
   margin: 20px;
