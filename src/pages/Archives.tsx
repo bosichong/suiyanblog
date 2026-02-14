@@ -92,6 +92,9 @@ const Archives = ({ allPostsData, postsByYear }: { allPostsData: any[]; postsByY
 
             <div className="w-full">
                 <div className="mb-8">
+                    <h1 className="text-2xl font-semibold mb-4 text-text-primary">
+                        文章归档
+                    </h1>
                     <p className="text-sm text-text-secondary">
                         共有文章：{totalPosts} 篇，最后更新于 {lastUpdated}
                     </p>
