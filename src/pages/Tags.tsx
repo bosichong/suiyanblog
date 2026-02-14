@@ -57,6 +57,9 @@ const Tags = ({ tagsData }: { tagsData: TagData[] }) => {
             </Head>
             <Breadcrumb type="tags" />
             <div className="w-full">
+                <h1 className="text-2xl font-semibold mb-4 text-text-primary">
+                    标签
+                    </h1>
                 <p className="mb-8 text-sm text-text-secondary">
                     共有标签：<span className="text-text-primary">{tagsData.length}</span> 个
                 </p>

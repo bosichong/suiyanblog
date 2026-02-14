@@ -27,7 +27,7 @@ const LinkSection = ({ title, description, links }: LinkSectionProps) => {
     return (
         <>
             <div className="mb-8">
-                <h3 className="mb-3 text-lg font-semibold">{title}</h3>
+                <h3 className="mb-3 text-2xl font-semibold">{title}</h3>
                 <p className="text-sm text-default-600">
                     {description}
                 </p>
