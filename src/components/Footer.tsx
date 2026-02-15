@@ -13,6 +13,7 @@ export default function Footer() {
                 <p className="m-0 text-center text-sm">
                     &copy; 2017 - 2026 {config.BLOG_NAME_EN} |&nbsp;
                     <Link
+                        underline={true}
                         href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1"
                         target="_blank"
                         rel="license noopener noreferrer"
