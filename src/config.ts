@@ -16,24 +16,16 @@ const config: Config = {
     // 关于我简介
     "ABOUT_ME": "坚持深度阅读，持续写作输出，复盘技术实践。以终生学习对抗不确定性，把固执与坚持，All in 在值得的事情上。",
     "POSTS_PER_PAGE": 25,
-    // 博客标签
-    "BLOG_TYPED": [
-        "积硅步以致千里",
-        "积怠惰以致深渊",
-        "只比你努力一点的人",
-        "其实已经甩你很远了！"
-    ],
     // 元描述，用于搜索引擎优化
     "META_DESCRIPTION": "坚持深度阅读，持续写作输出，复盘技术实践。以终生学习对抗不确定性，把固执与坚持，All in 在值得的事情上。",
     // 元关键词，用于搜索引擎优化
-    "META_KEYWORDS": "Python,JavaScript,程序员,Godot,编程,技术博客,学习笔记,碎言",
+    "META_KEYWORDS": "Python,JavaScript,程序员,Godot,编程,技术博客,学习笔记,碎言,哲学,人生,成长",
     // 头像图片路径
     "PROFILE_IMAGE": "assets/images/avatar.png",
 
     'menuItems' : [
         {name:'搜索',href:'/search',iconComponent:'SearchIcon'},
-        {name:'归档',href:'/archive',iconComponent:'ArchiveIcon'},
-        {name:'标签',href:'/tags',iconComponent:'TagsIcon'},
+        {name:'标签',href:'/Tags',iconComponent:'TagsIcon'},
         {name:'邻居',href:'/Friends',iconComponent:'FriendsIcon'},
         {name:'关于',href:'/blog/1',iconComponent:'AboutIcon'},
     ],
