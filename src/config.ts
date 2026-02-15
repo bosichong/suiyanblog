@@ -31,15 +31,17 @@ const config: Config = {
     "PROFILE_IMAGE": "assets/images/avatar.png",
 
     'menuItems' : [
-        {name:'搜索',href:'/search'},
-        {name:'邻居',href:'/Friends'},
-        {name:'关于',href:'/blog/1'},
+        {name:'搜索',href:'/search',iconComponent:'SearchIcon'},
+        {name:'归档',href:'/archive',iconComponent:'ArchiveIcon'},
+        {name:'标签',href:'/tags',iconComponent:'TagsIcon'},
+        {name:'邻居',href:'/Friends',iconComponent:'FriendsIcon'},
+        {name:'关于',href:'/blog/1',iconComponent:'AboutIcon'},
     ],
 
         // 友链页面标题
     "FRIENDS_PAGE_TITLE": "邻居",
     // 友链页面描述
-    "FRIENDS_PAGE_DESCRIPTION": "如果你想了解一个博客和他的主人，就去看看他的链接，我相信他应该不会把自己讨厌的网站放在博客的链接里。",
+    "FRIENDS_PAGE_DESCRIPTION": "如果你想了解一个博客和他的主人，就去看看他的链接。",
     // 博客聚合标题
     "BLOG_AGGREGATION_TITLE": "博客聚合",
     // 博客聚合描述
