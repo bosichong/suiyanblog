@@ -13,8 +13,8 @@
         <atom:link href="https://www.suiyan.cc/feed" rel="self" type="application/rss+xml"/>
         <description>坚持深度阅读，持续写作输出，复盘技术实践。以终生学习对抗不确定性，把固执与坚持，All in 在值得的事情上。</description>
         <language>zh-CN</language>
-        <lastBuildDate>Wed, 11 Feb 2026 08:14:21 GMT</lastBuildDate>
-        <pubDate>Fri, 13 Feb 2026 00:31:34 GMT</pubDate>
+        <lastBuildDate>Sun, 15 Feb 2026 06:36:17 GMT</lastBuildDate>
+        <pubDate>Sun, 15 Feb 2026 23:14:52 GMT</pubDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <managingEditor>contact@suiyan.cc (J.sky)</managingEditor>
@@ -30,6 +30,112 @@
             <height>144</height>
             <description>碎言博客头像</description>
         </image>
+    <item>
+        <title>哲学就是个狗屁</title>
+        <link>https://www.suiyan.cc/blog/20260215063617</link>
+        <guid isPermaLink="true">https://www.suiyan.cc/blog/20260215063617</guid>
+        <pubDate>Sun, 15 Feb 2026 06:36:17 GMT</pubDate>
+        <description><![CDATA[哲学就是个狗屁]]></description>
+        <content:encoded><![CDATA[
+当我开车的时候，手机放到车里，下车的时候就一定会把手机落在车里；当我更新博客的时候，我会去看一眼博客聚合的网站，他们都不抓取，都不更新。但是，我更新了一篇博客，这篇博客的标题我写错了。发布完之后我才发现，我的标题写错了，心里就在想：可别抓取啊可别抓取啊！不然的话我还得修改标题。然后我就看到这些博客聚合的网站，每一个网站都抓取了rss。这是不是墨菲定律？太特么的神奇了。
+
+
+今天喝多了，和我的连桥唠嗑的时候谈论到情商。我的连桥跟我说：什么是情商？情商就是他么的谁喝得多，谁喝得多谁就有情商。我说不是。我说你儿子要出去玩，咱们还正在喝酒，正在家宴中，他却不管不顾地就要出去玩，他就没有情商。而你明天要上班，今天却请我们过来吃饭，就是有情商，因为你知道明天你没有时间，大年三十你没有时间，你今天却请我们过来一起聚一聚，把今天当做大年夜来相聚、来一起吃饭，你就是有情商。我说你还想得到我们，站在我们的角度上来说，你就是一个有情商的人。
+
+酒过三巡，菜过五味，回到家里，我和老婆提起了这件事，我老婆第一件事就是说我太能墨迹了：“去吧，你就和你的狗子讨论这个事吧，讨论关于情商的事”。她一点都不感兴趣，然后...]]></content:encoded>
+        <dc:creator>contact@suiyan.cc (J.sky)</dc:creator>
+        <category>哲学</category>
+        <category>随笔</category>
+    </item>
+    <item>
+        <title>来，查查你在互联网上的痕迹</title>
+        <link>https://www.suiyan.cc/blog/20260215021228</link>
+        <guid isPermaLink="true">https://www.suiyan.cc/blog/20260215021228</guid>
+        <pubDate>Sun, 15 Feb 2026 02:12:28 GMT</pubDate>
+        <description><![CDATA[闲来无事，更新一下博客中的关于我，但是一些久远的网站历史竟让没有任何记忆了。忽然想起一个网站，可以保存该域名的网页历史快照，然后就Google了一下，立马找到了]]></description>
+        <content:encoded><![CDATA[
+
+闲来无事，更新一下博客中的关于我，但是一些久远的网站历史竟让没有任何记忆了。忽然想起一个网站，可以保存该域名的网页历史快照，然后就Google了一下，立马找到了：
+
+https://archive.org/(https://archive.org/)
+
+ 互联网档案馆（Internet Archive）是一家501(c)(3)非营利组织，致力于构建一个互联网网站及其他文化资源的数字化图书馆
+
+
+这个网站流弊之处在于你可以通过该平台免费获取和借阅数以百万计的数字化资源，包括：
+
+ 网页：著名的 Wayback Machine 保存了超过 1 万亿个网页的历史快照。
+ 图书：提供数千万本免费电子书和可借阅的数字化文本。
+ 多媒体：涵盖电影、视频、录音、音乐、图片和播客。
+ 软件：包含历史软件、经典 PC 游戏及各种模拟器资源
+
+这样的话，你可以查询到很多数字痕迹，赶紧试试吧，看看你以前的网站和博客是什么样子的？
+...]]></content:encoded>
+        <dc:creator>contact@suiyan.cc (J.sky)</dc:creator>
+        <category>网页快照</category>
+        <category>数字图书馆</category>
+    </item>
+    <item>
+        <title>我被关进了「禁止写CSS」的监狱里</title>
+        <link>https://www.suiyan.cc/blog/20260214015006</link>
+        <guid isPermaLink="true">https://www.suiyan.cc/blog/20260214015006</guid>
+        <pubDate>Sat, 14 Feb 2026 01:50:06 GMT</pubDate>
+        <description><![CDATA[前几天，我想极简一下博客的代码，我删除了所有css代码...]]></description>
+        <content:encoded><![CDATA[
+前几天，我想极简一下博客的代码，我删除了所有css代码，我只保留了：
+
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+我觉得这就是极简，看，我没有写一行css代码，我觉的之前写的css都是多余的，tailwind是万能的。之后我刻意的不去写纯css代码，因为我要极简生活，极简的博客，极简的css代码。
+
+直到某一天的某一刻，我觉得，我被抓起来了，被抓到了一个监狱里，这个监狱里不能写CSS代码，必须使用tailwind的class名称。
+
+ 我看上了一个按钮
+
+我的首页下边有一个按钮，这个按钮的title：全部文章，功能是当用户点击后会链接到文章的归档。之前我就用文字做了个链接，但是我又怕用户看不到，或者说是看到了没有点击的欲望，所以，我要美化他，我尝试很多基于tailwind的按钮样式，但是都不太满意。
+
+但是，我知道在我的收藏夹里有个收藏，它使用纯css写的按钮样式，很酷也很适合我的需求，但是，我说过我要极简，不会再往博客里写任何的CSS代码了。
+
+ 极简误区
+
+我曾经了解了极简的误区...]]></content:encoded>
+        <dc:creator>contact@suiyan.cc (J.sky)</dc:creator>
+        <category>极简</category>
+        <category>css</category>
+    </item>
+    <item>
+        <title>纯HTML+Tailwind CSS代码,无需安装即插即用（Copy &amp; Paste）</title>
+        <link>https://www.suiyan.cc/blog/20260213004613</link>
+        <guid isPermaLink="true">https://www.suiyan.cc/blog/20260213004613</guid>
+        <pubDate>Fri, 13 Feb 2026 00:46:13 GMT</pubDate>
+        <description><![CDATA[对于Next.js的开发者来说，前端集成tailwind可以说是现代开发必备依赖了，推荐几个无需安装即插即用（Copy &amp; Paste）直接复制代码就能用样式库给大家。]]></description>
+        <content:encoded><![CDATA[
+对于Next.js的开发者来说，前端集成tailwind可以说是现代开发必备依赖了，有几个不用tailwind的？因为tailwind实在的太好用太简单了！推荐几个无需安装即插即用（Copy &amp; Paste）直接复制代码就能用样式库给大家。
+
+ 1. HyperUI
+
+ 特点：HyperUI 的核心特点是纯 HTML + Tailwind CSS、无需安装、即插即用（Copy &amp; Paste）。
+ 适用场景：登陆页面、营销网页、表单。
+ 地址：https://www.hyperui.dev/(https://www.hyperui.dev/)
+
+ 2. Meraki UI (最接近 HyperUI)
+
+Meraki UI 是 HyperUI 的最佳替代品。它提供了一套完整的组件，设计风格非常干净现代。
+
+ 特点：完全免费，支持 RTL（从右到左阅读），提供预览和一键复制代码。
+ 适用场景：登陆页面、营销网页、表单。
+ 地址：merakiui.com(https://merakiui.com/)
+
+ 3. Tailblocks (最快排版)
+
+如果你需要快速搭出一个网页的轮廓（如 He...]]></content:encoded>
+        <dc:creator>contact@suiyan.cc (J.sky)</dc:creator>
+        <category>tailwind</category>
+        <category>Next.js</category>
+        <category>前端框架</category>
+    </item>
     <item>
         <title>苏格拉底不如脚丫子</title>
         <link>https://www.suiyan.cc/blog/20260211081421</link>
@@ -1256,161 +1362,6 @@ https://merxon22.github.io/GodotArchive/zh/posts/beginner_2d/
         <dc:creator>contact@suiyan.cc (J.sky)</dc:creator>
         <category>Godot</category>
         <category>Godot教程</category>
-    </item>
-    <item>
-        <title> Godot4中节点类常用的内置方法</title>
-        <link>https://www.suiyan.cc/blog/20251127010632</link>
-        <guid isPermaLink="true">https://www.suiyan.cc/blog/20251127010632</guid>
-        <pubDate>Thu, 27 Nov 2025 01:06:32 GMT</pubDate>
-        <description><![CDATA[在 Godot 中，节点类提供了大量实用的内置方法。以下是常用的节点方法分类，内容来自千问AI整理，感觉还不错，分享一下。]]></description>
-        <content:encoded><![CDATA[
-内容来自千问AI整理，感觉还不错，分享一下。
-在 Godot 中，节点类提供了大量实用的内置方法。以下是常用的节点方法分类：
-
- 1. 节点管理方法
-
-
-
- 2. 信号相关方法
-
-
-
- 3. 节点生命周期方法
-
-
-
- 4. 场景树相关方法
-
-
-
- 5. 变量和属性相关
-
-
-
- 6. 节点可见性和状态
-
-
-
- 7. 输入处理方法
-
-
-
- 8. 节点坐标和变换
-
-
-
- 9. 2D/3D 特定方法
-
- 2D 节点
-
-
- 3D 节点
-
-
- 10. 调试和工具方法
-
-
-
- 11. 资源和文件操作
-
-
-
- 12. 计时器和延迟调用
-
-
-
- 13. 组和标签方法
-
-
-
- 14. 常用的全局方法
-
-
-
- 15. 实用的组合方法
-
-
-
-这些方法是 Godot 开发中最常用的节点操作方法，掌握它们可以大大提高开发效率。根据具体需求选择合适的方法，可以让代码更加简洁和高效。
-...]]></content:encoded>
-        <dc:creator>contact@suiyan.cc (J.sky)</dc:creator>
-        <category>Godot</category>
-    </item>
-    <item>
-        <title>无聊的家长会与「资本家」班主任</title>
-        <link>https://www.suiyan.cc/blog/20251123135354</link>
-        <guid isPermaLink="true">https://www.suiyan.cc/blog/20251123135354</guid>
-        <pubDate>Sun, 23 Nov 2025 13:53:54 GMT</pubDate>
-        <description><![CDATA[孩子上八年级了，这周末期中考试后学校组织开了一次家长会，我觉得挺无聊的而且挺压抑，觉得这个家长会对家长和孩子的帮助并不是很大，反而让人有些反感，大体就是憋得慌那种感觉吧。]]></description>
-        <content:encoded><![CDATA[
-孩子上八年级了，这周末期中考试后学校组织开了一次家长会，我觉得挺无聊的而且挺压抑，觉得这个家长会对家长和孩子的帮助并不是很大，反而让人有些反感，大体就是憋得慌那种感觉吧。
-
- 家长会
-
-我在这里说，估计班主任和学校是不会看到的，我自然不会去和学校和教育局提意见，一来，我自己的声音太小，而且即便我去提了意见也是没有用的，因为这不符合大多人价值观。
-家长会，我觉得唯一有用的就是学校抓安全，管纪律，至少这些可以威慑那些黄毛小年轻和精神小妹，保证孩子的安全自然是大事，这个我是支持的！头半个小时，校长呜了哇啦的一顿输出，我觉得还是挺有价值的，至少一个安全稳定的校园学习环境是重中之重。
-
-然后，就是无聊的班主任讲话了。这是第三次初中的家长会，之前除了第一次我没有去，第二次和这次都是我来参加的，因为要在家长会上发言分享教育孩子的经验，孩子她妈不愿意上台所以我就来参加了。我不知道别的班的班主任是如何组织家长会的，之前和朋友们交流，大家好像都不爱提这个话茬。班主任给我们家长准备了咖啡，据说是上次开家长会有人睡着了，这次怕家长在犯困，所以整的咖啡给家长提提神，我就纳闷了，为什么困？多方面的原因吧，现在的...]]></content:encoded>
-        <dc:creator>contact@suiyan.cc (J.sky)</dc:creator>
-        <category>站长吐槽</category>
-    </item>
-    <item>
-        <title>在 Godot 4.4 中构建灵活的有限状态机 (FSM)</title>
-        <link>https://www.suiyan.cc/blog/20251114010459</link>
-        <guid isPermaLink="true">https://www.suiyan.cc/blog/20251114010459</guid>
-        <pubDate>Fri, 14 Nov 2025 01:04:59 GMT</pubDate>
-        <description><![CDATA[在游戏开发中，角色的行为（如站立、行走、跳跃、攻击）通常需要复杂的逻辑来控制。如果不使用状态机，代码会充斥着大量的 if/else 或 match 语句，导致代码难以阅读、维护和扩展，这就是所谓的“意大利面条式代码”。有限状态机（FSM）提供了一种优雅的解决方案。它将角色的每一个行为定义为一个状态（State），并清晰地定义了状态之间的转换（Transition）规则。本教程将基于 godotfsmtest 项目的代码结构，向您展示如何在 Godot 4.4 中实现一个结构清晰、基于类的 FSM。]]></description>
-        <content:encoded><![CDATA[ 为什么要使用状态机？
-
-在游戏开发中，角色的行为（如站立、行走、跳跃、攻击）通常需要复杂的逻辑来控制。如果不使用状态机，代码会充斥着大量的 if/else 或 match 语句，导致代码难以阅读、维护和扩展，这就是所谓的“意大利面条式代码”。例如下边的代码：
-
-     constants.gd (假设我们有一个全局脚本或内部枚举来定义状态)
-    enum PlayerState {
-        IDLE,
-        MOVE,
-        JUMP,
-        ATTACK
-    }
-
-     Player.gd 脚本 (所有逻辑集中于此)
-    extends CharacterBody2D
-
-     运动和重力常量...
-    const SPEED = 300.0
-    const JUMP_VELOCITY = 500.0
-    var gravity = ProjectSettings.get_setting(&quot;physics/2d/default_gravity&quot;)
-
-     追踪当前状态的核心变量
-    var current...]]></content:encoded>
-        <dc:creator>contact@suiyan.cc (J.sky)</dc:creator>
-        <category>Godot</category>
-        <category>Godot教程</category>
-    </item>
-    <item>
-        <title>Godot游戏开发《我的博客》记录13-完成了游戏的启动与过场</title>
-        <link>https://www.suiyan.cc/blog/20251107014030</link>
-        <guid isPermaLink="true">https://www.suiyan.cc/blog/20251107014030</guid>
-        <pubDate>Fri, 07 Nov 2025 01:40:30 GMT</pubDate>
-        <description><![CDATA[关于游戏的剧本编写，在看过了《游戏剧本怎么写》这本书之后有了一定的启发，虽然之前没接触过剧本的编写，但是一些主线任务的编写也算是有了一些剧情的大概，当务之急是游戏整体进度的推进和完成度。]]></description>
-        <content:encoded><![CDATA[
-关于游戏的剧本编写，在看过了《游戏剧本怎么写》这本书之后有了一定的启发，虽然之前没接触过剧本的编写，但是一些主线任务的编写也算是有了一些剧情的大概，当务之急是游戏整体进度的推进和完成度。
-
- 开始游戏
-
-对于游戏的启动，有一个启动画面，我利用现有的素材拼凑了一个logo，哈哈哈，自我感觉还是不错，先将就着用，有了好的想法，我在更换，效果如下：
-
-
-
-进阶这就是一些简单的剧情和过场动画，之后就会进入到主场景了，万事开头难，总觉得游戏的开始这段很重要，生怕玩家打开了之后就关闭了，所以，我尽力做的还一些吧。
-
- 剧情的推进
-
-之后就是剧情以及游戏进度的推进了。昨晚追了一下网飞的剧集《弥留之国的爱丽丝》，怎么呢说呢，我愿称之为日版的《鱿鱼游戏》。看完第一季，我就在思考一个问题，对于目前我制作的这款游戏，我现在站在什么位置了？忽然觉得自己即是玩家又是游戏的设计者，这明显很矛盾，因为这样我很难把握这个游戏的设计初衷，我觉得我还得更多的站在游戏设计者的角度去考虑这个游戏的设计。
-后续的剧情，虽然在脑海里有了一定的构思，但是明显感觉很乱，毕竟，我没有经历过太多的博客撰写与维护的经历，以我个人对近20...]]></content:encoded>
-        <dc:creator>contact@suiyan.cc (J.sky)</dc:creator>
-        <category>Godot</category>
-        <category>游戏开发</category>
-        <category>《我的博客》</category>
     </item>
     </channel>
 </rss>
