@@ -7,7 +7,6 @@ import { sanitizeHtml } from "../../utils/sanitizeHtml";
 import Layout from "../../components/Layout";
 import dynamic from 'next/dynamic';
 import Head from "next/head";
-import CC from '@/components/CC';
 import Breadcrumb from '@/components/Breadcrumb';
 import PostList from '@/components/PostList';
 import readingTime from 'reading-time';
@@ -157,7 +156,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                 />
 
                 <header className="mb-4">
-                    <h1 className="text-2xl font-semibold mb-4 text-text-primary">
+                    <h1 className="text-4xl font-semibold mb-4 text-text-primary">
                         {post.title}
                     </h1>
                     <div className="flex flex-wrap items-center gap-2 text-sm text-text-secondary">
@@ -229,10 +228,6 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                     >
                         {sanitizedContent}
                     </ReactMarkdown>
-                </div>
-
-                <div className="mt-4">
-                    <CC title={post.title || ''} author={post.author || ''} id={post.id || ''} />
                 </div>
 
                 {post.tag && (

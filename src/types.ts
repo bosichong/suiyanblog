@@ -37,6 +37,7 @@ export interface Config {
 export interface MenuItem {
   name: string;
   href: string;
+  iconComponent?: string;
 }
 
 // 友情链接类型
