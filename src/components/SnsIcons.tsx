@@ -1,5 +1,4 @@
 import config from '@/config';
-import BilibiliIcon from './icons/BilibiliIcon';
 import GithubIcon from './icons/GithubIcon';
 import EmailIcon from './icons/EmailIcon';
 import RssIcon from './icons/RssIcon';
@@ -8,7 +7,6 @@ import { SnsLink } from '@/types';
 
 // 图标组件映射
 const iconComponents: Record<string, React.FC<{ className?: string }>> = {
-    BilibiliIcon,
     GithubIcon,
     EmailIcon,
     MastodonIcon,
