@@ -12,7 +12,7 @@ const aiLevels = [
         level: 0,
         icon: <BotOff className="w-6 h-6" />,
         theme: "No AI",
-        description: "AI = 0%，完全由人类大脑和双手完成，没有任何AI参与"
+        description: "完全由人类大脑和双手完成，没有任何AI参与"
     },
     {
         level: 1,
@@ -24,13 +24,13 @@ const aiLevels = [
         level: 2,
         icon: <Bot className="w-6 h-6" />,
         theme: "II",
-        description: "AI = 50%，作者出想法，AI出骨架；主体和思想各一半，作者与AI共同创作，互相引导"
+        description: "AI = 50%，人机平等对话，各占一半，作者提供想法与方向，AI提供框架与内容支撑。"
     },
     {
         level: 3,
         icon: <Bot className="w-6 h-6" />,
         theme: "III",
-        description: "AI > 50%，内容由机器生成，人类仅做后期校对、复核和轻微修改，思想被AI引导或左右"
+        description: "AI > 50%，内容主要由AI生成，人类负责后期校对、复核和轻微调整。"
     }
 ];
 
@@ -40,11 +40,12 @@ export default function AILabelBadge({ level }: AILabelBadgeProps) {
     return (
         <Link 
             href="/AI-Label"
-            className="inline-flex items-center gap-1.5 text-sm text-text-secondary hover:text-text-link transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs text-text-secondary hover:text-text-link transition-colors"
         >
-            {aiInfo.icon}
-            <span className="text-xs opacity-70">{aiInfo.theme}</span>
-            <span className="text-xs opacity-70">({aiInfo.description})</span>
+            <span className="flex items-center gap-1">
+                {aiInfo.icon}{aiInfo.theme}
+            </span>
+            <span>({aiInfo.description})</span>
         </Link>
     );
 }

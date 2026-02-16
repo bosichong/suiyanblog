@@ -31,7 +31,7 @@ const aiLevels: AILevel[] = [
         icon: <Bot className="w-6 h-6" />,
         theme: "I",
         percentage: "< 25%",
-        description: "主体由人类撰写，AI辅助检查语法、优化表达，像魔法棒一样点缀修饰",
+        description: "内容人类撰写或口述录音，需要AI检查语法、优化表达，但核心观点是自己的文章",
         details: [
             "AI参与程度：< 25%",
             "创作方式：主要是人在写，AI做了些修改",

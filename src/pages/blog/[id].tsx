@@ -168,7 +168,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                         <span>·</span>
                         <span>{stats.words} 字</span>
                         <span>·</span>
-                        <span>预计阅读 {stats.text}</span>
+                        <span>预计阅读 {stats.text.replace(' read', '')}</span>
                         <AILabelBadge level={post.ai_label || 0} />
                     </div>
                 </header>
