@@ -2,10 +2,11 @@ import Layout from '../components/Layout';
 import Head from 'next/head';
 import Breadcrumb from '../components/Breadcrumb';
 import config from '../config';
+import { BotOff, Bot } from 'lucide-react';
 
 interface AILevel {
     level: string;
-    emoji: string;
+    icon: React.ReactNode;
     theme: string;
     percentage: string;
     description: string;
@@ -14,11 +15,11 @@ interface AILevel {
 
 const aiLevels: AILevel[] = [
     {
-        level: "AI 0",
-        emoji: "👤",
-        theme: "纯粹个体",
+        level: "No AI",
+        icon: <BotOff className="w-6 h-6" />,
+        theme: "No AI",
         percentage: "0%",
-        description: "完全由人类大脑和双手完成",
+        description: "完全由人类大脑和双手完成，没有任何AI参与",
         details: [
             "AI参与程度：0%",
             "创作方式：完全由人类大脑和双手完成",
@@ -26,11 +27,11 @@ const aiLevels: AILevel[] = [
         ]
     },
     {
-        level: "AI 1",
-        emoji: "✨",
-        theme: "魔法润色",
+        level: "I",
+        icon: <Bot className="w-6 h-6" />,
+        theme: "I",
         percentage: "< 25%",
-        description: "主要是人在写，AI做了些修改，像\"魔法棒\"一样点缀修饰",
+        description: "主体由人类撰写，AI辅助检查语法、优化表达，像魔法棒一样点缀修饰",
         details: [
             "AI参与程度：< 25%",
             "创作方式：主要是人在写，AI做了些修改",
@@ -38,11 +39,11 @@ const aiLevels: AILevel[] = [
         ]
     },
     {
-        level: "AI 2",
-        emoji: "🤝",
-        theme: "握手协作",
+        level: "II",
+        icon: <Bot className="w-6 h-6" />,
+        theme: "II",
         percentage: "50%",
-        description: "人机五五开，平等对话，你出想法，它出骨架",
+        description: "人机平等对话，各占一半，作者提供想法与方向，AI提供框架与内容支撑",
         details: [
             "AI参与程度：= 50%",
             "创作方式：人机五五开，平等对话",
@@ -50,11 +51,11 @@ const aiLevels: AILevel[] = [
         ]
     },
     {
-        level: "AI 3",
-        emoji: "🤖",
-        theme: "机器主体",
+        level: "III",
+        icon: <Bot className="w-6 h-6" />,
+        theme: "III",
         percentage: "> 50%",
-        description: "绝大部分由AI生成，内容由机器生成，人类仅做后期校对",
+        description: "内容主要由AI生成，人类负责后期校对、复核和轻微调整",
         details: [
             "AI参与程度：> 50%",
             "创作方式：绝大部分由AI生成",
@@ -65,23 +66,23 @@ const aiLevels: AILevel[] = [
 
 const usageSuggestions = [
     {
-        level: "AI 0",
-        emoji: "👤",
+        level: "No AI",
+        icon: <BotOff className="w-5 h-5" />,
         scenario: "深度思考、个人感悟、技术总结等需要原创性的内容"
     },
     {
-        level: "AI 1",
-        emoji: "✨",
+        level: "I",
+        icon: <Bot className="w-5 h-5" />,
         scenario: "需要AI检查语法、优化表达，但核心观点是自己的文章"
     },
     {
-        level: "AI 2",
-        emoji: "🤝",
+        level: "II",
+        icon: <Bot className="w-5 h-5" />,
         scenario: "与AI头脑风暴、共同探索某个话题，双方贡献相当"
     },
     {
-        level: "AI 3",
-        emoji: "🤖",
+        level: "III",
+        icon: <Bot className="w-5 h-5" />,
         scenario: "教程整理、资料汇总、快速生成参考内容等场景"
     }
 ];
@@ -91,7 +92,7 @@ function AILabel() {
         <Layout>
             <Head>
                 <title>{`AI创作等级标识 | ${config.BLOG_NAME}`}</title>
-                <meta name="description" content="碎言博客AI创作等级标识系统说明" />
+                <meta name="description" content="碎言博客AI创作等级标识系统：No AI（纯粹个体，0% AI参与）、I（魔法润色，<25% AI参与）、II（握手协作，50% AI参与）、III（机器主体，>50% AI参与）。了解各等级的定义、创作方式、特点及适用场景。" />
             </Head>
 
             <article className="w-full">
@@ -124,7 +125,7 @@ function AILabel() {
                                         <span className="font-semibold text-text-primary">{item.level}</span>
                                     </td>
                                     <td className="py-4 px-4 text-center">
-                                        <span className="text-2xl">{item.emoji}</span>
+                                        <span className="inline-flex items-center justify-center text-text-primary">{item.icon}</span>
                                     </td>
                                     <td className="py-4 px-4">
                                         <span className="font-medium text-text-primary">{item.theme}</span>
@@ -148,7 +149,7 @@ function AILabel() {
                                 className="p-6 rounded-lg border border-border hover:shadow-md transition-shadow"
                             >
                                 <div className="flex items-center gap-3 mb-4">
-                                    <span className="text-3xl">{item.emoji}</span>
+                                    <span className="inline-flex items-center justify-center text-text-primary">{item.icon}</span>
                                     <div>
                                         <h3 className="text-lg font-semibold text-text-primary">
                                             {item.theme}
@@ -179,7 +180,7 @@ function AILabel() {
                                 className="p-4 rounded-lg border border-border bg-bg-content/50"
                             >
                                 <div className="flex items-center gap-2 mb-2">
-                                    <span className="text-xl">{item.emoji}</span>
+                                    <span className="inline-flex items-center justify-center text-text-primary">{item.icon}</span>
                                     <span className="font-medium text-text-primary">{item.level}</span>
                                 </div>
                                 <p className="text-sm text-text-secondary">{item.scenario}</p>
@@ -192,9 +193,11 @@ function AILabel() {
                 <section className="p-6 rounded-lg bg-bg-content border border-border">
                     <h2 className="text-lg font-semibold mb-4 text-text-primary">本文创作标识</h2>
                     <div className="flex items-center gap-4">
-                        <span className="text-4xl">🤝</span>
+                        <span className="inline-flex items-center justify-center text-4xl text-text-primary">
+                            <Bot className="w-10 h-10" />
+                        </span>
                         <div>
-                            <p className="font-medium text-text-primary">AI 2 - 握手协作</p>
+                            <p className="font-medium text-text-primary">II - 握手协作</p>
                             <p className="text-sm text-text-secondary">人机共同创作，平等对话</p>
                         </div>
                     </div>
