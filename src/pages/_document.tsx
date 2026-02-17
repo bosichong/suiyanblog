@@ -22,6 +22,7 @@ export default function Document() {
                 <meta name="fediverse:creator" content="@J_sky@mastodon.social" />
                 <link rel="icon" href="/favicon.ico" />
                 <link rel="alternate" type="application/rss+xml" title="碎言 - SuiYan Blog" href="/feed.xml" />
+                <meta name="google-site-verification" content="U4r9UrN0jN5L0q1WT2xe_MN54JY1xn9MIOD-IpSyL-s" />
             </Head>
             <body className='bg-zinc-50'>
                 <Main />
