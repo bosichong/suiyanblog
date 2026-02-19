@@ -49,12 +49,24 @@ export default function Thoughts({ thoughts }: { thoughts: Post[] }) {
       <Breadcrumb type="thoughts" />
 
       <div className="w-full">
-        <h1 className="text-2xl font-semibold mb-4 text-text-primary">
-          片语
-        </h1>
-        <p className="mb-8 text-sm text-text-secondary">
-          共有 <span className="text-text-primary">{thoughts.length}</span> 条片语
-        </p>
+
+              <h1 className="text-2xl font-semibold mb-4 text-text-primary">
+
+                {config.THOUGHTS_PAGE_TITLE}
+
+              </h1>
+
+              <p className="mb-2 text-sm text-text-secondary">
+
+                {config.THOUGHTS_PAGE_DESCRIPTION}
+
+              </p>
+
+              <p className="mb-8 text-sm text-text-secondary">
+
+                共有 <span className="text-text-primary">{thoughts.length}</span> 条片语
+
+              </p>
 
         {thoughts.length === 0 ? (
           <div className="text-center py-12 text-text-secondary">
