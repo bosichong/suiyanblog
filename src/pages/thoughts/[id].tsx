@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import Layout from '../../components/Layout';
@@ -6,6 +7,23 @@ import Link from '../../components/Link';
 import { Post } from '../../types';
 import config from '../../config';
 import getSortedThoughtsData, { getThoughtById } from '../../utils/parseThoughts';
+import dynamic from 'next/dynamic';
+import CommentButton from '@/components/CommentButton';
+import giscusConfig from '../../giscusConfigs';
+import rehypeRaw from 'rehype-raw';
+import remarkGfm from 'remark-gfm';
+import ReactMarkdown from 'react-markdown';
+import { sanitizeHtml } from '../../utils/sanitizeHtml';
+
+// 动态导入 Giscus 组件以延迟加载
+const Giscus = dynamic(() => import('@giscus/react'), {
+    ssr: false,
+    loading: () => (
+        <div className="flex items-center justify-center py-8">
+            <div>加载评论中...</div>
+        </div>
+    )
+});
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const thoughts = getSortedThoughtsData();
@@ -44,6 +62,9 @@ const formatDate = (dateString: string): string => {
 };
 
 export default function ThoughtDetail({ thought }: { thought: Post }) {
+  const [showComments, setShowComments] = useState(false);
+  const sanitizedContent = sanitizeHtml(thought.content || '');
+
   return (
     <Layout>
       <Head>
@@ -68,10 +89,50 @@ export default function ThoughtDetail({ thought }: { thought: Post }) {
         </div>
 
         <div className="prose prose-gray max-w-none">
-          <div className="whitespace-pre-wrap text-gray-800 leading-relaxed">
-            {thought.content}
-          </div>
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw]}
+            components={{
+              a: ({ href, children }) => (
+                <Link className="break-words" href={href || ''}>
+                  {children}
+                </Link>
+              ),
+              img: ({ src, alt }) => (
+                <img src={src} alt={alt || ''} className="rounded-lg" />
+              ),
+            }}
+          >
+            {sanitizedContent}
+          </ReactMarkdown>
         </div>
+
+        <div className="text-center border-t border-border mt-8 pt-6">
+          <CommentButton
+            showComments={showComments}
+            onToggle={() => setShowComments(!showComments)}
+          />
+        </div>
+
+        <section className="">
+          {/* 只在 showComments 为 true 时才渲染 Giscus 组件 */}
+          {showComments && (
+            <Giscus
+              key={thought.id}
+              repo={giscusConfig.repo as `${string}/${string}`}
+              repoId={giscusConfig.repoId}
+              category={giscusConfig.category}
+              categoryId={giscusConfig.categoryId}
+              mapping={giscusConfig.mapping as any}
+              lang={giscusConfig.lang}
+              strict="0"
+              reactionsEnabled="1"
+              emitMetadata="0"
+              inputPosition="bottom"
+              theme="light"
+            />
+          )}
+        </section>
 
         <div className="mt-8 pt-6 border-t border-gray-200">
           <Link href="/thoughts" className="inline-flex items-center">
