@@ -8,6 +8,8 @@ export interface Post {
   description?: string;
   content?: string;
   ai_label?: number;
+  type?: string;
+  preview?: string;
   [key: string]: any;
 }
 

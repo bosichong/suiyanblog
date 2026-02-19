@@ -8,6 +8,11 @@ const outputDir = path.join(process.cwd(), 'public');
 function getSortedPostsData() {
     const fileNames = fs.readdirSync(postsDirectory);
     return fileNames.map(fileName => {
+        // 排除 thoughts 目录
+        if (fileName === 'thoughts') {
+            return null;
+        }
+
         const id = fileName.replace(/\.md$/, '');
         const filePath = path.join(postsDirectory, fileName);
         const fileContent = fs.readFileSync(filePath, 'utf8');

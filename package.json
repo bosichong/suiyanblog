@@ -8,6 +8,7 @@
     "start": "next start",
     "preview": "python -m http.server 8000 --directory out",
     "nb": "node createBlog.js",
+    "nt": "node createThought.js",
     "lint": "next lint",
     "analyze": "ANALYZE=true next build"
   },

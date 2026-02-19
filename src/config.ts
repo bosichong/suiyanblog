@@ -15,7 +15,7 @@ const config: Config = {
     "BLOG_DESCRIPTION_EN": "You see see you , This one day day di.",
     // 关于我简介
     "ABOUT_ME": "坚持深度阅读，持续写作输出，复盘技术实践。以终生学习对抗不确定性，把固执与坚持，All in 在值得的事情上。",
-    "POSTS_PER_PAGE": 25,
+    "POSTS_PER_PAGE": 18,
     // 元描述，用于搜索引擎优化
     "META_DESCRIPTION": "坚持深度阅读，持续写作输出，复盘技术实践。以终生学习对抗不确定性，把固执与坚持，All in 在值得的事情上。",
     // 元关键词，用于搜索引擎优化

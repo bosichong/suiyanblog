@@ -3,7 +3,7 @@ import Link from './Link';
 import HomeIcon from './icons/HomeIcon';
 
 interface BreadcrumbProps {
-    type: 'home' | 'archives' | 'tags' | 'tag' | 'search' | 'friends' | 'blog' | 'sponsors' | 'ai-label';
+    type: 'home' | 'archives' | 'tags' | 'tag' | 'search' | 'friends' | 'blog' | 'sponsors' | 'ai-label' | 'thoughts';
     title?: string;
     tag?: string;
     pageNum?: number;
@@ -35,6 +35,9 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ type, title, tag, pageNum }) =>
                 break;
             case 'friends':
                 items.push({ label: '友情链接', href: '/Friends' });
+                break;
+            case 'thoughts':
+                items.push({ label: '片语', href: '/thoughts' });
                 break;
             case 'ai-label':
                 items.push({ label: 'AI标识', href: '/AI-Label' });
