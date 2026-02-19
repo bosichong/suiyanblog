@@ -31,7 +31,7 @@ const config: Config = {
     ],
 
         // 友链页面标题
-    "FRIENDS_PAGE_TITLE": "邻居",
+    "FRIENDS_PAGE_TITLE": "链接",
     // 友链页面描述
     "FRIENDS_PAGE_DESCRIPTION": "如果你想了解一个博客和他的主人，就去看看他的链接。",
     // 博客聚合标题
@@ -39,6 +39,13 @@ const config: Config = {
     // 博客聚合描述
     "BLOG_AGGREGATION_DESCRIPTION": "一些优秀的博客聚合平台，可以发现更多有趣的独立博客。",
     "links": [
+        {
+            "site_name": "Owen的博客",
+            "site_url": "https://www.owenyoung.com/",
+            "site_description": "主要关注技术，读书，摘抄，杂谈，文章评论，工具分享，工作流，灵感，英文学习，注意力管理，深度工作等方向。",
+            "site_avatar": "#",
+            "is_active": true
+        },
         {
             "site_name": "莫比乌斯",
             "site_url": "https://onojyun.com/",
