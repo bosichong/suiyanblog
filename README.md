@@ -15,6 +15,7 @@ https://www.suiyan.cc
 - 📱 **RSS 订阅**: 自动生成 RSS feed，方便读者订阅
 - 🔧 **SEO 优化**: 自动生成 sitemap，优化搜索引擎收录
 - ⚡ **静态导出**: 支持导出为纯静态站点，可部署到任何静态托管服务
+- 💭 **片语功能**: 支持发布简短的日常想法和随笔
 
 ## 技术栈
 
@@ -61,6 +62,19 @@ npm run nb
 
 按照提示输入文章标题、分类、标签等信息，脚本会自动在 `md` 目录下创建新的 Markdown 文件。
 
+### 创建片语
+
+```bash
+npm run nt [片语内容]
+```
+
+创建简短的日常想法和随笔，片语会自动保存到 `md/thoughts` 目录。如果不提供内容，会使用默认文本。
+
+例如：
+```bash
+npm run nt "今天天气真不错！"
+```
+
 ### 导出静态站点
 
 ```bash
@@ -75,6 +89,7 @@ npm run preview
 ```
 suiyanblog/
 ├── md/                  # Markdown 博客文章
+│   └── thoughts/       # 片语（短内容）目录
 ├── public/              # 静态资源文件
 ├── src/
 │   ├── app/            # Next.js App Router 页面
@@ -86,6 +101,7 @@ suiyanblog/
 │   ├── config.ts       # 博客配置
 │   └── types.ts        # TypeScript 类型定义
 ├── createBlog.js       # 博客文章创建脚本
+├── createThought.js    # 片语创建脚本
 ├── generateRSS.js      # RSS 生成脚本
 └── generateSitemap.js  # Sitemap 生成脚本
 ```
@@ -103,6 +119,8 @@ suiyanblog/
 
 ## 文章格式
 
+### 博客文章
+
 博客文章使用 Markdown 格式，文件名格式为 `YYYYMMDDHHmmss.md` 或数字编号。文章头部需要包含 frontmatter 元数据：
 
 ```markdown
@@ -115,6 +133,21 @@ tags: [标签1, 标签2]
 
 文章内容...
 ```
+
+### 片语
+
+片语是简短的日常想法和随笔，文件保存在 `md/thoughts/` 目录下。片语使用以下格式：
+
+```markdown
+---
+type: thought
+time: '2025-01-01T12:00:00.000Z'
+---
+
+片语内容...
+```
+
+片语会自动使用当前时间戳生成文件名，无需手动设置。
 
 ## 部署
 
