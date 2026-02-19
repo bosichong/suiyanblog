@@ -80,9 +80,10 @@ const Friends = () => {
                 <div className="text-center">
                     <button
                         onClick={() => setShowComments(true)}
-                        className="custom-btn btn-16 "
+                        className="custom-btn btn-7 "
                     >
-                        加载评论
+                        <span>加载评论</span>
+                        
                     </button>
                 </div>
             ) : (

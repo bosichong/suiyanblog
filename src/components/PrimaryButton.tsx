@@ -10,6 +10,6 @@ interface PrimaryButtonProps {
 
 export default function PrimaryButton({ href, children, className = '' }: PrimaryButtonProps) {
   return (
-    <a className="custom-btn btn-16" href={href}>{children}</a>
+    <a className="custom-btn btn-7" href={href}><span>{children}</span></a>
   );
 }

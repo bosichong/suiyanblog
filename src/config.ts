@@ -26,7 +26,7 @@ const config: Config = {
     'menuItems' : [
         {name:'搜索',href:'/search',iconComponent:'SearchIcon'},
         {name:'标签',href:'/Tags',iconComponent:'TagsIcon'},
-        {name:'邻居',href:'/Friends',iconComponent:'FriendsIcon'},
+        {name:'链接',href:'/Friends',iconComponent:'FriendsIcon'},
         {name:'关于',href:'/blog/1',iconComponent:'AboutIcon'},
     ],
 

@@ -1,7 +1,7 @@
-import { Users } from 'lucide-react';
+import { Link } from 'lucide-react';
 
 const FriendsIcon = ({ className = '' }: { className?: string }) => {
-    return <Users className={className} />;
+    return <Link className={className} />;
 };
 
 export default FriendsIcon;
