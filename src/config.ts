@@ -30,7 +30,11 @@ const config: Config = {
         {name:'关于',href:'/blog/1',iconComponent:'AboutIcon'},
     ],
 
-        // 友链页面标题
+        // 片语页面标题
+    "THOUGHTS_PAGE_TITLE": "片语",
+    // 片语页面描述
+    "THOUGHTS_PAGE_DESCRIPTION": "碎言博客的片语，记录日常的短小想法和瞬间感悟。",
+    // 友链页面标题
     "FRIENDS_PAGE_TITLE": "链接",
     // 友链页面描述
     "FRIENDS_PAGE_DESCRIPTION": "如果你想了解一个博客和他的主人，就去看看他的链接。",

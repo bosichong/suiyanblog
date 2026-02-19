@@ -24,6 +24,8 @@ export interface Config {
   META_DESCRIPTION: string;
   META_KEYWORDS: string;
   PROFILE_IMAGE: string;
+  THOUGHTS_PAGE_TITLE: string;
+  THOUGHTS_PAGE_DESCRIPTION: string;
   FRIENDS_PAGE_TITLE: string;
   FRIENDS_PAGE_DESCRIPTION: string;
   BLOG_AGGREGATION_TITLE: string;
