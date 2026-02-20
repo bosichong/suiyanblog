@@ -26,6 +26,31 @@
         <priority>0.5</priority>
     </url>
     <url>
+        <loc>https://www.suiyan.cc/tags/openclaw</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/tags/ai%E5%8A%A9%E7%90%86</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/tags/pagefind</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/tags/%E7%89%87%E8%AF%AD</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/tags/%E7%A2%8E%E8%A8%80%E5%8D%9A%E5%AE%A2</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://www.suiyan.cc/tags/vibecoding</loc>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
@@ -441,11 +466,6 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.suiyan.cc/tags/%E7%A2%8E%E8%A8%80%E5%8D%9A%E5%AE%A2</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
         <loc>https://www.suiyan.cc/tags/tailwind.css</loc>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
@@ -832,6 +852,24 @@
     </url>
     <url>
         <loc>https://www.suiyan.cc/tags/%E7%BD%91%E7%AB%99%E8%BF%90%E7%BB%B4</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/blog/20260220072825</loc>
+        <lastmod>2026-02-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/blog/20260220024445</loc>
+        <lastmod>2026-02-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/blog/20260219132046</loc>
+        <lastmod>2026-02-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
