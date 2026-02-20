@@ -13,8 +13,8 @@
         <atom:link href="https://www.suiyan.cc/feed" rel="self" type="application/rss+xml"/>
         <description>坚持深度阅读，持续写作输出，复盘技术实践。以终生学习对抗不确定性，把固执与坚持，All in 在值得的事情上。</description>
         <language>zh-CN</language>
-        <lastBuildDate>Wed, 18 Feb 2026 01:44:28 GMT</lastBuildDate>
-        <pubDate>Thu, 19 Feb 2026 11:35:55 GMT</pubDate>
+        <lastBuildDate>Fri, 20 Feb 2026 07:28:25 GMT</lastBuildDate>
+        <pubDate>Fri, 20 Feb 2026 13:54:06 GMT</pubDate>
         <generator>SuiYan Blog RSS Generator</generator>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <managingEditor>contact@suiyan.cc (J.sky)</managingEditor>
@@ -30,6 +30,106 @@
             <height>144</height>
             <description>碎言博客头像</description>
         </image>
+    <item>
+        <title>网易竟然也开始搞「海鲜」: LobsterAI 有道龙虾</title>
+        <link>https://www.suiyan.cc/blog/20260220072825</link>
+        <guid isPermaLink="true">https://www.suiyan.cc/blog/20260220072825</guid>
+        <pubDate>Fri, 20 Feb 2026 07:28:25 GMT</pubDate>
+        <description><![CDATA[网易不声不响的出品了一个类似OpenClaw的有道龙虾。 ]]></description>
+        <content:encoded><![CDATA[
+
+ LobsterAI
+
+ 一个7×24小时帮你干活的全场景个人助理 Agent
+
+网易不声不响的出品了一个类似OpenClaw的有道龙虾。 前几天还在琢磨要不要搞一下，结果因为没有Mac mini，也没有LLM大模型的API Key，嗯，就放弃了测试。
+
+
+ OpenClaw的成本
+
+
+最低成本方案（¥1,500 以内）：
+
+    硬件：Beelink EQ12 Pro 或旧笔记本（4核+8GB）
+    系统：Ubuntu 24.04 LTS
+    模型：通过 Ollama 运行 Qwen2.5 或 Llama 3.2（4bit 量化）
+    成本：仅电费（约 ¥20/月）
+
+
+最佳体验方案（¥4,0005,000）：
+
+    硬件：Mac Mini M4（16GB 内存）
+    系统：macOS Sonoma+
+    模型：本地 Mistral 7B / Qwen 14B
+    优势：原生集成、语音唤醒、低功耗
+
+OpenClaw 大约几百与到几千元，这些成本取决于你的token的使用量和硬件的成本。
+
+
+ 安装
+
+LobsterAI的安装非常简单，也没有什么繁琐...]]></content:encoded>
+        <dc:creator>contact@suiyan.cc (J.sky)</dc:creator>
+        <category>OpenClaw</category>
+        <category>AI助理</category>
+    </item>
+    <item>
+        <title>Pagefind一定要慎用！</title>
+        <link>https://www.suiyan.cc/blog/20260220024445</link>
+        <guid isPermaLink="true">https://www.suiyan.cc/blog/20260220024445</guid>
+        <pubDate>Fri, 20 Feb 2026 02:44:45 GMT</pubDate>
+        <description><![CDATA[不知道为什么对博客中现有的搜索功能非常不满意，然后就尝试询问LLM有何其他的解决方案，LLM一致推荐Pagefind，并给出很细致的解释。那么作为一个一脸懵的人类自然会相信了，那么就让他开始设计和构建了，结果却出人意外！]]></description>
+        <content:encoded><![CDATA[
+
+Pagefind
+Pagefind is a fully static search library that aims to perform well on large sites, while using as little of your users’ bandwidth as possible, and without hosting any infrastructure.
+
+
+ 起因
+
+不知道为什么对博客中现有的搜索功能非常不满意，然后就尝试询问LLM有何其他的解决方案，LLM一致推荐Pagefind，并给出很细致的解释。那么作为一个一脸懵的人类自然会相信了，那么就让他开始设计和构建了。
+
+ 结果
+
+花了很多时间，断断续续的花了几个小时，并且在几天内重构了三次，最终勉强的实现了全站静态页面内容的模糊搜索。
+
+先说优点，确实可以全站的模糊搜索，而且速度很快，构建的时候也把索引给一并创建了，算是很方便。
+
+缺点：
+
+1. 搜索太全面了，模糊到一个关键字能把所有静态页面都给展示在结果中，这就失去了搜索的意义。
+2. 索引的文件太多了，以至于我放弃了这个功能，在删除这些索引的时候...]]></content:encoded>
+        <dc:creator>contact@suiyan.cc (J.sky)</dc:creator>
+        <category>Pagefind</category>
+    </item>
+    <item>
+        <title>为博客添加了一个小功能「片语」</title>
+        <link>https://www.suiyan.cc/blog/20260219132046</link>
+        <guid isPermaLink="true">https://www.suiyan.cc/blog/20260219132046</guid>
+        <pubDate>Thu, 19 Feb 2026 13:20:46 GMT</pubDate>
+        <description><![CDATA[偶尔会有一些不完整的想法，如果不马上记下来就会瞬间即逝，「片语」就是这样而来的。]]></description>
+        <content:encoded><![CDATA[
+偶尔会有一些不完整的想法，如果不马上记下来就会瞬间即逝，「片语」就是这样而来的。
+
+
+其实就是一个类似微博的一种瞬间短文，记录一下简短的思考和灵感。
+
+ 设计思路
+
+内容 + 时间，然后其他和博客一样存储为.md，然后生成静态资源而已，想法一出，大模型驱动，一把梭哈直接成型。
+
+ 修改
+
+其实也没啥可修改的，后续的两次修改都是在改样式的细节。功能在GLM4.7的面前，ta可能会觉得太简单了。
+
+ 总结
+
+折腾博客，证明我存在。「碎言」「片语」这下圆满了。
+...]]></content:encoded>
+        <dc:creator>contact@suiyan.cc (J.sky)</dc:creator>
+        <category>片语</category>
+        <category>碎言博客</category>
+    </item>
     <item>
         <title>Vibe Coding/氛围编程很爽？但别忘了开源生态</title>
         <link>https://www.suiyan.cc/blog/20260218014428</link>
@@ -1261,87 +1361,6 @@ Next.js项目中添加代码：
 以前没有AI的时候，写代码会自己选择思考，调试，最终达成一个自己可以理解的过程。现在提示词喂给AI，获取一堆看似很严谨的代码，但是有的时候真的看不懂A...]]></content:encoded>
         <dc:creator>contact@suiyan.cc (J.sky)</dc:creator>
         <category>站长吐槽</category>
-    </item>
-    <item>
-        <title>Godot 4 实用视频教程中文版</title>
-        <link>https://www.suiyan.cc/blog/20251216144340</link>
-        <guid isPermaLink="true">https://www.suiyan.cc/blog/20251216144340</guid>
-        <pubDate>Tue, 16 Dec 2025 14:43:40 GMT</pubDate>
-        <description><![CDATA[最近几个月，我一直在开发我的第一款独立游戏《我的博客》，在游戏制作中也算是积累了一些经验与心得，所以，我打算制作一个Godot的中文版教程。]]></description>
-        <content:encoded><![CDATA[
-
-&lt;iframe src=&quot;//player.bilibili.com/player.html?isOutside=true&amp;aid=115731953882639&amp;bvid=BV1cmqvBZEW4&amp;cid=34785398539&amp;p=1&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot; width=&quot;640&quot; height=&quot;480&quot;&lt;/iframe
-
-
-最近几个月，我一直在开发我的第一款独立游戏《我的博客》，
-在游戏制作中也算是积累了一些经验与心得，
-所以，我打算制作一个Godot的中文版教程。
-
-我希望这个教程，既可以帮助新手入门Godot，
-也可以作为进阶的学习资料查询，
-既可以连续观看学习，
-又可以每一集单独查阅补习，
-并附上相关代码及源文件，
-既可以仔细研究，也可以拿来即用。
-
-
-独立游戏开发并不是一件容易之事，
-无论你是想通过制作独立游戏来赚钱，
-还是实现自己曾经的梦想，
-我都希望你能最终实现自己的独立游戏梦。
-
-Godot 4 实用视频教程中文版【连...]]></content:encoded>
-        <dc:creator>contact@suiyan.cc (J.sky)</dc:creator>
-        <category>Godot</category>
-        <category>游戏开发</category>
-    </item>
-    <item>
-        <title>快说！电影票买错日期的这种蠢事不是只有我一个人做过！</title>
-        <link>https://www.suiyan.cc/blog/20251206003957</link>
-        <guid isPermaLink="true">https://www.suiyan.cc/blog/20251206003957</guid>
-        <pubDate>Sat, 06 Dec 2025 00:39:57 GMT</pubDate>
-        <description><![CDATA[说点不开心的事，让大家开心一下：昨天周五，本来想买一场周六播放的《疯狂动物城2》的三张电影票，结果今天早上起来，满心欢喜的看看票，确定播放时间，才发现昨天神不知鬼不觉的买成了当天周五的票，票面显示：影片已播放！]]></description>
-        <content:encoded><![CDATA[
-说点不开心的事，让大家开心一下：昨天周五，本来想买一场周六播放的《疯狂动物城2》的三张电影票，结果今天早上起来，满心欢喜的看了一眼影票订单，确定播放时间，才发现昨天神不知鬼不觉的买成了当天周五的票，票面显示：影片已播放！
-
-
- 惆怅
-
-一切尽在不言中，内心自然是很郁闷和惆怅，但是还是买了今天周六的场次，陪着孩子去看完这场电影。对于之前三张票105元的错误，我决定从我的啤酒上来惩罚自己，每当想喝酒的时候我就抵扣一次，直到费用和这次错误的金额对上之后再决定是否可以喝啤酒。
-
-
-...]]></content:encoded>
-        <dc:creator>contact@suiyan.cc (J.sky)</dc:creator>
-        <category>站长吐槽</category>
-    </item>
-    <item>
-        <title>Godot游戏开发《我的博客》记录14-游戏的制作仍在继续</title>
-        <link>https://www.suiyan.cc/blog/20251203013509</link>
-        <guid isPermaLink="true">https://www.suiyan.cc/blog/20251203013509</guid>
-        <pubDate>Wed, 03 Dec 2025 01:35:09 GMT</pubDate>
-        <description><![CDATA[断断续续的仍在编写游戏中的逻辑代码，一直在缝缝补补中。]]></description>
-        <content:encoded><![CDATA[
-断断续续的仍在编写游戏中的逻辑代码，一直在缝缝补补中。
-
- 游戏数据
-
-《我的博客》游戏中有着大量的游戏数据以及剧情任务数据，之前都是写的很随意，随意的把变量放到各个文件的角落，直到我开始考虑如何存档的时候，我才发现我根本无法把这些数据属性统一的保存和加载，这个时候我才想起来需要建立一个系统的游戏数据管理系统。
-
-好吧，建立一个单例文件，然后逐一的把需要存档的变量都搬运过来，没办法，谁让开始写的太随意了，花了几个小时的搬运调试，基本上都固定到一个数据管理器里了。
-
-
- 游戏的进度
-
-目前游戏的答题剧情主线任务已经基本确定，还有几个支线任务需要构思和编写，涉及到：服务器和数据安全引发的任务，博客联盟任务，和广告联盟的相关剧情，以及友情链接、留言评论等互动触发的支线任务。嗯还是需要花很多时间的。
-
- 一定要完成
-
-年底，要加紧进度，最近还想写一些Godot有关的游戏制作教程，一方面B站也荒废了一段时间，999粉丝卡了一个星期了，想突破一下，另一方面也算是深入的学习Godot各方面的系统知识，传授分享更能加深学习的效果，以便更加熟练的操作Godot游戏引擎。
-...]]></content:encoded>
-        <dc:creator>contact@suiyan.cc (J.sky)</dc:creator>
-        <category>Godot</category>
-        <category>游戏开发</category>
-        <category>《我的博客》</category>
     </item>
     </channel>
 </rss>
