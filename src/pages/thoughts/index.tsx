@@ -86,27 +86,24 @@ export default function Thoughts({ thoughts }: { thoughts: Post[] }) {
                     </time>
 
                     <a href={`/thoughts/${thought.id}`} className="block mt-1">
-                      <ReactMarkdown
-                        remarkPlugins={[remarkGfm]}
-                        rehypePlugins={[rehypeRaw]}
-                        components={{
-                          a: ({ href, children }) => (
-                            <Link className="break-words" href={href || ''}>
-                              {children}
-                            </Link>
-                          ),
-                          img: ({ src, alt }) => (
-                            <img src={src} alt={alt || ''} className="rounded-lg max-h-32" />
-                          ),
-                          p: ({ children }) => (
-                            <p className="text-base text-gray-700">
-                              {children}
-                            </p>
-                          ),
-                        }}
-                      >
-                        {sanitizedContent}
-                      </ReactMarkdown>
+                      <div className="prose prose-gray max-w-none">
+                        <ReactMarkdown
+                          remarkPlugins={[remarkGfm]}
+                          rehypePlugins={[rehypeRaw]}
+                          components={{
+                            a: ({ href, children }) => (
+                              <Link className="break-words" href={href || ''}>
+                                {children}
+                              </Link>
+                            ),
+                            img: ({ src, alt }) => (
+                              <img src={src} alt={alt || ''} className="rounded-lg max-h-32" />
+                            ),
+                          }}
+                        >
+                          {sanitizedContent}
+                        </ReactMarkdown>
+                      </div>
                     </a>
                   </div>
                 </li>
