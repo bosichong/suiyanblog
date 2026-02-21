@@ -79,6 +79,13 @@ const config: Config = {
             "is_active": true
         },
         {
+            "site_name": "优世界",
+            "site_url": "https://usj.cc/",
+            "site_description": "喜欢折腾博客、制作主题、分享前端技术的独立开发者。",
+            "site_avatar": "#",
+            "is_active": true
+        },
+        {
             "site_name": "Obaby",
             "site_url": "https://zhongxiaojie.com/",
             "site_description": "黑客程序媛 / 逆向工程师 / 人工智能学徒 / 用爱发电的独立开发者",
