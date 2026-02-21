@@ -39,27 +39,29 @@ export default function ThoughtsPreview({ latestThought }: ThoughtsPreviewProps)
 
         {/* 文本内容 */}
         <div className="p-6">
-          <ReactMarkdown
-            remarkPlugins={[remarkGfm]}
-            rehypePlugins={[rehypeRaw]}
-            components={{
-              a: ({ href, children }) => (
-                <Link className="break-words" href={href || ''}>
-                  {children}
-                </Link>
-              ),
-              img: ({ src, alt }) => (
-                <img src={src} alt={alt || ''} className="rounded-lg max-h-32" />
-              ),
-              p: ({ children }) => (
-                <p className="font-mono text-sm text-gray-700 leading-relaxed line-clamp-3">
-                  {children}
-                </p>
-              ),
-            }}
-          >
-            {sanitizedContent}
-          </ReactMarkdown>
+          <div className="prose prose-gray max-w-none">
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeRaw]}
+              components={{
+                a: ({ href, children }) => (
+                  <Link className="break-words" href={href || ''}>
+                    {children}
+                  </Link>
+                ),
+                img: ({ src, alt }) => (
+                  <img src={src} alt={alt || ''} className="rounded-lg max-h-32" />
+                ),
+                p: ({ children }) => (
+                  <p className="font-mono text-sm text-gray-700 leading-relaxed line-clamp-3">
+                    {children}
+                  </p>
+                ),
+              }}
+            >
+              {sanitizedContent}
+            </ReactMarkdown>
+          </div>
         </div>
 
         {/* 底部信息 */}
