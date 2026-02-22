@@ -36,6 +36,38 @@ function getSortedPostsData() {
     });
 }
 
+function getThoughtsData() {
+    const thoughtsDirectory = path.join(postsDirectory, 'thoughts');
+    
+    if (!fs.existsSync(thoughtsDirectory)) {
+        return [];
+    }
+
+    const fileNames = fs.readdirSync(thoughtsDirectory);
+    return fileNames.map(fileName => {
+        const id = fileName.replace(/\.md$/, '');
+        const filePath = path.join(thoughtsDirectory, fileName);
+        const fileContent = fs.readFileSync(filePath, 'utf8');
+        const matterResult = matter(fileContent);
+        const { data } = matterResult;
+
+        if (!data.time || !isValidDate(data.time)) {
+            return null;
+        }
+
+        return {
+            id,
+            ...data,
+            content: matterResult.content,
+        };
+    }).filter((thought) => thought !== null).sort((a, b) => {
+        if (!a.time || !b.time) {
+            return 0;
+        }
+        return new Date(b.time).getTime() - new Date(a.time).getTime();
+    });
+}
+
 function isValidDate(dateStr) {
     const date = new Date(dateStr);
     return !isNaN(date.getTime());
@@ -53,6 +85,7 @@ function escapeXml(str) {
 
 function generateSitemap() {
     const allPostsData = getSortedPostsData();
+    const thoughtsData = getThoughtsData();
 
     // 提取所有唯一的标签，并处理标签：转小写、去除空格
     const uniqueTags = new Set();
@@ -70,6 +103,7 @@ function generateSitemap() {
     const staticPages = [
         { url: 'https://www.suiyan.cc/', priority: '1.0', changefreq: 'daily' },
         { url: 'https://www.suiyan.cc/blog/', priority: '0.9', changefreq: 'daily' },
+        { url: 'https://www.suiyan.cc/thoughts/', priority: '0.8', changefreq: 'daily' },
         { url: 'https://www.suiyan.cc/tags/', priority: '0.8', changefreq: 'weekly' },
         { url: 'https://www.suiyan.cc/about/', priority: '0.8', changefreq: 'monthly' },
         { url: 'https://www.suiyan.cc/feed', priority: '0.5', changefreq: 'hourly' },
@@ -93,8 +127,19 @@ function generateSitemap() {
         };
     });
 
+    // 片语 URL
+    const thoughtUrls = thoughtsData.map(thought => {
+        const lastmod = thought.time ? new Date(thought.time).toISOString().split('T')[0] : '';
+        return {
+            url: `https://www.suiyan.cc/thoughts/${thought.id}`,
+            lastmod: lastmod,
+            priority: '0.6',
+            changefreq: 'monthly'
+        };
+    });
+
     // 合并所有 URL
-    const allUrls = [...staticPages, ...tagPages, ...blogUrls];
+    const allUrls = [...staticPages, ...tagPages, ...blogUrls, ...thoughtUrls];
 
     // 生成 XML
     const xmlContent = `<?xml version="1.0" encoding="UTF-8"?>
@@ -118,7 +163,7 @@ ${allUrls.map(item => {
     const outputPath = path.join(outputDir, 'sitemap.xml');
     fs.writeFileSync(outputPath, xmlContent, 'utf8');
     console.log(`Sitemap generated successfully at: ${outputPath}`);
-    console.log(`Total URLs: ${allUrls.length} (Static: ${staticPages.length}, Tags: ${tagPages.length}, Posts: ${blogUrls.length})`);
+    console.log(`Total URLs: ${allUrls.length} (Static: ${staticPages.length}, Tags: ${tagPages.length}, Posts: ${blogUrls.length}, Thoughts: ${thoughtUrls.length})`);
 }
 
 // 执行生成
