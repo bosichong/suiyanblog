@@ -64,6 +64,13 @@ const config: Config = {
             "site_avatar": "#",
             "is_active": true
         },
+                {
+            "site_name": "素生",
+            "site_url": "https://z.arlmy.me/",
+            "site_description": "误读人生，化人生活",
+            "site_avatar": "#",
+            "is_active": true
+        },
         {
             "site_name": "極客死亡計劃",
             "site_url": "https://www.geedea.pro/",
