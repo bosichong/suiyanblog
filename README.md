@@ -106,6 +106,7 @@ suiyanblog/
 └── generateSitemap.js  # Sitemap 生成脚本
 ```
 
+
 ## 配置
 
 博客的主要配置项位于 `src/config.ts` 文件中，包括：
