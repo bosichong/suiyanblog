@@ -31,13 +31,13 @@ https://www.suiyan.cc
 ### 安装依赖
 
 ```bash
-npm install
+pnpm install
 ```
 
 ### 开发模式
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 访问 http://localhost:3000 查看博客。
@@ -45,19 +45,19 @@ npm run dev
 ### 构建生产版本
 
 ```bash
-npm run build
+pnpm build
 ```
 
 ### 启动生产服务器
 
 ```bash
-npm start
+pnpm start
 ```
 
 ### 创建新文章
 
 ```bash
-npm run nb
+pnpm nb
 ```
 
 按照提示输入文章标题、分类、标签等信息，脚本会自动在 `md` 目录下创建新的 Markdown 文件。
@@ -65,21 +65,21 @@ npm run nb
 ### 创建片语
 
 ```bash
-npm run nt [片语内容]
+pnpm nt [片语内容]
 ```
 
 创建简短的日常想法和随笔，片语会自动保存到 `md/thoughts` 目录。如果不提供内容，会使用默认文本。
 
 例如：
 ```bash
-npm run nt "今天天气真不错！"
+pnpm nt "今天天气真不错！"
 ```
 
 ### 导出静态站点
 
 ```bash
-npm run build
-npm run preview
+pnpm build
+pnpm preview
 ```
 
 静态文件将生成在 `out` 目录，可以使用任何静态托管服务部署。
