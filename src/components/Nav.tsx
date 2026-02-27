@@ -23,15 +23,10 @@ export default function Nav() {
             role="navigation"
             aria-label="主导航"
         >
-            <Link href="/" aria-label="返回首页" title={config.BLOG_NAME} className="group">
-                <Image
-                    src={`/${config.PROFILE_IMAGE}`}
-                    alt={config.BLOG_NAME}
-                    width={48}
-                    height={48}
-                    className="rounded-full m-0 transition-transform duration-300 group-hover:rotate-[360deg]"
-                    suppressHydrationWarning
-                />
+            <Link href="/" aria-label="返回首页" title={config.ABOUT_ME} className="group">
+                <h1 className="text-3xl font-bold text-text-primary hover:text-text-dark transition-colors">
+                            {config.BLOG_NAME}
+                </h1>
             </Link>
 
             <div className="flex items-end gap-0.5" role="navigation" aria-label="主导航菜单">
