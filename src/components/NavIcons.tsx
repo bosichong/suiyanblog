@@ -2,7 +2,7 @@ import config from '@/config';
 
 const NavIcons: React.FC = () => {
     return (
-        <div>
+        <div className="nav-menu">
             {config.menuItems.map((item) => {
                 return (
                     <a

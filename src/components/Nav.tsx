@@ -5,8 +5,8 @@ import NavIcons from './NavIcons';
 export default function Nav() {
     return (
         <nav className="grid">
-            <div>
-                <a href="/" aria-label="返回首页" data-tooltip={config.ABOUT_ME} >
+            <div className="grid">
+                <a href="/" aria-label="返回首页" data-tooltip={config.ABOUT_ME}>
                     <h1>
                         {config.BLOG_NAME}
                     </h1>

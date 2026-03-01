@@ -5,27 +5,15 @@ import ReactMarkdown from 'react-markdown';
 import getSortedPostsData from "../../utils/parseMd";
 import { sanitizeHtml } from "../../utils/sanitizeHtml";
 import Layout from "../../components/Layout";
-import dynamic from 'next/dynamic';
 import Head from "next/head";
 import Breadcrumb from '@/components/Breadcrumb';
+import GiscusComments from '@/components/GiscusComments';
 import PostList from '@/components/PostList';
 import type { Post } from '../../types';
 import config from '@/config';
 import SponsorButton from '@/components/SponsorButton';
 import CommentButton from '@/components/CommentButton';
 import AILabelBadge from '@/components/AILabelBadge';
-
-// 动态导入 Giscus 组件以延迟加载
-const Giscus = dynamic(() => import('@giscus/react'), {
-    ssr: false,
-    loading: () => (
-        <div>
-            <div>加载评论中...</div>
-        </div>
-    )
-});
-
-import giscusConfig from '../../giscusConfigs';
 
 export async function getStaticPaths() {
     const posts = getSortedPostsData();
@@ -150,7 +138,6 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                     tag={post.tag ? post.tag.split(',')[0].trim() : ''}
                 />
 
-                <header>
                     <hgroup>
                         <h1>
                             {post.title}
@@ -165,7 +152,6 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                              <AILabelBadge level={post.ai_label || 0} />
                         </p>
                     </hgroup>
-                </header>
 
                 <div>
                     <ReactMarkdown
@@ -250,20 +236,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                 <section>
                     {/* 只在 showComments 为 true 时才渲染 Giscus 组件 */}
                     {showComments && (
-                        <Giscus
-                            key={post.id}
-                            repo={giscusConfig.repo as `${string}/${string}`}
-                            repoId={giscusConfig.repoId}
-                            category={giscusConfig.category}
-                            categoryId={giscusConfig.categoryId}
-                            mapping={giscusConfig.mapping as any}
-                            lang={giscusConfig.lang}
-                            strict="0"
-                            reactionsEnabled="1"
-                            emitMetadata="0"
-                            inputPosition="bottom"
-                            theme="light"
-                        />
+                        <GiscusComments key={post.id} />
                     )}
                 </section>
 

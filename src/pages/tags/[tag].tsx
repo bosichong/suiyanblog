@@ -109,9 +109,6 @@ const TagDetail = ({ tag, originalTag, tagPosts, postsByYear }: { tag: string; o
 
             <div>
                 <div>
-                    <a href="/Tags">
-                        ← 返回标签列表
-                    </a>
                     <h1>
                         标签: {originalTag}
                     </h1>
@@ -119,9 +116,9 @@ const TagDetail = ({ tag, originalTag, tagPosts, postsByYear }: { tag: string; o
                 </div>
 
                 {totalPosts > 0 ? (
-                    <ul>
+                    <div>
                         {Object.keys(postsByYear).sort((a, b) => parseInt(b) - parseInt(a)).map((year) => (
-                            <li key={year}>
+                            <div key={year}>
                                 <p>{year}</p>
                                 <ul>
                                     {postsByYear[year].map((post) => (
@@ -135,9 +132,9 @@ const TagDetail = ({ tag, originalTag, tagPosts, postsByYear }: { tag: string; o
                                         </li>
                                     ))}
                                 </ul>
-                            </li>
+                            </div>
                         ))}
-                    </ul>
+                    </div>
                 ) : (
                     <div>
                         <p>该标签下暂无文章</p>
