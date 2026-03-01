@@ -1,7 +1,7 @@
 import { Info } from 'lucide-react';
 
-const AboutIcon = ({ className = '' }: { className?: string }) => {
-    return <Info className={className} />;
+const AboutIcon = ({  }: {  }) => {
+    return <Info  />;
 };
 
 export default AboutIcon;

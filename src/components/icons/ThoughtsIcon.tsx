@@ -1,13 +1,9 @@
 import React from 'react';
 
-interface ThoughtsIconProps {
-  className?: string;
-}
-
-const ThoughtsIcon: React.FC<ThoughtsIconProps> = ({ className = 'w-5 h-5' }) => {
+const ThoughtsIcon: React.FC = () => {
   return (
     <svg
-      className={className}
+      
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"

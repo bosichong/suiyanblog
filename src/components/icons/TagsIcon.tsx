@@ -1,7 +1,7 @@
 import { Tag } from 'lucide-react';
 
-const TagsIcon = ({ className = '' }: { className?: string }) => {
-    return <Tag className={className} />;
+const TagsIcon = ({  }: {  }) => {
+    return <Tag  />;
 };
 
 export default TagsIcon;

@@ -11,6 +11,11 @@
         <priority>0.9</priority>
     </url>
     <url>
+        <loc>https://www.suiyan.cc/thoughts/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://www.suiyan.cc/tags/</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -24,6 +29,81 @@
         <loc>https://www.suiyan.cc/feed</loc>
         <changefreq>hourly</changefreq>
         <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/tags/copaw</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/tags/mysql</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/tags/wordpress</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/tags/docker</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/tags/%E5%93%B2%E5%AD%A6</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/tags/%E6%9C%9F%E5%88%8A</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/tags/%E5%86%99%E4%BD%9C</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/tags/python</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/tags/tts</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/tags/ai%E7%BC%96%E7%A8%8B</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/tags/ubuntu</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/tags/%E5%8E%9F%E7%A5%9E</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/tags/%E7%88%AC%E5%B1%B1</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/tags/%E6%9C%89%E6%B0%A7%E8%BF%90%E5%8A%A8</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/tags/vim</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
     </url>
     <url>
         <loc>https://www.suiyan.cc/tags/openclaw</loc>
@@ -72,11 +152,6 @@
     </url>
     <url>
         <loc>https://www.suiyan.cc/tags/%E5%8C%85%E9%A5%BA%E5%AD%90</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://www.suiyan.cc/tags/%E5%93%B2%E5%AD%A6</loc>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -541,26 +616,6 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.suiyan.cc/tags/docker</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://www.suiyan.cc/tags/ubuntu</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://www.suiyan.cc/tags/wordpress</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://www.suiyan.cc/tags/mysql</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
         <loc>https://www.suiyan.cc/tags/shields.io</loc>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
@@ -611,17 +666,7 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.suiyan.cc/tags/python</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
         <loc>https://www.suiyan.cc/tags/requests</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://www.suiyan.cc/tags/vim</loc>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -852,6 +897,72 @@
     </url>
     <url>
         <loc>https://www.suiyan.cc/tags/%E7%BD%91%E7%AB%99%E8%BF%90%E7%BB%B4</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/blog/20260301000651</loc>
+        <lastmod>2026-03-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/blog/20260228131044</loc>
+        <lastmod>2026-02-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/blog/20260227154004</loc>
+        <lastmod>2026-02-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/blog/20260226132442</loc>
+        <lastmod>2026-02-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/blog/20260226080637</loc>
+        <lastmod>2026-02-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/blog/20260225123759</loc>
+        <lastmod>2026-02-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/blog/20260224105059</loc>
+        <lastmod>2026-02-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/blog/20260224090438</loc>
+        <lastmod>2026-02-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/blog/20260223140718</loc>
+        <lastmod>2026-02-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/blog/20260223123622</loc>
+        <lastmod>2026-02-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/blog/20260222014404</loc>
+        <lastmod>2026-02-22</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -3122,5 +3233,59 @@
         <lastmod>2017-08-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/thoughts/20260228143345</loc>
+        <lastmod>2026-02-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/thoughts/20260226143325</loc>
+        <lastmod>2026-02-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/thoughts/20260223031836</loc>
+        <lastmod>2026-02-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/thoughts/20260223004302</loc>
+        <lastmod>2026-02-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/thoughts/20260222141930</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/thoughts/20260221004150</loc>
+        <lastmod>2026-02-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/thoughts/20260220080156</loc>
+        <lastmod>2026-02-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/thoughts/20260219115649</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/thoughts/20260219112830</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
     </url>
 </urlset>

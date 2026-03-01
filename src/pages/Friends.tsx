@@ -9,7 +9,7 @@ import { useState } from "react";
 
 const Giscus = dynamic(() => import("@giscus/react").then((mod) => mod.default), {
     ssr: false,
-    loading: () => <div className="text-center py-4 text-text-secondary">加载评论中...</div>
+    loading: () => <div>加载评论中...</div>
 });
 
 interface LinkSectionProps {
@@ -26,13 +26,13 @@ interface LinkSectionProps {
 const LinkSection = ({ title, description, links }: LinkSectionProps) => {
     return (
         <>
-            <div className="mb-6">
-                <h3 className="mb-3 text-2xl font-semibold">{title}</h3>
-                <p className="text-sm text-default-600">
+            <div>
+                <h3>{title}</h3>
+                <p>
                     {description}
                 </p>
             </div>
-            <div className="overflow-hidden mb-6">
+            <div>
                 {links.map((link) => (
                     <LinkCard
                         key={link.site_name}
@@ -61,26 +61,26 @@ const Friends = () => {
 
             <Breadcrumb type="friends" />
 
-            <div className="max-w-4xl mx-auto px-2">
+            <div>
                 <LinkSection
                     title={config.FRIENDS_PAGE_TITLE}
                     description={config.FRIENDS_PAGE_DESCRIPTION}
                     links={links}
                 />
-                <hr className="my-8 border-t border-default-200" />
+                <hr />
                 <LinkSection
                     title={config.BLOG_AGGREGATION_TITLE}
                     description={config.BLOG_AGGREGATION_DESCRIPTION}
                     links={aggregations}
                 />
-                <hr className="my-8 border-t border-default-200" />
+                <hr />
             </div>
             
             {!showComments ? (
-                <div className="text-center">
+                <div>
                     <button
                         onClick={() => setShowComments(true)}
-                        className="custom-btn btn-7 "
+                       
                     >
                         <span>加载评论</span>
                         

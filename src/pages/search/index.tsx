@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import Layout from "../../components/Layout";
 import Breadcrumb from "../../components/Breadcrumb";
 import getSortedPostsData from '../../utils/parseMd';
-import CustomLink from '../../components/Link';
 import config from '../../config';
 import SearchBox from "../../components/SearchBox";
 
@@ -56,9 +55,9 @@ const Search = ({ allPosts }: { allPosts: any[] }) => {
 
             <Breadcrumb type="search" />
 
-            <div className="w-full">
-                <div className="mb-8">
-                    <h1 className="text-2xl font-semibold mb-4 text-text-primary">
+            <div>
+                <div>
+                    <h1>
                         {searchQuery ? `搜索结果: ${searchQuery}` : '站内搜索'}
                     </h1>
                     <SearchBox
@@ -68,23 +67,23 @@ const Search = ({ allPosts }: { allPosts: any[] }) => {
                     />
                 </div>
 
-                <ul className="space-y-2 pl-0">
+                <ul>
                     {filteredPosts.length > 0 ? (
                         <>
-                            <p className="text-sm text-text-tertiary mb-4">
+                            <p>
                                 找到 {filteredPosts.length} 篇文章
                             </p>
                             {filteredPosts.map((post, index) => (
-                                <li key={index} className="flex items-center justify-between">
-                                    <CustomLink href={`/blog/${post.id}`} className="flex-1 overflow-hidden text-ellipsis whitespace-nowrap">
+                                <li key={index}>
+                                    <a href={`/blog/${post.id}`}>
                                         {post.title}
-                                    </CustomLink>
+                                    </a>
                                 </li>
                             ))}
                         </>
                     ) : searchQuery ? (
-                        <li className="text-center py-12">
-                            <p className="text-lg text-text-secondary">未找到匹配的文章</p>
+                        <li>
+                            <p>未找到匹配的文章</p>
                         </li>
                     ) : null}
                 </ul>

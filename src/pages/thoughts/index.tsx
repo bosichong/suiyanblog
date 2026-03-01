@@ -9,7 +9,6 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import { sanitizeHtml } from '../../utils/sanitizeHtml';
-import Link from '../../components/Link';
 import { MessageCircle } from 'lucide-react';
 
 export async function getStaticProps() {
@@ -49,66 +48,66 @@ export default function Thoughts({ thoughts }: { thoughts: Post[] }) {
 
       <Breadcrumb type="thoughts" />
 
-      <div className="w-full">
+      <div>
 
-              <h1 className="text-2xl font-semibold mb-4 text-text-primary">
+              <h1>
 
                 {config.THOUGHTS_PAGE_TITLE}
 
               </h1>
 
-              <p className="mb-2 text-sm text-text-secondary">
+              <p>
 
                 {config.THOUGHTS_PAGE_DESCRIPTION}
 
               </p>
 
-              <p className="mb-8 text-sm text-text-secondary">
+              <p>
 
-                共有 <span className="text-text-primary">{thoughts.length}</span> 条片语
+                共有 <span>{thoughts.length}</span> 条片语
 
               </p>
 
         {thoughts.length === 0 ? (
-          <div className="text-center py-12 text-text-secondary">
+          <div>
             <p>暂无片语</p>
           </div>
         ) : (
-          <ol className="relative space-y-8 before:absolute before:-ml-px before:h-full before:w-0.5 before:rounded-full before:bg-gray-200">
+          <ol>
             {thoughts.map((thought) => {
               const sanitizedContent = sanitizeHtml(thought.content || thought.preview || '');
               return (
-                <li key={thought.id} className="relative -ms-1.5 flex items-start gap-4">
-                  <span className="w-3 h-3 shrink-0 rounded-full bg-sky-700"></span>
+                <li key={thought.id}>
+                  <span></span>
 
-                  <div className="-mt-2">
-                    <time className="text-xs/none font-medium text-gray-700">
+                  <div>
+                    <time>
                       {formatDate(thought.time || '')}
                     </time>
-
-                    <div className="prose prose-gray max-w-none">
+                    
+                    <a href={`/thoughts/${thought.id}`}>
+                      <MessageCircle size={16} />
+                      <span>去评论</span>
+                    </a>
+                    <div>
                       <ReactMarkdown
                         remarkPlugins={[remarkGfm]}
                         rehypePlugins={[rehypeRaw]}
                         components={{
                           a: ({ href, children }) => (
-                            <Link className="break-words" href={href || ''}>
+                            <a href={href || ''}>
                               {children}
-                            </Link>
+                            </a>
                           ),
                           img: ({ src, alt }) => (
-                            <img src={src} alt={alt || ''} className="rounded-lg max-h-32" />
+                            <img src={src} alt={alt || ''} />
                           ),
                         }}
                       >
                         {sanitizedContent}
                       </ReactMarkdown>
                     </div>
-
-                    <Link href={`/thoughts/${thought.id}`} className="inline-flex items-center gap-1 mt-2 text-sm text-text-secondary hover:text-text-link transition-colors">
-                      <MessageCircle size={16} />
-                      <span>评论</span>
-                    </Link>
+                    
                   </div>
                 </li>
               );

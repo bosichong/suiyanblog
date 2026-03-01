@@ -1,7 +1,7 @@
 import { HandMetal } from 'lucide-react';
 
-const MastodonIcon = ({ className = '' }: { className?: string }) => {
-    return <HandMetal className={className} />;
+const MastodonIcon = ({  }: {  }) => {
+    return <HandMetal  />;
 };
 
 export default MastodonIcon;

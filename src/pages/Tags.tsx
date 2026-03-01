@@ -1,10 +1,10 @@
 import getSortedPostsData from '../utils/parseMd';
-import Head from 'next/head';
-import Layout from '../components/Layout';
 import Breadcrumb from '../components/Breadcrumb';
-import CustomLink from '../components/Link';
-import { Post } from '../types';
+import PostListItem from '../components/PostListItem';
+import Layout from '../components/Layout';
+import Head from 'next/head';
 import config from '../config';
+import { Post } from '../types';
 
 interface TagData {
     tag: string;
@@ -56,25 +56,24 @@ const Tags = ({ tagsData }: { tagsData: TagData[] }) => {
                 <meta name="twitter:description" content="碎言博客的文章分类标签，按主题分类的技术文章和随笔" />
             </Head>
             <Breadcrumb type="tags" />
-            <div className="w-full">
-                <h1 className="text-2xl font-semibold mb-4 text-text-primary">
+            <div>
+                <h1>
                     标签
                     </h1>
-                <p className="mb-8 text-sm text-text-secondary">
-                    共有标签：<span className="text-text-primary">{tagsData.length}</span> 个
+                <p>
+                    共有标签：<span>{tagsData.length}</span> 个
                 </p>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                <div className="grid">
                     {tagsData.map((tagObj) => (
-                        <CustomLink
+                        <a
                             key={tagObj.tag}
                             href={`/tags/${tagObj.tag}`}
-                            className=""
                         >
-                            <span className="truncate flex-1 min-w-0">
+                            <span>
                                # {tagObj.originalTag} ({tagObj.data.length})
                             </span>
-                        </CustomLink>
+                        </a>
                     ))}
                 </div>
             </div>

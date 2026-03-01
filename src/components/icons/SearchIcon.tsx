@@ -1,7 +1,7 @@
 import { Search } from 'lucide-react';
 
-const SearchIcon = ({ className = '' }: { className?: string }) => {
-    return <Search className={className} />;
+const SearchIcon = ({  }: {  }) => {
+    return <Search  />;
 };
 
 export default SearchIcon;

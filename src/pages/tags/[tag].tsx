@@ -3,7 +3,6 @@ import Layout from '../../components/Layout';
 import Head from 'next/head';
 import Breadcrumb from '../../components/Breadcrumb';
 import PostListItem from '../../components/PostListItem';
-import CustomLink from '../../components/Link';
 import config from '../../config';
 
 export async function getStaticPaths() {
@@ -108,23 +107,23 @@ const TagDetail = ({ tag, originalTag, tagPosts, postsByYear }: { tag: string; o
 
             <Breadcrumb type="tag" tag={tag} />
 
-            <div className="w-full">
-                <div className="mb-8">
-                    <CustomLink href="/Tags" className="text-sm text-text-link">
+            <div>
+                <div>
+                    <a href="/Tags">
                         ← 返回标签列表
-                    </CustomLink>
-                    <h1 className="text-2xl font-semibold mb-2 mt-4 text-text-primary">
+                    </a>
+                    <h1>
                         标签: {originalTag}
                     </h1>
-                    <p className="text-sm text-text-secondary">共有文章：{totalPosts} 篇</p>
+                    <p>共有文章：{totalPosts} 篇</p>
                 </div>
 
                 {totalPosts > 0 ? (
-                    <ul className="space-y-6 pl-0">
+                    <ul>
                         {Object.keys(postsByYear).sort((a, b) => parseInt(b) - parseInt(a)).map((year) => (
                             <li key={year}>
-                                <p className="text-sm font-normal mb-3 text-text-tertiary">{year}</p>
-                                <ul className="space-y-2 pl-0">
+                                <p>{year}</p>
+                                <ul>
                                     {postsByYear[year].map((post) => (
                                         <li key={post.id}>
                                             <PostListItem
@@ -140,8 +139,8 @@ const TagDetail = ({ tag, originalTag, tagPosts, postsByYear }: { tag: string; o
                         ))}
                     </ul>
                 ) : (
-                    <div className="text-center py-12">
-                        <p className="text-lg text-text-secondary">该标签下暂无文章</p>
+                    <div>
+                        <p>该标签下暂无文章</p>
                     </div>
                 )}
             </div>
