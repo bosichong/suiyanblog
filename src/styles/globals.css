@@ -9,6 +9,14 @@ nav.grid {
   padding: 2rem 0;
 }
 
+nav.grid .grid a {
+  text-decoration: none;
+}
+
+nav.grid .grid a:hover {
+  text-decoration: none;
+}
+
 /* 导航菜单样式 */
 .nav-menu {
   display: flex;
@@ -43,7 +51,6 @@ footer a {
   padding: 0.5rem;
   border-radius: 0.5rem;
   transition: background-color 0.2s;
-  text-decoration: none;
 }
 
 footer a:hover {
@@ -105,10 +112,7 @@ nav[aria-label="面包屑导航"] {
   margin-bottom: 2rem;
 }
 
-/* 链接去掉下划线 */
-a {
-  text-decoration: none;
-}
+
 
 /* article footer grid 样式 */
 article footer {
@@ -141,6 +145,7 @@ article footer a {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
+  text-decoration: none;
 }
 
 .grid.grid time {
