@@ -47,7 +47,7 @@ export default function ThoughtsPreview({ latestThought }: ThoughtsPreviewProps)
       >
         {sanitizedContent}
       </ReactMarkdown>
-      <footer>
+
         <time>
           {formatDate(latestThought.time || '')}
         </time>
@@ -56,7 +56,6 @@ export default function ThoughtsPreview({ latestThought }: ThoughtsPreviewProps)
         >
           查看更多 →
         </a>
-      </footer>
     </article>
   );
 }
