@@ -78,7 +78,7 @@ export default function Thoughts({ thoughts }: { thoughts: Post[] }) {
               const sanitizedContent = sanitizeHtml(thought.content || thought.preview || '');
               return (
                 <li key={thought.id} className="relative -ms-1.5 flex items-start gap-4">
-                  <span className="w-3 h-3 shrink-0 rounded-full bg-rose-700"></span>
+                  <span className="w-3 h-3 shrink-0 rounded-full bg-sky-700"></span>
 
                   <div className="-mt-2">
                     <time className="text-xs/none font-medium text-gray-700">
