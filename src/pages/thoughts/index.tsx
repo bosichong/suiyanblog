@@ -10,6 +10,7 @@ import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import { sanitizeHtml } from '../../utils/sanitizeHtml';
 import Link from '../../components/Link';
+import { MessageCircle } from 'lucide-react';
 
 export async function getStaticProps() {
   const allThoughtsData = getSortedThoughtsData();
@@ -85,26 +86,29 @@ export default function Thoughts({ thoughts }: { thoughts: Post[] }) {
                       {formatDate(thought.time || '')}
                     </time>
 
-                    <a href={`/thoughts/${thought.id}`} className="block mt-1">
-                      <div className="prose prose-gray max-w-none">
-                        <ReactMarkdown
-                          remarkPlugins={[remarkGfm]}
-                          rehypePlugins={[rehypeRaw]}
-                          components={{
-                            a: ({ href, children }) => (
-                              <Link className="break-words" href={href || ''}>
-                                {children}
-                              </Link>
-                            ),
-                            img: ({ src, alt }) => (
-                              <img src={src} alt={alt || ''} className="rounded-lg max-h-32" />
-                            ),
-                          }}
-                        >
-                          {sanitizedContent}
-                        </ReactMarkdown>
-                      </div>
-                    </a>
+                    <div className="prose prose-gray max-w-none">
+                      <ReactMarkdown
+                        remarkPlugins={[remarkGfm]}
+                        rehypePlugins={[rehypeRaw]}
+                        components={{
+                          a: ({ href, children }) => (
+                            <Link className="break-words" href={href || ''}>
+                              {children}
+                            </Link>
+                          ),
+                          img: ({ src, alt }) => (
+                            <img src={src} alt={alt || ''} className="rounded-lg max-h-32" />
+                          ),
+                        }}
+                      >
+                        {sanitizedContent}
+                      </ReactMarkdown>
+                    </div>
+
+                    <Link href={`/thoughts/${thought.id}`} className="inline-flex items-center gap-1 mt-2 text-sm text-text-secondary hover:text-text-link transition-colors">
+                      <MessageCircle size={16} />
+                      <span>评论</span>
+                    </Link>
                   </div>
                 </li>
               );
