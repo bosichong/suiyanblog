@@ -64,7 +64,7 @@ const Tags = ({ tagsData }: { tagsData: TagData[] }) => {
                     共有标签：<span>{tagsData.length}</span> 个
                 </p>
 
-                <div >
+                <div className='tags'>
                     {tagsData.map((tagObj) => (
                         <a
                             key={tagObj.tag}
