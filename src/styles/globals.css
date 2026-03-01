@@ -1,5 +1,39 @@
 @import "@picocss/pico";
 
+/* 亮色模式背景色 */
+:root:not([data-theme="dark"]) {
+  --background-color: #fafafa;
+  --card-background-color: #fafafa;
+  --card-box-shadow-color: rgba(0, 0, 0, 0.05);
+  --pico-primary: #7b776b;
+  --pico-primary-background: #7b776b;
+  --pico-primary-hover: #6e6a60;
+  --pico-primary-hover-background: #6e6a60;
+  --pico-primary-focus: rgba(123, 119, 107, 0.5);
+  --pico-primary-underline: rgba(123, 119, 107, 0.5);
+}
+
+/* 暗色模式 - sand 主题 */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --pico-primary: #a39e8f;
+    --pico-primary-background: #7b776b;
+    --pico-primary-hover: #b0ab9b;
+    --pico-primary-hover-background: #a39e8f;
+    --pico-primary-focus: rgba(163, 158, 143, 0.375);
+    --pico-primary-underline: rgba(163, 158, 143, 0.5);
+  }
+}
+
+[data-theme="dark"] {
+  --pico-primary: #a39e8f;
+  --pico-primary-background: #7b776b;
+  --pico-primary-hover: #b0ab9b;
+  --pico-primary-hover-background: #a39e8f;
+  --pico-primary-focus: rgba(163, 158, 143, 0.375);
+  --pico-primary-underline: rgba(163, 158, 143, 0.5);
+}
+
 /* 自定义样式 */
 nav.grid {
   display: grid;
@@ -62,10 +96,6 @@ footer a svg {
   height: 1.5rem;
 }
 
-.grid {
-  display: grid;
-  gap: 1rem;
-}
 
 .container {
   max-width: 760px;
@@ -177,4 +207,16 @@ main ol {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+
+.tags a{
+  margin: 12px;
+}
+
+/* 移动端字体大小调整 */
+@media (max-width: 768px) {
+  :root {
+    font-size: 1.125rem;
+  }
 }
