@@ -3,10 +3,8 @@ import getSortedThoughtsData from '../utils/parseThoughts';
 import Layout from '../components/Layout';
 import Head from 'next/head';
 import config from '../config';
-import PostCard from '../components/PostCard';
+import PostListItem from '../components/PostListItem';
 import { Post } from '../types';
-import Link from '../components/Link';
-import PrimaryButton from '../components/PrimaryButton';
 import ThoughtsPreview from '../components/ThoughtsPreview';
 
 const postsPerPage = config.POSTS_PER_PAGE;
@@ -27,6 +25,14 @@ export async function getStaticProps() {
 }
 
 function Home({ currentPosts, latestThought }: { currentPosts: Post[], latestThought: Post | null }) {
+  // 首页日期格式化函数
+  const homeFormatDate = (dateString: string): string => {
+    if (!dateString) return '';
+    const parts = dateString.split('T')[0];
+    const [year, month, day] = (parts || dateString.substring(0, 10)).split('-');
+    return `${month}/${day}`;
+  };
+
   return (
       <Layout>
         <Head>
@@ -67,18 +73,22 @@ function Home({ currentPosts, latestThought }: { currentPosts: Post[], latestTho
           />
         </Head>
 
-        <div className="w-full">
+        <div>
           <ThoughtsPreview latestThought={latestThought} />
-          <div className="flex flex-col gap-4">
+          <article>
             {currentPosts.map((post) => (
-              <PostCard key={post.id} post={post} />
+              <PostListItem
+                key={post.id}
+                id={post.id}
+                title={post.title || ''}
+                time={post.time || ''}
+                formatDate={homeFormatDate}
+              />
             ))}
-          </div>
-          <div className="my-8 text-center">
-            <PrimaryButton href="/Archives">
-              全部文章
-            </PrimaryButton>
-          </div>
+          </article>
+          <button onClick={() => window.location.href = '/Archives'}>
+            全部文章
+          </button>
         </div>
       </Layout>
   );

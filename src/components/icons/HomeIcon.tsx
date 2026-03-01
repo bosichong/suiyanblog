@@ -1,7 +1,7 @@
 import { Home } from 'lucide-react';
 
-const HomeIcon = ({ className = '' }: { className?: string }) => {
-    return <Home className={className} />;
+const HomeIcon = ({  }: {  }) => {
+    return <Home  />;
 };
 
 export default HomeIcon;

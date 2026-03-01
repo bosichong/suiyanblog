@@ -1,7 +1,7 @@
 import { Archive } from 'lucide-react';
 
-const ArchiveIcon = ({ className = '' }: { className?: string }) => {
-    return <Archive className={className} />;
+const ArchiveIcon = ({  }: {  }) => {
+    return <Archive  />;
 };
 
 export default ArchiveIcon;

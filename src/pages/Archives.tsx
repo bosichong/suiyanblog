@@ -90,25 +90,25 @@ const Archives = ({ allPostsData, postsByYear }: { allPostsData: any[]; postsByY
 
             <Breadcrumb type="archives" />
 
-            <div className="w-full">
-                <div className="mb-8">
-                    <h1 className="text-2xl font-semibold mb-4 text-text-primary">
+            <div>
+                <div>
+                    <h1>
                         文章归档
                     </h1>
-                    <p className="text-sm text-text-secondary">
+                    <p>
                         共有文章：{totalPosts} 篇，最后更新于 {lastUpdated}
                     </p>
                 </div>
 
-                <ul className="space-y-6 pl-0">
+                <ul>
                     {Object.keys(postsByYear).sort((a, b) => parseInt(b) - parseInt(a)).map((year) => (
-                        <li key={year} className="post-list-group">
-                            <div className="flex items-center gap-4 mb-4">
-                                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-gray-300 to-gray-300"></div>
-                                <h2 className="post-list-group-title text-3xl font-bold tracking-tight text-text-primary">{year}</h2>
-                                <div className="h-px flex-1 bg-gradient-to-l from-transparent via-gray-300 to-gray-300"></div>
+                        <li key={year}>
+                            <div>
+                                <div></div>
+                                <h2>{year}</h2>
+                                <div></div>
                             </div>
-                            <ul className="space-y-2 pl-0">
+                            <ul>
                                 {postsByYear[year].map((post) => (
                                     <li key={post.id}>
                                         <PostListItem

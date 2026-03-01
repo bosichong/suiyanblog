@@ -6,7 +6,6 @@ export default function Document() {
         <Html lang="zh-CN">
             <Head>
                 <meta charSet="utf-8" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="description" content={config.META_DESCRIPTION} />
                 <meta name="keywords" content={config.META_KEYWORDS} />
                 <meta name="author" content={config.BLOG_AUTHOR} />
@@ -24,7 +23,7 @@ export default function Document() {
                 <link rel="alternate" type="application/rss+xml" title="碎言 - SuiYan Blog" href="/feed.xml" />
                 <meta name="google-site-verification" content="U4r9UrN0jN5L0q1WT2xe_MN54JY1xn9MIOD-IpSyL-s" />
             </Head>
-            <body className='bg-zinc-50'>
+            <body>
                 <Main />
                 <NextScript />
             </body>

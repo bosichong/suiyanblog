@@ -49,24 +49,13 @@ const BackToTop = () => {
     }
 
     return (
-        <div className={`fixed bottom-24 right-5 z-50 transition-all duration-300 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+        <div style={{ position: 'fixed', bottom: '6rem', right: '1rem', zIndex: 1000 }}>
             <button
                 aria-label="返回顶部"
-                className={`
-                    relative
-                    w-8 h-8
-                    rounded-full
-                    flex items-center justify-center
-                    bg-black
-                    hover:bg-black/80
-                    transition-all duration-300 ease-in-out
-                    transform hover:scale-110
-                    focus:outline-none
-                    shadow-sm hover:shadow-md
-                `}
                 onClick={scrollToTop}
+                style={{ display: isVisible ? 'block' : 'none' }}
             >
-                <ArrowUpIcon size={16} className="text-white" />
+                <ArrowUpIcon size={16} />
             </button>
         </div>
     );

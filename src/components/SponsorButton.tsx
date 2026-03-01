@@ -7,9 +7,8 @@ export default function SponsorButton() {
         <div className="relative inline-block">
             <Link
                 href="/Sponsors"
-                className="inline-block text-text-secondary hover:text-text-dark transition-colors duration-200"
-                title="赞赏作者"
-                aria-label="赞赏作者"
+                data-tooltip="赞赏作者"
+                data-placement="left"
             >
                 <svg
                     width="28"

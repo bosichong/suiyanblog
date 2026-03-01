@@ -1,4 +1,203 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "@picocss/pico";
 
+/* 自定义样式 */
+nav.grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+/* 导航图标样式 - 使用和 footer 相同的样式 */
+nav > div:nth-child(2) {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+nav > div:nth-child(2) a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+  text-decoration: none;
+}
+
+nav > div:nth-child(2) a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+nav > div:nth-child(2) a svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+footer .grid a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+  text-decoration: none;
+}
+
+footer .grid a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+footer .grid a svg {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  display: block;
+}
+
+footer .grid a svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+main {
+  margin: 2rem 0;
+}
+
+footer {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+footer > div {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+footer a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+  text-decoration: none;
+}
+
+footer a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+footer a svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* 表格斑马纹样式 */
+table[striped] tbody tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+@media (prefers-color-scheme: dark) {
+  table[striped] tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.03);
+  }
+}
+
+/* 面包屑导航间距 */
+nav[aria-label="面包屑导航"] small {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+nav[aria-label="面包屑导航"] {
+  margin-bottom: 2rem;
+}
+
+/* 链接去掉下划线 */
+a {
+  text-decoration: none;
+}
+
+/* article footer grid 样式 */
+article footer {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+article footer time {
+  justify-self: start;
+}
+
+article footer a {
+  justify-self: end;
+}
+
+/* PostListItem grid 样式 */
+.grid.grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: center;
+}
+
+.grid.grid a {
+  justify-self: start;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.grid.grid time {
+  justify-self: end;
+  white-space: nowrap;
+}
+
+/* 按钮居中 */
+main button {
+  display: block;
+  margin: 2rem auto 0;
+  width: fit-content;
+}
+
+/* 标签页网格布局 - 每行三个 */
+main .grid:not(.grid.grid) {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 768px) {
+  main .grid:not(.grid.grid) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  main .grid:not(.grid.grid) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 片语页面隐藏列表数字 */
+main ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

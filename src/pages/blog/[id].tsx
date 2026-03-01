@@ -9,9 +9,7 @@ import dynamic from 'next/dynamic';
 import Head from "next/head";
 import Breadcrumb from '@/components/Breadcrumb';
 import PostList from '@/components/PostList';
-import readingTime from 'reading-time';
 import type { Post } from '../../types';
-import CustomLink from '@/components/Link';
 import config from '@/config';
 import SponsorButton from '@/components/SponsorButton';
 import CommentButton from '@/components/CommentButton';
@@ -21,7 +19,7 @@ import AILabelBadge from '@/components/AILabelBadge';
 const Giscus = dynamic(() => import('@giscus/react'), {
     ssr: false,
     loading: () => (
-        <div className="flex items-center justify-center py-8">
+        <div>
             <div>加载评论中...</div>
         </div>
     )
@@ -94,7 +92,6 @@ export async function getStaticProps({ params }: { params?: { id: string } } = {
 }
 
 function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: Post; relatedPosts: Post[]; prevPost: Post | null; nextPost: Post | null; sameDayPosts: Post[] }) {
-    const stats = readingTime(post.content || '');
     const sanitizedContent = sanitizeHtml(post.content || '');
     const [showComments, setShowComments] = useState(false);
 
@@ -140,40 +137,37 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                                 "@type": "WebPage",
                                 "@id": `https://www.suiyan.cc/blog/${post.id}`
                             },
-                            "keywords": post.tag?.split(',').map((t: string) => t.trim()),
-                            "wordCount": stats.words,
-                            "timeRequired": stats.text
+                            "keywords": post.tag?.split(',').map((t: string) => t.trim())
                         })
                     }}
                 />
             </Head>
 
-            <article className="w-full">
+            <article>
                 <Breadcrumb
                     type="blog"
                     title="正文"
                     tag={post.tag ? post.tag.split(',')[0].trim() : ''}
                 />
 
-                <header className="mb-4">
-                    <h1 className="text-4xl font-semibold mb-4 text-text-primary">
-                        {post.title}
-                    </h1>
-                    <div className="flex flex-wrap items-center gap-2 text-sm text-text-secondary">
-                        <span>作者: {post.author}</span>
-                        <span>·</span>
-                        <time dateTime={post.time}>
-                            {formatDate(post.time || '')}
-                        </time>
-                        <span>·</span>
-                        <span>{stats.words} 字</span>
-                        <span>·</span>
-                        <span>预计阅读 {stats.text.replace(' read', '')}</span>
-                        <AILabelBadge level={post.ai_label || 0} />
-                    </div>
+                <header>
+                    <hgroup>
+                        <h1>
+                            {post.title}
+                        </h1>
+                        <p>
+                            <span>作者: {post.author}</span>
+                            <span> · </span>
+                            <time dateTime={post.time}>
+                                {formatDate(post.time || '')}
+                            </time>
+                           <span> · </span>
+                             <AILabelBadge level={post.ai_label || 0} />
+                        </p>
+                    </hgroup>
                 </header>
 
-                <div className="prose prose-lg prose-slate">
+                <div>
                     <ReactMarkdown
                         remarkPlugins={[remarkGfm]}
                         rehypePlugins={[rehypeRaw]}
@@ -197,33 +191,12 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                                 }
                                 return null;
                             },
-
-                            a: ({ href, children }) => (
-                                <CustomLink className="break-words" href={href || ''}>
-                                    {children}
-                                </CustomLink>
-                            ),
                             table: ({ children }: any) => (
-                                <div className="overflow-x-auto my-4">
-                                    <table className="min-w-full max-w-full">{children}</table>
+                                <div className="overflow-auto">
+                                    <table>{children}</table>
                                 </div>
                             ),
-                            th: ({ children }: any) => (
-                                <th className="px-4 py-2 border bg-gray-50 font-semibold text-left whitespace-nowrap">{children}</th>
-                            ),
-                            td: ({ children }: any) => (
-                                <td className="px-4 py-2 border max-w-xs break-all">{children}</td>
-                            ),
-                            code: ({ children, className }: any) => {
-                                const isInline = !className;
-                                if (isInline) {
-                                    return <code className="px-1.5 py-0.5 rounded text-sm break-all">{children}</code>;
-                                }
-                                return <code className={className}>{children}</code>;
-                            },
-                            pre: ({ children }: any) => (
-                                <pre className="overflow-x-auto">{children}</pre>
-                            ),
+
                         }}
                     >
                         {sanitizedContent}
@@ -231,37 +204,38 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                 </div>
 
                 {post.tag && (
-                    <div className="mt-4 text-sm">
-                        <span className="text-text-secondary">标签: </span>
+                    <div>
+                        <span>标签: </span>
                         {post.tag.split(',').map((tag: string, index: number) => (
-                            <CustomLink
+                            <a
                                 key={index}
                                 href={`/tags/${tag.trim().toLowerCase().replace(/\s+/g, '')}`}
-                                className="ml-2"
+                               
                             >
                                 {tag.trim()}
-                            </CustomLink>
+                            </a>
                         ))}
                     </div>
                 )}
 
-                <nav className="mt-4 py-4 border-t border-border" aria-label="文章导航">
-                    <div className="flex flex-col gap-4">
+                <div>
+                    <div>
                         {prevPost && (
-                            <CustomLink href={`/blog/${prevPost.id}`} className="block" aria-label={`上一篇：${prevPost.title}`}>
+                            <a href={`/blog/${prevPost.id}`} aria-label={`上一篇：${prevPost.title}`}>
                                 上一篇：{prevPost.title}
-                            </CustomLink>
-                        )}
+                            </a>
+                        )}</div>
+                    <div>
                         {nextPost && (
-                            <CustomLink href={`/blog/${nextPost.id}`} className="block" aria-label={`下一篇：${nextPost.title}`}>
+                            <a href={`/blog/${nextPost.id}`} aria-label={`下一篇：${nextPost.title}`}>
                                 下一篇：{nextPost.title}
-                            </CustomLink>
+                            </a>
                         )}
                     </div>
-                </nav>
+                </div>
 
-                <div className="text-center border-t border-border">
-                    <div className="flex items-center justify-center gap-6">
+                <div>
+                    <div className='grid'>
                         {/* 评论按钮 */}
                         <CommentButton
                             showComments={showComments}
@@ -273,7 +247,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                     </div>
                 </div>
 
-                <section className="">
+                <section>
                     {/* 只在 showComments 为 true 时才渲染 Giscus 组件 */}
                     {showComments && (
                         <Giscus

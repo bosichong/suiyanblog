@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from './Link';
 import HomeIcon from './icons/HomeIcon';
 
 interface BreadcrumbProps {
@@ -12,7 +11,7 @@ interface BreadcrumbProps {
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ type, title, tag, pageNum }) => {
     const renderItems = () => {
         const items: Array<{ label: string; href: string; icon?: React.ReactNode }> = [
-            { label: '首页', href: '/', icon: <HomeIcon className="w-5 h-5" /> }
+            { label: '首页', href: '/', icon: <HomeIcon /> }
         ];
 
         switch (type) {
@@ -59,21 +58,23 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ type, title, tag, pageNum }) =>
     if (!items || items.length <= 1) return null;
 
     return (
-        <nav className="flex items-center space-x-2 text-sm text-text-secondary mb-4" role="navigation" aria-label="面包屑导航">
-            {items.map((item, index) => (
-                <React.Fragment key={index}>
-                    {index === items.length - 1 && type === 'blog' ? (
-                        <span className="text-text-primary">{item.label}</span>
-                    ) : (
-                        <Link href={item.href} className="hover:text-text-dark" aria-label={item.label}>
-                            {item.icon || item.label}
-                        </Link>
-                    )}
-                    {index < items.length - 1 && (
-                        <span className="text-border" aria-hidden="true">/</span>
-                    )}
-                </React.Fragment>
-            ))}
+        <nav aria-label="面包屑导航">
+            <small>
+                {items.map((item, index) => (
+                    <React.Fragment key={index}>
+                        {index === items.length - 1 && type === 'blog' ? (
+                            <span>{item.label}</span>
+                        ) : (
+                            <a href={item.href} aria-label={item.label}>
+                                {item.icon || item.label}
+                            </a>
+                        )}
+                        {index < items.length - 1 && (
+                            <span aria-hidden="true">/</span>
+                        )}
+                    </React.Fragment>
+                ))}
+            </small>
         </nav>
     );
 };

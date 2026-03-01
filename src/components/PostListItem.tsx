@@ -1,5 +1,5 @@
 
-import CustomLink from './Link';
+import React from 'react';
 
 interface PostListItemProps {
     id: string;
@@ -20,12 +20,11 @@ const PostListItem: React.FC<PostListItemProps> = ({ id, title, time, formatDate
     const displayTime = formatDateFn(time);
 
     return (
-        <div className="flex items-baseline gap-2 overflow-hidden">
-            <CustomLink href={`/blog/${id}`} className="group overflow-hidden block text-lg truncate">
+        <div className="grid">
+            <a href={`/blog/${id}`}>
                 {title}
-            </CustomLink>
-            <div className="flex-1 min-w-0 border-b border-dashed border-neutral-400"></div>
-            <time className="text-sm text-neutral-600 whitespace-nowrap" dateTime={time}>
+            </a>
+            <time dateTime={time}>
                 {displayTime}
             </time>
         </div>

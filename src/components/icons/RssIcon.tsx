@@ -1,7 +1,7 @@
 import { Rss } from 'lucide-react';
 
-const RssIcon = ({ className = '' }: { className?: string }) => {
-    return <Rss className={className} />;
+const RssIcon = ({  }: {  }) => {
+    return <Rss  />;
 };
 
 export default RssIcon;

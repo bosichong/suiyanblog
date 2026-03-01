@@ -1,5 +1,9 @@
 import '../styles/globals.css';
 
+export const metadata = {
+  viewport: 'width=device-width, initial-scale=1',
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -7,7 +11,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-CN">
-      <body className="bg-zinc-50">
+      <head>
+        <meta charSet="utf-8" />
+      </head>
+      <body>
         {children}
       </body>
     </html>

@@ -3,7 +3,6 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import Layout from '../../components/Layout';
 import Breadcrumb from '../../components/Breadcrumb';
-import Link from '../../components/Link';
 import { Post } from '../../types';
 import config from '../../config';
 import getSortedThoughtsData, { getThoughtById } from '../../utils/parseThoughts';
@@ -19,7 +18,7 @@ import { sanitizeHtml } from '../../utils/sanitizeHtml';
 const Giscus = dynamic(() => import('@giscus/react'), {
     ssr: false,
     loading: () => (
-        <div className="flex items-center justify-center py-8">
+        <div>
             <div>加载评论中...</div>
         </div>
     )
@@ -81,25 +80,25 @@ export default function ThoughtDetail({ thought }: { thought: Post }) {
 
       <Breadcrumb type="thoughts" />
 
-      <div className="w-full">
-        <div className="mb-6">
-          <time className="text-sm text-gray-600">
+      <div>
+        <div>
+          <time>
             {formatDate(thought.time || '')}
           </time>
         </div>
 
-        <div className="prose prose-gray max-w-none">
+        <div>
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
             rehypePlugins={[rehypeRaw]}
             components={{
               a: ({ href, children }) => (
-                <Link className="break-words" href={href || ''}>
+                <a href={href || ''}>
                   {children}
-                </Link>
+                </a>
               ),
               img: ({ src, alt }) => (
-                <img src={src} alt={alt || ''} className="rounded-lg" />
+                <img src={src} alt={alt || ''} />
               ),
             }}
           >
@@ -107,14 +106,14 @@ export default function ThoughtDetail({ thought }: { thought: Post }) {
           </ReactMarkdown>
         </div>
 
-        <div className="text-center border-t border-border mt-8 pt-6">
+        <div>
           <CommentButton
             showComments={showComments}
             onToggle={() => setShowComments(!showComments)}
           />
         </div>
 
-        <section className="">
+        <section>
           {/* 只在 showComments 为 true 时才渲染 Giscus 组件 */}
           {showComments && (
             <Giscus
@@ -133,25 +132,6 @@ export default function ThoughtDetail({ thought }: { thought: Post }) {
             />
           )}
         </section>
-
-        <div className="mt-8 pt-6 border-t border-gray-200">
-          <Link href="/thoughts" className="inline-flex items-center">
-            <svg
-              className="w-4 h-4 mr-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M10 19l-7-7m0 0l7-7m-7 7h18"
-              />
-            </svg>
-            返回片语列表
-          </Link>
-        </div>
       </div>
     </Layout>
   );

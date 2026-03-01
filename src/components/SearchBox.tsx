@@ -13,16 +13,16 @@ const SearchBox: React.FC<SearchBoxProps> = ({
 }) => {
     return (
         <form onSubmit={onSubmit}>
-            <div className="mt-0.5">
+            <fieldset role="group">
                 <input
                     type="search"
                     id="Search"
                     placeholder={placeholder}
                     value={value}
                     onChange={(e) => onChange(e.target.value)}
-                    className="w-full border-2 border-black shadow-[4px_4px_0_0] focus:ring-2 focus:ring-yellow-300 sm:text-sm px-4 py-2"
                 />
-            </div>
+                <input type="submit" value="搜索" />
+            </fieldset>
         </form>
     );
 };
