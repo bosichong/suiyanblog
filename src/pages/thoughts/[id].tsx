@@ -3,26 +3,15 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import Layout from '../../components/Layout';
 import Breadcrumb from '../../components/Breadcrumb';
+import GiscusComments from '../../components/GiscusComments';
+import CommentButton from '@/components/CommentButton';
 import { Post } from '../../types';
 import config from '../../config';
 import getSortedThoughtsData, { getThoughtById } from '../../utils/parseThoughts';
-import dynamic from 'next/dynamic';
-import CommentButton from '@/components/CommentButton';
-import giscusConfig from '../../giscusConfigs';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
 import ReactMarkdown from 'react-markdown';
 import { sanitizeHtml } from '../../utils/sanitizeHtml';
-
-// 动态导入 Giscus 组件以延迟加载
-const Giscus = dynamic(() => import('@giscus/react'), {
-    ssr: false,
-    loading: () => (
-        <div>
-            <div>加载评论中...</div>
-        </div>
-    )
-});
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const thoughts = getSortedThoughtsData();
@@ -116,20 +105,7 @@ export default function ThoughtDetail({ thought }: { thought: Post }) {
         <section>
           {/* 只在 showComments 为 true 时才渲染 Giscus 组件 */}
           {showComments && (
-            <Giscus
-              key={thought.id}
-              repo={giscusConfig.repo as `${string}/${string}`}
-              repoId={giscusConfig.repoId}
-              category={giscusConfig.category}
-              categoryId={giscusConfig.categoryId}
-              mapping={giscusConfig.mapping as any}
-              lang={giscusConfig.lang}
-              strict="0"
-              reactionsEnabled="1"
-              emitMetadata="0"
-              inputPosition="bottom"
-              theme="light"
-            />
+            <GiscusComments key={thought.id} />
           )}
         </section>
       </div>

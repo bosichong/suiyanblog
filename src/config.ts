@@ -24,10 +24,10 @@ const config: Config = {
     "PROFILE_IMAGE": "assets/images/avatar.png",
 
     'menuItems' : [
-        {name:'搜索',href:'/search',iconComponent:'SearchIcon'},
-        {name:'标签',href:'/Tags',iconComponent:'TagsIcon'},
-        {name:'链接',href:'/Friends',iconComponent:'FriendsIcon'},
-        {name:'关于',href:'/blog/1',iconComponent:'AboutIcon'},
+        {name:'搜索',href:'/search'},
+        {name:'标签',href:'/Tags'},
+        {name:'链接',href:'/Friends'},
+        {name:'关于',href:'/blog/1'},
     ],
 
         // 片语页面标题

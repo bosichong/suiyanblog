@@ -1,5 +1,8 @@
+'use client'
+
 import config from '@/config';
 import SnsIcons from './SnsIcons';
+import ThemeSwitcher from './ThemeSwitcher';
 
 export default function Footer() {
     return (
@@ -18,6 +21,7 @@ export default function Footer() {
                     </a>
                 </p>
             </small>
+            <ThemeSwitcher />
             <script data-goatcounter="https://suiyan.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
         </footer>

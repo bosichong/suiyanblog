@@ -53,7 +53,11 @@ const BackToTop = () => {
             <button
                 aria-label="返回顶部"
                 onClick={scrollToTop}
-                style={{ display: isVisible ? 'block' : 'none' }}
+                style={{ 
+                    display: isVisible ? 'block' : 'none',
+                    padding: '0.5rem',
+                    fontSize: '0.875rem'
+                }}
             >
                 <ArrowUpIcon size={16} />
             </button>
