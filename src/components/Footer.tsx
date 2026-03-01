@@ -13,7 +13,7 @@ export default function Footer() {
             <small>
                 <p>
                     &copy; 2017 - 2026 {config.BLOG_NAME_EN} |&nbsp;
-                    <a style={{ textDecoration: 'underline' }}
+                    <a
                         href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1"
                         target="_blank"
                         rel="license noopener noreferrer"
