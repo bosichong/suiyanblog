@@ -190,7 +190,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                 </div>
 
                 {post.tag && (
-                    <div>
+                    <div className='tags'>
                         <span>标签: </span>
                         {post.tag.split(',').map((tag: string, index: number) => (
                             <a
@@ -198,7 +198,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                                 href={`/tags/${tag.trim().toLowerCase().replace(/\s+/g, '')}`}
                                
                             >
-                                {tag.trim()}
+                                #{tag.trim()}
                             </a>
                         ))}
                     </div>
