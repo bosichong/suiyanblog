@@ -143,13 +143,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                             {post.title}
                         </h1>
                         <p>
-                            <span>作者: {post.author}</span>
-                            <span> · </span>
-                            <time dateTime={post.time}>
-                                {formatDate(post.time || '')}
-                            </time>
-                           <span> · </span>
-                             <AILabelBadge level={post.ai_label || 0} />
+                        <AILabelBadge level={post.ai_label || 0} />
                         </p>
                     </hgroup>
 
@@ -191,7 +185,9 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
 
                 {post.tag && (
                     <div className='tags'>
-                        <span>标签: </span>
+                            <time dateTime={post.time}>
+                                发表于:{formatDate(post.time || '')}
+                            </time>
                         {post.tag.split(',').map((tag: string, index: number) => (
                             <a
                                 key={index}
