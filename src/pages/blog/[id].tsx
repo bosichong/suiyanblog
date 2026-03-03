@@ -186,7 +186,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                 {post.tag && (
                     <div className='tags'>
                             <time dateTime={post.time}>
-                                发表于:{formatDate(post.time || '')}
+                                <small>发表于:{formatDate(post.time || '')}</small>
                             </time>
                         {post.tag.split(',').map((tag: string, index: number) => (
                             <a
