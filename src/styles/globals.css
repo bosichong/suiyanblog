@@ -177,7 +177,7 @@ main ol {
 }
 
 
-.tags a{
+.tags a,span {
   margin: 12px;
 }
 
