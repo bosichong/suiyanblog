@@ -24,9 +24,9 @@ export default function GiscusComments({ key: propKey }: GiscusCommentsProps) {
         <Giscus
             key={propKey}
             repo="bosichong/suiyanblog"
-            repoId="R_kgDONQk8gA"
+            repoId="R_kgDONjg2qw"
             category="Announcements"
-            categoryId="DIC_kwDONQk8gM4COX0M"
+            categoryId="DIC_kwDONjg2q84ClnrC"
             mapping="pathname"
             lang="zh-CN"
             strict="0"
