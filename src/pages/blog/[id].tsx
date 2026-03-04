@@ -189,11 +189,6 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                                 }
                                 return null;
                             },
-                            li: ({ children }: any) => (
-                                <li className="overflow-auto">
-                                    {children}
-                                </li>
-                            ),
 
                         }}
                     >
