@@ -189,10 +189,10 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                                 }
                                 return null;
                             },
-                            table: ({ children }: any) => (
-                                <div className="overflow-auto">
-                                    <table>{children}</table>
-                                </div>
+                            li: ({ children }: any) => (
+                                <li className="overflow-auto">
+                                    {children}
+                                </li>
                             ),
 
                         }}
