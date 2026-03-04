@@ -187,3 +187,38 @@ main ol {
     font-size: 1.125rem;
   }
 }
+
+/* 防止移动端水平滚动 */
+@media (max-width: 768px) {
+  article {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  article > div {
+    overflow-x: auto;
+    width: 100%;
+  }
+  
+  /* 代码块、表格和图片在移动端的处理 */
+  article pre,
+  article table,
+  article iframe {
+    overflow-x: auto;
+    max-width: 100%;
+    display: block;
+  }
+  
+  article img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* 列表项的溢出处理 */
+  article li {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+}

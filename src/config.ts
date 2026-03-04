@@ -43,18 +43,47 @@ const config: Config = {
     // 博客聚合描述
     "BLOG_AGGREGATION_DESCRIPTION": "一些优秀的博客聚合平台，可以发现更多有趣的独立博客。",
     "links": [
-        {
-            "site_name": "Owen的博客",
-            "site_url": "https://www.owenyoung.com/",
-            "site_description": "主要关注技术，读书，摘抄，杂谈，文章评论，工具分享，工作流，灵感，英文学习，注意力管理，深度工作等方向。",
-            "site_avatar": "#",
-            "is_active": true
-        },
+
         {
             "site_name": "莫比乌斯",
             "site_url": "https://onojyun.com/",
             "site_description": "写作，一场自我悖驳的旅程。我写自己的生活、也写自己的讣告。",
             "site_avatar": "https://onojyun.com/wp-content/uploads/2024/03/a2d42-cropped-mobius_icon_black-edited.png",
+            "is_active": true
+        },
+                {
+            "site_name": "一派胡言",
+            "site_url": "https://yipai.me/",
+            "site_description": "一派胡言 – 如果你在纵容，就不要抱怨世道变坏。",
+            "site_avatar": "#",
+            "is_active": true
+        },
+                {
+            "site_name": "CC的数字花园",
+            "site_url": "https://cyrus19.cc/",
+            "site_description": "CC的数字花园并不是传统意义上的博客，是我的精神在这个世界上的一片自留地。",
+            "site_avatar": "#",
+            "is_active": true
+        },
+                {
+            "site_name": "孤斗",
+            "site_url": "https://d-d.design/",
+            "site_description": "该网站禁止鼠标右键...",
+            "site_avatar": "#",
+            "is_active": true
+        },
+                {
+            "site_name": "白熊阿丸的小屋",
+            "site_url": "https://blog.bxaw.name/",
+            "site_description": "在这里可以看到一个真实的我，我会在这里书写我的一切",
+            "site_avatar": "#",
+            "is_active": true
+        },
+                {
+            "site_name": "Owen的博客",
+            "site_url": "https://www.owenyoung.com/",
+            "site_description": "主要关注技术，读书，摘抄，杂谈，文章评论，工具分享，工作流，灵感，英文学习，注意力管理，深度工作等方向。",
+            "site_avatar": "#",
             "is_active": true
         },
         {
