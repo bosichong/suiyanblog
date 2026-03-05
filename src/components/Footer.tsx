@@ -3,6 +3,7 @@
 import config from '@/config';
 import SnsIcons from './SnsIcons';
 import ThemeSwitcher from './ThemeSwitcher';
+import ColorPicker from './ColorPicker';
 
 export default function Footer() {
     return (
@@ -21,7 +22,11 @@ export default function Footer() {
                     </a>
                 </p>
             </small>
-            <ThemeSwitcher />
+            <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                <ThemeSwitcher />
+                <span style={{ color: 'var(--pico-muted-color)' }}>|</span>
+                <ColorPicker />
+            </div>
             <script data-goatcounter="https://suiyan.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
         </footer>

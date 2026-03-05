@@ -213,3 +213,124 @@ main ol {
 fieldset[role="group"] > input[type="search"]:first-of-type {
   border-radius: 0;                 /* 移除所有圆角 */
 }
+
+/* ============================================
+   颜色选择器模态窗口样式
+   ============================================ */
+.color-picker-modal {
+  padding: 0;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  max-width: 90vw;
+  width: 500px;
+  background: var(--pico-background-color);
+}
+
+.color-picker-modal::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.color-picker-content {
+  padding: 2rem;
+}
+
+.color-picker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.color-picker-header h6 {
+  margin: 0;
+  color: var(--pico-color);
+}
+
+.color-picker-header .close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  color: var(--pico-muted-color);
+  border-radius: 0.25rem;
+  transition: all 0.2s;
+}
+
+.color-picker-header .close-button:hover {
+  background: var(--pico-background-color);
+  color: var(--pico-color);
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .color-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .color-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.color-button {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 0.75rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+}
+
+.color-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+
+.color-button.active {
+  border-color: var(--pico-primary);
+  box-shadow: 0 0 0 2px var(--pico-background-color),
+              0 0 0 4px var(--pico-primary),
+              0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.color-button .checkmark {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.color-picker-overlay {
+  display: none;
+}
+
+.color-picker-footer {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.color-picker-footer button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
