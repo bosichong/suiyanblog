@@ -48,14 +48,18 @@ export default function ThoughtsPreview({ latestThought }: ThoughtsPreviewProps)
         {sanitizedContent}
       </ReactMarkdown>
 
-        <time>
-          {formatDate(latestThought.time || '')}
-        </time>
-        <a
-          href="/thoughts"
-        >
-          查看更多 →
-        </a>
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <time>
+            {formatDate(latestThought.time || '')}
+          </time>
+          <a
+            href="/thoughts"
+          >
+            <small>
+              查看更多 →
+            </small>
+          </a>
+        </div>
     </article>
   );
 }
