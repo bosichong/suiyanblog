@@ -20,12 +20,12 @@ interface LinkSectionProps {
 const LinkSection = ({ title, description, links }: LinkSectionProps) => {
     return (
         <>
-            <div>
-                <h3>{title}</h3>
+             <hgroup>
+                <h2>{title}</h2>
                 <p>
                     {description}
                 </p>
-            </div>
+             </hgroup>
             <div>
                 {links.map((link) => (
                     <LinkCard
