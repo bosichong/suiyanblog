@@ -6,7 +6,7 @@ export default function Nav() {
     return (
         <nav className="grid">
             <div className="grid">
-                <a href="/" aria-label="返回首页">
+                <a href="/">
                     <h1>
                         {config.BLOG_NAME}
                     </h1>

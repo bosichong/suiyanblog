@@ -101,13 +101,9 @@ const Archives = ({ allPostsData, postsByYear }: { allPostsData: any[]; postsByY
                  </hgroup>
 
                 <div>
-                    {Object.keys(postsByYear).sort((a, b) => parseInt(b) - parseInt(a)).map((year) => (
-                        <div key={year}>
-                            <div>
-                                <div></div>
-                                <h2>{year}</h2>
-                                <div></div>
-                            </div>
+                    {Object.keys(postsByYear).sort((a, b) => parseInt(b) - parseInt(a)).map((year, index) => (
+                        <details name="archive" key={year} open={index === 0}>
+                            <summary>{year}</summary>
                             <ul>
                                 {postsByYear[year].map((post) => (
                                     <li key={post.id}>
@@ -120,7 +116,7 @@ const Archives = ({ allPostsData, postsByYear }: { allPostsData: any[]; postsByY
                                     </li>
                                 ))}
                             </ul>
-                        </div>
+                        </details>
                     ))}
                 </div>
             </div>
