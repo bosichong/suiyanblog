@@ -56,7 +56,7 @@ const Tags = ({ tagsData }: { tagsData: TagData[] }) => {
                 <meta name="twitter:description" content="碎言博客的文章分类标签，按主题分类的技术文章和随笔" />
             </Head>
             <Breadcrumb type="tags" />
-            <div>
+            <article>
                  <hgroup>
                 <h1>
                     标签
@@ -77,7 +77,7 @@ const Tags = ({ tagsData }: { tagsData: TagData[] }) => {
                         </a>
                     ))}
                 </div>
-            </div>
+            </article>
         </Layout>
     );
 };

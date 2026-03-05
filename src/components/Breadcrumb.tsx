@@ -58,10 +58,10 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ type, title, tag, pageNum }) =>
     if (!items || items.length <= 1) return null;
 
     return (
-        <nav aria-label="面包屑导航">
-            <small>
+        <nav aria-label="breadcrumb">
+            <ul>
                 {items.map((item, index) => (
-                    <React.Fragment key={index}>
+                    <li key={index}>
                         {index === items.length - 1 && type === 'blog' ? (
                             <span>{item.label}</span>
                         ) : (
@@ -69,12 +69,9 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ type, title, tag, pageNum }) =>
                                 {item.icon || item.label}
                             </a>
                         )}
-                        {index < items.length - 1 && (
-                            <span aria-hidden="true">/</span>
-                        )}
-                    </React.Fragment>
+                    </li>
                 ))}
-            </small>
+            </ul>
         </nav>
     );
 };
