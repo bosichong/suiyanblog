@@ -57,13 +57,14 @@ const Tags = ({ tagsData }: { tagsData: TagData[] }) => {
             </Head>
             <Breadcrumb type="tags" />
             <div>
+                 <hgroup>
                 <h1>
                     标签
-                    </h1>
+                </h1>
                 <p>
                     共有标签：<span>{tagsData.length}</span> 个
                 </p>
-
+                </hgroup>
                 <div className='tags'>
                     {tagsData.map((tagObj) => (
                         <a

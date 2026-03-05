@@ -91,14 +91,14 @@ const Archives = ({ allPostsData, postsByYear }: { allPostsData: any[]; postsByY
             <Breadcrumb type="archives" />
 
             <div>
-                <div>
+                 <hgroup>
                     <h1>
                         文章归档
                     </h1>
                     <p>
                         共有文章：{totalPosts} 篇，最后更新于 {lastUpdated}
                     </p>
-                </div>
+                 </hgroup>
 
                 <div>
                     {Object.keys(postsByYear).sort((a, b) => parseInt(b) - parseInt(a)).map((year) => (
