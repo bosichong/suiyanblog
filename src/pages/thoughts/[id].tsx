@@ -69,12 +69,12 @@ export default function ThoughtDetail({ thought }: { thought: Post }) {
 
       <Breadcrumb type="thoughts" />
 
-      <div>
-        <div>
+      <article>
+        <header>
           <time>
             {formatDate(thought.time || '')}
           </time>
-        </div>
+        </header>
 
         <div>
           <ReactMarkdown
@@ -95,20 +95,19 @@ export default function ThoughtDetail({ thought }: { thought: Post }) {
           </ReactMarkdown>
         </div>
 
-        <div>
+        <footer>
           <CommentButton
             showComments={showComments}
             onToggle={() => setShowComments(!showComments)}
           />
-        </div>
-
-        <section>
+        </footer>
+      </article>
+      <section>
           {/* 只在 showComments 为 true 时才渲染 Giscus 组件 */}
           {showComments && (
             <GiscusComments key={thought.id} />
           )}
         </section>
-      </div>
     </Layout>
   );
 }
