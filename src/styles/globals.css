@@ -63,7 +63,7 @@ footer a svg {
    容器样式（页面内容居中）
    ============================================ */
 .container {
-  max-width: 760px;                 /* 最大宽度 */
+  max-width: 700px;                 /* 最大宽度 */
   margin: 0 auto;                   /* 水平居中 */
   padding: 0 0.6rem;                /* 左右内边距 */
   margin: 2rem auto;                   /* 上下外边距 2rem，水平居中 */
