@@ -80,8 +80,10 @@ export default function Thoughts({ thoughts }: { thoughts: Post[] }) {
                 <li key={thought.id}>
                   <span></span>
 
-                  <div>
-                    <time>
+                  <article>
+
+                    <header className='sf'>
+                      <time>
                       {formatDate(thought.time || '')}
                     </time>
                     
@@ -89,6 +91,9 @@ export default function Thoughts({ thoughts }: { thoughts: Post[] }) {
                       <MessageCircle size={16} />
                       <span>去评论</span>
                     </a>
+
+                    </header>
+                    
                     <div>
                       <ReactMarkdown
                         remarkPlugins={[remarkGfm]}
@@ -108,7 +113,7 @@ export default function Thoughts({ thoughts }: { thoughts: Post[] }) {
                       </ReactMarkdown>
                     </div>
                     
-                  </div>
+                  </article>
                 </li>
               );
             })}

@@ -214,6 +214,13 @@ fieldset[role="group"] > input[type="search"]:first-of-type {
   border-radius: 0;                 /* 移除所有圆角 */
 }
 
+
+
+.sf {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* ============================================
    颜色选择器模态窗口样式
    ============================================ */

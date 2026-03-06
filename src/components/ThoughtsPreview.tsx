@@ -48,7 +48,7 @@ export default function ThoughtsPreview({ latestThought }: ThoughtsPreviewProps)
         {sanitizedContent}
       </ReactMarkdown>
 
-        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <div className='sf'>
           <time>
             {formatDate(latestThought.time || '')}
           </time>
