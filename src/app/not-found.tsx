@@ -1,4 +1,4 @@
-import Link from 'next/link';
+
 import Image from 'next/image';
 import config from '../config';
 
@@ -10,9 +10,8 @@ export const metadata = {
 
 export default function NotFound() {
     return (
-        <div>
-            <div>
-                <div>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '2rem', padding: '2rem', textAlign: 'center' }}>
                 <div>
                     <Image 
                         src="/assets/images/404.avif" 
@@ -29,7 +28,6 @@ export default function NotFound() {
                     <p>抱歉，您访问的页面不存在。</p>
 
                     <a href="/">返回首页</a>
-                </div>
                 </div>
             </div>
         </div>
