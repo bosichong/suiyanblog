@@ -283,11 +283,6 @@ fieldset[role="group"] > input[type="search"]:first-of-type {
   }
 }
 
-@media (max-width: 480px) {
-  .color-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 
 .color-button {
   width: 100%;
