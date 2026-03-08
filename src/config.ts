@@ -26,7 +26,7 @@ const config: Config = {
     'menuItems' : [
         {name:'搜索',href:'/search'},
         {name:'标签',href:'/Tags'},
-        {name:'链接',href:'/Friends'},
+        {name:'链接',href:'/Links'},
         {name:'关于',href:'/blog/1'},
     ],
 
@@ -37,7 +37,7 @@ const config: Config = {
     // 友链页面标题
     "FRIENDS_PAGE_TITLE": "链接",
     // 友链页面描述
-    "FRIENDS_PAGE_DESCRIPTION": "如果你想了解一个博客和他的主人，就去看看他的链接。",
+    "FRIENDS_PAGE_DESCRIPTION": "这里存放了我常去的一些独立博客的链接，这里不是友情链接展示，也不是邻居的的列表，就我个人而言，这些博客都是我喜欢的、能让我思考、我认为对我有价值的博客，欢迎访问。",
     // 博客聚合标题
     "BLOG_AGGREGATION_TITLE": "博客聚合",
     // 博客聚合描述
