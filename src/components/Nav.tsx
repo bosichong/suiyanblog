@@ -7,9 +7,9 @@ export default function Nav() {
         <nav className="grid">
             <div className="grid">
                 <a href="/">
-                    <h1>
+                    <h3>
                         {config.BLOG_NAME}
-                    </h1>
+                    </h3>
                 </a>
             </div>
 
