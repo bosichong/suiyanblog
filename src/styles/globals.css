@@ -277,11 +277,6 @@ fieldset[role="group"] > input[type="search"]:first-of-type {
   gap: 0.75rem;
 }
 
-@media (max-width: 768px) {
-  .color-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
 
 
 .color-button {
