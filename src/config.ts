@@ -27,7 +27,7 @@ const config: Config = {
         {name:'搜索',href:'/search'},
         {name:'标签',href:'/Tags'},
         {name:'链接',href:'/Links'},
-        {name:'关于',href:'/blog/1'},
+        {name:'关于',href:'/About'},
     ],
 
         // 片语页面标题
