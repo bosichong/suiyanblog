@@ -4,11 +4,10 @@ import Link from 'next/link'
 
 export default function SponsorButton() {
     return (
-        <div className="relative inline-block">
+        <div >
             <Link
                 href="/Sponsors"
                 data-tooltip="赞赏作者"
-                data-placement="left"
             >
                 <svg
                     width="28"
