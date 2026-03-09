@@ -71,19 +71,7 @@ const Friends = () => {
                 <hr />
             </div>
             
-            {!showComments ? (
-                <div>
-                    <button
-                        onClick={() => setShowComments(true)}
-                       
-                    >
-                        <span>加载评论</span>
-                        
-                    </button>
-                </div>
-            ) : (
-                <GiscusComments />
-            )}
+
 
         </Layout>
     );
