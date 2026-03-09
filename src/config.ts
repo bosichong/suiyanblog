@@ -58,7 +58,14 @@ const config: Config = {
             "site_avatar": "#",
             "is_active": true
         },
-                        {
+        {
+            "site_name": "Yihui Xie",
+            "site_url": "https://yihui.org/cn/",
+            "site_description": "一些书信。一些文章。",
+            "site_avatar": "https://yihui.org/images/logo.png",
+            "is_active": true
+        },
+        {
             "site_name": "老T博客",
             "site_url": "https://lawtee.com",
             "site_description": "法律、科技和生活",
