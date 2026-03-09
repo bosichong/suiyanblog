@@ -10,7 +10,6 @@ export default function CommentButton({ showComments, onToggle }: CommentButtonP
         <div>
         <a
             onClick={onToggle}
-            data-placement="right"
             data-tooltip="英雄请留步！欢迎点击图标，留言交流！"
             aria-label={showComments ? "隐藏评论" : "显示评论"}
         >

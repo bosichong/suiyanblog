@@ -20,7 +20,7 @@ const PostListItem: React.FC<PostListItemProps> = ({ id, title, time, formatDate
     const displayTime = formatDateFn(time);
 
     return (
-        <div className="grid">
+        <div className="post-list-grid">
             <a href={`/blog/${id}`}>
                 {title}
             </a>

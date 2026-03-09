@@ -152,7 +152,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                                 <small>发表于:{formatDate(post.time || '')}</small>
                             </time>
                         {post.tag.split(',').map((tag: string, index: number) => (
-                            <a
+                            <a className='post_tag'
                                 key={index}
                                 href={`/tags/${tag.trim().toLowerCase().replace(/\s+/g, '')}`}
                                
@@ -214,8 +214,9 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                     </div>
                 </div>
 
-                <div>
-                    <div className='grid'>
+                
+                <div className='post_cbsb'>
+                    
                         {/* 评论按钮 */}
                         <CommentButton
                             showComments={showComments}
@@ -224,8 +225,9 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
 
                         {/* 赞赏按钮 */}
                         <SponsorButton />
-                    </div>
+                        
                 </div>
+                
 
                 <section>
                     {/* 只在 showComments 为 true 时才渲染 Giscus 组件 */}
