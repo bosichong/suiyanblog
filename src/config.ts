@@ -51,7 +51,21 @@ const config: Config = {
             "site_avatar": "https://onojyun.com/wp-content/uploads/2024/03/a2d42-cropped-mobius_icon_black-edited.png",
             "is_active": true
         },
-                {
+                        {
+            "site_name": "白熊阿丸的小屋",
+            "site_url": "https://blog.bxaw.name/",
+            "site_description": "在这里可以看到一个真实的我，我会在这里书写我的一切",
+            "site_avatar": "#",
+            "is_active": true
+        },
+                        {
+            "site_name": "老T博客",
+            "site_url": "https://lawtee.com",
+            "site_description": "法律、科技和生活",
+            "site_avatar": "https://lawtee.com/links/avatar.jpg",
+            "is_active": true
+        },
+        {
             "site_name": "一派胡言",
             "site_url": "https://yipai.me/",
             "site_description": "一派胡言 – 如果你在纵容，就不要抱怨世道变坏。",
@@ -72,13 +86,7 @@ const config: Config = {
             "site_avatar": "#",
             "is_active": true
         },
-                {
-            "site_name": "白熊阿丸的小屋",
-            "site_url": "https://blog.bxaw.name/",
-            "site_description": "在这里可以看到一个真实的我，我会在这里书写我的一切",
-            "site_avatar": "#",
-            "is_active": true
-        },
+
                 {
             "site_name": "Owen的博客",
             "site_url": "https://www.owenyoung.com/",
