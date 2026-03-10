@@ -9,7 +9,7 @@ interface LinkCardProps {
 
 const LinkCard = ({ site_name, site_url, site_description, is_active = true }: LinkCardProps) => {
     return (
-        <div>
+        <li>
             <a
                 href={site_url}
                 target='_blank'
@@ -30,7 +30,7 @@ const LinkCard = ({ site_name, site_url, site_description, is_active = true }: L
             <p>
                 {site_description}
             </p>
-        </div>
+        </li>
     );
 };
 
