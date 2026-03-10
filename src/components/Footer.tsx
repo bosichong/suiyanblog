@@ -7,7 +7,7 @@ import ColorPicker from './ColorPicker';
 
 export default function Footer() {
     return (
-        <footer>
+        <>
             <div>
                 <SnsIcons />
             </div>
@@ -29,6 +29,6 @@ export default function Footer() {
             </div>
             <script data-goatcounter="https://suiyan.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
-        </footer>
+        </>
     );
 }

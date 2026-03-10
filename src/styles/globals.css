@@ -254,6 +254,35 @@ fieldset[role="group"] > input[type="search"]:first-of-type {
 }
 
 /* ============================================
+   PostList 组件样式
+   ============================================ */
+.post-list-section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.post-list {
+  margin-top: 1rem;
+}
+
+.post-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   LinkList 组件样式
+   ============================================ */
+.link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link-list li {
+  margin-bottom: 1rem;
+}
+
+/* ============================================
    颜色选择器模态窗口样式
    ============================================ */
 .color-picker-modal {

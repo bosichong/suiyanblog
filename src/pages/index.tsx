@@ -73,7 +73,7 @@ function Home({ currentPosts, latestThought }: { currentPosts: Post[], latestTho
           />
         </Head>
 
-        <div>
+        <section>
           <ThoughtsPreview latestThought={latestThought} />
           <article>
             {currentPosts.map((post) => (
@@ -89,7 +89,7 @@ function Home({ currentPosts, latestThought }: { currentPosts: Post[], latestTho
           <button onClick={() => window.location.href = '/Archives'}>
             全部文章
           </button>
-        </div>
+        </section>
       </Layout>
   );
 }

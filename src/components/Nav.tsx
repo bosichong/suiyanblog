@@ -5,15 +5,17 @@ import NavIcons from './NavIcons';
 export default function Nav() {
     return (
         <nav>
-            <div>
-                <a href="/" className="site-title">
-                    <h3>
-                        {config.BLOG_NAME}
-                    </h3>
-                </a>
-            </div>
-
-            <NavIcons />
+            <ul>
+                <li>
+                    <a href="/" className="site-title">
+                        <h3>
+                            {config.BLOG_NAME}
+                        </h3>
+                    </a>
+                </li>
+            </ul>
+                <NavIcons />
+            
         </nav>
     );
 }

@@ -6,14 +6,15 @@ import { LayoutProps } from '../types';
 const Layout = ({ children }: LayoutProps) => {
     return (
         <>
-            <div className="container">
+            <header className="container">
                 <Nav />
-                <main>
-                    {children}
-                    
-                </main>
+            </header>
+            <main className="container">
+                {children}
+            </main>
+            <footer className="container">
                 <Footer />
-            </div>
+            </footer>
             <BackToTop />
         </>
     );
