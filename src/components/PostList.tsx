@@ -11,19 +11,17 @@ const PostList: React.FC<PostListProps> = ({ title, posts, showDate = false, for
     if (!posts || posts.length === 0) return null;
 
     return (
-        <section style={{ textAlign: 'left', marginTop: '2rem', marginBottom: '2rem' }}>
+        <section className="post-list-section">
             <h2>{title}</h2>
-            <ul style={{ marginTop: '1rem' }}>
+            <ul className="post-list">
                 {posts.map((post, index) => (
-                    <li key={index} style={{ marginBottom: '0.5rem' }}>
+                    <li key={index}>
                         {showDate && formatDate ? (
                             <div className="grid">
-                                
                                 <a href={`/blog/${post.id}`}>
-                                        {post.title || ''}
-                                    </a>
-
-                                    <time>
+                                    {post.title || ''}
+                                </a>
+                                <time>
                                     {formatDate(post.time || '')}
                                 </time>
                             </div>

@@ -55,7 +55,7 @@ const Search = ({ allPosts }: { allPosts: any[] }) => {
 
             <Breadcrumb type="search" />
 
-            <div>
+            <section>
                 <div>
                     <h1>
                         {searchQuery ? `搜索结果: ${searchQuery}` : '站内搜索'}
@@ -67,27 +67,28 @@ const Search = ({ allPosts }: { allPosts: any[] }) => {
                     />
                 </div>
 
+                {filteredPosts.length > 0 && (
+                    <p>
+                        找到 {filteredPosts.length} 篇文章
+                    </p>
+                )}
+
                 <ul>
                     {filteredPosts.length > 0 ? (
-                        <>
-                            <p>
-                                找到 {filteredPosts.length} 篇文章
-                            </p>
-                            {filteredPosts.map((post, index) => (
-                                <li key={index}>
-                                    <a href={`/blog/${post.id}`}>
-                                        {post.title}
-                                    </a>
-                                </li>
-                            ))}
-                        </>
+                        filteredPosts.map((post, index) => (
+                            <li key={index}>
+                                <a href={`/blog/${post.id}`}>
+                                    {post.title}
+                                </a>
+                            </li>
+                        ))
                     ) : searchQuery ? (
                         <li>
-                            <p>未找到匹配的文章</p>
+                            未找到匹配的文章
                         </li>
                     ) : null}
                 </ul>
-            </div>
+            </section>
         </Layout>
     );
 };

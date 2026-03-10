@@ -19,26 +19,27 @@ interface LinkSectionProps {
 
 const LinkSection = ({ title, description, links }: LinkSectionProps) => {
     return (
-            <article>
-
-                <hgroup>
+        <article>
+            <hgroup>
                 <h2>{title}</h2>
                 <p>
                     {description}
                 </p>
-             </hgroup>
-             
-                {links.map((link) => (
-                    <LinkCard
-                        key={link.site_name}
-                        site_name={link.site_name}
-                        site_url={link.site_url}
-                        site_description={link.site_description}
-                        is_active={link.is_active}
-                    />
-                ))}
-            </article>
+            </hgroup>
 
+            <ul className="link-list">
+                {links.map((link) => (
+                    <li key={link.site_name}>
+                        <LinkCard
+                            site_name={link.site_name}
+                            site_url={link.site_url}
+                            site_description={link.site_description}
+                            is_active={link.is_active}
+                        />
+                    </li>
+                ))}
+            </ul>
+        </article>
     );
 };
 

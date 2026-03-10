@@ -90,36 +90,34 @@ const Archives = ({ allPostsData, postsByYear }: { allPostsData: any[]; postsByY
 
             <Breadcrumb type="archives" />
 
-            <div>
-                 <hgroup>
+            <section>
+                <hgroup>
                     <h1>
                         文章归档
                     </h1>
                     <p>
                         共有文章：{totalPosts} 篇，最后更新于 {lastUpdated}
                     </p>
-                 </hgroup>
+                </hgroup>
 
-                <div>
-                    {Object.keys(postsByYear).sort((a, b) => parseInt(b) - parseInt(a)).map((year, index) => (
-                        <details name="archive" key={year} open={index === 0}>
-                            <summary>{year}</summary>
-                            <ul>
-                                {postsByYear[year].map((post) => (
-                                    <li key={post.id}>
-                                        <PostListItem
-                                            id={post.id}
-                                            title={post.title || ''}
-                                            time={post.time || ''}
-                                            formatDate={formatDateStr}
-                                        />
-                                    </li>
-                                ))}
-                            </ul>
-                        </details>
-                    ))}
-                </div>
-            </div>
+                {Object.keys(postsByYear).sort((a, b) => parseInt(b) - parseInt(a)).map((year, index) => (
+                    <details name="archive" key={year} open={index === 0}>
+                        <summary>{year}</summary>
+                        <ul>
+                            {postsByYear[year].map((post) => (
+                                <li key={post.id}>
+                                    <PostListItem
+                                        id={post.id}
+                                        title={post.title || ''}
+                                        time={post.time || ''}
+                                        formatDate={formatDateStr}
+                                    />
+                                </li>
+                            ))}
+                        </ul>
+                    </details>
+                ))}
+            </section>
         </Layout>
     );
 };

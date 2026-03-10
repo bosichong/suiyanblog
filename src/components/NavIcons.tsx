@@ -2,18 +2,19 @@ import config from '@/config';
 
 const NavIcons: React.FC = () => {
     return (
-        <div className="nav-menu">
+        <ul>
             {config.menuItems.map((item) => {
                 return (
-                    <a
-                        key={item.name}
-                        href={item.href}
-                    >
-                        {item.name}
-                    </a>
+                    <li key={item.name}>
+                        <a
+                            href={item.href}
+                        >
+                            {item.name}
+                        </a>
+                    </li>
                 );
             })}
-        </div>
+        </ul>
     );
 };
 

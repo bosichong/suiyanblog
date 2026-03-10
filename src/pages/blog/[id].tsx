@@ -138,32 +138,30 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                     tag={post.tag ? post.tag.split(',')[0].trim() : ''}
                 />
 
-                    <hgroup>
-                        <h1>
-                            {post.title}
-                        </h1>
-                        <p>
+                <hgroup>
+                    <h1>
+                        {post.title}
+                    </h1>
+                    <p>
                         <AILabelBadge level={post.ai_label || 0} />
-                        </p>
+                    </p>
 
-                                        {post.tag && (
-                    <div className='tags'>
+                    {post.tag && (
+                        <div className='tags'>
                             <time dateTime={post.time}>
                                 <small>发表于:{formatDate(post.time || '')}</small>
                             </time>
-                        {post.tag.split(',').map((tag: string, index: number) => (
-                            <a className='post_tag'
-                                key={index}
-                                href={`/tags/${tag.trim().toLowerCase().replace(/\s+/g, '')}`}
-                               
-                            >
-                                #{tag.trim()}
-                            </a>
-                        ))}
-                    </div>
-                )}
-                    </hgroup>
-                    
+                            {post.tag.split(',').map((tag: string, index: number) => (
+                                <a className='post_tag'
+                                    key={index}
+                                    href={`/tags/${tag.trim().toLowerCase().replace(/\s+/g, '')}`}
+                                >
+                                    #{tag.trim()}
+                                </a>
+                            ))}
+                        </div>
+                    )}
+                </hgroup>
 
                 <div>
                     <ReactMarkdown
@@ -189,45 +187,35 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                                 }
                                 return null;
                             },
-
                         }}
                     >
                         {sanitizedContent}
                     </ReactMarkdown>
                 </div>
 
+                <nav className="post-navigation">
+                    {prevPost && (
+                        <a href={`/blog/${prevPost.id}`} aria-label={`上一篇：${prevPost.title}`}>
+                            上一篇：{prevPost.title}
+                        </a>
+                    )}
+                    {nextPost && (
+                        <a href={`/blog/${nextPost.id}`} aria-label={`下一篇：${nextPost.title}`}>
+                            下一篇：{nextPost.title}
+                        </a>
+                    )}
+                </nav>
 
-
-                <div>
-                    <div>
-                        {prevPost && (
-                            <a href={`/blog/${prevPost.id}`} aria-label={`上一篇：${prevPost.title}`}>
-                                上一篇：{prevPost.title}
-                            </a>
-                        )}</div>
-                    <div>
-                        {nextPost && (
-                            <a href={`/blog/${nextPost.id}`} aria-label={`下一篇：${nextPost.title}`}>
-                                下一篇：{nextPost.title}
-                            </a>
-                        )}
-                    </div>
-                </div>
-
-                
                 <div className='post_cbsb'>
-                    
-                        {/* 评论按钮 */}
-                        <CommentButton
-                            showComments={showComments}
-                            onToggle={() => setShowComments(!showComments)}
-                        />
+                    {/* 评论按钮 */}
+                    <CommentButton
+                        showComments={showComments}
+                        onToggle={() => setShowComments(!showComments)}
+                    />
 
-                        {/* 赞赏按钮 */}
-                        <SponsorButton />
-                        
+                    {/* 赞赏按钮 */}
+                    <SponsorButton />
                 </div>
-                
 
                 <section>
                     {/* 只在 showComments 为 true 时才渲染 Giscus 组件 */}

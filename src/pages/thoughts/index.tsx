@@ -78,22 +78,16 @@ export default function Thoughts({ thoughts }: { thoughts: Post[] }) {
               const sanitizedContent = sanitizeHtml(thought.content || thought.preview || '');
               return (
                 <li key={thought.id}>
-                  <span></span>
-
                   <article>
-
                     <header className='sf'>
                       <time>
-                      {formatDate(thought.time || '')}
-                    </time>
-                    
-                    <a href={`/thoughts/${thought.id}`}>
-                      <MessageCircle size={16} />
-                      <span>去评论</span>
-                    </a>
-
+                        {formatDate(thought.time || '')}
+                      </time>
+                      <a href={`/thoughts/${thought.id}`}>
+                        <MessageCircle size={16} />
+                        <span>去评论</span>
+                      </a>
                     </header>
-                    
                     <div>
                       <ReactMarkdown
                         remarkPlugins={[remarkGfm]}
@@ -112,7 +106,6 @@ export default function Thoughts({ thoughts }: { thoughts: Post[] }) {
                         {sanitizedContent}
                       </ReactMarkdown>
                     </div>
-                    
                   </article>
                 </li>
               );
