@@ -4,6 +4,135 @@
 @import "@picocss/pico";
 
 /* ============================================
+   中文排版优化
+   ============================================ */
+:root {
+  /* 放大基准字号：中文建议 18px 起步 */
+  --font-size: 1.125rem; /* 18px */
+
+  /* 增加行高 */
+  --line-height: 1.75;
+
+  /* 调整标题比例 - 中文标题不需要西文那么大的跳跃 */
+  --font-size-h1: 2rem;      /* 32px -> 相对保守 */
+  --font-size-h2: 1.75rem;   /* 28px */
+  --font-size-h3: 1.5rem;    /* 24px */
+  --font-size-h4: 1.25rem;   /* 20px */
+  --font-size-h5: 1.125rem;  /* 18px */
+  --font-size-h6: 1rem;      /* 16px */
+
+  /* 最小字号限制 */
+  --font-size-small: 0.875rem; /* 14px，中文不建议小于此值 */
+
+  /* 字重调整 - 中文最低 400，推荐 500 */
+  --font-weight: 450;
+  --font-weight-bold: 600;
+
+  /* 中文字体栈 - 优先使用现代中文字体 */
+  --font-family:
+    "PingFang SC",          /* macOS/iOS 苹方 */
+    "Hiragino Sans GB",     /* 冬青黑体 */
+    "Microsoft YaHei",      /* Windows 微软雅黑 */
+    "Noto Sans SC",         /* Google 思源黑体 */
+    "Source Han Sans SC",   /* Adobe 思源黑体 */
+    "WenQuanYi Micro Hei",  /* Linux 文泉驿 */
+    sans-serif;
+}
+
+/* 移动端基准可以更小一点 */
+@media (max-width: 575px) {
+  :root {
+    --font-size: 1rem;  /* 小屏幕 16px，避免过大 */
+  }
+}
+
+/* 响应式字号优化 - 压缩范围，避免增幅过大 */
+@media (min-width: 576px) {
+  :root { --font-size: 1.125rem; }  /* sm: 18px */
+}
+@media (min-width: 768px) {
+  :root { --font-size: 1.1875rem; } /* md: 19px */
+}
+@media (min-width: 1024px) {
+  :root { --font-size: 1.25rem; }  /* lg: 20px */
+}
+@media (min-width: 1280px) {
+  :root { --font-size: 1.25rem; }  /* xl: 保持 20px */
+}
+@media (min-width: 1536px) {
+  :root { --font-size: 1.3125rem; } /* xxl: 21px */
+}
+
+/* 增强中文可读性 */
+p, li {
+  line-height: 1.8;
+}
+
+/* 中文段落需要更多呼吸空间 */
+p {
+  margin-bottom: 1.5em;  /* 比默认 1rem 更宽松 */
+  text-align: justify;   /* 两端对齐更适合中文 */
+  word-break: normal;    /* 防止英文单词被切断 */
+  overflow-wrap: break-word; /* 长单词/URL 换行 */
+}
+
+/* 列表项间距 */
+li {
+  margin-bottom: 0.5em;
+}
+
+/* 加粗不要过粗 */
+strong, b {
+  font-weight: 600;
+}
+
+/* 中文字符间距略微收紧 */
+:root {
+  --letter-spacing: -0.01em;
+}
+
+/* 标题字间距更紧凑 */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+}
+
+/* 代码块中的中文使用等宽字体栈 */
+code, pre {
+  font-family:
+    "SFMono-Regular",
+    "Consolas",
+    "Liberation Mono",
+    "Menlo",
+    "PingFang SC",
+    "Microsoft YaHei",
+    monospace;
+}
+
+/* 引用块中文排版优化 */
+blockquote {
+  border-left-width: 0.25rem;
+  padding-left: 1.5rem;
+  line-height: 1.85;
+  letter-spacing: 0.01em;
+}
+
+/* 标题后段落间距优化 */
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+  margin-top: 0.75em;
+}
+
+/* 表格内容使用中文字体 */
+table {
+  font-family: var(--font-family);
+}
+
+/* 时间日期格式化 */
+time {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+}
+
+/* ============================================
    自定义样式
    ============================================ */
 
@@ -69,6 +198,27 @@ footer a:hover {
 footer a svg {
   width: 1.5rem;                    /* 宽度 */
   height: 1.5rem;                   /* 高度 */
+}
+
+/* 版权信息居中 */
+footer small {
+  display: block;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+footer small p {
+  margin: 0;
+  text-align: center;
+}
+
+/* 主题切换器和颜色选择器容器居中 */
+footer > div:last-of-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
 }
 
 /* ============================================
@@ -179,11 +329,6 @@ main ol {
    移动端适配样式（768px 及以下）
    ============================================ */
 @media (max-width: 768px) {
-  /* 移动端字体大小调整 */
-  :root {
-    font-size: 1.125rem;            /* 基础字体大小增大 */
-  }
-
   /* 防止移动端水平滚动 */
   article {
     overflow-x: hidden;             /* 隐藏横向溢出 */
