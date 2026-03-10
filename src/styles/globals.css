@@ -273,13 +273,15 @@ fieldset[role="group"] > input[type="search"]:first-of-type {
    LinkList 组件样式
    ============================================ */
 .link-list {
-  list-style: none;
-  padding: 0;
+  list-style: none !important; /* 移除列表样式（圆点） */
+  padding: 0 !important;
   margin: 0;
 }
 
 .link-list li {
+  list-style: none !important; /* 确保每个列表项也没有圆点 */
   margin-bottom: 1rem;
+  padding-left: 0 !important; /* 移除左内边距 */
 }
 
 /* ============================================
