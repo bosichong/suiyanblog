@@ -73,9 +73,9 @@ const config: Config = {
             "is_active": true
         },
         {
-            "site_name": "mfwt",
+            "site_name": "枫林灯语",
             "site_url": "https://blog.mfwt.top/",
-            "site_description": "枫林灯语，深山踏红叶，耳畔闻鹿鸣",
+            "site_description": "深山踏红叶，耳畔闻鹿鸣",
             "site_avatar": "#",
             "is_active": true
         },
