@@ -51,7 +51,7 @@ const config: Config = {
             "site_avatar": "https://onojyun.com/wp-content/uploads/2024/03/a2d42-cropped-mobius_icon_black-edited.png",
             "is_active": true
         },
-                        {
+        {
             "site_name": "白熊阿丸的小屋",
             "site_url": "https://blog.bxaw.name/",
             "site_description": "在这里可以看到一个真实的我，我会在这里书写我的一切",
@@ -63,6 +63,20 @@ const config: Config = {
             "site_url": "https://yihui.org/cn/",
             "site_description": "一些书信。一些文章。",
             "site_avatar": "https://yihui.org/images/logo.png",
+            "is_active": true
+        },
+        {
+            "site_name": "愆伏",
+            "site_url": "https://www.tortorse.com/",
+            "site_description": "互联网杂谈，关于设计、技术与思考。",
+            "site_avatar": "#",
+            "is_active": true
+        },
+        {
+            "site_name": "mfwt",
+            "site_url": "https://blog.mfwt.top/",
+            "site_description": "枫林灯语，深山踏红叶，耳畔闻鹿鸣",
+            "site_avatar": "#",
             "is_active": true
         },
         {
