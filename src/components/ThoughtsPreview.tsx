@@ -55,9 +55,8 @@ export default function ThoughtsPreview({ latestThought }: ThoughtsPreviewProps)
         <a
           href="/thoughts"
         >
-          <small>
+          
             查看更多 →
-          </small>
         </a>
       </footer>
     </article>

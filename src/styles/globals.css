@@ -6,9 +6,13 @@
 /* ============================================
    中文排版优化
    ============================================ */
+html {
+  font-size: var(--font-size);
+}
+
 :root {
   /* 放大基准字号：中文建议 18px 起步 */
-  --font-size: 1.125rem; /* 18px */
+  --font-size: 1rem; /* 16px */
 
   /* 增加行高 */
   --line-height: 1.75;
@@ -42,25 +46,13 @@
 /* 移动端基准可以更小一点 */
 @media (max-width: 575px) {
   :root {
-    --font-size: 1rem;  /* 小屏幕 16px，避免过大 */
+    --font-size: 1.1rem;  /* 小屏幕 18px，避免过大 */
   }
 }
 
 /* 响应式字号优化 - 压缩范围，避免增幅过大 */
 @media (min-width: 576px) {
-  :root { --font-size: 1.125rem; }  /* sm: 18px */
-}
-@media (min-width: 768px) {
-  :root { --font-size: 1.1875rem; } /* md: 19px */
-}
-@media (min-width: 1024px) {
-  :root { --font-size: 1.25rem; }  /* lg: 20px */
-}
-@media (min-width: 1280px) {
-  :root { --font-size: 1.25rem; }  /* xl: 保持 20px */
-}
-@media (min-width: 1536px) {
-  :root { --font-size: 1.3125rem; } /* xxl: 21px */
+  :root { --font-size: 1rem; }
 }
 
 /* 增强中文可读性 */
@@ -271,9 +263,9 @@ table[striped] tbody tr:nth-child(odd) {
 .post-list-grid {
   display: grid;                    /* 使用网格布局 */
   grid-template-columns: 1fr auto;  /* 标题占用剩余空间，日期自适应宽度 */
-
   gap: 1rem;                        /* 网格项之间的间距 */
   align-items: center;              /* 垂直居中对齐 */
+  margin-bottom: 0.5rem;                   /* 列表项之间的下外边距 */
 }
 
 /* 链接样式（左对齐，超长显示省略号） */
@@ -377,6 +369,11 @@ fieldset[role="group"] > input[type="search"]:first-of-type {
 .sf {
   display: flex;
   justify-content: space-between;
+}
+
+.sf time {
+  /* 垂直居中 */
+  align-self: center;
 }
 
 /* ============================================
