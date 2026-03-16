@@ -384,7 +384,6 @@ fieldset[role="group"] > input[type="search"]:first-of-type {
   justify-content: center;          /* 水平居中 */
   align-items: center;              /* 垂直居中 */
   gap: 1rem;                        /* 按钮之间的间距 */
-  margin: 2rem 0;                   /* 上下外边距 2rem */
 }
 
 
@@ -396,11 +395,32 @@ fieldset[role="group"] > input[type="search"]:first-of-type {
 }
 
 /* ============================================
+   文章元数据区域样式
+   ============================================ */
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   文章页面模块统一间距
+   ============================================ */
+article > * {
+  margin-bottom: 2rem;
+}
+
+/* 最后一个模块不需要下边距 */
+article > *:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
    PostList 组件样式
    ============================================ */
 .post-list-section {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  /* margin由article > *统一控制 */
 }
 
 .post-list {
