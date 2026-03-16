@@ -146,21 +146,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                         <AILabelBadge level={post.ai_label || 0} />
                     </p>
 
-                    {post.tag && (
-                        <div className='tags'>
-                            <time dateTime={post.time}>
-                                <small>发表于:{formatDate(post.time || '')}</small>
-                            </time>
-                            {post.tag.split(',').map((tag: string, index: number) => (
-                                <a className='post_tag'
-                                    key={index}
-                                    href={`/tags/${tag.trim().toLowerCase().replace(/\s+/g, '')}`}
-                                >
-                                    #{tag.trim()}
-                                </a>
-                            ))}
-                        </div>
-                    )}
+                    
                 </hgroup>
 
                 <div>
@@ -192,6 +178,25 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                         {sanitizedContent}
                     </ReactMarkdown>
                 </div>
+                <div className='post-meta'>
+                        {post.time && (
+                            <time dateTime={post.time}>
+                                <small>发表于 {formatDate(post.time)}</small>
+                            </time>
+                        )}
+                        {post.tag && (
+                            <div className='tags'>
+                                {post.tag.split(',').map((tag: string, index: number) => (
+                                    <a className='post_tag'
+                                        key={index}
+                                        href={`/tags/${tag.trim().toLowerCase().replace(/\s+/g, '')}`}
+                                    >
+                                        #{tag.trim()}
+                                    </a>
+                                ))}
+                            </div>
+                        )}
+                    </div>
 
                 <nav className="post-navigation">
                     {prevPost && (
