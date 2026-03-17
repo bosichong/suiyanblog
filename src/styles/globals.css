@@ -11,8 +11,8 @@ html {
 }
 
 :root {
-  /* 放大基准字号：中文建议 18px 起步 */
-  --font-size: 1rem; /* 16px */
+   /* 放大基准字号：中文建议 18px 起步 */
+  --font-size: 1.125rem; /* 18px */
 
   /* 增加行高 */
   --line-height: 1.75;
