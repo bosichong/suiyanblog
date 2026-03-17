@@ -52,7 +52,7 @@ html {
 
 /* 响应式字号优化 - 压缩范围，避免增幅过大 */
 @media (min-width: 576px) {
-  :root { --font-size: 1rem; }
+  :root { --font-size: 1.125rem; }
 }
 
 /* 增强中文可读性 */
@@ -155,7 +155,7 @@ time {
   padding: 0.125rem 0.375rem;       /* 内边距 */
   border-radius: 0.125rem;          /* 圆角半径 */
   transition: background-color 0.2s;/* 背景色过渡动画（0.2秒） */
-  font-size: 1rem;                  /* 字体大小 */
+  font-size: 1.125rem;                  /* 字体大小 */
 }
 
 /* 鼠标悬停时的背景色效果 */
