@@ -154,6 +154,11 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                         remarkPlugins={[remarkGfm]}
                         rehypePlugins={[rehypeRaw]}
                         components={{
+                            strong: ({ children }: any) => (
+                                <strong style={{ borderBottom: '1px dashed', borderBottomStyle: 'dashed' }}>
+                                    {children}
+                                </strong>
+                            ),
                             iframe: ({ node, ...props }: any) => {
                                 const src = props.src;
                                 if (typeof src === 'string' && (
