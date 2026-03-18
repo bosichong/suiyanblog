@@ -556,3 +556,60 @@ article > *:last-child {
   width: 100%;
   padding: 0.5rem 1rem;
 }
+
+/* ============================================
+   主题模式选择区域样式
+   ============================================ */
+.theme-mode-section,
+.color-theme-section {
+  margin-bottom: 1.5rem;
+}
+
+.theme-section-label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: var(--pico-muted-color);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.theme-mode-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.theme-mode-button {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--pico-muted-color);
+  background: transparent;
+  color: var(--pico-muted-color);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.theme-mode-button:hover {
+  border-color: var(--pico-primary);
+  color: var(--pico-primary);
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.theme-mode-button.active {
+  border-color: var(--pico-primary);
+  color: var(--pico-primary-inverse);
+  background: var(--pico-primary);
+}
+
+.theme-mode-button .checkmark {
+  font-weight: bold;
+  font-size: 1rem;
+}

@@ -2,7 +2,6 @@
 
 import config from '@/config';
 import SnsIcons from './SnsIcons';
-import ThemeSwitcher from './ThemeSwitcher';
 import ColorPicker from './ColorPicker';
 
 export default function Footer() {
@@ -23,8 +22,6 @@ export default function Footer() {
                 </p>
             </small>
             <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-                <ThemeSwitcher />
-                <span style={{ color: 'var(--pico-muted-color)' }}>|</span>
                 <ColorPicker />
             </div>
             <script data-goatcounter="https://suiyan.goatcounter.com/count"
