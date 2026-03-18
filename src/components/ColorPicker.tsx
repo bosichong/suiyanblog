@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from 'react';
 
+type ThemeMode = 'auto' | 'light' | 'dark';
+
 interface ColorTheme {
   name: string;
   color: string;
@@ -43,6 +45,7 @@ const colorThemes: ColorTheme[] = [
 export default function ColorPicker() {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedColor, setSelectedColor] = useState<string>('');
+  const [themeMode, setThemeMode] = useState<ThemeMode>('auto');
 
   useEffect(() => {
     // 从 localStorage 读取保存的颜色主题
@@ -51,7 +54,37 @@ export default function ColorPicker() {
       setSelectedColor(savedColor);
       applyColorTheme(savedColor);
     }
+
+    // 从 localStorage 读取主题模式偏好
+    const savedThemeMode = localStorage.getItem('themeMode') as ThemeMode | null;
+    const initialThemeMode = savedThemeMode || 'auto';
+    setThemeMode(initialThemeMode);
+    applyTheme(initialThemeMode);
   }, []);
+
+  const applyTheme = (mode: ThemeMode) => {
+    let theme: 'light' | 'dark';
+    
+    if (mode === 'auto') {
+      // 自动：根据系统偏好
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      theme = prefersDark ? 'dark' : 'light';
+    } else {
+      // 手动设置
+      theme = mode;
+    }
+    
+    document.documentElement.setAttribute('data-theme', theme);
+    
+    // 更新 Giscus 主题
+    const iframe = document.querySelector('iframe.giscus-frame') as HTMLIFrameElement;
+    if (iframe) {
+      iframe.contentWindow?.postMessage(
+        { giscus: { setConfig: { theme } } },
+        'https://giscus.app'
+      );
+    }
+  };
 
   const applyColorTheme = (colorName: string | null) => {
     if (!colorName) {
@@ -92,14 +125,29 @@ export default function ColorPicker() {
     setSelectedColor(colorName);
     applyColorTheme(colorName);
     localStorage.setItem('pico-theme-color', colorName);
-    setIsOpen(false);
+  };
+
+  const handleThemeModeClick = (mode: ThemeMode) => {
+    setThemeMode(mode);
+    localStorage.setItem('themeMode', mode);
+    applyTheme(mode);
   };
 
   const handleResetDefault = () => {
     setSelectedColor('');
     applyColorTheme(null);
     localStorage.removeItem('pico-theme-color');
-    setIsOpen(false);
+  };
+
+  const getThemeLabel = () => {
+    switch (themeMode) {
+      case 'auto':
+        return 'Auto';
+      case 'light':
+        return 'Light';
+      case 'dark':
+        return 'Dark';
+    }
   };
 
   return (
@@ -110,16 +158,16 @@ export default function ColorPicker() {
           e.preventDefault();
           setIsOpen(true);
         }}
-        data-tooltip="点击切换颜色主题"
+        data-tooltip="点击切换主题"
       >
-        换色
+        Theme
       </a>
 
       {isOpen && (
         <dialog open className="color-picker-modal">
           <div className="color-picker-content">
             <div className="color-picker-header">
-              <h6>选择颜色主题</h6>
+              <h6>Theme Settings</h6>
               <button
                 className="close-button"
                 onClick={() => setIsOpen(false)}
@@ -128,29 +176,52 @@ export default function ColorPicker() {
                 ✕
               </button>
             </div>
-            <div className="color-grid">
-              {colorThemes.map((theme) => (
-                <button
-                  key={theme.name}
-                  className={`color-button ${selectedColor === theme.name ? 'active' : ''}`}
-                  style={{ backgroundColor: theme.color }}
-                  onClick={() => handleColorClick(theme.name)}
-                  title={theme.name}
-                  aria-label={`切换到${theme.name}主题`}
-                >
-                  {selectedColor === theme.name && (
-                    <span className="checkmark">✓</span>
-                  )}
-                </button>
-              ))}
+            
+            {/* 主题模式选择 */}
+            <div className="theme-mode-section">
+              <label className="theme-section-label">Mode</label>
+              <div className="theme-mode-buttons">
+                {(['auto', 'light', 'dark'] as ThemeMode[]).map((mode) => (
+                  <button
+                    key={mode}
+                    className={`theme-mode-button ${themeMode === mode ? 'active' : ''}`}
+                    onClick={() => handleThemeModeClick(mode)}
+                  >
+                    {mode === 'auto' ? 'Auto' : mode === 'light' ? 'Light' : 'Dark'}
+                    {themeMode === mode && <span className="checkmark">✓</span>}
+                  </button>
+                ))}
+              </div>
             </div>
+
+            {/* 颜色主题选择 */}
+            <div className="color-theme-section">
+              <label className="theme-section-label">Color</label>
+              <div className="color-grid">
+                {colorThemes.map((theme) => (
+                  <button
+                    key={theme.name}
+                    className={`color-button ${selectedColor === theme.name ? 'active' : ''}`}
+                    style={{ backgroundColor: theme.color }}
+                    onClick={() => handleColorClick(theme.name)}
+                    title={theme.name}
+                    aria-label={`切换到${theme.name}主题`}
+                  >
+                    {selectedColor === theme.name && (
+                      <span className="checkmark">✓</span>
+                    )}
+                  </button>
+                ))}
+              </div>
+            </div>
+
             <div className="color-picker-footer">
               <button
                 className="outline secondary"
                 onClick={handleResetDefault}
                 disabled={!selectedColor}
               >
-                恢复默认主题
+                Reset Color
               </button>
             </div>
           </div>
