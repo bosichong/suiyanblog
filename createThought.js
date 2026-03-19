@@ -9,7 +9,7 @@ const createFileDir = (dir) => {
   }
 };
 
-const createThought = (content = '我的片语...') => {
+const createThought = (content = '我的片语...', noVSCode = false) => {
   const create_time = new Date().toISOString();
   const pagename = new Date().toISOString().replace(/[-:.TZ]/g, '').slice(0, 14);
 
@@ -33,25 +33,29 @@ ${content}
       console.log('片语创建成功！');
       console.log('文件路径:', thoughtFilePath);
 
-      const { spawn } = require('child_process');
-      const child = spawn('code', [thoughtFilePath], {
-        shell: true,
-        stdio: 'inherit'
-      });
+      if (!noVSCode) {
+        const { spawn } = require('child_process');
+        const child = spawn('code', [thoughtFilePath], {
+          shell: true,
+          stdio: 'inherit'
+        });
 
-      child.on('error', (error) => {
-        console.error(`执行错误: ${error.message}`);
-      });
+        child.on('error', (error) => {
+          console.error(`执行错误: ${error.message}`);
+        });
 
-      child.on('close', (code) => {
-        if (code === 0) {
-          console.log(`VS Code 已打开文件: ${thoughtFilePath}`);
-        } else {
-          console.error(`VS Code 退出，代码: ${code}`);
-        }
-      });
+        child.on('close', (code) => {
+          if (code === 0) {
+            console.log(`VS Code 已打开文件: ${thoughtFilePath}`);
+          } else {
+            console.error(`VS Code 退出，代码: ${code}`);
+          }
+        });
+      }
     }
   });
 };
 
-createThought(process.argv[2] || '我的片语...');
+const noVSCode = process.argv.includes('-novs');
+
+createThought(process.argv[2] || '我的片语...', noVSCode);
