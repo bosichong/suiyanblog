@@ -2,7 +2,7 @@ import Layout from '../components/Layout';
 import Head from 'next/head';
 import Breadcrumb from '../components/Breadcrumb';
 import config from '../config';
-import { BotOff, Bot } from 'lucide-react';
+import { PenLine, Mic, Sparkles, HandMetal, Bot } from 'lucide-react';
 
 interface AILevel {
     level: string;
@@ -15,75 +15,92 @@ interface AILevel {
 
 const aiLevels: AILevel[] = [
     {
-        level: "No AI",
-        icon: <BotOff />,
-        theme: "No AI",
+        level: "HAND",
+        icon: <PenLine />,
+        theme: "HAND",
         percentage: "0%",
-        description: "完全由人类大脑和双手完成，没有任何AI参与",
+        description: "手写 · 每一个字都由作者亲手敲出",
         details: [
             "AI参与程度：0%",
-            "创作方式：完全由人类大脑和双手完成",
+            "创作方式：完全由人类独立完成",
             "特点：每个字都是作者独立思考、亲手敲出，没有任何AI参与"
         ]
     },
     {
-        level: "I",
-        icon: <Bot />,
-        theme: "I",
-        percentage: "< 25%",
-        description: "内容人类撰写或口述录音，需要AI检查语法、优化表达，但核心观点是自己的文章",
+        level: "VOICE",
+        icon: <Mic />,
+        theme: "VOICE",
+        percentage: "≈5%",
+        description: "口述 · 语音转文字，仅修正语法和错别字",
         details: [
-            "AI参与程度：< 25%",
-            "创作方式：主要是人在写，AI做了些修改",
-            "特点：像\"魔法棒\"一样点缀修饰，主体内容和思想是作者的，AI仅辅助检查、润色、优化表达"
+            "AI参与程度：≈5%",
+            "创作方式：作者口述，语音识别转文字",
+            "特点：内容和思想完全由作者表达，AI仅协助修正语音识别的错误和语法问题，不进行润色或扩写"
         ]
     },
     {
-        level: "II",
-        icon: <Bot />,
-        theme: "II",
-        percentage: "50%",
-        description: "人机平等对话，各占一半，作者提供想法与方向，AI提供框架与内容支撑",
+        level: "POLISH",
+        icon: <Sparkles />,
+        theme: "POLISH",
+        percentage: "<25%",
+        description: "润色 · 核心由作者完成，AI辅助修饰优化",
         details: [
-            "AI参与程度：= 50%",
-            "创作方式：人机五五开，平等对话",
-            "特点：你出想法，它出骨架；主体和思想各一半，作者与AI共同创作，互相引导"
+            "AI参与程度：<25%",
+            "创作方式：作者撰写主体内容，AI辅助优化",
+            "特点：主体内容和思想是作者的，AI仅辅助检查语法、润色表达、优化结构，像\"魔法棒\"点缀修饰"
         ]
     },
     {
-        level: "III",
-        icon: <Bot />,
-        theme: "III",
-        percentage: "> 50%",
-        description: "内容主要由AI生成，人类负责后期校对、复核和轻微调整",
+        level: "DUET",
+        icon: <HandMetal />,
+        theme: "DUET",
+        percentage: "≈50%",
+        description: "协奏 · 人机共创作，平等对话互相启发",
         details: [
-            "AI参与程度：> 50%",
-            "创作方式：绝大部分由AI生成",
-            "特点：内容由机器生成，人类仅做后期校对、复核和轻微修改，思想被AI引导或左右"
+            "AI参与程度：≈50%",
+            "创作方式：人机平等对话，共同创作",
+            "特点：你出想法，它出骨架；主体和思想各一半，作者与AI互相引导、共同打磨"
+        ]
+    },
+    {
+        level: "AUTO",
+        icon: <Bot />,
+        theme: "AUTO",
+        percentage: ">50%",
+        description: "自动 · AI主导生成，人类审核把关",
+        details: [
+            "AI参与程度：>50%",
+            "创作方式：AI生成主体内容，人类审核把关",
+            "特点：内容由AI主导生成，人类负责后期校对、复核和必要的调整修改"
         ]
     }
 ];
 
 const usageSuggestions = [
     {
-        level: "No AI",
-        icon: <BotOff />,
-        scenario: "深度思考、个人感悟、技术总结等需要原创性的内容"
+        level: "HAND",
+        icon: <PenLine />,
+        scenario: "深度思考、个人感悟、技术总结等需要完全原创的内容"
     },
     {
-        level: "I",
-        icon: <Bot />,
-        scenario: "需要AI检查语法、优化表达，但核心观点是自己的文章"
+        level: "VOICE",
+        icon: <Mic />,
+        scenario: "日常随笔、想法记录、不方便打字时的快速输出"
     },
     {
-        level: "II",
-        icon: <Bot />,
-        scenario: "与AI头脑风暴、共同探索某个话题，双方贡献相当"
+        level: "POLISH",
+        icon: <Sparkles />,
+        scenario: "技术笔记、读书心得、需要精炼语言的文章"
     },
     {
-        level: "III",
+        level: "DUET",
+        icon: <HandMetal />,
+        scenario: "探索性文章、头脑风暴、与AI共同打磨某个话题"
+    },
+    {
+        level: "AUTO",
         icon: <Bot />,
-        scenario: "教程整理、资料汇总、快速生成参考内容等场景"
+        scenario: "教程整理、资料汇总、快速生成参考内容"
     }
 ];
 
@@ -92,7 +109,7 @@ function AILabel() {
         <Layout>
             <Head>
                 <title>{`AI创作等级标识 | ${config.BLOG_NAME}`}</title>
-                <meta name="description" content="碎言博客AI创作等级标识系统：No AI（纯粹个体，0% AI参与）、I（魔法润色，<25% AI参与）、II（握手协作，50% AI参与）、III（机器主体，>50% AI参与）。了解各等级的定义、创作方式、特点及适用场景。" />
+                <meta name="description" content="碎言博客AI创作等级标识系统：HAND（手写，0%）、VOICE（口述，≈5%）、POLISH（润色，<25%）、DUET（协奏，≈50%）、AUTO（自动，>50%）。了解各等级的定义、创作方式、特点及适用场景。" />
             </Head>
 
             <article>
@@ -194,11 +211,11 @@ function AILabel() {
                     <h2>本文创作标识</h2>
                     <div>
                         <span>
-                            <Bot />
+                            <Sparkles />
                         </span>
                         <div>
-                            <p>II - 握手协作</p>
-                            <p>人机共同创作，平等对话</p>
+                            <p>POLISH · 润色</p>
+                            <p>核心内容由作者完成，AI辅助修饰优化</p>
                         </div>
                     </div>
                 </section>

@@ -57,6 +57,23 @@ const About = () => {
         </section>
 
         <section>
+          <h2>AI 创作等级标识</h2>
+          <p>
+            本站所有文章均标注 AI 创作等级，让读者清楚了解每篇文章的创作方式。
+          </p>
+          <ul>
+            <li><strong>HAND · 手写</strong> — 每一个字都由作者亲手敲出</li>
+            <li><strong>VOICE · 口述</strong> — 语音转文字，仅修正语法和错别字</li>
+            <li><strong>POLISH · 润色</strong> — 核心由作者完成，AI 辅助修饰优化</li>
+            <li><strong>DUET · 协奏</strong> — 人机共创作，平等对话互相启发</li>
+            <li><strong>AUTO · 自动</strong> — AI 主导生成，人类审核把关</li>
+          </ul>
+          <p>
+            详见：<a href="/AI-Label">AI 创作等级标识说明</a>
+          </p>
+        </section>
+
+        <section>
           <h2>联系我</h2>
           <p>方式很多，详见页面底部的sns图标，也可以在这个页面的底部给我留言。</p>
         </section>
@@ -66,6 +83,9 @@ const About = () => {
           <details name="about-accordion">
             <summary role="button">网站构建优化日志</summary>
             <ul>
+              <li>
+                <strong>2026-03-20</strong> 重构 AI 创作等级标识系统：从 4 级扩展为 5 级（HAND/VOICE/POLISH/DUET/AUTO），新增「VOICE · 口述」等级用于语音转文字场景；更新组件 <code>AILabelBadge.tsx</code> 和说明页面 <code>AI-Label.tsx</code>；在 About 页面添加 AI 创作等级标识简介及链接。
+              </li>
               <li>
                 <strong>2026-03-09</strong> 创建独立的 About 页面，将原本嵌入在博客文章中的关于页面内容独立出来。更新了技术栈描述，移除了过时的 Tailwind CSS 相关内容，改为实际使用的 Pico CSS 框架、react-markdown 和 lucide-react 等技术。同时更新了导航菜单配置，将"关于"链接指向新的 About 页面。
               </li>
