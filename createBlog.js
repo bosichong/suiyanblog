@@ -11,7 +11,7 @@ const createFileDir = (dir) => {
   }
 };
 
-const createBlog = async (title = '博客标题', author = '', tag = '', filedir = '', pagename = '', ai_label = 0) => {
+const createBlog = async (title = '博客标题', author = '', tag = '', filedir = '', pagename = '', ai_label = 0, noVSCode = false) => {
   const create_time = new Date().toISOString();
 
   if (!pagename) {
@@ -60,12 +60,11 @@ description: '博文的简介'
       console.error('创建文件失败:', err);
     } else {
       console.log('blog文章.md创建成功！');
-      let vscode = true;
-      const blogfile = blogFilePath; // 确保定义了 blogfile 变量
-      if (vscode) {
+      console.log('文件路径:', blogFilePath);
+
+      if (!noVSCode) {
         const { spawn } = require('child_process');
-        // 使用 spawn 并设置 shell: true 以便正确执行 .cmd 文件
-        const child = spawn('code', [blogfile], {
+        const child = spawn('code', [blogFilePath], {
           shell: true,
           stdio: 'inherit'
         });
@@ -76,7 +75,7 @@ description: '博文的简介'
 
         child.on('close', (code) => {
           if (code === 0) {
-            console.log(`VS Code 已打开文件: ${blogfile}`);
+            console.log(`VS Code 已打开文件: ${blogFilePath}`);
           } else {
             console.error(`VS Code 退出，代码: ${code}`);
           }
@@ -86,11 +85,14 @@ description: '博文的简介'
   });
 };
 
+const noVSCode = process.argv.includes('-novs');
+
 createBlog(
   process.argv[2] || '博客标题',
   process.argv[3] || '',
   process.argv[4] || '',
   process.argv[5] || '',
   process.argv[6] || '',
-  parseInt(process.argv[7]) || 0
+  parseInt(process.argv[7]) || 0,
+  noVSCode
 );
