@@ -129,13 +129,6 @@ const config: Config = {
             "site_avatar": "#",
             "is_active": true
         },
-        {
-            "site_name": "極客死亡計劃",
-            "site_url": "https://www.geedea.pro/",
-            "site_description": "这里只有真情流露和赤裸的思考。",
-            "site_avatar": "https://r2.eltr.ac/geedeapro/header.avif",
-            "is_active": true
-        },
                 {
             "site_name": "阮一峰的网络日志",
             "site_url": "https://www.ruanyifeng.com/blog/",
