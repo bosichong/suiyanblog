@@ -106,6 +106,7 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                 <meta name="twitter:card" content="summary" />
                 <meta name="twitter:title" content={`${post.title} | ${config.BLOG_NAME}`} />
                 <meta name="twitter:description" content={post.description} />
+                <meta name="fediverse:creator" content="@J_sky@mastodon.social"></meta>
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
