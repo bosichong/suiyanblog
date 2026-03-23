@@ -432,6 +432,47 @@ article > *:last-child {
 }
 
 /* ============================================
+   首页分类标题样式
+   ============================================ */
+article h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+article h3 .view-more {
+  font-size: 0.875rem;
+  font-weight: normal;
+  color: var(--pico-muted-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+article h3 .view-more:hover {
+  color: var(--pico-primary);
+}
+
+/* ============================================
+   标签页分类标签区域样式
+   ============================================ */
+.category-tags-section {
+  margin-bottom: 3rem;
+}
+
+.category-tags-section h3 {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--pico-muted-color);
+  padding-bottom: 0.5rem;
+}
+
+.category-tags-section .tag-count {
+  font-size: 0.875rem;
+  font-weight: normal;
+  color: var(--pico-muted-color);
+}
+
+/* ============================================
    LinkList 组件样式
    ============================================ */
 .link-list {

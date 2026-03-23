@@ -9,37 +9,75 @@ import { Post } from '../types';
 interface TagData {
     tag: string;
     originalTag: string;
-    data: Post[];
+    count: number;
 }
 
-function createTagsData(blogData: Post[]): TagData[] {
-    const tagDict: { [key: string]: TagData } = {};
+interface CategoryTags {
+    categoryName: string;
+    categoryKey: string;
+    tags: TagData[];
+}
+
+function createCategoryTagsData(blogData: Post[]): CategoryTags[] {
+    const categoryMap: { [key: string]: { [key: string]: number } } = {
+        'daily': {},
+        'technology': {},
+        'journal': {},
+    };
+
+    const categoryNameMap: { [key: string]: string } = {
+        'daily': '日常',
+        'technology': '技术',
+        'journal': '期刊',
+    };
+
     blogData.forEach(item => {
+        const category = item.category;
+        if (!category || !categoryMap[category]) return;
+
         const tmpTags = item.tag ? item.tag.split(",") : [];
         tmpTags.forEach((tag: string) => {
             const originalTag = tag.trim();
             const optimizedTag = originalTag.toLowerCase().replace(/\s+/g, '');
-            if (!tagDict[optimizedTag]) {
-                tagDict[optimizedTag] = { tag: optimizedTag, originalTag, data: [] };
+            if (!categoryMap[category][optimizedTag]) {
+                categoryMap[category][optimizedTag] = 0;
             }
-            tagDict[optimizedTag].data.push({ id: item.id });
+            categoryMap[category][optimizedTag]++;
         });
     });
-    return Object.values(tagDict);
+
+    return Object.keys(categoryMap).map(categoryKey => {
+        const tags: TagData[] = Object.keys(categoryMap[categoryKey])
+            .map(tag => ({
+                tag,
+                originalTag: tag,
+                count: categoryMap[categoryKey][tag],
+            }))
+            .sort((a, b) => b.count - a.count);
+
+        return {
+            categoryName: categoryNameMap[categoryKey],
+            categoryKey,
+            tags,
+        };
+    });
 }
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData();
-    const tagsData = createTagsData(allPostsData);
+    const categoryTagsData = createCategoryTagsData(allPostsData);
+    const totalTags = categoryTagsData.reduce((sum, cat) => sum + cat.tags.length, 0);
+
     return {
         props: {
-            tagsData,
+            categoryTagsData,
+            totalTags,
         },
         revalidate: false,
     };
 }
 
-const Tags = ({ tagsData }: { tagsData: TagData[] }) => {
+const Tags = ({ categoryTagsData, totalTags }: { categoryTagsData: CategoryTags[]; totalTags: number }) => {
     return (
         <Layout>
             <Head>
@@ -57,26 +95,31 @@ const Tags = ({ tagsData }: { tagsData: TagData[] }) => {
             </Head>
             <Breadcrumb type="tags" />
             <article>
-                 <hgroup>
-                <h1>
-                    标签
-                </h1>
-                <p>
-                    共有标签：<span>{tagsData.length}</span> 个
-                </p>
+                <hgroup>
+                    <h1>标签</h1>
+                    <p>共有标签：<span>{totalTags}</span> 个</p>
                 </hgroup>
-                <div className='tags'>
-                    {tagsData.map((tagObj) => (
-                        <a
-                            key={tagObj.tag}
-                            href={`/tags/${tagObj.tag}`}
-                        >
-                            <span>
-                               # {tagObj.originalTag} ({tagObj.data.length})
-                            </span>
-                        </a>
-                    ))}
-                </div>
+
+                {categoryTagsData.map((category) => (
+                    <div key={category.categoryKey} className="category-tags-section">
+                        <h3>
+                            {category.categoryName}
+                            <span className="tag-count">({category.tags.length} 个标签)</span>
+                        </h3>
+                        <div className='tags'>
+                            {category.tags.map((tagObj) => (
+                                <a
+                                    key={tagObj.tag}
+                                    href={`/tags/${tagObj.tag}`}
+                                >
+                                    <span>
+                                        # {tagObj.originalTag} ({tagObj.count})
+                                    </span>
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+                ))}
             </article>
         </Layout>
     );

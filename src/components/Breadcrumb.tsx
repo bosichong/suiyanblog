@@ -1,17 +1,18 @@
 import React from 'react';
-import HomeIcon from './icons/HomeIcon';
 
 interface BreadcrumbProps {
-    type: 'home' | 'archives' | 'tags' | 'tag' | 'search' | 'friends' | 'blog' | 'sponsors' | 'ai-label' | 'thoughts' | 'about';
+    type: 'home' | 'archives' | 'tags' | 'tag' | 'search' | 'friends' | 'blog' | 'sponsors' | 'ai-label' | 'thoughts' | 'about' | 'category' | 'categories';
     title?: string;
     tag?: string;
     pageNum?: number;
+    category?: string;
+    categoryName?: string;
 }
 
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ type, title, tag, pageNum }) => {
+const Breadcrumb: React.FC<BreadcrumbProps> = ({ type, title, tag, pageNum, category, categoryName }) => {
     const renderItems = () => {
         const items: Array<{ label: string; href: string; icon?: React.ReactNode }> = [
-            { label: '首页', href: '/', icon: <HomeIcon /> }
+            { label: '首页', href: '/' }
         ];
 
         switch (type) {
@@ -49,6 +50,14 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ type, title, tag, pageNum }) =>
                 break;
             case 'sponsors':
                 items.push({ label: '赞赏', href: '/Sponsors' });
+                break;
+            case 'categories':
+                items.push({ label: '分类', href: '/categories' });
+                break;
+            case 'category':
+                if (categoryName) {
+                    items.push({ label: categoryName, href: `/categories/${category}` });
+                }
                 break;
             default:
                 return null;
