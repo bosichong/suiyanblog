@@ -7,24 +7,34 @@ import PostListItem from '../components/PostListItem';
 import { Post } from '../types';
 import ThoughtsPreview from '../components/ThoughtsPreview';
 
-const postsPerPage = config.POSTS_PER_PAGE;
-
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
-  const currentPosts = allPostsData.slice(0, postsPerPage);
   const thoughts = getSortedThoughtsData();
   const latestThought = thoughts.length > 0 ? thoughts[0] : null;
 
+  // 按分类分别获取最新的10篇文章
+  const dailyPosts = allPostsData
+    .filter(post => post.category === 'daily')
+    .slice(0, 10);
+  const technologyPosts = allPostsData
+    .filter(post => post.category === 'technology')
+    .slice(0, 10);
+  const journalPosts = allPostsData
+    .filter(post => post.category === 'journal')
+    .slice(0, 10);
+
   return {
     props: {
-      currentPosts,
+      dailyPosts,
+      technologyPosts,
+      journalPosts,
       latestThought,
     },
     revalidate: false,
   };
 }
 
-function Home({ currentPosts, latestThought }: { currentPosts: Post[], latestThought: Post | null }) {
+function Home({ dailyPosts, technologyPosts, journalPosts, latestThought }: { dailyPosts: Post[], technologyPosts: Post[], journalPosts: Post[], latestThought: Post | null }) {
   // 首页日期格式化函数
   const homeFormatDate = (dateString: string): string => {
     if (!dateString) return '';
@@ -75,17 +85,64 @@ function Home({ currentPosts, latestThought }: { currentPosts: Post[], latestTho
 
         <section>
           <ThoughtsPreview latestThought={latestThought} />
-          <article>
-            {currentPosts.map((post) => (
-              <PostListItem
-                key={post.id}
-                id={post.id}
-                title={post.title || ''}
-                time={post.time || ''}
-                formatDate={homeFormatDate}
-              />
-            ))}
-          </article>
+
+          {/* 日常 */}
+          {dailyPosts.length > 0 && (
+            <article>
+              <h3>
+                日常
+                <a href="/categories/daily" className="view-more">浏览更多</a>
+              </h3>
+              {dailyPosts.map((post) => (
+                <PostListItem
+                  key={post.id}
+                  id={post.id}
+                  title={post.title || ''}
+                  time={post.time || ''}
+                  formatDate={homeFormatDate}
+                />
+              ))}
+            </article>
+          )}
+
+          {/* 技术 */}
+          {technologyPosts.length > 0 && (
+            <article>
+              <h3>
+                技术
+                <a href="/categories/technology" className="view-more">浏览更多</a>
+              </h3>
+              {technologyPosts.map((post) => (
+                <PostListItem
+                  key={post.id}
+                  id={post.id}
+                  title={post.title || ''}
+                  time={post.time || ''}
+                  formatDate={homeFormatDate}
+                />
+              ))}
+            </article>
+          )}
+
+          {/* 期刊 */}
+          {journalPosts.length > 0 && (
+            <article>
+              <h3>
+                期刊
+                <a href="/categories/journal" className="view-more">浏览更多</a>
+              </h3>
+              {journalPosts.map((post) => (
+                <PostListItem
+                  key={post.id}
+                  id={post.id}
+                  title={post.title || ''}
+                  time={post.time || ''}
+                  formatDate={homeFormatDate}
+                />
+              ))}
+            </article>
+          )}
+
           <button onClick={() => window.location.href = '/Archives'}>
             全部文章
           </button>

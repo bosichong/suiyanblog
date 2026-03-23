@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react';
+import PaletteIcon from './icons/PaletteIcon';
 
 type ThemeMode = 'auto' | 'light' | 'dark';
 
@@ -160,7 +161,7 @@ export default function ColorPicker() {
         }}
         data-tooltip="点击切换主题"
       >
-        Theme
+        <PaletteIcon />
       </a>
 
       {isOpen && (

@@ -10,6 +10,7 @@ export interface Post {
   ai_label?: number;
   type?: string;
   preview?: string;
+  category?: 'technology' | 'daily' | 'journal';
   [key: string]: any;
 }
 
