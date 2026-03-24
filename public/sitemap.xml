@@ -6,14 +6,9 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://www.suiyan.cc/blog/</loc>
+        <loc>https://www.suiyan.cc/Archives</loc>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://www.suiyan.cc/thoughts/</loc>
-        <changefreq>daily</changefreq>
-        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.suiyan.cc/tags/</loc>
@@ -21,12 +16,52 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.suiyan.cc/about/</loc>
-        <changefreq>monthly</changefreq>
+        <loc>https://www.suiyan.cc/categories/daily</loc>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://www.suiyan.cc/categories/technology</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/categories/journal</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/Links</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/About</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/Sponsors</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/AI-Label</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/search</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
         <loc>https://www.suiyan.cc/feed</loc>
+        <changefreq>hourly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/rss</loc>
         <changefreq>hourly</changefreq>
         <priority>0.5</priority>
     </url>
@@ -3489,6 +3524,12 @@
         <lastmod>2017-08-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.suiyan.cc/thoughts/20260323235035</loc>
+        <lastmod>2026-03-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
     </url>
     <url>
         <loc>https://www.suiyan.cc/thoughts/20260319003017</loc>
