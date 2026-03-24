@@ -160,8 +160,10 @@ export default function ColorPicker() {
           setIsOpen(true);
         }}
         data-tooltip="点击切换主题"
+        style={{ display: 'flex', alignItems: 'center', gap: '6px' }}
       >
         <PaletteIcon />
+        <span>Theme</span>
       </a>
 
       {isOpen && (
