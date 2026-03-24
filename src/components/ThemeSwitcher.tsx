@@ -68,7 +68,7 @@ export default function ThemeSwitcher() {
                 toggleTheme();
             }}
             data-tooltip="点击切换主题模式"
-            aria-label={`切换主题模式，当前为${getThemeLabel()}模式`}
+            aria-label="点击切换主题模式"
             role="button"
             tabIndex={0}
         >
