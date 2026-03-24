@@ -49,17 +49,6 @@ export default function ThemeSwitcher() {
         applyTheme(nextMode);
     };
 
-    const getThemeLabel = () => {
-        switch (themeMode) {
-            case 'auto':
-                return 'Auto';
-            case 'light':
-                return 'Light';
-            case 'dark':
-                return 'Dark';
-        }
-    };
-
     return (
         <a
             href="#"
@@ -68,11 +57,11 @@ export default function ThemeSwitcher() {
                 toggleTheme();
             }}
             data-tooltip="点击切换主题模式"
-            aria-label={`切换主题模式，当前为${getThemeLabel()}模式`}
+            aria-label={`切换主题模式，当前为${themeMode === 'auto' ? 'Auto' : themeMode === 'light' ? 'Light' : 'Dark'}模式`}
             role="button"
             tabIndex={0}
         >
-            {getThemeLabel()} Theme
+            {themeMode === 'auto' ? 'Auto' : themeMode === 'light' ? 'Light' : 'Dark'} Theme
         </a>
     );
 }

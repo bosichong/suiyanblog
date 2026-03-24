@@ -502,7 +502,6 @@ article h3 .view-more:hover {
 
 .color-picker-modal::backdrop {
   background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
 }
 
 .color-picker-content {
