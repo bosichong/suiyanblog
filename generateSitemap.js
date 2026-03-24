@@ -102,11 +102,18 @@ function generateSitemap() {
     // 静态页面列表
     const staticPages = [
         { url: 'https://www.suiyan.cc/', priority: '1.0', changefreq: 'daily' },
-        { url: 'https://www.suiyan.cc/blog/', priority: '0.9', changefreq: 'daily' },
-        { url: 'https://www.suiyan.cc/thoughts/', priority: '0.8', changefreq: 'daily' },
+        { url: 'https://www.suiyan.cc/Archives', priority: '0.9', changefreq: 'daily' },
         { url: 'https://www.suiyan.cc/tags/', priority: '0.8', changefreq: 'weekly' },
-        { url: 'https://www.suiyan.cc/about/', priority: '0.8', changefreq: 'monthly' },
+        { url: 'https://www.suiyan.cc/categories/daily', priority: '0.8', changefreq: 'weekly' },
+        { url: 'https://www.suiyan.cc/categories/technology', priority: '0.8', changefreq: 'weekly' },
+        { url: 'https://www.suiyan.cc/categories/journal', priority: '0.8', changefreq: 'weekly' },
+        { url: 'https://www.suiyan.cc/Links', priority: '0.7', changefreq: 'monthly' },
+        { url: 'https://www.suiyan.cc/About', priority: '0.7', changefreq: 'monthly' },
+        { url: 'https://www.suiyan.cc/Sponsors', priority: '0.6', changefreq: 'monthly' },
+        { url: 'https://www.suiyan.cc/AI-Label', priority: '0.6', changefreq: 'monthly' },
+        { url: 'https://www.suiyan.cc/search', priority: '0.6', changefreq: 'monthly' },
         { url: 'https://www.suiyan.cc/feed', priority: '0.5', changefreq: 'hourly' },
+        { url: 'https://www.suiyan.cc/rss', priority: '0.5', changefreq: 'hourly' },
     ];
 
     // 添加所有标签页
