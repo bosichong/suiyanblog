@@ -3,8 +3,13 @@
 ## 博文创建
 
 ```bash
-node createBlog.js "<标题>" "<作者>" "<标签>" "<目录>" "<文件名>" <AI标签> -novs
+node createBlog.js <快捷参数> "<标题>" "<作者>" "<标签>" "<目录>" "<文件名>" <AI标签> -novs
 ```
+
+快捷参数（分类）：
+- `-d` - daily（日常）
+- `-t` - technology（技术）
+- `-j` - journal（日志）
 
 参数：
 - 标题（必填）
@@ -13,11 +18,13 @@ node createBlog.js "<标题>" "<作者>" "<标签>" "<目录>" "<文件名>" <AI
 - 目录（可选）
 - 文件名（可选，默认时间戳）
 - AI标签：0/1/2/3（默认: 0）
+- 分类（默认: default）
 
 示例：
 ```bash
-node createBlog.js "我的文章" -novs
-node createBlog.js "技术分享" "J.sky" "技术" "" "" 3 -novs
+node createBlog.js -d "日常" -novs
+node createBlog.js -t "技术" -novs
+node createBlog.js -j "期刊"
 ```
 
 ## 片语创建
