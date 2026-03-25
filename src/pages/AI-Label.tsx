@@ -31,7 +31,7 @@ const aiLevels: AILevel[] = [
         icon: <Mic />,
         theme: "VOICE",
         percentage: "≈5%",
-        description: "口述 · 语音转文字，仅修正语法和错别字",
+        description: "口述 · 语音转文字，AI仅修正语法和错别字",
         details: [
             "AI参与程度：≈5%",
             "创作方式：作者口述，语音识别转文字",
@@ -55,10 +55,10 @@ const aiLevels: AILevel[] = [
         icon: <HandMetal />,
         theme: "DUET",
         percentage: "≈50%",
-        description: "协奏 · 人机共创作，平等对话互相启发",
+        description: "协奏 · 人与AI共创作，平等对话互相启发",
         details: [
             "AI参与程度：≈50%",
-            "创作方式：人机平等对话，共同创作",
+            "创作方式：人与AI平等对话，共同创作",
             "特点：你出想法，它出骨架；主体和思想各一半，作者与AI互相引导、共同打磨"
         ]
     },

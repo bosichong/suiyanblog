@@ -19,7 +19,7 @@ const aiLevels = [
         level: 1,
         icon: <Mic size={ICON_SIZE} />,
         theme: "VOICE",
-        description: "口述 · 语音转文字，仅修正语法和错别字"
+        description: "口述 · 语音转文字，AI仅修正语法和错别字"
     },
     {
         level: 2,
@@ -31,7 +31,7 @@ const aiLevels = [
         level: 3,
         icon: <HandMetal size={ICON_SIZE} />,
         theme: "DUET",
-        description: "协奏 · 人机共创作，平等对话互相启发"
+        description: "协奏 · 人与AI共创作，平等对话互相启发"
     },
     {
         level: 4,
