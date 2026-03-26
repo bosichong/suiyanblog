@@ -28,7 +28,7 @@ export default function TwikooComments({ path }: TwikooCommentsProps) {
     }
 
     // 检查是否已经为这个 path 初始化过
-    if (window.__twikooInitializedPaths.has(path)) {
+    if (window.__twikooInitializedPaths?.has(path)) {
       console.log('Twikoo already initialized for path:', path)
       return
     }
@@ -90,7 +90,7 @@ export default function TwikooComments({ path }: TwikooCommentsProps) {
       await waitForTwikoo()
 
       // 初始化 Twikoo
-      if (!initializedRef.current && containerRef.current) {
+      if (!initializedRef.current && containerRef.current && window.__twikooInitializedPaths) {
         initializedRef.current = true
         window.__twikooInitializedPaths.add(path)
 
