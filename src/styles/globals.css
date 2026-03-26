@@ -419,9 +419,6 @@ article > *:last-child {
 /* ============================================
    PostList 组件样式
    ============================================ */
-.post-list-section {
-  /* margin由article > *统一控制 */
-}
 
 .post-list {
   margin-top: 1rem;
