@@ -1,10 +1,15 @@
 ---
+import { COMMENTS_CONFIG } from '../consts';
+
 interface Props {
 	postId: string;
 	postPath: string;
 }
 
 const { postId, postPath } = Astro.props;
+
+// 将配置序列化为 JSON 供客户端使用
+const commentsConfig = JSON.stringify(COMMENTS_CONFIG);
 ---
 
 <div class="post-actions">
@@ -23,7 +28,7 @@ const { postId, postPath } = Astro.props;
 	
 </div>
 
-<div class="comment-section" id="comment-section" data-post-id={postId} data-post-path={postPath}>
+<div class="comment-section" id="comment-section" data-post-id={postId} data-post-path={postPath} data-config={commentsConfig}>
 	<div class="comment-selector">
 		<button class="comment-type-btn active" data-type="giscus">💭 GitHub 讨论</button>
 		<button class="comment-type-btn" data-type="twikoo">💬 Twikoo 评论</button>
@@ -138,6 +143,10 @@ const { postId, postPath } = Astro.props;
 	const commentContent = document.getElementById('comment-content');
 	const commentTypeBtns = document.querySelectorAll('.comment-type-btn');
 	
+	// 从 data-config 读取配置
+	const configStr = commentSection?.getAttribute('data-config') || '{}';
+	const config = JSON.parse(configStr);
+	
 	let currentType = 'giscus';
 	let loadedTypes = new Set<string>();
 	let giscusLoaded = false;
@@ -201,12 +210,12 @@ const { postId, postPath } = Astro.props;
 		// 创建 script 元素
 		const script = document.createElement('script');
 		script.src = 'https://giscus.app/client.js';
-		script.setAttribute('data-repo', 'bosichong/suiyanblog');
-		script.setAttribute('data-repo-id', 'R_kgDONjg2qw');
-		script.setAttribute('data-category', 'Announcements');
-		script.setAttribute('data-category-id', 'DIC_kwDONjg2q84ClnrC');
-		script.setAttribute('data-mapping', 'pathname');
-		script.setAttribute('data-lang', 'zh-CN');
+		script.setAttribute('data-repo', config.giscus.repo);
+		script.setAttribute('data-repo-id', config.giscus.repoId);
+		script.setAttribute('data-category', config.giscus.category);
+		script.setAttribute('data-category-id', config.giscus.categoryId);
+		script.setAttribute('data-mapping', config.giscus.mapping);
+		script.setAttribute('data-lang', config.giscus.lang);
 		script.setAttribute('data-strict', '0');
 		script.setAttribute('data-reactions-enabled', '1');
 		script.setAttribute('data-emit-metadata', '0');
@@ -228,7 +237,7 @@ const { postId, postPath } = Astro.props;
 		// 检查是否已加载 Twikoo
 		if ((window as any).twikoo) {
 			(window as any).twikoo.init({
-				envId: 'https://twikoo.suiyan.cc/.netlify/functions/twikoo',
+				envId: config.twikoo.envId,
 				el: '#twikoo-comment',
 				path: path
 			});
@@ -241,7 +250,7 @@ const { postId, postPath } = Astro.props;
 		script.async = true;
 		script.onload = () => {
 			(window as any).twikoo?.init({
-				envId: 'https://twikoo.suiyan.cc/.netlify/functions/twikoo',
+				envId: config.twikoo.envId,
 				el: '#twikoo-comment',
 				path: path
 			});

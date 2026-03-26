@@ -6,6 +6,7 @@ import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { formatDateMedium } from '../utils/date';
 
 // 获取所有博客文章
 const allPosts = (await getCollection('blog')).sort(
@@ -37,14 +38,6 @@ const sortedMonths = Object.keys(postsByMonth).sort((a, b) => b.localeCompare(a)
 
 const totalPosts = allPosts.length;
 const lastUpdated = allPosts[0]?.data.time ? new Date(allPosts[0].data.time) : new Date();
-
-// 归档页日期格式化函数：只显示月-日
-const archiveFormatDate = (dateStr: string): string => {
-	const date = new Date(dateStr);
-	const month = (date.getMonth() + 1).toString().padStart(2, '0');
-	const day = date.getDate().toString().padStart(2, '0');
-	return `${month}-${day}`;
-};
 ---
 
 <!doctype html>
@@ -232,8 +225,8 @@ const archiveFormatDate = (dateStr: string): string => {
 		<Header />
 		<main id="main">
 			<Breadcrumb items={[
-				{ label: 'Home', href: '/' },
-				{ label: 'Archives', href: '/archive' }
+				{ label: '首页', href: '/' },
+				{ label: '归档', href: '/archive' }
 			]} />
 			
 			<section>
@@ -260,7 +253,7 @@ const archiveFormatDate = (dateStr: string): string => {
 											{post.title}
 										</a>
 										<time dateTime={post.time}>
-											{archiveFormatDate(post.time)}
+											{formatDateMedium(post.time)}
 										</time>
 									</div>
 								</li>

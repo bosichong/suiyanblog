@@ -4,6 +4,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { formatDateShort } from '../utils/date';
 
 // 获取所有博客文章
 const allPosts = (await getCollection('blog')).sort(
@@ -22,14 +23,6 @@ const technologyPosts = allPosts
 const journalPosts = allPosts
 	.filter(post => post.data.tags.includes('journal'))
 	.slice(0, 10);
-
-// 首页日期格式化函数：只显示月/日
-const homeFormatDate = (dateStr: string): string => {
-	const date = new Date(dateStr);
-	const month = (date.getMonth() + 1).toString().padStart(2, '0');
-	const day = date.getDate().toString().padStart(2, '0');
-	return `${month}/${day}`;
-};
 ---
 
 <!doctype html>
@@ -169,7 +162,7 @@ const homeFormatDate = (dateStr: string): string => {
 									{post.data.title}
 								</a>
 								<time dateTime={post.data.time}>
-									{homeFormatDate(post.data.time)}
+									{formatDateShort(post.data.time)}
 								</time>
 							</li>
 						))}
@@ -191,7 +184,7 @@ const homeFormatDate = (dateStr: string): string => {
 									{post.data.title}
 								</a>
 								<time dateTime={post.data.time}>
-									{homeFormatDate(post.data.time)}
+									{formatDateShort(post.data.time)}
 								</time>
 							</li>
 						))}
@@ -213,7 +206,7 @@ const homeFormatDate = (dateStr: string): string => {
 									{post.data.title}
 								</a>
 								<time dateTime={post.data.time}>
-									{homeFormatDate(post.data.time)}
+									{formatDateShort(post.data.time)}
 								</time>
 							</li>
 						))}

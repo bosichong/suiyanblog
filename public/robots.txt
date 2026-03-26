@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.suiyan.cc/sitemap.xml
-
+Sitemap: https://www.suiyan.cc/sitemap-index.xml

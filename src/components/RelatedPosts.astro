@@ -1,4 +1,6 @@
 ---
+import { formatDateFull } from '../utils/date';
+
 interface Props {
 	title?: string;
 	posts: Array<{
@@ -15,14 +17,6 @@ const { title = '相关文章', posts } = Astro.props;
 if (!posts || posts.length === 0) {
 	return;
 }
-
-const formatDate = (dateStr: string): string => {
-	const date = new Date(dateStr);
-	const year = date.getFullYear();
-	const month = String(date.getMonth() + 1).padStart(2, '0');
-	const day = String(date.getDate()).padStart(2, '0');
-	return `${year}/${month}/${day}`;
-};
 ---
 
 <section class="related-posts">
@@ -32,7 +26,7 @@ const formatDate = (dateStr: string): string => {
 			<li>
 				<a href={`/blog/${post.id}`}>
 					<span class="post-title">{post.data.title}</span>
-					<time>{formatDate(post.data.time)}</time>
+					<time>{formatDateFull(post.data.time)}</time>
 				</a>
 			</li>
 		))}
