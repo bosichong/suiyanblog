@@ -26,6 +26,33 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 <html lang="zh-CN">
 	<head>
 		<BaseHead title={title} description={description} />
+		
+		<!-- JSON-LD 结构化数据 -->
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "BlogPosting",
+			"headline": title,
+			"description": description,
+			"datePublished": time,
+			"dateModified": updatedDate || time,
+			"author": {
+				"@type": "Person",
+				"name": SITE_AUTHOR
+			},
+			"publisher": {
+				"@type": "Organization",
+				"name": "碎言",
+				"url": "https://www.suiyan.cc"
+			},
+			"mainEntityOfPage": {
+				"@type": "WebPage",
+				"@id": new URL(Astro.url.pathname, Astro.site).toString()
+			},
+			...(heroImage ? {
+				"image": new URL(heroImage.src, Astro.site).toString()
+			} : {})
+		})} />
+		
 		<style>
 			main {
 				width: 720px;
