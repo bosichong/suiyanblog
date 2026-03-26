@@ -2,7 +2,7 @@ import Layout from '../components/Layout';
 import Head from 'next/head';
 import config from '../config';
 import Breadcrumb from '../components/Breadcrumb';
-import GiscusComments from '../components/GiscusComments';
+import CommentSection from '../components/CommentSection';
 import { useState } from 'react';
 
 const About = () => {
@@ -200,7 +200,7 @@ const About = () => {
           </div>
         ) : (
           <div style={{ marginTop: '2rem' }}>
-            <GiscusComments />
+            <CommentSection postId="about" postPath="/about" />
           </div>
         )}
       </article>

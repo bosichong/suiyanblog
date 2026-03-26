@@ -7,7 +7,7 @@ import { sanitizeHtml } from "../../utils/sanitizeHtml";
 import Layout from "../../components/Layout";
 import Head from "next/head";
 import Breadcrumb from '@/components/Breadcrumb';
-import GiscusComments from '@/components/GiscusComments';
+import CommentSection from '@/components/CommentSection';
 import PostList from '@/components/PostList';
 import type { Post } from '../../types';
 import config from '@/config';
@@ -229,9 +229,12 @@ function Post({ post, relatedPosts, prevPost, nextPost, sameDayPosts }: { post: 
                 </div>
 
                 <section>
-                    {/* 只在 showComments 为 true 时才渲染 Giscus 组件 */}
+                    {/* 评论区域：Twikoo + Giscus 双系统 */}
                     {showComments && (
-                        <GiscusComments key={post.id} />
+                        <CommentSection 
+                            postId={post.id}
+                            postPath={`/blog/${post.id}`}
+                        />
                     )}
                 </section>
 
