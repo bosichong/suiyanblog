@@ -22,7 +22,7 @@ interface CommentSectionProps {
 }
 
 export default function CommentSection({ postId, postPath }: CommentSectionProps) {
-  const [commentType, setCommentType] = useState<CommentType>('twikoo')
+  const [commentType, setCommentType] = useState<CommentType>('giscus')
   const [currentTheme, setCurrentTheme] = useState('light')
 
   // 监听主题变化
@@ -44,19 +44,8 @@ export default function CommentSection({ postId, postPath }: CommentSectionProps
   }, [])
 
   // 当主题变化时，通知 Twikoo 更新主题
-  useEffect(() => {
-    if (commentType === 'twikoo' && typeof window !== 'undefined' && window.twikoo) {
-      try {
-        window.twikoo.init({
-          envId: 'https://twikoo.suiyan.cc/.netlify/functions/twikoo',
-          el: '#twikoo-comment',
-          path: postPath
-        })
-      } catch (e) {
-        console.error('Twikoo theme update error:', e)
-      }
-    }
-  }, [currentTheme, commentType, postPath])
+  // 注意：Twikoo 组件自己会处理初始化，这里不需要重复调用 init
+  // Twikoo 会自动检测主题变化并更新样式
 
   // 切换评论类型时使用 key 强制重新渲染
   const handleSwitchComment = useCallback((type: CommentType) => {
@@ -75,21 +64,6 @@ export default function CommentSection({ postId, postPath }: CommentSectionProps
         justifyContent: 'center'
       }}>
         <button
-          onClick={() => handleSwitchComment('twikoo')}
-          style={{
-            padding: '0.5rem 1rem',
-            border: '1px solid var(--form-element-border-color, #ccc)',
-            background: commentType === 'twikoo' ? 'var(--primary, #4a9eff)' : 'var(--card-bg, #fff)',
-            color: commentType === 'twikoo' ? '#fff' : 'var(--color, inherit)',
-            borderRadius: '8px',
-            cursor: 'pointer',
-            transition: 'all 0.3s ease',
-            fontSize: '0.9rem'
-          }}
-        >
-          💬 Twikoo 评论
-        </button>
-        <button
           onClick={() => handleSwitchComment('giscus')}
           style={{
             padding: '0.5rem 1rem',
@@ -103,6 +77,21 @@ export default function CommentSection({ postId, postPath }: CommentSectionProps
           }}
         >
           💭 GitHub 讨论
+        </button>
+        <button
+          onClick={() => handleSwitchComment('twikoo')}
+          style={{
+            padding: '0.5rem 1rem',
+            border: '1px solid var(--form-element-border-color, #ccc)',
+            background: commentType === 'twikoo' ? 'var(--primary, #4a9eff)' : 'var(--card-bg, #fff)',
+            color: commentType === 'twikoo' ? '#fff' : 'var(--color, inherit)',
+            borderRadius: '8px',
+            cursor: 'pointer',
+            transition: 'all 0.3s ease',
+            fontSize: '0.9rem'
+          }}
+        >
+          💬 Twikoo 评论
         </button>
       </div>
 

@@ -25,7 +25,7 @@ export default function Footer() {
                 <ColorPicker />
             </div>
             <script data-goatcounter="https://suiyan.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+        async src="https://gc.zgo.at/count.js"></script>
         </>
     );
 }
