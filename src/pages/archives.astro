@@ -37,6 +37,14 @@ const sortedMonths = Object.keys(postsByMonth).sort((a, b) => b.localeCompare(a)
 
 const totalPosts = allPosts.length;
 const lastUpdated = allPosts[0]?.data.time ? new Date(allPosts[0].data.time) : new Date();
+
+// 归档页日期格式化函数：只显示月-日
+const archiveFormatDate = (dateStr: string): string => {
+	const date = new Date(dateStr);
+	const month = (date.getMonth() + 1).toString().padStart(2, '0');
+	const day = date.getDate().toString().padStart(2, '0');
+	return `${month}-${day}`;
+};
 ---
 
 <!doctype html>
@@ -153,6 +161,9 @@ const lastUpdated = allPosts[0]?.data.time ? new Date(allPosts[0].data.time) : n
 				font-size: 1.125rem;
 				transition: color 0.2s ease;
 				line-height: 1.5;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
 			}
 			
 			.post-list-grid a:hover {
@@ -204,8 +215,6 @@ const lastUpdated = allPosts[0]?.data.time ? new Date(allPosts[0].data.time) : n
 				}
 				
 				.post-list-grid {
-					grid-template-columns: 1fr;
-					gap: 0.5rem;
 					padding: 0.75rem 1.5rem;
 				}
 				
@@ -251,11 +260,7 @@ const lastUpdated = allPosts[0]?.data.time ? new Date(allPosts[0].data.time) : n
 											{post.title}
 										</a>
 										<time dateTime={post.time}>
-											{new Date(post.time).toLocaleDateString('zh-CN', {
-												year: 'numeric',
-												month: '2-digit',
-												day: '2-digit'
-											})}
+											{archiveFormatDate(post.time)}
 										</time>
 									</div>
 								</li>
