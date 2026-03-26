@@ -1,0 +1,333 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
+import { Icon } from 'astro-icon/components';
+---
+
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<BaseHead 
+			title={`搜索 | ${SITE_TITLE}`} 
+			description={`${SITE_TITLE} 博客搜索功能，支持全文搜索所有文章`}
+		/>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			
+			main {
+				width: 720px;
+				padding-top: 2rem;
+				max-width: 100%;
+				margin: 0 auto;
+			}
+			
+			@media (max-width: 768px) {
+				main {
+					width: 100%;
+					padding: 1rem 1rem;
+				}
+			}
+			
+			.search-container {
+				margin-bottom: 3rem;
+			}
+			
+			.search-input-wrapper {
+				position: relative;
+				margin-bottom: 2rem;
+				max-width: 100%;
+			}
+			
+			.search-icon {
+				position: absolute;
+				left: 1rem;
+				top: 50%;
+				transform: translateY(-50%);
+				color: var(--footer-text);
+				width: 1.25rem;
+				height: 1.25rem;
+			}
+			
+			.search-input {
+				width: 100%;
+				padding: 1rem 1rem 1rem 3rem;
+				font-size: 1.1rem;
+				border: 2px solid var(--border-color);
+				border-radius: 12px;
+				background: var(--header-bg);
+				color: var(--text-color);
+				transition: all 0.3s ease;
+			}
+			
+			.search-input:focus {
+				outline: none;
+				border-color: var(--accent);
+				box-shadow: 0 0 0 3px rgba(var(--gray), 10%);
+			}
+			
+			.search-input::placeholder {
+				color: var(--footer-text);
+			}
+			
+			.search-results {
+				display: flex;
+				flex-direction: column;
+				gap: 1.5rem;
+			}
+			
+			.search-result-item {
+				padding: 1.5rem;
+				background: var(--header-bg);
+				border-radius: 12px;
+				border: 1px solid var(--border-color);
+				transition: all 0.3s ease;
+				text-decoration: none;
+				color: inherit;
+			}
+			
+			.search-result-item:hover {
+				border-color: var(--accent);
+				box-shadow: 0 4px 12px rgba(var(--black), 10%);
+				transform: translateY(-2px);
+			}
+			
+			.result-title {
+				font-size: 1.25rem;
+				font-weight: 700;
+				color: var(--heading-color);
+				margin-bottom: 0.5rem;
+			}
+			
+			.result-meta {
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+				font-size: 0.9rem;
+				color: var(--footer-text);
+			}
+			
+			.result-date {
+				display: flex;
+				align-items: center;
+				gap: 0.25rem;
+			}
+			
+			.no-results {
+				text-align: center;
+				padding: 3rem;
+				color: var(--footer-text);
+			}
+			
+			.loading {
+				text-align: center;
+				padding: 2rem;
+				color: var(--footer-text);
+			}
+			
+			section {
+				width: 100%;
+			}
+			
+			@media (max-width: 768px) {
+				main {
+					width: 100%;
+					padding: 1rem 1rem;
+				}
+				
+				.search-input {
+					font-size: 0.9rem;
+					padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+				}
+				
+				.search-icon {
+					left: 0.75rem;
+					width: 1rem;
+					height: 1rem;
+				}
+				
+				.result-title {
+					font-size: 1rem;
+				}
+				
+				.search-result-item {
+					padding: 0.875rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main id="main">
+			<Breadcrumb items={[
+				{ label: 'Home', href: '/' },
+				{ label: '搜索', href: '/search' }
+			]} />
+			
+			<section>
+				<div class="search-container">
+					<h1>搜索文章</h1>
+					<div class="search-input-wrapper">
+						<Icon name="mdi:magnify" class="search-icon" />
+						<input 
+							type="text" 
+							id="searchInput" 
+							class="search-input" 
+							placeholder="搜索文章标题、描述或标签..." 
+							autocomplete="off"
+						/>
+					</div>
+					<div id="searchResults" class="search-results">
+						<div class="loading">正在加载搜索索引...</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<Footer />
+		
+		<script>
+			const searchInput = document.getElementById('searchInput');
+			const searchResults = document.getElementById('searchResults');
+			let documents = [];
+			
+			// 简单的文本搜索函数
+			function simpleSearch(query, documents) {
+				if (!query || !query.trim()) return [];
+				
+				const lowerQuery = query.toLowerCase().trim();
+				const results = [];
+				
+				documents.forEach(doc => {
+					let score = 0;
+					
+					// 搜索标题
+					if (doc.title && doc.title.toLowerCase().includes(lowerQuery)) {
+						score += 10;
+					}
+					
+					// 搜索描述
+					if (doc.description && doc.description.toLowerCase().includes(lowerQuery)) {
+						score += 5;
+					}
+					
+					// 搜索标签
+					if (doc.tags && Array.isArray(doc.tags)) {
+						doc.tags.forEach(tag => {
+							if (tag.toLowerCase().includes(lowerQuery)) {
+								score += 3;
+							}
+						});
+					}
+					
+					if (score > 0) {
+						results.push({ ...doc, score });
+					}
+				});
+				
+				// 按分数排序
+				return results.sort((a, b) => b.score - a.score);
+			}
+			
+			// 初始化搜索索引
+			async function initSearch() {
+				try {
+					console.log('Loading search index...');
+					const response = await fetch('/search-index.json');
+					
+					if (!response.ok) {
+						throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+					}
+					
+					documents = await response.json();
+					console.log(`Loaded ${documents.length} documents`);
+					
+					// 显示初始状态
+					searchResults.innerHTML = '<div class="no-results">请输入关键词搜索文章</div>';
+				} catch (error) {
+					console.error('Failed to initialize search:', error);
+					searchResults.innerHTML = `
+						<div class="no-results">
+							<p>搜索功能加载失败</p>
+							<p style="font-size: 0.9em; margin-top: 1rem;">错误信息: ${error.message}</p>
+							<p style="font-size: 0.9em; margin-top: 1rem;">请确保搜索索引文件已生成，然后刷新页面重试</p>
+						</div>
+					`;
+				}
+			}
+			
+			// 执行搜索
+			function performSearch(query) {
+				if (!documents.length) {
+					searchResults.innerHTML = '<div class="no-results">请等待搜索索引加载完成</div>';
+					return;
+				}
+				
+				if (!query.trim()) {
+					searchResults.innerHTML = '<div class="no-results">请输入关键词搜索文章</div>';
+					return;
+				}
+				
+				const results = simpleSearch(query, documents);
+				console.log(`Search query: "${query}", results:`, results.length);
+				
+				if (results.length === 0) {
+					searchResults.innerHTML = '<div class="no-results">没有找到匹配的文章</div>';
+					return;
+				}
+				
+				searchResults.innerHTML = results.map(result => {
+					const date = new Date(result.date);
+					const formattedDate = date.toLocaleDateString('zh-CN', {
+						year: 'numeric',
+						month: '2-digit',
+						day: '2-digit'
+					});
+					
+					return `
+						<a href="${result.url}" class="search-result-item">
+							<div class="result-title">${result.title}</div>
+							<div class="result-meta">
+								<div class="result-date">
+									<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+										<rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+										<line x1="16" y1="2" x2="16" y2="6"></line>
+										<line x1="8" y1="2" x2="8" y2="6"></line>
+										<line x1="3" y1="10" x2="21" y2="10"></line>
+									</svg>
+									${formattedDate}
+								</div>
+							</div>
+						</a>
+					`;
+				}).join('');
+			}
+			
+			// 防抖函数
+			let searchTimeout;
+			function debounce(func, wait) {
+				return function executedFunction(...args) {
+					const later = () => {
+						clearTimeout(searchTimeout);
+						func(...args);
+					};
+					clearTimeout(searchTimeout);
+					searchTimeout = setTimeout(later, wait);
+				};
+			}
+			
+			// 事件监听
+			const debouncedSearch = debounce(performSearch, 300);
+			
+			searchInput.addEventListener('input', (e) => {
+				debouncedSearch(e.target.value);
+			});
+			
+			// 页面加载时初始化搜索
+			initSearch();
+		</script>
+	</body>
+</html>

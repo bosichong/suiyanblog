@@ -1,0 +1,97 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<BaseHead title={`404 - 页面走丢了 | ${SITE_TITLE}`} description="抱歉，您访问的页面不存在" />
+		<style>
+			main {
+				width: 720px;
+				max-width: calc(100% - 2em);
+				margin: 0 auto;
+			}
+			
+			.error-container {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				min-height: 60vh;
+				padding: 2rem;
+			}
+			
+			.error-content {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: 2rem;
+				text-align: center;
+			}
+			
+			.error-image {
+				max-width: 100%;
+				height: auto;
+				border-radius: 12px;
+			}
+			
+			.error-text p {
+				color: var(--footer-text);
+				margin: 0.5rem 0;
+			}
+			
+			.error-text h1 {
+				font-size: 2rem;
+				margin: 0.5rem 0;
+			}
+			
+			.back-home {
+				display: inline-block;
+				margin-top: 1rem;
+				padding: 0.75rem 1.5rem;
+				background: var(--accent);
+				color: white;
+				text-decoration: none;
+				border-radius: 8px;
+				font-weight: 600;
+				transition: all 0.2s ease;
+			}
+			
+			.back-home:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 4px 12px rgba(var(--black), 20%);
+			}
+			
+			@media (max-width: 480px) {
+				.error-text h1 {
+					font-size: 1.5rem;
+				}
+				
+				.error-image {
+					max-width: 90%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="error-container">
+				<div class="error-content">
+					<img src="/assets/images/404.avif" alt="404" class="error-image" />
+					<div class="error-text">
+						<p>错误 404</p>
+						<h1>页面未找到</h1>
+						<p>抱歉，您访问的页面不存在。</p>
+						<a href="/" class="back-home">返回首页</a>
+					</div>
+				</div>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>

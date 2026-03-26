@@ -1,0 +1,20 @@
+---
+interface Props {
+	date: string | Date;
+}
+
+const { date } = Astro.props;
+
+// 解析时间，支持 ISO 字符串或 Date 对象
+const dateObj = typeof date === 'string' ? new Date(date) : date;
+---
+
+<time datetime={dateObj.toISOString()}>
+	{
+		dateObj.toLocaleDateString('zh-CN', {
+			year: 'numeric',
+			month: 'long',
+			day: 'numeric',
+		})
+	}
+</time>

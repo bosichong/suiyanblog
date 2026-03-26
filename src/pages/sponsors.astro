@@ -1,0 +1,143 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
+
+const sponsorConfig = {
+	title: "赞赏支持",
+	description: `如果我的文章对你有帮助，或者你就是钱多得没地方花——欢迎请我喝杯咖啡，或者给我家那位"四脚吞金兽"续点口粮。
+
+☕ 一杯咖啡 = 我代码写得飞起，bug 退散，头发还能再撑一阵
+🐕 一份狗粮 = 我家狗子终于闭嘴了，我也能在半夜安静敲键盘，不用跟它对嚎
+
+你的每一分打赏，都在阻止我转行去送外卖。大恩不言谢，祝你代码永无报错，摸鱼不被抓包！`,
+	sponsorCode: "https://www.suiyan.cc/assets/images/zs.jpg",
+	records: [
+		{ name: "熬夜可乐xiong", amount: "¥6.66", date: "2026-01-02", message: "新年快乐！" },
+		{ name: "密斯特Li", amount: "¥1.8", date: "2025-11-20", message: "坚持写博客不容易，支持一下" },
+		{ name: "yyf520", amount: "¥1.23", date: "2025-05-12", message: "加油" },
+		{ name: "匿名", amount: "¥18.88", date: "2025-01-05", message: "支持!" },
+		{ name: "豆子", amount: "¥5", date: "2024-12-15", message: "感谢博主分享" },
+		{ name: "Zzxlb", amount: "¥1.99", date: "2024-11-08", message: "...123" }
+	]
+};
+---
+
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<BaseHead title={`赞赏支持 | ${SITE_TITLE}`} description="赞赏支持碎言博客" />
+		<style>
+			main {
+				width: 720px;
+				max-width: calc(100% - 2em);
+				margin: 0 auto;
+			}
+			
+			.sponsor-intro {
+				background: var(--header-bg);
+				padding: 2rem;
+				border-radius: 12px;
+				margin: 2rem 0;
+				white-space: pre-line;
+				line-height: 1.8;
+			}
+			
+			.sponsor-code {
+				text-align: center;
+				margin: 2rem 0;
+			}
+			
+			.sponsor-code img {
+				max-width: 300px;
+				border-radius: 12px;
+				box-shadow: var(--box-shadow);
+			}
+			
+			.sponsor-records {
+				margin: 2rem 0;
+			}
+			
+			.sponsor-records table {
+				width: 100%;
+				border-collapse: collapse;
+				display: table;
+				overflow-x: visible;
+			}
+			
+			.sponsor-records th,
+			.sponsor-records td {
+				padding: 0.75rem 1rem;
+				border: 1px solid var(--border-color);
+				text-align: left;
+			}
+			
+			.sponsor-records th {
+				background: rgba(var(--gray), 5%);
+				font-weight: 600;
+			}
+			
+			.sponsor-records tr:hover {
+				background: rgba(var(--gray), 3%);
+			}
+			
+			.no-records {
+				text-align: center;
+				padding: 2rem;
+				color: rgb(var(--gray));
+			}
+		</style>
+	</head>
+
+	<body>
+		<Header />
+		<main>
+			<Breadcrumb items={[
+				{ label: 'Home', href: '/' },
+				{ label: '赞赏支持' }
+			]} />
+			
+			<h1>{sponsorConfig.title}</h1>
+			
+			<div class="sponsor-intro">
+				{sponsorConfig.description}
+			</div>
+			
+			<h2>赞赏码</h2>
+			<div class="sponsor-code">
+				<img src={sponsorConfig.sponsorCode} alt="赞赏码" />
+			</div>
+			
+			<h2>赞赏记录</h2>
+			<div class="sponsor-records">
+				{sponsorConfig.records.length > 0 ? (
+					<table>
+						<thead>
+							<tr>
+								<th>昵称</th>
+								<th>金额</th>
+								<th>日期</th>
+								<th>留言</th>
+							</tr>
+						</thead>
+						<tbody>
+							{sponsorConfig.records.map((record) => (
+								<tr>
+									<td>{record.name}</td>
+									<td>{record.amount}</td>
+									<td>{record.date}</td>
+									<td>{record.message || '-'}</td>
+								</tr>
+							))}
+						</tbody>
+					</table>
+				) : (
+					<div class="no-records">暂无赞赏记录</div>
+				)}
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>

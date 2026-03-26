@@ -1,0 +1,265 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import Header from '../components/Header.astro';
+import TagList from '../components/TagList.astro';
+import PostActions from '../components/PostActions.astro';
+import RelatedPosts from '../components/RelatedPosts.astro';
+import { SITE_AUTHOR } from '../consts';
+import { Icon } from 'astro-icon/components';
+import AILabelBadge from '../components/AILabelBadge.astro';
+
+type Props = CollectionEntry<'blog'>['data'] & {
+	prevPost?: CollectionEntry<'blog'> | null;
+	nextPost?: CollectionEntry<'blog'> | null;
+	postId?: string;
+	relatedPosts?: CollectionEntry<'blog'>[];
+};
+
+const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai_label, prevPost, nextPost, postId, relatedPosts } = Astro.props;
+---
+
+<html lang="zh-CN">
+	<head>
+		<BaseHead title={title} description={description} />
+		<style>
+			main {
+				width: 720px;
+				max-width: calc(100% - 2em);
+				margin: 0 auto;
+			}
+			.hero-image {
+				width: 100%;
+			}
+			.hero-image img {
+				display: block;
+				margin: 0 auto;
+				border-radius: 12px;
+				box-shadow: var(--box-shadow);
+			}
+			.prose {
+				width: 720px;
+				max-width: calc(100% - 2em);
+				margin: auto;
+				padding: 1em;
+				color: rgb(var(--gray-dark));
+				overflow-x: hidden;
+			}
+			.prose strong {
+				text-decoration: underline;
+			}
+			article {
+				overflow-x: hidden;
+				width: 100%;
+			}
+			article > div {
+				overflow-x: auto;
+				width: 100%;
+			}
+			article pre,
+			article table,
+			article iframe {
+				overflow-x: auto;
+				max-width: 100%;
+				display: block;
+			}
+			article pre code {
+				display: block;
+				overflow-x: auto;
+			}
+			article table code,
+			article p code,
+			article li code {
+				word-break: break-all;
+				white-space: normal;
+			}
+			article img {
+				max-width: 100%;
+				height: auto;
+				display: block;
+			}
+			.prose table {
+				width: 100%;
+				border-collapse: collapse;
+				margin: 1.5rem 0;
+				font-size: 0.95rem;
+				table-layout: fixed;
+			}
+			.prose table th,
+			.prose table td {
+				border: 1px solid var(--border-color);
+				padding: 0.75rem 1rem;
+				text-align: left;
+				word-wrap: break-word;
+				word-break: break-word;
+				overflow-wrap: break-word;
+				max-width: 0;
+				overflow-x: hidden;
+			}
+			.prose table th code,
+			.prose table td code {
+				word-break: break-all;
+				white-space: pre-wrap;
+				display: inline-block;
+				max-width: 100%;
+			}
+			.prose table th {
+				background: rgba(var(--gray), 5%);
+				font-weight: 600;
+			}
+			.prose table tr:hover {
+				background: rgba(var(--gray), 3%);
+			}
+			.title {
+				margin-bottom: 1em;
+				padding: 1em 0;
+				text-align: center;
+				line-height: 1;
+			}
+			.title h1 {
+				margin: 0 0 0.5em 0;
+			}
+			.ai-label {
+				margin-top: 0.5em;
+			}
+			.date {
+				margin-bottom: 0.5em;
+				color: rgb(var(--gray));
+			}
+			.last-updated-on {
+				font-style: italic;
+			}
+			.date svg {
+				vertical-align: text-top;
+				margin-right: 0.1rem;
+				color: var(--accent);
+			}
+			.post-navigation {
+				display: flex;
+				justify-content: space-between;
+				gap: 1rem;
+				margin: 3rem 0;
+				padding: 1.5rem;
+				background: var(--header-bg);
+				border-radius: 12px;
+				box-shadow: 0 2px 8px rgba(var(--black), 5%);
+			}
+			.post-navigation a {
+				flex: 1;
+				padding: 1rem;
+				background: rgba(var(--gray), 5%);
+				border-radius: 8px;
+				text-decoration: none;
+				color: var(--text-color);
+				transition: all 0.2s ease;
+				display: flex;
+				flex-direction: column;
+				gap: 0.5rem;
+			}
+			.post-navigation a:hover {
+				background: var(--accent);
+				color: white;
+				transform: translateY(-2px);
+				box-shadow: 0 4px 12px rgba(var(--black), 10%);
+			}
+			.post-navigation .nav-label {
+				font-size: 0.85rem;
+				color: var(--footer-text);
+				font-weight: 500;
+			}
+			.post-navigation a:hover .nav-label {
+				color: rgba(255, 255, 255, 0.8);
+			}
+			.post-navigation .nav-title {
+				font-size: 1rem;
+				font-weight: 600;
+				line-height: 1.4;
+			}
+			.post-navigation .prev {
+				text-align: left;
+			}
+			.post-navigation .next {
+				text-align: right;
+			}
+			@media (max-width: 720px) {
+				.post-navigation {
+					flex-direction: column;
+				}
+				.post-navigation a {
+					text-align: center;
+				}
+				.prose table {
+					font-size: 0.85rem;
+				}
+				.prose table th,
+				.prose table td {
+					padding: 0.5rem 0.75rem;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<Header />
+		<main id="main">
+			<article>
+				<div class="hero-image">
+					{heroImage && <Image width={1020} height={510} src={heroImage} alt={heroImageAlt || ''} />}
+				</div>
+				<div class="prose">
+					<Breadcrumb items={[
+						{ label: 'Home', href: '/' },
+						{ label: 'Archives', href: '/archives' },
+						{ label: title, href: Astro.url.pathname }
+					]} />
+					<div class="title">
+						<div class="date">
+							<Icon name="mdi:calendar" width={20} height={20} aria-hidden="true" />
+							<FormattedDate date={time} />
+							{
+								updatedDate && (
+									<Icon name="mdi:calendar" width={20} height={20} aria-hidden="true" />
+									<div class="last-updated-on">
+										Last updated on <FormattedDate date={updatedDate} />
+									</div>
+								)
+							} - <Icon name="mdi:account" width={20} height={20} aria-hidden="true" />{SITE_AUTHOR}
+						</div>
+						<h1>{title}</h1>
+						<div class="ai-label">
+							<AILabelBadge level={ai_label} />
+						</div>
+					</div>
+					<slot />
+					<hr aria-hidden="true" />
+					<TagList tags={tags} showLabel={true} />
+					
+					<PostActions postId={postId || ''} postPath={`/blog/${postId}`} />
+					
+					<nav class="post-navigation">
+						{prevPost && (
+											<a href={`/blog/${prevPost.id}`} class="prev" aria-label={`上一篇：${prevPost.data.title}`}>
+												<span class="nav-label">上一篇</span>
+												<span class="nav-title">{prevPost.data.title}</span>
+											</a>
+										)}
+										{nextPost && (
+											<a href={`/blog/${nextPost.id}`} class="next" aria-label={`下一篇：${nextPost.data.title}`}>
+												<span class="nav-label">下一篇</span>
+												<span class="nav-title">{nextPost.data.title}</span>
+											</a>
+										)}					</nav>
+					
+					{relatedPosts && relatedPosts.length > 0 && (
+						<RelatedPosts posts={relatedPosts} />
+					)}
+				</div>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>

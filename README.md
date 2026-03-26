@@ -1,177 +1,197 @@
-# 碎言博客
+# Ataraxia - Astro Blog Theme
 
-https://www.suiyan.cc
+A clean, accessible, and modern blog theme for Astro v6, inspired by the philosophical concept of tranquility and peace of mind.
 
-一个基于 Next.js 构建的现代化个人博客系统，专注于深度阅读与技术分享。
+## ✨ Features
 
-## 特性
+- ✅ **Astro v6** - Built with the latest Astro features
+- ✅ **Dark Mode** - Toggle between light and dark themes with smooth transitions
+- ✅ **Accessible** - WCAG 2.2 AA compliant with keyboard navigation and screen reader support
+- ✅ **Atkinson Hyperlegible Fonts** - Variable fonts optimized for readability
+- ✅ **Tag System** - Organize posts by tags with dedicated tag pages
+- ✅ **Responsive Design** - Mobile-first with hamburger navigation
+- ✅ **Content Collections** - Type-safe blog posts with Zod validation
+- ✅ **SEO Optimized** - Canonical URLs, OpenGraph data, and sitemap
+- ✅ **RSS Feed** - Auto-generated RSS feed for subscribers
+- ✅ **MDX Support** - Enhanced markdown with component support
+- ✅ **Breadcrumb Navigation** - Clear navigation paths
+- ✅ **Performance** - Optimized images with Sharp
+- ✅ **Minimal Styling** - Clean design based on Astro Starter Kit: Blog and Bear Blog
 
-- 🚀 **高性能**: 基于 Next.js 构建，支持静态站点生成 (SSG) 和服务端渲染 (SSR)
-- 📝 **Markdown 支持**: 使用 react-markdown 和 remark-gfm 提供完整的 Markdown 支持
-- 🎨 **现代 UI**: 基于 Tailwind CSS 构建的响应式设计，适配各种设备
-- 🔍 **搜索功能**: 内置博客文章搜索功能
-- 👥 **友链管理**: 完整的友情链接管理系统
-- 💬 **评论系统**: 集成 Giscus 基于 GitHub Discussions 的评论系统
-- 📱 **RSS 订阅**: 自动生成 RSS feed，方便读者订阅
-- 🔧 **SEO 优化**: 自动生成 sitemap，优化搜索引擎收录
-- ⚡ **静态导出**: 支持导出为纯静态站点，可部署到任何静态托管服务
-- 💭 **片语功能**: 支持发布简短的日常想法和随笔
+## 🚀 Project Structure
 
-## 技术栈
-
-- **框架**: Next.js 16
-- **UI 库**: React 18
-- **样式**: Tailwind CSS
-- **内容管理**: Markdown 文件 + gray-matter
-- **评论**: Giscus
-- **TypeScript**: 完整的类型支持
-
-## 快速开始
-
-### 安装依赖
-
-```bash
-pnpm install
-```
-
-### 开发模式
-
-```bash
-pnpm dev
-```
-
-访问 http://localhost:3000 查看博客。
-
-### 构建生产版本
-
-```bash
-pnpm build
-```
-
-### 启动生产服务器
-
-```bash
-pnpm start
-```
-
-### 创建新文章
-
-```bash
-pnpm nb
-```
-
-按照提示输入文章标题、分类、标签等信息，脚本会自动在 `md` 目录下创建新的 Markdown 文件。
-
-### 创建片语
-
-```bash
-pnpm nt [片语内容]
-```
-
-创建简短的日常想法和随笔，片语会自动保存到 `md/thoughts` 目录。如果不提供内容，会使用默认文本。
-
-例如：
-```bash
-pnpm nt "今天天气真不错！"
-```
-
-### 导出静态站点
-
-```bash
-pnpm build
-pnpm preview
-```
-
-静态文件将生成在 `out` 目录，可以使用任何静态托管服务部署。
-
-## 目录结构
-
-```
-suiyanblog/
-├── md/                  # Markdown 博客文章
-│   └── thoughts/       # 片语（短内容）目录
-├── public/              # 静态资源文件
+```text
+├── public/
+│   ├── fonts/               # Atkinson Hyperlegible variable fonts
+│   └── favicon.svg
 ├── src/
-│   ├── app/            # Next.js App Router 页面
-│   ├── components/     # React 组件
-│   ├── lib/            # 工具库
-│   ├── pages/          # 自定义页面
-│   ├── styles/         # 样式文件
-│   ├── utils/          # 工具函数
-│   ├── config.ts       # 博客配置
-│   └── types.ts        # TypeScript 类型定义
-├── createBlog.js       # 博客文章创建脚本
-├── createThought.js    # 片语创建脚本
-├── generateRSS.js      # RSS 生成脚本
-└── generateSitemap.js  # Sitemap 生成脚本
+│   ├── assets/              # Optimized images
+│   ├── components/
+│   │   ├── BaseHead.astro   # SEO and meta tags
+│   │   ├── Breadcrumb.astro # Navigation breadcrumbs
+│   │   ├── Footer.astro     # Site footer
+│   │   ├── FormattedDate.astro
+│   │   ├── Header.astro     # Responsive header with navigation
+│   │   ├── HeaderLink.astro
+│   │   ├── TagList.astro    # Display post tags
+│   │   └── ThemeToggle.astro # Dark/light mode toggle
+│   ├── content/
+│   │   └── blog/            # Markdown/MDX blog posts
+│   ├── layouts/
+│   │   └── BlogPost.astro   # Blog post layout
+│   ├── pages/
+│   │   ├── about.astro
+│   │   ├── index.astro
+│   │   ├── rss.xml.js       # RSS feed
+│   │   ├── blog/
+│   │   │   ├── [...slug].astro  # Dynamic blog post routes
+│   │   │   └── index.astro      # Blog list page
+│   │   └── tags/
+│   │       ├── [tag].astro      # Tag filter pages
+│   │       └── index.astro      # All tags page
+│   ├── styles/
+│   │   └── global.css       # Global styles and CSS variables
+│   ├── utils/
+│   │   └── slugify.ts       # URL slug generation
+│   ├── consts.ts            # Site configuration
+│   └── content.config.ts    # Content collection schema
+├── astro.config.mjs
+├── package.json
+└── tsconfig.json
 ```
 
+## 🎨 Theme Features
 
-## 配置
+### Dark Mode
 
-博客的主要配置项位于 `src/config.ts` 文件中，包括：
+- Automatic system preference detection
+- Manual toggle with localStorage persistence
+- Smooth color transitions
+- Sun/moon icons with rotation animations
 
-- 博客名称和描述
-- 作者信息
-- 菜单项
-- 友链列表
-- 社交媒体链接
-- SEO 相关配置
+### Typography
 
-## 文章格式
+- **Atkinson Hyperlegible** variable fonts for optimal readability
+- Support for weights 100-900
+- Italic variants included
+- Monospace variant for code blocks
 
-### 博客文章
+### Tag System
 
-博客文章使用 Markdown 格式，文件名格式为 `YYYYMMDDHHmmss.md` 或数字编号。文章头部需要包含 frontmatter 元数据：
+- Required tags for all blog posts
+- Dedicated tag pages for filtering
+- Tag cloud with post counts
+- Reusable `TagList` component
+
+### Accessibility
+
+- Keyboard navigation support
+- Skip links for main content
+- ARIA labels and landmarks
+- Sufficient color contrast ratios
+- Focus indicators on all interactive elements
+- Screen reader friendly
+
+## 🧞 Commands
+
+All commands are run from the root of the project:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## 📝 Creating Blog Posts
+
+1. Create a new `.md` or `.mdx` file in `src/content/blog/`
+2. Add the required frontmatter:
 
 ```markdown
 ---
-title: 文章标题
-date: 2025-01-01
-category: 分类
-tags: [标签1, 标签2]
+title: 'Your Post Title'
+description: 'A brief description of your post'
+pubDate: 'Oct 03 2025'
+tags: ['astro', 'blogging']  # At least one tag required
+heroImage: '../../assets/your-image.jpg'  # Optional
 ---
 
-文章内容...
+Your content here...
 ```
 
-### 片语
+3. The file name becomes the URL slug (e.g., `my-post.md` → `/blog/my-post/`)
 
-片语是简短的日常想法和随笔，文件保存在 `md/thoughts/` 目录下。片语使用以下格式：
+## ⚙️ Configuration
 
-```markdown
----
-type: thought
-time: '2025-01-01T12:00:00.000Z'
----
+Edit `src/consts.ts` to customize your site:
 
-片语内容...
+```typescript
+export const SITE_TITLE = 'Your Site Title';
+export const SITE_DESCRIPTION = 'Your site description';
+export const SITE_AUTHOR = 'Your Name';
 ```
 
-片语会自动使用当前时间戳生成文件名，无需手动设置。
+Update `astro.config.mjs` for your production URL:
 
-## 部署
+```javascript
+export default defineConfig({
+  site: 'https://your-site.com',
+  // ...
+});
+```
 
-### Vercel
+## 🎨 Customization
 
-推荐使用 Vercel 部署，提供零配置部署体验：
+### Colors
 
-1. 将代码推送到 GitHub
-2. 在 Vercel 中导入项目
-3. 自动部署完成
+Edit CSS variables in `src/styles/global.css`:
 
-### 其他平台
+- Light theme: `:root` selector
+- Dark theme: `[data-theme="dark"]` selector
 
-项目支持静态导出，可以部署到：
-- GitHub Pages
-- Netlify
-- Cloudflare Pages
-- 任何支持静态网站托管的服务
+### Fonts
 
-## 贡献
+Font declarations are in `src/styles/global.css`. Variable fonts support any weight from 100-900.
 
-欢迎提交 Issue 和 Pull Request！
+### Navigation
 
-## 许可证
+Add or remove links in `src/components/Header.astro`
 
-本项目采用 MIT 许可证。详见 [LICENSE](LICENSE) 文件。
+## 📦 Dependencies
+
+- **Astro** v6.0.4 - Static site generator
+- **@astrojs/mdx** - MDX support
+- **@astrojs/rss** - RSS feed generation
+- **@astrojs/sitemap** - Sitemap generation
+- **@iconify-json/mdi** - Material Design Icons
+- **sharp** - Image optimization
+
+## 🌐 Deployment
+
+Build your site with `npm run build`. The output will be in the `./dist/` directory, ready to deploy to your favorite hosting platform:
+
+- [Netlify](https://www.netlify.com/)
+- [Vercel](https://vercel.com/)
+- [Cloudflare Pages](https://pages.cloudflare.com/)
+- [GitHub Pages](https://pages.github.com/)
+
+## 📑 Learn More
+
+- [Astro Documentation](https://docs.astro.build)
+- [Astro Discord](https://astro.build/chat)
+- [Content Collections Guide](https://docs.astro.build/en/guides/content-collections/)
+
+## 🫶 Credit
+
+This theme is inspired by and built upon:
+
+- [Astro Starter Kit: Blog](https://github.com/withastro/astro/tree/main/examples/blog) - Official Astro blog starter
+- [Bear Blog](https://github.com/HermanMartinus/bearblog/) - Minimal blog design
+- The philosophical concept of **Ataraxia** (ἀταραξία) - tranquility and freedom from worry
+
+## 📄 License
+
+MIT License - Feel free to use this theme for your projects!

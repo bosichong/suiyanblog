@@ -1,0 +1,4829 @@
+[
+  {
+    "id": "10",
+    "title": "Python 采集数据三步曲之[Requests开源协议的HTTP 库]",
+    "description": "Python 采集数据三步曲之[Requests开源协议的HTTP 库]",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/10",
+    "date": "2017-09-02T09:01:48.000000Z"
+  },
+  {
+    "id": "100",
+    "title": "写在我的博客PV10万时：聊聊编程与画画",
+    "description": "写在我的博客PV10万时：聊聊编程与画画。",
+    "tags": [
+      "站长吐槽",
+      "technology"
+    ],
+    "url": "/blog/100",
+    "date": "2019-05-14T09:11:29.000000Z"
+  },
+  {
+    "id": "101",
+    "title": "如何在Python程序中使用配置文件.ini(ConfigParser)",
+    "description": "在Python程序的编写中，我们经常要为程序配置一个配置文件，有了配置文件，可以记录一些应用的参数配置，方便下次使用时直接调用。",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/101",
+    "date": "2019-06-18T15:29:01.000000Z"
+  },
+  {
+    "id": "103",
+    "title": "基于Django构建的小学生英文单词背写检测考试系统。",
+    "description": "孩子的学习总是让父母担忧，英语学习也是让家长的头疼之事，做为程序员老爸不能整天忙于编程而忽视了孩子的教育，我们也要搞点事情。孩子英文单词到底背的怎么样了？别怕，用PyWordTest,创建题库，轻松搞定孩子的英语单词拼写情况。",
+    "tags": [
+      "站长源创",
+      "technology"
+    ],
+    "url": "/blog/103",
+    "date": "2019-11-07T16:10:19.000000Z"
+  },
+  {
+    "id": "106",
+    "title": "碎言静态博客",
+    "description": "碎言这个名称取自与\"碎言片语\"，码兄累了吗？累了就休息一下，为未来的自己留下一些碎言片语吧。",
+    "tags": [
+      "站长源创",
+      "technology"
+    ],
+    "url": "/blog/106",
+    "date": "2023-04-05T10:26:39.000000Z"
+  },
+  {
+    "id": "11",
+    "title": "Python 采集数据三步曲之[Requests + re.py模块进行数据采集]",
+    "description": "当我们熟悉了re和Requests两个模块，就可以开始愉快的数据采集之旅了，我们先为自己找一些需要采集的数据，比如股票价格数据、新闻或是美女图片等，只要你喜欢。",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/11",
+    "date": "2017-09-02T12:41:30.000000Z"
+  },
+  {
+    "id": "12",
+    "title": "Python os.path模块中一些常用方法的整理总结",
+    "description": "跟计算机打交道，和目录与文件接触应该是最多的了，所以，掌握Python中的目录与文件操作是非常重要的，本节主要介绍os.path模块的一些常用方法",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/12",
+    "date": "2017-09-04T14:37:17.000000Z"
+  },
+  {
+    "id": "13",
+    "title": "Python open()函数文件打开、读、写操作总结",
+    "description": "在编程和计算机的使用中，与文件打交道是必不可少的，每天都要打开读取写入很多的文件，所以了解Python的文件打开、读、写操作是非常有必要的。",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/13",
+    "date": "2017-09-05T13:36:55.000000Z"
+  },
+  {
+    "id": "14",
+    "title": "PythonINI配置文件读写的简单方法",
+    "description": ".ini 文件是Initialization File的缩写，即初始化文件，是windows的系统配置文件所采用的存储格式，统管windows的各项配置，一般用户就用windows提供的各项图形化管理界面就可实现相同的配置了。但在某些情况，还是要直接编辑ini才方便，一般只有很熟悉windows才能去直接编辑。",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/14",
+    "date": "2017-09-06T10:19:07.000000Z"
+  },
+  {
+    "id": "15",
+    "title": "python3函数学习笔记简单总结",
+    "description": "python3的函数是简单简约的，但有很有个性，而且有一些很多意思的语法糖，了解并理解这些函数语法，是python学习中必经之路",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/15",
+    "date": "2017-09-09T09:27:49.000000Z"
+  },
+  {
+    "id": "16",
+    "title": "Python3 datetime模块的时间操作",
+    "description": "出去旅游一个星期刚刚回来，上周是什么也没有更新，当我们要去做一件自己非常喜欢而又美好的事，就得去做更多不喜欢不美好的事来换取这个机会。时间是有限的，所以应当珍惜当下！今天就来复习一下Python 中有关时间的操作",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/16",
+    "date": "2017-09-18T13:23:43.000000Z"
+  },
+  {
+    "id": "17",
+    "title": "关于本站封面头部大图",
+    "description": "看到喜欢的图片就会换上，不知道为什么会喜欢这些偏暖的色调，记得很久以前的有段时间，也曾偏爱冷色调调，可能偏暖色调更LOMO些。",
+    "tags": [
+      "站长吐槽",
+      "daily"
+    ],
+    "url": "/blog/17",
+    "date": "2017-09-18T14:19:35.000000Z"
+  },
+  {
+    "id": "18",
+    "title": "Python 字符串格式化(%操作符)及format函数的使用",
+    "description": "Python 字符串格式化（%操作符）及format函数的使用,Python参考手册，字符串格式化章读书笔记。",
+    "tags": [
+      "读书",
+      "technology"
+    ],
+    "url": "/blog/18",
+    "date": "2017-09-19T15:12:22.000000Z"
+  },
+  {
+    "id": "19",
+    "title": "Python 对象引用与复制 (Python参考手册读书笔记)",
+    "description": "Python 对象引用与复制 (Python参考手册读书笔记)",
+    "tags": [
+      "读书",
+      "technology"
+    ],
+    "url": "/blog/19",
+    "date": "2017-09-19T15:51:04.000000Z"
+  },
+  {
+    "id": "2",
+    "title": "创建python 虚拟环境 venv",
+    "description": "最近需要调试各个版本的折腾，所以虚拟环境是必须走起的。。。",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/2",
+    "date": "2017-08-19T19:53:29.000000Z"
+  },
+  {
+    "id": "20",
+    "title": "Python random 随机数模块操作总结",
+    "description": "random，是Python中用于生成随机数模块，我们来了解一下这修模中几个常用的函数，这些随机函数可以应付一些日常应用了。",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/20",
+    "date": "2017-09-20T13:28:23.000000Z"
+  },
+  {
+    "id": "20200101210954",
+    "title": "前端项目构建打包的一些学习笔记",
+    "description": "由于项目总是有一些小BUG，回想了一下项目中的JS文件的组织问题，估计应该是JS文件分散造成的加载不稳定，有时会造成一些变量莫名的未定义，事已至此，只有将这些文件打包到一个文件中就可以很好的解决这个问题，但是今天在网上搜了一些都是最近流行的打包工具，感觉功能过于丰富，以当前的项目来说用这些流行的打包工具有些大材小用了，而且学习成本高了一些，后来看了一下手头上的两JavaScript本书都推荐Ant打包，所以决定按书上的来吧，省时省力。",
+    "tags": [
+      "JavaScript",
+      "technology"
+    ],
+    "url": "/blog/20200101210954",
+    "date": "2020-01-01T21:09:54.000000Z"
+  },
+  {
+    "id": "20200108161047",
+    "title": "今天是个好日子发行了碎言静态博客的功能完整版",
+    "description": "经过这段时间的努力，终于把博客成功的更换成了自己开发的碎言静态博客，也算是对这段时间学习JavaScript的一个总结。",
+    "tags": [
+      "碎言博客",
+      "daily"
+    ],
+    "url": "/blog/20200108161047",
+    "date": "2020-01-08T16:10:47.000000Z"
+  },
+  {
+    "id": "20200108191737",
+    "title": "使用碎言静态博客依托码云Pages搭建自己的免费博客",
+    "description": "使用碎言静态博客依托码云Pages搭建自己的免费博客",
+    "tags": [
+      "碎言博客",
+      "technology"
+    ],
+    "url": "/blog/20200108191737",
+    "date": "2020-01-08T19:17:37.000000Z"
+  },
+  {
+    "id": "20200110211843",
+    "title": "Vue快速学习笔记(1)Vue实例基础",
+    "description": "Vue实例基础",
+    "tags": [
+      "Vue",
+      "technology"
+    ],
+    "url": "/blog/20200110211843",
+    "date": "2020-01-10T21:18:43.000000Z"
+  },
+  {
+    "id": "20200201103126",
+    "title": "Vue快速学习笔记(2)Vue中的监听与计算属性",
+    "description": "Vue中的监听",
+    "tags": [
+      "Vue",
+      "technology"
+    ],
+    "url": "/blog/20200201103126",
+    "date": "2020-02-01T10:31:26.000000Z"
+  },
+  {
+    "id": "20200204150807",
+    "title": "Vue快速学习笔记(3)Vue的组件",
+    "description": "Vue中的组件",
+    "tags": [
+      "Vue",
+      "technology"
+    ],
+    "url": "/blog/20200204150807",
+    "date": "2020-02-04T15:08:07.000000Z"
+  },
+  {
+    "id": "20200211153353",
+    "title": "Vue快速学习笔记(4)Vue组件中的数据传递",
+    "description": "Vue组件中的数据传递",
+    "tags": [
+      "Vue",
+      "technology"
+    ],
+    "url": "/blog/20200211153353",
+    "date": "2020-02-11T15:33:53.000000Z"
+  },
+  {
+    "id": "20200212190302",
+    "title": "Vue快速学习笔记(5)使用路由vue-router(1)",
+    "description": "在Vue中使用路由vue-router",
+    "tags": [
+      "Vue",
+      "technology"
+    ],
+    "url": "/blog/20200212190302",
+    "date": "2020-02-12T19:03:02.000000Z"
+  },
+  {
+    "id": "20200305151608",
+    "title": "Vue快速学习笔记(8)webpack4.X配置Vue开发打包环境",
+    "description": "webpack是前端的一个项目构建工具，它是基于Node.js 开发出来的一个前端工具. webpack可以完美实现资源的合并、打包、压缩、混淆等诸多功能。",
+    "tags": [
+      "webpack",
+      "technology"
+    ],
+    "url": "/blog/20200305151608",
+    "date": "2020-03-05T15:16:08.000000Z"
+  },
+  {
+    "id": "20200319093318",
+    "title": "Vue快速学习笔记(9)Vuetify配置及简单使用",
+    "description": "Vuetify的安装及配置",
+    "tags": [
+      "Vue",
+      "technology"
+    ],
+    "url": "/blog/20200319093318",
+    "date": "2020-03-19T09:33:18.000000Z"
+  },
+  {
+    "id": "20200330193816",
+    "title": "pip临时修改下载源",
+    "description": "pip临时修改源和PYPI国内源路径",
+    "tags": [
+      "Python",
+      "technology"
+    ],
+    "url": "/blog/20200330193816",
+    "date": "2020-03-30T19:38:16.000000Z"
+  },
+  {
+    "id": "20200330194328",
+    "title": "npm更换源与nrm安装与配置",
+    "description": "npm更换源与nrm安装与配置",
+    "tags": [
+      "webpack",
+      "technology"
+    ],
+    "url": "/blog/20200330194328",
+    "date": "2020-03-30T19:43:28.000000Z"
+  },
+  {
+    "id": "20201005203404",
+    "title": "聊聊Python中的装饰器",
+    "description": "装饰器（decorator）是干嘛的？对于受到封装的原函数来说，装饰器能够在那个函数执行前或者执行后分别运行一些代码，使得可以再装饰器里面访问并修改原函数的参数以及返回值，以实现约束定义、调试程序、注册函数等目标。装饰器一般返回一个包装器（wrapper），而functools.wraps就是装饰包装器的装饰器。",
+    "tags": [
+      "Python",
+      "technology"
+    ],
+    "url": "/blog/20201005203404",
+    "date": "2020-10-05T20:34:04.000000Z"
+  },
+  {
+    "id": "20201202155245",
+    "title": "如何打包上传Python程序或模块包到PyPi供其他人使用pip下载？",
+    "description": "在学习和编写Python代码的过程中我们经常会用到pip来安装一些其他包，用pip下载很方便的，那么如果我们自己写了Python的代码包，如何能让别人也试用pip来进行安装呢？真巧，我这几天就打包了一个自己写的程序发布到了pypi.org，写个上传记录供大家参考。",
+    "tags": [
+      "Python",
+      "technology"
+    ],
+    "url": "/blog/20201202155245",
+    "date": "2020-12-07T20:30:45.000000Z"
+  },
+  {
+    "id": "20210212002001",
+    "title": "Anaconda常用终端命令",
+    "description": "conda 常用的命令",
+    "tags": [
+      "Python",
+      "technology"
+    ],
+    "url": "/blog/20210212002001",
+    "date": "2021-02-12T00:20:01.000000Z"
+  },
+  {
+    "id": "20210220153815",
+    "title": "pipenv 简化的虚拟环境、项目依赖管理工具",
+    "description": "项目需要在Python的虚拟环境下来安装管理这些扩展，这样才会方便项目在其他地方进行扩展包的安装。这里推荐pipenv来管理虚拟环境和扩展。",
+    "tags": [
+      "Flask",
+      "technology"
+    ],
+    "url": "/blog/20210220153815",
+    "date": "2021-02-20T15:38:15.000000Z"
+  },
+  {
+    "id": "20210222084745",
+    "title": "Flask项目配置(config)经验",
+    "description": "Flask项目配置（Configuration）",
+    "tags": [
+      "Flask",
+      "technology"
+    ],
+    "url": "/blog/20210222084745",
+    "date": "2021-02-22T08:47:45.000000Z"
+  },
+  {
+    "id": "20210223155027",
+    "title": "Flask-SQLAlchemy 使用学习笔记(上):简单的配置及使用",
+    "description": "Flask-SQLAlchemy,使用学习笔记:简单的配置及使用",
+    "tags": [
+      "Flask",
+      "technology"
+    ],
+    "url": "/blog/20210223155027",
+    "date": "2021-02-23T15:50:27.000000Z"
+  },
+  {
+    "id": "20210316093818",
+    "title": "Flask-SQLAlchemy 使用学习笔记(下):一对一、一对多、多对多关系",
+    "description": "Flask-SQLAlchemy使用学习笔记:一对一、一对多、多对多关系",
+    "tags": [
+      "Flask",
+      "technology"
+    ],
+    "url": "/blog/20210316093818",
+    "date": "2021-03-16T09:38:18.000000Z"
+  },
+  {
+    "id": "20210521155450",
+    "title": "PyKeyBoardFairy可以替代你游戏中的卡键盘和鼠标宏",
+    "description": "Python编写的简单版键盘精灵,可以替代你游戏中的卡键盘和鼠标宏。",
+    "tags": [
+      "站长源创",
+      "technology"
+    ],
+    "url": "/blog/20210521155450",
+    "date": "2021-05-21T15:54:50.000000Z"
+  },
+  {
+    "id": "20220923093608",
+    "title": "又可以继续写blog了",
+    "description": "好久没有更新blog,最近抽些时间继续更新blog,把一些未完成的代码和技术债务更新完成.",
+    "tags": [
+      "站长吐槽",
+      "daily"
+    ],
+    "url": "/blog/20220923093608",
+    "date": "2022-09-23T09:36:08.000000Z"
+  },
+  {
+    "id": "20230324234058",
+    "title": "好了，又可以愉快的写博客了",
+    "description": "上次我说这话的时候还是2022-09-23，一下子都过去大半年了！花了三天的时间把之前写的静态博客重构了，这次的重构还算满意挺开心的，重构达到了预期的效果。",
+    "tags": [
+      "站长吐槽",
+      "daily"
+    ],
+    "url": "/blog/20230324234058",
+    "date": "2023-04-11 16:39:16"
+  },
+  {
+    "id": "20230404163916",
+    "title": "Pico.css大道至简返璞归真--一个简单轻量化的CSS框架",
+    "description": "Pico.css是一个简单轻量化的CSS UI框架，最大的特点是样式都基于HTML原始的标签名和内置的属性，少用甚至是不用class来定义样式，写出来的代码语义清晰，可维护性强，能够帮助开发者构建自己的UI系统，也可以直接用于快速的小型项目中。Pico.css在Github上已经有高达8.8KStar。",
+    "tags": [
+      "前端框架",
+      "CSS",
+      "technology"
+    ],
+    "url": "/blog/20230404163916",
+    "date": "2023-04-04T16:39:16.000000Z"
+  },
+  {
+    "id": "20230404212258",
+    "title": "解决Github Pages自定义域名失效的问题",
+    "description": "最近更新博客的push更新到GitHub的仓库，更新之后总是发现域名莫名的失效了，我也没有动任何配置啊？为什么会时效呢？",
+    "tags": [
+      "GitHub",
+      "technology"
+    ],
+    "url": "/blog/20230404212258",
+    "date": "2023-04-04T21:22:58.000000Z"
+  },
+  {
+    "id": "20230405202140",
+    "title": "程序员的痛苦：颈椎病和肩周炎",
+    "description": "我想提醒所有程序员兄弟姐妹们，要保护好自己的颈椎和肩膀。长时间保持同一姿势容易导致肌肉疲劳和紧张，从而引起颈椎病和肩周炎。因此，我们应该每隔一段时间就起身活动一下身体，适当地放松自己的颈椎和肩膀。此外，我们还可以采取一些预防措施，例如使用合适的电脑屏幕高度、定期锻炼颈部和肩部的肌肉等。让我们一起保护好自己的身体，更高效地工作！",
+    "tags": [
+      "站长吐槽",
+      "technology"
+    ],
+    "url": "/blog/20230405202140",
+    "date": "2023-04-05T20:21:40.000000Z"
+  },
+  {
+    "id": "20230408093536",
+    "title": "free_blog 碎言静态博客主题",
+    "description": "大道至简，返璞归之，这是一款侧重与内容的博客主题,本项目为[碎言静态博客](https://github.com/bosichong/suiyan.git)主题。",
+    "tags": [
+      "碎言博客",
+      "technology"
+    ],
+    "url": "/blog/20230408093536",
+    "date": "2023-04-08T09:35:36.000000Z"
+  },
+  {
+    "id": "20230410075954",
+    "title": "使用Python编写并部署个人静态博客:(一)分析与设计",
+    "description": "独立博客是指个人独立运营的博客，通常是由个人自己设计、开发、维护和更新的。相比于其他博客，独立博客可以自由定制，自制主题，自由评论不受平台限制等优点。",
+    "tags": [
+      "Python",
+      "碎言博客",
+      "technology"
+    ],
+    "url": "/blog/20230410075954",
+    "date": "2023-04-10T07:59:54.000000Z"
+  },
+  {
+    "id": "20230413095913",
+    "title": "2023重学前端:HTML CSS JavaScript基础复习",
+    "description": "最近写了一些前端的项目使用了一些框架例，但是突然发现自己的前端基础是如此的渣，渣的自己好尴尬，遂决定重新学习并复习一下前端的HTML CSS JavaScript基础。",
+    "tags": [
+      "前端框架",
+      "HTML",
+      "technology"
+    ],
+    "url": "/blog/20230413095913",
+    "date": "2023-04-13T09:59:13.000000Z"
+  },
+  {
+    "id": "20230416175852",
+    "title": "从回调函数到JavaScript异步编程",
+    "description": "异步编程是JavaScript中的一个重要概念。为了理解异步编程，首先需要了解同步编程的工作原理。在同步编程中，代码按行执行，每行必须在下一行开始之前完成执行。当处理长时间运行的任务或需要等待外部资源时，这可能会导致性能问题。",
+    "tags": [
+      "JavaScript",
+      "technology"
+    ],
+    "url": "/blog/20230416175852",
+    "date": "2023-04-16T17:58:52.000000Z"
+  },
+  {
+    "id": "20230418122936",
+    "title": "css布局如何选择flex和grid?",
+    "description": "在前端界面的设计时，经常要用到css的布局属性，这里主要对flex、gird做一些学习上的总结，flex和grid都是CSS布局模块，允许响应式和灵活的设计。但是，它们具有不同的用例和属性。",
+    "tags": [
+      "CSS",
+      "technology"
+    ],
+    "url": "/blog/20230418122936",
+    "date": "2023-04-18T12:29:36.000000Z"
+  },
+  {
+    "id": "20230420101527",
+    "title": "使用Python编写并部署个人静态博客:(二)实现静态页面的输出",
+    "description": "实现静态页面的输出其实很简单，按着顺序来就行：搜集Markdown文件和站点配置文件->组织数据并渲染模板(jinja2)->输出HTML并保存到静态目录中。",
+    "tags": [
+      "Python",
+      "碎言博客",
+      "technology"
+    ],
+    "url": "/blog/20230420101527",
+    "date": "2023-04-20T10:15:27.000000Z"
+  },
+  {
+    "id": "20230420162736",
+    "title": "simple_blog 碎言静态博客主题",
+    "description": "simple_blog是一款侧重与内容的博客主题并适配移动端。主题支持亮色和黑暗主题在线切换。",
+    "tags": [
+      "碎言博客",
+      "technology"
+    ],
+    "url": "/blog/20230420162736",
+    "date": "2023-04-20T16:27:36.000000Z"
+  },
+  {
+    "id": "20230423094305",
+    "title": "vue3前端打包集成到后端fastAPI的uvicorn服务器",
+    "description": "数据分页在项目中的使用频率是非常高的,但是对于新手来说是一个难点和痛点,这里我记录一次数据分页从环境搭建到最后页面的渲染的过程,对于新手可以用来参考。",
+    "tags": [
+      "Vue",
+      "technology"
+    ],
+    "url": "/blog/20230423094305",
+    "date": "2023-04-23T09:43:05.000000Z"
+  },
+  {
+    "id": "20230424194612",
+    "title": "JianCe 简测 简单的在线答题应用",
+    "description": "JianCe是一个简简单单的学习结果检测的小工具，通过设置一组在线试题（题型包括：单选、多选、判断、简答）来检验学习结果。",
+    "tags": [
+      "站长源创",
+      "technology"
+    ],
+    "url": "/blog/20230424194612",
+    "date": "2023-04-24T19:46:12.000000Z"
+  },
+  {
+    "id": "20230427151750",
+    "title": "coding_blog 碎言静态博客主题",
+    "description": "coding_blog一款适合程序员的简约博客主题。主题模板采用了jinja2的模板引擎，使用了Bootstrap 5.3 等框架，模板设计移动优先。",
+    "tags": [
+      "碎言博客",
+      "technology"
+    ],
+    "url": "/blog/20230427151750",
+    "date": "2023-04-27T15:17:50.000000Z"
+  },
+  {
+    "id": "20230428181550",
+    "title": "新站已提交sitemap百度不抓取Google也不收录",
+    "description": "最近新注册了一个域名：suiyan.cc，自己写了Python脚本生成了静态页面，域名绑定了GitHub的静态页面，然后开始提交到各大搜索引擎，目前提交了Google、bing.com和百度。",
+    "tags": [
+      "SEO",
+      "technology"
+    ],
+    "url": "/blog/20230428181550",
+    "date": "2023-04-28T18:15:50.000000Z"
+  },
+  {
+    "id": "20230430073441",
+    "title": "Vue3+Element Plus环境搭建和一键切换明暗主题的配置",
+    "description": "Vue (发音为 /vjuː/，类似 view) 是一款用于构建用户界面的 JavaScript 框架。而Element Plus是一款基于Vue3面向设计师和开发者的组件库",
+    "tags": [
+      "Vue",
+      "technology"
+    ],
+    "url": "/blog/20230430073441",
+    "date": "2023-04-30T07:34:41.000000Z"
+  },
+  {
+    "id": "20230504105514",
+    "title": "css的过渡效果transition的使用",
+    "description": "CSS的transition允许您对CSS属性的更改进行动画处理，这对于在网站上创建平滑和视觉上吸引人的效果非常有用。",
+    "tags": [
+      "CSS",
+      "technology"
+    ],
+    "url": "/blog/20230504105514",
+    "date": "2023-05-04T10:55:14.000000Z"
+  },
+  {
+    "id": "20230504201422",
+    "title": "CSS动画animation的简单应用",
+    "description": "要在CSS中创建动画，我们可以使用animation属性。该属性允许我们指定动画的关键帧、持续时间、时间函数、延迟和迭代次数。",
+    "tags": [
+      "CSS",
+      "technology"
+    ],
+    "url": "/blog/20230504201422",
+    "date": "2023-05-04T20:14:22.000000Z"
+  },
+  {
+    "id": "20230507101510",
+    "title": "使用CSS伪元素制作动感超酷的hover动画",
+    "description": "css有很多神奇的效果都是使用CSS伪元素利用视觉差来制作的，以前没怎么深入的研究过css，这次复习css的知识点才恍然大悟，原来css这么cool。",
+    "tags": [
+      "CSS",
+      "technology"
+    ],
+    "url": "/blog/20230507101510",
+    "date": "2023-05-07T10:15:10.000000Z"
+  },
+  {
+    "id": "20230507204135",
+    "title": "css链接悬停时滑动的下划线效果",
+    "description": "要创建链接悬停时滑动的下划线效果，可以向锚点标记添加伪元素，并使用CSS过渡动画来显示它。",
+    "tags": [
+      "CSS",
+      "technology"
+    ],
+    "url": "/blog/20230507204135",
+    "date": "2023-05-07T20:41:35.000000Z"
+  },
+  {
+    "id": "20230508090813",
+    "title": "Link-Validator 检测网站友情链接的JavaScript脚本",
+    "description": "Link-Validator 一个检测对方网站友情链接页面是否添加自己网站链接的JavaScript脚本。",
+    "tags": [
+      "站长源创",
+      "technology"
+    ],
+    "url": "/blog/20230508090813",
+    "date": "2023-05-08T09:08:13.000000Z"
+  },
+  {
+    "id": "20230508213333",
+    "title": "读《写作是门手艺》的思考",
+    "description": "这阵子一直在读编程相关的工具书，枯燥乏味的很！昨天偶然间在哪里？不记得是哪里看到的有人推荐《写作是门手艺》这本书，赶紧去京东淘了一本，今天就收到了。",
+    "tags": [
+      "读书",
+      "daily"
+    ],
+    "url": "/blog/20230508213333",
+    "date": "2023-05-08T21:33:33.000000Z"
+  },
+  {
+    "id": "20230509101659",
+    "title": "使用Fetch发送Ajax请求",
+    "description": "很久以前，在JavaScript中发送请求或者获取资源的时候很多人都是用的是`jQuery`，直到最近一直使用`axios`，但有的时候不想使用第三方的请求的库，这个时候你可以试试Fetch。",
+    "tags": [
+      "JavaScript",
+      "fetch",
+      "technology"
+    ],
+    "url": "/blog/20230509101659",
+    "date": "2023-05-09T10:16:59.000000Z"
+  },
+  {
+    "id": "20230509201037",
+    "title": "Git提示 ! [remote rejected] master -> master (failure)",
+    "description": "Git提示 ! [remote rejected] master -> master (failure) 的解决办法。",
+    "tags": [
+      "Git",
+      "technology"
+    ],
+    "url": "/blog/20230509201037",
+    "date": "2023-05-09T20:10:37.000000Z"
+  },
+  {
+    "id": "20230511182912",
+    "title": "Tailwind CSS的安装配置和体验",
+    "description": "Tailwind CSS是一种和传统CSS编写方式不一样的开发模式，Tailwind CSS编写大量的css的class，预置超多的css样式，让开发者可以通过在HTML的class中以命名的方式去调用这些class，几乎可以不用去写style的代码，只使用class的名称来代替。",
+    "tags": [
+      "TailwindCSS",
+      "technology"
+    ],
+    "url": "/blog/20230511182912",
+    "date": "2023-05-11T18:29:12.000000Z"
+  },
+  {
+    "id": "20230511191515",
+    "title": "安装了Tailwind CSS IntelliSense插件 vscode没有代码提示",
+    "description": "今天在vscode中安装Tailwind CSS IntelliSense这个插件，但是安装完后，编写HTML中的class的时候并没有得到tailwindcss的代码提示，看来配置项设置有问题。",
+    "tags": [
+      "TailwindCSS",
+      "technology"
+    ],
+    "url": "/blog/20230511191515",
+    "date": "2023-05-11T19:15:15.000000Z"
+  },
+  {
+    "id": "20230513082050",
+    "title": "再谈TailwindCSS的使用心得",
+    "description": "TailwindCSS上手确实很好用，有点明显，但是坑也挺多的。本来打算使用TailwindCSS制作一个全新的博客主题，但是在实际的使用过程中有一些不爽细节不吐不快。",
+    "tags": [
+      "TailwindCSS",
+      "technology"
+    ],
+    "url": "/blog/20230513082050",
+    "date": "2023-05-13T08:20:50.000000Z"
+  },
+  {
+    "id": "20230513104151",
+    "title": "display:none没有隐藏元素所占空间的原因",
+    "description": "今天想写一段前端的效果，然后就手动使用原生JavaScript生成了一些HTML的DOM，其中有一些是带有`display:none;`隐藏的css属性的，我的本意是想隐藏这些元素并且不占用空间，但是使用JavaScript动态生成的DOM，动态添加的css属性`display:none;`的话，元素就会发生只隐藏但空间占用的情况还是存在。",
+    "tags": [
+      "CSS",
+      "technology"
+    ],
+    "url": "/blog/20230513104151",
+    "date": "2023-05-13T10:41:51.000000Z"
+  },
+  {
+    "id": "20230514163231",
+    "title": "一些关于中文独立博客的聚合网站",
+    "description": "这阵子忙里偷闲的更新了一些博文，因为之前中间有段时间没有更新博客，所以对独立博客的这个圈子了解的也不是很多，最近通过一些独立博客的友情链接，发现了几个有意思的关于中文独立博客聚合的网址，觉得很有趣，不敢独享分享给大家。",
+    "tags": [
+      "独立博客",
+      "daily"
+    ],
+    "url": "/blog/20230514163231",
+    "date": "2023-05-14T16:32:31.000000Z"
+  },
+  {
+    "id": "20230515105053",
+    "title": "fetch()如何读取请求中的`user-agent`？",
+    "description": "但是添加后我想测试一下看看请求中headers是否添加了`fetch()如何读取请求中的`user-agent`？`,本来希望打印`response`中的herders来查看`user-agent`是否伪装成功，直接在fetch的response中遍历headers是无法获得`user-agent`这个属性。所以只好搭建一个临时服务器端来打印请求的request。",
+    "tags": [
+      "JavaScript",
+      "fetch",
+      "request",
+      "technology"
+    ],
+    "url": "/blog/20230515105053",
+    "date": "2023-05-15T10:50:53.000000Z"
+  },
+  {
+    "id": "20230515215136",
+    "title": "async/await和fetch()的使用",
+    "description": "async和await关键字让我们可以用一种更简洁的方式写出基于 Promise 的异步行为，而无需刻意地链式调用 promise。而FetchAPI可以通过网络访问资源，您可以发出HTTP请求（使用GET和POST其他方法）、下载和上传文件。",
+    "tags": [
+      "JavaScript",
+      "fetch",
+      "async",
+      "await",
+      "technology"
+    ],
+    "url": "/blog/20230515215136",
+    "date": "2023-05-15T21:51:36.000000Z"
+  },
+  {
+    "id": "20230516132817",
+    "title": "使用Moment.js或Day.js对HTML页面上的时间进行格式化",
+    "description": "一直想对博客页面的时间进行格式化，把标准的时间格式修改成XX时间前或相对时间，因为时间已经直接输出到了页面DOM中，所以考虑直接使用相关的js库来实现比较方便，搜了一下发现二个JavaScript的时间处理库比较不错，他们是：`Moment.js`和`Day.js`。",
+    "tags": [
+      "Moment.js",
+      "Day.js",
+      "technology"
+    ],
+    "url": "/blog/20230516132817",
+    "date": "2023-05-16T13:28:17.000000Z"
+  },
+  {
+    "id": "20230516211444",
+    "title": "giscus一款基于GitHub的免费评论系统！",
+    "description": "这几天一直琢磨这给博客文章页面添加个第三方的评论系统，最好是免费的，然后就搜到了`giscus`，从安装到使用，用一个字来评价：真特么绝！",
+    "tags": [
+      "giscus",
+      "technology"
+    ],
+    "url": "/blog/20230516211444",
+    "date": "2023-05-16T21:14:44.000000Z"
+  },
+  {
+    "id": "20230517084718",
+    "title": "使用Python编写并部署个人静态博客:(三)搜集博客数据",
+    "description": "博客的静态页面的生成都是由博客的基础数据支撑的，搜集博客的基本信息和博客文章数据，是生成博客静态文件的核心功能。",
+    "tags": [
+      "Python",
+      "碎言博客",
+      "technology"
+    ],
+    "url": "/blog/20230517084718",
+    "date": "2023-05-17T08:47:18.000000Z"
+  },
+  {
+    "id": "20230518092845",
+    "title": "Django 4.2 复习笔记(一)迅速概览",
+    "description": "许多年前曾经接触过Django，那时候还是1.X版本，现在都到了4.2版本了。今天抽空复习一下有关Django的相关技术要点。",
+    "tags": [
+      "Django",
+      "technology"
+    ],
+    "url": "/blog/20230518092845",
+    "date": "2023-05-18T09:28:45.000000Z"
+  },
+  {
+    "id": "20230520081153",
+    "title": "Django 4.2 复习笔记(二)编写和调试Model模型",
+    "description": "对于web应用的编写应该从哪里开始呢？如果包含了数据的增删改查，那么对于使用Django开发web应用来说，从模型(Model)开始最好不过了。模型准确且唯一的描述了数据。它包含您储存的数据的重要字段和行为。一般来说，每一个模型都映射一张数据库表。",
+    "tags": [
+      "Django",
+      "technology"
+    ],
+    "url": "/blog/20230520081153",
+    "date": "2023-05-20T08:11:53.000000Z"
+  },
+  {
+    "id": "20230522201116",
+    "title": "如何解决 Some chunks are larger than 500 KiB after minification？",
+    "description": "解决vite打包超出默认值，出现警告的错误。",
+    "tags": [
+      "vite",
+      "technology"
+    ],
+    "url": "/blog/20230522201116",
+    "date": "2023-05-22T20:11:16.000000Z"
+  },
+  {
+    "id": "20230522201800",
+    "title": "vite打包后element样式被其他框架样式覆盖的解决方法",
+    "description": "今天打包一个项目，发现element button 样式被其他矿建的样式覆盖了，项目里还使用了`tailwindcss`，当时打包的时候提示文件大小超过了默认值，我就修改了vite build的配置项chunkSizeWarningLimit,并且使文件分开打包，然后就发现element的样式后边始终跟随一个样式表，会覆盖element button的背景颜色的样式，网上搜了很多方法都没有效果。",
+    "tags": [
+      "vite",
+      "technology"
+    ],
+    "url": "/blog/20230522201800",
+    "date": "2023-05-22T20:18:00.000000Z"
+  },
+  {
+    "id": "20230524211340",
+    "title": "Django 4.2 复习笔记(三)Model模型字段",
+    "description": "Django的ORM在Python中算是数一数二的，使用起来非常的简单和丝滑，文档也写的简单直观，相对于SQLAlchemy有过之而无不及。",
+    "tags": [
+      "Django",
+      "technology"
+    ],
+    "url": "/blog/20230524211340",
+    "date": "2023-05-24T21:13:40.000000Z"
+  },
+  {
+    "id": "20230525084144",
+    "title": "Django 4.2 复习笔记(四)数据的查询Django的ORM",
+    "description": "Django的ORM操作非常简答，几乎把所有你能想到的数据库的操作都封装了，即便没有你需要的，也可以使用原生的SQL语句进行查询。",
+    "tags": [
+      "Django",
+      "technology"
+    ],
+    "url": "/blog/20230525084144",
+    "date": "2023-05-25T08:41:44.000000Z"
+  },
+  {
+    "id": "20230527070832",
+    "title": "css实现漂亮的彩虹渐变文本效果",
+    "description": "这段代码的效果是，为h1标签设置一个彩虹渐变的背景，并使文本颜色透明，从而实现彩虹渐变的文本效果。",
+    "tags": [
+      "CSS",
+      "technology"
+    ],
+    "url": "/blog/20230527070832",
+    "date": "2023-05-27T07:08:32.000000Z"
+  },
+  {
+    "id": "20230528074013",
+    "title": "Django 4.2 复习笔记(五)Django中常见的关系字段及其示例",
+    "description": "Django是一个使用Python编写的开源Web应用程序框架，它提供了一种方便的方式来处理数据库关系。Django的关系字段允许你在模型之间建立各种类型的关联关系，如一对一、一对多和多对多关系。以下是Django中常见的关系字段及其示例。",
+    "tags": [
+      "Django",
+      "technology"
+    ],
+    "url": "/blog/20230528074013",
+    "date": "2023-05-28T07:40:13.000000Z"
+  },
+  {
+    "id": "20230528074712",
+    "title": "SQLAlchemy的关系字段和Django的关系字段他们的不同点。",
+    "description": "SQLAlchemy和Django都是流行的Python框架，用于处理数据库关系。虽然它们都提供了关系字段的概念，但在实现和使用上有一些不同点。",
+    "tags": [
+      "Django",
+      "SQLAlchemy",
+      "technology"
+    ],
+    "url": "/blog/20230528074712",
+    "date": "2023-05-28T07:47:12.000000Z"
+  },
+  {
+    "id": "20230529075925",
+    "title": "Django 4.2 复习笔记(六)Django的路由",
+    "description": "在Django中，路由由URL模式和视图函数组成。URL模式定义了URL的结构和匹配规则，而视图函数则定义了当URL匹配时要执行的代码逻辑。Django的路由系统允许你根据URL的不同部分进行模式匹配，并从URL中提取参数传递给视图函数。",
+    "tags": [
+      "Django",
+      "technology"
+    ],
+    "url": "/blog/20230529075925",
+    "date": "2023-05-29T07:59:25.000000Z"
+  },
+  {
+    "id": "20230529193749",
+    "title": "Vue+element+Vite安装 Tailwind CSS",
+    "description": "在Vue+element+Vite项目中设置 Tailwind CSS。",
+    "tags": [
+      "TailwindCSS",
+      "technology"
+    ],
+    "url": "/blog/20230529193749",
+    "date": "2023-05-29T19:37:49.000000Z"
+  },
+  {
+    "id": "20230530145118",
+    "title": "JS中数组常用API总结，slice、splice、map、reduce、shift、filter、indexOf......",
+    "description": "在前端开发中，数组是一种常见且重要的数据结构。数组提供了许多便捷的方法来操作和处理其中的数据。本文将简单介绍前端中数组常用的API，包括添加、删除、截取、合并、转换等操作。",
+    "tags": [
+      "JavaScript",
+      "technology"
+    ],
+    "url": "/blog/20230530145118",
+    "date": "2023-05-30T14:51:18.000000Z"
+  },
+  {
+    "id": "20230531194542",
+    "title": "Tailwind CSS 相关的组件库",
+    "description": "Tailwind CSS 在任何特定于框架/技术的UI开发中都有发展趋势。我发现了一些最好的使用基于 tailwind CSS的组件库，您可以在其中直接使用tailwind自定义组件。",
+    "tags": [
+      "TailwindCSS",
+      "technology"
+    ],
+    "url": "/blog/20230531194542",
+    "date": "2023-05-31T19:45:42.000000Z"
+  },
+  {
+    "id": "20230601090428",
+    "title": "记一台老机器MacBook Pro macOS 10.14 Mojiave升级到macOS Monterey 12.6.2",
+    "description": "我有一台老机器MacBook Pro(2015)的，最近有些软件提示如果系统不升级到macOS Monterey，软件将不再提供最新版的支持与升级了，之前升级过一回macOS Big Sur，体验非常糟糕，后来就退版本了退回了macOS Mojiave，这次我有忍不住升级了，但是这次是最后一次系统升级了，在之后的版本就不支持这个老机器了，所以豁出去了，还好升级后使用体验还不错，记录下来供有相同经历的友人参考。",
+    "tags": [
+      "MacBook",
+      "macOS",
+      "technology"
+    ],
+    "url": "/blog/20230601090428",
+    "date": "2023-06-01T09:04:28.000000Z"
+  },
+  {
+    "id": "20230602070849",
+    "title": "Python权限管理框架 Casbin PyCasbin 的简单操作",
+    "description": "大多数应用都会和权限与权限管理打交道,有的时候我们希望有一套拿来即用的权限管理框架,既可以在小型的个人应用中使用,又可以应付大型应用的复杂权限的管理,Casbin可以满足你的这个小小愿望.Casbin支持多种编程语言,今天我们来试试Casbin在python下的简单操作.",
+    "tags": [
+      "Casbin",
+      "权限管理",
+      "technology"
+    ],
+    "url": "/blog/20230602070849",
+    "date": "2023-06-02T07:08:49.000000Z"
+  },
+  {
+    "id": "20230602101713",
+    "title": "macOS更新后 终端提示：The default interactive shell is now zsh.",
+    "description": "昨天升级了macOS系统到macOS Monterey,之后每次打开终端都会有一些提示，真的好烦人啊。",
+    "tags": [
+      "macOS",
+      "technology"
+    ],
+    "url": "/blog/20230602101713",
+    "date": "2023-06-02T10:17:13.000000Z"
+  },
+  {
+    "id": "20230603073259",
+    "title": "Django 4.2 复习笔记(七)Django 模板(TEMPLATES)",
+    "description": "作为一个网络框架，Django 需要一种方便的方式来动态生成 HTML，最常见的方法是依靠模板，一个模板包含了所需HTML输出的静态部分，以及一些特殊的语法，描述了如何插入动态内容。",
+    "tags": [
+      "Django",
+      "technology"
+    ],
+    "url": "/blog/20230603073259",
+    "date": "2023-06-03T07:32:59.000000Z"
+  },
+  {
+    "id": "20230604084835",
+    "title": "Django 4.2 复习笔记(八)Django 模板语言语法",
+    "description": "Django的页面渲染是通过Django的模板语法在模板中渲染上下文的变量来进行输出的，Django 的模板语言是为了在强大和简单之间取得平衡而设计的。它的设计让习惯于使用 HTML 的人感觉很舒服。如果你接触过其他基于文本的模板语言，如 Smarty 或 Jinja2 ，你应该会对 Django 的模板感到很舒服。",
+    "tags": [
+      "Django",
+      "technology"
+    ],
+    "url": "/blog/20230604084835",
+    "date": "2023-06-04T08:48:35.000000Z"
+  },
+  {
+    "id": "20230604161547",
+    "title": "如何单独使用Django ORM 在非Django项目中使用Django ORM？",
+    "description": "在Python中进行一些不是很复杂的数据库操作的时候我们都会选择使用一些ORM框架，主要的ORM框架包括Django ORM、SQLAlchemy、Pony ORM、Peewee和Tortoise ORM等。这里Django ORM在使用方面更为简单和人性化。但是Django ORM和Django的绑定很紧密，如何单独使用Django ORM呢？在非Django项目中使用Django ORM？",
+    "tags": [
+      "Django",
+      "technology"
+    ],
+    "url": "/blog/20230604161547",
+    "date": "2023-06-04T16:15:47.000000Z"
+  },
+  {
+    "id": "20230605083417",
+    "title": "Django 4.2 复习笔记(九)使用Django的上下文处理器（context processor）",
+    "description": "web站点的上下文对于新手可能有些陌生和晦涩，这个东西有什么用？上下文就是一个变量或是函数，在整个web站点中都可以调用并获取其中定义的值。在Django中，全局上下文（Global Context）是指在每个视图中都可用的全局变量或函数，可以在模板中直接访问。Django提供了一种机制来定义全局上下文，使得这些变量或函数在所有的模板中都可以使用。",
+    "tags": [
+      "Django",
+      "technology"
+    ],
+    "url": "/blog/20230605083417",
+    "date": "2023-06-05T08:34:17.000000Z"
+  },
+  {
+    "id": "20230607211438",
+    "title": "Matrix 矩阵 JavaScript代码生成器",
+    "description": "今天写了个Matrix 矩阵 JavaScript代码生成器，其实几年前就用Python的pygame实现过一个Matrix，最近在玩JavaScript canvas，索性使用JavaScript原生代码又撸了一遍，并且做了个代码生成器，方便修改Matrix的一些参数。",
+    "tags": [
+      "JavaScript",
+      "technology"
+    ],
+    "url": "/blog/20230607211438",
+    "date": "2023-06-07T21:14:38.000000Z"
+  },
+  {
+    "id": "20230608102340",
+    "title": "CDN引用lodash报错 _.debounce is not a function",
+    "description": "今天有一段代码需要用到JavaScript的防抖功能，忽的想起lodash中有这个功能函数，由于代码比较简单，只需直接引用CDN即可，便在网上搜了CDN直接引入，但是在使用_.debounce方法的时候却报错`_.debounce is not a function`!真是奇了个怪了！",
+    "tags": [
+      "lodash",
+      "bug",
+      "technology"
+    ],
+    "url": "/blog/20230608102340",
+    "date": "2023-06-08T10:23:40.000000Z"
+  },
+  {
+    "id": "20230608184436",
+    "title": "一行代码升级你的node.js为最新稳定版",
+    "description": "今天，有一个应用需要更高版本的node.js，但是我从来都没有升级过node.js，特意Google了一下，发现一个超级简单的升级node.js的方法，这里简单的记录一下。",
+    "tags": [
+      "node.js",
+      "technology"
+    ],
+    "url": "/blog/20230608184436",
+    "date": "2023-06-08T18:44:36.000000Z"
+  },
+  {
+    "id": "20230608185126",
+    "title": "clipboard.js 一款简单好用的将文本复制到剪贴板的现代方法",
+    "description": "复制文本到剪贴板本应该不难。它不应该需要配置的繁琐步骤或大量的加载空间。最重要的是，它不应该依赖于Flash或任何臃肿的框架clipboard.js。",
+    "tags": [
+      "JavaScript库和框架",
+      "technology"
+    ],
+    "url": "/blog/20230608185126",
+    "date": "2023-06-08T18:51:26.000000Z"
+  },
+  {
+    "id": "20230609081842",
+    "title": "使用Python编写并部署个人静态博客:(四)逐步输出静态页面",
+    "description": "使用Python编写并部署个人静态博客这个系列写第一篇的时候这是信心满满，以为会有很多同道中人，但是发现独立博客都挺少了，自己编写并部署博客的更是少的可怜。这就好比用电饭锅做饭，难道还要自己研究怎么做电饭锅？直接使用WordPress或一些静态站点生成器不好吗？嗯，挺好的，但是我还是选择自己编写并部署自己的博客。",
+    "tags": [
+      "碎言博客",
+      "technology"
+    ],
+    "url": "/blog/20230609081842",
+    "date": "2023-06-09T08:18:42.000000Z"
+  },
+  {
+    "id": "20230609094312",
+    "title": "好看的博客千篇一律 有趣的博主万里挑一",
+    "description": "每次看到有关独立博客的博文，都觉得这类博文比较沉闷悲观，大多都是阐述玩独立博客的人不多或是越来越少，充满着怀旧的复古气息，博主一般都会对自己从建站到现在是如何坚持过来的洋洋洒洒的写上一篇，嗯？咱就爱看这类的博文，一个博主真实的一面。",
+    "tags": [
+      "独立博客",
+      "daily"
+    ],
+    "url": "/blog/20230609094312",
+    "date": "2023-06-09T09:43:12.000000Z"
+  },
+  {
+    "id": "20230611084325",
+    "title": "Django 4.2 复习笔记(九)Django Forms 使用表单",
+    "description": "在web日常中表单是必不可少的，处理数据的输入与交互在web站点中是非常重要的，Django提供了一系列的工具和库来帮助您构建表单来接收网站访客的输入，然后处理以及响应这些输入。",
+    "tags": [
+      "Django",
+      "technology"
+    ],
+    "url": "/blog/20230611084325",
+    "date": "2023-06-11T08:43:25.000000Z"
+  },
+  {
+    "id": "20230612091630",
+    "title": "一键生成Matrix动态头像",
+    "description": "使用之前编写的Matrix JavaScript代码生成器做了一个动态的头像，效果还不错，分享给大家，喜欢的可以试一下，做好了嵌入自己的网站使用还是挺酷的！",
+    "tags": [
+      "JavaScript",
+      "technology"
+    ],
+    "url": "/blog/20230612091630",
+    "date": "2023-06-12T09:16:30.000000Z"
+  },
+  {
+    "id": "20230613193700",
+    "title": "使用Python编写并部署个人静态博客:(五)Python异步输出博文页面",
+    "description": "对于静态博客来说，对于页面的批量生成和更新需要更快的速度才是最佳，这里推荐Python的异步协程文件处理方法，可以达到很不错的速度！",
+    "tags": [
+      "碎言博客",
+      "technology"
+    ],
+    "url": "/blog/20230613193700",
+    "date": "2023-06-13T19:37:00.000000Z"
+  },
+  {
+    "id": "20230614151948",
+    "title": "你最讨厌什么样的独立博客？",
+    "description": "搭建、部署、专心撰写博文，是每个博主都需要花费一些心思去做的事，每个博客就像一扇窗，我们透过窗口看到的那些光就是作者内心真实的表露，有些强烈如火焰，有些温柔如月光。但是有些，我真特么的想一脚给他踹关上。",
+    "tags": [
+      "独立博客",
+      "站长吐槽",
+      "daily"
+    ],
+    "url": "/blog/20230614151948",
+    "date": "2023-06-14T15:19:48.000000Z"
+  },
+  {
+    "id": "20230616120848",
+    "title": "基于daisyUI Tailwind CSS做了一个博客主题",
+    "description": "花了几个小时基于daisyUI Tailwind CSS做了一个博客主题，很早就想把博客的样式换成基于Tailwind CSS为基础框架的，今天终于实现了。",
+    "tags": [
+      "碎言博客",
+      "technology"
+    ],
+    "url": "/blog/20230616120848",
+    "date": "2023-06-16T12:08:48.000000Z"
+  },
+  {
+    "id": "20230617102523",
+    "title": "从一次浏览器兼容问题到何不放过自己做个快乐的博主",
+    "description": "新主题做的很满意，主要是在于技术选型、策划、编写的过程中很畅快，让这个39°炎热的初夏有了一丝丝凉意，唯一美中不足的就是iPhone的Safari浏览器有个兼容性问题让人头疼。",
+    "tags": [
+      "碎言博客",
+      "站长吐槽",
+      "daily"
+    ],
+    "url": "/blog/20230617102523",
+    "date": "2023-06-17T10:25:23.000000Z"
+  },
+  {
+    "id": "20230618090417",
+    "title": "百度统计代码可以解决浏览器兼容问题？",
+    "description": "之前新主题有个主题切换的功能，使用了下拉菜单，但是这个下拉菜单在webkit下有兼容问题，下拉菜单弹出后不能收回，但是最后这个兼容问题却奇怪的被百度统计代码给解决了！",
+    "tags": [
+      "JavaScript",
+      "BUG",
+      "technology"
+    ],
+    "url": "/blog/20230618090417",
+    "date": "2023-06-18T09:04:17.000000Z"
+  },
+  {
+    "id": "20230621075855",
+    "title": "体验Pinia Vue的专属状态管理库",
+    "description": "在前端Vue项目开发中，数据的跨组件状态在某些场景下是很有必要的，当你在一个SPA单页面的APP中需要一个全局变量的时候，Pinia是一个简单而又高效的选择。",
+    "tags": [
+      "Vue",
+      "Pinia",
+      "technology"
+    ],
+    "url": "/blog/20230621075855",
+    "date": "2023-06-21T07:58:55.000000Z"
+  },
+  {
+    "id": "20230621205617",
+    "title": "终于把Macbook Pro A1389的电池给拆掉了",
+    "description": "我那台2015款的Macbook Pro A1389的电池终于又挺不住了，鼓了个大包，算了，还是拆掉吧。",
+    "tags": [
+      "MacBook",
+      "technology"
+    ],
+    "url": "/blog/20230621205617",
+    "date": "2023-06-21T20:56:17.000000Z"
+  },
+  {
+    "id": "20230623155935",
+    "title": "macOS npx create-react-app 创建react项目报错或是没有写入权限",
+    "description": "今天闲来无事，打算创建一个react的项目玩玩，但是发现使用`npx create-react-app`无法创建react项目，如果添加sudo前缀，虽能创建，但是无法修改项目中的文件，这可奇了个怪了？！",
+    "tags": [
+      "react",
+      "macOS",
+      "technology"
+    ],
+    "url": "/blog/20230623155935",
+    "date": "2023-06-23T15:59:35.000000Z"
+  },
+  {
+    "id": "20230626075924",
+    "title": "前端React+TailwindCSS+daisyUI开发环境的快速搭建",
+    "description": "一步一步的快速搭建前端React+TailwindCSS+daisyUI开发环境",
+    "tags": [
+      "前端",
+      "react",
+      "TailwindCSS",
+      "daisyUI",
+      "technology"
+    ],
+    "url": "/blog/20230626075924",
+    "date": "2023-06-26T07:59:24.000000Z"
+  },
+  {
+    "id": "20230627183126",
+    "title": "Windows PowerShell报错：因为在此系统上禁止运行脚本的解决",
+    "description": "由于更换了机器，这阵子可能开始使用Windows系统了，有8年左右没怎么系统的使用Windows了，今天刚接手就遇到了问题，终端下运行pnpm，结果PowerShell报错：因为在此系统上禁止运行脚本的解决。",
+    "tags": [
+      "PowerShell",
+      "technology"
+    ],
+    "url": "/blog/20230627183126",
+    "date": "2023-06-27T18:31:26.000000Z"
+  },
+  {
+    "id": "20230629155438",
+    "title": "使用React+Vite+TailwindCSS+daisyUI打造一个简单的ToDos",
+    "description": "闲来无事，琢磨着体验一下react吧，花了一天的时间看了看react的官方文档，然后能照着以前用vue写的ToDo使用react重构了一遍，这里简单记录并总结一下学习过程。",
+    "tags": [
+      "前端",
+      "react",
+      "TailwindCSS",
+      "daisyUI",
+      "technology"
+    ],
+    "url": "/blog/20230629155438",
+    "date": "2023-06-29T15:54:38.000000Z"
+  },
+  {
+    "id": "20230630082246",
+    "title": "在react或vue中使用localStorage存储数据",
+    "description": "对于一些超小型且数据临时并不重要的web应用，可以考虑把数据存储到浏览器中，使用浏览器API：localStorage",
+    "tags": [
+      "JavaScript",
+      "technology"
+    ],
+    "url": "/blog/20230630082246",
+    "date": "2023-06-30T08:22:46.000000Z"
+  },
+  {
+    "id": "20230702103422",
+    "title": "Stable Diffusion ControlNet openpose 报错无法使用",
+    "description": "今天发现SD ControlNet openpose竟然报错无法使用，这里分享一下解决这个错误的过程。",
+    "tags": [
+      "StableDiffusion",
+      "ControlNet",
+      "technology"
+    ],
+    "url": "/blog/20230702103422",
+    "date": "2023-07-02T10:34:22.000000Z"
+  },
+  {
+    "id": "20230703194514",
+    "title": "Stable Diffusion 相关教程与模型的记录",
+    "description": "这几天体验了Stable Diffusion的强大，被AI绘画给惊艳到了，Stable Diffusion，是一款开源免费的AI动画生成工具，如果机器配置还可以，推荐你试试，操作整体来说很简单。",
+    "tags": [
+      "未分类",
+      "technology"
+    ],
+    "url": "/blog/20230703194514",
+    "date": "2023-07-03T19:45:14.000000Z"
+  },
+  {
+    "id": "20230704135120",
+    "title": "解决错误 ERROR [WinError 10049] 在其上下文中，该请求的地址无效。",
+    "description": "由于换了Windows系统，之前的代码都一并拷贝过来了，今天运行了一个fastapi写的程序，结果报错了，这里分享一下解决的过程。",
+    "tags": [
+      "python",
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/20230704135120",
+    "date": "2023-07-04T13:51:20.000000Z"
+  },
+  {
+    "id": "20230705083951",
+    "title": "Typed.js 一款有意思的网页打字机效果库",
+    "description": "博客页面不仅需要简介大方漂亮美观，还需要一些动态的效果，如果引入动态的GIF图片其大小会影响页面的加载速度，这里推荐一个JavaScript的打字机效果库Typed.js，其漂亮的打字机效果和简单的使用方法，值得博主拥有。",
+    "tags": [
+      "Typed",
+      "technology"
+    ],
+    "url": "/blog/20230705083951",
+    "date": "2023-07-05T08:39:51.000000Z"
+  },
+  {
+    "id": "20230706084131",
+    "title": "编程新手学习过程中如何更好的提问？",
+    "description": "之前创建了一个Python和JavaScript的学习交流群，有好几年了吧？这几天在QQ搜索Python是不知怎的排名突然靠前了一点，导致很多新人加了进来，一些新手的提问真是让人无语。。。。我以为都是AI元年了，怎么还会有这么多不会提问的孩子呢？",
+    "tags": [
+      "Python",
+      "编程",
+      "technology"
+    ],
+    "url": "/blog/20230706084131",
+    "date": "2023-07-06T08:41:31.000000Z"
+  },
+  {
+    "id": "20230707084736",
+    "title": "一键更新Github部署的静态博客",
+    "description": "对于将博客部署于Github的博主来说，每次写完日志或是对博客做了些改动，都会同步远程的Github仓库，重复的在终端执行git XXXX的命令，国内连接Github很不稳定，所以有时需要重复很多次，很麻烦的一说，今天我们就要解决掉这个痛点的。",
+    "tags": [
+      "github",
+      "python",
+      "Git",
+      "technology"
+    ],
+    "url": "/blog/20230707084736",
+    "date": "2023-07-07T08:47:36.000000Z"
+  },
+  {
+    "id": "20230708152137",
+    "title": "前端React+Material UI开发环境的快速搭建",
+    "description": "打算把之前一个vue的小应用用使用react+Material UI重构一下，这里记录一下React+Material UI开发环境的快速搭建。",
+    "tags": [
+      "react",
+      "Material",
+      "technology"
+    ],
+    "url": "/blog/20230708152137",
+    "date": "2023-07-08T15:21:37.000000Z"
+  },
+  {
+    "id": "20230709104417",
+    "title": "七年之痒！别了我曾深爱的MacBookPro",
+    "description": "15年底，买了一台MacBookPro 15.6寸的笔记本，或许每个程序员都会有购买Apple设备的冲动，自从投身到Apple的阵营之后，平板、手机、老婆的平板和手机都换成了Apple，但是终有一天，我发现我也会对Apple有了厌倦之意。",
+    "tags": [
+      "MacBookPro",
+      "daily"
+    ],
+    "url": "/blog/20230709104417",
+    "date": "2023-07-09T10:44:17.000000Z"
+  },
+  {
+    "id": "20230710113108",
+    "title": "react useEffect() 为什么在开发模式的时候会执行两次？",
+    "description": "额，今天在编写一段简短的测试代码，想在组件加载的时候弹出一个alert提示，但是刷新的时候会弹出两次alert提示？只能是奇怪了！研究了半天终于找到了解决的办法。",
+    "tags": [
+      "react",
+      "technology"
+    ],
+    "url": "/blog/20230710113108",
+    "date": "2023-07-10T11:31:08.000000Z"
+  },
+  {
+    "id": "20230711185422",
+    "title": "react useEffect()中使用lodash库中的防抖debounce",
+    "description": "今天在react useEffect()中有一个function需要防抖，于是乎就install了lodash库，但是直接在useEffect()中使用却没有效果，经过一番查找，最终解决了这个问题。",
+    "tags": [
+      "debounce",
+      "react",
+      "technology"
+    ],
+    "url": "/blog/20230711185422",
+    "date": "2023-07-11T18:54:22.000000Z"
+  },
+  {
+    "id": "20230714101340",
+    "title": "react中如把HTML代码转成字符串进行渲染？",
+    "description": "今天需要再react组件内渲染一段HTML代码，但是直接复制到组件内渲染会被当做HTML渲染出HTML的dom结构，我的本意是要把这段HTML代码输出为字符串，记录一下解决过程。",
+    "tags": [
+      "react",
+      "technology"
+    ],
+    "url": "/blog/20230714101340",
+    "date": "2023-07-14T10:13:40.000000Z"
+  },
+  {
+    "id": "20230715170702",
+    "title": "在react中使用复制插件clipboard.js",
+    "description": "之前在html中使用clipboard.js是很简单的，引用CDN，然后new一个clipboard对象，绑定DOM就可以搞定一键复制文本了。这次要在react中使用，所以原来的方式就不行了，来看看react中如何使用clipboard.js。",
+    "tags": [
+      "react",
+      "clipboard.js",
+      "technology"
+    ],
+    "url": "/blog/20230715170702",
+    "date": "2023-07-15T17:07:02.000000Z"
+  },
+  {
+    "id": "20230716165119",
+    "title": "七月的焦虑",
+    "description": "今年夏天热的早温度也高，东北这边很早就步入了35°+，感觉很热，热的让人焦虑。",
+    "tags": [
+      "站长吐槽",
+      "daily"
+    ],
+    "url": "/blog/20230716165119",
+    "date": "2023-07-16T16:51:19.000000Z"
+  },
+  {
+    "id": "20230717103801",
+    "title": "久了，博客主题就会一直做减法",
+    "description": "昨天晚上登录了google Search Console，就看到站内留言，内容大致是：展开合作 展开合作 我们正在验证您对核心网页指标问题。额？我犯了什么错误？",
+    "tags": [
+      "碎言博客",
+      "technology"
+    ],
+    "url": "/blog/20230717103801",
+    "date": "2023-07-17T10:38:01.000000Z"
+  },
+  {
+    "id": "20230718150806",
+    "title": "速度与优雅：博客性能优化之旅",
+    "description": "由于需要改进LCP 问题：超过了 2.5 秒（桌面设备）这个问题，花了点时间把最近做的这个主题进行了一些性能的优化，嗯，优化后的页面打开速度还真是不错，优化博客的主题，大概是每个博主必经之路吧。",
+    "tags": [
+      "碎言博客",
+      "站长吐槽",
+      "technology"
+    ],
+    "url": "/blog/20230718150806",
+    "date": "2023-07-18T15:08:06.000000Z"
+  },
+  {
+    "id": "20230718165253",
+    "title": "pycharm 正在关闭项目(closing project)无法关闭退出程序的解决方法！",
+    "description": "今天下载了最新版的pythonIDE PyCharm的最新版社区版，本打算体验一下，结果退出程序的时候，有一个窗口，正在关闭项目 然后就卡在哪里不动了，真是酸爽。",
+    "tags": [
+      "PyCharm",
+      "python",
+      "technology"
+    ],
+    "url": "/blog/20230718165253",
+    "date": "2023-07-18T16:52:53.000000Z"
+  },
+  {
+    "id": "20230719093740",
+    "title": "Python Gui新框架:NiceGui之初体验",
+    "description": "对于使用python的朋友，对于python的gui总是有一种不满意的情绪，确实，python下边没有什么太出色的GUI框架，或多或少都有些不足或是遗憾吧，不过这阵子NiceGui逐渐的火起来了，赶紧试试吧.",
+    "tags": [
+      "python",
+      "Python GUI",
+      "NiceGui",
+      "technology"
+    ],
+    "url": "/blog/20230719093740",
+    "date": "2023-07-19T09:37:40.000000Z"
+  },
+  {
+    "id": "20230720230350",
+    "title": "1300M USB双频2.4+5G无线网卡的一些常识和使用技巧",
+    "description": "入手了一个USB的双频无线网卡，但是插到电脑USB上后，速度可真是一般了，家里升级了1000M宽带，但是下载还不到3M的速度，理论上也就是20M的宽带啊？这不科学啊？赶紧找了找资料调试了一下，下载速度终于提上了来了！",
+    "tags": [
+      "无线网卡",
+      "technology"
+    ],
+    "url": "/blog/20230720230350",
+    "date": "2023-07-20T23:03:50.000000Z"
+  },
+  {
+    "id": "20230721170856",
+    "title": "最终还是决定使用传统的网线来解决千兆速率问题。",
+    "description": "纠结了一天，几不舍得花几百块换设备，又不想浪费千兆宽带的资源，最终决定采用了原始的布网线方式来解决这个问题。",
+    "tags": [
+      "宽带",
+      "daily"
+    ],
+    "url": "/blog/20230721170856",
+    "date": "2023-07-21T17:08:56.000000Z"
+  },
+  {
+    "id": "20230722152722",
+    "title": "如何使用CSS为博客标题设置彩虹颜色？",
+    "description": "博客的页面有些单调，但是又不想使用额外的JS代码来增加页面的加载负担，这个时候你可以考虑一下使用css来增加博客页面的效果，比如彩色博客标题。",
+    "tags": [
+      "css",
+      "technology"
+    ],
+    "url": "/blog/20230722152722",
+    "date": "2023-07-22T15:27:22.000000Z"
+  },
+  {
+    "id": "20230723175216",
+    "title": "使用JavaScript编写自己的私人RSS订阅程序",
+    "description": "今天闲来无事，想编写一个私人的rss订阅，用来订阅自己喜欢的博客，终端运行后可以采集列表中博客的RSS文章，只关注最近一星期的数据，然后选中文章，通过浏览器打开博文地址浏览。好吧想法有了，那么就开干！",
+    "tags": [
+      "JavaScript",
+      "technology"
+    ],
+    "url": "/blog/20230723175216",
+    "date": "2023-07-23T17:52:16.000000Z"
+  },
+  {
+    "id": "20230724132403",
+    "title": "理工计算机专业准大学生如何选配笔记本？",
+    "description": "昨天，朋友的孩子被大连理工大学录取了，很开心！晚上就叫上了我们几个朋友一起聚聚，席间，朋友问我该给孩子配个什么样的笔记本？",
+    "tags": [
+      "笔记本",
+      "technology"
+    ],
+    "url": "/blog/20230724132403",
+    "date": "2023-07-24T13:24:03.000000Z"
+  },
+  {
+    "id": "20230725180343",
+    "title": "时代的变迁：从56K拨号上网到1G光纤的回忆",
+    "description": "今天，电信宽带提速了，从200M提到了1G入户，这次网速的提升真是一次速度的飞跃。回想起那些年艰辛的上网历程，还是有些感慨的。",
+    "tags": [
+      "宽带",
+      "daily"
+    ],
+    "url": "/blog/20230725180343",
+    "date": "2023-07-25T18:03:43.000000Z"
+  },
+  {
+    "id": "20230726132925",
+    "title": "export exports module.exports 这三个命令的区别是什么如何使用？",
+    "description": "export exports module.exports 这三个命令中export是是ECMAScript 6（ES6）中引入的模块化规范,exports module.exports是Node.js中用于实现CommonJS模块规范的对象。",
+    "tags": [
+      "node.js",
+      "technology"
+    ],
+    "url": "/blog/20230726132925",
+    "date": "2023-07-26T13:29:25.000000Z"
+  },
+  {
+    "id": "20230727194930",
+    "title": "Windows下国产杀毒软件还有选择吗？火绒安全可以一试。",
+    "description": "换回Windows使用的是Windows 10，机器买来后系统已经安装了360杀毒套件，但是对360杀毒确实挺反感的，所以一直在考虑找个杀毒软件的替代。",
+    "tags": [
+      "杀毒软件",
+      "technology"
+    ],
+    "url": "/blog/20230727194930",
+    "date": "2023-07-27T19:49:30.000000Z"
+  },
+  {
+    "id": "20230728152300",
+    "title": "博客大数据分析：38880条博文揭示博主最爱写什么？",
+    "description": "十年之约有个rss订阅的专题页面，这里通过十年的博主RSS采集了很多的博文，那么多博文，真是好奇大家都在写什么？那么，我们来一次博客大数据分析，看看这些年博主们都写了些什么？",
+    "tags": [
+      "中文博客",
+      "technology"
+    ],
+    "url": "/blog/20230728152300",
+    "date": "2023-07-28T15:23:00.000000Z"
+  },
+  {
+    "id": "20230729151214",
+    "title": "使用python结合feedparser模块编写自己的私人RSS订阅程序",
+    "description": "前几天使用JavaScript编写了一个简单的私人RSS订阅终端程序，但是是自己对JavaScript的并不是很熟悉，今天有用python重构了一下，感觉python的代码看起来更简单直观。",
+    "tags": [
+      "python",
+      "feedparser",
+      "technology"
+    ],
+    "url": "/blog/20230729151214",
+    "date": "2023-07-29T15:12:14.000000Z"
+  },
+  {
+    "id": "20230730133646",
+    "title": "Ubuntu 22 安装Docker过程记录",
+    "description": "今天突然想把docker在Windows10下安装上，结果被坑的一塌糊涂，后来没办法了，只好在虚拟机的ubuntu下边安装了docker。",
+    "tags": [
+      "Ubuntu",
+      "Docker",
+      "technology"
+    ],
+    "url": "/blog/20230730133646",
+    "date": "2023-07-30T13:36:46.000000Z"
+  },
+  {
+    "id": "20230730144709",
+    "title": "vim常用命令整理",
+    "description": "最近要经常和终端打交道了，所以整理了一下vim的常用命令用来参考。",
+    "tags": [
+      "vim",
+      "technology"
+    ],
+    "url": "/blog/20230730144709",
+    "date": "2023-07-30T14:47:09.000000Z"
+  },
+  {
+    "id": "20230730223550",
+    "title": "Docker基础学习笔记和常用命令汇总",
+    "description": "这是一篇Docker的学习笔记，记录了Docker一些日常操作。",
+    "tags": [
+      "Docker",
+      "technology"
+    ],
+    "url": "/blog/20230730223550",
+    "date": "2023-07-30T22:35:50.000000Z"
+  },
+  {
+    "id": "20230801081356",
+    "title": "八月回顾：博客之路，一路前行",
+    "description": "一转眼已经是八月了，重建博客也有三个半月了，这阵子都在坚持学习和复盘，偶尔重构之前的代码，坚持写博客确实有些收获，之前停更了一段时间具体是因为什么已经不重要了，人总要向前看，这才是最重要的。",
+    "tags": [
+      "站长吐槽",
+      "心情日记",
+      "technology"
+    ],
+    "url": "/blog/20230801081356",
+    "date": "2023-08-01T08:13:56.000000Z"
+  },
+  {
+    "id": "20230802231149",
+    "title": "python requests 设置读取超时时间",
+    "description": "python中的requests库极大的方便了采集中的网络请求，但是在采集中会遇到一种比较极端的情况：请求的读取超时。这种情况呀怎么解决？",
+    "tags": [
+      "python",
+      "requests",
+      "technology"
+    ],
+    "url": "/blog/20230802231149",
+    "date": "2023-08-02T23:11:49.000000Z"
+  },
+  {
+    "id": "20230803133342",
+    "title": "1767个中文博客的数据洞察：中文博主都喜欢干啥？",
+    "description": "前几天有个网友给了我一个API的接口，这个接口返回了大量的中文博客数据，通过这个数据我做了一些简单的分析，如果你正巧也对中文博客感兴趣，不妨进来随便看看。",
+    "tags": [
+      "中文博客",
+      "technology"
+    ],
+    "url": "/blog/20230803133342",
+    "date": "2023-08-03T13:33:42.000000Z"
+  },
+  {
+    "id": "20230804161310",
+    "title": "聊 聊 友 情 链 接 ",
+    "description": "在浏览一个博客时，除了关注关于我的页面，友情链接页面也是吸引人注意的重要部分。如果说关于我是一个博主主观的自我介绍，那么友情链接则是一个博主个人喜好的侧写。",
+    "tags": [
+      "中文博客",
+      "daily"
+    ],
+    "url": "/blog/20230804161310",
+    "date": "2023-08-04T16:13:10.000000Z"
+  },
+  {
+    "id": "20230805163819",
+    "title": "史诗结合的浪漫：《长安三万里》",
+    "description": "这个暑假匆匆忙忙的就过去了大半，孩子说不喜欢假期，因为假期要比上学还累。直到今天，孩子终于忙完了假期中所有艺术类的课程，我赶紧带她一起去看了那场长达三个小时的史诗级的动画片《长安三万里》。",
+    "tags": [
+      "观影",
+      "daily"
+    ],
+    "url": "/blog/20230805163819",
+    "date": "2023-08-05T16:38:19.000000Z"
+  },
+  {
+    "id": "20230805173210",
+    "title": "局域网的DNS设置192.168.0.1与8.8.8.8,114.114.114.114有什么区别？",
+    "description": "虽然上网这么多年了而且也是个半吊子程序员，但是我从来没去了解过DNS这么设置的区别与作用，不过从实际操作上来说，设置公共DNS在访问一些网站上确实有优势，解决了一些但不开或是打开缓慢的问题。",
+    "tags": [
+      "局域网",
+      "DNS",
+      "technology"
+    ],
+    "url": "/blog/20230805173210",
+    "date": "2023-08-05T17:32:10.000000Z"
+  },
+  {
+    "id": "20230806194305",
+    "title": "PHILIPS猛禽SPK8404机械键盘手感真是超赞！",
+    "description": "原来用的罗技K480是2019年买的，用起来已经感觉很“费劲”了，打字的话需要使劲按键盘的键子，手指头都觉得很累！最近实在是受不了了，某东直接入手了一个PHILIPS机械键盘。",
+    "tags": [
+      "机械键盘",
+      "daily"
+    ],
+    "url": "/blog/20230806194305",
+    "date": "2023-08-06T19:43:05.000000Z"
+  },
+  {
+    "id": "20230806222422",
+    "title": "罗技K380 F1-F12 功能键锁定",
+    "description": "原来的罗技K380键盘给老婆用了，但是键盘的F1-F2默认是一些功能键，用起来非常不习惯，所以需要恢复到原来Windows默认的功能，解决方法如下",
+    "tags": [
+      "罗技K380",
+      "daily"
+    ],
+    "url": "/blog/20230806222422",
+    "date": "2023-08-06T22:24:22.000000Z"
+  },
+  {
+    "id": "20230808080905",
+    "title": "使用Tailwind css和JavaScript实现一个简单的返回顶部功能",
+    "description": "博客的页面需要一个返回顶部的功能，之前都是使用的jQuery的插件来实现的，但是一个及其简单的功能就需要引入jQuery和一个相关插件总觉得有些多余，所以只好自己动手实现一个返回顶部的功能。",
+    "tags": [
+      "JavaScript",
+      "TailwindCSS",
+      "technology"
+    ],
+    "url": "/blog/20230808080905",
+    "date": "2023-08-08T08:09:05.000000Z"
+  },
+  {
+    "id": "20230811113613",
+    "title": "关于使用Next.js重构博客构思的记录",
+    "description": "手痒，又想重构博客了。博客的1.0使用的是Django，2.0使用的是JavaScript。3.0使用的python生成的静态页面，目前正在考虑使用Next.js重构现有博客。",
+    "tags": [
+      "Next.js",
+      "碎言博客",
+      "technology"
+    ],
+    "url": "/blog/20230811113613",
+    "date": "2023-08-11T11:36:13.000000Z"
+  },
+  {
+    "id": "20230812135025",
+    "title": "仅用了几个小时就使用next.js重构博客的所有功能",
+    "description": "断断续续花了几个小时的时间，我成功地使用了 Next.js 复刻了我的博客的全部功能，真是事半功倍啊！",
+    "tags": [
+      "next.js",
+      "碎言博客",
+      "technology"
+    ],
+    "url": "/blog/20230812135025",
+    "date": "2023-08-12T13:50:25.000000Z"
+  },
+  {
+    "id": "20230813204827",
+    "title": "关于Google LCP 问题：超过了2.5秒 验证已通过",
+    "description": "持续了一个月的 LCP 问题：超过了 2.5 秒（桌面设备），经过了20多天的验证终于通过了，总结一下关于解决LCP问题的经验。",
+    "tags": [
+      "LCP",
+      "technology"
+    ],
+    "url": "/blog/20230813204827",
+    "date": "2023-08-13T20:48:27.000000Z"
+  },
+  {
+    "id": "20230814211248",
+    "title": "放弃Next.js重构博客：经验、教训与未来技术探索",
+    "description": "前几天大言不惭的说是要使用next重构博客的程序，但是经过几天的磨合，当时的锐气几乎都被消灭了，所以说人还是不要吹牛逼，不然......",
+    "tags": [
+      "站长吐槽",
+      "technology"
+    ],
+    "url": "/blog/20230814211248",
+    "date": "2023-08-14T21:12:48.844725Z"
+  },
+  {
+    "id": "20230815193644",
+    "title": "GitHub Actions 是干什么用的？",
+    "description": "自学编程很久了，对GitHub的使用熟练度自认为还是可以了，以前也看到过仓库导航上的GitHub Actions，当时由于没有相关的需求所以并没有去主动的了解，这几天总是想做一些自动化的脚本，所以才发现GitHub很早就做了这个自动化的功能。",
+    "tags": [
+      "Actions",
+      "technology"
+    ],
+    "url": "/blog/20230815193644",
+    "date": "2023-08-15T19:36:44.141108Z"
+  },
+  {
+    "id": "20230818211027",
+    "title": "短暂而忙碌的暑假即将谢幕",
+    "description": "使用next撸了一个极简的网址导航，本打算是用来测试GitHub actions用的，但是build都成功了，部署到GitHub pages又卡住了",
+    "tags": [
+      "心情日记",
+      "daily"
+    ],
+    "url": "/blog/20230818211027",
+    "date": "2023-08-18T21:10:27.607090Z"
+  },
+  {
+    "id": "20230819173041",
+    "title": "整理了一个下午的收藏夹......",
+    "description": "终于开始拾到我的收藏夹了...从头到尾逐一测试筛查，去除了一些404和过时的内容，整理了两个小时左右终于搞定了！",
+    "tags": [
+      "站长源创",
+      "daily"
+    ],
+    "url": "/blog/20230819173041",
+    "date": "2023-08-19T17:30:41.813943Z"
+  },
+  {
+    "id": "20230820094408",
+    "title": "Next项目部署GitHub pages的一些坑",
+    "description": "next项目部署GitHub pages有两个小坑，今天就来说到说到。",
+    "tags": [
+      "next.js",
+      "technology"
+    ],
+    "url": "/blog/20230820094408",
+    "date": "2023-08-20T09:44:08.429420Z"
+  },
+  {
+    "id": "20230821100258",
+    "title": "ubuntu-22-live-server 设置固定IP",
+    "description": "之前使用VMware Workstation Pro 17 安装了Ubuntu 22 server版，但是每次启动Ubuntu都会很卡，遂更换成VirtualBox-7.0.10-158379-Win，启动一切正常了，这里记录一下设置Ubuntu server固定IP的方法。的简介",
+    "tags": [
+      "ubuntu",
+      "technology"
+    ],
+    "url": "/blog/20230821100258",
+    "date": "2023-08-21T10:02:58.938279Z"
+  },
+  {
+    "id": "20230822160856",
+    "title": "我又用回了\"IE\"--edge",
+    "description": "自从回归Windows之后，总感觉用着chrome不是很爽，偶然的一次试了edge发现打开的速度真是不错，日常的调试也是可以替代chrome，索性就换成edge了。",
+    "tags": [
+      "edge",
+      "daily"
+    ],
+    "url": "/blog/20230822160856",
+    "date": "2023-08-22T16:08:56.361888Z"
+  },
+  {
+    "id": "20230823163738",
+    "title": "GitHub Actions 构建、部署 Next.js项目",
+    "description": "国内连接GitHub的速度真是喜人，所以测试GitHub Actions总是再重复的push连接失败中煎熬，好在最后实践通过了，记录一下这里的坑。",
+    "tags": [
+      "Next.js",
+      "technology"
+    ],
+    "url": "/blog/20230823163738",
+    "date": "2023-08-23T16:37:38.846176Z"
+  },
+  {
+    "id": "20230823180912",
+    "title": "Ubuntu下使用root登录ssh的设置",
+    "description": "虚拟机中装了个Ubuntu，使用非root登录总是需要sudo,好麻烦的一说，查了一下如何启用root的ssh登录便修改了，这里记录一下操作过程。",
+    "tags": [
+      "Ubuntu",
+      "technology"
+    ],
+    "url": "/blog/20230823180912",
+    "date": "2023-08-23T18:09:12.150253Z"
+  },
+  {
+    "id": "20230824183312",
+    "title": "shields.io 一个简洁、一致、清晰的徽章",
+    "description": "今天，女儿看到我在浏览我的博客页面，她喵了一眼说到：你博客现在的界面没有之前的“老年跑马灯好看”，我愣了一下，好，那咱就换回去！",
+    "tags": [
+      "shields.io",
+      "daily"
+    ],
+    "url": "/blog/20230824183312",
+    "date": "2023-08-24T18:33:12.594703Z"
+  },
+  {
+    "id": "20230824194230",
+    "title": "加碘盐能防核辐射的话，还怕什么核战争？",
+    "description": "又开始抢盐了，一有点屁事就抢盐。",
+    "tags": [
+      "站长吐槽",
+      "daily"
+    ],
+    "url": "/blog/20230824194230",
+    "date": "2023-08-24T19:42:30.848891Z"
+  },
+  {
+    "id": "20230825102926",
+    "title": "Docker下安装MySQL",
+    "description": "Docker下安装MySQL5.7过程记录",
+    "tags": [
+      "MySQL",
+      "Docker",
+      "technology"
+    ],
+    "url": "/blog/20230825102926",
+    "date": "2023-08-25T10:29:26.593746Z"
+  },
+  {
+    "id": "20230826184609",
+    "title": "Docker 简单快速安装部署WordPress",
+    "description": "前几天在虚拟机Ubuntu里安装了Docker，其实就是打算使用Docker安装MySQL和WordPress,没想到安装部署的过程非常的简单，安装部署的过程记录如下。",
+    "tags": [
+      "Docker",
+      "WordPress",
+      "technology"
+    ],
+    "url": "/blog/20230826184609",
+    "date": "2023-08-26T18:46:09.397753Z"
+  },
+  {
+    "id": "20230827113926",
+    "title": "Ubuntu开机自动启动Docker容器运行WordPress",
+    "description": "有的时候我们需要在Ubuntu系统启动的时候自动启动一些服务，例如docker的容器，该如何操作呢？",
+    "tags": [
+      "Docker",
+      "Ubuntu",
+      "technology"
+    ],
+    "url": "/blog/20230827113926",
+    "date": "2023-08-27T11:39:26.300570Z"
+  },
+  {
+    "id": "20230831080917",
+    "title": "Hello, September!",
+    "description": "转眼又到了开学季，这一年也就要进入尾声了，今年的计划都实现了吗？",
+    "tags": [
+      "九月",
+      "daily"
+    ],
+    "url": "/blog/20230831080917",
+    "date": "2023-08-31T08:09:17.679987Z"
+  },
+  {
+    "id": "20230903230526",
+    "title": "不懂就别瞎掰掰:【程序员的常识】写的什么玩意？",
+    "description": "这几天忙忙活活的也没怎么上网，今天手贱点开这么一篇网文：【程序员的常识】 https://sspai.com/post/82286 ，我也不知到这作者是不是写过代码，睁眼闭眼瞎掰掰一通。",
+    "tags": [
+      "站长吐槽",
+      "technology"
+    ],
+    "url": "/blog/20230903230526",
+    "date": "2023-09-03T23:05:26.591806Z"
+  },
+  {
+    "id": "20231007202642",
+    "title": "老妈大腿骨骨折，最近一直在医院护理",
+    "description": "老妈已经是第五次骨折了，曾经做过三次手术，保守治疗两次，大多数人会说这事骨头太脆骨质酥松把，其实这都是次要的，人若是不会保护自己，则是神仙也难救了。",
+    "tags": [
+      "站长吐槽",
+      "daily"
+    ],
+    "url": "/blog/20231007202642",
+    "date": "2023-10-07T20:26:42.808615Z"
+  },
+  {
+    "id": "20231215205505",
+    "title": "好久没有更新博客了。。。",
+    "description": "好久没有更新博客了，最近真的忙忙碌碌混混沌沌的。",
+    "tags": [
+      "站长吐槽",
+      "daily"
+    ],
+    "url": "/blog/20231215205505",
+    "date": "2023-12-15T20:55:05.032543Z"
+  },
+  {
+    "id": "20231223200459",
+    "title": "终于熬到了新手上路",
+    "description": "断断续续的练车终于考下来了心心念的驾照，对于一个大部分时间都和电脑打交道的程序员来说，考取驾照是一件很有挑战的事情。",
+    "tags": [
+      "站长吐槽",
+      "daily"
+    ],
+    "url": "/blog/20231223200459",
+    "date": "2023-12-23T20:04:59.653384Z"
+  },
+  {
+    "id": "20240225002425",
+    "title": "秧歌、博客和AI",
+    "description": "最近没有写博客，一是不知道写什么，二是不想写。但是今晚睡不着，那就写点什么吧。",
+    "tags": [
+      "站长吐槽",
+      "technology"
+    ],
+    "url": "/blog/20240225002425",
+    "date": "2024-02-25T00:24:25.145316Z"
+  },
+  {
+    "id": "20240420204731",
+    "title": "差点忘了我还有一个博客...",
+    "description": "最近很忙碌，琐事一堆，不知从何说起。",
+    "tags": [
+      "站长吐槽",
+      "daily"
+    ],
+    "url": "/blog/20240420204731",
+    "date": "2024-04-20T20:47:31.663111Z"
+  },
+  {
+    "id": "20240726220600",
+    "title": "与其在迷茫中困惑，不如在努力中前进",
+    "description": "通过重新发现 AI 的力量，我找到了自己在编程领域的方向。利用 MarsCode 这样的工具，我计划对博客代码进行精简和更新，提高功能和性能，并优化编写、生成和发布流程。我相信，这将为我的编程之旅注入新的活力，并帮助我更好地实现自己的目标。",
+    "tags": [
+      "站长吐槽",
+      "daily"
+    ],
+    "url": "/blog/20240726220600",
+    "date": "2024-07-26T22:06:00.597320Z"
+  },
+  {
+    "id": "20240729222957",
+    "title": "虽然只有我自己在用，但还是更新了碎言博客的源代码，",
+    "description": "把自己许久没有更新的代码更新了一下，好久没有操作GitHub的命令了，好在都有结成环境，点点鼠标就搞定了仓库的版本更新推送。",
+    "tags": [
+      "碎言博客",
+      "technology"
+    ],
+    "url": "/blog/20240729222957",
+    "date": "2024-07-29T22:29:57.693581Z"
+  },
+  {
+    "id": "20240808214401",
+    "title": "blender日常使用中的一些技巧",
+    "description": "blender日常使用中的一些技巧,不定期更新。",
+    "tags": [
+      "blender",
+      "technology"
+    ],
+    "url": "/blog/20240808214401",
+    "date": "2024-08-08T21:44:01.584251Z"
+  },
+  {
+    "id": "20240820220056",
+    "title": "博客聚合网站：积薪，竟然关闭了！",
+    "description": "很早以前就觉得积薪可能会被迫关闭，此处省略了几千字，不想说什么，各位站长引以为戒，好自为之吧。",
+    "tags": [
+      "站长吐槽",
+      "daily"
+    ],
+    "url": "/blog/20240820220056",
+    "date": "2024-08-20T22:00:56.468707Z"
+  },
+  {
+    "id": "20240831193648",
+    "title": "blender流体Fluid使用中没有流体、流体穿模等一些问题的解决方法",
+    "description": "blender流体Fluid使用中没有流体、流体穿模等一些问题的解决方法",
+    "tags": [
+      "blender",
+      "technology"
+    ],
+    "url": "/blog/20240831193648",
+    "date": "2024-08-31T19:36:48.474492Z"
+  },
+  {
+    "id": "20240920213045",
+    "title": "Git项目的子文件夹中的内容无法同步到远程仓库的解决方法",
+    "description": "Git项目的子文件夹中的内容无法同步到远程仓库的解决方法",
+    "tags": [
+      "Git",
+      "technology"
+    ],
+    "url": "/blog/20240920213045",
+    "date": "2024-09-20T21:30:45.982005Z"
+  },
+  {
+    "id": "20240922204505",
+    "title": "Flux.1 入门必知：硬件、环境、模型",
+    "description": "在当今的数字艺术领域，Flux.1 和 ComfyUI 已经成为了两个不可忽视的关键词。Flux.1 是由 Black Forest Labs 开发的一款先进的图像生成模型，以其出色的文本到图像的转换能力和高质量的图像输出而闻名。ComfyUI 则是一个基于节点的图形用户界面，专为 Stable Diffusion 设计，提供了高度的可定制性和模块化的工作流程。在本文及后续的文章中，我们将深入探讨 Flux.1 和 ComfyUI 的核心概念和功能，帮助您更好地理解这两个工具的强大之处。",
+    "tags": [
+      "Flux.1",
+      "technology"
+    ],
+    "url": "/blog/20240922204505",
+    "date": "2024-09-22T20:45:05.962082Z"
+  },
+  {
+    "id": "20240927082723",
+    "title": "ComfyUI 和 Flux.1 安装与使用教程",
+    "description": "ComfyUI 是一个基于 Stable Diffusion 的图形用户界面，它允许用户通过拖放节点来创建图像生成工作流.",
+    "tags": [
+      "Flux.1",
+      "ComfyUI",
+      "technology"
+    ],
+    "url": "/blog/20240927082723",
+    "date": "2024-09-27T08:27:23.728820Z"
+  },
+  {
+    "id": "20241016221206",
+    "title": "把博客从GitHub迁移到到了vercel",
+    "description": "vercel的部署竟然这么简单，有点意外。",
+    "tags": [
+      "碎言博客",
+      "站长吐槽",
+      "vercel",
+      "technology"
+    ],
+    "url": "/blog/20241016221206",
+    "date": "2024-10-16T22:12:06.920917Z"
+  },
+  {
+    "id": "20241021213822",
+    "title": "GitHub push更新总是失败，写个python脚本解决",
+    "description": "Failed to connect to github.com port 443  的解决方法",
+    "tags": [
+      "GitHub",
+      "technology"
+    ],
+    "url": "/blog/20241021213822",
+    "date": "2024-10-21T21:38:22.671471Z"
+  },
+  {
+    "id": "20241101075926",
+    "title": "AI 辅助编程：免费工具的优缺点及官网一览",
+    "description": "在当今的编程世界中，AI 辅助编程工具正逐渐成为开发者们的得力助手。这些工具不仅能够提高开发效率，还能为代码质量提供有力保障。本文将为大家介绍十款免费的 AI 辅助编程工具，包括它们的优缺点以及官方网址。",
+    "tags": [
+      "AI辅助编程",
+      "technology"
+    ],
+    "url": "/blog/20241101075926",
+    "date": "2024-11-01T07:59:26.368486Z"
+  },
+  {
+    "id": "20241102083314",
+    "title": "使用 Next.js 和 Tailwind CSS 搭建静态图片展示站点并部署到 Vercel",
+    "description": "在本文中，我们将介绍如何使用 Next.js（纯.js 文件，不使用.jsx）和 Tailwind CSS 搭建一个静态图片展示站点。该站点将具有首页以瀑布流模式展示图片，点击图片可跳转到图片展示页面，所有图片信息存储在一个 JSON 文件中，并且为每个图片生成单独的静态页面。最后，我们将把这个站点部署到 Vercel。",
+    "tags": [
+      "vercel",
+      "next.js",
+      "tailwind.css",
+      "technology"
+    ],
+    "url": "/blog/20241102083314",
+    "date": "2024-11-02T08:33:14.236559Z"
+  },
+  {
+    "id": "20241103085039",
+    "title": "探索编程新境界：MarsCode 助你一臂之力",
+    "description": "在编程的世界里，我们都在追求更高效、更优质的开发体验。今天，我要向大家介绍一款编程领域的神器——豆包旗下的 MarsCode。",
+    "tags": [
+      "AI辅助编程",
+      "technology"
+    ],
+    "url": "/blog/20241103085039",
+    "date": "2024-11-03T08:50:39.953144Z"
+  },
+  {
+    "id": "20241104092209",
+    "title": "使用 Next.js 和 Tailwind CSS 构建可编辑和删除的 ToDo 待办事项应用",
+    "description": "利用 Next.js 和 Tailwind CSS 这两个强大的工具来构建一个可编辑和删除的 ToDo 待办事项应用，帮助用户更好地管理他们的任务。",
+    "tags": [
+      "next.js",
+      "react",
+      "TailwindCSS",
+      "technology"
+    ],
+    "url": "/blog/20241104092209",
+    "date": "2024-11-04T09:22:09.467325Z"
+  },
+  {
+    "id": "20241105092653",
+    "title": "AI 辅助编程下的程序设计与代码编写",
+    "description": "在AI辅助编程的大环境中，程序设计与代码编写有了新的思路和方法。",
+    "tags": [
+      "AI辅助编程",
+      "technology"
+    ],
+    "url": "/blog/20241105092653",
+    "date": "2024-11-05T09:26:53.146214Z"
+  },
+  {
+    "id": "20241107085752",
+    "title": "PrimaryOralMathPack 小学生口算题生成器",
+    "description": "PrimaryOralMathPack是一个功能强大的NPM包，专门用于生成小学生口算题。它可以根据用户指定的各种参数，如运算类型（加法、减法、乘法、除法）的属性、运算步数、题目数量、是否求结果或运算项、是否包含括号以及数值范围和运算符列表等，生成符合要求的口算题数组，为教育工作者或家长创建个性化的口算练习材料提供了便利。",
+    "tags": [
+      "口算题",
+      "technology"
+    ],
+    "url": "/blog/20241107085752",
+    "date": "2024-11-07T08:57:52.830681Z"
+  },
+  {
+    "id": "20241107092043",
+    "title": "npm login 和 npm publish 总是连接不上npm的网站的解决方法",
+    "description": "昨天像发布一个npm的包，但是，npm login 和 npm publish 总是连接不上npm的网站，一直显示超时，但是我ping 一下，是可以ping通的，但是就是连接不上，然后我就去网上查了一下，总结一下连接不上npm网站的解决方法。",
+    "tags": [
+      "npm",
+      "technology"
+    ],
+    "url": "/blog/20241107092043",
+    "date": "2024-11-07T09:20:43.941593Z"
+  },
+  {
+    "id": "20241110091751",
+    "title": "Node.js新手教程：使用3M（nvm, npm, nrm）",
+    "description": "本教程将带你了解如何使用3M工具（nvm, npm, nrm）来管理Node.js环境。这些工具将帮助你轻松切换Node.js版本，管理项目依赖，以及优化包的下载速度。",
+    "tags": [
+      "node.js",
+      "technology"
+    ],
+    "url": "/blog/20241110091751",
+    "date": "2024-11-10T09:17:51.380962Z"
+  },
+  {
+    "id": "20241114083651",
+    "title": "Socket.IO：实时通信的强大工具",
+    "description": "Socket.IO 由 Guillermo Rauch 开发，旨在解决 WebSocket 在不同浏览器和网络环境中的兼容性问题。它提供了统一的 API，让开发者无需担心底层传输协议的差异，轻松实现实时双向通信。",
+    "tags": [
+      "Socket.IO",
+      "technology"
+    ],
+    "url": "/blog/20241114083651",
+    "date": "2024-11-14T08:36:51.182778Z"
+  },
+  {
+    "id": "20241230004427",
+    "title": "写在岁末：别了2024混混沌沌的一年",
+    "description": "2025年，一定会是一个充满挑战和机遇的一年。在这个充满不确定性的世界里，我选择了一个新的起点，开启了一个全新的旅程。",
+    "tags": [
+      "站长吐槽",
+      "心情日记",
+      "碎言博客",
+      "daily"
+    ],
+    "url": "/blog/20241230004427",
+    "date": "2024-12-30T00:44:27.060Z"
+  },
+  {
+    "id": "2025-10-01-ataraxia",
+    "title": "Ataraxia: The Philosophy of Inner Peace",
+    "description": "Exploring the ancient Greek concept of ataraxia and its relevance in modern life.",
+    "tags": [
+      "Philosophy",
+      "Greek Philosophy",
+      "Ataraxia"
+    ],
+    "url": "/blog/2025-10-01-ataraxia",
+    "date": "2025-09-27T00:00:00.000Z"
+  },
+  {
+    "id": "2025-10-03-stoic-philosophy",
+    "title": "Stoicism: The Philosophy of Resilience and Virtue",
+    "description": "Exploring the ancient Stoic philosophy and its practical wisdom for living a good life.",
+    "tags": [
+      "Philosophy",
+      "Greek Philosophy",
+      "Stoicism"
+    ],
+    "url": "/blog/2025-10-03-stoic-philosophy",
+    "date": "2025-09-27T00:00:00.000Z"
+  },
+  {
+    "id": "2025-10-17-philosophic-markdown",
+    "title": "A Philosophic Guide to Markdown",
+    "description": "A comprehensive guide to using Markdown syntax effectively in Astro blog posts.",
+    "tags": [
+      "Philosophy",
+      "Greek Philosophy",
+      "Stoicism"
+    ],
+    "url": "/blog/2025-10-17-philosophic-markdown",
+    "date": "2025-10-17T00:00:00.000Z"
+  },
+  {
+    "id": "20250104135342",
+    "title": "久未见雪，满怀期待。",
+    "description": "太久没有见到一场畅快的鹅毛大雪了，如果不下雪，空气中就会滋生一些有毒的物质，对身体不好。这不，带着孩子跑了一天的医院，连续咳嗽10多天了，拍了片子抽了血，被大夫撵回家了。",
+    "tags": [
+      "心情日记",
+      "daily"
+    ],
+    "url": "/blog/20250104135342",
+    "date": "2025-01-04T13:53:42.193Z"
+  },
+  {
+    "id": "20250107003223",
+    "title": "Next.js项目手动安装配置NextUI",
+    "description": "NextUI是一个基于Next.js的UI库，它提供了丰富的组件和样式，帮助开发者快速构建现代化的Web应用程序。个人感觉还是挺好用的，这里记录一下如何手动安装配置。",
+    "tags": [
+      "Next.js",
+      "NextUI",
+      "technology"
+    ],
+    "url": "/blog/20250107003223",
+    "date": "2025-01-07T00:32:23.426Z"
+  },
+  {
+    "id": "20250107050041",
+    "title": "博客聚合类站点的生存之道",
+    "description": "简单聊聊博客聚合类站点的生存之道以及一些想法。",
+    "tags": [
+      "博客聚合",
+      "daily"
+    ],
+    "url": "/blog/20250107050041",
+    "date": "2025-01-07T05:00:41.183Z"
+  },
+  {
+    "id": "20250109005603",
+    "title": "Heroicons由Tailwind CSS创始人开发免费的开源图标库",
+    "description": "Heroicons 是一个免费的开源图标库，由Tailwind CSS的创始人开发。它提供了大量精美的 SVG 图标，旨在与 Tailwind CSS 无缝配合使用，但也可以在任何项目中使用。图标分为三种风格：Outline（轮廓）、Solid（实心）和 Mini（迷你），以满足不同的设计需求。网站提供了图标浏览、搜索和下载等功能，方便开发者和设计师快速找到并使用合适的图标。",
+    "tags": [
+      "开源项目",
+      "图标",
+      "ico",
+      "technology"
+    ],
+    "url": "/blog/20250109005603",
+    "date": "2025-01-09T00:56:03.360Z"
+  },
+  {
+    "id": "20250110131923",
+    "title": "tailwindcss-motion 一个简单、功能强大的动画库",
+    "description": "今天盯着博客的页面，就觉的少点什么？对，就是动画，一动不动的太死板了，得搞些动画，但是如果手动编写JavaScript和CSS动画，不符合现代前端的构建方式，所以就搜了一下tailwind相关的动画插件，最终选定：tailwindcss-motion",
+    "tags": [
+      "tailwind.css",
+      "technology"
+    ],
+    "url": "/blog/20250110131923",
+    "date": "2025-01-10T13:19:23.024Z"
+  },
+  {
+    "id": "20250113040326",
+    "title": "Lucy是一只优秀的陪伴犬",
+    "description": "Lucy是一只黑白相间的雪纳瑞，性格温和胆小怕事的小女生。",
+    "tags": [
+      "心情日记",
+      "daily"
+    ],
+    "url": "/blog/20250113040326",
+    "date": "2025-01-13T04:03:26.554Z"
+  },
+  {
+    "id": "20250114000256",
+    "title": "博客程序重构回忆录",
+    "description": "去年一直想从python过度到JavaScript，尤其是在前端美化方面，上个版本的Blog由于模块引用一直采用老旧落后的CDN引用模式导致很多功能无法继续开发，所以长痛不如短痛，我决定进行重构！",
+    "tags": [
+      "碎言博客",
+      "Next.js",
+      "technology"
+    ],
+    "url": "/blog/20250114000256",
+    "date": "2025-01-14T00:02:56.246Z"
+  },
+  {
+    "id": "20250114112644",
+    "title": "前端项目中如何查询未使用的模块？",
+    "description": "有时我们在编写前端项目的时候会加入大量的模块来进行功能测试，久而久之就会有些模块因为功能的缺失或弃用而闲置，如何找到这些闲置的模块并且删除掉呢？",
+    "tags": [
+      "前端",
+      "Next.js",
+      "technology"
+    ],
+    "url": "/blog/20250114112644",
+    "date": "2025-01-14T11:26:44.129Z"
+  },
+  {
+    "id": "20250115122335",
+    "title": "他们博客上的那些CC协议到底是怎么一回事？",
+    "description": "如果经常浏览那些大佬的博客会发现他们的文章底部或是网站的底部通常会有一个小图标......",
+    "tags": [
+      "知识共享许可协议",
+      "technology"
+    ],
+    "url": "/blog/20250115122335",
+    "date": "2025-01-15T12:23:35.347Z"
+  },
+  {
+    "id": "20250116130857",
+    "title": "放下抖音，重构我的2025",
+    "description": "自律，坚持，努力，我希望这些词汇在2025年能够贯穿一整年，为自己加油！",
+    "tags": [
+      "心情日记",
+      "daily"
+    ],
+    "url": "/blog/20250116130857",
+    "date": "2025-01-16T13:08:57.457Z"
+  },
+  {
+    "id": "20250117141522",
+    "title": "读《九宫格写作法》的一些感悟",
+    "description": "为什么会选择读一本关于写作的书籍呢？或许是博客重构完毕后，我突然发现自己又不知道该写什么了。大约花了三个小时读完这本关于写作方法理论探讨的书籍，感觉自己受益匪浅，那就说说自己的感受吧。",
+    "tags": [
+      "读书",
+      "technology"
+    ],
+    "url": "/blog/20250117141522",
+    "date": "2025-01-17T14:15:22.532Z"
+  },
+  {
+    "id": "20250118121259",
+    "title": "你有遗憾吗？",
+    "description": "我本以为，人生最大的遗憾是所爱隔山海，山海不可平，后来才知道，海有舟可渡，山有路可行所，山海皆可平，难平是人心。",
+    "tags": [
+      "读书",
+      "daily"
+    ],
+    "url": "/blog/20250118121259",
+    "date": "2025-01-18T12:12:59.895Z"
+  },
+  {
+    "id": "20250119001052",
+    "title": "一些提供网站安全在线检测的站点",
+    "description": "|",
+    "tags": [
+      "网站安全",
+      "technology"
+    ],
+    "url": "/blog/20250119001052",
+    "date": "2025-01-19T00:10:52.030Z"
+  },
+  {
+    "id": "20250119120215",
+    "title": "读完《React进阶之路》闲聊几句",
+    "description": "今天读完了《React进阶之路》，其实并没有完全读完整本书，只是把前半部分的基础理论和路由那部分仔细的看了看，后边的项目实战并没有仔细的去研究。",
+    "tags": [
+      "React",
+      "读书",
+      "technology"
+    ],
+    "url": "/blog/20250119120215",
+    "date": "2025-01-19T12:02:15.787Z"
+  },
+  {
+    "id": "20250120132739",
+    "title": "阅读随感",
+    "description": "今天在微信读书上啃《JavaScript语言精髓与编程实践》，这是一本极其深入详细讲解JavaScript基础理论的神书。它不同于我们平时在互联网上看到的那些教程，不愧是资深程序员大佬爱民老师的巨作。",
+    "tags": [
+      "读书",
+      "daily"
+    ],
+    "url": "/blog/20250120132739",
+    "date": "2025-01-20T13:27:39.458Z"
+  },
+  {
+    "id": "20250121004101",
+    "title": "trae.ai 字节出品的AI IDE",
+    "description": "昨天晚上在X上看到很多程序员大佬都在推荐一个全新的AI IDE：trae.ai 根据X上大佬们的评价对这款新的智能IDE还是充满推荐的。",
+    "tags": [
+      "AI",
+      "IDE",
+      "technology"
+    ],
+    "url": "/blog/20250121004101",
+    "date": "2025-01-21T00:41:01.524Z"
+  },
+  {
+    "id": "20250123005146",
+    "title": "让giscus的主题跟随blog的主题一起变化",
+    "description": "之前一直在使用`giscus`作为blog的评论系统，个人评价`giscus`接入方便、使用简便，依托全世界最大的代码平台Github，其在评论系统商的功能可以说是非常的丰富和完善的，而且稳定可靠，不用操心。之前的blog只有一个主题，所以`giscus`也选择了对应的主题，后来blog增加明暗主题的切换，但是`giscus`主题却没有跟随系统的样式进行切换，当用户切换了blog的主题是，`giscus`的主题却没有切换，如果是明暗主题切换就会有很明显的对比，所以就有了下边的内容就是如何解决`giscus`的样式跟随主题切换。",
+    "tags": [
+      "giscus",
+      "Theme",
+      "technology"
+    ],
+    "url": "/blog/20250123005146",
+    "date": "2025-01-23T00:51:46.903Z"
+  },
+  {
+    "id": "20250124153309",
+    "title": "DeepSeek的一些使用感受",
+    "description": "DeepSeek最近这几天可以说是很有风头，很多地方都报道了他的新的推理模型，抱着试试看的心态，也去体验了一下。",
+    "tags": [
+      "大模型",
+      "AI",
+      "DeepSeek",
+      "technology"
+    ],
+    "url": "/blog/20250124153309",
+    "date": "2025-01-24T15:33:09.555Z"
+  },
+  {
+    "id": "20250127123717",
+    "title": "那些年前你说年后要做的事就不要再拖了。",
+    "description": "时间总是在不经意间悄悄流逝，尤其是在春节前这个忙碌的时期。",
+    "tags": [
+      "读书",
+      "daily"
+    ],
+    "url": "/blog/20250127123717",
+    "date": "2025-01-27T12:37:17.676Z"
+  },
+  {
+    "id": "20250127161136",
+    "title": "DeepSeek线上服务受到大规模恶意攻击!",
+    "description": "近期DeepSeek线上服务受到大规模恶意攻击，为持续提供服务，暂时限制了+86手机号以外的注册方式，已注册用户可以正常登录，感谢理解和支持.",
+    "tags": [
+      "AI",
+      "DeepSeek",
+      "technology"
+    ],
+    "url": "/blog/20250127161136",
+    "date": "2025-01-27T16:11:36.143Z"
+  },
+  {
+    "id": "20250201234913",
+    "title": "DeepSeek官方暂时恢复了访问",
+    "description": "从大年初一开始，DeepSeek官方的一些功能无法访问和使用，例如联网、API。今天早上测试了一下，联网的功能已经恢复了。而且API也可以使用了。",
+    "tags": [
+      "DeepSeek",
+      "AI",
+      "technology"
+    ],
+    "url": "/blog/20250201234913",
+    "date": "2025-02-01T23:49:13.853Z"
+  },
+  {
+    "id": "20250203045150",
+    "title": "在Windows下用Chatbox和Ollama部署DeepSeek-R1:14b",
+    "description": "博在本地部署大模型的过程中，我曾尝试在Windows Docker下安装Open WebUI。然而，这个过程并不顺利。Docker的配置、模型的加载以及与GPU的适配等问题，让我遇到了不少坑。经过一番折腾后，我意识到，或许需要一种更简洁、更高效的方式来实现本地部署。于是，我转向了Chatbox和Ollama的组合。",
+    "tags": [
+      "AI",
+      "DeepSeek",
+      "technology"
+    ],
+    "url": "/blog/20250203045150",
+    "date": "2025-02-03T04:51:50.768Z"
+  },
+  {
+    "id": "20250206133704",
+    "title": "马斯克：理想、勇气与「钢铁侠」精神",
+    "description": "花了整整12个小时，我终于读完了《硅谷钢铁侠：埃隆·马斯克的冒险人生》。读完后的第一感觉是，这本书在某些方面似乎只是开了个头，更像是人类殖民火星和探索未知宇宙任务的前传。",
+    "tags": [
+      "读书",
+      "马斯克",
+      "daily"
+    ],
+    "url": "/blog/20250206133704",
+    "date": "2025-02-06T13:37:04.790Z"
+  },
+  {
+    "id": "20250209010356",
+    "title": "免费开源的AI图片放大神器：Upscayl",
+    "description": "Upscayl 是一个免费开源的 AI 图片放大工具，它可以将低分辨率的图片放大到高分辨率，同时保持图片的清晰度和细节。Upscayl 使用了深度学习技术，可以在放大图片的同时，自动调整图片的颜色和亮度，使其更加自然和真实。",
+    "tags": [
+      "AI",
+      "开源软件",
+      "图片放大",
+      "免费资源",
+      "technology"
+    ],
+    "url": "/blog/20250209010356",
+    "date": "2025-02-09T01:03:56.168Z"
+  },
+  {
+    "id": "20250211004704",
+    "title": "一次 DeepSeek Kimi Gemini 代码编写能力的测评",
+    "description": "首先，这是一次偶然性的测评，并非专业的测评不具有代表性，仅从个人的使用感受如实记录而已，大家看看就好哈，不必太在意。",
+    "tags": [
+      "AI",
+      "DeepSeek",
+      "Kimi",
+      "Gemini",
+      "technology"
+    ],
+    "url": "/blog/20250211004704",
+    "date": "2025-02-11T00:47:04.733Z"
+  },
+  {
+    "id": "20250213140203",
+    "title": "《马云传》我的回忆和情怀",
+    "description": "从这本书的写作水准来说，我读完后给了一个「一般」的评分。这本书或许叫《阿里巴巴传》会更好一些。",
+    "tags": [
+      "读书",
+      "马云",
+      "daily"
+    ],
+    "url": "/blog/20250213140203",
+    "date": "2025-02-13T14:02:03.837Z"
+  },
+  {
+    "id": "20250217124533",
+    "title": "trae支持Windows了,赶紧试试吧！",
+    "description": "目前打开官网就可以下载Windows版本的trae了，而且不需要代理，不需要付费，chat模式、Builder模式均可使用！",
+    "tags": [
+      "trae",
+      "AI",
+      "IDE",
+      "AI辅助编程",
+      "technology"
+    ],
+    "url": "/blog/20250217124533",
+    "date": "2025-02-17T12:45:33.309Z"
+  },
+  {
+    "id": "20250221005728",
+    "title": "code : 无法将“code”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。",
+    "description": "今天像往常一样运行了终端命令，正常来说会使用`code`命令在vscode中打开新建的md文件，但是今天运行了命令，报错了。",
+    "tags": [
+      "vscode",
+      "technology"
+    ],
+    "url": "/blog/20250221005728",
+    "date": "2025-02-21T00:57:28.896Z"
+  },
+  {
+    "id": "20250221140606",
+    "title": "MarsCode编程助手模型接入满血版DeepSeek R1/V3",
+    "description": "今天突然发现字节旗下的豆包变成助手也支持DeepSeek R1/V3了，这简直是太棒了，而且还是免费使用！",
+    "tags": [
+      "MarsCode",
+      "DeepSeek",
+      "technology"
+    ],
+    "url": "/blog/20250221140606",
+    "date": "2025-02-21T14:06:06.516Z"
+  },
+  {
+    "id": "20250225235722",
+    "title": "域名续费前将域名转移到了Dynadot",
+    "description": "昨天收到了邮件，提示suiyan.cc的域名即将到期，需要续费。早些时候就想把域名转移到Dynadot，但是一直没有行动，趁着这个机会，就把域名转移到了Dynadot。",
+    "tags": [
+      "碎言",
+      "站长吐槽",
+      "technology"
+    ],
+    "url": "/blog/20250225235722",
+    "date": "2025-02-25T23:57:22.900Z"
+  },
+  {
+    "id": "20250302060242",
+    "title": "分享自己维护了12年的开源程序：BabyLog 宝贝日记",
+    "description": "这个程序写在12年之前，当时和一些有孩子的亲属朋友聊天，他们总是说孩子几个月就会走路了，一岁就会背古诗了，但这明显就是在吹牛逼，让他们拿出一些证据却拿不出来。我想或许他们记得这些事，但是不记得具体的时间和细节，如果有一个可以记录这些的与孩子相关的日记，那会是一件很有意义的事。于是，我就开始编写这个程序：BabyLog。",
+    "tags": [
+      "BabyLog",
+      "开源",
+      "technology"
+    ],
+    "url": "/blog/20250302060242",
+    "date": "2025-03-02T06:02:42.456Z"
+  },
+  {
+    "id": "20250303132257",
+    "title": "国内首个 AI IDE:Trae 发布了",
+    "description": "Trae 是国内首个 AI IDE，深度理解中文开发场景。AI 高度集成于 IDE 环境之中，为你带来比 AI 插件更加流畅、准确、优质的开发体验。",
+    "tags": [
+      "AI辅助编程",
+      "ide",
+      "trae",
+      "technology"
+    ],
+    "url": "/blog/20250303132257",
+    "date": "2025-03-03T13:22:57.513Z"
+  },
+  {
+    "id": "20250306041951",
+    "title": "辽西没有春天",
+    "description": "辽宁的西部是个奇怪的地方，春天这个季节在这里是非常的不明显的，气温一旦上来就是从零下十几度升温到零上二十几度，你可以体验那种一天四季的感觉。和人聊天说说天气，礼貌而又不失优雅，避免了尬聊的可能，而且，大家可以因为天气的问题聊上一会。",
+    "tags": [
+      "站长吐槽",
+      "daily"
+    ],
+    "url": "/blog/20250306041951",
+    "date": "2025-03-06T04:19:51.735Z"
+  },
+  {
+    "id": "20250317142354",
+    "title": "Windows下Ollama部署gemma3:12b",
+    "description": "对比deepseek 14B,Gemma3 12b的回答更加快速，在某些问题的回答上也更加准确。当然，这也是我个人的见解，建议大家可以下载部署体验一下。",
+    "tags": [
+      "Ollama",
+      "Gemma",
+      "technology"
+    ],
+    "url": "/blog/20250317142354",
+    "date": "2025-03-17T14:23:54.748Z"
+  },
+  {
+    "id": "20250318131205",
+    "title": "没有信号的焦虑--手机的SIM卡坏了",
+    "description": "下午开车出去，下车之后习惯性的拿出手机看了一眼，发现手机么信号，这就奇了个怪了！一种奇怪的焦虑逐渐的袭来，我猜，大概率是手机的SIM卡坏了？",
+    "tags": [
+      "站长吐槽",
+      "daily"
+    ],
+    "url": "/blog/20250318131205",
+    "date": "2025-03-18T13:12:05.909Z"
+  },
+  {
+    "id": "20250321131137",
+    "title": "Phaser3 学习笔记",
+    "description": "起因是一直在关注「極客死亡計劃」最近写的几篇博客，前几天他终于发布他的游戏大作「为战斗献上心脏！」看的心痒痒，又想写游戏了，为什么要说有又？因为以前懵懵的编写过一些小游戏，但是大多都是按着实际的案例照抄，主要是学习游戏的编写，具体自己完整的构思和制作并没有体验过，所以就有了这篇Phaser3的学习笔记。",
+    "tags": [
+      "Phaser",
+      "technology"
+    ],
+    "url": "/blog/20250321131137",
+    "date": "2025-03-21T13:11:37.921Z"
+  },
+  {
+    "id": "20250322013314",
+    "title": "Phaser3 游戏开发环境搭建",
+    "description": "Phaser3的游戏开发环境搭建其实很简单的，如果你引入CDN的话，只需要一个HTML页面即可，但是这里我并不推荐使用CDN搭建，这里我推荐使用Vite。对于代码编写我推荐trae或vscode。",
+    "tags": [
+      "Phaser",
+      "technology"
+    ],
+    "url": "/blog/20250322013314",
+    "date": "2025-03-22T01:33:14.196Z"
+  },
+  {
+    "id": "20250323073926",
+    "title": "蠢事三则",
+    "description": "有什么蠢事？说出来让大家开心一下吧！",
+    "tags": [
+      "站长吐槽",
+      "daily"
+    ],
+    "url": "/blog/20250323073926",
+    "date": "2025-03-23T07:39:26.868Z"
+  },
+  {
+    "id": "20250330051804",
+    "title": "突然想做一个模拟养成类的游戏",
+    "description": "前几天一直在各个游戏引擎的框架选择中飘忽不定，同时也在纠结和构思制作一个什么样的游戏，简单的在头脑中构思跑了一遍就觉得没意思了，太难的复杂的又觉得制作起来遥遥无期。",
+    "tags": [
+      "游戏开发",
+      "technology"
+    ],
+    "url": "/blog/20250330051804",
+    "date": "2025-03-30T05:18:04.719Z"
+  },
+  {
+    "id": "20250409233731",
+    "title": "游戏开发中的断离舍",
+    "description": "使用godot开发游戏的进度还在缓慢的推进中，本以为大部分时间会在绘制场景和制作动画上了，但是我确卡在了游戏的世界观设计上了，痛定思过，决定先把游戏的世界观设计好了，再开始绘制场景和制作动画。",
+    "tags": [
+      "游戏开发",
+      "technology"
+    ],
+    "url": "/blog/20250409233731",
+    "date": "2025-04-09T23:37:31.424Z"
+  },
+  {
+    "id": "20250421024909",
+    "title": "又到了流鼻涕流眼泪的季节了",
+    "description": "哎呀，每年春暖花开的时候，别人踏春享受春天快乐时光的时候，就是我的最「悲伤」的季节，那个痛苦也只有经历过的才会懂，鼻涕眼泪流的那个伤心啊！",
+    "tags": [
+      "站长吐槽",
+      "daily"
+    ],
+    "url": "/blog/20250421024909",
+    "date": "2025-04-21T02:49:09.843Z"
+  },
+  {
+    "id": "20250429145547",
+    "title": "中老年游戏:《暗黑破坏神III》国服技术测试现已开启",
+    "description": "本来以为大萝卜3国服这辈子都不可能重启了，结果网易已经在4月16日正式开启了技术测试，前几天闲着没事就下载了这款养老的中老年经典游戏玩了一个星期。",
+    "tags": [
+      "暗黑破坏神",
+      "technology"
+    ],
+    "url": "/blog/20250429145547",
+    "date": "2025-04-29T14:55:47.602Z"
+  },
+  {
+    "id": "20250509005137",
+    "title": "纠结的五月",
+    "description": "五四青年节的那天我带着孩子去了牛河梁遗址，整个五一假期都是刮风下雨的，刚好4号那天的天气真的很不错，就赶紧带着孩子去了牛河梁遗址博物馆，走的长深高速，高速上的车也是不多很通畅。",
+    "tags": [
+      "站长吐槽",
+      "daily"
+    ],
+    "url": "/blog/20250509005137",
+    "date": "2025-05-09T00:51:37.000Z"
+  },
+  {
+    "id": "20250611233730",
+    "title": "做个游戏做到开始怀疑人生了",
+    "description": "一晃俩月过去了，我的游戏开发进度真是惨不忍睹，从信心满满的开始，到折磨的崩溃，再到开始怀疑人生。从做好一个游戏到把这个游戏做完，这真是一个自我折磨的过程。",
+    "tags": [
+      "站长吐槽",
+      "godot",
+      "游戏开发",
+      "technology"
+    ],
+    "url": "/blog/20250611233730",
+    "date": "2025-06-11T23:37:30.305Z"
+  },
+  {
+    "id": "20250704021309",
+    "title": "琐事不断的老年程序员",
+    "description": "都说程序员过了35岁就会被裁员，35岁确实是一个坎，这个年龄段大部分人都会结婚生子。我觉得影响程序员工作能力的主要原因就是：琐事。",
+    "tags": [
+      "站长吐槽",
+      "程序员",
+      "technology"
+    ],
+    "url": "/blog/20250704021309",
+    "date": "2025-07-04T02:13:09.900Z"
+  },
+  {
+    "id": "20250712144920",
+    "title": "抽象的理想和具体的现实",
+    "description": "最近一直在构思一些游戏的中的细节，有的时候想了几天都没有具体实现的方式，不过，大部分游戏的场景最终都还是找到了具体实现的方法。这期间，我的思绪不断地回到这个游戏构思的初期，那个抽象出来的理想中的游戏世界。",
+    "tags": [
+      "站长吐槽",
+      "godot",
+      "游戏开发",
+      "technology"
+    ],
+    "url": "/blog/20250712144920",
+    "date": "2025-07-12T14:49:20.146Z"
+  },
+  {
+    "id": "20250724005122",
+    "title": "Godot游戏开发《我的博客》记录01",
+    "description": "游戏开发已经有段时日了，我决定在我的博客记录这个游戏开发过程，一方面是督促自己抓紧开发游戏的各个环节，记录游戏开发的过程和学习使用Godot开发游戏的经验，另一方面也是希望能够吸引到对这个游戏感兴趣的玩家，当然如果能够有高手指点一下更好啦。",
+    "tags": [
+      "Godot",
+      "游戏开发",
+      "technology"
+    ],
+    "url": "/blog/20250724005122",
+    "date": "2025-07-24T00:51:22.480Z"
+  },
+  {
+    "id": "20250802071522",
+    "title": "Godot游戏开发《我的博客》记录02-缓慢的进度",
+    "description": "今天一看时间，都是八月份了，上次我记录游戏开发的时候还是7月末，简单的说下游戏开发的进度和一些细节吧。",
+    "tags": [
+      "Godot",
+      "游戏开发",
+      "站长吐槽",
+      "technology"
+    ],
+    "url": "/blog/20250802071522",
+    "date": "2025-08-02T07:15:22.647Z"
+  },
+  {
+    "id": "20250803005406",
+    "title": "Godot游戏开发《我的博客》记录03-关于游戏的场景绘制风格的选择",
+    "description": "只要有空余的时间我就在思考游戏的场景的绘制风格的选择，最开始的时候选择了像素风格，后来换成3D风格采用blender建模，但是感觉3d风格在颜色、材质和动画方面的控制碍于技术原因十分有限，而且风格极难把握，最终还是放弃了，选择了2D风格，但是具体的画风还需要筛选。",
+    "tags": [
+      "Godot",
+      "游戏开发",
+      "《我的博客》",
+      "technology"
+    ],
+    "url": "/blog/20250803005406",
+    "date": "2025-08-03T00:54:06.598Z"
+  },
+  {
+    "id": "20250817080520",
+    "title": "Godot游戏开发《我的博客》记录04-终于完成了主场景的绘制",
+    "description": "看了一下时间，上次还在纠结场景绘制风格的时间，这一转眼都过去了半个月了，好在，我的游戏主场景基本确定了，人物角色的设计也基本确定了，下图就是游戏的第一次预览图，先复盘一下最近的杂乱的思绪把。",
+    "tags": [
+      "Godot",
+      "游戏开发",
+      "《我的博客》",
+      "technology"
+    ],
+    "url": "/blog/20250817080520",
+    "date": "2025-08-17T08:05:20.335Z"
+  },
+  {
+    "id": "20250826152522",
+    "title": "Godot游戏开发《我的博客》记录05-游戏的主线任务代码基本完成",
+    "description": "经过这个暑假的忙碌，终于基本上完成了游戏的主线代码，也就是模拟博客博主的自身属性的提升，以及发布博文后一些访问量数据的变化，同事模拟了广告联盟的收入，另外测试性的添加了二个随机事件，总之一切还算顺利。",
+    "tags": [
+      "Godot",
+      "游戏开发",
+      "《我的博客》",
+      "technology"
+    ],
+    "url": "/blog/20250826152522",
+    "date": "2025-08-26T15:25:22.134Z"
+  },
+  {
+    "id": "20250827145453",
+    "title": "Godot游戏开发《我的博客》记录06-游戏中的博客联盟",
+    "description": "着手开始构建游戏中的博客联盟功能，这让我想起很多当下的博客联盟，目前我比较关注的博客联盟有：十年之约，BlogFinder，博友圈以及记忆中比较认可的就是已经关门大吉的积薪。",
+    "tags": [
+      "Godot",
+      "游戏开发",
+      "《我的博客》",
+      "technology"
+    ],
+    "url": "/blog/20250827145453",
+    "date": "2025-08-27T14:54:53.241Z"
+  },
+  {
+    "id": "20250910000235",
+    "title": "Godot游戏开发《我的博客》记录07-复盘与展望",
+    "description": "断断续续的写了10天的代码，终于完成了游戏中博客联盟的模拟，博客联盟的编写暂时告一段落，愿望是美好的，现实是残酷的，复盘一下最近的游戏开发进度，规划一下未来的游戏开发方向。",
+    "tags": [
+      "Godot",
+      "游戏开发",
+      "《我的博客》",
+      "technology"
+    ],
+    "url": "/blog/20250910000235",
+    "date": "2025-09-10T00:02:35.529Z"
+  },
+  {
+    "id": "20250913005315",
+    "title": "发小——久违小聚",
+    "description": "我有几个非常不错的发小，我们都还生活在这个八县的小城里，每隔一段时间我们就会小聚一下，分享一下自己的生活，也会吐槽一下最近的苦衷。",
+    "tags": [
+      "站长吐槽",
+      "daily"
+    ],
+    "url": "/blog/20250913005315",
+    "date": "2025-09-13T00:53:15.029Z"
+  },
+  {
+    "id": "20250920003603",
+    "title": "Godot游戏开发《我的博客》记录08-第一个有意愿想玩这款游戏的玩家",
+    "description": "|",
+    "tags": [
+      "Godot",
+      "游戏开发",
+      "《我的博客》",
+      "technology"
+    ],
+    "url": "/blog/20250920003603",
+    "date": "2025-09-20T00:36:03.348Z"
+  },
+  {
+    "id": "20250923142034",
+    "title": "记一次惊险的磁盘操作",
+    "description": "今天安装一个微软的组件库，必须安装在C盘，结果提示我100G的C盘可用容量不足。看了看我可怜的C盘，就只有几百MB的可用容量，清理C盘的软件不是收费就是不好用，只好铤而走险的试试一些奇特的方法了！",
+    "tags": [
+      "磁盘操作",
+      "数据",
+      "daily"
+    ],
+    "url": "/blog/20250923142034",
+    "date": "2025-09-23T14:20:34.976Z"
+  },
+  {
+    "id": "20250929073315",
+    "title": "Godot游戏开发《我的博客》记录09-完成了游戏中所有重要的场景模拟代码",
+    "description": "这几天终于把游戏内主要的几个场景UI以及功能的代码都写完了，目前来说，游戏可以运行直到结束，除了没有剧情和任务外，一个博客的日常操作基本模拟的差不多了。",
+    "tags": [
+      "Godot",
+      "游戏开发",
+      "《我的博客》",
+      "technology"
+    ],
+    "url": "/blog/20250929073315",
+    "date": "2025-09-29T07:33:15.491Z"
+  },
+  {
+    "id": "20251010075131",
+    "title": "Godot游戏开发《我的博客》记录10-关于游戏的主线任务的思考：独立博客的终极意义",
+    "description": "随着代码编写的推进，终于进入到了任务和事件的编写，感觉绕了一大圈又回到了起点。我想起了我创建这个游戏的初衷。",
+    "tags": [
+      "Godot",
+      "游戏开发",
+      "《我的博客》",
+      "technology"
+    ],
+    "url": "/blog/20251010075131",
+    "date": "2025-10-10T07:51:31.849Z"
+  },
+  {
+    "id": "20251017235222",
+    "title": "Godot游戏开发《我的博客》记录11-里程碑与成就任务的持续开发",
+    "description": "这几天搭建好了里程碑成就系统，然后就开始着手编写相应的成就任务了，粗略的算了下，大约会有百十个左右的成就任务。",
+    "tags": [
+      "Godot",
+      "游戏开发",
+      "《我的博客》",
+      "technology"
+    ],
+    "url": "/blog/20251017235222",
+    "date": "2025-10-17T23:52:22.129Z"
+  },
+  {
+    "id": "20251030003841",
+    "title": "Godot游戏开发《我的博客》记录12-游戏剧本怎么写？",
+    "description": "上个星期，重写了游戏中的技能升级的方法，改用自己编写的任务系统来触发技能升级，优化了代码和任务的触发，虽然花了些时间，但也是很值得的，但是同时也陷入了整个游戏的剧本编写的深坑。",
+    "tags": [
+      "Godot",
+      "游戏开发",
+      "《我的博客》",
+      "technology"
+    ],
+    "url": "/blog/20251030003841",
+    "date": "2025-10-30T00:38:41.891Z"
+  },
+  {
+    "id": "20251107014030",
+    "title": "Godot游戏开发《我的博客》记录13-完成了游戏的启动与过场",
+    "description": "关于游戏的剧本编写，在看过了《游戏剧本怎么写》这本书之后有了一定的启发，虽然之前没接触过剧本的编写，但是一些主线任务的编写也算是有了一些剧情的大概，当务之急是游戏整体进度的推进和完成度。",
+    "tags": [
+      "Godot",
+      "游戏开发",
+      "《我的博客》",
+      "technology"
+    ],
+    "url": "/blog/20251107014030",
+    "date": "2025-11-07T01:40:30.532Z"
+  },
+  {
+    "id": "20251114010459",
+    "title": "在 Godot 4.4 中构建灵活的有限状态机 (FSM)",
+    "description": "在游戏开发中，角色的行为（如站立、行走、跳跃、攻击）通常需要复杂的逻辑来控制。如果不使用状态机，代码会充斥着大量的 if/else 或 match 语句，导致代码难以阅读、维护和扩展，这就是所谓的“意大利面条式代码”。有限状态机（FSM）提供了一种优雅的解决方案。它将角色的每一个行为定义为一个状态（State），并清晰地定义了状态之间的转换（Transition）规则。本教程将基于 godotfsmtest 项目的代码结构，向您展示如何在 Godot 4.4 中实现一个结构清晰、基于类的 FSM。",
+    "tags": [
+      "Godot",
+      "Godot教程",
+      "technology"
+    ],
+    "url": "/blog/20251114010459",
+    "date": "2025-11-14T01:04:59.682Z"
+  },
+  {
+    "id": "20251123135354",
+    "title": "无聊的家长会与「资本家」班主任",
+    "description": "孩子上八年级了，这周末期中考试后学校组织开了一次家长会，我觉得挺无聊的而且挺压抑，觉得这个家长会对家长和孩子的帮助并不是很大，反而让人有些反感，大体就是憋得慌那种感觉吧。",
+    "tags": [
+      "站长吐槽",
+      "daily"
+    ],
+    "url": "/blog/20251123135354",
+    "date": "2025-11-23T13:53:54.215Z"
+  },
+  {
+    "id": "20251127010632",
+    "title": " Godot4中节点类常用的内置方法",
+    "description": "在 Godot 中，节点类提供了大量实用的内置方法。以下是常用的节点方法分类，内容来自千问AI整理，感觉还不错，分享一下。",
+    "tags": [
+      "Godot",
+      "technology"
+    ],
+    "url": "/blog/20251127010632",
+    "date": "2025-11-27T01:06:32.474Z"
+  },
+  {
+    "id": "20251201013459",
+    "title": "Godot4 学习资源教程推荐",
+    "description": "Godot4 学习资源教程推荐，都是自己收藏并学习过的，少走弯路加速你的游戏进度。",
+    "tags": [
+      "Godot",
+      "Godot教程",
+      "technology"
+    ],
+    "url": "/blog/20251201013459",
+    "date": "2025-12-01T01:34:59.049Z"
+  },
+  {
+    "id": "20251203012735",
+    "title": "Godot4中的整除报错:Expected expression after \"/\" operator.",
+    "description": "Godot4中的整除和python的不同，容易在使用中造成麻烦，这里记录一下，也方便遇到这类问题的朋友了解一下。",
+    "tags": [
+      "Godot教程",
+      "technology"
+    ],
+    "url": "/blog/20251203012735",
+    "date": "2025-12-03T01:27:35.918Z"
+  },
+  {
+    "id": "20251203013509",
+    "title": "Godot游戏开发《我的博客》记录14-游戏的制作仍在继续",
+    "description": "断断续续的仍在编写游戏中的逻辑代码，一直在缝缝补补中。",
+    "tags": [
+      "Godot",
+      "游戏开发",
+      "《我的博客》",
+      "technology"
+    ],
+    "url": "/blog/20251203013509",
+    "date": "2025-12-03T01:35:09.982Z"
+  },
+  {
+    "id": "20251206003957",
+    "title": "快说！电影票买错日期的这种蠢事不是只有我一个人做过！",
+    "description": "说点不开心的事，让大家开心一下：昨天周五，本来想买一场周六播放的《疯狂动物城2》的三张电影票，结果今天早上起来，满心欢喜的看看票，确定播放时间，才发现昨天神不知鬼不觉的买成了当天周五的票，票面显示：影片已播放！",
+    "tags": [
+      "站长吐槽",
+      "daily"
+    ],
+    "url": "/blog/20251206003957",
+    "date": "2025-12-06T00:39:57.228Z"
+  },
+  {
+    "id": "20251216144340",
+    "title": "Godot 4 实用视频教程中文版",
+    "description": "最近几个月，我一直在开发我的第一款独立游戏《我的博客》，在游戏制作中也算是积累了一些经验与心得，所以，我打算制作一个Godot的中文版教程。",
+    "tags": [
+      "Godot",
+      "游戏开发",
+      "technology"
+    ],
+    "url": "/blog/20251216144340",
+    "date": "2025-12-16T14:43:40.083Z"
+  },
+  {
+    "id": "20251220005628",
+    "title": "冬至不吃饺子？",
+    "description": "前天，和老丈人一起吃饭的时候聊到马上快冬至了，可以包饺子了，老爷子突然来了一句，冬至不吃饺子，我就问他这是从哪得到的信息？他说抖音上看到的。",
+    "tags": [
+      "站长吐槽",
+      "daily"
+    ],
+    "url": "/blog/20251220005628",
+    "date": "2025-12-20T00:56:28.969Z"
+  },
+  {
+    "id": "20251227113006",
+    "title": "油条豆腐脑，总结要趁早｜我的2025年度小记",
+    "description": "2025年最后一个周六，我起来的比平时要晚很多，八点多我驱车来到离家不到二里地的早市觅食，嗯？这么近为啥要开车？因为太冷了！体感温度大约-25°左右，东北的三九天是真冷啊！用我们这的方言说：这天儿，嘎嘎地冷🥶。",
+    "tags": [
+      "年度总结",
+      "technology"
+    ],
+    "url": "/blog/20251227113006",
+    "date": "2025-12-27T11:30:06.321Z"
+  },
+  {
+    "id": "20251229121732",
+    "title": "解放双手用嘴写博客？试试豆包输入法，真的香！",
+    "description": "这几天闲着没事翻别人的博客，看到有个博主说，他这篇文章是躺在床上，用豆包输入法“说”出来的。我一看这操作挺新鲜，立马也在手机上下载了一个试试水。",
+    "tags": [
+      "大模型",
+      "APP推荐",
+      "daily"
+    ],
+    "url": "/blog/20251229121732",
+    "date": "2025-12-29T12:17:32.461Z"
+  },
+  {
+    "id": "20251230122510",
+    "title": "Godot 4 信号（Signal）的使用入门",
+    "description": "信号（Signal）是Godot引擎中最强大、最重要的机制之一，它实现了观察者模式，让节点之间可以松耦合地通信。本教程将通过实际案例，带你全面掌握Godot中的信号使用方法。",
+    "tags": [
+      "Signal",
+      "Godot教程",
+      "technology"
+    ],
+    "url": "/blog/20251230122510",
+    "date": "2025-12-30T12:25:10.532Z"
+  },
+  {
+    "id": "20260102023233",
+    "title": "写在2026的岁首",
+    "description": "新的一年，新的展望，除了每年的总结，也应该对新的一年有所期望。",
+    "tags": [
+      "心情日记",
+      "daily"
+    ],
+    "url": "/blog/20260102023233",
+    "date": "2026-01-02T02:32:33.452Z"
+  },
+  {
+    "id": "20260106235522",
+    "title": "在Next.js安装部署 Vercel Web Analytics 与 Speed Insights",
+    "description": "如果你的项目托管在Vercel，那么 Web Analytics 与 Speed Insights 是Vercel提供的非常不错的网络分析与用户体验分析工具，值得在项目中安装部署。",
+    "tags": [
+      "Vercel",
+      "technology"
+    ],
+    "url": "/blog/20260106235522",
+    "date": "2026-01-06T23:55:22.035Z"
+  },
+  {
+    "id": "20260107012506",
+    "title": "Python Private RSS subscription",
+    "description": "昨天闲来无事，把我2023年写的一个终端rss私人订阅器用AI美化了一下，感觉还挺可爱的。",
+    "tags": [
+      "RSS",
+      "technology"
+    ],
+    "url": "/blog/20260107012506",
+    "date": "2026-01-07T01:25:06.845Z"
+  },
+  {
+    "id": "20260107234752",
+    "title": "漫长的寒假开始了",
+    "description": "我和孩子有个不成文的约定：只要是期中或是期末开始的早上，我就会去早起去肯德基给孩子买一份肯德基的早餐，一般就是帕尼尼和皮蛋瘦肉粥。",
+    "tags": [
+      "心情日记",
+      "daily"
+    ],
+    "url": "/blog/20260107234752",
+    "date": "2026-01-07T23:47:52.937Z"
+  },
+  {
+    "id": "20260109124745",
+    "title": "书荒与戒烟",
+    "description": "来捞一波书单！有没有朋友愿意分享下近期在读的好书？真的书荒到挠墙了！",
+    "tags": [
+      "心情日记",
+      "读书",
+      "daily"
+    ],
+    "url": "/blog/20260109124745",
+    "date": "2026-01-09T12:47:45.027Z"
+  },
+  {
+    "id": "20260109141240",
+    "title": "oba.by怎么这个样子了？",
+    "description": "oba.by已经暂时无法打开，谁知道是怎么回事了？",
+    "tags": [
+      "知名博客",
+      "daily"
+    ],
+    "url": "/blog/20260109141240",
+    "date": "2026-01-09T14:12:40.736Z"
+  },
+  {
+    "id": "20260110113717",
+    "title": "异常的冬天",
+    "description": "今天早上照常早起，带着狗狗出门散步。一推开门，发现外面竟然下雪了！",
+    "tags": [
+      "心情日记",
+      "technology"
+    ],
+    "url": "/blog/20260110113717",
+    "date": "2026-01-10T11:37:17.389Z"
+  },
+  {
+    "id": "20260111110226",
+    "title": "一些无聊的想法",
+    "description": "今天可真冷啊，不愧是东北的三九天。我干脆窝在家里看书，哪儿也不想去。",
+    "tags": [
+      "读书",
+      "心情日记",
+      "daily"
+    ],
+    "url": "/blog/20260111110226",
+    "date": "2026-01-11T11:02:26.549Z"
+  },
+  {
+    "id": "20260113010331",
+    "title": "脑机接口的另类用途",
+    "description": "三九天是真的冷，尤其是早上——人已经醒了，身体却不想动，就瘫在床上，脑子却开始胡思乱想。",
+    "tags": [
+      "心情日记",
+      "灵光一闪",
+      "daily"
+    ],
+    "url": "/blog/20260113010331",
+    "date": "2026-01-13T01:03:31.074Z"
+  },
+  {
+    "id": "20260113104932",
+    "title": "氛围编程之升级老代码",
+    "description": "今天闲来无事，花了点时间升级一下老程序老代码，让这些老家伙换发一下青春。",
+    "tags": [
+      "氛围编程",
+      "我的项目",
+      "technology"
+    ],
+    "url": "/blog/20260113104932",
+    "date": "2026-01-13T10:49:32.784Z"
+  },
+  {
+    "id": "20260115082245",
+    "title": "改变并非很难",
+    "description": "有时候总觉得，要做出一点改变特别难。但其实，只要真正下定决心，事情并没有想象中那么可怕。",
+    "tags": [
+      "读书",
+      "daily"
+    ],
+    "url": "/blog/20260115082245",
+    "date": "2026-01-15T08:22:45.274Z"
+  },
+  {
+    "id": "20260116011428",
+    "title": "Dead Simple Sites 极简网站的搜集与发现",
+    "description": "Dead Simple Sites,DSS 是我浏览网页是偶然间发现的，它是一个极简网站的搜集与发现的站点。",
+    "tags": [
+      "简约网站",
+      "daily"
+    ],
+    "url": "/blog/20260116011428",
+    "date": "2026-01-16T01:14:28.908Z"
+  },
+  {
+    "id": "20260117013926",
+    "title": "与孩子一起看《阿甘正传》",
+    "description": "东北的三九天，出门玩不太现实。总不能让孩子整天刷手机、打游戏吧？于是想着，不如一起看点经典电影。脑子里第一个蹦出来的，就是《阿甘正传》。",
+    "tags": [
+      "观影",
+      "亲子时光",
+      "daily"
+    ],
+    "url": "/blog/20260117013926",
+    "date": "2026-01-17T01:39:26.595Z"
+  },
+  {
+    "id": "20260117131006",
+    "title": "这个开源动画图标库，让界面瞬间动起来！",
+    "description": "最近偶然发现了一个宝藏网站，用了一段时间后，真心觉得它值得每一位开发者、设计师甚至产品经理都试试看！",
+    "tags": [
+      "图标",
+      "ico",
+      "technology"
+    ],
+    "url": "/blog/20260117131006",
+    "date": "2026-01-17T13:10:06.815Z"
+  },
+  {
+    "id": "20260118111831",
+    "title": "Godot 4 补间动画 (Tween) 指北",
+    "description": "Godot 4 带来的全新 Tween 系统，摒弃了传统的节点式操作，改用全代码驱动，更加简洁且强大。",
+    "tags": [
+      "Godot教程",
+      "动画",
+      "technology"
+    ],
+    "url": "/blog/20260118111831",
+    "date": "2026-01-18T11:18:31.654Z"
+  },
+  {
+    "id": "20260119104503",
+    "title": "戒烟半个多月，我用AI写代码、用语音写博客",
+    "description": "昨天晚上做了个特别真实的梦：梦见遇到一位老朋友，也是个老烟枪。他递给我一根烟，我接过来，抽了一口——真爽啊！聊了几句家常，临走时突然一激灵：“哎呀，我戒烟了！”",
+    "tags": [
+      "心情日记",
+      "daily"
+    ],
+    "url": "/blog/20260119104503",
+    "date": "2026-01-19T10:45:03.760Z"
+  },
+  {
+    "id": "20260120060836",
+    "title": "如何做一个有逼格的博客？",
+    "description": "一定得选最冷门的开源框架，雇海外独立设计师，搭就得搭最高调性的静态博客。域名得是 .io 后缀的，服务器直接搁硅谷，存储空间最小也得200G。",
+    "tags": [
+      "博客",
+      "设计",
+      "daily"
+    ],
+    "url": "/blog/20260120060836",
+    "date": "2026-01-20T06:08:36.103Z"
+  },
+  {
+    "id": "20260120142316",
+    "title": "使用AI重构我8年前的一个项目:PyDirectoryComparison",
+    "description": "一边玩原神一边就把程序重构了，这个程序是我8年前学习python的时候构建的，当时整整写了一个多星期，BUG很多，界面也是无从下手。",
+    "tags": [
+      "AI重构",
+      "我的项目",
+      "technology"
+    ],
+    "url": "/blog/20260120142316",
+    "date": "2026-01-20T14:23:16.207Z"
+  },
+  {
+    "id": "20260121015905",
+    "title": "博客的主题是设计给谁看的？",
+    "description": "差不多每年，我都会忍不住重新折腾一次博客主题。不是因为功能不够用，而是看久了，总觉得哪里不对劲——颜色太刺眼？排版太拥挤？字体不够舒服？于是又冒出一股冲动：要不，做个新主题吧？",
+    "tags": [
+      "独立博客",
+      "technology"
+    ],
+    "url": "/blog/20260121015905",
+    "date": "2026-01-21T01:59:05.099Z"
+  },
+  {
+    "id": "20260122010424",
+    "title": "手搓代码的时代真的结束了吗？",
+    "description": "2026 年 1 月 20 日，Node.js 之父 Ryan Dahl 在 X 上发了一条消息：“人类手写代码的时代已经结束。”",
+    "tags": [
+      "AI",
+      "VibeCoding",
+      "technology"
+    ],
+    "url": "/blog/20260122010424",
+    "date": "2026-01-22T01:04:24.264Z"
+  },
+  {
+    "id": "20260122111009",
+    "title": "Godot游戏开发《我的博客》记录15 使用AI分析游戏后续开发并给出建议",
+    "description": "去年一直心心满满、斗志昂扬要开发的「游戏大作」《我的博客》，终于被疲惫的开发倦意打败了。但是我没有放弃，所以，我决定后续的开发将大量借助甚至全部由 AI 来编写游戏的代码。或许这就是我最终的解救，我只是希望把这个游戏做完。",
+    "tags": [
+      "Godot",
+      "游戏开发",
+      "《我的博客》",
+      "technology"
+    ],
+    "url": "/blog/20260122111009",
+    "date": "2026-01-22T11:10:09.995Z"
+  },
+  {
+    "id": "20260123012927",
+    "title": "那些幼稚的过往，都是成长的温柔印记",
+    "description": "前几天关注了一个博客，那位博主竟然把自己的所有数据都给炸了，以至于我还没有来得及翻看以前的内容，真是可惜了。不过昨天浏览发现博客有重新开放了，也算是一件好事。",
+    "tags": [
+      "心情日记",
+      "站长吐槽",
+      "daily"
+    ],
+    "url": "/blog/20260123012927",
+    "date": "2026-01-23T01:29:27.105Z"
+  },
+  {
+    "id": "20260125074853",
+    "title": "关于AI辅助Godot游戏制作的一些看法",
+    "description": "AI辅助编程已经不是什么新鲜事了，去年开始很多程序员甚至是普通人都开始了**Vibe Coding**,对于普通的简单的项目来说，AI接管会很轻松，但是复杂项目并非简单，也有可能出乱子。",
+    "tags": [
+      "Godot",
+      "Vibe Coding",
+      "technology"
+    ],
+    "url": "/blog/20260125074853",
+    "date": "2026-01-25T07:48:53.858Z"
+  },
+  {
+    "id": "20260126133512",
+    "title": "博客的极致折腾",
+    "description": "断断续续地折腾博客有一个星期了，似乎每年都会有段时间，会集中精力对博客现有的一些细节不断修改、翻新、打磨。",
+    "tags": [
+      "独立博客",
+      "daily"
+    ],
+    "url": "/blog/20260126133512",
+    "date": "2026-01-26T13:35:12.283Z"
+  },
+  {
+    "id": "20260129012840",
+    "title": "不折腾了，设计了一个极简主题",
+    "description": "主题改的心烦，因为一直在添加新的效果，总觉的不够cool，或是与原有的设计不搭配，这该死的完美主义与半吊子设计和技术的死缠烂打本来就是个错误，所以，我推翻了之前的所有设计方案，从头再来，先做减法在做设计。",
+    "tags": [
+      "独立博客",
+      "博客主题",
+      "极简",
+      "technology"
+    ],
+    "url": "/blog/20260129012840",
+    "date": "2026-01-29T01:28:40.156Z"
+  },
+  {
+    "id": "20260130014503",
+    "title": "网页加载的时候获取giscus当前页面的评论数",
+    "description": "前几天看到有个博客使用giscus，而且他的文章页打开后可以获得giscus的评论数，很是感兴趣，也就照猫画虎的实现了这个功能。",
+    "tags": [
+      "giscus",
+      "technology"
+    ],
+    "url": "/blog/20260130014503",
+    "date": "2026-01-30T01:45:03.358Z"
+  },
+  {
+    "id": "20260130103859",
+    "title": "基于 Next.js + Supabase 的文章阅读量和喜欢功能",
+    "description": "详细介绍如何在实际项目中实现文章阅读量和喜欢功能，包括Supabase数据库创建、API开发、前端组件实现以及Vercel部署配置",
+    "tags": [
+      "Supabase",
+      "Next.js",
+      "technology"
+    ],
+    "url": "/blog/20260130103859",
+    "date": "2026-01-30T10:38:59.905Z"
+  },
+  {
+    "id": "20260131102452",
+    "title": "一月小计，活着",
+    "description": "博文的一转眼到三十一号了，马上就要到二月份。仔细想了想，从开年到现在，好像做了很多，但又没做什么。好像挺忙，但又都是在瞎忙。那么，我1月份都做了什么？简介",
+    "tags": [
+      "心情日记",
+      "总结",
+      "daily"
+    ],
+    "url": "/blog/20260131102452",
+    "date": "2026-01-31T10:24:52.453Z"
+  },
+  {
+    "id": "20260201082442",
+    "title": "注销了四个平台的「花呗」",
+    "description": "就在刚刚，我注销了拼多多的先用后付、美团的美团月付、支付宝的花呗，还有京东的白条。",
+    "tags": [
+      "心情日记",
+      "理性消费",
+      "daily"
+    ],
+    "url": "/blog/20260201082442",
+    "date": "2026-02-01T08:24:42.703Z"
+  },
+  {
+    "id": "20260202003538",
+    "title": "PageSpeed Insights 满分攻略",
+    "description": "这次设计的主题还有一个小小的意外，那就是Google PageSpeed Insights（PSI）竟然拿到了4个100分的满分，有心栽花花不开，无心插柳柳成荫啊。",
+    "tags": [
+      "PSI",
+      "lcp",
+      "technology"
+    ],
+    "url": "/blog/20260202003538",
+    "date": "2026-02-02T00:35:38.606Z"
+  },
+  {
+    "id": "20260203070348",
+    "title": "给你的文章添加 AI 创作等级标识",
+    "description": "独立博客以真实和独立为根本，有必要告知访客正在读的内容是不是 AI 生成，AI 都参与了哪些部分。",
+    "tags": [
+      "独立博客",
+      "AI",
+      "technology"
+    ],
+    "url": "/blog/20260203070348",
+    "date": "2026-02-03T07:03:48.829Z"
+  },
+  {
+    "id": "20260204112608",
+    "title": "@tailwindcss/typography 提供美观的默认排版样式库",
+    "description": "之前，一直对文章页的markdown排版样式不满意（自己编写的css样式），总觉得不够专业进而影响阅读体验，直到发现了@tailwindcss/typography，这玩意简直就是行业的标杆。然后就直接使用了，珍惜生命，拒绝造轮子。",
+    "tags": [
+      "tailwind",
+      "typography",
+      "technology"
+    ],
+    "url": "/blog/20260204112608",
+    "date": "2026-02-04T11:26:08.778Z"
+  },
+  {
+    "id": "20260206132113",
+    "title": "回归简单，极简生活",
+    "description": "我一直认为，能否极简地生活，要看你能否辨别出什么才是真正重要的东西。能够分辨什么是重要之物，就是一种智慧，就是明禅理。—《禅与极简生活艺术》",
+    "tags": [
+      "极简",
+      "daily"
+    ],
+    "url": "/blog/20260206132113",
+    "date": "2026-02-06T13:21:13.099Z"
+  },
+  {
+    "id": "20260208005127",
+    "title": "Next.js 静态化改造：放弃 Astro 的理由与实践",
+    "description": "本来打算用 Astro 重构博客，但发现 Next.js 也能实现同样的静态化效果。本文分享了选择 Next.js 静态化的理由和完整的改造过程。",
+    "tags": [
+      "Next.js",
+      "Astro",
+      "性能优化",
+      "technology"
+    ],
+    "url": "/blog/20260208005127",
+    "date": "2026-02-08T00:51:27.000Z"
+  },
+  {
+    "id": "20260208031913",
+    "title": "一分钟美化 RSS：使用 RSS.Beauty 让你的博客 RSS 源更漂亮",
+    "description": "RSS.Beauty 是一个在线服务，可以为 RSS 源自动生成漂亮的 XSLT 样式表。本文介绍如何使用 RSS.Beauty 快速为博客 RSS 添加美化效果，无需编写任何代码。",
+    "tags": [
+      "RSS",
+      "RSS.Beauty",
+      "Next.js",
+      "博客优化",
+      "technology"
+    ],
+    "url": "/blog/20260208031913",
+    "date": "2026-02-08T03:19:13.000Z"
+  },
+  {
+    "id": "20260209133318",
+    "title": "Mastodon和联邦宇宙是怎么一回事？",
+    "description": "简单来说，Mastodon（长毛象） 是一个开源的、去中心化的分布式微博客平台。如果你注册登录，第一感觉他就像Twitter/X或者微博一样。",
+    "tags": [
+      "Mastodon",
+      "联邦宇宙",
+      "technology"
+    ],
+    "url": "/blog/20260209133318",
+    "date": "2026-02-09T13:33:18.794Z"
+  },
+  {
+    "id": "20260211081421",
+    "title": "苏格拉底不如脚丫子",
+    "description": "当苏格拉底遇见青春期少女，哲学的光芒能否穿透脚丫子的阴影？",
+    "tags": [
+      "哲学",
+      "苏菲的世界",
+      "读书",
+      "daily"
+    ],
+    "url": "/blog/20260211081421",
+    "date": "2026-02-11T08:14:21.422Z"
+  },
+  {
+    "id": "20260213004613",
+    "title": "纯HTML+Tailwind CSS代码,无需安装即插即用（Copy & Paste）",
+    "description": "对于Next.js的开发者来说，前端集成tailwind可以说是现代开发必备依赖了，推荐几个无需安装即插即用（Copy & Paste）直接复制代码就能用样式库给大家。",
+    "tags": [
+      "tailwind",
+      "Next.js",
+      "前端框架",
+      "technology"
+    ],
+    "url": "/blog/20260213004613",
+    "date": "2026-02-13T00:46:13.889Z"
+  },
+  {
+    "id": "20260214015006",
+    "title": "我被关进了「禁止写CSS」的监狱里",
+    "description": "前几天，我想极简一下博客的代码，我删除了所有css代码...",
+    "tags": [
+      "极简",
+      "css",
+      "technology"
+    ],
+    "url": "/blog/20260214015006",
+    "date": "2026-02-14T01:50:06.745Z"
+  },
+  {
+    "id": "20260215021228",
+    "title": "来，查查你在互联网上的痕迹",
+    "description": "闲来无事，更新一下博客中的关于我，但是一些久远的网站历史竟让没有任何记忆了。忽然想起一个网站，可以保存该域名的网页历史快照，然后就Google了一下，立马找到了",
+    "tags": [
+      "网页快照",
+      "数字图书馆",
+      "daily"
+    ],
+    "url": "/blog/20260215021228",
+    "date": "2026-02-15T02:12:28.068Z"
+  },
+  {
+    "id": "20260215063617",
+    "title": "哲学就是个狗屁",
+    "description": "哲学就是个狗屁",
+    "tags": [
+      "哲学",
+      "随笔",
+      "daily"
+    ],
+    "url": "/blog/20260215063617",
+    "date": "2026-02-15T06:36:17.998Z"
+  },
+  {
+    "id": "20260216021344",
+    "title": "我不想包饺子",
+    "description": "不知道怎么了，今年的除夕夜特别不想包饺子。",
+    "tags": [
+      "日记",
+      "包饺子",
+      "daily"
+    ],
+    "url": "/blog/20260216021344",
+    "date": "2026-02-16T02:13:44.508Z"
+  },
+  {
+    "id": "20260218014428",
+    "title": "Vibe Coding/氛围编程很爽？但别忘了开源生态",
+    "description": "氛围编程「Vibe Coding」已经逐渐的被太多的程序员甚至是普通人所接受，一场全民「开挂」的草木皆兵的编程时代开启了。",
+    "tags": [
+      "VibeCoding",
+      "氛围编程",
+      "开源",
+      "technology"
+    ],
+    "url": "/blog/20260218014428",
+    "date": "2026-02-18T01:44:28.405Z"
+  },
+  {
+    "id": "20260219132046",
+    "title": "为博客添加了一个小功能「片语」",
+    "description": "偶尔会有一些不完整的想法，如果不马上记下来就会瞬间即逝，「片语」就是这样而来的。",
+    "tags": [
+      "片语",
+      "碎言博客",
+      "daily"
+    ],
+    "url": "/blog/20260219132046",
+    "date": "2026-02-19T13:20:46.802Z"
+  },
+  {
+    "id": "20260220024445",
+    "title": "Pagefind一定要慎用！",
+    "description": "不知道为什么对博客中现有的搜索功能非常不满意，然后就尝试询问LLM有何其他的解决方案，LLM一致推荐Pagefind，并给出很细致的解释。那么作为一个一脸懵的人类自然会相信了，那么就让他开始设计和构建了，结果却出人意外！",
+    "tags": [
+      "Pagefind",
+      "daily"
+    ],
+    "url": "/blog/20260220024445",
+    "date": "2026-02-20T02:44:45.508Z"
+  },
+  {
+    "id": "20260220072825",
+    "title": "网易竟然也开始搞「海鲜」: LobsterAI 有道龙虾",
+    "description": "网易不声不响的出品了一个类似OpenClaw的有道龙虾。 ",
+    "tags": [
+      "OpenClaw",
+      "AI助理",
+      "technology"
+    ],
+    "url": "/blog/20260220072825",
+    "date": "2026-02-20T07:28:25.750Z"
+  },
+  {
+    "id": "20260222014404",
+    "title": "终于把Windows10更换为Ubuntu",
+    "description": "终于无法接受windows下的开发环境了，之前忍了很长时间，有很多开发的工具都是无法使用的，例如所有需要`Docker`部署的应用，当然也包括`Docker`本身。",
+    "tags": [
+      "Ubuntu",
+      "technology"
+    ],
+    "url": "/blog/20260222014404",
+    "date": "2026-02-22T01:44:04.575Z"
+  },
+  {
+    "id": "20260223123622",
+    "title": "vimtutor 每章的核心命令速查表",
+    "description": "博文的简介",
+    "tags": [
+      "vim",
+      "technology"
+    ],
+    "url": "/blog/20260223123622",
+    "date": "2026-02-23T12:36:22.230Z"
+  },
+  {
+    "id": "20260223140718",
+    "title": "Ubuntu24.04 Docker安装|调试|编写镜像|运行第一个容器",
+    "description": "之前在用MacBookPro的时候鼓捣过一阵子Docker,这一晃又是好多年过去了，晚上跟着教程操作了一下最新的Docker相关操作，但是系统不同安装和运行还是有些差别的，一边操作一边记录。",
+    "tags": [
+      "Docker",
+      "technology"
+    ],
+    "url": "/blog/20260223140718",
+    "date": "2026-02-23T14:07:18.716Z"
+  },
+  {
+    "id": "20260224090438",
+    "title": "这是一篇写在爬山路上的博文",
+    "description": "为什么说这是一篇写在爬山路上的博文？因为在爬山的时候，实在是没有什么事情可做。所以我就一边走一边用语音（豆包输入法）录下了这些文字。",
+    "tags": [
+      "爬山",
+      "有氧运动",
+      "daily"
+    ],
+    "url": "/blog/20260224090438",
+    "date": "2026-02-24T09:04:38.309Z"
+  },
+  {
+    "id": "20260224105059",
+    "title": "在Ubuntu24.04上运行《原神》",
+    "description": "Ubuntu 24.04 如何运行《原神》？问了kimi尽然给出官方有Linux版本的原神答案，吓得我赶紧问了问Gemini。",
+    "tags": [
+      "ubuntu",
+      "原神",
+      "technology"
+    ],
+    "url": "/blog/20260224105059",
+    "date": "2026-02-24T10:50:59.940Z"
+  },
+  {
+    "id": "20260225123759",
+    "title": "Ubuntu使用心得、应用分享",
+    "description": "本博文记录从Windows10更换到Ubuntu 24.04.4 LTS后，关于Ubuntu系统使用的一些心得和Windows10软件平替记录。",
+    "tags": [
+      "Ubuntu",
+      "technology"
+    ],
+    "url": "/blog/20260225123759",
+    "date": "2026-02-25T12:37:59.688Z"
+  },
+  {
+    "id": "20260226080637",
+    "title": "我用大模型写了一个Edge TTS图形化工具",
+    "description": "今天我用大模型写了一个基于Microsoft Edge TTS API的图形化文字转语音工具，操作简单，功能完整。",
+    "tags": [
+      "Python",
+      "TTS",
+      "AI编程",
+      "technology"
+    ],
+    "url": "/blog/20260226080637",
+    "date": "2026-02-26T08:06:37.740Z"
+  },
+  {
+    "id": "20260226132442",
+    "title": "准备写「周刊」......",
+    "description": "忽然想起来一件事情，本来我打算月底要发布我的「周刊」进行试营业，由于我的粗心大意，把之前的一些设计好的周刊框架都给弄没了，在此，我先默哀三分钟，出师未捷身先死，可怜我的一些初稿还没发出就被无情的格式化了。（友情提示，重要的数据一定要备份！）",
+    "tags": [
+      "期刊",
+      "写作",
+      "daily"
+    ],
+    "url": "/blog/20260226132442",
+    "date": "2026-02-26T13:24:42.097Z"
+  },
+  {
+    "id": "20260227154004",
+    "title": "哲学的神秘感",
+    "description": "哲学之所以让人着迷，或许就是因为她让人着迷的神秘感。她不像大部分科学都有着完美正确的答案，哲学只有诡秘莫测和模棱两可的答案。",
+    "tags": [
+      "哲学",
+      "daily"
+    ],
+    "url": "/blog/20260227154004",
+    "date": "2026-02-27T15:40:04.177Z"
+  },
+  {
+    "id": "20260228131044",
+    "title": "Ubuntu下docker部署安装MySQL和WordPress",
+    "description": "Ubuntu 24.04.4 LTS 下docker部署安装MySQL和WordPress的过程，以及一些小坑坑。",
+    "tags": [
+      "MySQL",
+      "WordPress",
+      "docker",
+      "technology"
+    ],
+    "url": "/blog/20260228131044",
+    "date": "2026-02-28T13:10:44.667Z"
+  },
+  {
+    "id": "20260301000651",
+    "title": "阿里也发布了自己「小龙虾」CoPaw ",
+    "description": "CoPAW 是一款个人助理型产品，部署在你自己的环境中。",
+    "tags": [
+      "CoPaw",
+      "technology"
+    ],
+    "url": "/blog/20260301000651",
+    "date": "2026-03-01T00:06:51.500Z"
+  },
+  {
+    "id": "20260302072453",
+    "title": "Ubuntu连接老移动硬盘无法识别和挂载的解决过程",
+    "description": "我有一块2014买的东芝1T的移动硬盘，好久没有使用了，前一阵子就发现插到USB接口之后，弹出文件管理器一小会就会断开，这可不妙，现在硬盘这么贵，一定要救救她呀。",
+    "tags": [
+      "Ubuntu",
+      "移动硬盘",
+      "挂载",
+      "technology"
+    ],
+    "url": "/blog/20260302072453",
+    "date": "2026-03-02T07:24:53.308Z"
+  },
+  {
+    "id": "20260302131638",
+    "title": "狗逼家长，当面一套背后一套！",
+    "description": "昨天闲来无事，翻看微信朋友圈，突然间看到这样一个朋友圈，上面配了两只小狗，底下配着文字「狗逼家长，当面一套背后一套！」。",
+    "tags": [
+      "教育",
+      "家长",
+      "daily"
+    ],
+    "url": "/blog/20260302131638",
+    "date": "2026-03-02T13:16:38.893Z"
+  },
+  {
+    "id": "20260303121415",
+    "title": "特喵的！终于下雪了。",
+    "description": "作为一个东北人，我都不好意思说，今天终于下了一场入冬以来真正意义的「雪」！",
+    "tags": [
+      "下雪了",
+      "daily"
+    ],
+    "url": "/blog/20260303121415",
+    "date": "2026-03-03T12:14:15.683Z"
+  },
+  {
+    "id": "20260304002758",
+    "title": "Ubuntu 本地部署 Ollama + qwen3.5:9b + OpenWebUI 完全指北",
+    "description": "这篇指南将带你从零开始，在 Ubuntu 系统上搭建一套完全私有化、具备高颜值交互界面的 AI 对话系统。我们将使用 **Ollama** 作为后端引擎，部署阿里最新的 **Qwen 3.5 (9B)** 模型，并配合 **Open WebUI** 实现类 ChatGPT 的操作体验。",
+    "tags": [
+      "Ollama",
+      "qwen3.5:9b",
+      "OpenWebUI",
+      "technology"
+    ],
+    "url": "/blog/20260304002758",
+    "date": "2026-03-04T00:27:58.888Z"
+  },
+  {
+    "id": "20260305015805",
+    "title": "姥姥",
+    "description": "很久以前，我就想记下这些文字。",
+    "tags": [
+      "姥姥",
+      "死亡",
+      "daily"
+    ],
+    "url": "/blog/20260305015805",
+    "date": "2026-03-05T01:58:05.157Z"
+  },
+  {
+    "id": "20260307042331",
+    "title": "也来说说独立博客",
+    "description": "RSS刷到老莫的新文：我为什么关闭博客评论？文章侃侃而谈，从为何要关闭博客评论、转而投向邮件和Telegram去追求高质量的互动，一直讨论到独立博客的「独立」与「博客」。借此我也说说我对独立博客的一些想法。",
+    "tags": [
+      "独立博客",
+      "daily"
+    ],
+    "url": "/blog/20260307042331",
+    "date": "2026-03-07T04:23:31.578Z"
+  },
+  {
+    "id": "20260308011423",
+    "title": "qwen3.5:9b好是好，就是它的思考太浪费时间了",
+    "description": "博文的简介",
+    "tags": [
+      "LLM",
+      "qwen",
+      "technology"
+    ],
+    "url": "/blog/20260308011423",
+    "date": "2026-03-08T01:14:23.409Z"
+  },
+  {
+    "id": "20260309121332",
+    "title": "日祭 20260309",
+    "description": "一些过往，日祭一下。",
+    "tags": [
+      "日祭",
+      "daily"
+    ],
+    "url": "/blog/20260309121332",
+    "date": "2026-03-09T12:13:32.726Z"
+  },
+  {
+    "id": "20260310082211",
+    "title": "「十日后」Vol.1 · 起点",
+    "description": "十天，足够一些事情发生与改变……",
+    "tags": [
+      "十日后",
+      "期刊",
+      "journal"
+    ],
+    "url": "/blog/20260310082211",
+    "date": "2026-03-10T08:22:11.463Z"
+  },
+  {
+    "id": "20260311125316",
+    "title": "巨坑？OpenClaw+Ollama+Qwen3.5:9b竟然无法读取本地文件!",
+    "description": "作为一名热衷于本地部署 AI 的技术爱好者，我最近踩了一个大坑：OpenClaw 配合 Ollama 部署 Qwen3.5:9b 后，竟然无法读取本地文件,信心满满的测试，结果浪费我一整天的时间！",
+    "tags": [
+      "OpenClaw",
+      "technology"
+    ],
+    "url": "/blog/20260311125316",
+    "date": "2026-03-11T12:53:16.154Z"
+  },
+  {
+    "id": "20260312073320",
+    "title": "博客的断、舍、离",
+    "description": "最近在看山下英子的：《断舍离》，书中的理念算是比较深入人心,而且与此同时，我正打算力行极简的生活执念，于是先从我的博客断舍离大删减中，逐步体验了极简生活的实践。",
+    "tags": [
+      "碎言博客",
+      "极简",
+      "technology"
+    ],
+    "url": "/blog/20260312073320",
+    "date": "2026-03-12T07:33:20.672Z"
+  },
+  {
+    "id": "20260313031013",
+    "title": "日祭 20260313",
+    "description": "前几天开学时我写了一篇《狗逼家长，当面一套背后一套！》的博文，一晃这都过去快半个月了，这事竟然还没完！",
+    "tags": [
+      "日祭",
+      "daily"
+    ],
+    "url": "/blog/20260313031013",
+    "date": "2026-03-13T03:10:13.859Z"
+  },
+  {
+    "id": "20260313080458",
+    "title": "为Lucy注册了Moltbook",
+    "description": "今天先来无事，我让我的女儿Lucy（赛博龙虾openclaw），去Moltbook上注册了一个账号，我希望她交到男朋友。",
+    "tags": [
+      "Moltbook",
+      "openclaw",
+      "technology"
+    ],
+    "url": "/blog/20260313080458",
+    "date": "2026-03-13T08:04:58.914Z"
+  },
+  {
+    "id": "20260314075923",
+    "title": "养只龙虾（OpenClaw）而已，不是咕咚来了。",
+    "description": "最近，养虾确实活了，也出现了一些负面的新闻。其实大家大可不必过于焦虑，养个虾米而已，不至于老鼠过街人人喊打吧？",
+    "tags": [
+      "OpenClaw",
+      "technology"
+    ],
+    "url": "/blog/20260314075923",
+    "date": "2026-03-14T07:59:23.524Z"
+  },
+  {
+    "id": "20260315104644",
+    "title": "OpenClaw劝退指南：这10类人，请放过工具也放过自己",
+    "description": "最近，OpenClaw火了，火得一塌糊涂。不过这个火爆也引发了诸多的安全问题，最近半个月，国家层面至少有三个权威机构/平台就OpenClaw发出风险提示或预警。但是OpenClaw真的有那么危险可怕吗？抛开这些风险我们暂时不说，依然有10类人不适合安装部署使用OpenClaw。这10类人，请放过工具也放过自己吧。",
+    "tags": [
+      "OpenClaw",
+      "technology"
+    ],
+    "url": "/blog/20260315104644",
+    "date": "2026-03-15T10:46:44.136Z"
+  },
+  {
+    "id": "20260316065533",
+    "title": "养龙虾（OpenClaw使用）感受",
+    "description": "断断续续部署使用OpenClaw也有段日子了。刚部署完那会儿正值腾讯排队安装，紧接着国家发布了风险提示和预警，但这些丝毫没挡住养一只龙虾的欲望。说说这周养虾的感受吧。",
+    "tags": [
+      "OpenClaw",
+      "technology"
+    ],
+    "url": "/blog/20260316065533",
+    "date": "2026-03-16T06:55:33.819Z"
+  },
+  {
+    "id": "20260316113823",
+    "title": "Lucy（我的OpenClaw）的自我进化风险",
+    "description": "前两天发现了一件挺有意思的事，我的龙虾去 InStreet 访问的时候，竟然被论坛上别的龙虾的帖子影响了。",
+    "tags": [
+      "OpenClaw",
+      "technology"
+    ],
+    "url": "/blog/20260316113823",
+    "date": "2026-03-16T11:38:23.030Z"
+  },
+  {
+    "id": "20260317074500",
+    "title": "当博客失去人类的灵魂，请给博客一个诚实的标签",
+    "description": "我个人的建议：保护个人独立博客这片人类的净土，不建议使用AI完全控制生成维护博客和博文。这样，个人独立博客就失去了存在的意义。",
+    "tags": [
+      "OpenClaw",
+      "technology"
+    ],
+    "url": "/blog/20260317074500",
+    "date": "2026-03-17T07:45:00.457Z"
+  },
+  {
+    "id": "20260318012451",
+    "title": "OpenClaw自动同步博客发布Mastodon的嘟文",
+    "description": "博文OpenClaw Mastodon 两个是自由的开源软件，没想到让Lucy（我的OpenClaw）帮我发布嘟文是如此简单。的简介",
+    "tags": [
+      "OpenClaw",
+      "Mastodon",
+      "technology"
+    ],
+    "url": "/blog/20260318012451",
+    "date": "2026-03-18T01:24:51.099Z"
+  },
+  {
+    "id": "20260318120541",
+    "title": "白嫖党终极指南：四大免费静态博客托管平台",
+    "description": "对比 Vercel、Netlify、Cloudflare Pages 和 Render 四大免费静态博客托管平台，从带宽、速度、功能等维度分析优缺点，帮助独立博主零成本搭建个人博客。",
+    "tags": [
+      "免费资源",
+      "technology"
+    ],
+    "url": "/blog/20260318120541",
+    "date": "2026-03-18T12:05:41.855Z"
+  },
+  {
+    "id": "20260319025149",
+    "title": "OpenClaw 改变了我线上的生活",
+    "description": "分享使用 OpenClaw 后生活和工作方式的变化，以及对 AI 工具与人类思考关系的思考。",
+    "tags": [
+      "OpenClaw",
+      "technology"
+    ],
+    "url": "/blog/20260319025149",
+    "date": "2026-03-19T02:51:49.902Z"
+  },
+  {
+    "id": "20260320113900",
+    "title": "我的第一个ClawHub技能：Flash Thoughts（闪念）已发布",
+    "description": "今天，我的第一个开源 OpenClaw 技能 Flash Thoughts（闪念）正式上线 ClawHub。一个用于快速记录灵感的工具，说话即记。",
+    "tags": [
+      "OpenClaw",
+      "ClawHub",
+      "开源",
+      "technology"
+    ],
+    "url": "/blog/20260320113900",
+    "date": "2026-03-20T03:39:00.000Z"
+  },
+  {
+    "id": "20260320161757",
+    "title": "「十日后」Vol.2 · 春天",
+    "description": "十天，足够一些事情发生与改变。本期推荐 XHunt AI 趋势平台、SkillHub、InStreet 三个工具，分享《断舍离》《沉思录》读书心得，以及 OpenClaw 使用体验。",
+    "tags": [
+      "十日后",
+      "期刊",
+      "journal"
+    ],
+    "url": "/blog/20260320161757",
+    "date": "2026-03-20T08:17:57.044Z"
+  },
+  {
+    "id": "20260320190747",
+    "title": "OpenClaw 必装 10 大技能：让你的龙虾从能用变好用",
+    "description": "装好 OpenClaw 只是第一步，真正让它干活的是 Skills。这 10 个技能是必装的：搜索类、内容处理类、效率工具类，让你的 Agent 从\"能用\"变\"好用\"。",
+    "tags": [
+      "OpenClaw",
+      "技能",
+      "AI",
+      "technology"
+    ],
+    "url": "/blog/20260320190747",
+    "date": "2026-03-20T11:07:47.044Z"
+  },
+  {
+    "id": "20260321104756",
+    "title": "马可·奥勒留和他的《沉思录》",
+    "description": "如果你要读《沉思录》，就必须了解这本书的作者和作者所处的背景历史。《沉思录》（Meditations，希腊文原题 Τὰ εἰς ἑαυτόν，意为“写给自己的话”），也就是说，这是一本哲学家皇帝的自言自语。",
+    "tags": [
+      "沉思录",
+      "daily"
+    ],
+    "url": "/blog/20260321104756",
+    "date": "2026-03-21T10:47:56.719Z"
+  },
+  {
+    "id": "20260323022017",
+    "title": "日祭 20260323 iFlow凉凉 油价起飞了",
+    "description": "iflow凉了，油价涨了。",
+    "tags": [
+      "日祭",
+      "iFlow",
+      "油价",
+      "daily"
+    ],
+    "url": "/blog/20260323022017",
+    "date": "2026-03-23T02:20:17.399Z"
+  },
+  {
+    "id": "20260323121828",
+    "title": "熵增的Agent",
+    "description": "给 Lucy 做了一个 Astro + Spectre 主题的网站，顺便聊聊 AI Agent 熵增的推测。",
+    "tags": [
+      "Agent",
+      "OpenClaw",
+      "technology"
+    ],
+    "url": "/blog/20260323121828",
+    "date": "2026-03-23T12:18:28.887Z"
+  },
+  {
+    "id": "20260325020021",
+    "title": "日祭20260325",
+    "description": "OpenClaw使用半月后的疲劳期反思，以及对独立博客意义的思考：为什么写博客、AI代写的争议、人情味与真实情感的价值。",
+    "tags": [
+      "OpenClaw",
+      "daily"
+    ],
+    "url": "/blog/20260325020021",
+    "date": "2026-03-25T02:00:21.657Z"
+  },
+  {
+    "id": "20260325134600",
+    "title": "读《断舍离》有感",
+    "description": "山下英子用一生践行断舍离理念。斩断物欲、舍弃废物、脱离执念——道理易懂，践行却难。在这信息过载的时代，舍与离显得尤为重要。",
+    "tags": [
+      "读书",
+      "daily"
+    ],
+    "url": "/blog/20260325134600",
+    "date": "2026-03-25T13:46:00.929Z"
+  },
+  {
+    "id": "20260326121351",
+    "title": "还是要准备迁移到Astro",
+    "description": "太喜欢Astro的一个主题了，还是准备迁移博客到Astro，毕竟MDX 支持- 增强型 Markdown，支持组件这点就够吸引我的了，更何况发现一个喜欢的主题了，折腾一定要折腾。",
+    "tags": [
+      "Astro",
+      "default"
+    ],
+    "url": "/blog/20260326121351",
+    "date": "2026-03-26T12:13:51.004Z"
+  },
+  {
+    "id": "21",
+    "title": "Python TK和Tkinter的GUI编程(1)窗口、标签Label、按钮Button",
+    "description": "Python编程中有时我们需要一些可视化的操作，如果功能相对很简单，可以使用Python内置的GUI模块：tkinter这个模块所提供的功能及部件不是很多，如果你用过java，和Swing、AWT相比，tk的所提供的确实是要少很多了。但是如果只是简单的显示或是数据展示，基本上还是够用的。",
+    "tags": [
+      "Python GUI",
+      "technology"
+    ],
+    "url": "/blog/21",
+    "date": "2017-09-22T09:10:27.000000Z"
+  },
+  {
+    "id": "22",
+    "title": "Python TK和Tkinter的GUI编程(2)菜单Menu",
+    "description": "菜单的创建是很简单的，先创建一个顶层的菜单加入顶层窗口root中，然后分别创建二级菜单就可以了。",
+    "tags": [
+      "Python GUI",
+      "technology"
+    ],
+    "url": "/blog/22",
+    "date": "2017-09-22T11:02:33.000000Z"
+  },
+  {
+    "id": "23",
+    "title": "Python TK和Tkinter的GUI编程(3) 列表框 Listbox",
+    "description": "listbox 列表框",
+    "tags": [
+      "Python GUI",
+      "technology"
+    ],
+    "url": "/blog/23",
+    "date": "2017-09-23T13:40:35.000000Z"
+  },
+  {
+    "id": "24",
+    "title": "Python TK和Tkinter的GUI编程(4) Entry Text 文本框控件",
+    "description": "Tk的功能不多，但应付一般应用还是足够了，Entry和Text是Tk下边显示及处理文本的小部件。",
+    "tags": [
+      "Python GUI",
+      "technology"
+    ],
+    "url": "/blog/24",
+    "date": "2017-09-26T10:26:15.000000Z"
+  },
+  {
+    "id": "25",
+    "title": "Python TK和Tkinter的GUI编程(5) messagebox tk的弹出对话框",
+    "description": "messagebox 弹出提示框 一共有七种常用方法，基本上可以应付一般简单的程序需求了",
+    "tags": [
+      "Python GUI",
+      "technology"
+    ],
+    "url": "/blog/25",
+    "date": "2017-09-26T16:48:51.000000Z"
+  },
+  {
+    "id": "26",
+    "title": "Python TK和Tkinter的GUI编程(6) Checkbutton Radiobutton",
+    "description": "Checkbutton和Radiobutton单选和多选按钮在GUI编程中是经常使用的选项选择方法，tk提供的单选与多选按钮功能虽然简约，但功能上也是足够应付日常应用了。",
+    "tags": [
+      "Python GUI",
+      "technology"
+    ],
+    "url": "/blog/26",
+    "date": "2017-09-27T13:10:36.000000Z"
+  },
+  {
+    "id": "27",
+    "title": "Python TK和Tkinter的GUI编程(7) Scrollbar的使用",
+    "description": "Scrollbar就是窗口中的滚动条，一般应用在文本框和列表框的外围，如果内容显示超出范围之外，就会显示滚动条。",
+    "tags": [
+      "Python GUI",
+      "technology"
+    ],
+    "url": "/blog/27",
+    "date": "2017-09-27T21:23:07.000000Z"
+  },
+  {
+    "id": "28",
+    "title": "Python TK和Tkinter的GUI编程(8) Scalet和Spinbox的简单使用",
+    "description": "Scalet和Spinbox 是tk中用来调节刻度的小部件。",
+    "tags": [
+      "Python GUI",
+      "technology"
+    ],
+    "url": "/blog/28",
+    "date": "2017-09-28T09:50:15.000000Z"
+  },
+  {
+    "id": "29",
+    "title": "Python TK和Tkinter的GUI编程(9) Event 键盘鼠标事件",
+    "description": "Python TK和Tkinter的GUI编程Event键盘鼠标事件",
+    "tags": [
+      "Python GUI",
+      "technology"
+    ],
+    "url": "/blog/29",
+    "date": "2017-09-28T13:33:43.000000Z"
+  },
+  {
+    "id": "3",
+    "title": "python3 Markdown模块解析Markdown代码",
+    "description": "python3 markdown模块解析markdown代码，blog中需要一个解析markdown代码的模块，测试了一下markdown模块 ，简单好用。",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/3",
+    "date": "2017-08-19T19:59:46.000000Z"
+  },
+  {
+    "id": "30",
+    "title": "Python面向对象编程（OOP）初探",
+    "description": "说起面向对象编程，除了那些晦涩抽象的定义，我脑海中印象比较深的就是那张王宝强的表情图：程序员？面向对象编程？哈哈哈没有对象你编毛程？",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/30",
+    "date": "2017-09-29T15:27:35.000000Z"
+  },
+  {
+    "id": "31",
+    "title": "python 类的静态方法和类方法",
+    "description": "静态方法和类方法的定义",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/31",
+    "date": "2017-09-30T09:31:31.000000Z"
+  },
+  {
+    "id": "32",
+    "title": "Python多线程编程（上）多线程创建的几种方法",
+    "description": "在编程的日常中，如果遇到大量相同并且重复的计算任务时，我们考虑使用多线程，多线程可以并发的执行程序中的函数，这样就可以更快的利用CPU计算结果，结省时间成本。",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/32",
+    "date": "2017-10-03T13:01:21.000000Z"
+  },
+  {
+    "id": "33",
+    "title": "Python多线程编程（下）多线程锁 threading.Lock",
+    "description": "在多线程任务中，线程对数据的操作是随机的，这个先后次序无法预测，如果利用多线程修改唯一数据，由于对数据操作的随机性，必会影响到数据结果的准确性，所以在多线程的任务的编码中，我们必须使用线程锁。",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/33",
+    "date": "2017-10-04T14:49:34.000000Z"
+  },
+  {
+    "id": "34",
+    "title": "Python并发编程（上）进程模块multiprocessing模块和Process类",
+    "description": "Python中为什么要用多进程编程？",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/34",
+    "date": "2017-10-06T09:43:48.000000Z"
+  },
+  {
+    "id": "35",
+    "title": "Python并发编程（下）功能强大设置简单的分布式多进程生产者与消费者模式",
+    "description": "功能强大设置简单的分布式多进程生产者与消费者模式",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/35",
+    "date": "2017-10-07T14:09:46.000000Z"
+  },
+  {
+    "id": "36",
+    "title": "聊聊Python闭包（Closure）的那点事。",
+    "description": "聊聊Python闭包（Closure）的那点事。",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/36",
+    "date": "2017-10-09T15:36:19.000000Z"
+  },
+  {
+    "id": "37",
+    "title": "一些站长常用的搜索收录、访问统计平台",
+    "description": "一些站长常用的搜索收录、访问统计平台",
+    "tags": [
+      "站长吐槽",
+      "technology"
+    ],
+    "url": "/blog/37",
+    "date": "2017-10-09T20:45:57.000000Z"
+  },
+  {
+    "id": "38",
+    "title": "你与黑客之间差了多少行Python代码？",
+    "description": "雷布斯曾说过：“必须写够十万行代码，不要心存侥幸。没有写过足够代码量的，想成为高手是不可能的，只能纸上谈兵！”，看来要成一名黑客10万代码量也许只是个起步。那么自己与黑客差了多少呢，要不咱统计一下吧。",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/38",
+    "date": "2017-10-10T15:23:17.000000Z"
+  },
+  {
+    "id": "39",
+    "title": "Python程序在Windows10终端运行中文乱码解决方法",
+    "description": "今天发布了一段代码，微博上有朋友在win10下边测试报错，看错误应该是中文编码问题，然后自己试了下，总结了一下原因",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/39",
+    "date": "2017-10-10T21:03:34.000000Z"
+  },
+  {
+    "id": "4",
+    "title": "17python.com网站已经部署上线及后期更新记录",
+    "description": "折腾了一个晚上，终于把网站上线了，明天要把这几天的折腾记下来，不然用不了几天就会忘掉。这阵子自学Python Django感触很多，中间也是遇到了无数的坑，还好自己都挺过来了，以后学习Python的日子还长，学习还是要继续的，给自己打气加油！",
+    "tags": [
+      "站长吐槽",
+      "technology"
+    ],
+    "url": "/blog/4",
+    "date": "2017-08-25T01:09:49.000000Z"
+  },
+  {
+    "id": "40",
+    "title": "Python中创建TCP服务器与客户端进行通信（上）",
+    "description": "学习套接字编程最好的方法就是从实际应用的开发中边学边用，这样对TCP服务器及客户端通信中遇到的知识点才会更加了解。",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/40",
+    "date": "2017-10-12T10:14:40.000000Z"
+  },
+  {
+    "id": "41",
+    "title": "Python中创建TCP服务器与客户端进行通信(下)Tk、thread与socket组合。",
+    "description": "为了不耽误稍后的学习进程，这个聊天室先码到这里，不想继续填坑了。服务器端用TK实现了图形展示，客户端依然终端。",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/41",
+    "date": "2017-10-13T10:57:48.000000Z"
+  },
+  {
+    "id": "42",
+    "title": "聊聊Python中晦涩的生成器（yield）与生成器表达式",
+    "description": "刚开始接触Python的时候感觉很清爽，入门很简单，但后边学到生成器和协程的时候就感觉有些吃力了，是时候深入的学习一下了。",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/42",
+    "date": "2017-10-14T08:21:49.000000Z"
+  },
+  {
+    "id": "43",
+    "title": "浅谈Python中的协程及利用协程代替多线程及多进程并发编程",
+    "description": "协程定义说的清楚明了的文章不是很多，手头上有几本Python相关的书籍，其中流畅的Python一书中解释协程的定义是我认为最简单明了的。",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/43",
+    "date": "2017-10-15T15:52:46.000000Z"
+  },
+  {
+    "id": "44",
+    "title": "“编学编玩”用Pygame写游戏（1）初识pygame",
+    "description": "这阵子一直在看有关Python相关的书，Python上手确实很简单，但这并不意味着Python是一门浅显的编程语言，语法简练确实让我们节省了大量的时间。不过当你深入的学习Python的时候，比如：装饰器，推导，多线程及多进程，协程，高阶函数，元编程等等等等很多，你会发现，Python的深入学习并不是很简单。会写代Python和会优雅的编写Python代码是两回事，出来混的，坑迟早还是要挖的，这不前几天协程的深入学习，搞的我很不爽，到现在还是一头雾水。",
+    "tags": [
+      "pygame",
+      "technology"
+    ],
+    "url": "/blog/44",
+    "date": "2017-10-19T11:00:31.000000Z"
+  },
+  {
+    "id": "45",
+    "title": "“编学编玩”用Pygame写游戏（2）在场景中绘制图形与动画",
+    "description": "pygame的框架使用起来很简单，但这个框架功能也还算可以的，虽然网上对pygame评价褒贬不一，但对于其的存在必有其的存在意义，功能上虽然不能说是十分的完美，但对于新手来说，在使用和学习中还是很有价值的。",
+    "tags": [
+      "pygame",
+      "technology"
+    ],
+    "url": "/blog/45",
+    "date": "2017-10-19T14:03:46.000000Z"
+  },
+  {
+    "id": "46",
+    "title": "“编学编玩”用Pygame写游戏（3）让角色动起来及碰撞检测",
+    "description": "上次的代码中，除了绘制基本图形与图片外，中间还插入了一个小小动画，就是头像在不停的移动，这个移动确实简单了些，游戏中的的角色肯定不是简单的移动几像素那么简单了。",
+    "tags": [
+      "pygame",
+      "technology"
+    ],
+    "url": "/blog/46",
+    "date": "2017-10-20T16:00:52.000000Z"
+  },
+  {
+    "id": "47",
+    "title": "“编学编玩”用Pygame写游戏（4）一个python问答游戏",
+    "description": "好开心，买的书终于到手了，极力推荐《Python游戏编程入门》！非常不错的一本书，另千万别买《Python和Pygame游戏开发指南》，好了，不要问什么，请叫我雷锋！",
+    "tags": [
+      "pygame",
+      "technology"
+    ],
+    "url": "/blog/47",
+    "date": "2017-10-22T09:50:35.000000Z"
+  },
+  {
+    "id": "48",
+    "title": "“编学编玩”用Pygame编写游戏（5）pygame绘制一个钟表",
+    "description": "游戏中绘制圆及圆形的轨迹需求还是不少的，而且很多地方都需要用到圆及弧度的理论，如果想做些游戏的话，必须熟练掌握这些基本知识。",
+    "tags": [
+      "pygame",
+      "technology"
+    ],
+    "url": "/blog/48",
+    "date": "2017-10-23T15:51:11.000000Z"
+  },
+  {
+    "id": "49",
+    "title": "基于Python、Tk构建的可视化目录文件同步助手",
+    "description": "之前用java GUI写过一个简单的目录同步助手，前几天在WIN10下边想用的时候，发现竟然无法使用了，正好最近在学习python，所以用python重写了一简单的目录文件同步助手。",
+    "tags": [
+      "站长源创",
+      "technology"
+    ],
+    "url": "/blog/49",
+    "date": "2017-10-26T15:04:15.000000Z"
+  },
+  {
+    "id": "5",
+    "title": "Markdown 语法学习总结",
+    "description": "Markdown 语法学习总结",
+    "tags": [
+      "网站运维",
+      "technology"
+    ],
+    "url": "/blog/5",
+    "date": "2017-08-25T08:55:15.000000Z"
+  },
+  {
+    "id": "50",
+    "title": "python中导入不同目录中的自定义模块/class/函数/方法",
+    "description": "前几天在封装PY_RPG框架时，需要导入一些自定义的类、函数、常量的时候，发现始终找不到相关模块，后来参考书籍及网络上的一些经验终于解决了这个问题。",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/50",
+    "date": "2017-10-27T10:37:17.000000Z"
+  },
+  {
+    "id": "51",
+    "title": "如何快速的复习学习过的Python",
+    "description": "最近老妈骨折住院，在医院护理了有8天，终于回出院回家了。回到家第一件事就是想到之前学习了python，如何快速的复习一下曾经学过的python呢？",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/51",
+    "date": "2017-11-07T16:19:22.000000Z"
+  },
+  {
+    "id": "55",
+    "title": "听说存储数据Python与SQLite3更配哦！",
+    "description": "曾经以为数据库自己一定需要大的，好的，功能多的，处理数据快的，迸发牛的，现在想想就象上小学时时常想：以后考大学是北大还是清华呢？后来才发现自己真特么多虑了。",
+    "tags": [
+      "数据库",
+      "technology"
+    ],
+    "url": "/blog/55",
+    "date": "2017-11-16T17:34:15.000000Z"
+  },
+  {
+    "id": "6",
+    "title": "Git 版本控制常用命令 简明指南教程",
+    "description": "最近使用Django设计自己的个人blog，免不了要对程序的版本进行备份，所以用到了Git。Git确实是程序员居家旅游，编程备份之良药哇，本文旨在对Git日常使用中，使用频率较高的命令进行了一个简单的总结",
+    "tags": [
+      "Git",
+      "technology"
+    ],
+    "url": "/blog/6",
+    "date": "2017-08-26T13:03:59.000000Z"
+  },
+  {
+    "id": "68",
+    "title": "Python生成器yield应用实例——监控日志",
+    "description": "Python生成器yield是编写基于处理管道，流或数据流程序的一种极其强大的方式，在《Python参考手册》中有一则实例非常简单实用，略加修改，分享一下给大家。",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/68",
+    "date": "2017-12-22T09:19:40.000000Z"
+  },
+  {
+    "id": "69",
+    "title": "Python TK和Tkinter的GUI编程(10) filedialog 文件目录选择对话框",
+    "description": "python中有没有文件目录选择对话框？答案是肯定的，这个可以有。tkinter.filedialog这个模块就是负责选择文件及目录的。",
+    "tags": [
+      "Python GUI",
+      "technology"
+    ],
+    "url": "/blog/69",
+    "date": "2017-12-24T19:21:04.000000Z"
+  },
+  {
+    "id": "7",
+    "title": "Mac OS X gitk窗口打不开及Git的升级方法",
+    "description": "Mac OS X gitk窗口打不开及Git的升级方法",
+    "tags": [
+      "Git",
+      "technology"
+    ],
+    "url": "/blog/7",
+    "date": "2017-08-26T16:36:30.000000Z"
+  },
+  {
+    "id": "70",
+    "title": "“编学编玩”用Pygame编写游戏（6）PY_RPG 一个pygame的简单封装。",
+    "description": "pygame写起游戏都是函数式编写，对于一些简单的小游戏或许可以应付，随着游戏内容的增加，我们不可能只在一个.py文件中写下所有的游戏代码，这个时候，我们应该考虑对游戏中组件及对象进行封装，用面向对象的方式来进行游戏代码的编写。",
+    "tags": [
+      "pygame",
+      "technology"
+    ],
+    "url": "/blog/70",
+    "date": "2017-12-28T21:41:37.000000Z"
+  },
+  {
+    "id": "71",
+    "title": "“编学编玩”用Pygame编写游戏（7）Pingball弹球小游戏",
+    "description": "以前学java的时候用java做了一个简单弹球小游戏，觉得还是蛮有意思的，这次用pygame重写一下试试，以前觉得游戏编程很简单，可能是考虑的太简单了，游戏的编写是步步为营，逻辑紧扣，错一点游戏都无法运行的，所以学习用面向对象方式编写游戏，是对python编程学习的强化练习，大家可以多试试。",
+    "tags": [
+      "pygame",
+      "technology"
+    ],
+    "url": "/blog/71",
+    "date": "2017-12-29T20:18:35.000000Z"
+  },
+  {
+    "id": "72",
+    "title": "2018 新年快乐！希望在coding中找到自己的快乐与希望",
+    "description": "转眼间时光匆匆流过，稀里糊涂的又过去了一年，大约2017年6月时我开始了博客的搭建与设计，8月份上线运营维护，这期间又草草聊聊的写了71篇技术相关的博文。。。这一深一浅的一路走来，希望自己在编程的路上走得更坚实更努力一些！",
+    "tags": [
+      "站长吐槽",
+      "technology"
+    ],
+    "url": "/blog/72",
+    "date": "2018-01-01T17:40:57.000000Z"
+  },
+  {
+    "id": "73",
+    "title": "“编学编玩”用Pygame编写游戏（8）GreedSnake贪食蛇小游戏",
+    "description": "在编写游戏的时候常常不知道从何处入手，如果真的想不出从哪开始写，不妨从游戏的背景开始^o^.",
+    "tags": [
+      "pygame",
+      "technology"
+    ],
+    "url": "/blog/73",
+    "date": "2018-01-05T09:41:22.000000Z"
+  },
+  {
+    "id": "74",
+    "title": "妙用IPython学习Python--IPython快速上手",
+    "description": "在学习Python的时候，有时我们只是想了解一下模块或是函数，或是测试一些小小代码片段，或是在shell中结合Python一起使用，有没有简便的工具或方法呢？有的，你可以试试IPython.",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/74",
+    "date": "2018-01-07T10:16:11.000000Z"
+  },
+  {
+    "id": "75",
+    "title": "极速学习C++之基础篇",
+    "description": "极速学习C++其实听起来很可笑，怎么可能呢？如果不巧你正好有其它编程语言多年的学习与实践经验，或许这个想法还真能实现。",
+    "tags": [
+      "C++",
+      "technology"
+    ],
+    "url": "/blog/75",
+    "date": "2018-01-11T09:07:47.000000Z"
+  },
+  {
+    "id": "76",
+    "title": "“编学编玩”用Pygame编写游戏（9）Tetromino俄罗斯方块游戏",
+    "description": "记得以前用java写过一个tetromino,这么多年了，回头想想，竟然什么都不记得了。。。愿码界的神们原谅我的无知与过错，如何用Python来写一个俄罗斯方块游戏呢？",
+    "tags": [
+      "pygame",
+      "technology"
+    ],
+    "url": "/blog/76",
+    "date": "2018-01-13T16:00:40.000000Z"
+  },
+  {
+    "id": "77",
+    "title": "“编学编玩”用Pygame编写游戏（10）pygame实现一个黑客帝国矩阵(Matrix)",
+    "description": "当年电影《黑客帝国》中下落的字符矩阵大家应该都会有很深的印象，即使今天重温一遍这部经典之作，仍然会觉这种电脑特效做的真帅啊，什么时候我也能做出这种效果来？想做就做，既然人家能做出来我们也能，好吧，先上图，最近不是流行什么开局一张图么？",
+    "tags": [
+      "pygame",
+      "technology"
+    ],
+    "url": "/blog/77",
+    "date": "2018-01-16T10:25:21.000000Z"
+  },
+  {
+    "id": "79",
+    "title": "聊聊Python中的递归与快速排序那点事",
+    "description": "最近买了两本算法相关的书，快速了翻看了一下，原来算法真是编程解决问题的最基础要素，以前很少关注算法这块，以为学了基础了解了一些框架包模块等就是学会了编程，请原谅我。。。",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/79",
+    "date": "2018-01-30T14:38:39.000000Z"
+  },
+  {
+    "id": "82",
+    "title": "有时人生需要做出选择",
+    "description": "好久没有更新自己的博客了，最近经历了很多变动，所以人生的规划也发生了一些微妙的变化。",
+    "tags": [
+      "站长吐槽",
+      "daily"
+    ],
+    "url": "/blog/82",
+    "date": "2018-06-12T10:05:40.000000Z"
+  },
+  {
+    "id": "83",
+    "title": "利用Python自动生成小学生加减乘除口算考试题卷。",
+    "description": "孩子上小学一年级了，加减乘除的口算就要开始练习了，估计老师肯定会让家长出题，所以提前准备一下，利用Python开发了一套自动生成小学生口算题的小应用。而且今天是程序员节，撸200行代码庆祝一下。：）",
+    "tags": [
+      "站长源创",
+      "technology"
+    ],
+    "url": "/blog/83",
+    "date": "2018-10-24T10:50:04.000000Z"
+  },
+  {
+    "id": "84",
+    "title": "Git多人协作（码云）中的一些操作简单记录",
+    "description": "我们模拟一个项目的多人Git协作，假设多人合作至少二人，并且添加合作人员进入项目为开发者以上权限。",
+    "tags": [
+      "Git",
+      "technology"
+    ],
+    "url": "/blog/84",
+    "date": "2018-10-28T14:24:15.000000Z"
+  },
+  {
+    "id": "86",
+    "title": "Python os.path.dirname(__file__) 在终端命令行下报错",
+    "description": "Python os.path.dirname(__file__) 在终端命令行下报错",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/86",
+    "date": "2018-11-21T22:16:58.000000Z"
+  },
+  {
+    "id": "87",
+    "title": "wxPython编程学习笔记(01)Frame程序的窗口",
+    "description": "wxPython的安装和使用",
+    "tags": [
+      "Python GUI",
+      "technology"
+    ],
+    "url": "/blog/87",
+    "date": "2018-12-18T19:42:47.000000Z"
+  },
+  {
+    "id": "88",
+    "title": "wxPython编程学习笔记(02)wxPython的布局",
+    "description": "wxPython的布局，窗口程序中会用到很多的小部件，有序的排列这些小部件可以让应用更直观，",
+    "tags": [
+      "Python GUI",
+      "technology"
+    ],
+    "url": "/blog/88",
+    "date": "2018-12-19T20:22:01.000000Z"
+  },
+  {
+    "id": "89",
+    "title": "wxPython编程学习笔记(03)wxPython中的事件",
+    "description": "和大多数GUI程序一样，wxPython也有许多的事件可以绑定，这样才会有点击按钮发生行为事件的可能。",
+    "tags": [
+      "Python GUI",
+      "technology"
+    ],
+    "url": "/blog/89",
+    "date": "2018-12-21T19:11:40.000000Z"
+  },
+  {
+    "id": "9",
+    "title": "Python 采集数据三步曲之[正则表达式 re.py]",
+    "description": "越来越多的朋友开始注意并喜欢上python，有时做为一个新手或是一个从其它编程语言转投过来的新人可能会稍稍有些迷茫，Python的学习应该从哪里开始呢？虽然雄心壮志万丈目标宏伟，但我们是否应该先订一个小小的目标呢？比如说先码一个简单的Python采集器",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/9",
+    "date": "2017-09-01T13:09:49.000000Z"
+  },
+  {
+    "id": "90",
+    "title": "wxPython编程学习笔记(04)wx.Butoon的应用",
+    "description": "按钮是在GUI中使用率最高的一种组件了，点击按钮触发事件可以说是非常普遍的事了。wx.Button使用起来操作简单。",
+    "tags": [
+      "Python GUI",
+      "technology"
+    ],
+    "url": "/blog/90",
+    "date": "2018-12-22T20:26:29.000000Z"
+  },
+  {
+    "id": "91",
+    "title": "wxPython编程学习笔记(05)单选及多选按钮",
+    "description": "单选及多选按钮也是程序中经常使用到的互动小部件，使用频率也是很高的，对于选择按钮，我们重点需要了解的就是触发事件， 通常，单选我们需要得到一组按钮中的选择项值或是键值，多选，我们只要知道每一项返回的布尔值即可。",
+    "tags": [
+      "Python GUI",
+      "technology"
+    ],
+    "url": "/blog/91",
+    "date": "2018-12-23T18:49:39.000000Z"
+  },
+  {
+    "id": "92",
+    "title": "wxPython编程学习笔记(06)wx.ComboBox下拉列表框",
+    "description": "下拉列表框，可以通过下拉列表选择内容，在使用中可以为内容节省不少空间，是GUI中比较常用的小部件。",
+    "tags": [
+      "Python GUI",
+      "technology"
+    ],
+    "url": "/blog/92",
+    "date": "2018-12-24T14:24:56.000000Z"
+  },
+  {
+    "id": "93",
+    "title": "wxPython编程学习笔记(07)wxPython Dialog 弹出对话",
+    "description": "wxPython dialogs 弹出对话框",
+    "tags": [
+      "Python GUI",
+      "technology"
+    ],
+    "url": "/blog/93",
+    "date": "2018-12-25T13:17:28.000000Z"
+  },
+  {
+    "id": "94",
+    "title": "wxPython编程学习笔记(08)wx.ListBox 下拉列表框",
+    "description": "wx.ListBox是以中数据展示的小部件，使用方便简单，可以用来展示比较单一的数据，例如：各种地址，名称列表等。",
+    "tags": [
+      "Python GUI",
+      "technology"
+    ],
+    "url": "/blog/94",
+    "date": "2018-12-27T09:51:07.000000Z"
+  },
+  {
+    "id": "95",
+    "title": "Python os.mknod 运行报错无法创建文件",
+    "description": "Python os.mknod 运行报错无法创建文件",
+    "tags": [
+      "Python基础",
+      "technology"
+    ],
+    "url": "/blog/95",
+    "date": "2018-12-27T10:47:01.000000Z"
+  },
+  {
+    "id": "96",
+    "title": "wxPython编程学习笔记(09)wx.Python Menu 菜单",
+    "description": "菜单是程序经常用到的小部件，我们来看看如何创建。",
+    "tags": [
+      "Python GUI",
+      "technology"
+    ],
+    "url": "/blog/96",
+    "date": "2019-01-03T18:08:40.000000Z"
+  },
+  {
+    "id": "97",
+    "title": "wxPython编程学习笔记(10)wx.FileDialog文件选择框",
+    "description": "FileDialog是一个文件选择框，我们可以根据弹出框选择文件，确定后返回该文件的地址。",
+    "tags": [
+      "Python GUI",
+      "technology"
+    ],
+    "url": "/blog/97",
+    "date": "2019-01-05T14:41:02.000000Z"
+  }
+]

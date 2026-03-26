@@ -1,0 +1,62 @@
+---
+import { Icon } from 'astro-icon/components';
+import { SITE_TITLE_EN, SNS_LINKS } from '../consts';
+import BackToTop from './BackToTop.astro';
+const today = new Date();
+---
+
+<footer>
+	<p class="copyright">
+		&copy; 2017-{today.getFullYear()} {SITE_TITLE_EN}. All rights reserved.
+	</p>
+	<div class="social-links">
+		{SNS_LINKS.map(link => (
+			<a href={link.url} target="_blank" rel="noopener noreferrer" aria-label={link.name}>
+				<Icon name={link.icon} width={36} height={36} aria-hidden="true" />
+			</a>
+		))}
+	</div>
+	<p class="license">
+		<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer">
+			CC BY-NC-SA 4.0
+		</a>
+	</p>
+	<BackToTop />
+	<script data-goatcounter="https://suiyan.goatcounter.com/count"
+        async src="https://gc.zgo.at/count.js"></script>
+</footer>
+<style>
+	footer {
+		padding: 2em 1em 6em 1em;
+		background: linear-gradient(var(--gray-gradient)) no-repeat;
+		color: rgb(var(--gray));
+		text-align: center;
+	}
+	.copyright {
+		margin-bottom: 1rem;
+	}
+	.social-links {
+		display: flex;
+		justify-content: center;
+		gap: 1em;
+		margin: 1.5rem 0;
+	}
+	.social-links a {
+		text-decoration: none;
+		color: rgb(var(--gray));
+	}
+	.social-links a:hover {
+		color: rgb(var(--gray-dark));
+	}
+	.license {
+		margin-top: 1rem;
+	}
+	.license a {
+		text-decoration: none;
+		color: rgb(var(--gray));
+		font-size: 0.9em;
+	}
+	.license a:hover {
+		color: rgb(var(--gray-dark));
+	}
+</style>

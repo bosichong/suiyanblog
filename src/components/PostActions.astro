@@ -1,0 +1,283 @@
+---
+interface Props {
+	postId: string;
+	postPath: string;
+}
+
+const { postId, postPath } = Astro.props;
+---
+
+<div class="post-actions">
+	<button 
+		class="action-btn comment-btn" 
+		id="comment-toggle"
+		aria-label="显示评论"
+		title="英雄请留步！欢迎点击图标，留言交流！"
+	>
+		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+		</svg>
+		<span>评论</span>
+	</button>
+	
+	<a 
+		class="action-btn sponsor-btn" 
+		href="/sponsors"
+		title="赞赏作者"
+	>
+		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			<path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+			<path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+			<line x1="6" y1="1" x2="6" y2="4" />
+			<line x1="10" y1="1" x2="10" y2="4" />
+			<line x1="14" y1="1" x2="14" y2="4" />
+		</svg>
+		<span>赞赏</span>
+	</a>
+</div>
+
+<div class="comment-section" id="comment-section" data-post-id={postId} data-post-path={postPath}>
+	<div class="comment-selector">
+		<button class="comment-type-btn active" data-type="giscus">💭 GitHub 讨论</button>
+		<button class="comment-type-btn" data-type="twikoo">💬 Twikoo 评论</button>
+	</div>
+	<div class="comment-content" id="comment-content">
+		<!-- 评论内容由 JS 动态加载 -->
+	</div>
+</div>
+
+<style>
+	.post-actions {
+		display: flex;
+		justify-content: center;
+		gap: 1.5rem;
+		margin: 2rem 0;
+		padding: 1.5rem;
+		background: var(--header-bg);
+		border-radius: 12px;
+		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+	}
+	
+	.action-btn {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.75rem 1.5rem;
+		border: 1px solid var(--border-color);
+		border-radius: 8px;
+		background: var(--bg-color);
+		color: var(--text-color);
+		cursor: pointer;
+		text-decoration: none;
+		font-size: 0.95rem;
+		transition: all 0.2s ease;
+	}
+	
+	.action-btn:hover {
+		background: var(--accent);
+		color: white;
+		border-color: var(--accent);
+		transform: translateY(-2px);
+	}
+	
+	.action-btn svg {
+		flex-shrink: 0;
+	}
+	
+	.comment-section {
+		display: none;
+		margin: 2rem 0;
+		padding: 1.5rem;
+		background: var(--header-bg);
+		border-radius: 12px;
+		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+	}
+	
+	.comment-section.show {
+		display: block;
+	}
+	
+	.comment-selector {
+		display: flex;
+		gap: 1rem;
+		margin-bottom: 1.5rem;
+		justify-content: center;
+	}
+	
+	.comment-type-btn {
+		padding: 0.5rem 1rem;
+		border: 1px solid var(--border-color);
+		border-radius: 8px;
+		background: var(--bg-color);
+		color: var(--text-color);
+		cursor: pointer;
+		font-size: 0.9rem;
+		transition: all 0.2s ease;
+	}
+	
+	.comment-type-btn:hover {
+		border-color: var(--accent);
+	}
+	
+	.comment-type-btn.active {
+		background: var(--accent);
+		color: white;
+		border-color: var(--accent);
+	}
+	
+	.comment-content {
+		min-height: 200px;
+	}
+	
+	@media (max-width: 480px) {
+		.post-actions {
+			flex-direction: column;
+			align-items: stretch;
+		}
+		
+		.action-btn {
+			justify-content: center;
+		}
+		
+		.comment-selector {
+			flex-direction: column;
+		}
+	}
+</style>
+
+<script>
+	const commentToggle = document.getElementById('comment-toggle');
+	const commentSection = document.getElementById('comment-section');
+	const commentContent = document.getElementById('comment-content');
+	const commentTypeBtns = document.querySelectorAll('.comment-type-btn');
+	
+	let currentType = 'giscus';
+	let loadedTypes = new Set<string>();
+	let giscusLoaded = false;
+	
+	// 切换评论区显示
+	commentToggle?.addEventListener('click', () => {
+		commentSection?.classList.toggle('show');
+		const isShown = commentSection?.classList.contains('show');
+		commentToggle.setAttribute('aria-label', isShown ? '隐藏评论' : '显示评论');
+		
+		if (isShown) {
+			loadComments(currentType);
+		}
+	});
+	
+	// 切换评论类型
+	commentTypeBtns.forEach(btn => {
+		btn.addEventListener('click', () => {
+			const type = btn.getAttribute('data-type');
+			if (type && type !== currentType) {
+				currentType = type;
+				commentTypeBtns.forEach(b => b.classList.remove('active'));
+				btn.classList.add('active');
+				
+				// 清空内容
+				if (commentContent) {
+					commentContent.innerHTML = '';
+				}
+				
+				loadComments(type);
+			}
+		});
+	});
+	
+	function loadComments(type: string) {
+		if (!commentContent) return;
+		
+		const postId = commentSection?.getAttribute('data-post-id') || '';
+		const postPath = commentSection?.getAttribute('data-post-path') || '';
+		
+		if (type === 'giscus') {
+			loadGiscus(postId);
+		} else {
+			loadTwikoo(postPath);
+		}
+	}
+	
+	function loadGiscus(postId: string) {
+		if (!commentContent) return;
+		
+		// 清空之前的内容
+		commentContent.innerHTML = '';
+		
+		const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+		
+		// 创建 giscus 容器
+		const giscusContainer = document.createElement('div');
+		giscusContainer.className = 'giscus';
+		commentContent.appendChild(giscusContainer);
+		
+		// 创建 script 元素
+		const script = document.createElement('script');
+		script.src = 'https://giscus.app/client.js';
+		script.setAttribute('data-repo', 'bosichong/suiyanblog');
+		script.setAttribute('data-repo-id', 'R_kgDONjg2qw');
+		script.setAttribute('data-category', 'Announcements');
+		script.setAttribute('data-category-id', 'DIC_kwDONjg2q84ClnrC');
+		script.setAttribute('data-mapping', 'pathname');
+		script.setAttribute('data-lang', 'zh-CN');
+		script.setAttribute('data-strict', '0');
+		script.setAttribute('data-reactions-enabled', '1');
+		script.setAttribute('data-emit-metadata', '0');
+		script.setAttribute('data-input-position', 'bottom');
+		script.setAttribute('data-theme', theme);
+		script.setAttribute('crossorigin', 'anonymous');
+		script.async = true;
+		
+		giscusContainer.appendChild(script);
+		giscusLoaded = true;
+	}
+	
+	function loadTwikoo(path: string) {
+		if (!commentContent) return;
+		
+		// 清空之前的内容
+		commentContent.innerHTML = '<div id="twikoo-comment" style="min-height: 200px;"></div>';
+		
+		// 检查是否已加载 Twikoo
+		if ((window as any).twikoo) {
+			(window as any).twikoo.init({
+				envId: 'https://twikoo.suiyan.cc/.netlify/functions/twikoo',
+				el: '#twikoo-comment',
+				path: path
+			});
+			return;
+		}
+		
+		// 加载 Twikoo 脚本
+		const script = document.createElement('script');
+		script.src = 'https://cdn.jsdelivr.net/npm/twikoo@1.7.4/dist/twikoo.all.min.js';
+		script.async = true;
+		script.onload = () => {
+			(window as any).twikoo?.init({
+				envId: 'https://twikoo.suiyan.cc/.netlify/functions/twikoo',
+				el: '#twikoo-comment',
+				path: path
+			});
+		};
+		document.head.appendChild(script);
+	}
+	
+	// 监听主题变化，更新 Giscus 主题
+	const observer = new MutationObserver(() => {
+		if (!giscusLoaded) return;
+		
+		const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+		const iframe = commentContent?.querySelector('iframe.giscus-frame');
+		if (iframe) {
+			iframe.contentWindow?.postMessage(
+				{ giscus: { setConfig: { theme } } },
+				'https://giscus.app'
+			);
+		}
+	});
+	
+	observer.observe(document.documentElement, {
+		attributes: true,
+		attributeFilter: ['data-theme']
+	});
+</script>
