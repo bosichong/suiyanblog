@@ -3,7 +3,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import Layout from '../../components/Layout';
 import Breadcrumb from '../../components/Breadcrumb';
-import GiscusComments from '../../components/GiscusComments';
+import CommentSection from '../../components/CommentSection';
 import CommentButton from '@/components/CommentButton';
 import { Post } from '../../types';
 import config from '../../config';
@@ -103,9 +103,12 @@ export default function ThoughtDetail({ thought }: { thought: Post }) {
         </footer>
       </article>
       <section>
-          {/* 只在 showComments 为 true 时才渲染 Giscus 组件 */}
+          {/* 评论区域：Twikoo + Giscus 双系统 */}
           {showComments && (
-            <GiscusComments key={thought.id} />
+            <CommentSection 
+              postId={thought.id}
+              postPath={`/thoughts/${thought.id}`}
+            />
           )}
         </section>
     </Layout>

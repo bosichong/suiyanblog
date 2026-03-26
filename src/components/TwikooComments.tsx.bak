@@ -1,0 +1,61 @@
+'use client'
+
+import { useEffect, useRef } from 'react'
+
+interface TwikooCommentsProps {
+  path: string
+}
+
+declare global {
+  interface Window {
+    twikoo?: any
+  }
+}
+
+export default function TwikooComments({ path }: TwikooCommentsProps) {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const initializedRef = useRef(false)
+
+  useEffect(() => {
+    // 加载 Twikoo
+    const loadTwikoo = async () => {
+      if (typeof window !== 'undefined' && !window.twikoo) {
+        const script = document.createElement('script')
+        script.src = 'https://cdn.jsdelivr.net/npm/twikoo@1.7.4/dist/twikoo.all.min.js'
+        script.async = true
+        document.head.appendChild(script)
+        
+        await new Promise<void>((resolve) => {
+          script.onload = () => resolve()
+        })
+      }
+      
+      if (window.twikoo && containerRef.current && !initializedRef.current) {
+        initializedRef.current = true
+        try {
+          window.twikoo.init({
+            envId: 'https://twikoo.suiyan.cc/.netlify/functions/twikoo',
+            el: '#twikoo-comment',
+            path: path
+          })
+        } catch (e) {
+          console.error('Twikoo init error:', e)
+        }
+      }
+    }
+    
+    loadTwikoo()
+    
+    return () => {
+      initializedRef.current = false
+    }
+  }, [path])
+
+  return (
+    <div 
+      ref={containerRef}
+      id="twikoo-comment" 
+      style={{ minHeight: '200px' }}
+    />
+  )
+}

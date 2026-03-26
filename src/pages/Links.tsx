@@ -3,7 +3,6 @@ import config from "../config";
 import Head from "next/head";
 import Breadcrumb from "../components/Breadcrumb";
 import LinkCard from "../components/LinkCard";
-import GiscusComments from "../components/GiscusComments";
 import { useState } from "react";
 
 interface LinkSectionProps {

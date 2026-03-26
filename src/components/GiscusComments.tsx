@@ -1,28 +1,45 @@
 'use client'
 
-import dynamic from 'next/dynamic';
-
-const Giscus = dynamic(() => import('@giscus/react').then((mod) => mod.default), {
-    ssr: false,
-    loading: () => <div>加载评论中...</div>
-});
+import { useEffect, useState } from 'react'
+import Giscus from '@giscus/react';
 
 interface GiscusCommentsProps {
-    key?: string;
+    postId?: string;
 }
 
-export default function GiscusComments({ key: propKey }: GiscusCommentsProps) {
-    // 动态获取当前主题
-    const getTheme = () => {
-        if (typeof window !== 'undefined') {
-            return document.documentElement.getAttribute('data-theme') || 'light';
+export default function GiscusComments({ postId }: GiscusCommentsProps) {
+    const [theme, setTheme] = useState('light')
+    const [mounted, setMounted] = useState(false)
+
+    // 确保组件只在客户端挂载后才渲染
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+
+    // 监听主题变化
+    useEffect(() => {
+        const updateTheme = () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'light'
+            setTheme(currentTheme)
         }
-        return 'light';
-    };
+
+        updateTheme()
+
+        const observer = new MutationObserver(updateTheme)
+        observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['data-theme']
+        })
+
+        return () => observer.disconnect()
+    }, [])
+
+    if (!mounted) {
+        return <div style={{ textAlign: 'center', padding: '2rem' }}>加载评论中...</div>
+    }
 
     return (
         <Giscus
-            key={propKey}
             repo="bosichong/suiyanblog"
             repoId="R_kgDONjg2qw"
             category="Announcements"
@@ -33,7 +50,7 @@ export default function GiscusComments({ key: propKey }: GiscusCommentsProps) {
             reactionsEnabled="1"
             emitMetadata="0"
             inputPosition="bottom"
-            theme={getTheme()}
+            theme={theme === 'dark' ? 'dark' : 'light'}
         />
     );
 }
