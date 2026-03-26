@@ -1,0 +1,74 @@
+---
+// 返回顶部按钮组件
+---
+
+<button 
+	class="back-to-top" 
+	id="back-to-top"
+	aria-label="返回顶部"
+	title="返回顶部"
+>
+	<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+		<path d="M18 15l-6-6-6 6"/>
+	</svg>
+</button>
+
+<style>
+	.back-to-top {
+		position: fixed;
+		bottom: 2rem;
+		right: 1.5rem;
+		z-index: 1000;
+		display: none;
+		padding: 0.75rem;
+		border: 1px solid var(--border-color);
+		border-radius: 50%;
+		background: var(--header-bg);
+		color: var(--text-color);
+		cursor: pointer;
+		box-shadow: 0 2px 8px rgba(var(--black), 10%);
+		transition: all 0.3s ease;
+	}
+	
+	.back-to-top:hover {
+		background: var(--accent);
+		color: white;
+		border-color: var(--accent);
+		transform: translateY(-2px);
+	}
+	
+	.back-to-top.show {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+</style>
+
+<script>
+	const backToTop = document.getElementById('back-to-top');
+	let lastScrollY = window.scrollY;
+	
+	// 根据滚动方向显示/隐藏按钮
+	const toggleVisibility = () => {
+		const currentScrollY = window.scrollY;
+		
+		// 向上滚动且超过 300px 时显示
+		if (currentScrollY < lastScrollY && currentScrollY > 300) {
+			backToTop?.classList.add('show');
+		} else {
+			backToTop?.classList.remove('show');
+		}
+		
+		lastScrollY = currentScrollY;
+	};
+	
+	window.addEventListener('scroll', toggleVisibility);
+	
+	// 平滑滚动到顶部
+	backToTop?.addEventListener('click', () => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+		});
+	});
+</script>

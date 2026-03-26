@@ -1,0 +1,238 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+// 获取所有博客文章
+const allPosts = (await getCollection('blog')).sort(
+	(a, b) => new Date(b.data.time).valueOf() - new Date(a.data.time).valueOf(),
+);
+
+// 按标签分类文章（取前10篇）
+const dailyPosts = allPosts
+	.filter(post => post.data.tags.includes('daily'))
+	.slice(0, 10);
+
+const technologyPosts = allPosts
+	.filter(post => post.data.tags.includes('technology'))
+	.slice(0, 10);
+
+const journalPosts = allPosts
+	.filter(post => post.data.tags.includes('journal'))
+	.slice(0, 10);
+
+// 首页日期格式化函数：只显示月/日
+const homeFormatDate = (dateStr: string): string => {
+	const date = new Date(dateStr);
+	const month = (date.getMonth() + 1).toString().padStart(2, '0');
+	const day = date.getDate().toString().padStart(2, '0');
+	return `${month}/${day}`;
+};
+---
+
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<BaseHead title={`首页 | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: 720px;
+			}
+			
+			.category-section {
+				margin-bottom: 3rem;
+			}
+			
+			.category-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 1.5rem;
+				padding: 1rem 1.5rem;
+				background: var(--header-bg);
+				border-radius: 8px;
+			}
+			
+			.category-header h3 {
+				font-size: 1.5rem;
+				margin: 0;
+				color: var(--heading-color);
+			}
+			
+			.view-more {
+				color: var(--accent);
+				text-decoration: none;
+				font-size: 0.95rem;
+				transition: color 0.2s ease;
+			}
+			
+			.view-more:hover {
+				color: var(--accent-dark);
+			}
+			
+			.post-list {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+			
+			.post-list-grid {
+				display: grid;
+				grid-template-columns: 1fr auto;
+				gap: 1rem;
+				padding: 0.75rem 1.5rem;
+				align-items: center;
+				transition: background-color 0.2s ease;
+				border-bottom: 1px solid var(--border-color);
+			}
+			
+			.post-list-grid:last-child {
+				border-bottom: none;
+			}
+			
+			.post-list-grid:hover {
+				background-color: rgba(var(--gray), 5%);
+			}
+			
+			.post-list-grid a {
+				text-decoration: none;
+				color: var(--text-color);
+				font-size: 1.125rem;
+				transition: color 0.2s ease;
+				line-height: 1.5;
+			}
+			
+			.post-list-grid a:hover {
+				color: var(--accent);
+			}
+			
+			.post-list-grid time {
+				color: var(--footer-text);
+				font-size: 0.9rem;
+				font-weight: 500;
+				white-space: nowrap;
+			}
+			
+			.view-all-btn {
+				display: inline-block;
+				width: auto;
+				margin: 2rem auto 0;
+				padding: 0.5rem 1rem;
+				background: var(--accent);
+				color: white;
+				text-align: center;
+				text-decoration: none;
+				border-radius: 6px;
+				font-size: 1rem;
+				font-weight: 600;
+				transition: background-color 0.2s ease;
+				border: none;
+				cursor: pointer;
+			}
+			
+			.view-all-btn:hover {
+				background: var(--accent-dark);
+			}
+			
+			@media (max-width: 720px) {
+				.post-list-grid {
+					grid-template-columns: 1fr;
+					gap: 0.5rem;
+					padding: 0.75rem 1rem;
+				}
+				
+				.post-list-grid a {
+					font-size: 1rem;
+				}
+				
+				.post-list-grid time {
+					font-size: 0.85rem;
+				}
+				
+				.category-header {
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 0.5rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main id="main">
+			<!-- 日常分类 -->
+			{dailyPosts.length > 0 && (
+				<section class="category-section">
+					<div class="category-header">
+						<h3>日常</h3>
+						<a href="/tags/daily" class="view-more">浏览更多</a>
+					</div>
+					<ul class="post-list">
+						{dailyPosts.map((post) => (
+							<li class="post-list-grid">
+								<a href={`/blog/${post.id}`}>
+									{post.data.title}
+								</a>
+								<time dateTime={post.data.time}>
+									{homeFormatDate(post.data.time)}
+								</time>
+							</li>
+						))}
+					</ul>
+				</section>
+			)}
+
+			<!-- 技术分类 -->
+			{technologyPosts.length > 0 && (
+				<section class="category-section">
+					<div class="category-header">
+						<h3>技术</h3>
+						<a href="/tags/technology" class="view-more">浏览更多</a>
+					</div>
+					<ul class="post-list">
+						{technologyPosts.map((post) => (
+							<li class="post-list-grid">
+								<a href={`/blog/${post.id}`}>
+									{post.data.title}
+								</a>
+								<time dateTime={post.data.time}>
+									{homeFormatDate(post.data.time)}
+								</time>
+							</li>
+						))}
+					</ul>
+				</section>
+			)}
+
+			<!-- 期刊分类 -->
+			{journalPosts.length > 0 && (
+				<section class="category-section">
+					<div class="category-header">
+						<h3>期刊</h3>
+						<a href="/tags/journal" class="view-more">浏览更多</a>
+					</div>
+					<ul class="post-list">
+						{journalPosts.map((post) => (
+							<li class="post-list-grid">
+								<a href={`/blog/${post.id}`}>
+									{post.data.title}
+								</a>
+								<time dateTime={post.data.time}>
+									{homeFormatDate(post.data.time)}
+								</time>
+							</li>
+						))}
+					</ul>
+				</section>
+			)}
+
+			<!-- 全部文章按钮 -->
+			<div style="text-align: center;">
+				<a href="/archives" class="view-all-btn">全部文章</a>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>

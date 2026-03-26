@@ -1,0 +1,75 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+	level?: number;
+}
+
+const { level = 0 } = Astro.props;
+
+const ICON_SIZE = 16;
+
+const aiLevels = [
+	{
+		level: 0,
+		icon: 'mdi:pencil',
+		theme: 'HAND',
+		description: '手写·每一个字都由作者亲手敲出'
+	},
+	{
+		level: 1,
+		icon: 'mdi:microphone',
+		theme: 'VOICE',
+		description: '口述·语音转文字，AI负责修正'
+	},
+	{
+		level: 2,
+		icon: 'mdi:auto-fix',
+		theme: 'POLISH',
+		description: '润色·核心由作者完成，AI辅助'
+	},
+	{
+		level: 3,
+		icon: 'mdi:hand-wave',
+		theme: 'DUET',
+		description: '协奏·人与AI共创，互相启发'
+	},
+	{
+		level: 4,
+		icon: 'mdi:robot',
+		theme: 'AUTO',
+		description: '自动·AI主导生成，人类审核'
+	}
+];
+
+const aiInfo = aiLevels.find(item => item.level === level) || aiLevels[0];
+---
+
+<span class="ai-badge">
+	<Icon name={aiInfo.icon} width={ICON_SIZE} height={ICON_SIZE} aria-hidden="true" />
+	<span class="ai-theme">{aiInfo.theme}</span>
+	<span class="ai-desc">「{aiInfo.description}」</span>
+</span>
+
+<style>
+	.ai-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.25rem;
+		font-size: 0.85rem;
+		color: rgb(var(--gray));
+		vertical-align: middle;
+	}
+	
+	.ai-badge svg {
+		color: var(--accent);
+	}
+	
+	.ai-theme {
+		font-weight: 500;
+	}
+	
+	.ai-desc {
+		opacity: 0.8;
+	}
+</style>

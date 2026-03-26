@@ -1,0 +1,270 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+// 获取所有博客文章
+const allPosts = (await getCollection('blog')).sort(
+	(a, b) => new Date(b.data.time).valueOf() - new Date(a.data.time).valueOf(),
+);
+
+// 提取最小化的文章信息
+const minimalPosts = allPosts.map(post => ({
+	id: post.id,
+	title: post.data.title,
+	time: post.data.time,
+}));
+
+// 按年月分组文章
+const postsByMonth: { [key: string]: typeof minimalPosts } = {};
+minimalPosts.forEach((post) => {
+	const date = new Date(post.time);
+	const year = date.getFullYear();
+	const month = String(date.getMonth() + 1).padStart(2, '0');
+	const key = `${year}/${month}`;
+	if (!postsByMonth[key]) {
+		postsByMonth[key] = [];
+	}
+	postsByMonth[key].push(post);
+});
+
+// 按年月降序排序
+const sortedMonths = Object.keys(postsByMonth).sort((a, b) => b.localeCompare(a));
+
+const totalPosts = allPosts.length;
+const lastUpdated = allPosts[0]?.data.time ? new Date(allPosts[0].data.time) : new Date();
+---
+
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<BaseHead 
+			title={`文章归档 | ${SITE_TITLE}`} 
+			description={`${SITE_DESCRIPTION} - 所有文章归档，按时间顺序整理的全部技术文章和随笔`}
+		/>
+		<style>
+			main {
+				width: 720px;
+			}
+			
+			.archive-header {
+				text-align: center;
+				margin-bottom: 3rem;
+				padding: 2rem;
+				background: var(--header-bg);
+				border-radius: 16px;
+				box-shadow: 0 2px 12px rgba(var(--black), 8%);
+			}
+			
+			.archive-header h1 {
+				margin-bottom: 1rem;
+				font-size: 2.5rem;
+			}
+			
+			.archive-header .stats {
+				color: var(--footer-text);
+				font-size: 1.1rem;
+			}
+			
+			details {
+				margin-bottom: 2rem;
+				background: var(--header-bg);
+				border-radius: 12px;
+				box-shadow: 0 2px 8px rgba(var(--black), 5%);
+				overflow: hidden;
+				transition: all 0.3s ease;
+			}
+			
+			details:hover {
+				box-shadow: 0 4px 16px rgba(var(--black), 10%);
+			}
+			
+			details[open] {
+				box-shadow: 0 4px 16px rgba(var(--black), 10%);
+			}
+			
+			summary {
+				padding: 1.5rem 2rem;
+				cursor: pointer;
+				font-size: 1.5rem;
+				font-weight: 700;
+				color: var(--heading-color);
+				user-select: none;
+				transition: background-color 0.2s ease;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			
+			summary:hover {
+				background-color: rgba(var(--gray), 5%);
+			}
+			
+			summary::-webkit-details-marker {
+				display: none;
+			}
+			
+			summary::after {
+				content: '+';
+				font-size: 1.2rem;
+				transition: transform 0.3s ease;
+			}
+			
+			details[open] summary::after {
+				content: '-';
+				transform: rotate(180deg);
+			}
+			
+			details ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				border-top: 1px solid var(--border-color);
+			}
+			
+			details li {
+				border-bottom: 1px solid var(--border-color);
+			}
+			
+			details li:last-child {
+				border-bottom: none;
+			}
+			
+			.post-list-grid {
+				display: grid;
+				grid-template-columns: 1fr auto;
+				gap: 1rem;
+				padding: 1rem 2rem;
+				align-items: center;
+				transition: background-color 0.2s ease;
+			}
+			
+			details li:hover .post-list-grid {
+				background-color: rgba(var(--gray), 5%);
+			}
+			
+			.post-list-grid a {
+				text-decoration: none;
+				color: var(--text-color);
+				font-size: 1.125rem;
+				transition: color 0.2s ease;
+				line-height: 1.5;
+			}
+			
+			.post-list-grid a:hover {
+				color: var(--accent);
+			}
+			
+			.post-list-grid time {
+				color: var(--footer-text);
+				font-size: 0.9rem;
+				font-weight: 500;
+				white-space: nowrap;
+			}
+			
+			.month-badge {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				padding: 0.5rem 1rem;
+				background: var(--accent);
+				color: white;
+				border-radius: 8px;
+				font-size: 1rem;
+				font-weight: 600;
+				margin-right: 1rem;
+			}
+			
+			[data-theme="dark"] .month-badge {
+				color: var(--accent-dark);
+			}
+			
+			.post-count {
+				color: var(--footer-text);
+				font-size: 0.9rem;
+				font-weight: 500;
+			}
+			
+			@media (max-width: 720px) {
+				.archive-header h1 {
+					font-size: 2rem;
+				}
+				
+				.archive-header .stats {
+					font-size: 1rem;
+				}
+				
+				summary {
+					font-size: 1.25rem;
+					padding: 1rem 1.5rem;
+				}
+				
+				.post-list-grid {
+					grid-template-columns: 1fr;
+					gap: 0.5rem;
+					padding: 0.75rem 1.5rem;
+				}
+				
+				.post-list-grid a {
+					font-size: 0.95rem;
+				}
+				
+				.post-list-grid time {
+					font-size: 0.85rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main id="main">
+			<Breadcrumb items={[
+				{ label: 'Home', href: '/' },
+				{ label: 'Archives', href: '/archives' }
+			]} />
+			
+			<section>
+				<div class="archive-header">
+					<h1>文章归档</h1>
+					<p class="stats">
+						共有文章：{totalPosts} 篇，最后更新于 <FormattedDate date={lastUpdated} />
+					</p>
+				</div>
+				
+				{sortedMonths.map((month, index) => (
+					<details name="archive" open={index === 0}>
+						<summary>
+							<span>
+								<span class="month-badge">{month}</span>
+								<span class="post-count">{postsByMonth[month].length} 篇文章</span>
+							</span>
+						</summary>
+						<ul>
+							{postsByMonth[month].map((post) => (
+								<li>
+									<div class="post-list-grid">
+										<a href={`/blog/${post.id}/`}>
+											{post.title}
+										</a>
+										<time dateTime={post.time}>
+											{new Date(post.time).toLocaleDateString('zh-CN', {
+												year: 'numeric',
+												month: '2-digit',
+												day: '2-digit'
+											})}
+										</time>
+									</div>
+								</li>
+							))}
+						</ul>
+					</details>
+				))}
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
