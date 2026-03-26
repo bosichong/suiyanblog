@@ -109,27 +109,6 @@ const journalPosts = allPosts
 				white-space: nowrap;
 			}
 			
-			.view-all-btn {
-				display: inline-block;
-				width: auto;
-				margin: 2rem auto 0;
-				padding: 0.5rem 1rem;
-				background: var(--accent);
-				color: white;
-				text-align: center;
-				text-decoration: none;
-				border-radius: 6px;
-				font-size: 1rem;
-				font-weight: 600;
-				transition: background-color 0.2s ease;
-				border: none;
-				cursor: pointer;
-			}
-			
-			.view-all-btn:hover {
-				background: var(--accent-dark);
-			}
-			
 			@media (max-width: 720px) {
 				.post-list-grid {
 					padding: 0.75rem 1rem;
@@ -214,11 +193,7 @@ const journalPosts = allPosts
 				</section>
 			)}
 
-			<!-- 全部文章按钮 -->
-			<div style="text-align: center;">
-				<a href="/archive" class="view-all-btn">全部文章</a>
-			</div>
-		</main>
+			</main>
 		<Footer />
 	</body>
 </html>
