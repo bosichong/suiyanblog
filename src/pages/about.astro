@@ -69,43 +69,53 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 				border-radius: 12px;
 				box-shadow: 0 2px 8px rgba(var(--black), 5%);
 				overflow: hidden;
+				transition: all 0.3s ease;
+			}
+			
+			details:hover {
+				box-shadow: 0 4px 16px rgba(var(--black), 10%);
+			}
+			
+			details[open] {
+				box-shadow: 0 4px 16px rgba(var(--black), 10%);
 			}
 			
 			summary {
-				padding: 1.5rem;
+				padding: 1.5rem 2rem;
 				cursor: pointer;
-				font-weight: 600;
+				font-size: 1.25rem;
+				font-weight: 700;
 				color: var(--heading-color);
-				background: var(--header-bg);
-				border-bottom: 1px solid transparent;
+				user-select: none;
 				transition: background-color 0.2s ease;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
 			}
 			
 			summary:hover {
 				background-color: rgba(var(--gray), 5%);
 			}
 			
-			details[open] summary {
-				border-bottom-color: var(--border-color);
+			summary::-webkit-details-marker {
+				display: none;
+			}
+			
+			summary::after {
+				content: '+';
+				font-size: 1.2rem;
+				transition: transform 0.3s ease;
 			}
 			
 			details[open] summary::after {
-				content: '▼';
-				float: right;
-				font-size: 0.8rem;
-				margin-left: 1rem;
-			}
-			
-			details:not([open]) summary::after {
-				content: '▶';
-				float: right;
-				font-size: 0.8rem;
-				margin-left: 1rem;
+				content: '-';
+				transform: rotate(180deg);
 			}
 			
 			details ul {
 				padding: 1.5rem 2rem;
 				margin: 0;
+				border-top: 1px solid var(--border-color);
 			}
 			
 			details details {
@@ -115,12 +125,7 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 			
 			details details summary {
 				padding: 1rem 1.5rem;
-				font-size: 0.95rem;
-			}
-			
-			details details[open] summary::after,
-			details details:not([open]) summary::after {
-				font-size: 0.7rem;
+				font-size: 1rem;
 			}
 			
 			code {
@@ -215,8 +220,45 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 				<section>
 					<h2>RSS订阅</h2>
 					<p>
-						<a href="/rss.xml" target="_blank" rel="noopener noreferrer">/rss.xml</a>
+						<a href="/feed.xml" target="_blank" rel="noopener noreferrer">/feed.xml</a>
 					</p>
+				</section>
+
+				<section>
+					<h2>赞赏我</h2>
+					<p>如果我的文章对你有帮助，欢迎请我喝杯咖啡 ☕</p>
+					<p>
+						<a 
+							class="sponsor-btn" 
+							href="/sponsors"
+							title="赞赏作者"
+						>
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 0.25rem;">
+								<path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+								<path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+								<line x1="6" y1="1" x2="6" y2="4" />
+								<line x1="10" y1="1" x2="10" y2="4" />
+								<line x1="14" y1="1" x2="14" y2="4" />
+							</svg>
+							赞赏支持
+						</a>
+					</p>
+					<style>
+						.sponsor-btn {
+							display: inline-flex;
+							align-items: center;
+							padding: 0.75rem 1.5rem;
+							background: var(--accent);
+							color: white !important;
+							border-radius: 8px;
+							font-weight: 600;
+							transition: all 0.2s ease;
+						}
+						.sponsor-btn:hover {
+							background: var(--accent-dark);
+							transform: translateY(-2px);
+						}
+					</style>
 				</section>
 
 				<section>
@@ -226,10 +268,10 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 					</p>
 					<ul class="ai-label-list">
 						<li><strong>HAND · 手写</strong> — 每一个字都由作者亲手敲出</li>
-						<li><strong>VOICE · 口述</strong> — 语音转文字，仅修正语法和错别字</li>
-						<li><strong>POLISH · 润色</strong> — 核心由作者完成，AI 辅助修饰优化</li>
-						<li><strong>DUET · 协奏</strong> — 人机共创作，平等对话互相启发</li>
-						<li><strong>AUTO · 自动</strong> — AI 主导生成，人类审核把关</li>
+						<li><strong>VOICE · 口述</strong> — 语音转文字，AI负责修正</li>
+						<li><strong>POLISH · 润色</strong> — 核心由作者完成，AI辅助</li>
+						<li><strong>DUET · 协奏</strong> — 人与AI共创，互相启发</li>
+						<li><strong>AUTO · 自动</strong> — AI主导生成，人类审核</li>
 					</ul>
 				</section>
 
@@ -243,6 +285,9 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 					<details>
 						<summary>网站构建优化日志</summary>
 						<ul>
+							<li>
+								<strong>2026-03-27</strong> 博客样式优化：移除文章页赞赏按钮；优化首页和归档页文章列表布局，标题和时间两端对齐，标题过长时截断显示省略号；归档页日期简化为只显示月-日；首页分类标题背景改为透明；RSS 链接更新为 feed.xml；同步更新 AI 创作等级标识描述。
+							</li>
 							<li>
 								<strong>2026-03-26</strong> 完成博客从 Next.js 到 Astro 的框架迁移，保留所有历史文章和配置。迁移内容包括：418篇文章、友情链接、博客聚合平台、搜索功能、归档页面、首页分类展示等。优化了整体性能和用户体验。
 							</li>

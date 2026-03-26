@@ -50,9 +50,7 @@ const homeFormatDate = (dateStr: string): string => {
 				justify-content: space-between;
 				align-items: center;
 				margin-bottom: 1.5rem;
-				padding: 1rem 1.5rem;
-				background: var(--header-bg);
-				border-radius: 8px;
+				padding: 1rem 0;
 			}
 			
 			.category-header h3 {
@@ -102,6 +100,9 @@ const homeFormatDate = (dateStr: string): string => {
 				font-size: 1.125rem;
 				transition: color 0.2s ease;
 				line-height: 1.5;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
 			}
 			
 			.post-list-grid a:hover {
@@ -138,8 +139,6 @@ const homeFormatDate = (dateStr: string): string => {
 			
 			@media (max-width: 720px) {
 				.post-list-grid {
-					grid-template-columns: 1fr;
-					gap: 0.5rem;
 					padding: 0.75rem 1rem;
 				}
 				
@@ -149,12 +148,6 @@ const homeFormatDate = (dateStr: string): string => {
 				
 				.post-list-grid time {
 					font-size: 0.85rem;
-				}
-				
-				.category-header {
-					flex-direction: column;
-					align-items: flex-start;
-					gap: 0.5rem;
 				}
 			}
 		</style>
