@@ -18,9 +18,10 @@ type Props = CollectionEntry<'blog'>['data'] & {
 	nextPost?: CollectionEntry<'blog'> | null;
 	postId?: string;
 	relatedPosts?: CollectionEntry<'blog'>[];
+	readingTime?: number;
 };
 
-const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai_label, prevPost, nextPost, postId, relatedPosts } = Astro.props;
+const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai_label, prevPost, nextPost, postId, relatedPosts, readingTime } = Astro.props;
 ---
 
 <html lang="zh-CN">
@@ -255,6 +256,9 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 									</div>
 								)
 							} - <Icon name="mdi:account" width={20} height={20} aria-hidden="true" />{SITE_AUTHOR}
+							{readingTime && readingTime > 0 && (
+								<> · <Icon name="mdi:clock-outline" width={20} height={20} aria-hidden="true" /> {readingTime} 分钟阅读</>
+							)}
 						</div>
 						<h1>{title}</h1>
 						<div class="ai-label">
