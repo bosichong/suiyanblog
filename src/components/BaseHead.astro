@@ -41,6 +41,10 @@ const { title, description, image } = Astro.props;
 <meta name="title" content={title} />
 <meta name="description" content={description} />
 
+<!-- Open Graph locale -->
+<meta property="og:locale" content="zh_CN" />
+<meta property="og:site_name" content={SITE_TITLE} />
+
 <!-- Mastodon Verification -->
 <meta name="fediverse:creator" content="@J_sky@mastodon.social" />
 
@@ -103,3 +107,16 @@ const { title, description, image } = Astro.props;
 		document.documentElement.setAttribute('data-theme', theme);
 	})();
 </script>
+
+<!-- Organization 结构化数据 -->
+<script type="application/ld+json" set:html={JSON.stringify({
+	"@context": "https://schema.org",
+	"@type": "Organization",
+	"name": SITE_TITLE,
+	"url": Astro.site,
+	"logo": new URL('/assets/images/avatar.png', Astro.site).toString(),
+	"sameAs": [
+		"https://github.com/bosichong",
+		"https://mastodon.social/@J_sky"
+	]
+})} />

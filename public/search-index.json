@@ -2193,42 +2193,6 @@
     "date": "2024-12-30T00:44:27.060Z"
   },
   {
-    "id": "2025-10-01-ataraxia",
-    "title": "Ataraxia: The Philosophy of Inner Peace",
-    "description": "Exploring the ancient Greek concept of ataraxia and its relevance in modern life.",
-    "tags": [
-      "Philosophy",
-      "Greek Philosophy",
-      "Ataraxia"
-    ],
-    "url": "/blog/2025-10-01-ataraxia",
-    "date": "2025-09-27T00:00:00.000Z"
-  },
-  {
-    "id": "2025-10-03-stoic-philosophy",
-    "title": "Stoicism: The Philosophy of Resilience and Virtue",
-    "description": "Exploring the ancient Stoic philosophy and its practical wisdom for living a good life.",
-    "tags": [
-      "Philosophy",
-      "Greek Philosophy",
-      "Stoicism"
-    ],
-    "url": "/blog/2025-10-03-stoic-philosophy",
-    "date": "2025-09-27T00:00:00.000Z"
-  },
-  {
-    "id": "2025-10-17-philosophic-markdown",
-    "title": "A Philosophic Guide to Markdown",
-    "description": "A comprehensive guide to using Markdown syntax effectively in Astro blog posts.",
-    "tags": [
-      "Philosophy",
-      "Greek Philosophy",
-      "Stoicism"
-    ],
-    "url": "/blog/2025-10-17-philosophic-markdown",
-    "date": "2025-10-17T00:00:00.000Z"
-  },
-  {
     "id": "20250104135342",
     "title": "久未见雪，满怀期待。",
     "description": "太久没有见到一场畅快的鹅毛大雪了，如果不下雪，空气中就会滋生一些有毒的物质，对身体不好。这不，带着孩子跑了一天的医院，连续咳嗽10多天了，拍了片子抽了血，被大夫撵回家了。",
@@ -4117,7 +4081,7 @@
     "description": "太喜欢Astro的一个主题了，还是准备迁移博客到Astro，毕竟MDX 支持- 增强型 Markdown，支持组件这点就够吸引我的了，更何况发现一个喜欢的主题了，折腾一定要折腾。",
     "tags": [
       "Astro",
-      "default"
+      "daily"
     ],
     "url": "/blog/20260326121351",
     "date": "2026-03-26T12:13:51.004Z"
@@ -4134,6 +4098,16 @@
     ],
     "url": "/blog/20260327084101",
     "date": "2026-03-27T08:41:01.000Z"
+  },
+  {
+    "id": "20260327101900",
+    "title": "片语存档：那些闪过的念头",
+    "description": "博客片语功能暂时下架，整理之前发布的16篇片语，存档纪念。",
+    "tags": [
+      "daily"
+    ],
+    "url": "/blog/20260327101900",
+    "date": "2026-03-27T02:10:00.000Z"
   },
   {
     "id": "21",
