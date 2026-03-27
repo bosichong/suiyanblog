@@ -143,27 +143,45 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 				background: rgba(var(--gray), 3%);
 			}
 			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
+				margin-bottom: 1.5em;
+				padding: 1.5em 0;
 				text-align: center;
-				line-height: 1;
 			}
 			.title h1 {
-				margin: 0 0 0.5em 0;
+				margin: 0 0 0.75em 0;
+				line-height: 1.3;
 			}
-			.ai-label {
-				margin-top: 0.5em;
-			}
-			.date {
-				margin-bottom: 0.5em;
+			.meta {
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				gap: 0.5rem 1rem;
+				margin-bottom: 0.75em;
 				color: rgb(var(--gray));
+				font-size: 0.9rem;
 			}
-			.last-updated-on {
+			.meta-item {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.25rem;
+			}
+			.meta-item svg {
+				color: var(--accent);
+			}
+			.meta-item.updated {
 				font-style: italic;
 			}
-			.date svg {
-				vertical-align: text-top;
-				margin-right: 0.1rem;
+			.ai-label {
+				margin-bottom: 0.75em;
+			}
+			.reading-time {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.25rem;
+				color: rgb(var(--gray));
+				font-size: 0.9rem;
+			}
+			.reading-time svg {
 				color: var(--accent);
 			}
 			.post-navigation {
@@ -245,25 +263,34 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 						{ label: title, href: Astro.url.pathname }
 					]} />
 					<div class="title">
-						<div class="date">
-							<Icon name="mdi:calendar" width={20} height={20} aria-hidden="true" />
-							<FormattedDate date={time} />
+						<h1>{title}</h1>
+						<div class="meta">
+							<span class="meta-item">
+								<Icon name="mdi:calendar" width={18} height={18} aria-hidden="true" />
+								<FormattedDate date={time} />
+							</span>
 							{
 								updatedDate && (
-									<Icon name="mdi:calendar" width={20} height={20} aria-hidden="true" />
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
+									<span class="meta-item updated">
+										<Icon name="mdi:calendar-outline" width={18} height={18} aria-hidden="true" />
+										更新于 <FormattedDate date={updatedDate} />
+									</span>
 								)
-							} - <Icon name="mdi:account" width={20} height={20} aria-hidden="true" />{SITE_AUTHOR}
-							{readingTime && readingTime > 0 && (
-								<> · <Icon name="mdi:clock-outline" width={20} height={20} aria-hidden="true" /> {readingTime} 分钟阅读</>
-							)}
+							}
+							<span class="meta-item">
+								<Icon name="mdi:account" width={18} height={18} aria-hidden="true" />
+								{SITE_AUTHOR}
+							</span>
 						</div>
-						<h1>{title}</h1>
 						<div class="ai-label">
 							<AILabelBadge level={ai_label} />
 						</div>
+						{readingTime && readingTime > 0 && (
+							<div class="reading-time">
+								<Icon name="mdi:clock-outline" width={18} height={18} aria-hidden="true" />
+								{readingTime} 分钟阅读
+							</div>
+						)}
 					</div>
 					<slot />
 					<hr aria-hidden="true" />
