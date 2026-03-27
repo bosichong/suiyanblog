@@ -89,19 +89,21 @@ h6 {
 	word-break: break-word;
 }
 h1 {
-	font-size: 2.5rem;
+	font-size: 2.75rem;
+	letter-spacing: -0.02em;
 }
 h2 {
 	font-size: 2rem;
+	letter-spacing: -0.01em;
 }
 h3 {
-	font-size: 1.75rem;
-}
-h4 {
 	font-size: 1.5rem;
 }
-h5 {
+h4 {
 	font-size: 1.25rem;
+}
+h5 {
+	font-size: 1.1rem;
 }
 strong,
 b {
@@ -124,11 +126,20 @@ button:focus {
 	outline-offset: 2px;
 }
 p {
-	margin-bottom: 1em;
+	margin-bottom: 1.5em;
 	text-align: justify;
+	text-indent: 2em;
 }
 .prose p {
 	margin-bottom: 2em;
+}
+
+/* 代码块、列表、引用内的段落不缩进 */
+pre + p,
+ul p,
+ol p,
+blockquote p {
+	text-indent: 0;
 }
 textarea {
 	width: 100%;
@@ -198,9 +209,16 @@ pre > code {
 }
 blockquote {
 	border-left: 4px solid var(--accent);
-	padding: 0 0 0 20px;
-	margin: 0px;
+	padding: 1em 1.5em;
+	margin: 1.5em 0;
+	background: rgba(var(--gray-light), 30%);
+	border-radius: 0 8px 8px 0;
+	font-style: italic;
 	font-size: 1em;
+}
+
+[data-theme="dark"] blockquote {
+	background: rgba(var(--gray-light), 10%);
 }
 hr {
 	border: none;
@@ -208,7 +226,7 @@ hr {
 }
 @media (max-width: 720px) {
 	body {
-		font-size: 18px;
+		font-size: 17px;
 	}
 	main {
 		padding: 1em;
@@ -217,13 +235,13 @@ hr {
 		font-size: 2rem;
 	}
 	h2 {
-		font-size: 1.75rem;
+		font-size: 1.6rem;
 	}
 	h3 {
-		font-size: 1.5rem;
+		font-size: 1.35rem;
 	}
 	h4 {
-		font-size: 1.25rem;
+		font-size: 1.15rem;
 	}
 }
 
