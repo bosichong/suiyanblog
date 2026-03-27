@@ -25,7 +25,7 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 
 <html lang="zh-CN">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={description} image={heroImage} />
 		
 		<!-- JSON-LD 结构化数据 -->
 		<script type="application/ld+json" set:html={JSON.stringify({
