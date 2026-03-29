@@ -55,6 +55,9 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 		})} />
 		
 		<style>
+			html, body {
+				overflow-x: hidden;
+			}
 			main {
 				width: 720px;
 				max-width: calc(100% - 2em);
@@ -85,7 +88,7 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 				width: 100%;
 			}
 			article > div {
-				overflow-x: auto;
+				overflow-x: hidden;
 				width: 100%;
 			}
 			article pre,
@@ -109,6 +112,7 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 				max-width: 100%;
 				height: auto;
 				display: block;
+				margin: 1.5rem auto;
 			}
 			.prose table {
 				width: 100%;
