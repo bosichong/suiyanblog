@@ -141,6 +141,16 @@ ol p,
 blockquote p {
 	text-indent: 0;
 }
+
+/* 包含图片的段落不缩进，图片居中 */
+p:has(img) {
+	text-indent: 0;
+	text-align: center;
+}
+p img {
+	display: block;
+	margin: 1.5rem auto;
+}
 textarea {
 	width: 100%;
 	font-size: 16px;
