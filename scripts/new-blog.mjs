@@ -87,6 +87,22 @@ async function main() {
   const aiChoice = await question('请选择 [0-4，默认 0]: ');
   const ai = ['0', '1', '2', '3', '4'].includes(aiChoice) ? parseInt(aiChoice) : 0;
 
+  // 5. 封面图
+  console.log('\n封面图设置:');
+  console.log('  图片需放在 src/assets/images/年/ 目录下');
+  const heroImagePath = await question('封面图路径 (如 2026/xxx.jpg，回车跳过): ');
+  
+  let heroImageLine = '';
+  let heroImageAltLine = '';
+  
+  if (heroImagePath) {
+    heroImageLine = `\nheroImage: ../../assets/images/${heroImagePath}`;
+    const heroImageAlt = await question('图片描述 (如 海边): ');
+    if (heroImageAlt) {
+      heroImageAltLine = `\nheroImageAlt: '${heroImageAlt}'`;
+    }
+  }
+
   // 生成文件名和内容
   const fileName = generateFileName();
   const filePath = path.join(blogDir, fileName);
@@ -98,8 +114,8 @@ async function main() {
 title: '${title}'
 description: '${finalDescription}'
 time: '${time}'
-tags: ${tagsStr}
-ai: ${ai}
+tags: ${tagsStr}${heroImageLine}${heroImageAltLine}
+ai_label: ${ai}
 ---
 
 `;
