@@ -66,9 +66,22 @@ const posts = (await getCollection('blog')).sort(
 				height: auto;
 				display: block;
 			}
-			ul li a {
+			.card-image-link {
 				display: block;
 				color: inherit;
+			}
+			.card-text-link {
+				display: block;
+				color: inherit;
+			}
+			.card-text-link:hover .title {
+				color: var(--accent);
+			}
+			.card-text-link:hover .description {
+				opacity: 1;
+			}
+			.card-image-link:hover img {
+				box-shadow: var(--box-shadow);
 			}
 			.post-content {
 				padding: 2rem;
@@ -106,15 +119,7 @@ const posts = (await getCollection('blog')).sort(
 				font-size: 1.125rem;
 				opacity: 0.9;
 			}
-			ul li a:hover .title {
-				color: var(--accent);
-			}
-			ul li a:hover .description {
-				opacity: 1;
-			}
-			ul a:hover img {
-				box-shadow: var(--box-shadow);
-			}
+			
 			@media (max-width: 720px) {
 				.blog-header h1 {
 					font-size: 2rem;
@@ -173,8 +178,8 @@ const posts = (await getCollection('blog')).sort(
 					{
 						   posts.map((post, idx) => (
 							   <li>
-								   <a href={`/blog/${post.id}`} aria-label={post.data.title}>
-									   {post.data.heroImage && (
+								   {post.data.heroImage && (
+									   <a href={`/blog/${post.id}`} class="card-image-link" aria-label={post.data.title}>
 										   <Image 
 											   width={720} 
 											   height={360} 
@@ -182,8 +187,10 @@ const posts = (await getCollection('blog')).sort(
 											   alt={post.data.heroImageAlt || ''} 
 											   loading={idx < 2 ? 'eager' : 'lazy'}
 										   />
-									   )}
-									   <div class="post-content">
+									   </a>
+								   )}
+								   <div class="post-content">
+									   <a href={`/blog/${post.id}`} class="card-text-link">
 										<div class="post-meta">
 											<div class="meta-item">
 												<Icon name="mdi:calendar" width={16} height={16} aria-hidden="true" />
@@ -199,14 +206,14 @@ const posts = (await getCollection('blog')).sort(
 										{post.data.description && (
 											<p class="description">{post.data.description}</p>
 										)}
-										<hr aria-hidden="true" />
-										<TagList tags={post.data.tags} limit={5} />
-									</div>
-								</a>
-							</li>
-						))
-					}
-				</ul>
+									   </a>
+									   <hr aria-hidden="true" />
+									   <TagList tags={post.data.tags} limit={5} />
+								   </div>
+							   </li>
+						   ))
+					   }
+				   </ul>
 			</section>
 		</main>
 		<Footer />
