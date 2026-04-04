@@ -26,6 +26,17 @@ const technologyPosts = allPosts
 const journalPosts = allPosts
 	.filter(post => post.data.tags.includes('journal'))
 	.slice(0, 10);
+
+// 获取每个标签下最新文章的发布时间
+const getLatestTime = (posts) => posts.length > 0 ? new Date(posts[0].data.time).valueOf() : 0;
+
+// 按最新文章时间排序（最新更新的标签排最前）
+const tagSections = [
+	{ name: '日常', posts: dailyPosts, tag: 'daily', latestTime: getLatestTime(dailyPosts) },
+	{ name: '技术', posts: technologyPosts, tag: 'technology', latestTime: getLatestTime(technologyPosts) },
+	{ name: '期刊', posts: journalPosts, tag: 'journal', latestTime: getLatestTime(journalPosts) },
+].filter(section => section.posts.length > 0)
+  .sort((a, b) => b.latestTime - a.latestTime);
 ---
 
 <!doctype html>
@@ -173,20 +184,19 @@ const journalPosts = allPosts
 	<body>
 		<Header />
 		<main id="main">
-			<!-- 日常分类 -->
-			{dailyPosts.length > 0 && (
+			{tagSections.map((section, idx) => (
 				<section class="category-section">
 					<div class="category-header">
-						<h3>日常</h3>
-						<a href="/tags/daily" class="view-more">浏览更多</a>
+						<h3>{section.name}</h3>
+						<a href={`/tags/${section.tag}`} class="view-more">浏览更多</a>
 					</div>
 					<ul class="post-list">
-						{dailyPosts.map((post, idx) => (
+						{section.posts.map((post, postIdx) => (
 							<li>
 								{post.data.heroImage && (
 									<a href={`/blog/${post.id}`} class="card-image-link" aria-label={post.data.title}>
 										<Image width={720} height={360} src={post.data.heroImage} alt={post.data.heroImageAlt || ''} 
-											loading={idx === 0 ? 'eager' : 'lazy'} />
+											loading={idx === 0 && postIdx === 0 ? 'eager' : 'lazy'} />
 									</a>
 								)}
 								<div class="post-content">
@@ -213,91 +223,7 @@ const journalPosts = allPosts
 						))}
 					</ul>
 				</section>
-			)}
-
-			<!-- 技术分类 -->
-			{technologyPosts.length > 0 && (
-				<section class="category-section">
-					<div class="category-header">
-						<h3>技术</h3>
-						<a href="/tags/technology" class="view-more">浏览更多</a>
-					</div>
-					<ul class="post-list">
-						{technologyPosts.map((post, idx) => (
-							<li>
-								{post.data.heroImage && (
-									<a href={`/blog/${post.id}`} class="card-image-link" aria-label={post.data.title}>
-										<Image width={720} height={360} src={post.data.heroImage} alt={post.data.heroImageAlt || ''} 
-											loading="lazy" />
-									</a>
-								)}
-								<div class="post-content">
-									<a href={`/blog/${post.id}`} class="card-text-link">
-										<div class="post-meta">
-											<div class="meta-item">
-												<Icon name="mdi:calendar" width={16} height={16} aria-hidden="true" />
-												<FormattedDate date={post.data.time} />
-											</div>
-											<div class="meta-item">
-												<Icon name="mdi:account" width={16} height={16} aria-hidden="true" />
-												<span class="author">{SITE_AUTHOR}</span>
-											</div>
-										</div>
-										<hr aria-hidden="true" />
-										<h2 class="title">{post.data.title}</h2>
-										{post.data.description && (
-											<p class="description">{post.data.description}</p>
-										)}
-									</a>
-									<TagList tags={post.data.tags} limit={3} />
-								</div>
-							</li>
-						))}
-					</ul>
-				</section>
-			)}
-
-			<!-- 期刊分类 -->
-			{journalPosts.length > 0 && (
-				<section class="category-section">
-					<div class="category-header">
-						<h3>期刊</h3>
-						<a href="/tags/journal" class="view-more">浏览更多</a>
-					</div>
-					<ul class="post-list">
-						{journalPosts.map((post, idx) => (
-							<li>
-								{post.data.heroImage && (
-									<a href={`/blog/${post.id}`} class="card-image-link" aria-label={post.data.title}>
-										<Image width={720} height={360} src={post.data.heroImage} alt={post.data.heroImageAlt || ''} 
-											loading="lazy" />
-									</a>
-								)}
-								<div class="post-content">
-									<a href={`/blog/${post.id}`} class="card-text-link">
-										<div class="post-meta">
-											<div class="meta-item">
-												<Icon name="mdi:calendar" width={16} height={16} aria-hidden="true" />
-												<FormattedDate date={post.data.time} />
-											</div>
-											<div class="meta-item">
-												<Icon name="mdi:account" width={16} height={16} aria-hidden="true" />
-												<span class="author">{SITE_AUTHOR}</span>
-											</div>
-										</div>
-										<hr aria-hidden="true" />
-										<h2 class="title">{post.data.title}</h2>
-										{post.data.description && (
-											<p class="description">{post.data.description}</p>
-										)}
-									</a>
-									<TagList tags={post.data.tags} limit={3} />
-								</div>
-							</li>
-						))}
-					</ul>
-				</section>
-			)}
+			))}
 		</main>
 		<Footer />
 	</body>
