@@ -32,9 +32,16 @@ export const MENU_ITEMS = [
 
 // 友情链接
 export const FRIENDS_LINKS = [
+    {
+    site_name: '理论派',
+    site_url: 'https://sliun.com/',
+    site_description: '意识不止算法，心灵自有归途。',
+    site_avatar: '#',
+    is_active: true
+  },
   {
     site_name: '莫比乌斯',
-    site_url: 'https://onojyun.com',
+    site_url: 'https://mobius.blog/',
     site_description: '写作，一场自我悖驳的旅程。我写自己的生活、也写自己的讣告。',
     site_avatar: 'https://onojyun.com/wp-content/uploads/2024/03/a2d42-cropped-mobius_icon_black-edited.png',
     is_active: true
