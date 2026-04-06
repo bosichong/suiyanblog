@@ -15,7 +15,9 @@ export default async function generateSearchIndex() {
 		title: post.data.title,
 		description: post.data.description,
 		tags: post.data.tags,
-		url: `/blog/${post.id}/`,
+		url: `/blog/${post.id}`,
+		date: post.data.time,
+	}))
 		date: post.data.time,
 	}));
 	

@@ -249,7 +249,7 @@ const lastUpdated = allPosts[0]?.data.time ? new Date(allPosts[0].data.time) : n
 							{postsByMonth[month].map((post) => (
 								<li>
 									<div class="post-list-grid">
-										<a href={`/blog/${post.id}/`}>
+										<a href={`/blog/${post.id}`}>
 											{post.title}
 										</a>
 										<time dateTime={post.time}>
