@@ -40,9 +40,12 @@ function generateFileName() {
   return `${year}${month}${day}${hours}${minutes}${seconds}.md`;
 }
 
-// 生成 ISO 时间格式
+// 生成 ISO 时间格式（北京时间）
 function generateISOTime() {
-  return new Date().toISOString();
+  const now = new Date();
+  const offset = 8 * 60; // 北京时区 UTC+8
+  const localTime = new Date(now.getTime() + offset * 60 * 1000);
+  return localTime.toISOString().replace('Z', '+08:00');
 }
 
 // 主流程
