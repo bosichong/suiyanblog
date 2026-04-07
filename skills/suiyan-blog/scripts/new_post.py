@@ -52,7 +52,7 @@ def create_post(title: str, content: str, desc: str = None, tags: list = None, a
     
     # 生成 frontmatter
     tags_str = ', '.join(f"'{t}'" for t in tags)
-    time_str = now.strftime("%Y-%m-%dT%H:%M:%S.000Z")
+    time_str = now.strftime("%Y-%m-%dT%H:%M:%S.000+08:00")
     
     frontmatter = f"""---
 title: '{title}'
