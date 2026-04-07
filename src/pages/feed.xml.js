@@ -18,7 +18,7 @@ export async function GET(context) {
 			title: post.data.title,
 			pubDate: new Date(post.data.time),
 			description: post.data.description,
-			link: `/blog/${post.id}`,
+			link: `https://www.suiyan.cc/blog/${post.id}`,
 			
 			author: SITE_AUTHOR,
 			categories: post.data.tags,
