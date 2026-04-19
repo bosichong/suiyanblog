@@ -20,9 +20,7 @@ const technologyPosts = allPosts
 	.filter(post => post.data.tags.includes('technology'))
 	.slice(0, 10);
 
-const journalPosts = allPosts
-	.filter(post => post.data.tags.includes('journal'))
-	.slice(0, 10);
+
 
 // 获取每个标签下最新文章的发布时间
 const getLatestTime = (posts) => posts.length > 0 ? new Date(posts[0].data.time).valueOf() : 0;
@@ -31,7 +29,7 @@ const getLatestTime = (posts) => posts.length > 0 ? new Date(posts[0].data.time)
 const tagSections = [
 	{ name: '日常', posts: dailyPosts, tag: 'daily', latestTime: getLatestTime(dailyPosts) },
 	{ name: '技术', posts: technologyPosts, tag: 'technology', latestTime: getLatestTime(technologyPosts) },
-	{ name: '期刊', posts: journalPosts, tag: 'journal', latestTime: getLatestTime(journalPosts) },
+
 ].filter(section => section.posts.length > 0)
   .sort((a, b) => b.latestTime - a.latestTime);
 ---
