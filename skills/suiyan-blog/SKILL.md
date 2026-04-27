@@ -26,7 +26,8 @@ metadata: {"clawdbot":{"emoji":"📝","requires":{"bins":[]},"install":[]}}
 | 描述 | ❌ | 自动截取 | 文章描述，不填则从内容截取 |
 | 标签 | ✅ | daily | 必填标签：daily(日常)、technology(技术)、journal(期刊) |
 | 其他标签 | ❌ | - | 根据文章内容推断，如 python、astro 等 |
-|| AI标识 | ❌ | 0 | 必须添加此字段。0=手写，1=口述，2=润色，3=协奏，4=自动。用户说填几就填几，不要自己判断 |
+| 缩图 | ❌ | - | 缩图路径，如 `../../assets/images/2026/xxx.jpg` |
+| AI标识 | ❌ | 0 | 必须添加此字段。0=手写，1=口述，2=润色，3=协奏，4=自动。用户说填几就填几，不要自己判断 |
 
 **AI标识说明**（5级）：
 - 0 = HAND（手写）— 每一个字都由作者亲手敲出
@@ -53,11 +54,32 @@ title: '文章标题'
 description: '文章描述'
 time: '2026-03-27T08:30:00.000Z'
 tags: ['daily', '其他标签']
+heroImage: '../../assets/images/2026/图片名.jpg'
+heroImageAlt: '图片描述'
 ai_label: 0
 ---
 
 文章内容...
 ```
+
+### 缩图设置
+
+**字段说明**：
+
+| 字段 | 必填 | 说明 |
+|------|------|------|
+| `heroImage` | ❌ | 缩图路径，如 `../../assets/images/2026/图片名.jpg` |
+| `heroImageAlt` | ❌ | 图片描述，用于 SEO |
+
+**图片存放**：
+- 路径：`/home/bosi/code/suiyanblog/src/assets/images/年份/`
+- 示例：`src/assets/images/2026/socrates-defend.jpg`
+- 引用：`../../assets/images/2026/socrates-defend.jpg`（相对于文章位置）
+
+**引用路径规则**：
+- 文章在 `src/content/blog/` 下
+- 图片在 `src/assets/images/` 下
+- 相对路径：`../../assets/images/年份/图片名.扩展名`
 
 ### 2. 推送博客
 
@@ -102,6 +124,7 @@ ai_label: 0
 1. 文章标题是什么？
 2. 文章内容是什么？
 3. 标签类型？（日常/技术/期刊，默认日常）
+4. 需要缩图吗？（可选，如需要提供图片路径）
 
 **用户**：标题是"今天学到了一个新技巧"，内容是"...", 日常
 
@@ -113,6 +136,8 @@ title: '今天学到了一个新技巧'
 description: '...'
 time: '2026-03-27T08:30:00.000Z'
 tags: ['daily']
+heroImage: '../../assets/images/2026/图片名.jpg'
+heroImageAlt: '图片描述'
 ai_label: 0
 ---
 
