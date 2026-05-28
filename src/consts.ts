@@ -32,6 +32,14 @@ export const MENU_ITEMS = [
 
 // 友情链接
 export const FRIENDS_LINKS = [
+
+  {
+    site_name: '宗宗酱',
+    site_url: 'https://ygz.ink/',
+    site_description: '用文字和图片记录工作和学习生活',
+    site_avatar: '#',
+    is_active: true
+  },
     {
     site_name: '理论派',
     site_url: 'https://sliun.com/',
@@ -204,6 +212,11 @@ export const FRIENDS_LINKS = [
 
 // 博客聚合平台
 export const BLOG_AGGREGATIONS = [
+  {
+    site_name: '好站网',
+    site_url: 'https://haozhan.wang/',
+    site_description: '- HaoZhan.Wang | 发现好站，展示好站，收录优质中文独立网站'
+  },
   {
     site_name: '十年之约',
     site_url: 'https://www.foreverblog.cn',
