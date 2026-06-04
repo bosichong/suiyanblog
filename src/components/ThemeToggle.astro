@@ -64,26 +64,24 @@ import { Icon } from 'astro-icon/components';
 		}, 500);
 	};
 
-	// Set initial aria-labels when page loads
-	document.addEventListener('DOMContentLoaded', function() {
+	// Set initial aria-labels on load AND after view-transition swap
+	function syncAriaLabels() {
 		const currentTheme = document.documentElement.getAttribute('data-theme');
 		const toggleButtons = document.querySelectorAll('.theme-toggle');
 		toggleButtons.forEach(button => {
 			button.setAttribute('aria-label', currentTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
 		});
+	}
 
-		// Listen for system theme changes (only if user hasn't set a preference)
-		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-			if (!localStorage.getItem('theme')) {
-				const newTheme = e.matches ? 'dark' : 'light';
-				document.documentElement.setAttribute('data-theme', newTheme);
-				
-				// Update aria-labels
-				toggleButtons.forEach(button => {
-					button.setAttribute('aria-label', newTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
-				});
-			}
-		});
+	syncAriaLabels();
+	document.addEventListener('astro:after-swap', syncAriaLabels);
+
+	// Listen for system theme changes (only if user hasn't set a preference)
+	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+		if (!localStorage.getItem('theme')) {
+			document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+			syncAriaLabels();
+		}
 	});
 </script>
 

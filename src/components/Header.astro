@@ -33,61 +33,98 @@ import ThemeToggle from './ThemeToggle.astro';
 	</nav>
 </header>
 <script is:inline>
+	// 移动端菜单：使用事件委托，避免视图过渡后失效
 	(function () {
-		const hamburger = document.getElementById('hamburger-menu');
-		const navMenu = document.getElementById('nav-menu');
-		if (!hamburger || !navMenu) return;
+		function getMenuEls() {
+			return {
+				hamburger: document.getElementById('hamburger-menu'),
+				navMenu: document.getElementById('nav-menu'),
+			};
+		}
 
 		function openMenu() {
+			const { hamburger, navMenu } = getMenuEls();
+			if (!hamburger || !navMenu) return;
 			hamburger.classList.add('open');
 			hamburger.setAttribute('aria-expanded', 'true');
 			navMenu.classList.add('open');
 		}
 
 		function closeMenu() {
+			const { hamburger, navMenu } = getMenuEls();
+			if (!hamburger || !navMenu) return;
 			hamburger.classList.remove('open');
 			hamburger.setAttribute('aria-expanded', 'false');
 			navMenu.classList.remove('open');
 		}
 
 		function toggleMenu() {
-			if (navMenu.classList.contains('open')) closeMenu(); else openMenu();
+			const { navMenu } = getMenuEls();
+			if (!navMenu) return;
+			navMenu.classList.contains('open') ? closeMenu() : openMenu();
 		}
 
-		hamburger.addEventListener('click', (e) => {
-			e.stopPropagation();
-			toggleMenu();
-		});
-
-		// Close when a navigation link is clicked
-		navMenu.addEventListener('click', (e) => {
-			const target = e.target;
-			if (target && (target.tagName === 'A' || target.closest('a'))) {
-				closeMenu();
-			}
-		});
-
-		// Close on outside click
+		// 委托到 document，每次都查最新的 DOM 元素
 		document.addEventListener('click', (e) => {
-			const target = e.target;
-			if (!navMenu.contains(target) && !hamburger.contains(target)) {
+			const { hamburger, navMenu } = getMenuEls();
+			if (!hamburger || !navMenu) return;
+
+			// 1) 点击汉堡按钮
+			if (hamburger.contains(e.target)) {
+				e.stopPropagation();
+				toggleMenu();
+				return;
+			}
+
+			// 2) 点击菜单内的链接
+			if (navMenu.contains(e.target) && (e.target.tagName === 'A' || e.target.closest('a'))) {
+				closeMenu();
+				return;
+			}
+
+			// 3) 点击外部
+			if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
 				closeMenu();
 			}
 		});
 
-		// Close on Escape key
 		document.addEventListener('keydown', (e) => {
 			if (e.key === 'Escape') closeMenu();
 		});
 	})();
+
+	// 滚动激活 header 毛玻璃
+	(function () {
+		const onScroll = () => {
+			const header = document.querySelector('header');
+			if (header) header.classList.toggle('scrolled', window.scrollY > 20);
+		};
+		window.addEventListener('scroll', onScroll, { passive: true });
+		onScroll();
+		document.addEventListener('astro:after-swap', onScroll);
+	})();
 </script>
 <style>
 	header {
+		position: sticky;
+		top: 0;
+		z-index: 100;
 		margin: 0;
 		padding: 0 1em;
 		background: var(--header-bg);
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-		transition: background-color 0.3s ease;
+		border-bottom: 1px solid transparent;
+		backdrop-filter: blur(0);
+		-webkit-backdrop-filter: blur(0);
+		transition:
+			background-color 0.25s ease,
+			border-color 0.25s ease,
+			backdrop-filter 0.25s ease;
+	}
+	header.scrolled {
+		background: color-mix(in srgb, var(--bg) 85%, transparent);
+		border-bottom-color: var(--border);
+		backdrop-filter: saturate(180%) blur(12px);
+		-webkit-backdrop-filter: saturate(180%) blur(12px);
 	}
 	.site-title {
 		margin: 0;
