@@ -120,7 +120,7 @@ const sortedTags = Object.entries(tagCounts)
 					<h1>所有标签</h1>
 					<p class="subtitle">共有 {sortedTags.length} 个标签</p>
 				</div>
-				<div class="tags-grid">
+				<div class="tags-grid stagger-children">
 					{
 						sortedTags.map(([tag, count]) => (
 							<a href={`/tags/${slugify(tag)}`} class="tag-card">
