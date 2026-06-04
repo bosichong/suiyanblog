@@ -4,6 +4,7 @@
 import '../styles/global.css';
 import { SITE_TITLE } from '../consts';
 import { Font } from 'astro:assets';
+import { ClientRouter } from 'astro:transitions';
 
 interface Props {
 	title: string;
@@ -28,6 +29,9 @@ const { title, description, image } = Astro.props;
 	href={new URL('rss.xml', Astro.site)}
 />
 <meta name="generator" content={Astro.generator} />
+
+<!-- 视图过渡：页面切换淡入淡出 -->
+<ClientRouter />
 
 <!-- Fonts -->
 <Font cssVariable="--font-atkinson" preload />
@@ -78,33 +82,37 @@ const { title, description, image } = Astro.props;
 				z-index: 9999;
 				pointer-events: none;
 				transform: translate(-50%, -50%);
-				transition: width 500ms ease-in-out, 
+				transition: width 500ms ease-in-out,
 				            height 500ms ease-in-out;
 			}
-			
+
 			.theme-transition-circle.removing {
 				transition: none !important;
 			}
-			
+
 			html {
 				transition: none !important;
 			}
 		`;
 		document.head.appendChild(style);
-		
-		// Get theme preference immediately
-		const stored = localStorage.getItem('theme');
-		let theme;
-		
-		if (stored) {
-			theme = stored;
-		} else {
-			// First time visit - use system preference
-			theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-		}
-		
-		// Apply theme immediately to prevent flash
-		document.documentElement.setAttribute('data-theme', theme);
+
+		// 主题应用函数（首次加载 + 视图过渡后均调用）
+		window.__applyTheme = function() {
+			const stored = localStorage.getItem('theme');
+			let theme;
+			if (stored) {
+				theme = stored;
+			} else {
+				theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+			}
+			document.documentElement.setAttribute('data-theme', theme);
+		};
+
+		// 首次加载：立即应用，避免闪烁
+		window.__applyTheme();
+
+		// 视图过渡后：重新应用（ClientRouter 会替换 <html> 的 data-theme）
+		document.addEventListener('astro:after-swap', window.__applyTheme);
 	})();
 </script>
 
