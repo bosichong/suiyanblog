@@ -201,18 +201,18 @@ const { posts, tagName } = Astro.props;
 					<div class="tag-badge">{tagName}</div>
 					<p class="subtitle">找到 {posts.length} 篇文章</p>
 				</div>
-				<ul>
+				<ul class="stagger-children">
 					{
-						   posts.map((post, idx) => (
-							   <li>
-								   {post.data.heroImage && (
-									   <a href={`/blog/${post.id}`} class="card-image-link" aria-label={post.data.title}>
-										   <Image width={720} height={360} src={post.data.heroImage} alt={post.data.heroImageAlt || ''} 
-											   loading={idx === 0 ? 'eager' : 'lazy'} />
-									   </a>
-								   )}
-								   <div class="post-content">
-									   <a href={`/blog/${post.id}`} class="card-text-link">
+					   posts.map((post, idx) => (
+						   <li>
+							   {post.data.heroImage && (
+								   <a href={`/blog/${post.id}`} class="card-image-link" aria-label={post.data.title} transition:name={`post-hero-${post.id}`}>
+									   <Image width={720} height={360} src={post.data.heroImage} alt={post.data.heroImageAlt || ''} 
+									   loading={idx === 0 ? 'eager' : 'lazy'} />
+								   </a>
+							   )}
+							   <div class="post-content">
+								   <a href={`/blog/${post.id}`} class="card-text-link" transition:name={`post-title-${post.id}`}>
 										<div class="post-meta">
 											<div class="meta-item">
 												<Icon name="mdi:calendar" width={16} height={16} aria-hidden="true" />

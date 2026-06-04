@@ -245,14 +245,14 @@ const lastUpdated = allPosts[0]?.data.time ? new Date(allPosts[0].data.time) : n
 								<span class="post-count">{postsByMonth[month].length} 篇文章</span>
 							</span>
 						</summary>
-						<ul>
+						<ul class="stagger-children">
 							{postsByMonth[month].map((post) => (
 								<li>
 									<div class="post-list-grid">
-										<a href={`/blog/${post.id}`}>
+										<a href={`/blog/${post.id}`} transition:name={`post-title-${post.id}`}>
 											{post.title}
 										</a>
-										<time dateTime={post.time}>
+										<time datetime={post.time}>
 											{formatDateMedium(post.time)}
 										</time>
 									</div>

@@ -179,14 +179,14 @@ import {
 						<h2>{FRIENDS_PAGE_TITLE}</h2>
 						<p>{FRIENDS_PAGE_DESCRIPTION}</p>
 					</hgroup>
-					<ul class="link-list">
+					<ul class="link-list stagger-children">
 						{FRIENDS_LINKS.map(link => (
 							<li class="link-card">
 								<div class="link-card-header">
 									<a href={link.site_url} target="_blank" rel="noopener noreferrer">
 										{link.site_name}
 										{link.is_active !== false ? (
-											<svg class="external-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+											<svg class="external-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 												<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
 												<polyline points="15 3 21 3 21 9" />
 												<line x1="10" y1="14" x2="21" y2="3" />
@@ -211,7 +211,7 @@ import {
 						<h2>{BLOG_AGGREGATION_TITLE}</h2>
 						<p>{BLOG_AGGREGATION_DESCRIPTION}</p>
 					</hgroup>
-					<ul class="link-list">
+					<ul class="link-list stagger-children">
 						{BLOG_AGGREGATIONS.map(link => (
 							<li class="link-card">
 								<div class="link-card-header">

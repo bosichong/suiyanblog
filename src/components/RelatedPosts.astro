@@ -21,7 +21,7 @@ if (!posts || posts.length === 0) {
 
 <section class="related-posts">
 	<h2>{title}</h2>
-	<ul>
+	<ul class="stagger-children">
 		{posts.slice(0, 5).map((post) => (
 			<li>
 				<a href={`/blog/${post.id}`}>

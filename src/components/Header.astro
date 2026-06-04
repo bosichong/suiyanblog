@@ -4,11 +4,11 @@ import HeaderLink from './HeaderLink.astro';
 import ThemeToggle from './ThemeToggle.astro';
 ---
 
-<header>
+<header transition:persist>
 	<a href="#main" class="skip-link">Skip to main content</a>
 	<nav>
 		<div class="site-title"><a href="/">{SITE_TITLE}</a></div>
-		
+
 		<div class="nav-container">
 			<div class="internal-links" id="nav-menu">
 				{MENU_ITEMS.map(item => (

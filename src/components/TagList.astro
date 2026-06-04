@@ -14,7 +14,7 @@ const hasMoreTags = limit && tags.length > limit;
 
 <div class="tag-list">
 	{showLabel && <span class="tag-label">Tags:</span>}
-	<ul class="tags">
+	<ul class="tags stagger-children">
 		{displayTags.map((tag) => (
 			<li class="tag">
 				<a href={`/tags/${slugify(tag)}`} class="tag-link">

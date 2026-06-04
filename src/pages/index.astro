@@ -142,13 +142,13 @@ const tagSections = [
 						<h3>{section.name}</h3>
 						<a href={`/tags/${section.tag}`} class="view-more">浏览更多</a>
 					</div>
-					<ul class="post-list">
+					<ul class="post-list stagger-children">
 						{section.posts.map((post) => (
 							<li class="post-list-grid">
-								<a href={`/blog/${post.id}`}>
+								<a href={`/blog/${post.id}`} transition:name={`post-title-${post.id}`}>
 									{post.data.title}
 								</a>
-								<time dateTime={post.data.time}>
+								<time datetime={post.data.time}>
 									{formatDateShort(post.data.time)}
 								</time>
 							</li>
