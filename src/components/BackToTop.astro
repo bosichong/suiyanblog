@@ -1,9 +1,10 @@
 ---
 // 返回顶部按钮组件
+// 使用 document 级事件委托 + 实时查询 DOM，避免视图过渡后失效
 ---
 
-<button 
-	class="back-to-top" 
+<button
+	class="back-to-top"
 	id="back-to-top"
 	aria-label="返回顶部"
 	title="返回顶部"
@@ -45,31 +46,45 @@
 	}
 </style>
 
-<script>
-	const backToTop = document.getElementById('back-to-top');
-	let lastScrollY = window.scrollY;
-	
-	// 根据滚动方向显示/隐藏按钮
-	const toggleVisibility = () => {
-		const currentScrollY = window.scrollY;
-		
-		// 向上滚动且超过 300px 时显示
-		if (currentScrollY < lastScrollY && currentScrollY > 300) {
-			backToTop?.classList.add('show');
-		} else {
-			backToTop?.classList.remove('show');
+<script is:inline>
+	(function () {
+		let lastScrollY = 0;
+
+		function getButton() {
+			return document.getElementById('back-to-top');
 		}
-		
-		lastScrollY = currentScrollY;
-	};
-	
-	window.addEventListener('scroll', toggleVisibility);
-	
-	// 平滑滚动到顶部
-	backToTop?.addEventListener('click', () => {
-		window.scrollTo({
-			top: 0,
-			behavior: 'smooth'
+
+		function update() {
+			const btn = getButton();
+			if (!btn) return;
+			// 滚动超过 300px 且向上滚时显示
+			const currentY = window.scrollY;
+			const shouldShow = currentY > 300 && currentY < lastScrollY;
+			btn.classList.toggle('show', shouldShow);
+			lastScrollY = currentY;
+		}
+
+		function onClick(e) {
+			const btn = getButton();
+			if (!btn) return;
+			// 点击按钮本身或其内部 svg/path
+			if (e.target === btn || (btn.contains(e.target))) {
+				window.scrollTo({ top: 0, behavior: 'smooth' });
+			}
+		}
+
+		window.addEventListener('scroll', update, { passive: true });
+
+		// 委托到 document，每次查最新 DOM
+		document.addEventListener('click', onClick);
+
+		// 视图过渡后重置 lastScrollY 并立即更新一次
+		document.addEventListener('astro:after-swap', () => {
+			lastScrollY = window.scrollY;
+			update();
 		});
-	});
+
+		// 首屏也跑一次
+		update();
+	})();
 </script>
