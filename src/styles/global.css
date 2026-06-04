@@ -1,60 +1,95 @@
 /*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
+  碎言博客 — 暖黄书页·现代阅读 设计系统 ("卷帙")
+  原始骨架参考 Bear Blog default.css (MIT)
+*/
 
 :root,
 :root[data-theme="light"] {
-	--accent: #a0521a;
-	--accent-dark: #7a3e0d;
+	/* === 语义色：背景层 === */
+	--bg: #fbf7eb;
+	--bg-soft: #f4ecd6;
+	--bg-overlay: #ede2c4;
+
+	/* === 语义色：文字层 === */
+	--text: #3a342b;
+	--text-soft: #6b6253;
+	--text-muted: #948872;
+
+	/* === 语义色：边框层 === */
+	--border: #e6dec9;
+	--border-soft: #efe7d4;
+
+	/* === 语义色：强调（赭石） === */
+	--accent: #b5651d;
+	--accent-dark: #8b4513;
+	--accent-soft: #f5e6d3;
+
+	/* === 字体 === */
+	--font-display: "LXGW WenKai", "Noto Serif SC", "Songti SC", "STSong", serif;
+	--font-body:
+		var(--font-atkinson), "LXGW WenKai", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+	--font-mono:
+		var(--font-atkinson-mono), "LXGW WenKai Mono", "Noto Sans Mono CJK SC", "Source Code Pro", Consolas,
+		monospace;
+
+	/* === 阴影 === */
+	--shadow-sm: 0 1px 2px rgba(58, 52, 43, 0.04);
+	--shadow-md: 0 2px 8px rgba(58, 52, 43, 0.08);
+	--shadow-lg: 0 8px 24px rgba(58, 52, 43, 0.12);
+
+	/* === 旧变量别名（保留给现有组件） === */
+	--header-bg: var(--bg);
+	--nav-text: var(--text);
+	--border-color: var(--border);
+	--text-color: var(--text);
+	--bg-color: var(--bg);
+	--code-bg: var(--bg-soft);
+	--heading-color: var(--text);
+	--footer-text: var(--text-soft);
 	--black: 42, 36, 28;
 	--gray: 168, 152, 121;
 	--gray-light: 232, 223, 200;
 	--gray-dark: 61, 54, 44;
-	--gray-gradient: rgba(var(--gray-light), 50%), #faf5e6;
-	--box-shadow:
-		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%), 0 16px 32px
-		rgba(var(--gray), 33%);
-
-	/* Light theme specific variables */
-	--header-bg: #faf5e6;
-	--nav-text: rgb(var(--gray-dark));
-	--border-color: rgb(var(--gray-light));
-	--text-color: rgb(var(--gray-dark));
-	--bg-color: #faf5e6;
-	--code-bg: rgb(var(--gray-light));
+	--gray-gradient: rgba(232, 223, 200, 50%), var(--bg);
+	--box-shadow: var(--shadow-lg);
 }
 
-/* Dark theme variables */
 [data-theme="dark"] {
+	/* 暗色主题保留原绿色，自洽 */
+	--bg: #111111;
+	--bg-soft: #1a1a1a;
+	--bg-overlay: #232323;
+	--text: #dcdde1;
+	--text-soft: #a0afc8;
+	--text-muted: #6b7280;
+	--border: #2a2a2a;
+	--border-soft: #1f1f1f;
 	--accent: #46e856;
 	--accent-dark: #044d0e;
-	--black: 245, 247, 250;
+	--accent-soft: #1a2a1c;
+
+	--shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+	--shadow-md: 0 2px 8px rgba(0, 0, 0, 0.4);
+	--shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+
+	--header-bg: var(--bg);
+	--nav-text: var(--text);
+	--border-color: var(--border);
+	--text-color: var(--text);
+	--bg-color: var(--bg);
+	--code-bg: var(--bg-soft);
+	--heading-color: var(--text);
+	--footer-text: var(--text-soft);
+	--black: 220, 225, 235;
 	--gray: 160, 175, 200;
 	--gray-light: 55, 65, 85;
 	--gray-dark: 220, 225, 235;
-	--gray-gradient: rgba(30, 30, 30, 50%), #111111;
-	--box-shadow:
-		0 2px 6px rgba(0, 0, 0, 25%), 0 8px 24px rgba(0, 0, 0, 33%), 0 16px 32px
-		rgba(0, 0, 0, 33%);
-	
-	/* Dark theme specific variables */
-	--header-bg: #1a1a1a;
-	--nav-text: rgb(var(--gray-dark));
-	--border-color: rgb(var(--gray-light));
-	--text-color: rgb(var(--gray-dark));
-	--bg-color: #111111;
-	--code-bg: rgb(var(--gray-light));
+	--gray-gradient: rgba(30, 30, 30, 50%), var(--bg);
+	--box-shadow: var(--shadow-lg);
 }
+
 body {
-	font-family: 
-		var(--font-atkinson),           /* 英文优先 */
-		"LXGW WenKai",                  /* 霞鹜文楷 */
-		"Noto Sans SC",                 /* 思源黑体 */
-		"PingFang SC",                  /* 苹方 */
-		"Microsoft YaHei",              /* 微软雅黑 */
-		sans-serif;
+	font-family: var(--font-body);
 	margin: 0;
 	padding: 0;
 	text-align: left;
@@ -65,18 +100,21 @@ body {
 	overflow-wrap: break-word;
 	color: var(--text-color);
 	font-size: 18px;
-	line-height: 1.8;
+	line-height: 1.85;
 	font-feature-settings: "kern" 1;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
 main {
 	width: 720px;
 	max-width: calc(100% - 2em);
 	margin: auto;
 	padding: 3em 1em;
 }
+
+/* === 标题：统一用衬线/楷体撑场 === */
 h1,
 h2,
 h3,
@@ -85,17 +123,18 @@ h5,
 h6 {
 	margin: 0 0 0.5rem 0;
 	color: rgb(var(--black));
-	line-height: 1.3;
-	letter-spacing: 0.02em;
+	font-family: var(--font-display);
+	line-height: 1.25;
+	letter-spacing: 0.01em;
 	word-break: break-word;
 }
 h1 {
 	font-size: 2.75rem;
-	letter-spacing: -0.02em;
+	letter-spacing: -0.01em;
 }
 h2 {
 	font-size: 2rem;
-	letter-spacing: -0.01em;
+	letter-spacing: -0.005em;
 }
 h3 {
 	font-size: 1.5rem;
@@ -106,26 +145,47 @@ h4 {
 h5 {
 	font-size: 1.1rem;
 }
+h6 {
+	font-size: 1rem;
+	color: var(--text-soft);
+}
+
+/* === strong: 暖色虚线 === */
 strong,
 b {
 	font-weight: 700;
 	text-decoration: underline wavy;
+	text-decoration-color: rgba(181, 101, 29, 0.45);
 	text-underline-offset: 5px;
 }
+
+/* === 链接：核心交互升级 === */
 a {
 	color: var(--accent);
+	text-decoration: underline;
+	text-decoration-color: rgba(181, 101, 29, 0.35);
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
+	transition:
+		color 0.2s ease,
+		text-decoration-color 0.2s ease,
+		text-decoration-thickness 0.2s ease;
 }
 a:hover {
-	color: var(--accent);
+	color: var(--accent-dark);
+	text-decoration-color: var(--accent-dark);
+	text-decoration-thickness: 2px;
 }
 a:focus-visible {
 	outline: 2px solid var(--accent);
-	outline-offset: 2px;
+	outline-offset: 3px;
+	border-radius: 2px;
 }
-button:focus {
+button:focus-visible {
 	outline: 2px solid var(--accent);
 	outline-offset: 2px;
 }
+
 p {
 	margin-bottom: 1.5em;
 	text-align: justify;
@@ -167,7 +227,8 @@ table {
 }
 
 /* 表格样式优化 */
-th, td {
+th,
+td {
 	padding: 0.5em 1em;
 	border: 1px solid rgb(var(--gray-light));
 	text-align: left;
@@ -191,50 +252,60 @@ img {
 	height: auto;
 	border-radius: 8px;
 }
+
+/* === 代码：内联 + 块 === */
 code {
-	padding: 2px 5px;
+	padding: 2px 6px;
 	background-color: var(--code-bg);
-	border-radius: 2px;
-	color: var(--text-color);
-	font-family: 
-		var(--font-atkinson-mono),
-		"LXGW WenKai Mono",
-		"Noto Sans Mono CJK SC",
-		"Source Code Pro",
-		Consolas,
-		monospace;
+	border: 1px solid var(--border-soft);
+	border-radius: 4px;
+	color: var(--text);
+	font-family: var(--font-mono);
+	font-size: 0.9em;
 }
 pre {
 	padding: 1.5em;
-	border-radius: 8px;
+	border-radius: 12px;
+	background: var(--bg-soft);
+	border: 1px solid var(--border);
 }
 pre > code {
 	all: unset;
-	font-family: 
-		var(--font-atkinson-mono),
-		"LXGW WenKai Mono",
-		"Noto Sans Mono CJK SC",
-		"Source Code Pro",
-		Consolas,
-		monospace;
+	font-family: var(--font-mono);
 }
+
+/* === blockquote：左色块 + 米色渐变（书页折角感） === */
 blockquote {
+	position: relative;
 	border-left: 4px solid var(--accent);
 	padding: 1em 1.5em;
 	margin: 1.5em 0;
-	background: rgba(var(--gray-light), 30%);
+	background: linear-gradient(90deg, var(--accent-soft) 0%, transparent 70%);
 	border-radius: 0 8px 8px 0;
 	font-style: italic;
 	font-size: 1em;
 }
 
 [data-theme="dark"] blockquote {
-	background: rgba(var(--gray-light), 10%);
+	background: linear-gradient(90deg, var(--accent-soft) 0%, transparent 70%);
 }
+
+/* === hr：中间夹点，书页省略符 === */
 hr {
 	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
+	text-align: center;
+	margin: 3em 0;
+	height: auto;
 }
+hr::before {
+	content: "· · ·";
+	display: inline-block;
+	color: var(--text-muted);
+	letter-spacing: 0.6em;
+	font-size: 1.25rem;
+	padding-left: 0.6em;
+}
+
 @media (max-width: 720px) {
 	body {
 		font-size: 17px;
@@ -254,6 +325,31 @@ hr {
 	h4 {
 		font-size: 1.15rem;
 	}
+}
+
+/* === 全站平滑过渡（主题切换除外） === */
+body,
+header,
+main,
+footer,
+.card,
+.tag-link,
+button {
+	transition:
+		background-color 0.25s ease,
+		border-color 0.25s ease,
+		color 0.25s ease;
+}
+
+/* === 视图过渡：淡入淡出 === */
+@view-transition {
+	navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+	animation-duration: 0.3s;
+	animation-timing-function: ease;
 }
 
 .sr-only:not(:focus):not(:active) {
