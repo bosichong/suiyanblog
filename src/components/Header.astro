@@ -33,7 +33,41 @@ import ThemeToggle from './ThemeToggle.astro';
 	</nav>
 </header>
 <script is:inline>
-	// 移动端菜单：使用事件委托，避免视图过渡后失效
+	(function () {
+		function normalize(path) {
+			// 去掉 base 路径前缀，与 SSR 时 HeaderLink 的判断保持一致
+			try {
+				const base = (document.querySelector('base')?.getAttribute('href') || '').replace(/\/$/, '');
+				if (base && path.startsWith(base)) path = path.slice(base.length);
+			} catch (e) { /* noop */ }
+			return path;
+		}
+
+		function getFirstSegment(path) {
+			const m = path.match(/[^\/]+/g);
+			return m ? '/' + m[0] : '/';
+		}
+
+		function updateActiveLinks() {
+			const pathname = normalize(location.pathname);
+			const subpath = getFirstSegment(pathname);
+			// 选 header 内的全部 a：MENU_ITEMS 链接 + site-title 首页链接
+			const links = document.querySelectorAll('header a');
+			links.forEach((a) => {
+				const href = a.getAttribute('href') || '';
+				// 跳过纯 hash 链接（如 Skip to main content）
+				if (href.startsWith('#')) return;
+				const isActive = href === pathname || href === subpath;
+				a.classList.toggle('active', isActive);
+			});
+		}
+
+		// 视图过渡后重算高亮
+		document.addEventListener('astro:after-swap', updateActiveLinks);
+		// 首屏进入时也跑一次（处理浏览器前进/后退恢复 bfcache）
+		updateActiveLinks();
+	})();
+
 	(function () {
 		function getMenuEls() {
 			return {
