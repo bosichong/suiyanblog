@@ -7,69 +7,125 @@ interface Props {
 
 const { level = 0 } = Astro.props;
 
-const ICON_SIZE = 16;
+const ICON_SIZE = 14;
 
 const aiLevels = [
 	{
 		level: 0,
 		icon: 'mdi:pencil',
 		theme: 'HAND',
-		description: '手写·每一个字都由作者亲手敲出'
+		zh: '手写',
+		description: '每一个字都由作者亲手敲出',
 	},
 	{
 		level: 1,
 		icon: 'mdi:microphone',
 		theme: 'VOICE',
-		description: '口述·语音转文字，AI负责修正'
+		zh: '口述',
+		description: '语音转文字，AI 负责修正',
 	},
 	{
 		level: 2,
 		icon: 'mdi:auto-fix',
 		theme: 'POLISH',
-		description: '润色·核心由作者完成，AI辅助'
+		zh: '润色',
+		description: '核心由作者完成，AI 辅助',
 	},
 	{
 		level: 3,
 		icon: 'mdi:hand-wave',
 		theme: 'DUET',
-		description: '协奏·人与AI共创，互相启发'
+		zh: '协奏',
+		description: '人与 AI 共创，互相启发',
 	},
 	{
 		level: 4,
 		icon: 'mdi:robot',
 		theme: 'AUTO',
-		description: '自动·AI主导生成，人类审核'
-	}
+		zh: '自动',
+		description: 'AI 主导生成，人类审核',
+	},
 ];
 
-const aiInfo = aiLevels.find(item => item.level === level) || aiLevels[0];
+const aiInfo = aiLevels.find((item) => item.level === level) || aiLevels[0];
 ---
 
-<span class="ai-badge">
+<span class="ai-badge" data-tooltip={`${aiInfo.zh}·${aiInfo.description}`}>
 	<Icon name={aiInfo.icon} width={ICON_SIZE} height={ICON_SIZE} aria-hidden="true" />
-	<span class="ai-theme">{aiInfo.theme}</span>
-	<span class="ai-desc">「{aiInfo.description}」</span>
+	<span class="ai-theme">{aiInfo.zh}</span>
 </span>
 
 <style>
 	.ai-badge {
+		position: relative;
 		display: inline-flex;
 		align-items: center;
-		gap: 0.25rem;
-		font-size: 0.85rem;
-		color: rgb(var(--gray));
+		gap: 0.35rem;
+		padding: 0.25rem 0.75rem;
+		font-size: 0.8rem;
+		font-weight: 500;
+		color: var(--accent-dark);
+		background: var(--accent-soft);
+		border: 1px solid transparent;
+		border-radius: 9999px;
 		vertical-align: middle;
+		cursor: help;
 	}
-	
+
 	.ai-badge svg {
 		color: var(--accent);
 	}
-	
-	.ai-theme {
-		font-weight: 500;
+
+	.ai-badge:hover {
+		border-color: var(--accent);
 	}
-	
-	.ai-desc {
-		opacity: 0.8;
+
+	/* CSS-only tooltip */
+	.ai-badge::after {
+		content: attr(data-tooltip);
+		position: absolute;
+		bottom: calc(100% + 8px);
+		left: 50%;
+		transform: translateX(-50%) translateY(4px);
+		padding: 0.4rem 0.7rem;
+		font-size: 0.75rem;
+		font-weight: 400;
+		font-style: italic;
+		color: var(--text);
+		background: var(--bg);
+		border: 1px solid var(--border);
+		border-radius: 6px;
+		white-space: nowrap;
+		opacity: 0;
+		pointer-events: none;
+		box-shadow: var(--shadow-md);
+		transition:
+			opacity 0.2s ease,
+			transform 0.2s ease;
+		z-index: 10;
+	}
+
+	.ai-badge::before {
+		content: "";
+		position: absolute;
+		bottom: calc(100% + 2px);
+		left: 50%;
+		transform: translateX(-50%) translateY(4px);
+		border: 6px solid transparent;
+		border-top-color: var(--border);
+		opacity: 0;
+		pointer-events: none;
+		transition:
+			opacity 0.2s ease,
+			transform 0.2s ease;
+		z-index: 10;
+	}
+
+	.ai-badge:hover::after,
+	.ai-badge:hover::before,
+	.ai-badge:focus::after,
+	.ai-badge:focus::before {
+		opacity: 1;
+		transform: translateX(-50%) translateY(0);
 	}
 </style>

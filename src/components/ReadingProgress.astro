@@ -1,0 +1,38 @@
+---
+/**
+ * 顶部阅读进度条
+ * 2px 高的细线，固定在页面顶端，随滚动填充
+ */
+---
+
+<div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
+
+<style>
+	.reading-progress {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 2px;
+		width: 0%;
+		background: linear-gradient(90deg, var(--accent) 0%, var(--accent-dark) 100%);
+		z-index: 9999;
+		transition: width 0.1s linear;
+		pointer-events: none;
+	}
+</style>
+
+<script>
+	function updateProgress() {
+		const el = document.getElementById('reading-progress');
+		if (!el) return;
+		const scrollTop = window.scrollY;
+		const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+		const percent = docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0;
+		el.style.width = percent + '%';
+	}
+
+	window.addEventListener('scroll', updateProgress, { passive: true });
+	window.addEventListener('resize', updateProgress);
+	document.addEventListener('astro:after-swap', updateProgress);
+	updateProgress();
+</script>

@@ -12,6 +12,7 @@ import RelatedPosts from '../components/RelatedPosts.astro';
 import { SITE_AUTHOR } from '../consts';
 import { Icon } from 'astro-icon/components';
 import AILabelBadge from '../components/AILabelBadge.astro';
+import ReadingProgress from '../components/ReadingProgress.astro';
 
 type Props = CollectionEntry<'blog'>['data'] & {
 	prevPost?: CollectionEntry<'blog'> | null;
@@ -194,14 +195,14 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 				gap: 1rem;
 				margin: 3rem 0;
 				padding: 1.5rem;
-				background: var(--header-bg);
+				background: transparent;
+				border: 1px solid var(--border);
 				border-radius: 12px;
-				box-shadow: 0 2px 8px rgba(var(--black), 5%);
 			}
 			.post-navigation a {
 				flex: 1;
 				padding: 1rem;
-				background: rgba(var(--gray), 5%);
+				background: var(--bg-soft);
 				border-radius: 8px;
 				text-decoration: none;
 				color: var(--text-color);
@@ -211,10 +212,9 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 				gap: 0.5rem;
 			}
 			.post-navigation a:hover {
-				background: var(--accent);
-				color: white;
-				transform: translateY(-2px);
-				box-shadow: 0 4px 12px rgba(var(--black), 10%);
+				background: var(--accent-soft);
+				color: var(--accent-dark);
+				transform: translateY(-1px);
 			}
 			.post-navigation .nav-label {
 				font-size: 0.85rem;
@@ -222,7 +222,7 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 				font-weight: 500;
 			}
 			.post-navigation a:hover .nav-label {
-				color: rgba(255, 255, 255, 0.8);
+				color: var(--accent);
 			}
 			.post-navigation .nav-title {
 				font-size: 1rem;
@@ -254,6 +254,7 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 	</head>
 
 	<body>
+		<ReadingProgress />
 		<Header />
 		<main id="main">
 			<article>
