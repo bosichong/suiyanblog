@@ -80,6 +80,11 @@ const aiInfo = aiLevels.find((item) => item.level === level) || aiLevels[0];
 		border-color: var(--accent);
 	}
 
+	/* 暗色主题下文字与背景同为深绿，对比度过低 → 改用亮绿 */
+	:global([data-theme="dark"]) .ai-badge {
+		color: var(--accent);
+	}
+
 	/* CSS-only tooltip */
 	.ai-badge::after {
 		content: attr(data-tooltip);
