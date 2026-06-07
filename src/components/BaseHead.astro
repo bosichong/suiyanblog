@@ -69,33 +69,6 @@ const { title, description, image } = Astro.props;
 <!-- Theme initialization - runs immediately to prevent flash -->
 <script is:inline>
 	(function() {
-		// Add circular transition styles with classic parameters
-		const style = document.createElement('style');
-		style.textContent = `
-			.theme-transition-circle {
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 0;
-				height: 0;
-				border-radius: 50%;
-				z-index: 9999;
-				pointer-events: none;
-				transform: translate(-50%, -50%);
-				transition: width 500ms ease-in-out,
-				            height 500ms ease-in-out;
-			}
-
-			.theme-transition-circle.removing {
-				transition: none !important;
-			}
-
-			html {
-				transition: none !important;
-			}
-		`;
-		document.head.appendChild(style);
-
 		// 主题应用函数（首次加载 + 视图过渡后均调用）
 		window.__applyTheme = function() {
 			const stored = localStorage.getItem('theme');

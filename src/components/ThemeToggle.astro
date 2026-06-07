@@ -44,22 +44,27 @@ import { Icon } from 'astro-icon/components';
 		// Expand circle
 		circle.style.width = (maxRadius * 2) + 'px';
 		circle.style.height = (maxRadius * 2) + 'px';
+
+		// Suppress html-level transitions while the circle animates,
+		// so swapping data-theme is instant rather than a gradient fade.
+		html.classList.add('theme-switching');
 		
 		// Wait for animation to complete, then change theme
 		setTimeout(() => {
 			html.setAttribute('data-theme', newTheme);
 			localStorage.setItem('theme', newTheme);
-			
+
 			// Update aria-label for accessibility
 			const toggleButtons = document.querySelectorAll('.theme-toggle');
 			toggleButtons.forEach(button => {
 				button.setAttribute('aria-label', newTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
 			});
-			
+
 			// Wait for theme to fully apply, then remove circle
 			setTimeout(() => {
 				circle.classList.add('removing');
 				circle.remove();
+				html.classList.remove('theme-switching');
 			}, 500);
 		}, 500);
 	};
