@@ -257,11 +257,6 @@ export const BLOG_AGGREGATIONS = [
     site_url: 'https://peng.you',
     site_description: '发现优质博客与网站,友链展示站致力于为博客作者和网站运营者提供一个简洁、现代的友情链接展示平台'
   },
-  {
-    site_name: '个站商店',
-    site_url: 'https://storeweb.cn',
-    site_description: '一个精致的，带社交元素的个人网站发布平台，博客收录网站'
-  }
 ];
 
 // 社交媒体链接
