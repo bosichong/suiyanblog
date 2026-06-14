@@ -256,7 +256,7 @@ export const BLOG_AGGREGATIONS = [
     site_name: '友链展示站',
     site_url: 'https://peng.you',
     site_description: '发现优质博客与网站,友链展示站致力于为博客作者和网站运营者提供一个简洁、现代的友情链接展示平台'
-  },
+  }
 ];
 
 // 社交媒体链接
