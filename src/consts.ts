@@ -33,13 +33,6 @@ export const MENU_ITEMS = [
 // 友情链接
 export const FRIENDS_LINKS = [
 
-  {
-    site_name: '宗宗酱',
-    site_url: 'https://ygz.ink/',
-    site_description: '用文字和图片记录工作和学习生活',
-    site_avatar: '#',
-    is_active: true
-  },
     {
     site_name: '理论派',
     site_url: 'https://sliun.com/',
