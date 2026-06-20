@@ -93,10 +93,13 @@ const commentsConfig = JSON.stringify(COMMENTS_CONFIG);
 	// ---------- 全局状态（跨导航重置） ----------
 	window.__commentState = window.__commentState || { currentType: null, giscusLoaded: false };
 	
-	// 视图过渡导航后重置状态，避免跨页面污染
+	// 视图过渡导航后重置状态，避免跨页面污染。
+	// 同时清除 twikoo 全局实例，下次点击强制重新加载脚本，
+	// 避免旧实例内部的 DOM 引用失效导致样式丢失。
 	document.addEventListener('astro:after-swap', () => {
 		window.__commentState.currentType = null;
 		window.__commentState.giscusLoaded = false;
+		delete (window as any).twikoo;
 	});
 	
 	// ---------- 事件委托：按钮点击 ----------
@@ -165,20 +168,16 @@ const commentsConfig = JSON.stringify(COMMENTS_CONFIG);
 	
 	// ---------- 加载 Twikoo ----------
 	function loadTwikoo(container: HTMLElement, config: any, path: string) {
-		container.innerHTML = '<div id="twikoo-comment" style="min-height: 200px;"></div>';
+		// 用 appendChild 而非 innerHTML 创建容器，避免潜在的渲染问题
+		const twikooDiv = document.createElement('div');
+		twikooDiv.id = 'twikoo-comment';
+		twikooDiv.style.minHeight = '200px';
+		container.appendChild(twikooDiv);
 		
-		if ((window as any).twikoo) {
-			(window as any).twikoo.init({
-				envId: config.twikoo.envId,
-				el: '#twikoo-comment',
-				path: path
-			});
-			return;
-		}
-		
+		// 不缓存 window.twikoo，每次从 CDN 重新加载脚本，
+		// 确保实例内部状态与当前页面的 DOM 一致。
 		const script = document.createElement('script');
-		script.src = 'https://cdn.jsdelivr.net/npm/twikoo@1.7.4/dist/twikoo.all.min.js';
-		script.async = true;
+		script.src = 'https://cdn.jsdelivr.net/npm/twikoo@1.7.12/dist/twikoo.all.min.js';
 		script.onload = () => {
 			(window as any).twikoo?.init({
 				envId: config.twikoo.envId,
