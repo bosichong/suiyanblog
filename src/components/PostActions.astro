@@ -85,64 +85,64 @@ const commentsConfig = JSON.stringify(COMMENTS_CONFIG);
 </style>
 
 <script>
-	const commentSection = document.getElementById('comment-section');
-	const commentContent = document.getElementById('comment-content');
-	const commentTypeBtns = document.querySelectorAll('.comment-type-btn');
+	// ============================================================
+	// 使用事件委托处理评论按钮点击，不依赖脚本重新执行，
+	// 因此在 ClientRouter 视图过渡后仍能正常工作。
+	// ============================================================
 	
-	// 从 data-config 读取配置
-	const configStr = commentSection?.getAttribute('data-config') || '{}';
-	const config = JSON.parse(configStr);
+	// ---------- 全局状态（跨导航重置） ----------
+	window.__commentState = window.__commentState || { currentType: null, giscusLoaded: false };
 	
-	let currentType: string | null = null;
-	let giscusLoaded = false;
-	
-	// 点击评论类型按钮
-	commentTypeBtns.forEach(btn => {
-		btn.addEventListener('click', () => {
-			const type = btn.getAttribute('data-type');
-			if (!type) return;
-			
-			// 如果已经加载了同类型，不做任何操作
-			if (type === currentType) return;
-			
-			// 更新按钮状态
-			commentTypeBtns.forEach(b => b.classList.remove('active'));
-			btn.classList.add('active');
-			
-			// 清空内容
-			if (commentContent) {
-				commentContent.innerHTML = '';
-			}
-			
-			currentType = type;
-			loadComments(type);
-		});
+	// 视图过渡导航后重置状态，避免跨页面污染
+	document.addEventListener('astro:after-swap', () => {
+		window.__commentState.currentType = null;
+		window.__commentState.giscusLoaded = false;
 	});
 	
-	function loadComments(type: string) {
-		if (!commentContent) return;
+	// ---------- 事件委托：按钮点击 ----------
+	document.addEventListener('click', (e) => {
+		const btn = (e.target as HTMLElement).closest('.comment-type-btn') as HTMLElement | null;
+		if (!btn) return;
 		
-		const postId = commentSection?.getAttribute('data-post-id') || '';
-		const postPath = commentSection?.getAttribute('data-post-path') || '';
+		const section = document.getElementById('comment-section');
+		if (!section || !section.contains(btn)) return;
+		
+		const content = document.getElementById('comment-content');
+		if (!content) return;
+		
+		const type = btn.getAttribute('data-type');
+		if (!type) return;
+		if (type === window.__commentState.currentType) return;
+		
+		// 更新按钮状态
+		section.querySelectorAll('.comment-type-btn').forEach(b => b.classList.remove('active'));
+		btn.classList.add('active');
+		
+		// 清空内容
+		content.innerHTML = '';
+		window.__commentState.currentType = type;
+		
+		// 获取配置（每次从 data-config 读取，确保切换页面后正确）
+		const configStr = section.getAttribute('data-config') || '{}';
+		const config = JSON.parse(configStr);
+		const postId = section.getAttribute('data-post-id') || '';
+		const postPath = section.getAttribute('data-post-path') || '';
 		
 		if (type === 'giscus') {
-			loadGiscus(postId);
+			loadGiscus(content, config, postId);
 		} else {
-			loadTwikoo(postPath);
+			loadTwikoo(content, config, postPath);
 		}
-	}
+	});
 	
-	function loadGiscus(postId: string) {
-		if (!commentContent) return;
-		
+	// ---------- 加载 Giscus ----------
+	function loadGiscus(container: HTMLElement, config: any, postId: string) {
 		const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
 		
-		// 创建 giscus 容器
 		const giscusContainer = document.createElement('div');
 		giscusContainer.className = 'giscus';
-		commentContent.appendChild(giscusContainer);
+		container.appendChild(giscusContainer);
 		
-		// 创建 script 元素
 		const script = document.createElement('script');
 		script.src = 'https://giscus.app/client.js';
 		script.setAttribute('data-repo', config.giscus.repo);
@@ -160,15 +160,13 @@ const commentsConfig = JSON.stringify(COMMENTS_CONFIG);
 		script.async = true;
 		
 		giscusContainer.appendChild(script);
-		giscusLoaded = true;
+		window.__commentState.giscusLoaded = true;
 	}
 	
-	function loadTwikoo(path: string) {
-		if (!commentContent) return;
+	// ---------- 加载 Twikoo ----------
+	function loadTwikoo(container: HTMLElement, config: any, path: string) {
+		container.innerHTML = '<div id="twikoo-comment" style="min-height: 200px;"></div>';
 		
-		commentContent.innerHTML = '<div id="twikoo-comment" style="min-height: 200px;"></div>';
-		
-		// 检查是否已加载 Twikoo
 		if ((window as any).twikoo) {
 			(window as any).twikoo.init({
 				envId: config.twikoo.envId,
@@ -178,7 +176,6 @@ const commentsConfig = JSON.stringify(COMMENTS_CONFIG);
 			return;
 		}
 		
-		// 加载 Twikoo 脚本
 		const script = document.createElement('script');
 		script.src = 'https://cdn.jsdelivr.net/npm/twikoo@1.7.4/dist/twikoo.all.min.js';
 		script.async = true;
@@ -192,22 +189,27 @@ const commentsConfig = JSON.stringify(COMMENTS_CONFIG);
 		document.head.appendChild(script);
 	}
 	
-	// 监听主题变化，更新 Giscus 主题
-	const observer = new MutationObserver(() => {
-		if (!giscusLoaded || currentType !== 'giscus') return;
+	// ---------- 监听主题变化，更新 Giscus 主题 ----------
+	// 只在首次运行时注册一次（全局 documentElement 不会变）
+	if (!(window as any).__commentThemeObserver) {
+		const observer = new MutationObserver(() => {
+			if (!window.__commentState.giscusLoaded || window.__commentState.currentType !== 'giscus') return;
+			
+			const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+			const content = document.getElementById('comment-content');
+			const iframe = content?.querySelector('iframe.giscus-frame');
+			if (iframe) {
+				(iframe.contentWindow as any)?.postMessage(
+					{ giscus: { setConfig: { theme } } },
+					'https://giscus.app'
+				);
+			}
+		});
 		
-		const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-		const iframe = commentContent?.querySelector('iframe.giscus-frame');
-		if (iframe) {
-			iframe.contentWindow?.postMessage(
-				{ giscus: { setConfig: { theme } } },
-				'https://giscus.app'
-			);
-		}
-	});
-	
-	observer.observe(document.documentElement, {
-		attributes: true,
-		attributeFilter: ['data-theme']
-	});
+		(window as any).__commentThemeObserver = observer;
+		observer.observe(document.documentElement, {
+			attributes: true,
+			attributeFilter: ['data-theme']
+		});
+	}
 </script>
