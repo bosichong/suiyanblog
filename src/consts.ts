@@ -214,11 +214,6 @@ export const FRIENDS_LINKS = [
 // 博客聚合平台
 export const BLOG_AGGREGATIONS = [
   {
-    site_name: '兰亭序',
-    site_url: 'https://lanti.ng',
-    site_description: '雅集共赏，笔墨相知。中文独立博客目录与 RSS 订阅聚合，连接仍在认真写作的人。'
-  },
-  {
     site_name: '十年之约',
     site_url: 'https://www.foreverblog.cn',
     site_description: '十年之约 · 一个人的寂寞，一群人的狂欢。'
