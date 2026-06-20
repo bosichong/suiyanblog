@@ -33,7 +33,15 @@ export const MENU_ITEMS = [
 // 友情链接
 export const FRIENDS_LINKS = [
 
-    {
+  {
+    site_name: '揆机',
+    site_url: 'https://pathos.page/',
+    site_description: '一个法哲学研究者的博客，记录了他的学术之路和社会观察',
+    site_avatar: '#',
+    is_active: true
+  },
+
+  {
     site_name: '理论派',
     site_url: 'https://sliun.com/',
     site_description: '意识不止算法，心灵自有归途。',
