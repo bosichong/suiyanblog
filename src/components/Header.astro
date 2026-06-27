@@ -120,39 +120,11 @@ import ThemeToggle from './ThemeToggle.astro';
 			if (e.key === 'Escape') closeMenu();
 		});
 	})();
-
-	// 滚动激活 header 毛玻璃
-	(function () {
-		const onScroll = () => {
-			const header = document.querySelector('header');
-			if (header) header.classList.toggle('scrolled', window.scrollY > 20);
-		};
-		window.addEventListener('scroll', onScroll, { passive: true });
-		onScroll();
-		document.addEventListener('astro:after-swap', onScroll);
-	})();
 </script>
 <style>
 	header {
-		position: sticky;
-		top: 0;
-		z-index: 100;
 		margin: 0;
 		padding: 0 1em;
-		background: var(--header-bg);
-		border-bottom: 1px solid transparent;
-		backdrop-filter: blur(0);
-		-webkit-backdrop-filter: blur(0);
-		transition:
-			background-color 0.25s ease,
-			border-color 0.25s ease,
-			backdrop-filter 0.25s ease;
-	}
-	header.scrolled {
-		background: color-mix(in srgb, var(--bg) 85%, transparent);
-		border-bottom-color: var(--border);
-		backdrop-filter: saturate(180%) blur(12px);
-		-webkit-backdrop-filter: saturate(180%) blur(12px);
 	}
 	nav {
 		position: relative;
@@ -165,9 +137,9 @@ import ThemeToggle from './ThemeToggle.astro';
 		max-width: 720px;
 	}
 	nav a {
-		padding: 1em 0.5em;
+		padding: 1em 0.5em 0.25em;
 		color: var(--nav-text);
-		border-bottom: 4px solid transparent;
+		border-bottom: 2px solid transparent;
 		text-decoration: none;
 		transition: color 0.3s ease;
 	}
