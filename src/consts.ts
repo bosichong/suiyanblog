@@ -107,7 +107,7 @@ export const FRIENDS_LINKS = [
   {
     site_name: '孤斗',
     site_url: 'https://d-d.design',
-    site_description: '该网站禁止鼠标右键...',
+    site_description: '很酷的博客，分享设计、前端、生活、读书、思考等内容。',
     site_avatar: '#',
     is_active: true
   },

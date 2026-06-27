@@ -27,8 +27,8 @@ const getLatestTime = (posts) => posts.length > 0 ? new Date(posts[0].data.time)
 
 // 按最新文章时间排序（最新更新的标签排最前）
 const tagSections = [
-	{ name: '日常', posts: dailyPosts, tag: 'daily', latestTime: getLatestTime(dailyPosts) },
-	{ name: '技术', posts: technologyPosts, tag: 'technology', latestTime: getLatestTime(technologyPosts) },
+	{ name: '日常', posts: dailyPosts, tag: 'daily', latestTime: getLatestTime(dailyPosts), moreText: '更多日常...' },
+	{ name: '技术', posts: technologyPosts, tag: 'technology', latestTime: getLatestTime(technologyPosts), moreText: '更多技术...' },
 
 ].filter(section => section.posts.length > 0)
   .sort((a, b) => b.latestTime - a.latestTime);
@@ -47,21 +47,10 @@ const tagSections = [
 				margin-bottom: 3rem;
 			}
 			
-			.category-header {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				margin-bottom: 1.5rem;
-				padding: 1rem 0;
-			}
-			
-			.category-header h3 {
-				font-size: 1.5rem;
-				margin: 0;
-				color: var(--heading-color);
-			}
-			
 			.view-more {
+				display: block;
+				margin-top: 1rem;
+				text-align: right;
 				color: var(--accent);
 				text-decoration: none;
 				font-size: 0.95rem;
@@ -138,10 +127,6 @@ const tagSections = [
 		<main id="main">
 			{tagSections.map((section) => (
 				<section class="category-section">
-					<div class="category-header">
-						<h3>{section.name}</h3>
-						<a href={`/tags/${section.tag}`} class="view-more">浏览更多</a>
-					</div>
 					<ul class="post-list stagger-children">
 						{section.posts.map((post) => (
 							<li class="post-list-grid">
@@ -154,6 +139,7 @@ const tagSections = [
 							</li>
 						))}
 					</ul>
+					<a href={`/tags/${section.tag}`} class="view-more">{section.moreText}</a>
 				</section>
 			))}
 		</main>
