@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { SITE_DESCRIPTION, SITE_AUTHOR, SITE_TITLE } from '../consts';
 import { formatDateShort } from '../utils/date';
 
 // 获取所有博客文章
@@ -41,6 +41,54 @@ const tagSections = [
 		<style>
 			main {
 				width: 720px;
+			}
+			
+			.hero {
+				width: 720px;
+				max-width: calc(100% - 2em);
+				margin: 0 auto 3rem;
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+			}
+			.hero-avatar {
+				width: 4rem;
+				height: 4rem;
+				border-radius: 50%;
+				object-fit: cover;
+				flex-shrink: 0;
+			}
+			.hero-text {
+				flex: 1;
+			}
+			.hero-title {
+				font-size: 1.5rem;
+				font-weight: 500;
+				line-height: 1.25;
+				margin: 0;
+				color: var(--text);
+				text-align: left;
+				text-indent: 0;
+			}
+			.hero-desc {
+				font-size: 0.875rem;
+				line-height: 1.25;
+				margin: 0.25rem 0 0;
+				color: var(--text-soft);
+				text-align: left;
+				text-indent: 0;
+			}
+			@media (min-width: 721px) {
+				.hero {
+					margin-bottom: 4rem;
+				}
+				.hero-avatar {
+					width: 5rem;
+					height: 5rem;
+				}
+				.hero-title {
+					font-size: 1.875rem;
+				}
 			}
 			
 			.category-section {
@@ -125,6 +173,15 @@ const tagSections = [
 	<body>
 		<Header />
 		<main id="main">
+			<header class="hero">
+				<a href="/">
+					<img src="/assets/images/avatar.jpg" alt={SITE_AUTHOR} class="hero-avatar" loading="eager" fetchpriority="high" decoding="async" width="80" height="80" />
+				</a>
+				<div class="hero-text">
+					<p class="hero-title">{SITE_TITLE}</p>
+					<p class="hero-desc">{SITE_DESCRIPTION}</p>
+				</div>
+			</header>
 			{tagSections.map((section) => (
 				<section class="category-section">
 					<ul class="post-list stagger-children">

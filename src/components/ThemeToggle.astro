@@ -1,10 +1,10 @@
 ---
-import { Icon } from 'astro-icon/components';
 ---
 
 <button class="theme-toggle" onclick="toggleTheme(event)" aria-label="Toggle dark mode">
-	<Icon name="mdi:weather-sunny" class:list={['sun-icon']} />
-	<Icon name="mdi:weather-night" class:list={['moon-icon']} />
+	<svg class="theme-icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+		<circle cx="8" cy="8" r="8" />
+	</svg>
 </button>
 
 <script is:inline>
@@ -35,7 +35,7 @@ import { Icon } from 'astro-icon/components';
 		circle.className = 'theme-transition-circle';
 		circle.style.left = x + 'px';
 		circle.style.top = y + 'px';
-		circle.style.background = newTheme === 'dark' ? '#1a1a1a' : '#faf5e6';
+		circle.style.background = newTheme === 'dark' ? '#171717' : '#f2f1ec';
 		document.body.appendChild(circle);
 		
 		// Force reflow
@@ -102,9 +102,6 @@ import { Icon } from 'astro-icon/components';
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 2.5rem;
-		height: 2.5rem;
-		position: relative;
 	}
 
 	.theme-toggle:hover {
@@ -116,33 +113,9 @@ import { Icon } from 'astro-icon/components';
 		outline-offset: 2px;
 	}
 
-	.sun-icon,
-	.moon-icon {
-		width: 1.25rem;
-		height: 1.25rem;
-		transition: opacity 0.3s ease, transform 0.3s ease;
-		position: absolute;
-	}
-
-	/* Default (light mode) - show moon (to switch TO dark), hide sun */
-	.moon-icon {
-		opacity: 1;
-		transform: scale(1) rotate(0deg);
-	}
-
-	.sun-icon {
-		opacity: 0;
-		transform: scale(0.8) rotate(180deg);
-	}
-
-	/* Dark mode - hide moon, show sun (to switch TO light) */
-	:global([data-theme="dark"]) .theme-toggle .moon-icon {
-		opacity: 0;
-		transform: scale(0.8) rotate(-180deg);
-	}
-
-	:global([data-theme="dark"]) .theme-toggle .sun-icon {
-		opacity: 1;
-		transform: scale(1) rotate(0deg);
+	.theme-icon {
+		width: 1rem;
+		height: 1rem;
+		fill: currentColor;
 	}
 </style>
