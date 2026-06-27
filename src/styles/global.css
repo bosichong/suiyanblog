@@ -6,18 +6,18 @@
 :root,
 :root[data-theme="light"] {
 	/* === 语义色：背景层 === */
-	--bg: #fbf7eb;
-	--bg-soft: #f4ecd6;
-	--bg-overlay: #ede2c4;
+	--bg: #f2f1ec;
+	--bg-soft: #eae9e1;
+	--bg-overlay: #e0ddd3;
 
 	/* === 语义色：文字层 === */
-	--text: #3a342b;
-	--text-soft: #6b6253;
-	--text-muted: #948872;
+	--text: #171717;
+	--text-soft: #555555;
+	--text-muted: #888888;
 
 	/* === 语义色：边框层 === */
-	--border: #e6dec9;
-	--border-soft: #efe7d4;
+	--border: #d8d4c8;
+	--border-soft: #e8e4d8;
 
 	/* === 语义色：强调（赭石） === */
 	--accent: #b5651d;
@@ -33,9 +33,9 @@
 		monospace;
 
 	/* === 阴影 === */
-	--shadow-sm: 0 1px 2px rgba(58, 52, 43, 0.04);
-	--shadow-md: 0 2px 8px rgba(58, 52, 43, 0.08);
-	--shadow-lg: 0 8px 24px rgba(58, 52, 43, 0.12);
+	--shadow-sm: 0 1px 2px rgba(23, 23, 23, 0.04);
+	--shadow-md: 0 2px 8px rgba(23, 23, 23, 0.08);
+	--shadow-lg: 0 8px 24px rgba(23, 23, 23, 0.12);
 
 	/* === 旧变量别名（保留给现有组件） === */
 	--header-bg: var(--bg);
@@ -46,24 +46,24 @@
 	--code-bg: var(--bg-soft);
 	--heading-color: var(--text);
 	--footer-text: var(--text-soft);
-	--black: 42, 36, 28;
-	--gray: 168, 152, 121;
-	--gray-light: 232, 223, 200;
-	--gray-dark: 61, 54, 44;
-	--gray-gradient: rgba(232, 223, 200, 50%), var(--bg);
+	--black: 23, 23, 23;
+	--gray: 136, 136, 136;
+	--gray-light: 216, 212, 200;
+	--gray-dark: 23, 23, 23;
+	--gray-gradient: rgba(216, 212, 200, 50%), var(--bg);
 	--box-shadow: var(--shadow-lg);
 }
 
 [data-theme="dark"] {
 	/* 暗色主题保留原绿色，自洽 */
-	--bg: #111111;
-	--bg-soft: #1a1a1a;
-	--bg-overlay: #232323;
-	--text: #dcdde1;
-	--text-soft: #a0afc8;
-	--text-muted: #6b7280;
-	--border: #2a2a2a;
-	--border-soft: #1f1f1f;
+	--bg: #171717;
+	--bg-soft: #1e1e1e;
+	--bg-overlay: #242424;
+	--text: #f2f1ec;
+	--text-soft: #c0bfb8;
+	--text-muted: #888888;
+	--border: #333333;
+	--border-soft: #282828;
 	--accent: #46e856;
 	--accent-dark: #044d0e;
 	--accent-soft: #1a2a1c;
@@ -80,10 +80,10 @@
 	--code-bg: var(--bg-soft);
 	--heading-color: var(--text);
 	--footer-text: var(--text-soft);
-	--black: 220, 225, 235;
-	--gray: 160, 175, 200;
-	--gray-light: 55, 65, 85;
-	--gray-dark: 220, 225, 235;
+	--black: 242, 241, 236;
+	--gray: 136, 136, 136;
+	--gray-light: 51, 51, 51;
+	--gray-dark: 242, 241, 236;
 	--gray-gradient: rgba(30, 30, 30, 50%), var(--bg);
 	--box-shadow: var(--shadow-lg);
 }
