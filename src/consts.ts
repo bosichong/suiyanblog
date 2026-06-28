@@ -17,7 +17,7 @@ export const POSTS_PER_PAGE = 25;
 export const THOUGHTS_PAGE_TITLE = '片语';
 export const THOUGHTS_PAGE_DESCRIPTION = '碎言博客的片语，记录日常的短小想法和瞬间感悟。';
 export const FRIENDS_PAGE_TITLE = '链接';
-export const FRIENDS_PAGE_DESCRIPTION = '这里存放了我常去的一些独立博客的链接，这里不是友情链接展示，也不是邻居的的列表，就我个人而言，这些博客都是我喜欢的、能让我思考、我认为对我有价值的博客，欢迎访问。';
+export const FRIENDS_PAGE_DESCRIPTION = '这里存放了我常去的一些独立博客的链接以及这些博客的最新RSS文章，这里不是友情链接展示，也不是邻居的的列表，就我个人而言，这些博客都是我喜欢的、能让我思考、我认为对我有价值的博客，欢迎访问。';
 export const BLOG_AGGREGATION_TITLE = '博客聚合';
 export const BLOG_AGGREGATION_DESCRIPTION = '一些优秀的博客聚合平台，可以发现更多有趣的独立博客。';
 
