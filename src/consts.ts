@@ -34,182 +34,222 @@ export const MENU_ITEMS = [
 // 友情链接
 export const FRIENDS_LINKS = [
 
-  {
-    site_name: '揆机',
-    site_url: 'https://pathos.page/',
-    site_description: '一个法哲学研究者的博客，记录了他的学术之路和社会观察',
-    site_avatar: '#',
-    is_active: true
-  },
-
-  {
-    site_name: '理论派',
-    site_url: 'https://sliun.com/',
-    site_description: '意识不止算法，心灵自有归途。',
-    site_avatar: '#',
-    is_active: true
-  },
-  {
+{
     site_name: '莫比乌斯',
     site_url: 'https://mobius.blog/',
     site_description: '写作，一场自我悖驳的旅程。我写自己的生活、也写自己的讣告。',
     site_avatar: 'https://onojyun.com/wp-content/uploads/2024/03/a2d42-cropped-mobius_icon_black-edited.png',
-    is_active: true
+    is_active: true,
+    rss:'https://mobius.blog/feed/',
   },
-  {
-    site_name: '白熊阿丸的小屋',
-    site_url: 'https://blog.bxaw.name',
-    site_description: '在这里可以看到一个真实的我，我会在这里书写我的一切',
-    site_avatar: '#',
-    is_active: true
-  },
-  {
-    site_name: 'Yihui Xie',
-    site_url: 'https://yihui.org/cn',
-    site_description: '一些书信。一些文章。',
-    site_avatar: 'https://yihui.org/images/logo.png',
-    is_active: true
-  },
-  {
-    site_name: '愆伏',
-    site_url: 'https://www.tortorse.com',
-    site_description: '互联网杂谈，关于设计、技术与思考。',
-    site_avatar: '#',
-    is_active: true
-  },
-  {
-    site_name: '枫林灯语',
-    site_url: 'https://blog.mfwt.top',
-    site_description: '深山踏红叶，耳畔闻鹿鸣',
-    site_avatar: '#',
-    is_active: true
-  },
-  {
-    site_name: '老T博客',
-    site_url: 'https://lawtee.com',
-    site_description: '法律、科技和生活',
-    site_avatar: 'https://lawtee.com/links/avatar.jpg',
-    is_active: true
-  },
-  {
-    site_name: '一派胡言',
-    site_url: 'https://yipai.me',
-    site_description: '一派胡言 – 如果你在纵容，就不要抱怨世道变坏。',
-    site_avatar: '#',
-    is_active: true
-  },
-  {
-    site_name: 'CC的数字花园',
-    site_url: 'https://cyrus19.cc',
-    site_description: 'CC的数字花园并不是传统意义上的博客，是我的精神在这个世界上的一片自留地。',
-    site_avatar: '#',
-    is_active: true
-  },
-  {
-    site_name: '孤斗',
-    site_url: 'https://d-d.design',
-    site_description: '很酷的博客，分享设计、前端、生活、读书、思考等内容。',
-    site_avatar: '#',
-    is_active: true
-  },
-  {
-    site_name: 'Owen的博客',
-    site_url: 'https://www.owenyoung.com',
-    site_description: '主要关注技术，读书，摘抄，杂谈，文章评论，工具分享，工作流，灵感，英文学习，注意力管理，深度工作等方向。',
-    site_avatar: '#',
-    is_active: true
-  },
-  {
-    site_name: '映屿',
-    site_url: 'https://www.glowisle.me',
-    site_description: '关于互联网、书籍、生活琐事以及那些一闪而过的念头。',
-    site_avatar: '#',
-    is_active: true
-  },
-  {
+
+{
     site_name: '素生',
     site_url: 'https://z.arlmy.me',
     site_description: '误读人生，化人生活',
     site_avatar: '#',
-    is_active: true
+    is_active: true,
+    rss:'https://z.arlmy.me/atom.xml',
   },
-  {
+
+{
     site_name: '阮一峰的网络日志',
     site_url: 'https://www.ruanyifeng.com/blog',
     site_description: '这里记录每周值得分享的科技内容。',
     site_avatar: 'https://www.ruanyifeng.com/blog/images/person2_s.jpg',
-    is_active: true
+    is_active: true,
+    rss:'https://www.ruanyifeng.com/blog/atom.xml',
   },
-  {
+
+{
     site_name: '优世界',
     site_url: 'https://usj.cc',
     site_description: '喜欢折腾博客、制作主题、分享前端技术的独立开发者。',
     site_avatar: '#',
-    is_active: true
+    is_active: true,
+    rss:'https://usj.cc/rss.xml',
   },
-  {
-    site_name: 'Obaby',
-    site_url: 'https://zhongxiaojie.com',
-    site_description: '黑客程序媛 / 逆向工程师 / 人工智能学徒 / 用爱发电的独立开发者',
-    site_avatar: 'https://zhongxiaojie.com/wp-content/uploads/2025/05/WechatIMG1530.jpg',
-    is_active: true
+
+{
+    site_name: '愆伏',
+    site_url: 'https://www.tortorse.com',
+    site_description: '互联网杂谈，关于设计、技术与思考。',
+    site_avatar: '#',
+    is_active: true,
+    rss:'https://www.tortorse.com/atom.xml',
   },
-  {
-    site_name: '秋风于渭水',
-    site_url: 'https://www.tjsky.net',
-    site_description: '秋风于渭水，别看名字整得挺文艺范儿，其实本质就是个 佛系码农（伪）的小窝。',
-    site_avatar: 'https://www.tjsky.net/wp-content/uploads/2024/02/logo.png',
-    is_active: true
-  },
-  {
+
+{
     site_name: '二丫讲梵',
     site_url: 'https://wiki.eryajf.net',
     site_description: '💻学习📝记录🔗分享',
     site_avatar: 'https://wiki.eryajf.net/img/logo.png',
-    is_active: true
+    is_active: true,
+    rss:'https://wiki.eryajf.net/rss.xml',
   },
-  {
-    site_name: '八对星星',
-    site_url: 'https://8dui.com',
-    site_description: '极目星视穹苍无界•足履行者大地有疆',
-    site_avatar: 'https://cf.8dui.com/logo.webp',
-    is_active: true
+
+{
+    site_name: '枫林灯语',
+    site_url: 'https://blog.mfwt.top',
+    site_description: '深山踏红叶，耳畔闻鹿鸣',
+    site_avatar: '#',
+    is_active: true,
+    rss:'https://blog.mfwt.top/index.php/feed/',
   },
-  {
-    site_name: '特立独行的异类',
-    site_url: 'https://www.demochen.com',
-    site_description: '一张肆无忌惮的脸，一颗桀骜不驯的心。',
-    site_avatar: 'https://www.demochen.com/images/avatar.png',
-    is_active: true
+
+{
+    site_name: 'Obaby',
+    site_url: 'https://zhongxiaojie.com',
+    site_description: '黑客程序媛 / 逆向工程师 / 人工智能学徒 / 用爱发电的独立开发者',
+    site_avatar: 'https://zhongxiaojie.com/wp-content/uploads/2025/05/WechatIMG1530.jpg',
+    is_active: true,
+    rss:'https://zhongxiaojie.com/feed/',
   },
-  {
+
+{
+    site_name: 'CC的数字花园',
+    site_url: 'https://cyrus19.cc',
+    site_description: 'CC的数字花园并不是传统意义上的博客，是我的精神在这个世界上的一片自留地。',
+    site_avatar: '#',
+    is_active: true,
+    rss:'https://cyrus19.cc/feed',
+  },
+
+{
+    site_name: '孤斗',
+    site_url: 'https://d-d.design',
+    site_description: '很酷的博客，分享设计、前端、生活、读书、思考等内容。',
+    site_avatar: '#',
+    is_active: true,
+    rss:'https://d-d.design/wp/feed/',
+  },
+
+{
+    site_name: '秋风于渭水',
+    site_url: 'https://www.tjsky.net',
+    site_description: '秋风于渭水，别看名字整得挺文艺范儿，其实本质就是个 佛系码农（伪）的小窝。',
+    site_avatar: 'https://www.tjsky.net/wp-content/uploads/2024/02/logo.png',
+    is_active: true,
+    rss:'https://www.tjsky.net/feed',
+  },
+
+{
     site_name: '八咫乌',
     site_url: 'https://www.vergilisme.com',
     site_description: '思君如满月，夜夜减清辉',
     site_avatar: 'https://www.vergilisme.com/usr/themes/Lumieres/fonts/logo_vertical.svg',
-    is_active: true
+    is_active: true,
+    rss:'https://www.vergilisme.com/index.php/feed/',
   },
-  {
+
+{
+    site_name: '老T博客',
+    site_url: 'https://lawtee.com',
+    site_description: '法律、科技和生活',
+    site_avatar: 'https://lawtee.com/links/avatar.jpg',
+    is_active: true,
+    rss:'https://lawtee.com/index.xml',
+  },
+
+{
+    site_name: '一派胡言',
+    site_url: 'https://yipai.me',
+    site_description: '一派胡言 – 如果你在纵容，就不要抱怨世道变坏。',
+    site_avatar: '#',
+    is_active: true,
+    rss:'https://yipai.me/feed',
+  },
+
+{
+    site_name: '理论派',
+    site_url: 'https://sliun.com/',
+    site_description: '意识不止算法，心灵自有归途。',
+    site_avatar: '#',
+    is_active: true,
+    rss:'https://sliun.com/feed/',
+  },
+
+{
+    site_name: '揆机',
+    site_url: 'https://pathos.page/',
+    site_description: '一个法哲学研究者的博客，记录了他的学术之路和社会观察',
+    site_avatar: '#',
+    is_active: true,
+    rss:'https://pathos.page/feed.xml',
+  },
+
+{
+    site_name: '白熊阿丸的小屋',
+    site_url: 'https://blog.bxaw.name',
+    site_description: '在这里可以看到一个真实的我，我会在这里书写我的一切',
+    site_avatar: '#',
+    is_active: true,
+    rss:'https://blog.bxaw.name/feed/',
+  },
+
+{
+    site_name: 'Yihui Xie',
+    site_url: 'https://yihui.org/cn',
+    site_description: '一些书信。一些文章。',
+    site_avatar: 'https://yihui.org/images/logo.png',
+    is_active: true,
+    rss:'https://yihui.org/cn/index.xml',
+  },
+
+{
+    site_name: 'Owen的博客',
+    site_url: 'https://www.owenyoung.com',
+    site_description: '主要关注技术，读书，摘抄，杂谈，文章评论，工具分享，工作流，灵感，英文学习，注意力管理，深度工作等方向。',
+    site_avatar: '#',
+    is_active: true,
+    rss:'https://www.owenyoung.com/feed',
+  },
+
+{
+    site_name: '映屿',
+    site_url: 'https://www.glowisle.me',
+    site_description: '关于互联网、书籍、生活琐事以及那些一闪而过的念头。',
+    site_avatar: '#',
+    is_active: true,
+    rss:'https://blog.verdant.ee/rss/',
+  },
+
+{
+    site_name: '特立独行的异类',
+    site_url: 'https://www.demochen.com',
+    site_description: '一张肆无忌惮的脸，一颗桀骜不驯的心。',
+    site_avatar: 'https://www.demochen.com/images/avatar.png',
+    is_active: true,
+    rss:'https://demochen.com/atom.xml',
+  },
+
+{
     site_name: 'ScarSu',
     site_url: 'https://www.scarsu.com',
     site_description: '96女性程序员，以终身成长为人生意义，热爱前端技术，喜欢读各种书，关注效率提升、自我管理、心智成长、认知提升、极简生活。',
     site_avatar: 'https://scarsu.oss-cn-shanghai.aliyuncs.com/picgo20201012144739.jpg',
-    is_active: true
+    is_active: true,
+    rss:'https://scarsu.com/rss',
   },
-  {
+
+{
     site_name: 'BORBER',
     site_url: 'https://blog.borber.top',
     site_description: '跌宕歌词 纵横书卷 不与遣年华',
     site_avatar: 'https://cdn.jsdelivr.net/gh/Borber/PublicPic1/headImg/head.png',
-    is_active: true
+    is_active: true,
+    rss:'#',
   },
-  {
+
+{
     site_name: '图灵技术域',
     site_url: 'http://www.omegaxyz.com',
     site_description: '徐奕的专栏-机器学习、软件工程、计算机大佬。',
     site_avatar: 'https://www.omegaxyz.com/wp-content/uploads/2020/01/AI-GIF.gif',
-    is_active: true
+    is_active: true,
+    rss:'#',
   }
+
 ];
 
 // 博客聚合平台
