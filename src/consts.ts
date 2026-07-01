@@ -43,6 +43,15 @@ export const FRIENDS_LINKS = [
     rss:'https://mobius.blog/feed/',
   },
 
+  {
+    site_name: '水拍石',
+    site_url: 'https://www.leitao.cn/',
+    site_description: '追寻更好的自己',
+    site_avatar: '#',
+    is_active: true,
+    rss:'https://www.leitao.cn/feed',
+  },
+
 {
     site_name: '素生',
     site_url: 'https://z.arlmy.me',
