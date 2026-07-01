@@ -4,11 +4,11 @@
 // 博客基本信息
 export const SITE_TITLE = '碎言';
 export const SITE_TITLE_EN = 'SuiYan';
-export const SITE_DESCRIPTION = '技术文章留给搜索和大模型，余下的留给懂的人——这里，残留着一个普通人的碎言。';
+export const SITE_DESCRIPTION = '技术文章留给搜索和大模型，余下的留给懂的人——这里，残留着一个普通人‘你杠就是你对’的碎言。';
 export const SITE_DESCRIPTION_EN = 'You see see you , This one day day di.';
 export const SITE_AUTHOR = 'J.sky';
-export const ABOUT_ME = '技术文章留给搜索和大模型，余下的留给懂的人——这里，残留着一个普通人的碎言。';
-export const META_DESCRIPTION = '技术文章留给搜索和大模型，余下的留给懂的人——这里，残留着一个普通人的碎言。';
+export const ABOUT_ME = '技术文章留给搜索和大模型，余下的留给懂的人——这里，残留着一个普通人‘你杠就是你对’的碎言。';
+export const META_DESCRIPTION = '技术文章留给搜索和大模型，余下的留给懂的人——这里，残留着一个普通人‘你杠就是你对’的碎言。';
 export const META_KEYWORDS = 'Python,JavaScript,程序员,Godot,编程,技术博客,学习笔记,碎言,哲学,人生,成长';
 export const PROFILE_IMAGE = 'assets/images/avatar.png';
 export const POSTS_PER_PAGE = 25;
