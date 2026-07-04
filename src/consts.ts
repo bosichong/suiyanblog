@@ -44,6 +44,15 @@ export const FRIENDS_LINKS = [
   },
 
   {
+    site_name: '太隐',
+    site_url: 'https://wangyurui.com/',
+    site_description: '一个人的思想发育史就是他的阅读史',
+    site_avatar: 'https://i.typlog.com/wangyr45/8227649757_5131645.png?x-oss-process=style/ss',
+    is_active: true,
+    rss:'https://www.wangyurui.top/feed.xml',
+  },
+
+  {
     site_name: '水拍石',
     site_url: 'https://www.leitao.cn/',
     site_description: '追寻更好的自己',
