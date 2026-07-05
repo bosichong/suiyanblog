@@ -1,7 +1,6 @@
 ---
 import { readFileSync, existsSync } from 'node:fs';
 import BaseHead from '../components/BaseHead.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { 
@@ -261,11 +260,6 @@ const linksWithRss = FRIENDS_LINKS
 	<body>
 		<Header />
 		<main id="main">
-			<Breadcrumb items={[
-				{ label: '首页', href: '/' },
-				{ label: '链接', href: '/links' }
-			]} />
-			
 			<section>
 				<article>
 					<hgroup>

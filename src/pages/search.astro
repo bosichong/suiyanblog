@@ -1,6 +1,5 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_TITLE } from '../consts';
@@ -163,11 +162,6 @@ import { Icon } from 'astro-icon/components';
 	<body>
 		<Header />
 		<main id="main">
-			<Breadcrumb items={[
-				{ label: '首页', href: '/' },
-				{ label: '搜索', href: '/search' }
-			]} />
-			
 			<section>
 				<div class="search-container">
 					<h1>搜索文章</h1>

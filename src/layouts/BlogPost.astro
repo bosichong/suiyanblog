@@ -2,7 +2,6 @@
 import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
@@ -262,11 +261,6 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 					{heroImage && <Image width={1020} height={510} src={heroImage} alt={heroImageAlt || ''} transition:name={`post-hero-${postId}`} />}
 				</div>
 				<div class="prose">
-					<Breadcrumb items={[
-						{ label: '首页', href: '/' },
-						{ label: '归档', href: '/archive' },
-						{ label: title, href: Astro.url.pathname }
-					]} />
 					<div class="title stage-1">
 						<h1 transition:name={`post-title-${postId}`}>{title}</h1>
 						<div class="meta">

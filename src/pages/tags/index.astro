@@ -1,7 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseHead from '../../components/BaseHead.astro';
-import Breadcrumb from '../../components/Breadcrumb.astro';
 import Footer from '../../components/Footer.astro';
 import Header from '../../components/Header.astro';
 import { Icon } from 'astro-icon/components';
@@ -111,10 +110,6 @@ const sortedTags = Object.entries(tagCounts)
 	<body>
 		<Header />
 		<main id="main">
-			<Breadcrumb items={[
-				{ label: '首页', href: '/' },
-				{ label: '标签', href: '/tags' }
-			]} />
 			<section>
 				<div class="tags-header">
 					<h1>所有标签</h1>

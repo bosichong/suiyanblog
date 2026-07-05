@@ -1,6 +1,5 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_TITLE } from '../consts';
@@ -94,11 +93,6 @@ const sponsorConfig = {
 	<body>
 		<Header />
 		<main>
-			<Breadcrumb items={[
-				{ label: '首页', href: '/' },
-				{ label: '赞赏支持' }
-			]} />
-			
 			<h1>{sponsorConfig.title}</h1>
 			
 			<div class="sponsor-intro">

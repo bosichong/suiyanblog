@@ -3,35 +3,13 @@ import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_AUTHOR, SITE_TITLE } from '../consts';
+import { SITE_DESCRIPTION, SITE_AUTHOR, SITE_TITLE, HOME_POSTS_COUNT } from '../consts';
 import { formatDateShort } from '../utils/date';
 
-// 获取所有博客文章
-const allPosts = (await getCollection('blog')).sort(
-	(a, b) => new Date(b.data.time).valueOf() - new Date(a.data.time).valueOf(),
-);
-
-// 按标签分类文章（取前10篇）
-const dailyPosts = allPosts
-	.filter(post => post.data.tags.includes('daily'))
-	.slice(0, 10);
-
-const technologyPosts = allPosts
-	.filter(post => post.data.tags.includes('technology'))
-	.slice(0, 10);
-
-
-
-// 获取每个标签下最新文章的发布时间
-const getLatestTime = (posts) => posts.length > 0 ? new Date(posts[0].data.time).valueOf() : 0;
-
-// 按最新文章时间排序（最新更新的标签排最前）
-const tagSections = [
-	{ name: '日常', posts: dailyPosts, tag: 'daily', latestTime: getLatestTime(dailyPosts), moreText: '更多日常...' },
-	{ name: '技术', posts: technologyPosts, tag: 'technology', latestTime: getLatestTime(technologyPosts), moreText: '更多技术...' },
-
-].filter(section => section.posts.length > 0)
-  .sort((a, b) => b.latestTime - a.latestTime);
+// 获取所有博客文章，按时间排序，取最新 N 篇
+const recentPosts = (await getCollection('blog'))
+	.sort((a, b) => new Date(b.data.time).valueOf() - new Date(a.data.time).valueOf())
+	.slice(0, HOME_POSTS_COUNT);
 ---
 
 <!doctype html>
@@ -42,7 +20,7 @@ const tagSections = [
 			main {
 				width: 720px;
 			}
-			
+
 			.hero {
 				width: 720px;
 				max-width: calc(100% - 2em);
@@ -91,81 +69,68 @@ const tagSections = [
 					font-size: 1.875rem;
 				}
 			}
-			
+
 			.category-section {
 				margin-bottom: 3rem;
 			}
-			
+
 			.view-more {
 				display: block;
 				margin-top: 1rem;
-				text-align: right;
+				text-align: center;
 				color: var(--accent);
 				text-decoration: none;
 				font-size: 0.95rem;
 				transition: color 0.2s ease;
 			}
-			
+
 			.view-more:hover {
 				color: var(--accent-dark);
 			}
-			
-			.post-list {
-				list-style: none;
-				padding: 0;
-				margin: 0;
-			}
-			
-			.post-list-grid {
-				display: grid;
-				grid-template-columns: 1fr auto;
-				gap: 1rem;
-				padding: 0.75rem 1.5rem;
+
+			.post-item {
+				display: flex;
 				align-items: center;
-				transition: background-color 0.2s ease;
-				border-bottom: 1px solid var(--border-color);
-			}
-			
-			.post-list-grid:last-child {
-				border-bottom: none;
-			}
-			
-			.post-list-grid:hover {
-				background-color: rgba(var(--gray), 5%);
-			}
-			
-			.post-list-grid a {
+				gap: 0.75rem;
 				text-decoration: none;
 				color: var(--text-color);
+				padding: 0.6rem 0;
+			}
+			.post-line {
+				flex: 1;
+				height: 1px;
+				background: var(--border-color);
+				transition: background 0.2s ease;
+			}
+			.post-item:hover .post-line {
+				background: var(--text);
+			}
+			.post-title {
 				font-size: 1.125rem;
-				transition: color 0.2s ease;
 				line-height: 1.5;
 				overflow: hidden;
 				text-overflow: ellipsis;
 				white-space: nowrap;
+				flex-shrink: 1;
+				min-width: 0;
 			}
-			
-			.post-list-grid a:hover {
-				color: var(--accent);
-			}
-			
-			.post-list-grid time {
-				color: var(--footer-text);
+			.post-date {
+				color: var(--text-muted);
 				font-size: 0.9rem;
 				font-weight: 500;
 				white-space: nowrap;
+				flex-shrink: 0;
+				transition: color 0.2s ease;
 			}
-			
+			.post-item:hover .post-date {
+				color: var(--text);
+			}
+
 			@media (max-width: 720px) {
-				.post-list-grid {
-					padding: 0.75rem 1rem;
-				}
-				
-				.post-list-grid a {
+				.post-title {
 					font-size: 1rem;
 				}
-				
-				.post-list-grid time {
+				.post-date {
 					font-size: 0.85rem;
 				}
 			}
@@ -183,23 +148,18 @@ const tagSections = [
 					<p class="hero-desc">{SITE_DESCRIPTION}</p>
 				</div>
 			</header>
-			{tagSections.map((section) => (
-				<section class="category-section">
-					<ul class="post-list stagger-children">
-						{section.posts.map((post) => (
-							<li class="post-list-grid">
-								<a href={`/blog/${post.id}`} transition:name={`post-title-${post.id}`}>
-									{post.data.title}
-								</a>
-								<time datetime={post.data.time}>
-									{formatDateShort(post.data.time)}
-								</time>
-							</li>
-						))}
-					</ul>
-					<a href={`/tags/${section.tag}`} class="view-more">{section.moreText}</a>
-				</section>
-			))}
+			<section class="category-section">
+				{recentPosts.map((post) => (
+					<a href={`/blog/${post.id}`} class="post-item" transition:name={`post-title-${post.id}`}>
+						<span class="post-title">{post.data.title}</span>
+						<div class="post-line"></div>
+						<time class="post-date" datetime={post.data.time}>
+							{formatDateShort(post.data.time)}
+						</time>
+					</a>
+				))}
+				<a href="/archive" class="view-more">更多文章...</a>
+			</section>
 		</main>
 		<Footer />
 	</body>

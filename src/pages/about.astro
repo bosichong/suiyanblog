@@ -1,6 +1,5 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
@@ -178,11 +177,6 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 	<body>
 		<Header />
 		<main id="main">
-			<Breadcrumb items={[
-				{ label: '首页', href: '/' },
-				{ label: '关于', href: '/about' }
-			]} />
-			
 			<h1>关于</h1>
 			
 			<article>
@@ -214,7 +208,7 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 				<section>
 					<h2>RSS订阅</h2>
 					<p>
-						<a href="/feed.xml" target="_blank" rel="noopener noreferrer">/feed.xml</a>
+						<a href="/feed.xml" target="_blank" rel="noopener noreferrer">http://www.suiyan.cc/feed.xml</a>
 					</p>
 				</section>
 
