@@ -453,34 +453,6 @@ button {
 	}
 }
 
-/* === 主题切换：圆形展开动画 ===
- * 规则必须放在 global.css（持久化样式表）里，
- * 不能用 JS 动态注入 <style>，否则 ClientRouter 视图过渡后会丢失，
- * 导致非首页的主题切换退化为渐变。 */
-.theme-transition-circle {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 0;
-	height: 0;
-	border-radius: 50%;
-	z-index: 9999;
-	pointer-events: none;
-	transform: translate(-50%, -50%);
-	transition:
-		width 500ms ease-in-out,
-		height 500ms ease-in-out;
-}
-
-.theme-transition-circle.removing {
-	transition: none !important;
-}
-
-/* 主题切换瞬间禁用 html 自身的过渡，避免与圆形动画叠加成渐变 */
-html.theme-switching {
-	transition: none !important;
-}
-
 .sr-only:not(:focus):not(:active) {
 	border: 0;
 	padding: 0;

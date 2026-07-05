@@ -8,80 +8,31 @@
 </button>
 
 <script is:inline>
-	// Theme toggle function - initialization is handled in BaseHead.astro
 	window.toggleTheme = function(event) {
 		const html = document.documentElement;
-		const currentTheme = html.getAttribute('data-theme');
-		const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-		
-		// Get button position for center calculation
-		const button = event.currentTarget;
-		const rect = button.getBoundingClientRect();
-		const x = rect.left + rect.width / 2;
-		const y = rect.top + rect.height / 2;
-		
-		// Calculate max radius to cover the screen
-		const left = x;
-		const top = y;
-		const right = window.innerWidth - left;
-		const bottom = window.innerHeight - top;
-		const maxRadius = Math.hypot(
-			Math.max(left, right),
-			Math.max(top, bottom)
-		);
-		
-		// Create transition circle
-		const circle = document.createElement('div');
-		circle.className = 'theme-transition-circle';
-		circle.style.left = x + 'px';
-		circle.style.top = y + 'px';
-		circle.style.background = newTheme === 'dark' ? '#171717' : '#f2f1ec';
-		document.body.appendChild(circle);
-		
-		// Force reflow
-		circle.offsetHeight;
-		
-		// Expand circle
-		circle.style.width = (maxRadius * 2) + 'px';
-		circle.style.height = (maxRadius * 2) + 'px';
+		const current = html.getAttribute('data-theme');
+		const next = current === 'dark' ? 'light' : 'dark';
 
-		// Suppress html-level transitions while the circle animates,
-		// so swapping data-theme is instant rather than a gradient fade.
-		html.classList.add('theme-switching');
-		
-		// Wait for animation to complete, then change theme
-		setTimeout(() => {
-			html.setAttribute('data-theme', newTheme);
-			localStorage.setItem('theme', newTheme);
+		html.setAttribute('data-theme', next);
+		localStorage.setItem('theme', next);
 
-			// Update aria-label for accessibility
-			const toggleButtons = document.querySelectorAll('.theme-toggle');
-			toggleButtons.forEach(button => {
-				button.setAttribute('aria-label', newTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
-			});
-
-			// Wait for theme to fully apply, then remove circle
-			setTimeout(() => {
-				circle.classList.add('removing');
-				circle.remove();
-				html.classList.remove('theme-switching');
-			}, 500);
-		}, 500);
+		const buttons = document.querySelectorAll('.theme-toggle');
+		buttons.forEach(btn => {
+			btn.setAttribute('aria-label', next === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+		});
 	};
 
-	// Set initial aria-labels on load AND after view-transition swap
 	function syncAriaLabels() {
-		const currentTheme = document.documentElement.getAttribute('data-theme');
-		const toggleButtons = document.querySelectorAll('.theme-toggle');
-		toggleButtons.forEach(button => {
-			button.setAttribute('aria-label', currentTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+		const current = document.documentElement.getAttribute('data-theme');
+		const buttons = document.querySelectorAll('.theme-toggle');
+		buttons.forEach(btn => {
+			btn.setAttribute('aria-label', current === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
 		});
 	}
 
 	syncAriaLabels();
 	document.addEventListener('astro:after-swap', syncAriaLabels);
 
-	// Listen for system theme changes (only if user hasn't set a preference)
 	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
 		if (!localStorage.getItem('theme')) {
 			document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
