@@ -21,22 +21,21 @@ if (!posts || posts.length === 0) {
 
 <section class="related-posts">
 	<h2>{title}</h2>
-	<ul class="stagger-children">
-		{posts.slice(0, 5).map((post) => (
-			<li>
-				<a href={`/blog/${post.id}`}>
-					<span class="post-title">{post.data.title}</span>
-					<time>{formatDateFull(post.data.time)}</time>
-				</a>
-			</li>
-		))}
-	</ul>
+	{
+		posts.slice(0, 5).map((post) => (
+			<a href={`/blog/${post.id}`} class="post-item">
+				<span class="post-title">{post.data.title}</span>
+				<div class="post-line"></div>
+				<time class="post-date">{formatDateFull(post.data.time)}</time>
+			</a>
+		))
+	}
 </section>
 
 <style>
 	.related-posts {
 		margin: 2rem 0;
-		padding: 1.5rem;
+		padding: 1.5rem 0;
 		background: transparent;
 		border: 1px solid var(--border);
 		border-radius: 12px;
@@ -44,61 +43,46 @@ if (!posts || posts.length === 0) {
 
 	.related-posts h2 {
 		margin: 0 0 1rem 0;
+		padding: 0 1.5rem;
 		font-size: 1.25rem;
-		color: rgb(var(--black));
+		color: var(--text);
 	}
 
-	.related-posts ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-	}
-
-	.related-posts li {
-		margin-bottom: 0.5rem;
-	}
-
-	.related-posts li:last-child {
-		margin-bottom: 0;
-	}
-
-	.related-posts a {
+	.post-item {
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
-		gap: 1rem;
-		padding: 0.625rem 0.875rem;
-		border-radius: 8px;
+		gap: 0.75rem;
+		padding: 0.6rem 1.5rem;
 		text-decoration: none;
 		color: var(--text-color);
-		transition: all 0.2s ease;
 	}
-
-	.related-posts a:hover {
-		background: var(--bg-soft);
-		color: var(--accent-dark);
-	}
-
-	.post-title {
+	.post-line {
 		flex: 1;
+		height: 1px;
+		background: var(--border-color);
+		transition: background 0.2s ease;
+	}
+	.post-item:hover .post-line {
+		background: var(--text);
+	}
+	.post-title {
+		font-size: 1.125rem;
+		line-height: 1.5;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
-		max-width: 70%;
-		text-decoration: none;
+		flex-shrink: 1;
+		min-width: 0;
 	}
-
-	.related-posts time {
+	.post-date {
+		color: var(--text-muted);
+		font-size: 0.9rem;
+		font-weight: 500;
+		white-space: nowrap;
 		flex-shrink: 0;
-		font-size: 0.85rem;
-		color: rgb(var(--gray));
+		transition: color 0.2s ease;
 	}
-
-	@media (max-width: 480px) {
-		.related-posts a {
-			flex-direction: column;
-			align-items: flex-start;
-			gap: 0.25rem;
-		}
+	.post-item:hover .post-date {
+		color: var(--text);
 	}
 </style>

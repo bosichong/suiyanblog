@@ -119,54 +119,42 @@ const lastUpdated = allPosts[0]?.data.time ? new Date(allPosts[0].data.time) : n
 				transform: rotate(180deg);
 			}
 			
-			details ul {
-				list-style: none;
-				padding: 0;
-				margin: 0;
-				border-top: 1px solid var(--border-color);
-			}
-			
-			details li {
-				border-bottom: 1px solid var(--border-color);
-			}
-			
-			details li:last-child {
-				border-bottom: none;
-			}
-			
-			.post-list-grid {
-				display: grid;
-				grid-template-columns: 1fr auto;
-				gap: 1rem;
-				padding: 1rem 2rem;
+			.post-item {
+				display: flex;
 				align-items: center;
-				transition: background-color 0.2s ease;
-			}
-			
-			details li:hover .post-list-grid {
-				background-color: rgba(var(--gray), 5%);
-			}
-			
-			.post-list-grid a {
+				gap: 0.75rem;
+				padding: 0.6rem 2rem;
 				text-decoration: none;
 				color: var(--text-color);
+			}
+			.post-line {
+				flex: 1;
+				height: 1px;
+				background: var(--border-color);
+				transition: background 0.2s ease;
+			}
+			.post-item:hover .post-line {
+				background: var(--text);
+			}
+			.post-title {
 				font-size: 1.125rem;
-				transition: color 0.2s ease;
 				line-height: 1.5;
 				overflow: hidden;
 				text-overflow: ellipsis;
 				white-space: nowrap;
+				flex-shrink: 1;
+				min-width: 0;
 			}
-			
-			.post-list-grid a:hover {
-				color: var(--accent);
-			}
-			
-			.post-list-grid time {
-				color: var(--footer-text);
+			.post-date {
+				color: var(--text-muted);
 				font-size: 0.9rem;
 				font-weight: 500;
 				white-space: nowrap;
+				flex-shrink: 0;
+				transition: color 0.2s ease;
+			}
+			.post-item:hover .post-date {
+				color: var(--text);
 			}
 			
 			.month-badge {
@@ -206,15 +194,13 @@ const lastUpdated = allPosts[0]?.data.time ? new Date(allPosts[0].data.time) : n
 					padding: 1rem 1.5rem;
 				}
 				
-				.post-list-grid {
-					padding: 0.75rem 1.5rem;
+				.post-item {
+					padding: 0.6rem 1.5rem;
 				}
-				
-				.post-list-grid a {
-					font-size: 0.95rem;
+				.post-title {
+					font-size: 1rem;
 				}
-				
-				.post-list-grid time {
+				.post-date {
 					font-size: 0.85rem;
 				}
 			}
@@ -239,20 +225,13 @@ const lastUpdated = allPosts[0]?.data.time ? new Date(allPosts[0].data.time) : n
 								<span class="post-count">{postsByMonth[month].length} 篇文章</span>
 							</span>
 						</summary>
-						<ul class="stagger-children">
-							{postsByMonth[month].map((post) => (
-								<li>
-									<div class="post-list-grid">
-										<a href={`/blog/${post.id}`} transition:name={`post-title-${post.id}`}>
-											{post.title}
-										</a>
-										<time datetime={post.time}>
-											{formatDateMedium(post.time)}
-										</time>
-									</div>
-								</li>
-							))}
-						</ul>
+						{postsByMonth[month].map((post) => (
+							<a href={`/blog/${post.id}`} class="post-item" transition:name={`post-title-${post.id}`}>
+								<span class="post-title">{post.title}</span>
+								<div class="post-line"></div>
+								<time class="post-date">{formatDateMedium(post.time)}</time>
+							</a>
+						))}
 					</details>
 				))}
 			</section>
