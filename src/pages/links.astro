@@ -3,6 +3,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import BackToTop from '../components/BackToTop.astro';
 import { 
 	FRIENDS_PAGE_TITLE, 
 	FRIENDS_PAGE_DESCRIPTION, 
@@ -357,5 +358,6 @@ const linksWithRss = FRIENDS_LINKS
 		<div class="animate-footer">
 			<Footer />
 		</div>
+		<BackToTop />
 	</body>
 </html>

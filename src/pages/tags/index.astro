@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/Footer.astro';
 import Header from '../../components/Header.astro';
+import BackToTop from '../../components/BackToTop.astro';
 import { Icon } from 'astro-icon/components';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 import { slugify } from '../../utils/slugify';
@@ -133,5 +134,6 @@ const sortedTags = Object.entries(tagCounts)
 			</section>
 		</main>
 		<Footer />
+		<BackToTop />
 	</body>
 </html>
