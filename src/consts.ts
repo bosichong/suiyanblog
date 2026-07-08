@@ -57,21 +57,21 @@ export const FRIENDS_LINKS = [
     site_name: '水拍石',
     site_url: 'https://www.leitao.cn/',
     site_description: '追寻更好的自己',
-    site_avatar: '#',
+    site_avatar: 'https://www.leitao.cn/wp-content/uploads/2026/06/cropped-水拍石logo-y-S-180x180.webp',
     is_active: true,
     rss:'https://www.leitao.cn/feed',
   },
 
-{
+  {
     site_name: '素生',
     site_url: 'https://z.arlmy.me',
     site_description: '误读人生，化人生活',
-    site_avatar: '#',
+    site_avatar: 'https://z.arlmy.me/apple-touch-icon.png',
     is_active: true,
     rss:'https://z.arlmy.me/atom.xml',
   },
 
-{
+  {
     site_name: '阮一峰的网络日志',
     site_url: 'https://www.ruanyifeng.com/blog',
     site_description: '这里记录每周值得分享的科技内容。',
@@ -84,7 +84,7 @@ export const FRIENDS_LINKS = [
     site_name: '优世界',
     site_url: 'https://usj.cc',
     site_description: '喜欢折腾博客、制作主题、分享前端技术的独立开发者。',
-    site_avatar: '#',
+    site_avatar: 'https://usj.cc/image/avatar/tx7.jpg',
     is_active: true,
     rss:'https://usj.cc/rss.xml',
   },
@@ -98,7 +98,7 @@ export const FRIENDS_LINKS = [
     rss:'https://www.tortorse.com/atom.xml',
   },
 
-{
+  {
     site_name: '二丫讲梵',
     site_url: 'https://wiki.eryajf.net',
     site_description: '💻学习📝记录🔗分享',
@@ -111,16 +111,16 @@ export const FRIENDS_LINKS = [
     site_name: '枫林灯语',
     site_url: 'https://blog.mfwt.top',
     site_description: '深山踏红叶，耳畔闻鹿鸣',
-    site_avatar: '#',
+    site_avatar: 'https://blog.mfwt.top/avatar.jpg',
     is_active: true,
     rss:'https://blog.mfwt.top/index.php/feed/',
   },
 
-{
+  {
     site_name: 'Obaby',
     site_url: 'https://zhongxiaojie.com',
     site_description: '黑客程序媛 / 逆向工程师 / 人工智能学徒 / 用爱发电的独立开发者',
-    site_avatar: 'https://zhongxiaojie.com/wp-content/uploads/2025/05/WechatIMG1530.jpg',
+    site_avatar: 'https://gg.lang.bi/avatar/d6ebc088df916bcc9e8b94a09f9b0f604e57be54b04bd520c6db2492740fc563?s=64&d=initials&r=pg&initials=ob',
     is_active: true,
     rss:'https://zhongxiaojie.com/feed/',
   },
@@ -129,12 +129,12 @@ export const FRIENDS_LINKS = [
     site_name: 'CC的数字花园',
     site_url: 'https://cyrus19.cc',
     site_description: 'CC的数字花园并不是传统意义上的博客，是我的精神在这个世界上的一片自留地。',
-    site_avatar: '#',
+    site_avatar: 'https://i0.wp.com/cyrus19.cc/wp-content/uploads/2024/08/cropped-BlackBackgroundLogo.png?fit=180%2C180&ssl=1',
     is_active: true,
     rss:'https://cyrus19.cc/feed',
   },
 
-{
+  {
     site_name: '孤斗',
     site_url: 'https://d-d.design',
     site_description: '很酷的博客，分享设计、前端、生活、读书、思考等内容。',
@@ -174,30 +174,30 @@ export const FRIENDS_LINKS = [
     site_name: '一派胡言',
     site_url: 'https://yipai.me',
     site_description: '一派胡言 – 如果你在纵容，就不要抱怨世道变坏。',
-    site_avatar: '#',
+    site_avatar: 'https://yipai.me/wp-content/uploads/2024/10/cropped-yipai-180x180.png',
     is_active: true,
     rss:'https://yipai.me/feed',
   },
 
-{
+  {
     site_name: '理论派',
     site_url: 'https://sliun.com/',
     site_description: '意识不止算法，心灵自有归途。',
-    site_avatar: '#',
+    site_avatar: 'https://bear-images.sfo2.cdn.digitaloceanspaces.com/lilun/vue-color-avatar.webp',
     is_active: true,
     rss:'https://sliun.com/feed/',
   },
 
-{
+  {
     site_name: '揆机',
     site_url: 'https://pathos.page/',
     site_description: '一个法哲学研究者的博客，记录了他的学术之路和社会观察',
-    site_avatar: '#',
+    site_avatar: 'https://pathos.page/images/icons/apple-touch-icon.png',
     is_active: true,
     rss:'https://pathos.page/feed.xml',
   },
 
-{
+  {
     site_name: '白熊阿丸的小屋',
     site_url: 'https://blog.bxaw.name',
     site_description: '在这里可以看到一个真实的我，我会在这里书写我的一切',
@@ -206,7 +206,7 @@ export const FRIENDS_LINKS = [
     rss:'https://blog.bxaw.name/feed/',
   },
 
-{
+  {
     site_name: 'Yihui Xie',
     site_url: 'https://yihui.org/cn',
     site_description: '一些书信。一些文章。',
@@ -219,12 +219,12 @@ export const FRIENDS_LINKS = [
     site_name: 'Owen的博客',
     site_url: 'https://www.owenyoung.com',
     site_description: '主要关注技术，读书，摘抄，杂谈，文章评论，工具分享，工作流，灵感，英文学习，注意力管理，深度工作等方向。',
-    site_avatar: '#',
+    site_avatar: 'https://www.owenyoung.com/apple-touch-icon.png?v=202606181025',
     is_active: true,
     rss:'https://www.owenyoung.com/feed',
   },
 
-{
+  {
     site_name: '映屿',
     site_url: 'https://www.glowisle.me',
     site_description: '关于互联网、书籍、生活琐事以及那些一闪而过的念头。',
@@ -264,7 +264,7 @@ export const FRIENDS_LINKS = [
     site_name: '图灵技术域',
     site_url: 'http://www.omegaxyz.com',
     site_description: '徐奕的专栏-机器学习、软件工程、计算机大佬。',
-    site_avatar: 'https://www.omegaxyz.com/wp-content/uploads/2020/01/AI-GIF.gif',
+    site_avatar: 'https://cdn.omegaxyz.com/2020/02/omegaxyz-logo-100.png',
     is_active: true,
     rss:'#',
   }

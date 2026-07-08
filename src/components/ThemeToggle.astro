@@ -62,6 +62,7 @@
 
 	.theme-toggle:hover .theme-icon {
 		filter: drop-shadow(0 0 6px #eab308);
+		animation: none;
 	}
 
 	.theme-toggle:focus {
@@ -69,9 +70,21 @@
 		outline-offset: 2px;
 	}
 
+	@keyframes bulbPulse {
+		0%, 100% {
+			color: var(--nav-text);
+			filter: none;
+		}
+		50% {
+			color: #eab308;
+			filter: drop-shadow(0 0 4px rgba(234, 179, 8, 0.4));
+		}
+	}
+
 	.theme-icon {
 		width: 1rem;
 		height: 1rem;
 		fill: currentColor;
+		animation: bulbPulse 3s ease-in-out infinite;
 	}
 </style>

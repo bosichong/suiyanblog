@@ -101,9 +101,17 @@ const recentPosts = (await getCollection('blog'))
 				flex: 1;
 				height: 1px;
 				background: var(--border-color);
-				transition: background 0.2s ease;
+				transition: background 1s ease;
 			}
-			.post-item:hover .post-line {
+			@keyframes lineWipe {
+				0% { transform: scaleX(1); }
+				25% { transform: scaleX(0); }
+				50% { transform: scaleX(0); }
+				100% { transform: scaleX(1); }
+			}
+			.post-line.line-anim {
+				animation: lineWipe 0.7s ease-in-out forwards;
+				transform-origin: left;
 				background: var(--text);
 			}
 			.post-title {
@@ -211,5 +219,28 @@ const recentPosts = (await getCollection('blog'))
 			<Footer />
 		</div>
 		<BackToTop />
+		<script>
+			document.addEventListener('mouseover', (e) => {
+				const item = e.target.closest('.category-section .post-item');
+				if (!item) return;
+				const line = item.querySelector('.post-line');
+				if (!line || line.dataset.animating === '1') return;
+				line.dataset.animating = '1';
+				line.classList.add('line-anim');
+			});
+			document.addEventListener('mouseout', (e) => {
+				const item = e.target.closest('.category-section .post-item');
+				if (!item) return;
+				const related = e.relatedTarget;
+				if (related && item.contains(related)) return;
+				const line = item.querySelector('.post-line');
+				if (line) delete line.dataset.animating;
+			});
+			document.addEventListener('animationend', (e) => {
+				if (e.animationName === 'lineWipe') {
+					e.target.classList.remove('line-anim');
+				}
+			});
+		</script>
 	</body>
 </html>

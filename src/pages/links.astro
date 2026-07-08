@@ -96,16 +96,18 @@ const linksWithRss = FRIENDS_LINKS
 				line-height: 1.6;
 			}
 			
-			.link-list {
+			.link-grid {
 				list-style: none;
 				padding: 0;
 				margin: 0;
 				display: grid;
-				gap: 1.5rem;
+				grid-template-columns: 1fr 1fr;
+				gap: 1rem;
 			}
 			
 			.link-card {
-				padding: 1.5rem;
+				position: relative;
+				padding: 1rem;
 				background: var(--header-bg);
 				border-radius: 12px;
 				box-shadow: 0 2px 8px rgba(var(--black), 5%);
@@ -114,42 +116,119 @@ const linksWithRss = FRIENDS_LINKS
 				overflow: hidden;
 			}
 			
+			@keyframes shimmer {
+				from { transform: translateX(-100%); }
+				to { transform: translateX(100%); }
+			}
+			
+			.link-card::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				transform: translateX(-100%);
+				background: linear-gradient(
+					105deg,
+					transparent 30%,
+					rgba(255, 255, 255, 0.18) 45%,
+					rgba(255, 255, 255, 0.3) 50%,
+					rgba(255, 255, 255, 0.18) 55%,
+					transparent 70%
+				);
+				pointer-events: none;
+			}
+			
+			.link-card.hover::after,
+			.link-card:hover::after {
+				animation: shimmer 0.7s ease;
+			}
+			
+			[data-theme="dark"] .link-card::after {
+				background: linear-gradient(
+					105deg,
+					transparent 30%,
+					rgba(255, 255, 255, 0.08) 45%,
+					rgba(255, 255, 255, 0.14) 50%,
+					rgba(255, 255, 255, 0.08) 55%,
+					transparent 70%
+				);
+			}
+			
 			.link-card:hover {
-				box-shadow: 0 4px 16px rgba(var(--black), 10%);
+				box-shadow: 0 4px 20px rgba(var(--black), 12%);
 				transform: translateY(-2px);
 				border-color: var(--border-color);
 			}
 			
-			.link-card-header {
+			.card-main {
 				display: flex;
-				align-items: center;
-				justify-content: space-between;
 				gap: 0.75rem;
-				margin-bottom: 0.75rem;
+				align-items: flex-start;
 			}
 			
-			.link-card-header a {
+			.card-avatar {
+				flex-shrink: 0;
+				width: 48px;
+				height: 48px;
+				border-radius: 50%;
+				overflow: hidden;
+				background: var(--border-color);
+				transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+			}
+			
+			.link-card:hover .card-avatar {
+				transform: translateY(-4px);
+			}
+			
+			.card-avatar img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				display: block;
+			}
+			
+			.avatar-placeholder {
+				width: 100%;
+				height: 100%;
 				display: flex;
 				align-items: center;
-				gap: 0.5rem;
+				justify-content: center;
+				background: var(--accent);
+				color: white;
 				font-size: 1.1rem;
+				font-weight: 600;
+			}
+			
+			.card-body {
+				flex: 1;
+				min-width: 0;
+			}
+			
+			.card-name {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.35rem;
+				font-size: 1rem;
 				font-weight: 600;
 				color: var(--heading-color);
 				text-decoration: none;
 				transition: color 0.2s ease;
 			}
 			
-			.link-card-header a:hover {
+			.card-name:hover {
 				color: var(--accent);
 			}
 			
-			.link-card-header .external-icon {
+			.card-name .external-icon {
 				color: var(--footer-text);
 				opacity: 0.7;
 				transition: opacity 0.2s ease;
+				flex-shrink: 0;
 			}
 			
-			.link-card-header a:hover .external-icon {
+			.card-name:hover .external-icon {
 				opacity: 1;
 				color: var(--accent);
 			}
@@ -157,73 +236,78 @@ const linksWithRss = FRIENDS_LINKS
 			.link-inactive {
 				display: inline-flex;
 				align-items: center;
-				padding: 0.25rem 0.75rem;
+				padding: 0.15rem 0.5rem;
 				background: rgba(var(--black), 5%);
 				border-radius: 4px;
-				font-size: 0.85rem;
+				font-size: 0.75rem;
 				color: var(--footer-text);
 				font-weight: 500;
 			}
 			
-			.link-card p {
+			.card-desc {
 				color: var(--footer-text);
-				font-size: 0.95rem;
-				line-height: 1.6;
-				margin: 0;
-			}
-			
-			.rss-section {
-				margin-top: 1rem;
-				padding-top: 0.75rem;
-				border-top: 1px solid var(--border-color);
+				font-size: 0.85rem;
+				line-height: 1.5;
+				margin: 0.15rem 0 0.5rem 0;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
 			}
 			
 			.rss-header {
 				display: flex;
 				align-items: center;
-				gap: 0.35rem;
-				margin-bottom: 0.75rem;
-				color: var(--footer-text);
-				font-size: 0.8rem;
-				font-weight: 500;
+				gap: 0.3rem;
+				margin-bottom: 0.25rem;
+				color: var(--text-muted);
+				font-size: 0.72rem;
 				opacity: 0.7;
 			}
-
+			
 			.rss-item {
 				display: flex;
 				align-items: center;
-				gap: 0.75rem;
-				padding: 0.4rem 0;
+				gap: 0.5rem;
+				padding: 0.15rem 0;
 				text-decoration: none;
+				opacity: 0.6;
+				transform: translateY(4px);
 			}
-			.rss-line {
-				flex: 1;
-				height: 1px;
-				background: var(--border-color);
-				transition: background 0.2s ease;
+			
+			@keyframes rssIn {
+				from { opacity: 0.6; transform: translateY(4px); }
+				to { opacity: 1; transform: translateY(0); }
 			}
-			.rss-item:hover .rss-line {
-				background: var(--text);
+			
+			.link-card:hover .rss-item,
+			.link-card.hover .rss-item {
+				animation: rssIn 0.3s ease forwards;
 			}
+			
 			.rss-link {
-				font-size: 0.9rem;
-				line-height: 1.5;
+				font-size: 0.8rem;
+				line-height: 1.4;
 				overflow: hidden;
 				text-overflow: ellipsis;
 				white-space: nowrap;
-				flex-shrink: 1;
+				flex: 1;
 				min-width: 0;
 				color: var(--text-color);
 				text-decoration: none;
+				transition: color 0.2s ease;
 			}
+			
+			.rss-item:hover .rss-link {
+				color: var(--accent);
+			}
+			
 			.rss-time {
 				color: var(--text-muted);
-				font-size: 0.8rem;
-				font-weight: 500;
-				white-space: nowrap;
+				font-size: 0.72rem;
 				flex-shrink: 0;
 				transition: color 0.2s ease;
 			}
+			
 			.rss-item:hover .rss-time {
 				color: var(--text);
 			}
@@ -240,6 +324,12 @@ const linksWithRss = FRIENDS_LINKS
 				);
 			}
 			
+			@media (max-width: 640px) {
+				.link-grid {
+					grid-template-columns: 1fr;
+				}
+			}
+			
 			@media (max-width: 720px) {
 				hgroup {
 					padding: 1.5rem;
@@ -250,23 +340,24 @@ const linksWithRss = FRIENDS_LINKS
 				}
 				
 				.link-card {
-					padding: 1.25rem;
+					padding: 0.875rem;
 				}
 				
-				.link-card-header a {
-					font-size: 1rem;
+				.card-avatar {
+					width: 40px;
+					height: 40px;
 				}
 				
-				.link-card p {
+				.card-name {
 					font-size: 0.9rem;
 				}
 				
-				.rss-link {
-					font-size: 0.85rem;
+				.card-desc {
+					font-size: 0.8rem;
 				}
 				
-				.rss-time {
-					font-size: 0.75rem;
+				.rss-link {
+					font-size: 0.78rem;
 				}
 			}
 		</style>
@@ -288,39 +379,52 @@ const linksWithRss = FRIENDS_LINKS
 						<h2>{FRIENDS_PAGE_TITLE}</h2>
 						<p>{FRIENDS_PAGE_DESCRIPTION}</p>
 					</hgroup>
-					<ul class="link-list stagger-children">
+					<ul class="link-grid stagger-children">
 						{linksWithRss.map(link => (
 							<li class="link-card">
-								<div class="link-card-header">
-									<a href={link.site_url} target="_blank" rel="noopener noreferrer">
-										{link.site_name}
-										{link.is_active !== false ? (
-											<svg class="external-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-												<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-												<polyline points="15 3 21 3 21 9" />
-												<line x1="10" y1="14" x2="21" y2="3" />
-											</svg>
+								<div class="card-main">
+									<div class="card-avatar">
+										{link.site_avatar && link.site_avatar !== '#' ? (
+											<img src={link.site_avatar} alt={link.site_name} loading="lazy" />
 										) : (
-											<span class="link-inactive">链接失效</span>
+											<span class="avatar-placeholder">{link.site_name[0]}</span>
 										)}
-									</a>
-								</div>
-								<p>{link.site_description}</p>
-								{link.rssArticles.length > 0 && (
-									<div class="rss-section">
-										<div class="rss-header">
-											<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93v-2.83Z"/></svg>
-											<span>最近文章</span>
-										</div>
-										{link.rssArticles.slice(0, 5).map(item => (
-											<a href={item.link} target="_blank" rel="noopener noreferrer" class="rss-item">
-												<span class="rss-link">{item.title}</span>
-												<div class="rss-line"></div>
-												<span class="rss-time">{formatMD(item.published_parsed)}</span>
-											</a>
-										))}
 									</div>
-								)}
+									<div class="card-body">
+										<a href={link.site_url} target="_blank" rel="noopener noreferrer" class="card-name">
+											{link.is_active !== false ? (
+												<>
+													{link.site_name}
+													<svg class="external-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+														<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+														<polyline points="15 3 21 3 21 9" />
+														<line x1="10" y1="14" x2="21" y2="3" />
+													</svg>
+												</>
+											) : (
+												<>
+													{link.site_name}
+													<span class="link-inactive">链接失效</span>
+												</>
+											)}
+										</a>
+										<p class="card-desc" title={link.site_description}>{link.site_description}</p>
+										{link.rssArticles.length > 0 && (
+											<div class="rss-section">
+												<div class="rss-header">
+													<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93v-2.83Z"/></svg>
+													<span>最近文章</span>
+												</div>
+												{link.rssArticles.slice(0, 3).map((item, idx) => (
+													<a href={item.link} target="_blank" rel="noopener noreferrer" class="rss-item" style={`animation-delay: ${idx * 0.05}s`}>
+														<span class="rss-link">{item.title}</span>
+														<span class="rss-time">{formatMD(item.published_parsed)}</span>
+													</a>
+												))}
+											</div>
+										)}
+									</div>
+								</div>
 							</li>
 						))}
 					</ul>
@@ -335,20 +439,22 @@ const linksWithRss = FRIENDS_LINKS
 						<h2>{BLOG_AGGREGATION_TITLE}</h2>
 						<p>{BLOG_AGGREGATION_DESCRIPTION}</p>
 					</hgroup>
-					<ul class="link-list stagger-children">
+					<ul class="link-grid stagger-children">
 						{BLOG_AGGREGATIONS.map(link => (
 							<li class="link-card">
-								<div class="link-card-header">
-									<a href={link.site_url} target="_blank" rel="noopener noreferrer">
-										{link.site_name}
-										<svg class="external-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-											<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-											<polyline points="15 3 21 3 21 9" />
-											<line x1="10" y1="14" x2="21" y2="3" />
-										</svg>
-									</a>
+								<div class="card-main">
+									<div class="card-body">
+										<a href={link.site_url} target="_blank" rel="noopener noreferrer" class="card-name">
+											{link.site_name}
+											<svg class="external-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+												<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+												<polyline points="15 3 21 3 21 9" />
+												<line x1="10" y1="14" x2="21" y2="3" />
+											</svg>
+										</a>
+										<p class="card-desc">{link.site_description}</p>
+									</div>
 								</div>
-								<p>{link.site_description}</p>
 							</li>
 						))}
 					</ul>
@@ -359,5 +465,32 @@ const linksWithRss = FRIENDS_LINKS
 			<Footer />
 		</div>
 		<BackToTop />
+
+		<script>
+			const grid = document.querySelector('.link-grid');
+			if (grid) {
+				let currentCard = null;
+				grid.addEventListener('mouseover', (e) => {
+					const card = e.target.closest('.link-card');
+					if (card && card !== currentCard) {
+						if (currentCard) currentCard.classList.remove('hover');
+						currentCard = card;
+						currentCard.classList.add('hover');
+					}
+				});
+				grid.addEventListener('mouseout', (e) => {
+					const card = e.target.closest('.link-card');
+					if (card && !card.contains(e.relatedTarget)) {
+						card.classList.remove('hover');
+						if (currentCard === card) currentCard = null;
+					}
+				});
+			}
+			window.addEventListener('pageshow', (e) => {
+				if (e.persisted) {
+					document.querySelectorAll('.link-card.hover').forEach(c => c.classList.remove('hover'));
+				}
+			});
+		</script>
 	</body>
 </html>
