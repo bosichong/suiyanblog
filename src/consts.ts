@@ -72,6 +72,15 @@ export const FRIENDS_LINKS = [
   },
 
 {
+    site_name: '阮一峰的网络日志',
+    site_url: 'https://www.ruanyifeng.com/blog',
+    site_description: '这里记录每周值得分享的科技内容。',
+    site_avatar: 'https://www.ruanyifeng.com/blog/images/person2_s.jpg',
+    is_active: true,
+    rss:'https://www.ruanyifeng.com/blog/atom.xml',
+  },
+
+{
     site_name: '优世界',
     site_url: 'https://usj.cc',
     site_description: '喜欢折腾博客、制作主题、分享前端技术的独立开发者。',
