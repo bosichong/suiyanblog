@@ -148,11 +148,8 @@ const recentPosts = (await getCollection('blog'))
 			body:not(.bfcache) .animate-header {
 				animation: suiyan-fade-up 500ms cubic-bezier(0.16, 1, 0.3, 1) 0ms both;
 			}
-			body:not(.bfcache) .animate-avatar {
-				animation: suiyan-scale-in 600ms cubic-bezier(0.16, 1, 0.3, 1) 200ms both;
-			}
-			body:not(.bfcache) .animate-hero-text {
-				animation: suiyan-fade-up 500ms cubic-bezier(0.16, 1, 0.3, 1) 400ms both;
+			body:not(.bfcache) .animate-hero {
+				animation: suiyan-fade-up 500ms cubic-bezier(0.16, 1, 0.3, 1) 200ms both;
 			}
 			body:not(.bfcache) .animate-posts {
 				animation: suiyan-fade-up 500ms cubic-bezier(0.16, 1, 0.3, 1) 600ms both;
@@ -175,11 +172,11 @@ const recentPosts = (await getCollection('blog'))
 			<Header />
 		</div>
 		<main id="main">
-			<header class="hero">
+			<header class="hero animate-hero">
 				<a href="/">
-					<img src="/assets/images/avatar.jpg" alt={SITE_AUTHOR} class="hero-avatar animate-avatar" loading="eager" fetchpriority="high" decoding="async" width="80" height="80" />
+					<img src="/assets/images/avatar.jpg" alt={SITE_AUTHOR} class="hero-avatar" loading="eager" fetchpriority="high" decoding="async" width="80" height="80" />
 				</a>
-				<div class="hero-text animate-hero-text">
+				<div class="hero-text">
 					<p class="hero-title">{SITE_TITLE}</p>
 					<p class="hero-desc">{SITE_DESCRIPTION}</p>
 				</div>
