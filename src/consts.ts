@@ -7,8 +7,8 @@ export const SITE_TITLE_EN = 'SuiYan';
 export const SITE_DESCRIPTION = '技术文章留给搜索和大模型，余下的留给懂的人——这里，残留着一个普通人‘你杠就是你对’的碎言。';
 export const SITE_DESCRIPTION_EN = 'You see see you , This one day day di.';
 export const SITE_AUTHOR = 'J.sky';
-export const ABOUT_ME = SITE_DESCRIPTION;
-export const META_DESCRIPTION = SITE_DESCRIPTION;
+export const ABOUT_ME = '技术文章留给搜索和大模型，余下的留给懂的人——这里，残留着一个普通人‘你杠就是你对’的碎言。';
+export const META_DESCRIPTION = '技术文章留给搜索和大模型，余下的留给懂的人——这里，残留着一个普通人‘你杠就是你对’的碎言。';
 export const META_KEYWORDS = 'Python,JavaScript,程序员,Godot,编程,技术博客,学习笔记,碎言,哲学,人生,成长';
 export const PROFILE_IMAGE = 'assets/images/avatar.png';
 export const POSTS_PER_PAGE = 25;
@@ -81,15 +81,6 @@ export const FRIENDS_LINKS = [
   },
 
 {
-    site_name: '阮一峰的网络日志',
-    site_url: 'https://www.ruanyifeng.com/blog',
-    site_description: '这里记录每周值得分享的科技内容。',
-    site_avatar: 'https://www.ruanyifeng.com/blog/images/person2_s.jpg',
-    is_active: true,
-    rss:'https://www.ruanyifeng.com/blog/atom.xml',
-  },
-
-  {
     site_name: '优世界',
     site_url: 'https://usj.cc',
     site_description: '喜欢折腾博客、制作主题、分享前端技术的独立开发者。',
