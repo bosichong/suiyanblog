@@ -6,9 +6,9 @@
 :root,
 :root[data-theme="light"] {
 	/* === 语义色：背景层 === */
-	--bg: #f2f1ec;
-	--bg-soft: #eae9e1;
-	--bg-overlay: #e0ddd3;
+	--bg: #f0f2f5;
+	--bg-soft: #e8ebf0;
+	--bg-overlay: #dce0e8;
 
 	/* === 语义色：文字层 === */
 	--text: #171717;
@@ -16,13 +16,13 @@
 	--text-muted: #888888;
 
 	/* === 语义色：边框层 === */
-	--border: #d8d4c8;
-	--border-soft: #e8e4d8;
+	--border: #c8cdd8;
+	--border-soft: #dce0e8;
 
-	/* === 语义色：强调（赭石） === */
-	--accent: #b5651d;
-	--accent-dark: #8b4513;
-	--accent-soft: #f5e6d3;
+	/* === 语义色：强调（靛蓝） === */
+	--accent: #4f46e5;
+	--accent-dark: #4338ca;
+	--accent-soft: #e0e7ff;
 
 	/* === 字体 === */
 	--font-display: "LXGW WenKai", "Noto Serif SC", "Songti SC", "STSong", serif;
@@ -48,9 +48,9 @@
 	--footer-text: var(--text-soft);
 	--black: 23, 23, 23;
 	--gray: 136, 136, 136;
-	--gray-light: 216, 212, 200;
+	--gray-light: 200, 205, 216;
 	--gray-dark: 23, 23, 23;
-	--gray-gradient: rgba(216, 212, 200, 50%), var(--bg);
+	--gray-gradient: rgba(200, 205, 216, 30%), var(--bg);
 	--box-shadow: var(--shadow-lg);
 }
 
@@ -155,7 +155,7 @@ strong,
 b {
 	font-weight: 700;
 	text-decoration: underline wavy;
-	text-decoration-color: rgba(181, 101, 29, 0.45);
+	text-decoration-color: rgba(79, 70, 229, 0.45);
 	text-underline-offset: 5px;
 }
 
@@ -163,7 +163,7 @@ b {
 a {
 	color: var(--accent);
 	text-decoration: underline;
-	text-decoration-color: rgba(181, 101, 29, 0.35);
+	text-decoration-color: rgba(79, 70, 229, 0.35);
 	text-decoration-thickness: 1px;
 	text-underline-offset: 3px;
 	transition:
