@@ -140,7 +140,7 @@ const commentsConfig = JSON.stringify(COMMENTS_CONFIG);
 	
 	// ---------- 加载 Giscus ----------
 	function loadGiscus(container: HTMLElement, config: any, postId: string) {
-		const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+		const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark_dimmed' : 'light';
 		
 		const giscusContainer = document.createElement('div');
 		giscusContainer.className = 'giscus';
@@ -194,7 +194,7 @@ const commentsConfig = JSON.stringify(COMMENTS_CONFIG);
 		const observer = new MutationObserver(() => {
 			if (!window.__commentState.giscusLoaded || window.__commentState.currentType !== 'giscus') return;
 			
-			const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+			const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark_dimmed' : 'light';
 			const content = document.getElementById('comment-content');
 			const iframe = content?.querySelector('iframe.giscus-frame');
 			if (iframe) {

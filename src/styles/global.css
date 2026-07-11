@@ -23,6 +23,7 @@
 	--accent: #4f46e5;
 	--accent-dark: #4338ca;
 	--accent-soft: #e0e7ff;
+	--accent-text: #ffffff;
 
 	/* === 字体 === */
 	--font-display: "LXGW WenKai", "Noto Serif SC", "Songti SC", "STSong", serif;
@@ -55,22 +56,23 @@
 }
 
 [data-theme="dark"] {
-	/* 暗色主题保留原绿色，自洽 */
-	--bg: #171717;
-	--bg-soft: #1e1e1e;
-	--bg-overlay: #242424;
+	/* 暗色主题 — 暖灰基调 */
+	--bg: #2d2d32;
+	--bg-soft: #404045;
+	--bg-overlay: #48484d;
 	--text: #f2f1ec;
 	--text-soft: #c0bfb8;
 	--text-muted: #888888;
-	--border: #333333;
-	--border-soft: #282828;
+	--border: #525258;
+	--border-soft: #444449;
 	--accent: #46e856;
-	--accent-dark: #044d0e;
-	--accent-soft: #1a2a1c;
+	--accent-dark: #c0bfb8;
+	--accent-soft: #444449;
+	--accent-text: #171717;
 
-	--shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-	--shadow-md: 0 2px 8px rgba(0, 0, 0, 0.4);
-	--shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+	--shadow-sm: none;
+	--shadow-md: none;
+	--shadow-lg: none;
 
 	--header-bg: var(--bg);
 	--nav-text: var(--text);
@@ -82,9 +84,9 @@
 	--footer-text: var(--text-soft);
 	--black: 242, 241, 236;
 	--gray: 136, 136, 136;
-	--gray-light: 51, 51, 51;
+	--gray-light: 82, 82, 88;
 	--gray-dark: 242, 241, 236;
-	--gray-gradient: rgba(30, 30, 30, 50%), var(--bg);
+	--gray-gradient: rgba(64, 64, 69, 50%), var(--bg);
 	--box-shadow: var(--shadow-lg);
 }
 
@@ -150,12 +152,12 @@ h6 {
 	color: var(--text-soft);
 }
 
-/* === strong: 暖色虚线 === */
+/* === strong: 强调波浪下划线 === */
 strong,
 b {
 	font-weight: 700;
 	text-decoration: underline wavy;
-	text-decoration-color: rgba(79, 70, 229, 0.45);
+	text-decoration-color: var(--accent-dark);
 	text-underline-offset: 5px;
 }
 
@@ -163,7 +165,7 @@ b {
 a {
 	color: var(--accent);
 	text-decoration: underline;
-	text-decoration-color: rgba(79, 70, 229, 0.35);
+	text-decoration-color: var(--accent);
 	text-decoration-thickness: 1px;
 	text-underline-offset: 3px;
 	transition:
@@ -245,7 +247,7 @@ th {
 }
 
 [data-theme="dark"] th {
-	background-color: rgba(var(--gray-light), 15%);
+	background-color: rgba(var(--gray-light), 25%);
 }
 img {
 	max-width: 100%;
