@@ -48,7 +48,7 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 
 			section {
 				padding: 2rem;
-				background: var(--header-bg);
+				background: var(--bg-soft);
 				border-radius: 12px;
 				box-shadow: 0 2px 8px rgba(var(--black), 5%);
 				transition: all 0.3s ease;
@@ -98,7 +98,7 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 
 			details {
 				margin: 0;
-				background: var(--bg);
+				background: var(--bg-soft);
 				border-radius: 12px;
 				box-shadow: 0 2px 8px rgba(var(--black), 5%);
 				overflow: hidden;
@@ -288,7 +288,7 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 							align-items: center;
 							padding: 0.75rem 1.5rem;
 							background: var(--accent);
-							color: white !important;
+							color: var(--accent-text) !important;
 							border-radius: 8px;
 							font-weight: 600;
 							transition: all 0.2s ease;
@@ -296,6 +296,9 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 						.sponsor-btn:hover {
 							background: var(--accent-dark);
 							transform: translateY(-2px);
+						}
+						[data-theme="dark"] .sponsor-btn:hover {
+							background: var(--accent);
 						}
 					</style>
 				</section>
@@ -320,10 +323,13 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 				</section>
 
 				<section class="animate-section">
-					<h2>网站构建优化日志</h2>
+					<h2>博客优化日志</h2>
 					<details>
-						<summary>网站构建优化日志</summary>
+						<summary>博客优化日志</summary>
 						<ul>
+							<li>
+								<strong>2026-07-11</strong> 亮色主题全面翻新：强调色从赭石黄（#b5651d）换为靛蓝（#4f46e5），背景从暖黄奶油色换为冷调灰白（#f0f2f5），整体更清爽干净。暗色主题重新定调：背景从纯黑（#171717）调亮为暖灰（#2d2d32），各层级颜色同步提亮，区块背景（--bg-soft）提至 #404045 与页面底色形成明显区分，移除阴影使界面更平整。修复多处配色问题：硬编码 RGBA 波浪下划线和链接下划线改用 CSS 变量自适应主题；暗色下白字绿底对比度不足 → 新增 --accent-text 变量统一治理；archive/tags 徽章暗色灰字修白；about 赞赏按钮 hover 暗色不可见修绿底；表格表头暗色透明度从 15% 提至 25%。Giscus 评论暗色主题从 dark 换为 dark_dimmed。卡片背景从 var(--header-bg) 统一改为 var(--bg-soft)，覆盖 links/about/blog/archive/search/tags/sponsors 等页面，暗色下卡片与页面底层次分明。
+							</li>
 							<li>
 								<strong>2026-07-08</strong> 首页交互增强：文章列表标题与日期之间的分隔线新增 hover 动效——鼠标悬停时线条从右向左缩没，再从左向右展开还原，动画完整播放后深色线在 1 秒内渐变回浅色；灯泡图标主题切换按钮添加慢速黄色呼吸闪烁动画；修复视图过渡（View Transitions）导航后 hover 动效丢失的问题，改用 <code>document</code> 事件委托确保页面跳转后仍正常工作。友链页面全面改版：采用双列卡片网格布局，每条友链展示头像、描述及最近3篇 RSS 文章；卡片 hover 增加 shimmer 扫光动效和文章列表错峰滑入效果。
 							</li>
