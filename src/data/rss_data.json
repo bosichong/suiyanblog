@@ -89,41 +89,35 @@
       "link": "https://www.leitao.cn/10362.html",
       "published": "Thu, 18 Jun 2026 11:17:46 +0000",
       "published_parsed": "2026-06-18"
-    },
-    {
-      "title": "情绪与自我激励",
-      "link": "https://www.leitao.cn/10324.html",
-      "published": "Sat, 13 Jun 2026 03:24:00 +0000",
-      "published_parsed": "2026-06-13"
     }
   ],
-  "https://wiki.eryajf.net": [
+  "https://www.ruanyifeng.com/blog": [
     {
-      "title": "学习周刊-总第271期-2026年第28周",
-      "link": "https://wiki.eryajf.net/pages/87cbc1/",
-      "published": "Fri, 10 Jul 2026 08:57:16 GMT",
+      "title": "科技爱好者周刊（第 403 期）：为什么 Dropbox 不成功",
+      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-403.html",
+      "published": "2026-07-10T00:05:31Z",
       "published_parsed": "2026-07-10"
     },
     {
-      "title": "学习周刊-总第270期-2026年第27周",
-      "link": "https://wiki.eryajf.net/pages/0ef849/",
-      "published": "Thu, 02 Jul 2026 21:48:38 GMT",
+      "title": "科技爱好者周刊（第 402 期）：我在智念 AI 的日子（小说）",
+      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-402.html",
+      "published": "2026-07-02T23:33:49Z",
       "published_parsed": "2026-07-02"
     },
     {
-      "title": "学习周刊-总第269期-2026年第26周",
-      "link": "https://wiki.eryajf.net/pages/0e5d11/",
-      "published": "Thu, 25 Jun 2026 21:55:37 GMT",
-      "published_parsed": "2026-06-25"
-    },
-    {
-      "title": "学习周刊-总第268期-2026年第25周",
-      "link": "https://wiki.eryajf.net/pages/14ae78/",
-      "published": "Thu, 18 Jun 2026 22:56:38 GMT",
-      "published_parsed": "2026-06-18"
+      "title": "Dario Amodei：AI 开源是伪命题",
+      "link": "http://www.ruanyifeng.com/blog/2026/06/anthropic.html",
+      "published": "2026-06-30T03:04:08Z",
+      "published_parsed": "2026-06-30"
     }
   ],
   "https://mobius.blog": [
+    {
+      "title": "谁他妈在乎你啊",
+      "link": "https://mobius.blog/25033.html",
+      "published": "Sat, 11 Jul 2026 01:00:00 +0000",
+      "published_parsed": "2026-07-11"
+    },
     {
       "title": "公开目标，可能会让人更难开始",
       "link": "https://mobius.blog/25028.html",
@@ -177,15 +171,42 @@
       "link": "https://mobius.blog/24892.html",
       "published": "Thu, 02 Jul 2026 01:00:00 +0000",
       "published_parsed": "2026-07-02"
-    },
-    {
-      "title": "男性正在遭遇的“系统性”歧视",
-      "link": "https://mobius.blog/24886.html",
-      "published": "Wed, 01 Jul 2026 01:00:00 +0000",
-      "published_parsed": "2026-07-01"
     }
   ],
+  "https://wiki.eryajf.net": [
+    {
+      "title": "学习周刊-总第271期-2026年第28周",
+      "link": "https://wiki.eryajf.net/pages/87cbc1/",
+      "published": "Fri, 10 Jul 2026 08:57:16 GMT",
+      "published_parsed": "2026-07-10"
+    },
+    {
+      "title": "学习周刊-总第270期-2026年第27周",
+      "link": "https://wiki.eryajf.net/pages/0ef849/",
+      "published": "Thu, 02 Jul 2026 21:48:38 GMT",
+      "published_parsed": "2026-07-02"
+    },
+    {
+      "title": "学习周刊-总第269期-2026年第26周",
+      "link": "https://wiki.eryajf.net/pages/0e5d11/",
+      "published": "Thu, 25 Jun 2026 21:55:37 GMT",
+      "published_parsed": "2026-06-25"
+    },
+    {
+      "title": "学习周刊-总第268期-2026年第25周",
+      "link": "https://wiki.eryajf.net/pages/14ae78/",
+      "published": "Thu, 18 Jun 2026 22:56:38 GMT",
+      "published_parsed": "2026-06-18"
+    }
+  ],
+  "https://wangyurui.com": [],
   "https://blog.mfwt.top": [
+    {
+      "title": "好像...是放暑假了吧？",
+      "link": "https://blog.mfwt.top/index.php/archives/1427/",
+      "published": "Sat, 11 Jul 2026 21:58:00 +0800",
+      "published_parsed": "2026-07-11"
+    },
     {
       "title": "我为小说忙：（一）TPNovel 的规划",
       "link": "https://blog.mfwt.top/index.php/archives/1414/",
@@ -223,13 +244,26 @@
       "published_parsed": "2026-06-15"
     }
   ],
-  "https://wangyurui.com": [],
   "https://www.tortorse.com": [
     {
       "title": "香港和台湾给我的两种感觉",
       "link": "https://www.tortorse.com/archives/hong-kong-taiwan-travel-impressions/",
       "published": "2026-06-25T13:32:50.000Z",
       "published_parsed": "2026-06-25"
+    }
+  ],
+  "https://www.vergilisme.com": [
+    {
+      "title": "第一节课",
+      "link": "https://www.vergilisme.com/index.php/2026/06/29/2400.html",
+      "published": "Mon, 29 Jun 2026 23:39:00 +0800",
+      "published_parsed": "2026-06-29"
+    },
+    {
+      "title": "欺诈式数据库连接",
+      "link": "https://www.vergilisme.com/index.php/2026/06/22/2398.html",
+      "published": "Mon, 22 Jun 2026 09:34:00 +0800",
+      "published_parsed": "2026-06-22"
     }
   ],
   "https://zhongxiaojie.com": [
@@ -288,20 +322,6 @@
       "published_parsed": "2026-06-15"
     }
   ],
-  "https://www.vergilisme.com": [
-    {
-      "title": "第一节课",
-      "link": "https://www.vergilisme.com/index.php/2026/06/29/2400.html",
-      "published": "Mon, 29 Jun 2026 23:39:00 +0800",
-      "published_parsed": "2026-06-29"
-    },
-    {
-      "title": "欺诈式数据库连接",
-      "link": "https://www.vergilisme.com/index.php/2026/06/22/2398.html",
-      "published": "Mon, 22 Jun 2026 09:34:00 +0800",
-      "published_parsed": "2026-06-22"
-    }
-  ],
   "https://www.tjsky.net": [
     {
       "title": "CloudCone的鬼才运营：提前 10 小时通知“机房物理搬迁”，还说不服不给退款？",
@@ -342,8 +362,14 @@
       "published_parsed": "2026-06-18"
     }
   ],
-  "https://yipai.me": [],
+  "https://sliun.com": [],
   "https://d-d.design": [
+    {
+      "title": "我把自己蒸馏了出来",
+      "link": "https://d-d.design/single/19657",
+      "published": "Sat, 11 Jul 2026 18:01:09 +0000",
+      "published_parsed": "2026-07-11"
+    },
     {
       "title": "超哥的自动铅笔",
       "link": "https://d-d.design/single/19600",
@@ -397,17 +423,14 @@
       "link": "https://d-d.design/single/19425",
       "published": "Sun, 21 Jun 2026 03:37:26 +0000",
       "published_parsed": "2026-06-21"
-    },
-    {
-      "title": "我曾经杀过人",
-      "link": "https://d-d.design/single/19419",
-      "published": "Sat, 20 Jun 2026 10:55:28 +0000",
-      "published_parsed": "2026-06-20"
     }
   ],
-  "https://sliun.com": [],
+  "https://yipai.me": [],
   "https://pathos.page": [],
+  "https://blog.bxaw.name": [],
   "https://yihui.org/cn": [],
+  "https://www.glowisle.me": [],
+  "https://www.scarsu.com": [],
   "https://usj.cc": [
     {
       "title": "国企面试，别太当回事儿",
@@ -470,10 +493,8 @@
       "published_parsed": "2026-06-15"
     }
   ],
-  "https://www.glowisle.me": [],
-  "https://blog.bxaw.name": [],
+  "https://www.demochen.com": [],
   "https://www.owenyoung.com": [],
-  "https://www.scarsu.com": [],
   "https://cyrus19.cc": [
     {
       "title": "日寄 三十三",
@@ -494,8 +515,31 @@
       "published_parsed": "2026-06-20"
     }
   ],
-  "https://www.demochen.com": [],
   "https://z.arlmy.me": [
+    {
+      "title": "摘：《李卓吾·两种阳明学》",
+      "link": "https://z.arlmy.me/posts/Note/Note_GouKouXiongSan_LiZhuoWuLiangZhongYangMingXue/",
+      "published": "2026-07-11T07:53:46.000Z",
+      "published_parsed": "2026-07-11"
+    },
+    {
+      "title": "摘：《我就要自由》",
+      "link": "https://z.arlmy.me/posts/Note/Note_ZuoYeYangZi_WoJiuYaoZiYou/",
+      "published": "2026-07-11T07:49:46.000Z",
+      "published_parsed": "2026-07-11"
+    },
+    {
+      "title": "摘：《见证疯狂》",
+      "link": "https://z.arlmy.me/posts/Note/Note_MikeJay_ThisWayMadnessLiesTheAsylumAndBeyond/",
+      "published": "2026-07-10T16:14:46.000Z",
+      "published_parsed": "2026-07-10"
+    },
+    {
+      "title": "摘：《微笑偷盗者》",
+      "link": "https://z.arlmy.me/posts/Note/Note_RichardBarnett_TheSmileStealersTheFineAndFoulArtOfDentistry/",
+      "published": "2026-07-08T16:14:46.000Z",
+      "published_parsed": "2026-07-08"
+    },
     {
       "title": "最近惦念 20260625",
       "link": "https://z.arlmy.me/posts/TILs/thoughts/20260625_Recently/",
@@ -574,6 +618,5 @@
       "published": "2026-06-14T08:18:27.000Z",
       "published_parsed": "2026-06-14"
     }
-  ],
-  "https://www.ruanyifeng.com/blog": []
+  ]
 }
