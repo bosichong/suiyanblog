@@ -17,8 +17,8 @@ import { Icon } from 'astro-icon/components';
 			</div>
 			<div class="internal-links" id="nav-menu">
 				{MENU_ITEMS.map(item => (
-					<HeaderLink href={item.href}>
-						{item.name}
+					<HeaderLink href={item.href} aria-label={item.name} title={item.name}>
+						<Icon name={`mdi:${item.icon}`} width={20} height={20} aria-hidden="true" />
 					</HeaderLink>
 				))}
 			</div>
@@ -95,9 +95,11 @@ import { Icon } from 'astro-icon/components';
 		text-decoration: none;
 	}
 	.internal-links a {
-		padding: 1em 0.5em 0.25em;
+		padding: 0.5em;
 		border-bottom: 2px solid transparent;
 		transition: color 0.3s ease;
+		display: inline-flex;
+		align-items: center;
 	}
 	.internal-links a.active {
 		border-bottom-color: var(--accent);
