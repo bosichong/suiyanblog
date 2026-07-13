@@ -274,6 +274,11 @@ export const FRIENDS_LINKS = [
 // 博客聚合平台
 export const BLOG_AGGREGATIONS = [
   {
+    site_name: '好站网',
+    site_url: 'https://haozhan.wang/',
+    site_description: '- HaoZhan.Wang | 发现好站，展示好站，收录优质中文独立网站'
+  },
+  {
     site_name: '十年之约',
     site_url: 'https://www.foreverblog.cn',
     site_description: '十年之约 · 一个人的寂寞，一群人的狂欢。'
