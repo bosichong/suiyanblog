@@ -184,7 +184,7 @@ button:focus-visible {
 
 p {
 	margin-bottom: 1.5em;
-	text-align: left;
+	text-align: justify;
 	text-indent: 2em;
 }
 .prose p {
