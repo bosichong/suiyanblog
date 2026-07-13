@@ -26,26 +26,6 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 				margin-bottom: 2rem;
 			}
 
-			body:not(.bfcache) .animate-header {
-				animation: suiyan-fade-up 500ms cubic-bezier(0.16, 1, 0.3, 1) 0ms both;
-			}
-			body:not(.bfcache) .animate-title {
-				animation: suiyan-fade-up 500ms cubic-bezier(0.16, 1, 0.3, 1) 200ms both;
-			}
-			body:not(.bfcache) .animate-section {
-				animation: suiyan-fade-up 500ms cubic-bezier(0.16, 1, 0.3, 1) both;
-			}
-			body:not(.bfcache) .animate-section:nth-child(1) { animation-delay: 400ms; }
-			body:not(.bfcache) .animate-section:nth-child(2) { animation-delay: 480ms; }
-			body:not(.bfcache) .animate-section:nth-child(3) { animation-delay: 560ms; }
-			body:not(.bfcache) .animate-section:nth-child(4) { animation-delay: 640ms; }
-			body:not(.bfcache) .animate-section:nth-child(5) { animation-delay: 720ms; }
-			body:not(.bfcache) .animate-section:nth-child(6) { animation-delay: 800ms; }
-			body:not(.bfcache) .animate-section:nth-child(7) { animation-delay: 880ms; }
-			body:not(.bfcache) .animate-footer {
-				animation: suiyan-fade-up 500ms cubic-bezier(0.16, 1, 0.3, 1) 960ms both;
-			}
-
 			section {
 				padding: 2rem;
 				background: var(--bg-soft);
@@ -222,21 +202,13 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 		</style>
 	</head>
 	<body>
-		<script is:inline>
-			(function () {
-				var bc = performance.getEntriesByType('navigation')[0]?.type === 'back_forward';
-				if (bc) document.body.classList.add('bfcache');
-			})();
-		</script>
-		<div class="animate-header">
-			<Header />
-		</div>
+		<Header />
 		<main id="main">
-			<h1 class="animate-title">About</h1>
+			<h1>About</h1>
 			
 			<article>
 
-				<section class="animate-section">
+				<section>
 					<h2>关于我</h2>
 
 					<p>技术文章留给搜索和大模型，余下的留给懂的人——这里，残留着一个普通人‘你杠就是你对’的碎言。</p>
@@ -246,7 +218,7 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 					<p>一个喜欢哲学、画画和写代码的<mark>程序猿</mark>老登。</p>
 				</section>
 
-				<section class="animate-section">
+				<section>
 					<h2>关于博客</h2>
 					<p>
 						碎言博客的名字，取自于碎言片语。很早就建立过很多杂七杂八的网站，具体页面底下有详细的博客更新日志。
@@ -260,14 +232,14 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 					</ul>
 				</section>
 
-				<section class="animate-section">
+				<section>
 					<h2>RSS订阅</h2>
 					<p>
 						<a href="/feed.xml" target="_blank" rel="noopener noreferrer">http://www.suiyan.cc/feed.xml</a>
 					</p>
 				</section>
 
-				<section class="animate-section">
+				<section>
 					<h2>赞赏我</h2>
 					<p>如果我的文章对你有帮助，欢迎请我喝杯咖啡 ☕</p>
 					<p>
@@ -307,7 +279,7 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 					</style>
 				</section>
 
-				<section class="animate-section">
+				<section>
 					<h2>AI 创作等级标识</h2>
 					<p>
 						本站所有文章均标注 AI 创作等级，让读者清楚了解每篇文章的创作方式。
@@ -321,12 +293,12 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 					</ul>
 				</section>
 
-				<section class="animate-section">
+				<section>
 					<h2>联系我</h2>
 					<p>方式很多，详见页面底部的sns图标，欢迎留言交流。</p>
 				</section>
 
-				<section class="animate-section">
+				<section>
 					<h2>博客优化日志</h2>
 					<details>
 						<summary>博客优化日志</summary>
@@ -461,9 +433,7 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 				</section>
 			</article>
 		</main>
-		<div class="animate-footer">
-			<Footer />
-		</div>
+		<Footer />
 		<BackToTop />
 	</body>
 </html>

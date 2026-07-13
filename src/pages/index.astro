@@ -144,65 +144,21 @@ const recentPosts = (await getCollection('blog'))
 				}
 			}
 
-			/* 动态加载动画：仅在非 bfcache 恢复时播放 */
-			body:not(.bfcache) .animate-header {
-				animation: suiyan-fade-up 500ms cubic-bezier(0.16, 1, 0.3, 1) 0ms both;
-			}
-			body:not(.bfcache) .animate-avatar {
-				animation: suiyan-scale-in 600ms cubic-bezier(0.16, 1, 0.3, 1) 200ms both;
-			}
-			body:not(.bfcache) .animate-hero-text {
-				animation: suiyan-fade-up 500ms cubic-bezier(0.16, 1, 0.3, 1) 400ms both;
-			}
-			body:not(.bfcache) .animate-posts {
-				animation: suiyan-fade-up 500ms cubic-bezier(0.16, 1, 0.3, 1) 600ms both;
-			}
-			body:not(.bfcache) .animate-footer {
-				animation: suiyan-fade-up 500ms cubic-bezier(0.16, 1, 0.3, 1) 800ms both;
-			}
-
-			/* 文章列表逐条动画 */
-			body:not(.bfcache) .post-item {
-				animation: suiyan-fade-up 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
-			}
-			body:not(.bfcache) .post-item:nth-child(1) { animation-delay: 700ms; }
-			body:not(.bfcache) .post-item:nth-child(2) { animation-delay: 750ms; }
-			body:not(.bfcache) .post-item:nth-child(3) { animation-delay: 800ms; }
-			body:not(.bfcache) .post-item:nth-child(4) { animation-delay: 850ms; }
-			body:not(.bfcache) .post-item:nth-child(5) { animation-delay: 900ms; }
-			body:not(.bfcache) .post-item:nth-child(6) { animation-delay: 950ms; }
-			body:not(.bfcache) .post-item:nth-child(7) { animation-delay: 1000ms; }
-			body:not(.bfcache) .post-item:nth-child(8) { animation-delay: 1050ms; }
-			body:not(.bfcache) .post-item:nth-child(9) { animation-delay: 1100ms; }
-			body:not(.bfcache) .post-item:nth-child(10) { animation-delay: 1150ms; }
-			body:not(.bfcache) .post-item:nth-child(n + 11) { animation-delay: 1200ms; }
-
-			body:not(.bfcache) .view-more {
-				animation: suiyan-fade-up 400ms cubic-bezier(0.16, 1, 0.3, 1) 1300ms both;
-			}
 		</style>
 	</head>
 	<body>
-		<script is:inline>
-			(function () {
-				var bc = performance.getEntriesByType('navigation')[0]?.type === 'back_forward';
-				if (bc) document.body.classList.add('bfcache');
-			})();
-		</script>
-		<div class="animate-header">
-			<Header />
-		</div>
+		<Header />
 		<main id="main">
 			<header class="hero">
 				<a href="/">
-					<img src="/assets/images/avatar.jpg" alt={SITE_AUTHOR} class="hero-avatar animate-avatar" loading="eager" fetchpriority="high" decoding="async" width="80" height="80" />
+					<img src="/assets/images/avatar.jpg" alt={SITE_AUTHOR} class="hero-avatar" loading="eager" fetchpriority="high" decoding="async" width="80" height="80" />
 				</a>
-				<div class="hero-text animate-hero-text">
+				<div class="hero-text">
 					<p class="hero-title">{SITE_TITLE}</p>
 					<p class="hero-desc">{SITE_DESCRIPTION}</p>
 				</div>
 			</header>
-			<section class="category-section animate-posts">
+			<section class="category-section">
 				{recentPosts.map((post) => (
 					<a href={`/blog/${post.id}`} class="post-item" transition:name={`post-title-${post.id}`}>
 						<span class="post-title">{post.data.title}</span>
@@ -215,9 +171,7 @@ const recentPosts = (await getCollection('blog'))
 				<a href="/archive" class="view-more">更多文章...</a>
 			</section>
 		</main>
-		<div class="animate-footer">
-			<Footer />
-		</div>
+		<Footer />
 		<BackToTop />
 		<script>
 			document.addEventListener('mouseover', (e) => {

@@ -265,11 +265,11 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 		<Header />
 		<main id="main">
 			<article>
-				<div class="hero-image stage-1">
+				<div class="hero-image">
 					{heroImage && <Image width={1020} height={510} src={heroImage} alt={heroImageAlt || ''} transition:name={`post-hero-${postId}`} />}
 				</div>
 				<div class="prose">
-					<div class="title stage-1">
+					<div class="title">
 						<h1 transition:name={`post-title-${postId}`}>{title}</h1>
 						<div class="meta">
 							<span class="meta-item">
@@ -299,19 +299,15 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 							</div>
 						)}
 					</div>
-					<div class="article-body stage-2">
+					<div class="article-body">
 						<slot />
 					</div>
 					<hr aria-hidden="true" />
-					<div class="stage-3">
-						<TagList tags={tags} showLabel={true} />
-					</div>
+					<TagList tags={tags} showLabel={true} />
 
-					<div class="stage-3-fast">
-						<PostActions postId={postId || ''} postPath={`/blog/${postId}`} />
-					</div>
+					<PostActions postId={postId || ''} postPath={`/blog/${postId}`} />
 
-					<nav class="post-navigation stage-3-fast">
+					<nav class="post-navigation">
 						{prevPost && (
 										<a href={`/blog/${prevPost.id}`} class="prev" aria-label={`上一篇：${prevPost.data.title}`}>
 											<span class="nav-label">上一篇</span>
