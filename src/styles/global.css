@@ -19,11 +19,11 @@
 	--border: #cecac4;
 	--border-soft: #dedad4;
 
-	/* === 语义色：强调（靛蓝） === */
-	--accent: #4f46e5;
-	--accent-dark: #4338ca;
-	--accent-soft: #e0e7ff;
-	--accent-text: #ffffff;
+	/* === 语义色：强调（暖栗色） === */
+	--accent: #7a503a;
+	--accent-dark: #5a3826;
+	--accent-soft: #e8d9cc;
+	--accent-text: #f0ece6;
 
 	/* === 字体 === */
 	--font-display: "Noto Serif SC", "LXGW WenKai", "Songti SC", "STSong", serif;
@@ -153,18 +153,7 @@ h6 {
 	color: var(--text-soft);
 }
 
-/* === strong: 强调波浪下划线 === */
-strong,
-b {
-	font-weight: 700;
-	text-decoration: underline wavy;
-	text-decoration-color: var(--accent-dark);
-	text-underline-offset: 5px;
-}
-[data-theme="dark"] strong,
-[data-theme="dark"] b {
-	text-decoration-color: var(--accent);
-}
+/* === strong：默认浏览器样式，文章内由 .prose 控制 === */
 
 /* === 链接：核心交互升级 === */
 a {
