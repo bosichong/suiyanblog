@@ -292,7 +292,7 @@ blockquote {
 	font-style: italic;
 }
 
-/* === hr：三星号，古典分节符 === */
+/* === hr：菱形分节符 === */
 hr {
 	border: none;
 	text-align: center;
@@ -300,10 +300,12 @@ hr {
 	height: auto;
 }
 hr::before {
-	content: "⁂";
+	content: "◇ ◇ ◇";
 	display: inline-block;
 	color: var(--text-muted);
-	font-size: 1.1rem;
+	letter-spacing: 0.8em;
+	font-size: 0.6rem;
+	padding-left: 0.8em;
 }
 
 @media (max-width: 720px) {
