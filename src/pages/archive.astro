@@ -227,7 +227,7 @@ const lastUpdated = allPosts[0]?.data.time ? new Date(allPosts[0].data.time) : n
 							</span>
 						</summary>
 						{postsByMonth[month].map((post) => (
-							<a href={`/blog/${post.id}`} class="post-item" transition:name={`post-title-${post.id}`}>
+							<a href={`/blog/${post.id}`} class="post-item" >
 								<span class="post-title">{post.title}</span>
 								<div class="post-line"></div>
 								<time class="post-date">{formatDateMedium(post.time)}</time>

@@ -266,11 +266,11 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 		<main id="main">
 			<article>
 				<div class="hero-image">
-					{heroImage && <Image width={1020} height={510} src={heroImage} alt={heroImageAlt || ''} transition:name={`post-hero-${postId}`} />}
+					{heroImage && <Image width={1020} height={510} src={heroImage} alt={heroImageAlt || ''} />}
 				</div>
 				<div class="prose">
 					<div class="title">
-						<h1 transition:name={`post-title-${postId}`}>{title}</h1>
+						<h1>{title}</h1>
 						<div class="meta">
 							<span class="meta-item">
 								<Icon name="mdi:calendar" width={18} height={18} aria-hidden="true" />

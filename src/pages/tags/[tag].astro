@@ -140,7 +140,7 @@ const { posts, tagName } = Astro.props;
 				<div class="post-list">
 					{
 					   posts.map((post) => (
-						   <a href={`/blog/${post.id}`} class="post-item" transition:name={`post-title-${post.id}`}>
+						   <a href={`/blog/${post.id}`} class="post-item" >
 							   <span class="post-title">{post.data.title}</span>
 							   <div class="post-line"></div>
 							   <time class="post-date"><FormattedDate date={post.data.time} /></time>

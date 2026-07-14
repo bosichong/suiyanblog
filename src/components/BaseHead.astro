@@ -1,7 +1,6 @@
 ---
 import { SITE_TITLE } from '../consts';
 import { Font } from 'astro:assets';
-import { ClientRouter } from 'astro:transitions';
 import fs from 'node:fs';
 
 const globalCss = fs.readFileSync('src/styles/global.css', 'utf-8');
@@ -31,8 +30,6 @@ const { title, description, image } = Astro.props;
 <meta name="generator" content={Astro.generator} />
 
 <style set:html={globalCss}></style>
-
-<ClientRouter />
 
 <!-- Fonts -->
 <Font cssVariable="--font-atkinson" preload />
@@ -86,7 +83,7 @@ const { title, description, image } = Astro.props;
 		// 首次加载：立即应用，避免闪烁
 		window.__applyTheme();
 
-		// 视图过渡后：重新应用（ClientRouter 会替换 <html> 的 data-theme）
+		// 每次页面加载都会执行，确保主题正确应用
 		document.addEventListener('astro:after-swap', window.__applyTheme);
 	})();
 </script>
