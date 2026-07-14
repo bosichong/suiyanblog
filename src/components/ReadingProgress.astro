@@ -22,17 +22,22 @@
 </style>
 
 <script>
+	let cachedDocHeight = 0;
+
 	function updateProgress() {
 		const el = document.getElementById('reading-progress');
 		if (!el) return;
-		const scrollTop = window.scrollY;
-		const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-		const percent = docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0;
+		const percent = cachedDocHeight > 0 ? Math.min(100, (window.scrollY / cachedDocHeight) * 100) : 0;
 		el.style.width = percent + '%';
 	}
 
+	function recalculate() {
+		cachedDocHeight = document.documentElement.scrollHeight - window.innerHeight;
+		updateProgress();
+	}
+
 	window.addEventListener('scroll', updateProgress, { passive: true });
-	window.addEventListener('resize', updateProgress);
-	document.addEventListener('astro:after-swap', updateProgress);
-	updateProgress();
+	window.addEventListener('resize', recalculate, { passive: true });
+	document.addEventListener('astro:after-swap', recalculate);
+	recalculate();
 </script>
