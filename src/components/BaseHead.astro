@@ -1,10 +1,10 @@
 ---
-// Import the global.css file here so that it is included on
-// all pages through the use of the <BaseHead /> component.
-import '../styles/global.css';
 import { SITE_TITLE } from '../consts';
 import { Font } from 'astro:assets';
 import { ClientRouter } from 'astro:transitions';
+import fs from 'node:fs';
+
+const globalCss = fs.readFileSync('src/styles/global.css', 'utf-8');
 
 interface Props {
 	title: string;
@@ -29,6 +29,8 @@ const { title, description, image } = Astro.props;
 	href={new URL('rss.xml', Astro.site)}
 />
 <meta name="generator" content={Astro.generator} />
+
+<style is:inline>{globalCss}</style>
 
 <ClientRouter />
 
