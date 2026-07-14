@@ -26,9 +26,9 @@
 	--accent-text: #f0ece6;
 
 	/* === 字体 === */
-	--font-display: "Noto Serif SC", "LXGW WenKai", "Songti SC", "STSong", serif;
+	--font-display: "LXGW WenKai", "Noto Serif SC", "Songti SC", "STSong", serif;
 	--font-body:
-		"Noto Serif SC", "LXGW WenKai", var(--font-atkinson), "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+		var(--font-atkinson), "LXGW WenKai", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
 	--font-mono:
 		var(--font-atkinson-mono), "LXGW WenKai Mono", "Noto Sans Mono CJK SC", "Source Code Pro", Consolas,
 		monospace;
