@@ -429,9 +429,9 @@ export const PROJECTS = [
     name: 'Matrix',
     description: '黑客帝国矩阵字符雨 JavaScript 代码生成器，支持自定义字符、颜色、速度、密度等参数，生成炫酷的 Matrix 风格动画效果。',
     repoUrls: [
-      { label: 'GitHub', url: 'https://www.suiyan.cc/matrix/index.html' },
+      { label: 'GitHub', url: 'https://github.com/bosichong/Matrix' },
     ],
-    demoUrl: 'https://suiyan.cc/Matrix/',
+    demoUrl: 'https://www.suiyan.cc/matrix/index.html',
     techStack: ['JavaScript', 'Vue.js'],
     relatedPosts: ['20230607211438', '20230612091630', '77'],
   },
@@ -464,6 +464,16 @@ export const PROJECTS = [
     demoUrl: 'http://www.17python.com',
     techStack: ['Python', 'Django', 'SQLite'],
     relatedPosts: ['4'],
+  },
+  {
+    name: 'WordTest',
+    description: '基于 Django 构建的小学生英文单词背写检测考试系统。支持自定义题库、在线考试、成绩记录、错题分析等功能，帮助孩子掌握单词拼写。',
+    repoUrls: [
+      { label: 'GitHub', url: 'https://github.com/bosichong/WordTest' },
+      { label: 'Gitee', url: 'https://gitee.com/J_Sky/WordTest' },
+    ],
+    techStack: ['Python', 'Django'],
+    relatedPosts: ['103'],
   },
 ];
 
