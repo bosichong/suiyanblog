@@ -4,23 +4,23 @@
 // 博客基本信息
 export const SITE_TITLE = '碎言';
 export const SITE_TITLE_EN = 'SuiYan';
-export const SITE_DESCRIPTION = '技术文章留给搜索和大模型，余下的留给懂的人——这里，残留着一个普通人‘你杠就是你对’的碎言。';
+export const SITE_DESCRIPTION = '几时归去，作个闲人。对一张琴，一壶酒，一溪云。';
 export const SITE_DESCRIPTION_EN = 'You see see you , This one day day di.';
 export const SITE_AUTHOR = 'J.sky';
-export const ABOUT_ME = '技术文章留给搜索和大模型，余下的留给懂的人——这里，残留着一个普通人‘你杠就是你对’的碎言。';
-export const META_DESCRIPTION = '技术文章留给搜索和大模型，余下的留给懂的人——这里，残留着一个普通人‘你杠就是你对’的碎言。';
+export const ABOUT_ME = SITE_DESCRIPTION;
+export const META_DESCRIPTION = SITE_DESCRIPTION;
 export const META_KEYWORDS = 'Python,JavaScript,程序员,Godot,编程,技术博客,学习笔记,碎言,哲学,人生,成长';
 export const PROFILE_IMAGE = 'assets/images/avatar.png';
 export const POSTS_PER_PAGE = 25;
 export const HOME_POSTS_COUNT = 16;
 
 // 页面标题和描述
-export const THOUGHTS_PAGE_TITLE = '片语';
-export const THOUGHTS_PAGE_DESCRIPTION = '碎言博客的片语，记录日常的短小想法和瞬间感悟。';
 export const FRIENDS_PAGE_TITLE = 'Links';
 export const FRIENDS_PAGE_DESCRIPTION = '这里存放了我常去的一些独立博客的链接以及这些博客的最新RSS文章(如果你不希望自己的博客和文章在这里展示，请联系我删除)，这里不是友情链接展示，也不是邻居的的列表，就我个人而言，这些博客都是我喜欢的、能让我思考、我认为对我有价值的博客，欢迎访问。';
 export const BLOG_AGGREGATION_TITLE = '博客聚合';
 export const BLOG_AGGREGATION_DESCRIPTION = '一些优秀的博客聚合平台，可以发现更多有趣的独立博客。';
+export const PROJECTS_PAGE_TITLE = 'Projects';
+export const PROJECTS_PAGE_DESCRIPTION = '这里收录了我的一些开源项目，涵盖 Python、JavaScript、Godot 等不同技术栈。';
 
 // 导航菜单项
 export const MENU_ITEMS = [
@@ -29,6 +29,7 @@ export const MENU_ITEMS = [
   // { name: '搜索', href: '/search', icon: 'magnify' },
   // { name: '标签', href: '/tags', icon: 'tag' },
   { name: 'Links', href: '/links', icon: 'link-variant' },
+  { name: 'Projects', href: '/projects', icon: 'folder-open' },
   { name: 'About', href: '/about', icon: 'information-outline' },
 ];
 
@@ -313,6 +314,157 @@ export const BLOG_AGGREGATIONS = [
     site_url: 'https://bo.ke/',
     site_description: '发现值得反复阅读的独立博客'
   }
+];
+
+// 开源项目
+export const PROJECTS = [
+  {
+    name: 'PrimarySchoolMathematics',
+    description: '孩子上小学一年级了，加减乘除的口算就要开始练习了，利用Python开发了一套自动生成小学生口算题的小应用。支持设置各算数项和结果的取值范围、多步运算符号、生成求结果或求算数项的算式，最多支持3步算式题。',
+    repoUrls: [
+      { label: 'GitHub', url: 'https://github.com/bosichong/PrimarySchoolMathematics' },
+      { label: 'Gitee', url: 'https://gitee.com/J_Sky/PrimarySchoolMathematics' },
+    ],
+    demoUrl: 'https://www.suiyan.cc/demo/psm',
+    techStack: ['Python', 'JavaScript', 'Vue.js'],
+    relatedPosts: ['83', '101', '20241107085752', '20201202155245'],
+  },
+  {
+    name: 'BabyLog',
+    description: '岁月如风，唯有此忆。一款用来记录孩子成长过程的日记应用，那年今天、全文搜索、身高体重图表展示，支持多个宝贝和多位家长共同记录。前后端分离架构，已维护12年。',
+    repoUrls: [
+      { label: 'GitHub', url: 'https://github.com/bosichong/BabyLog' },
+      { label: 'Gitee', url: 'https://gitee.com/J_Sky/BabyLog' },
+    ],
+    techStack: ['JavaScript', 'Express.js', 'Next.js', 'SQLite', 'Vue.js'],
+    relatedPosts: ['20250302060242'],
+  },
+  {
+    name: 'suiyanblog',
+    description: '基于 Astro 构建的个人博客系统，支持 Markdown 写作、RSS 订阅、标签分类、全文搜索、评论系统、多主题切换等功能。当前你所看到的网站就是这个项目的产物。',
+    repoUrls: [
+      { label: 'GitHub', url: 'https://github.com/bosichong/suiyanblog' },
+      { label: 'Gitee', url: 'https://gitee.com/J_Sky/suiyan' },
+    ],
+    demoUrl: 'https://www.suiyan.cc',
+    techStack: ['Astro', 'TypeScript', 'Tailwind CSS'],
+    relatedPosts: ['20260312073320', '20241016221206', '20240729222957'],
+  },
+  {
+    name: 'python_rss_subscription',
+    description: '使用 Python 结合 feedparser 模块编写的终端私人 RSS 订阅程序。支持多源订阅、文章聚合展示、终端彩色输出，轻量简洁，适合命令行爱好者。',
+    repoUrls: [
+      { label: 'GitHub', url: 'https://github.com/bosichong/python_rss_subscription' },
+    ],
+    techStack: ['Python'],
+    relatedPosts: ['20260107012506', '20230729151214', '20260113104932'],
+  },
+  {
+    name: 'PyKeyBoardFairy',
+    description: 'Python 编写的简单版键盘精灵，可以模拟键盘和鼠标操作，替代游戏中的卡键盘和鼠标宏。轻量易用，适合需要自动化按键操作的场景。',
+    repoUrls: [
+      { label: 'GitHub', url: 'https://github.com/bosichong/PyKeyBoardFairy' },
+    ],
+    techStack: ['Python'],
+    relatedPosts: ['20210521155450', '20260113104932'],
+  },
+  {
+    name: 'flash-thoughts',
+    description: '随手记录灵感闪念，像备忘录一样简单，像日记一样有序。一个 OpenClaw 技能，支持语音输入，快速捕捉稍纵即逝的想法。',
+    repoUrls: [
+      { label: 'GitHub', url: 'https://github.com/bosichong/flash-thoughts' },
+    ],
+    techStack: ['Python'],
+    relatedPosts: ['20260320113900'],
+  },
+  {
+    name: 'edge-tts_tk_gui',
+    description: '基于 Microsoft Edge TTS API 的图形化文字转语音工具，使用 Python 和 Tkinter 开发。支持多种语音和音色选择、批量文本转语音、自定义语速和音调等参数。',
+    repoUrls: [
+      { label: 'GitHub', url: 'https://github.com/bosichong/edge-tts_tk_gui' },
+    ],
+    techStack: ['Python'],
+    relatedPosts: ['20260226080637'],
+  },
+  {
+    name: 'Godot_tutorial',
+    description: 'Godot 4 实用视频教程中文版的配套代码仓库，涵盖 GDScript、信号系统、碰撞检测、瓦片地图、补间动画等核心知识点，适合新手入门和进阶学习。',
+    repoUrls: [
+      { label: 'GitHub', url: 'https://github.com/bosichong/Godot_tutorial' },
+      { label: 'Gitee', url: 'https://gitee.com/J_Sky/Godot_tutorial' },
+    ],
+    demoUrl: 'https://www.bilibili.com/video/BV1cmqvBZEW4',
+    techStack: ['GDScript'],
+    relatedPosts: ['20260118111831', '20251230122510', '20251114010459', '20251201013459', '20251203012735'],
+  },
+  {
+    name: 'PyDirectoryComparison',
+    description: '基于 Python、Tkinter 构建的可视化目录文件同步工具，支持双向同步、文件比较、预览模式、智能冲突检测等功能。适用于照片备份、文档同步、数据迁移等场景。',
+    repoUrls: [
+      { label: 'GitHub', url: 'https://github.com/bosichong/PyDirectoryComparison' },
+      { label: 'Gitee', url: 'https://gitee.com/J_Sky/PyDirectoryComparison' },
+    ],
+    techStack: ['Python'],
+    relatedPosts: ['49', '20260120142316'],
+  },
+  {
+    name: 'pte_test',
+    description: '化学元素周期表测试应用，基于 Vite + React + TypeScript 构建。包含全部118个化学元素，支持中英文双向测试，随机出题，实时反馈答题结果并统计正确率。',
+    repoUrls: [
+      { label: 'GitHub', url: 'https://github.com/bosichong/pte_test' },
+    ],
+    techStack: ['TypeScript', 'React', 'Vite'],
+    relatedPosts: ['20260113104932'],
+  },
+  {
+    name: 'jianceen',
+    description: '基于 Next.js 构建的在线考试平台，支持创建、管理和参加各种类型的考试。提供题库 JSON 管理、答题时间控制、自动评分等功能，适合学习成果检测。',
+    repoUrls: [
+      { label: 'GitHub', url: 'https://github.com/bosichong/jianceen' },
+      { label: 'Gitee', url: 'https://gitee.com/J_Sky/jianceen' },
+    ],
+    techStack: ['JavaScript', 'Next.js', 'Tailwind CSS'],
+  },
+  {
+    name: 'Matrix',
+    description: '黑客帝国矩阵字符雨 JavaScript 代码生成器，支持自定义字符、颜色、速度、密度等参数，生成炫酷的 Matrix 风格动画效果。',
+    repoUrls: [
+      { label: 'GitHub', url: 'https://www.suiyan.cc/matrix/index.html' },
+    ],
+    demoUrl: 'https://suiyan.cc/Matrix/',
+    techStack: ['JavaScript', 'Vue.js'],
+    relatedPosts: ['20230607211438', '20230612091630', '77'],
+  },
+  {
+    name: 'Link-Validator',
+    description: '检测对方网站友情链接页面是否添加了自己网站链接的 JavaScript 脚本。支持 Node.js 运行，自动爬取指定 URL 并验证友链是否存在。',
+    repoUrls: [
+      { label: 'GitHub', url: 'https://github.com/bosichong/Link-Validator' },
+    ],
+    techStack: ['JavaScript', 'Node.js'],
+    relatedPosts: ['20230508090813'],
+  },
+  {
+    name: 'JianCe',
+    description: '简测 - 一个简单易用的在线答题应用，支持单选题、多选题、判断题、简答题四种题型，适合检验学习成果。可自定义题库，支持答题计时和错题回顾。',
+    repoUrls: [
+      { label: 'GitHub', url: 'https://github.com/bosichong/JianCe' },
+      { label: 'Gitee', url: 'https://gitee.com/J_Sky/jiance' },
+    ],
+    demoUrl: 'https://suiyan.cc/demo/jiance/',
+    techStack: ['Vue.js', 'Naive UI', 'Pinia'],
+    relatedPosts: ['20230424194612'],
+  },
+  {
+    name: 'MyDjangoBlog',
+    description: '基于 Django 框架构建的个人博客系统，支持 Markdown 写作、文章分类、后台管理、分页等功能。曾运行于 17python.com，是 Django 学习入门的参考项目。',
+    repoUrls: [
+      { label: 'GitHub', url: 'https://github.com/bosichong/MyDjangoBlog' },
+    ],
+    demoUrl: 'http://www.17python.com',
+    techStack: ['Python', 'Django', 'SQLite'],
+    relatedPosts: ['4'],
+  },
 ];
 
 // 社交媒体链接
