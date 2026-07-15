@@ -461,7 +461,6 @@ export const PROJECTS = [
     repoUrls: [
       { label: 'GitHub', url: 'https://github.com/bosichong/MyDjangoBlog' },
     ],
-    demoUrl: 'http://www.17python.com',
     techStack: ['Python', 'Django', 'SQLite'],
     relatedPosts: ['4'],
   },
