@@ -36,6 +36,15 @@ export const MENU_ITEMS = [
 // 友情链接
 export const FRIENDS_LINKS = [
 
+  {
+    site_name: 'liWanr',
+    site_url: 'https://liwanr.com',
+    site_description: 'Every nobody is somebody.',
+    site_avatar: 'https://liwanr.com/assets/avatar.png',
+    is_active: true,
+    rss:'https://liwanr.com/rss.xml',
+  },
+
 {
     site_name: '莫比乌斯',
     site_url: 'https://mobius.blog/',
