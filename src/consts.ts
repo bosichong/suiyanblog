@@ -33,7 +33,7 @@ export const MENU_ITEMS = [
   { name: 'About', href: '/about', icon: 'information-outline' },
 ];
 
-// 友情链接
+// 链接
 export const FRIENDS_LINKS = [
 
   {
@@ -322,6 +322,11 @@ export const BLOG_AGGREGATIONS = [
     site_name: '博客大联盟',
     site_url: 'https://bo.ke/',
     site_description: '发现值得反复阅读的独立博客'
+  },
+  {
+    site_name: '你来啦！',
+    site_url: 'https://nilai.la/',
+    site_description: '博客站长聚合平台 · 在地图上发现每一个独立博客'
   }
 ];
 
