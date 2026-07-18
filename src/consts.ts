@@ -36,6 +36,15 @@ export const MENU_ITEMS = [
 // 链接
 export const FRIENDS_LINKS = [
 
+    {
+    site_name: '风·墨',
+    site_url: 'https://Vind.ink',
+    site_description: '风舞弦，墨凝影。',
+    site_avatar: 'https://Vind.ink/icon.png',
+    is_active: true,
+    rss:'https://Vind.ink/feed/',
+  },
+
   {
     site_name: 'liWanr',
     site_url: 'https://liwanr.com',
