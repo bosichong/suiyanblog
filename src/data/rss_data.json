@@ -65,15 +65,77 @@
       "link": "https://www.leitao.cn/10374.html",
       "published": "Sun, 21 Jun 2026 02:30:59 +0000",
       "published_parsed": "2026-06-21"
+    }
+  ],
+  "https://Vind.ink": [
+    {
+      "title": "新博客：再换回Typecho",
+      "link": "https://vind.ink/Status/Typecho-1.html",
+      "published": "Fri, 17 Jul 2026 20:28:00 +0800",
+      "published_parsed": "2026-07-17"
     },
     {
-      "title": "第二章 国王的钱袋：重商主义、贸易与近代国家",
-      "link": "https://www.leitao.cn/10372.html",
-      "published": "Sat, 20 Jun 2026 01:15:23 +0000",
-      "published_parsed": "2026-06-20"
+      "title": "关于邮箱的变动",
+      "link": "https://vind.ink/Status/173.html",
+      "published": "Tue, 14 Jul 2026 12:32:56 +0800",
+      "published_parsed": "2026-07-14"
+    },
+    {
+      "title": "上博-美洲展览",
+      "link": "https://vind.ink/photos/172.html",
+      "published": "Mon, 13 Jul 2026 16:23:59 +0800",
+      "published_parsed": "2026-07-13"
+    },
+    {
+      "title": "朱家角古镇 5",
+      "link": "https://vind.ink/photos/5-6.html",
+      "published": "Sun, 12 Jul 2026 09:54:37 +0800",
+      "published_parsed": "2026-07-12"
+    },
+    {
+      "title": "朱家角古镇 4",
+      "link": "https://vind.ink/photos/4-10.html",
+      "published": "Sun, 12 Jul 2026 09:52:00 +0800",
+      "published_parsed": "2026-07-12"
+    },
+    {
+      "title": "朱家角古镇 3",
+      "link": "https://vind.ink/photos/3-9.html",
+      "published": "Sun, 12 Jul 2026 09:32:00 +0800",
+      "published_parsed": "2026-07-12"
+    },
+    {
+      "title": "朱家角古镇 2",
+      "link": "https://vind.ink/photos/2-21.html",
+      "published": "Sun, 12 Jul 2026 09:31:32 +0800",
+      "published_parsed": "2026-07-12"
+    },
+    {
+      "title": "朱家角古镇 1",
+      "link": "https://vind.ink/photos/1-21.html",
+      "published": "Sun, 12 Jul 2026 09:29:00 +0800",
+      "published_parsed": "2026-07-12"
+    },
+    {
+      "title": "中山公园 4 龙之梦 城市集市 下",
+      "link": "https://vind.ink/photos/4-9.html",
+      "published": "Wed, 08 Jul 2026 11:10:26 +0800",
+      "published_parsed": "2026-07-08"
+    },
+    {
+      "title": "中山公园 3 龙之梦 城市集市 上",
+      "link": "https://vind.ink/photos/3-8.html",
+      "published": "Wed, 08 Jul 2026 11:09:00 +0800",
+      "published_parsed": "2026-07-08"
     }
   ],
   "https://liwanr.com": [
+    {
+      "title": "隐私政策",
+      "link": "https://liWanr.com/about/privacy-policy/",
+      "published": "Sun, 19 Jul 2026 04:07:21 +0800",
+      "published_parsed": "2026-07-18"
+    },
     {
       "title": "皇帝的新衣",
       "link": "https://liWanr.com/essays/2026/named-silence/",
@@ -115,26 +177,6 @@
       "link": "https://liWanr.com/essays/2026/kite/",
       "published": "Wed, 24 Jun 2026 02:53:18 +0800",
       "published_parsed": "2026-06-23"
-    }
-  ],
-  "https://www.ruanyifeng.com/blog": [
-    {
-      "title": "科技爱好者周刊（第 404 期）：你需要知道的 AI 内存知识",
-      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-404.html",
-      "published": "2026-07-16T23:51:19Z",
-      "published_parsed": "2026-07-16"
-    },
-    {
-      "title": "科技爱好者周刊（第 403 期）：为什么 Dropbox 不成功",
-      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-403.html",
-      "published": "2026-07-10T00:05:31Z",
-      "published_parsed": "2026-07-10"
-    },
-    {
-      "title": "科技爱好者周刊（第 402 期）：我在智念 AI 的日子（小说）",
-      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-402.html",
-      "published": "2026-07-02T23:33:49Z",
-      "published_parsed": "2026-07-02"
     }
   ],
   "https://mobius.blog": [
@@ -200,38 +242,24 @@
     }
   ],
   "https://wangyurui.com": [],
-  "https://wiki.eryajf.net": [
+  "https://www.ruanyifeng.com/blog": [
     {
-      "title": "学习周刊-总第272期-2026年第29周",
-      "link": "https://wiki.eryajf.net/pages/b07ecd/",
-      "published": "Thu, 16 Jul 2026 23:18:10 GMT",
+      "title": "科技爱好者周刊（第 404 期）：你需要知道的 AI 内存知识",
+      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-404.html",
+      "published": "2026-07-16T23:51:19Z",
       "published_parsed": "2026-07-16"
     },
     {
-      "title": "学习周刊-总第271期-2026年第28周",
-      "link": "https://wiki.eryajf.net/pages/87cbc1/",
-      "published": "Fri, 10 Jul 2026 08:57:16 GMT",
+      "title": "科技爱好者周刊（第 403 期）：为什么 Dropbox 不成功",
+      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-403.html",
+      "published": "2026-07-10T00:05:31Z",
       "published_parsed": "2026-07-10"
     },
     {
-      "title": "学习周刊-总第270期-2026年第27周",
-      "link": "https://wiki.eryajf.net/pages/0ef849/",
-      "published": "Thu, 02 Jul 2026 21:48:38 GMT",
+      "title": "科技爱好者周刊（第 402 期）：我在智念 AI 的日子（小说）",
+      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-402.html",
+      "published": "2026-07-02T23:33:49Z",
       "published_parsed": "2026-07-02"
-    },
-    {
-      "title": "学习周刊-总第269期-2026年第26周",
-      "link": "https://wiki.eryajf.net/pages/0e5d11/",
-      "published": "Thu, 25 Jun 2026 21:55:37 GMT",
-      "published_parsed": "2026-06-25"
-    }
-  ],
-  "https://www.tortorse.com": [
-    {
-      "title": "香港和台湾给我的两种感觉",
-      "link": "https://www.tortorse.com/archives/hong-kong-taiwan-travel-impressions/",
-      "published": "2026-06-25T13:32:50.000Z",
-      "published_parsed": "2026-06-25"
     }
   ],
   "https://blog.mfwt.top": [
@@ -276,6 +304,74 @@
       "link": "https://blog.mfwt.top/index.php/archives/1392/",
       "published": "Wed, 24 Jun 2026 23:18:00 +0800",
       "published_parsed": "2026-06-24"
+    }
+  ],
+  "https://wiki.eryajf.net": [
+    {
+      "title": "学习周刊-总第272期-2026年第29周",
+      "link": "https://wiki.eryajf.net/pages/b07ecd/",
+      "published": "Thu, 16 Jul 2026 23:18:10 GMT",
+      "published_parsed": "2026-07-16"
+    },
+    {
+      "title": "学习周刊-总第271期-2026年第28周",
+      "link": "https://wiki.eryajf.net/pages/87cbc1/",
+      "published": "Fri, 10 Jul 2026 08:57:16 GMT",
+      "published_parsed": "2026-07-10"
+    },
+    {
+      "title": "学习周刊-总第270期-2026年第27周",
+      "link": "https://wiki.eryajf.net/pages/0ef849/",
+      "published": "Thu, 02 Jul 2026 21:48:38 GMT",
+      "published_parsed": "2026-07-02"
+    },
+    {
+      "title": "学习周刊-总第269期-2026年第26周",
+      "link": "https://wiki.eryajf.net/pages/0e5d11/",
+      "published": "Thu, 25 Jun 2026 21:55:37 GMT",
+      "published_parsed": "2026-06-25"
+    }
+  ],
+  "https://www.tortorse.com": [
+    {
+      "title": "香港和台湾给我的两种感觉",
+      "link": "https://www.tortorse.com/archives/hong-kong-taiwan-travel-impressions/",
+      "published": "2026-06-25T13:32:50.000Z",
+      "published_parsed": "2026-06-25"
+    }
+  ],
+  "https://www.tjsky.net": [
+    {
+      "title": "YouTube 无限重定向报错，谷歌账号身份验证无限失败，罪魁祸首居然是“已分区 cookie”？！",
+      "link": "https://www.tjsky.net/tutorial/1708",
+      "published": "Wed, 15 Jul 2026 14:12:22 +0000",
+      "published_parsed": "2026-07-15"
+    },
+    {
+      "title": "CloudCone的鬼才运营：提前 10 小时通知“机房物理搬迁”，还说不服不给退款？",
+      "link": "https://www.tjsky.net/natter/1689",
+      "published": "Wed, 08 Jul 2026 08:05:47 +0000",
+      "published_parsed": "2026-07-08"
+    },
+    {
+      "title": "乾纲独断还是民主治理？聊聊博客聚合平台的治理悖论与无解之痛",
+      "link": "https://www.tjsky.net/natter/1674",
+      "published": "Mon, 22 Jun 2026 22:22:58 +0000",
+      "published_parsed": "2026-06-22"
+    }
+  ],
+  "https://www.vergilisme.com": [
+    {
+      "title": "第一节课",
+      "link": "https://www.vergilisme.com/index.php/2026/06/29/2400.html",
+      "published": "Mon, 29 Jun 2026 23:39:00 +0800",
+      "published_parsed": "2026-06-29"
+    },
+    {
+      "title": "欺诈式数据库连接",
+      "link": "https://www.vergilisme.com/index.php/2026/06/22/2398.html",
+      "published": "Mon, 22 Jun 2026 09:34:00 +0800",
+      "published_parsed": "2026-06-22"
     }
   ],
   "https://zhongxiaojie.com": [
@@ -334,40 +430,6 @@
       "published_parsed": "2026-06-22"
     }
   ],
-  "https://www.vergilisme.com": [
-    {
-      "title": "第一节课",
-      "link": "https://www.vergilisme.com/index.php/2026/06/29/2400.html",
-      "published": "Mon, 29 Jun 2026 23:39:00 +0800",
-      "published_parsed": "2026-06-29"
-    },
-    {
-      "title": "欺诈式数据库连接",
-      "link": "https://www.vergilisme.com/index.php/2026/06/22/2398.html",
-      "published": "Mon, 22 Jun 2026 09:34:00 +0800",
-      "published_parsed": "2026-06-22"
-    }
-  ],
-  "https://www.tjsky.net": [
-    {
-      "title": "YouTube 无限重定向报错，谷歌账号身份验证无限失败，罪魁祸首居然是“已分区 cookie”？！",
-      "link": "https://www.tjsky.net/tutorial/1708",
-      "published": "Wed, 15 Jul 2026 14:12:22 +0000",
-      "published_parsed": "2026-07-15"
-    },
-    {
-      "title": "CloudCone的鬼才运营：提前 10 小时通知“机房物理搬迁”，还说不服不给退款？",
-      "link": "https://www.tjsky.net/natter/1689",
-      "published": "Wed, 08 Jul 2026 08:05:47 +0000",
-      "published_parsed": "2026-07-08"
-    },
-    {
-      "title": "乾纲独断还是民主治理？聊聊博客聚合平台的治理悖论与无解之痛",
-      "link": "https://www.tjsky.net/natter/1674",
-      "published": "Mon, 22 Jun 2026 22:22:58 +0000",
-      "published_parsed": "2026-06-22"
-    }
-  ],
   "https://lawtee.com": [
     {
       "title": "14亿中国人在世界的位置",
@@ -398,6 +460,80 @@
       "link": "https://lawtee.com/article/liability-arising-from-insufficient-evidence/",
       "published": "Thu, 02 Jul 2026 18:21:31 +0000",
       "published_parsed": "2026-07-02"
+    }
+  ],
+  "https://yipai.me": [
+    {
+      "title": "最近够闲的，开发了新网站",
+      "link": "https://yipai.me/post/2539.html",
+      "published": "Thu, 16 Jul 2026 13:04:00 GMT",
+      "published_parsed": "2026-07-16"
+    }
+  ],
+  "https://sliun.com": [],
+  "https://pathos.page": [],
+  "https://usj.cc": [
+    {
+      "title": "国企面试，别太当回事儿",
+      "link": "https://usj.cc/20260708110221.html",
+      "published": "Wed, 08 Jul 2026 00:00:00 +0000",
+      "published_parsed": "2026-07-08"
+    },
+    {
+      "title": "入手了智能手表 OPPO watch x3",
+      "link": "https://usj.cc/20260704094325.html",
+      "published": "Sat, 04 Jul 2026 00:00:00 +0000",
+      "published_parsed": "2026-07-04"
+    },
+    {
+      "title": "复刻了某红书的西红柿鸡蛋炒牛肉",
+      "link": "https://usj.cc/20260630162329.html",
+      "published": "Tue, 30 Jun 2026 00:00:00 +0000",
+      "published_parsed": "2026-06-30"
+    },
+    {
+      "title": "GitHub Action 缓存额度超了，发不出文章😅",
+      "link": "https://usj.cc/20260629223659.html",
+      "published": "Mon, 29 Jun 2026 00:00:00 +0000",
+      "published_parsed": "2026-06-29"
+    },
+    {
+      "title": "小黄的富士随拍：🌲和 🐈",
+      "link": "https://usj.cc/20260626121417.html",
+      "published": "Fri, 26 Jun 2026 00:00:00 +0000",
+      "published_parsed": "2026-06-26"
+    },
+    {
+      "title": "怎么也飞不出，花花的世界",
+      "link": "https://usj.cc/20260625174724.html",
+      "published": "Thu, 25 Jun 2026 00:00:00 +0000",
+      "published_parsed": "2026-06-25"
+    },
+    {
+      "title": "和朋友在武汉东湖 city walk 回忆录",
+      "link": "https://usj.cc/20260624214719.html",
+      "published": "Wed, 24 Jun 2026 00:00:00 +0000",
+      "published_parsed": "2026-06-24"
+    },
+    {
+      "title": "博客订阅的最新姿势 GitHub Action版",
+      "link": "https://usj.cc/202606231801.html",
+      "published": "Tue, 23 Jun 2026 00:00:00 +0000",
+      "published_parsed": "2026-06-23"
+    },
+    {
+      "title": "也是在深圳吃上了 69 一份的麻辣烫",
+      "link": "https://usj.cc/20260622203820.html",
+      "published": "Mon, 22 Jun 2026 00:00:00 +0000",
+      "published_parsed": "2026-06-22"
+    }
+  ],
+  "https://blog.bxaw.name": [
+    {
+      "title": "他想「认识」的不是「我」",
+      "link": "https://blog.bxaw.name/archives/He-Was-Never-Interested-in-Knowing-Me.html",
+      "published": "Wed, 15 Jul 2026 14:35:41 +0800",
+      "published_parsed": "2026-07-15"
     }
   ],
   "https://d-d.design": [
@@ -462,82 +598,7 @@
       "published_parsed": "2026-06-30"
     }
   ],
-  "https://sliun.com": [],
-  "https://usj.cc": [
-    {
-      "title": "国企面试，别太当回事儿",
-      "link": "https://usj.cc/20260708110221.html",
-      "published": "Wed, 08 Jul 2026 00:00:00 +0000",
-      "published_parsed": "2026-07-08"
-    },
-    {
-      "title": "入手了智能手表 OPPO watch x3",
-      "link": "https://usj.cc/20260704094325.html",
-      "published": "Sat, 04 Jul 2026 00:00:00 +0000",
-      "published_parsed": "2026-07-04"
-    },
-    {
-      "title": "复刻了某红书的西红柿鸡蛋炒牛肉",
-      "link": "https://usj.cc/20260630162329.html",
-      "published": "Tue, 30 Jun 2026 00:00:00 +0000",
-      "published_parsed": "2026-06-30"
-    },
-    {
-      "title": "GitHub Action 缓存额度超了，发不出文章😅",
-      "link": "https://usj.cc/20260629223659.html",
-      "published": "Mon, 29 Jun 2026 00:00:00 +0000",
-      "published_parsed": "2026-06-29"
-    },
-    {
-      "title": "小黄的富士随拍：🌲和 🐈",
-      "link": "https://usj.cc/20260626121417.html",
-      "published": "Fri, 26 Jun 2026 00:00:00 +0000",
-      "published_parsed": "2026-06-26"
-    },
-    {
-      "title": "怎么也飞不出，花花的世界",
-      "link": "https://usj.cc/20260625174724.html",
-      "published": "Thu, 25 Jun 2026 00:00:00 +0000",
-      "published_parsed": "2026-06-25"
-    },
-    {
-      "title": "和朋友在武汉东湖 city walk 回忆录",
-      "link": "https://usj.cc/20260624214719.html",
-      "published": "Wed, 24 Jun 2026 00:00:00 +0000",
-      "published_parsed": "2026-06-24"
-    },
-    {
-      "title": "博客订阅的最新姿势 GitHub Action版",
-      "link": "https://usj.cc/202606231801.html",
-      "published": "Tue, 23 Jun 2026 00:00:00 +0000",
-      "published_parsed": "2026-06-23"
-    },
-    {
-      "title": "也是在深圳吃上了 69 一份的麻辣烫",
-      "link": "https://usj.cc/20260622203820.html",
-      "published": "Mon, 22 Jun 2026 00:00:00 +0000",
-      "published_parsed": "2026-06-22"
-    }
-  ],
-  "https://pathos.page": [],
-  "https://yipai.me": [
-    {
-      "title": "最近够闲的，开发了新网站",
-      "link": "https://yipai.me/post/2539.html",
-      "published": "Thu, 16 Jul 2026 13:04:00 GMT",
-      "published_parsed": "2026-07-16"
-    }
-  ],
   "https://yihui.org/cn": [],
-  "https://blog.bxaw.name": [
-    {
-      "title": "他想「认识」的不是「我」",
-      "link": "https://blog.bxaw.name/archives/He-Was-Never-Interested-in-Knowing-Me.html",
-      "published": "Wed, 15 Jul 2026 14:35:41 +0800",
-      "published_parsed": "2026-07-15"
-    }
-  ],
-  "https://www.scarsu.com": [],
   "https://www.glowisle.me": [],
   "https://www.owenyoung.com": [],
   "https://cyrus19.cc": [
@@ -552,15 +613,10 @@
       "link": "https://cyrus19.cc/archives/1948",
       "published": "Mon, 22 Jun 2026 17:34:24 +0000",
       "published_parsed": "2026-06-22"
-    },
-    {
-      "title": "【夏至祭天系列】",
-      "link": "https://cyrus19.cc/archives/1946",
-      "published": "Sat, 20 Jun 2026 17:51:08 +0000",
-      "published_parsed": "2026-06-20"
     }
   ],
   "https://www.demochen.com": [],
+  "https://www.scarsu.com": [],
   "https://z.arlmy.me": [
     {
       "title": "Toots 427 2026 Jul.5 - Jul.11",
@@ -651,24 +707,6 @@
       "link": "https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260620/",
       "published": "2026-06-21T05:24:27.000Z",
       "published_parsed": "2026-06-21"
-    },
-    {
-      "title": "问Gemini的问题备份 20260620",
-      "link": "https://z.arlmy.me/posts/ZArlmyMe/QuestionsWithGemini_20260620/",
-      "published": "2026-06-20T05:50:46.000Z",
-      "published_parsed": "2026-06-20"
-    },
-    {
-      "title": "最近惦念 20260605",
-      "link": "https://z.arlmy.me/posts/TILs/thoughts/20260605_Recently/",
-      "published": "2026-06-20T05:35:27.000Z",
-      "published_parsed": "2026-06-20"
-    },
-    {
-      "title": "最近惦念 20260522",
-      "link": "https://z.arlmy.me/posts/TILs/thoughts/20260522_Recently/",
-      "published": "2026-06-20T05:32:27.000Z",
-      "published_parsed": "2026-06-20"
     }
   ]
 }
