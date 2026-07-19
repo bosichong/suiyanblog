@@ -279,13 +279,22 @@ export const FRIENDS_LINKS = [
     rss:'#',
   },
 
-{
+  {
     site_name: '图灵技术域',
     site_url: 'http://www.omegaxyz.com',
     site_description: '徐奕的专栏-机器学习、软件工程、计算机大佬。',
     site_avatar: 'https://cdn.omegaxyz.com/2020/02/omegaxyz-logo-100.png',
     is_active: true,
     rss:'#',
+  },
+
+  {
+    site_name: 'immarcus',
+    site_url: 'https://immarcus.com/',
+    site_description: '写给今天的读者和明天的自己。',
+    site_avatar: 'https://immarcus.com/img/logo.svg',
+    is_active: true,
+    rss:'https://immarcus.com/blog/rss.xml',
   }
 
 ];

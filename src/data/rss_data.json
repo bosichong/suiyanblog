@@ -59,12 +59,6 @@
       "link": "https://www.leitao.cn/10377.html",
       "published": "Mon, 22 Jun 2026 02:35:32 +0000",
       "published_parsed": "2026-06-22"
-    },
-    {
-      "title": "第三章 看不见的手与看得见的贫困：古典政治经济学的展开与分裂",
-      "link": "https://www.leitao.cn/10374.html",
-      "published": "Sun, 21 Jun 2026 02:30:59 +0000",
-      "published_parsed": "2026-06-21"
     }
   ],
   "https://Vind.ink": [
@@ -179,6 +173,26 @@
       "published_parsed": "2026-06-23"
     }
   ],
+  "https://www.ruanyifeng.com/blog": [
+    {
+      "title": "科技爱好者周刊（第 404 期）：你需要知道的 AI 内存知识",
+      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-404.html",
+      "published": "2026-07-16T23:51:19Z",
+      "published_parsed": "2026-07-16"
+    },
+    {
+      "title": "科技爱好者周刊（第 403 期）：为什么 Dropbox 不成功",
+      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-403.html",
+      "published": "2026-07-10T00:05:31Z",
+      "published_parsed": "2026-07-10"
+    },
+    {
+      "title": "科技爱好者周刊（第 402 期）：我在智念 AI 的日子（小说）",
+      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-402.html",
+      "published": "2026-07-02T23:33:49Z",
+      "published_parsed": "2026-07-02"
+    }
+  ],
   "https://mobius.blog": [
     {
       "title": "社交关系里的“话筒”",
@@ -242,24 +256,30 @@
     }
   ],
   "https://wangyurui.com": [],
-  "https://www.ruanyifeng.com/blog": [
+  "https://wiki.eryajf.net": [
     {
-      "title": "科技爱好者周刊（第 404 期）：你需要知道的 AI 内存知识",
-      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-404.html",
-      "published": "2026-07-16T23:51:19Z",
+      "title": "学习周刊-总第272期-2026年第29周",
+      "link": "https://wiki.eryajf.net/pages/b07ecd/",
+      "published": "Thu, 16 Jul 2026 23:18:10 GMT",
       "published_parsed": "2026-07-16"
     },
     {
-      "title": "科技爱好者周刊（第 403 期）：为什么 Dropbox 不成功",
-      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-403.html",
-      "published": "2026-07-10T00:05:31Z",
+      "title": "学习周刊-总第271期-2026年第28周",
+      "link": "https://wiki.eryajf.net/pages/87cbc1/",
+      "published": "Fri, 10 Jul 2026 08:57:16 GMT",
       "published_parsed": "2026-07-10"
     },
     {
-      "title": "科技爱好者周刊（第 402 期）：我在智念 AI 的日子（小说）",
-      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-402.html",
-      "published": "2026-07-02T23:33:49Z",
+      "title": "学习周刊-总第270期-2026年第27周",
+      "link": "https://wiki.eryajf.net/pages/0ef849/",
+      "published": "Thu, 02 Jul 2026 21:48:38 GMT",
       "published_parsed": "2026-07-02"
+    },
+    {
+      "title": "学习周刊-总第269期-2026年第26周",
+      "link": "https://wiki.eryajf.net/pages/0e5d11/",
+      "published": "Thu, 25 Jun 2026 21:55:37 GMT",
+      "published_parsed": "2026-06-25"
     }
   ],
   "https://blog.mfwt.top": [
@@ -304,74 +324,6 @@
       "link": "https://blog.mfwt.top/index.php/archives/1392/",
       "published": "Wed, 24 Jun 2026 23:18:00 +0800",
       "published_parsed": "2026-06-24"
-    }
-  ],
-  "https://wiki.eryajf.net": [
-    {
-      "title": "学习周刊-总第272期-2026年第29周",
-      "link": "https://wiki.eryajf.net/pages/b07ecd/",
-      "published": "Thu, 16 Jul 2026 23:18:10 GMT",
-      "published_parsed": "2026-07-16"
-    },
-    {
-      "title": "学习周刊-总第271期-2026年第28周",
-      "link": "https://wiki.eryajf.net/pages/87cbc1/",
-      "published": "Fri, 10 Jul 2026 08:57:16 GMT",
-      "published_parsed": "2026-07-10"
-    },
-    {
-      "title": "学习周刊-总第270期-2026年第27周",
-      "link": "https://wiki.eryajf.net/pages/0ef849/",
-      "published": "Thu, 02 Jul 2026 21:48:38 GMT",
-      "published_parsed": "2026-07-02"
-    },
-    {
-      "title": "学习周刊-总第269期-2026年第26周",
-      "link": "https://wiki.eryajf.net/pages/0e5d11/",
-      "published": "Thu, 25 Jun 2026 21:55:37 GMT",
-      "published_parsed": "2026-06-25"
-    }
-  ],
-  "https://www.tortorse.com": [
-    {
-      "title": "香港和台湾给我的两种感觉",
-      "link": "https://www.tortorse.com/archives/hong-kong-taiwan-travel-impressions/",
-      "published": "2026-06-25T13:32:50.000Z",
-      "published_parsed": "2026-06-25"
-    }
-  ],
-  "https://www.tjsky.net": [
-    {
-      "title": "YouTube 无限重定向报错，谷歌账号身份验证无限失败，罪魁祸首居然是“已分区 cookie”？！",
-      "link": "https://www.tjsky.net/tutorial/1708",
-      "published": "Wed, 15 Jul 2026 14:12:22 +0000",
-      "published_parsed": "2026-07-15"
-    },
-    {
-      "title": "CloudCone的鬼才运营：提前 10 小时通知“机房物理搬迁”，还说不服不给退款？",
-      "link": "https://www.tjsky.net/natter/1689",
-      "published": "Wed, 08 Jul 2026 08:05:47 +0000",
-      "published_parsed": "2026-07-08"
-    },
-    {
-      "title": "乾纲独断还是民主治理？聊聊博客聚合平台的治理悖论与无解之痛",
-      "link": "https://www.tjsky.net/natter/1674",
-      "published": "Mon, 22 Jun 2026 22:22:58 +0000",
-      "published_parsed": "2026-06-22"
-    }
-  ],
-  "https://www.vergilisme.com": [
-    {
-      "title": "第一节课",
-      "link": "https://www.vergilisme.com/index.php/2026/06/29/2400.html",
-      "published": "Mon, 29 Jun 2026 23:39:00 +0800",
-      "published_parsed": "2026-06-29"
-    },
-    {
-      "title": "欺诈式数据库连接",
-      "link": "https://www.vergilisme.com/index.php/2026/06/22/2398.html",
-      "published": "Mon, 22 Jun 2026 09:34:00 +0800",
-      "published_parsed": "2026-06-22"
     }
   ],
   "https://zhongxiaojie.com": [
@@ -430,6 +382,48 @@
       "published_parsed": "2026-06-22"
     }
   ],
+  "https://www.vergilisme.com": [
+    {
+      "title": "第一节课",
+      "link": "https://www.vergilisme.com/index.php/2026/06/29/2400.html",
+      "published": "Mon, 29 Jun 2026 23:39:00 +0800",
+      "published_parsed": "2026-06-29"
+    },
+    {
+      "title": "欺诈式数据库连接",
+      "link": "https://www.vergilisme.com/index.php/2026/06/22/2398.html",
+      "published": "Mon, 22 Jun 2026 09:34:00 +0800",
+      "published_parsed": "2026-06-22"
+    }
+  ],
+  "https://www.tortorse.com": [
+    {
+      "title": "香港和台湾给我的两种感觉",
+      "link": "https://www.tortorse.com/archives/hong-kong-taiwan-travel-impressions/",
+      "published": "2026-06-25T13:32:50.000Z",
+      "published_parsed": "2026-06-25"
+    }
+  ],
+  "https://www.tjsky.net": [
+    {
+      "title": "YouTube 无限重定向报错，谷歌账号身份验证无限失败，罪魁祸首居然是“已分区 cookie”？！",
+      "link": "https://www.tjsky.net/tutorial/1708",
+      "published": "Wed, 15 Jul 2026 14:12:22 +0000",
+      "published_parsed": "2026-07-15"
+    },
+    {
+      "title": "CloudCone的鬼才运营：提前 10 小时通知“机房物理搬迁”，还说不服不给退款？",
+      "link": "https://www.tjsky.net/natter/1689",
+      "published": "Wed, 08 Jul 2026 08:05:47 +0000",
+      "published_parsed": "2026-07-08"
+    },
+    {
+      "title": "乾纲独断还是民主治理？聊聊博客聚合平台的治理悖论与无解之痛",
+      "link": "https://www.tjsky.net/natter/1674",
+      "published": "Mon, 22 Jun 2026 22:22:58 +0000",
+      "published_parsed": "2026-06-22"
+    }
+  ],
   "https://lawtee.com": [
     {
       "title": "14亿中国人在世界的位置",
@@ -460,80 +454,6 @@
       "link": "https://lawtee.com/article/liability-arising-from-insufficient-evidence/",
       "published": "Thu, 02 Jul 2026 18:21:31 +0000",
       "published_parsed": "2026-07-02"
-    }
-  ],
-  "https://yipai.me": [
-    {
-      "title": "最近够闲的，开发了新网站",
-      "link": "https://yipai.me/post/2539.html",
-      "published": "Thu, 16 Jul 2026 13:04:00 GMT",
-      "published_parsed": "2026-07-16"
-    }
-  ],
-  "https://sliun.com": [],
-  "https://pathos.page": [],
-  "https://usj.cc": [
-    {
-      "title": "国企面试，别太当回事儿",
-      "link": "https://usj.cc/20260708110221.html",
-      "published": "Wed, 08 Jul 2026 00:00:00 +0000",
-      "published_parsed": "2026-07-08"
-    },
-    {
-      "title": "入手了智能手表 OPPO watch x3",
-      "link": "https://usj.cc/20260704094325.html",
-      "published": "Sat, 04 Jul 2026 00:00:00 +0000",
-      "published_parsed": "2026-07-04"
-    },
-    {
-      "title": "复刻了某红书的西红柿鸡蛋炒牛肉",
-      "link": "https://usj.cc/20260630162329.html",
-      "published": "Tue, 30 Jun 2026 00:00:00 +0000",
-      "published_parsed": "2026-06-30"
-    },
-    {
-      "title": "GitHub Action 缓存额度超了，发不出文章😅",
-      "link": "https://usj.cc/20260629223659.html",
-      "published": "Mon, 29 Jun 2026 00:00:00 +0000",
-      "published_parsed": "2026-06-29"
-    },
-    {
-      "title": "小黄的富士随拍：🌲和 🐈",
-      "link": "https://usj.cc/20260626121417.html",
-      "published": "Fri, 26 Jun 2026 00:00:00 +0000",
-      "published_parsed": "2026-06-26"
-    },
-    {
-      "title": "怎么也飞不出，花花的世界",
-      "link": "https://usj.cc/20260625174724.html",
-      "published": "Thu, 25 Jun 2026 00:00:00 +0000",
-      "published_parsed": "2026-06-25"
-    },
-    {
-      "title": "和朋友在武汉东湖 city walk 回忆录",
-      "link": "https://usj.cc/20260624214719.html",
-      "published": "Wed, 24 Jun 2026 00:00:00 +0000",
-      "published_parsed": "2026-06-24"
-    },
-    {
-      "title": "博客订阅的最新姿势 GitHub Action版",
-      "link": "https://usj.cc/202606231801.html",
-      "published": "Tue, 23 Jun 2026 00:00:00 +0000",
-      "published_parsed": "2026-06-23"
-    },
-    {
-      "title": "也是在深圳吃上了 69 一份的麻辣烫",
-      "link": "https://usj.cc/20260622203820.html",
-      "published": "Mon, 22 Jun 2026 00:00:00 +0000",
-      "published_parsed": "2026-06-22"
-    }
-  ],
-  "https://blog.bxaw.name": [
-    {
-      "title": "他想「认识」的不是「我」",
-      "link": "https://blog.bxaw.name/archives/He-Was-Never-Interested-in-Knowing-Me.html",
-      "published": "Wed, 15 Jul 2026 14:35:41 +0800",
-      "published_parsed": "2026-07-15"
     }
   ],
   "https://d-d.design": [
@@ -598,25 +518,85 @@
       "published_parsed": "2026-06-30"
     }
   ],
-  "https://yihui.org/cn": [],
-  "https://www.glowisle.me": [],
-  "https://www.owenyoung.com": [],
-  "https://cyrus19.cc": [
+  "https://sliun.com": [],
+  "https://yipai.me": [
     {
-      "title": "日寄 三十三",
-      "link": "https://cyrus19.cc/archives/1952",
-      "published": "Tue, 23 Jun 2026 13:09:54 +0000",
+      "title": "最近够闲的，开发了新网站",
+      "link": "https://yipai.me/post/2539.html",
+      "published": "Thu, 16 Jul 2026 13:04:00 GMT",
+      "published_parsed": "2026-07-16"
+    }
+  ],
+  "https://pathos.page": [],
+  "https://yihui.org/cn": [],
+  "https://blog.bxaw.name": [
+    {
+      "title": "他想「认识」的不是「我」",
+      "link": "https://blog.bxaw.name/archives/He-Was-Never-Interested-in-Knowing-Me.html",
+      "published": "Wed, 15 Jul 2026 14:35:41 +0800",
+      "published_parsed": "2026-07-15"
+    }
+  ],
+  "https://www.glowisle.me": [],
+  "https://usj.cc": [
+    {
+      "title": "国企面试，别太当回事儿",
+      "link": "https://usj.cc/20260708110221.html",
+      "published": "Wed, 08 Jul 2026 00:00:00 +0000",
+      "published_parsed": "2026-07-08"
+    },
+    {
+      "title": "入手了智能手表 OPPO watch x3",
+      "link": "https://usj.cc/20260704094325.html",
+      "published": "Sat, 04 Jul 2026 00:00:00 +0000",
+      "published_parsed": "2026-07-04"
+    },
+    {
+      "title": "复刻了某红书的西红柿鸡蛋炒牛肉",
+      "link": "https://usj.cc/20260630162329.html",
+      "published": "Tue, 30 Jun 2026 00:00:00 +0000",
+      "published_parsed": "2026-06-30"
+    },
+    {
+      "title": "GitHub Action 缓存额度超了，发不出文章😅",
+      "link": "https://usj.cc/20260629223659.html",
+      "published": "Mon, 29 Jun 2026 00:00:00 +0000",
+      "published_parsed": "2026-06-29"
+    },
+    {
+      "title": "小黄的富士随拍：🌲和 🐈",
+      "link": "https://usj.cc/20260626121417.html",
+      "published": "Fri, 26 Jun 2026 00:00:00 +0000",
+      "published_parsed": "2026-06-26"
+    },
+    {
+      "title": "怎么也飞不出，花花的世界",
+      "link": "https://usj.cc/20260625174724.html",
+      "published": "Thu, 25 Jun 2026 00:00:00 +0000",
+      "published_parsed": "2026-06-25"
+    },
+    {
+      "title": "和朋友在武汉东湖 city walk 回忆录",
+      "link": "https://usj.cc/20260624214719.html",
+      "published": "Wed, 24 Jun 2026 00:00:00 +0000",
+      "published_parsed": "2026-06-24"
+    },
+    {
+      "title": "博客订阅的最新姿势 GitHub Action版",
+      "link": "https://usj.cc/202606231801.html",
+      "published": "Tue, 23 Jun 2026 00:00:00 +0000",
       "published_parsed": "2026-06-23"
     },
     {
-      "title": "“Within Cells Interlinked”",
-      "link": "https://cyrus19.cc/archives/1948",
-      "published": "Mon, 22 Jun 2026 17:34:24 +0000",
+      "title": "也是在深圳吃上了 69 一份的麻辣烫",
+      "link": "https://usj.cc/20260622203820.html",
+      "published": "Mon, 22 Jun 2026 00:00:00 +0000",
       "published_parsed": "2026-06-22"
     }
   ],
-  "https://www.demochen.com": [],
   "https://www.scarsu.com": [],
+  "https://www.owenyoung.com": [],
+  "https://www.demochen.com": [],
   "https://z.arlmy.me": [
     {
       "title": "Toots 427 2026 Jul.5 - Jul.11",
@@ -707,6 +687,190 @@
       "link": "https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260620/",
       "published": "2026-06-21T05:24:27.000Z",
       "published_parsed": "2026-06-21"
+    }
+  ],
+  "https://cyrus19.cc": [
+    {
+      "title": "日寄 三十三",
+      "link": "https://cyrus19.cc/archives/1952",
+      "published": "Tue, 23 Jun 2026 13:09:54 +0000",
+      "published_parsed": "2026-06-23"
+    },
+    {
+      "title": "“Within Cells Interlinked”",
+      "link": "https://cyrus19.cc/archives/1948",
+      "published": "Mon, 22 Jun 2026 17:34:24 +0000",
+      "published_parsed": "2026-06-22"
+    }
+  ],
+  "https://immarcus.com": [
+    {
+      "title": "2026.07.19 博客阅读周记",
+      "link": "https://www.immarcus.com/blog/weekly-20260719",
+      "published": "Sun, 19 Jul 2026 00:00:00 GMT",
+      "published_parsed": "2026-07-19"
+    },
+    {
+      "title": "三种法律，三种世界",
+      "link": "https://www.immarcus.com/blog/three-laws-three-worlds",
+      "published": "Sat, 18 Jul 2026 00:00:00 GMT",
+      "published_parsed": "2026-07-18"
+    },
+    {
+      "title": "末日大霾",
+      "link": "https://www.immarcus.com/blog/apocalyptic-haze",
+      "published": "Fri, 17 Jul 2026 00:00:00 GMT",
+      "published_parsed": "2026-07-17"
+    },
+    {
+      "title": "区块链里的 PoW vs PoS",
+      "link": "https://www.immarcus.com/blog/blockchain-pow-vs-pos",
+      "published": "Thu, 16 Jul 2026 00:00:00 GMT",
+      "published_parsed": "2026-07-16"
+    },
+    {
+      "title": "「你很厉害」",
+      "link": "https://www.immarcus.com/blog/you-are-awesome",
+      "published": "Wed, 15 Jul 2026 00:00:00 GMT",
+      "published_parsed": "2026-07-15"
+    },
+    {
+      "title": "夜猫子才是正常的吧",
+      "link": "https://www.immarcus.com/blog/night-owl-was-the-norm",
+      "published": "Tue, 14 Jul 2026 00:00:00 GMT",
+      "published_parsed": "2026-07-14"
+    },
+    {
+      "title": "井底之蛙",
+      "link": "https://www.immarcus.com/blog/a-frog-in-a-well",
+      "published": "Mon, 13 Jul 2026 00:00:00 GMT",
+      "published_parsed": "2026-07-13"
+    },
+    {
+      "title": "明天又要赶路十小时",
+      "link": "https://www.immarcus.com/blog/ten-hour-drive-tomorrow-again",
+      "published": "Sun, 12 Jul 2026 00:00:00 GMT",
+      "published_parsed": "2026-07-12"
+    },
+    {
+      "title": "尼阿加拉大瀑布",
+      "link": "https://www.immarcus.com/blog/niagara-falls",
+      "published": "Sat, 11 Jul 2026 00:00:00 GMT",
+      "published_parsed": "2026-07-11"
+    },
+    {
+      "title": "独立 vs 依赖",
+      "link": "https://www.immarcus.com/blog/independence-vs-dependence",
+      "published": "Fri, 10 Jul 2026 00:00:00 GMT",
+      "published_parsed": "2026-07-10"
+    },
+    {
+      "title": "遵守法律的两条路",
+      "link": "https://www.immarcus.com/blog/two-ways-to-uphold-law",
+      "published": "Thu, 09 Jul 2026 00:00:00 GMT",
+      "published_parsed": "2026-07-09"
+    },
+    {
+      "title": "假装缩略语",
+      "link": "https://www.immarcus.com/blog/pretend-as-acronyms",
+      "published": "Wed, 08 Jul 2026 00:00:00 GMT",
+      "published_parsed": "2026-07-08"
+    },
+    {
+      "title": "热血足球的发源地",
+      "link": "https://www.immarcus.com/blog/calcio-storico",
+      "published": "Tue, 07 Jul 2026 00:00:00 GMT",
+      "published_parsed": "2026-07-07"
+    },
+    {
+      "title": "世界奇妙物语",
+      "link": "https://www.immarcus.com/blog/yonimo-kimyona-monogatari",
+      "published": "Mon, 06 Jul 2026 00:00:00 GMT",
+      "published_parsed": "2026-07-06"
+    },
+    {
+      "title": "2026.07.05 博客阅读周记",
+      "link": "https://www.immarcus.com/blog/weekly-20260705",
+      "published": "Sun, 05 Jul 2026 00:00:00 GMT",
+      "published_parsed": "2026-07-05"
+    },
+    {
+      "title": "内容的权威来源",
+      "link": "https://www.immarcus.com/blog/authoritative-source-of-content",
+      "published": "Sat, 04 Jul 2026 00:00:00 GMT",
+      "published_parsed": "2026-07-04"
+    },
+    {
+      "title": "恐怖的烤鸡翅",
+      "link": "https://www.immarcus.com/blog/spooky-grilled-chicken-wings",
+      "published": "Fri, 03 Jul 2026 00:00:00 GMT",
+      "published_parsed": "2026-07-03"
+    },
+    {
+      "title": "美国出生公民权的判决",
+      "link": "https://www.immarcus.com/blog/scotus-birthright-citizenship",
+      "published": "Thu, 02 Jul 2026 00:00:00 GMT",
+      "published_parsed": "2026-07-02"
+    },
+    {
+      "title": "写博客也许是一种自我救赎",
+      "link": "https://www.immarcus.com/blog/writing-blog-as-self-redemption",
+      "published": "Wed, 01 Jul 2026 00:00:00 GMT",
+      "published_parsed": "2026-07-01"
+    },
+    {
+      "title": "时间的交换",
+      "link": "https://www.immarcus.com/blog/exchange-of-time",
+      "published": "Tue, 30 Jun 2026 00:00:00 GMT",
+      "published_parsed": "2026-06-30"
+    },
+    {
+      "title": "魔法的世界",
+      "link": "https://www.immarcus.com/blog/world-of-magic",
+      "published": "Mon, 29 Jun 2026 00:00:00 GMT",
+      "published_parsed": "2026-06-29"
+    },
+    {
+      "title": "今日驾驶流水账",
+      "link": "https://www.immarcus.com/blog/todays-driving-diary",
+      "published": "Sun, 28 Jun 2026 00:00:00 GMT",
+      "published_parsed": "2026-06-28"
+    },
+    {
+      "title": "明天开车十小时",
+      "link": "https://www.immarcus.com/blog/ten-hour-drive-tomorrow",
+      "published": "Sat, 27 Jun 2026 00:00:00 GMT",
+      "published_parsed": "2026-06-27"
+    },
+    {
+      "title": "英语角",
+      "link": "https://www.immarcus.com/blog/english-corner",
+      "published": "Fri, 26 Jun 2026 00:00:00 GMT",
+      "published_parsed": "2026-06-26"
+    },
+    {
+      "title": "「所有平台都是跟踪器」",
+      "link": "https://www.immarcus.com/blog/all-platforms-are-trackers",
+      "published": "Thu, 25 Jun 2026 00:00:00 GMT",
+      "published_parsed": "2026-06-25"
+    },
+    {
+      "title": "里程游戏再开",
+      "link": "https://www.immarcus.com/blog/resuming-mileage-game",
+      "published": "Wed, 24 Jun 2026 00:00:00 GMT",
+      "published_parsed": "2026-06-24"
+    },
+    {
+      "title": "硬件的复兴？",
+      "link": "https://www.immarcus.com/blog/revival-of-hardware",
+      "published": "Tue, 23 Jun 2026 00:00:00 GMT",
+      "published_parsed": "2026-06-23"
+    },
+    {
+      "title": "🧿",
+      "link": "https://www.immarcus.com/blog/amulet-of-nazar",
+      "published": "Mon, 22 Jun 2026 00:00:00 GMT",
+      "published_parsed": "2026-06-22"
     }
   ]
 }
