@@ -16,7 +16,7 @@ export const HOME_POSTS_COUNT = 16;
 
 // 页面标题和描述
 export const FRIENDS_PAGE_TITLE = 'Links';
-export const FRIENDS_PAGE_DESCRIPTION = '这里存放了我常去的一些独立博客的链接以及这些博客的最新RSS文章(如果你不希望自己的博客和文章在这里展示，请联系我删除)，这里不是友情链接展示，也不是邻居的的列表，就我个人而言，这些博客都是我喜欢的、能让我思考、我认为对我有价值的博客，欢迎访问。';
+export const FRIENDS_PAGE_DESCRIPTION = '这里是我常逛的独立博客，收录标准很简单：能让我思考、对我有价值。内容来自各站RSS，如不愿展示请联系我删除。欢迎逛逛。';
 export const BLOG_AGGREGATION_TITLE = '博客聚合';
 export const BLOG_AGGREGATION_DESCRIPTION = '一些优秀的博客聚合平台，可以发现更多有趣的独立博客。';
 export const PROJECTS_PAGE_TITLE = 'Projects';
