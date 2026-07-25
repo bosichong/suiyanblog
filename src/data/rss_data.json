@@ -67,12 +67,6 @@
       "link": "https://www.leitao.cn/10388.html",
       "published": "Sat, 27 Jun 2026 02:03:01 +0000",
       "published_parsed": "2026-06-27"
-    },
-    {
-      "title": "第八章 国家里面的市场：中国制内市场的历史逻辑",
-      "link": "https://www.leitao.cn/10386.html",
-      "published": "Fri, 26 Jun 2026 02:31:44 +0000",
-      "published_parsed": "2026-06-26"
     }
   ],
   "https://Vind.ink": [
@@ -139,6 +133,12 @@
   ],
   "https://mobius.blog": [
     {
+      "title": "为了反对而反对的人，如何反对为了反对而反对他们的人？",
+      "link": "https://mobius.blog/25145.html",
+      "published": "Fri, 24 Jul 2026 01:00:00 +0000",
+      "published_parsed": "2026-07-24"
+    },
+    {
       "title": "AI 还原已故亲人，也制造精神病人？II",
       "link": "https://mobius.blog/25130.html",
       "published": "Thu, 23 Jul 2026 01:00:00 +0000",
@@ -191,15 +191,15 @@
       "link": "https://mobius.blog/25071.html",
       "published": "Tue, 14 Jul 2026 03:33:44 +0000",
       "published_parsed": "2026-07-14"
-    },
-    {
-      "title": "梦女又没有伤害谁，凭什么批评她们？",
-      "link": "https://mobius.blog/25059.html",
-      "published": "Mon, 13 Jul 2026 01:00:00 +0000",
-      "published_parsed": "2026-07-13"
     }
   ],
   "https://www.ruanyifeng.com/blog": [
+    {
+      "title": "科技爱好者周刊（第 405 期）：资源，社会公平与算力",
+      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-405.html",
+      "published": "2026-07-24T00:12:16Z",
+      "published_parsed": "2026-07-24"
+    },
     {
       "title": "科技爱好者周刊（第 404 期）：你需要知道的 AI 内存知识",
       "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-404.html",
@@ -211,20 +211,41 @@
       "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-403.html",
       "published": "2026-07-10T00:05:31Z",
       "published_parsed": "2026-07-10"
-    },
-    {
-      "title": "科技爱好者周刊（第 402 期）：我在智念 AI 的日子（小说）",
-      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-402.html",
-      "published": "2026-07-02T23:33:49Z",
-      "published_parsed": "2026-07-02"
     }
   ],
   "https://wangyurui.com": [],
+  "https://wiki.eryajf.net": [
+    {
+      "title": "学习周刊-总第273期-2026年第30周",
+      "link": "https://wiki.eryajf.net/pages/8085fe/",
+      "published": "Thu, 23 Jul 2026 21:51:09 GMT",
+      "published_parsed": "2026-07-23"
+    },
+    {
+      "title": "学习周刊-总第272期-2026年第29周",
+      "link": "https://wiki.eryajf.net/pages/b07ecd/",
+      "published": "Thu, 16 Jul 2026 23:18:10 GMT",
+      "published_parsed": "2026-07-16"
+    },
+    {
+      "title": "学习周刊-总第271期-2026年第28周",
+      "link": "https://wiki.eryajf.net/pages/87cbc1/",
+      "published": "Fri, 10 Jul 2026 08:57:16 GMT",
+      "published_parsed": "2026-07-10"
+    },
+    {
+      "title": "学习周刊-总第270期-2026年第27周",
+      "link": "https://wiki.eryajf.net/pages/0ef849/",
+      "published": "Thu, 02 Jul 2026 21:48:38 GMT",
+      "published_parsed": "2026-07-02"
+    }
+  ],
+  "https://www.tortorse.com": [],
   "https://blog.mfwt.top": [
     {
       "title": "无用命途：布谷鸟叫（可选屏蔽）",
       "link": "https://blog.mfwt.top/index.php/archives/1444/",
-      "published": "Thu, 23 Jul 2026 23:54:33 +0800",
+      "published": "Thu, 23 Jul 2026 23:54:00 +0800",
       "published_parsed": "2026-07-23"
     },
     {
@@ -271,6 +292,12 @@
     }
   ],
   "https://zhongxiaojie.com": [
+    {
+      "title": "折耳兔",
+      "link": "https://zhongxiaojie.cn/2026/07/1703/",
+      "published": "Fri, 24 Jul 2026 01:43:48 +0000",
+      "published_parsed": "2026-07-24"
+    },
     {
       "title": "若生如野草",
       "link": "https://zhongxiaojie.cn/2026/07/1685/",
@@ -326,33 +353,6 @@
       "published_parsed": "2026-06-29"
     }
   ],
-  "https://wiki.eryajf.net": [
-    {
-      "title": "学习周刊-总第273期-2026年第30周",
-      "link": "https://wiki.eryajf.net/pages/8085fe/",
-      "published": "Thu, 23 Jul 2026 21:51:09 GMT",
-      "published_parsed": "2026-07-23"
-    },
-    {
-      "title": "学习周刊-总第272期-2026年第29周",
-      "link": "https://wiki.eryajf.net/pages/b07ecd/",
-      "published": "Thu, 16 Jul 2026 23:18:10 GMT",
-      "published_parsed": "2026-07-16"
-    },
-    {
-      "title": "学习周刊-总第271期-2026年第28周",
-      "link": "https://wiki.eryajf.net/pages/87cbc1/",
-      "published": "Fri, 10 Jul 2026 08:57:16 GMT",
-      "published_parsed": "2026-07-10"
-    },
-    {
-      "title": "学习周刊-总第270期-2026年第27周",
-      "link": "https://wiki.eryajf.net/pages/0ef849/",
-      "published": "Thu, 02 Jul 2026 21:48:38 GMT",
-      "published_parsed": "2026-07-02"
-    }
-  ],
-  "https://www.tortorse.com": [],
   "https://www.vergilisme.com": [
     {
       "title": "新起点，新时代，新故事",
@@ -387,38 +387,6 @@
       "published_parsed": "2026-07-08"
     }
   ],
-  "https://lawtee.com": [
-    {
-      "title": "14亿中国人在世界的位置",
-      "link": "https://lawtee.com/article/economic-status-of-chinese/",
-      "published": "Thu, 16 Jul 2026 18:24:30 +0000",
-      "published_parsed": "2026-07-16"
-    },
-    {
-      "title": "2026年上半年说说：历史的追问",
-      "link": "https://lawtee.com/article/2026-half-year/",
-      "published": "Wed, 15 Jul 2026 02:55:42 +0000",
-      "published_parsed": "2026-07-15"
-    },
-    {
-      "title": "三十年，一所地方大学的改名记",
-      "link": "https://lawtee.com/article/foshan-university/",
-      "published": "Mon, 13 Jul 2026 00:28:13 +0000",
-      "published_parsed": "2026-07-13"
-    },
-    {
-      "title": "纸笔、AI，和学习那点事",
-      "link": "https://lawtee.com/article/paper-pencil-and-ai/",
-      "published": "Fri, 10 Jul 2026 05:23:20 +0000",
-      "published_parsed": "2026-07-10"
-    },
-    {
-      "title": "证据不足，到底是谁的责任？",
-      "link": "https://lawtee.com/article/liability-arising-from-insufficient-evidence/",
-      "published": "Thu, 02 Jul 2026 18:21:31 +0000",
-      "published_parsed": "2026-07-02"
-    }
-  ],
   "https://yipai.me": [
     {
       "title": "反对狗奴与反对虐狗并不冲突",
@@ -440,6 +408,12 @@
     }
   ],
   "https://d-d.design": [
+    {
+      "title": "国产模型太NB了",
+      "link": "https://d-d.design/single/19824",
+      "published": "Fri, 24 Jul 2026 21:50:22 +0000",
+      "published_parsed": "2026-07-24"
+    },
     {
       "title": "很想写些荷尔蒙很强的东西",
       "link": "https://d-d.design/single/19816",
@@ -493,11 +467,37 @@
       "link": "https://d-d.design/single/19535",
       "published": "Sat, 04 Jul 2026 11:05:16 +0000",
       "published_parsed": "2026-07-04"
+    }
+  ],
+  "https://lawtee.com": [
+    {
+      "title": "14亿中国人在世界的位置",
+      "link": "https://lawtee.com/article/economic-status-of-chinese/",
+      "published": "Thu, 16 Jul 2026 18:24:30 +0000",
+      "published_parsed": "2026-07-16"
     },
     {
-      "title": "简单聊一下抄我博客这件事",
-      "link": "https://d-d.design/single/19498",
-      "published": "Thu, 02 Jul 2026 10:03:17 +0000",
+      "title": "2026年上半年说说：历史的追问",
+      "link": "https://lawtee.com/article/2026-half-year/",
+      "published": "Wed, 15 Jul 2026 02:55:42 +0000",
+      "published_parsed": "2026-07-15"
+    },
+    {
+      "title": "三十年，一所地方大学的改名记",
+      "link": "https://lawtee.com/article/foshan-university/",
+      "published": "Mon, 13 Jul 2026 00:28:13 +0000",
+      "published_parsed": "2026-07-13"
+    },
+    {
+      "title": "纸笔、AI，和学习那点事",
+      "link": "https://lawtee.com/article/paper-pencil-and-ai/",
+      "published": "Fri, 10 Jul 2026 05:23:20 +0000",
+      "published_parsed": "2026-07-10"
+    },
+    {
+      "title": "证据不足，到底是谁的责任？",
+      "link": "https://lawtee.com/article/liability-arising-from-insufficient-evidence/",
+      "published": "Thu, 02 Jul 2026 18:21:31 +0000",
       "published_parsed": "2026-07-02"
     }
   ],
@@ -510,6 +510,12 @@
     }
   ],
   "https://usj.cc": [
+    {
+      "title": "流量卡还真得选御三家😂",
+      "link": "https://usj.cc/20260724101237.html",
+      "published": "Fri, 24 Jul 2026 00:00:00 +0000",
+      "published_parsed": "2026-07-24"
+    },
     {
       "title": "最成功的一次红烧鱼",
       "link": "https://usj.cc/20260718222522.html",
@@ -539,14 +545,9 @@
       "link": "https://usj.cc/20260629223659.html",
       "published": "Mon, 29 Jun 2026 00:00:00 +0000",
       "published_parsed": "2026-06-29"
-    },
-    {
-      "title": "小黄的富士随拍：🌲和 🐈",
-      "link": "https://usj.cc/20260626121417.html",
-      "published": "Fri, 26 Jun 2026 00:00:00 +0000",
-      "published_parsed": "2026-06-26"
     }
   ],
+  "https://pathos.page": [],
   "https://yihui.org/cn": [],
   "https://blog.bxaw.name": [
     {
@@ -556,16 +557,8 @@
       "published_parsed": "2026-07-15"
     }
   ],
-  "https://pathos.page": [],
   "https://www.glowisle.me": [],
-  "https://www.owenyoung.com": [
-    {
-      "title": "当前想置顶的一些内容",
-      "link": "https://www.owenyoung.com/pinned",
-      "published": "2026-07-16T02:54:00.000Z",
-      "published_parsed": "2026-07-16"
-    }
-  ],
+  "https://cyrus19.cc": [],
   "https://www.demochen.com": [
     {
       "title": "探索 AI 时代的人机协作",
@@ -575,7 +568,6 @@
     }
   ],
   "https://www.scarsu.com": [],
-  "https://cyrus19.cc": [],
   "https://z.arlmy.me": [
     {
       "title": "最近惦念 20260705",
@@ -681,6 +673,12 @@
     }
   ],
   "https://immarcus.com": [
+    {
+      "title": "超～长篇博客",
+      "link": "https://www.immarcus.com/blog/cytrogen-returns-s",
+      "published": "Fri, 24 Jul 2026 00:00:00 GMT",
+      "published_parsed": "2026-07-24"
+    },
     {
       "title": "疯狂的美国体育文化",
       "link": "https://www.immarcus.com/blog/crazy-sports-culture-in-usa",
@@ -836,18 +834,14 @@
       "link": "https://www.immarcus.com/blog/todays-driving-diary",
       "published": "Sun, 28 Jun 2026 00:00:00 GMT",
       "published_parsed": "2026-06-28"
-    },
+    }
+  ],
+  "https://www.owenyoung.com": [
     {
-      "title": "明天开车十小时",
-      "link": "https://www.immarcus.com/blog/ten-hour-drive-tomorrow",
-      "published": "Sat, 27 Jun 2026 00:00:00 GMT",
-      "published_parsed": "2026-06-27"
-    },
-    {
-      "title": "英语角",
-      "link": "https://www.immarcus.com/blog/english-corner",
-      "published": "Fri, 26 Jun 2026 00:00:00 GMT",
-      "published_parsed": "2026-06-26"
+      "title": "当前想置顶的一些内容",
+      "link": "https://www.owenyoung.com/pinned",
+      "published": "2026-07-16T02:54:00.000Z",
+      "published_parsed": "2026-07-16"
     }
   ]
 }
