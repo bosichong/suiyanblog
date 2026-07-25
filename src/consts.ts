@@ -36,6 +36,15 @@ export const MENU_ITEMS = [
 // 链接
 export const FRIENDS_LINKS = [
 
+  {
+    site_name: 'Cytrogen的个人博客',
+    site_url: 'https://blog.cytrogen.icu/',
+    site_description: 'Cytrogen 的个人博客',
+    site_avatar: 'https://blog.cytrogen.icu/favicon.png',
+    is_active: true,
+    rss:'https://blog.cytrogen.icu/atom.xml',
+  },
+
     {
     site_name: '风·墨',
     site_url: 'https://Vind.ink',
