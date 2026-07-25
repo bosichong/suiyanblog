@@ -350,6 +350,13 @@ export const BLOG_AGGREGATIONS = [
     site_url: 'https://bo.ke/',
     site_description: '发现值得反复阅读的独立博客'
   },
+
+    {
+    site_name: '笔墨迹',
+    site_url: 'https://blogscn.fun/',
+    site_description: '发现仍在认真写作的中文独立博客，浏览推荐、最新与分类文章。'
+  },
+
   {
     site_name: '你来啦！',
     site_url: 'https://nilai.la/',
