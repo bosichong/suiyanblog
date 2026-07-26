@@ -23,19 +23,13 @@
       "link": "https://www.leitao.cn/10405.html",
       "published": "Wed, 01 Jul 2026 03:56:30 +0000",
       "published_parsed": "2026-07-01"
-    },
-    {
-      "title": "第十章 超越主义之争：经济学与人类合作的未来",
-      "link": "https://www.leitao.cn/10390.html",
-      "published": "Sun, 28 Jun 2026 02:04:14 +0000",
-      "published_parsed": "2026-06-28"
     }
   ],
   "https://liwanr.com": [
     {
       "title": "在梦里死了，又活了",
       "link": "https://liWanr.com/essays/2026/living-after-death/",
-      "published": "Tue, 21 Jul 2026 22:25:16 +0800",
+      "published": "Tue, 21 Jul 2026 14:25:16 +0800",
       "published_parsed": "2026-07-21"
     },
     {
@@ -125,7 +119,33 @@
       "published_parsed": "2026-07-12"
     }
   ],
+  "https://www.ruanyifeng.com/blog": [
+    {
+      "title": "科技爱好者周刊（第 405 期）：资源，社会公平与算力",
+      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-405.html",
+      "published": "2026-07-24T00:12:16Z",
+      "published_parsed": "2026-07-24"
+    },
+    {
+      "title": "科技爱好者周刊（第 404 期）：你需要知道的 AI 内存知识",
+      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-404.html",
+      "published": "2026-07-16T23:51:19Z",
+      "published_parsed": "2026-07-16"
+    },
+    {
+      "title": "科技爱好者周刊（第 403 期）：为什么 Dropbox 不成功",
+      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-403.html",
+      "published": "2026-07-10T00:05:31Z",
+      "published_parsed": "2026-07-10"
+    }
+  ],
   "https://mobius.blog": [
+    {
+      "title": "≡ 005｜这两周莫比乌斯环转到了哪里？",
+      "link": "https://mobius.blog/25160.html",
+      "published": "Sun, 26 Jul 2026 01:00:00 +0000",
+      "published_parsed": "2026-07-26"
+    },
     {
       "title": "厕所",
       "link": "https://mobius.blog/25199.html",
@@ -179,32 +199,6 @@
       "link": "https://mobius.blog/25093.html",
       "published": "Thu, 16 Jul 2026 12:01:08 +0000",
       "published_parsed": "2026-07-16"
-    },
-    {
-      "title": "求医不如求神",
-      "link": "https://mobius.blog/25080.html",
-      "published": "Wed, 15 Jul 2026 01:25:49 +0000",
-      "published_parsed": "2026-07-15"
-    }
-  ],
-  "https://www.ruanyifeng.com/blog": [
-    {
-      "title": "科技爱好者周刊（第 405 期）：资源，社会公平与算力",
-      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-405.html",
-      "published": "2026-07-24T00:12:16Z",
-      "published_parsed": "2026-07-24"
-    },
-    {
-      "title": "科技爱好者周刊（第 404 期）：你需要知道的 AI 内存知识",
-      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-404.html",
-      "published": "2026-07-16T23:51:19Z",
-      "published_parsed": "2026-07-16"
-    },
-    {
-      "title": "科技爱好者周刊（第 403 期）：为什么 Dropbox 不成功",
-      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-403.html",
-      "published": "2026-07-10T00:05:31Z",
-      "published_parsed": "2026-07-10"
     }
   ],
   "https://wangyurui.com": [],
@@ -250,12 +244,6 @@
       "link": "https://blog.mfwt.top/index.php/archives/1410/",
       "published": "Sat, 04 Jul 2026 19:58:00 +0800",
       "published_parsed": "2026-07-04"
-    },
-    {
-      "title": "JustWrite：只要写，就行了",
-      "link": "https://blog.mfwt.top/index.php/archives/1388/",
-      "published": "Sun, 28 Jun 2026 23:53:46 +0800",
-      "published_parsed": "2026-06-28"
     }
   ],
   "https://www.tortorse.com": [],
@@ -495,130 +483,6 @@
       "published_parsed": "2026-07-04"
     }
   ],
-  "https://sliun.com": [
-    {
-      "title": "康德与人参果 #1",
-      "link": "https://sliun.com/kantandcaohuandan1/",
-      "published": "2026-07-19T13:56:00+00:00",
-      "published_parsed": "2026-07-19"
-    }
-  ],
-  "https://yihui.org/cn": [],
-  "https://pathos.page": [],
-  "https://blog.bxaw.name": [
-    {
-      "title": "他想「认识」的不是「我」",
-      "link": "https://blog.bxaw.name/archives/He-Was-Never-Interested-in-Knowing-Me.html",
-      "published": "Wed, 15 Jul 2026 14:35:41 +0800",
-      "published_parsed": "2026-07-15"
-    }
-  ],
-  "https://www.glowisle.me": [],
-  "https://z.arlmy.me": [
-    {
-      "title": "最近惦念 20260705",
-      "link": "https://z.arlmy.me/posts/TILs/thoughts/20260705_Recently/",
-      "published": "2026-07-20T03:21:27.000Z",
-      "published_parsed": "2026-07-20"
-    },
-    {
-      "title": "波动的理解",
-      "link": "https://z.arlmy.me/posts/ZArlmyMe/Damping_20260719/",
-      "published": "2026-07-19T15:51:03.000Z",
-      "published_parsed": "2026-07-19"
-    },
-    {
-      "title": "游牧地活着",
-      "link": "https://z.arlmy.me/posts/ZArlmyMe/BeHunterGatherer_20260719/",
-      "published": "2026-07-19T14:41:03.000Z",
-      "published_parsed": "2026-07-19"
-    },
-    {
-      "title": "Toots 428 2026 Jul.12 - Jul.18",
-      "link": "https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260718/",
-      "published": "2026-07-19T04:00:27.000Z",
-      "published_parsed": "2026-07-19"
-    },
-    {
-      "title": "Toots 427 2026 Jul.5 - Jul.11",
-      "link": "https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260711/",
-      "published": "2026-07-12T09:20:27.000Z",
-      "published_parsed": "2026-07-12"
-    },
-    {
-      "title": "无名",
-      "link": "https://z.arlmy.me/posts/Poems/2026/20260708_WuMing/",
-      "published": "2026-07-12T09:12:27.000Z",
-      "published_parsed": "2026-07-12"
-    },
-    {
-      "title": "摘：《李卓吾·两种阳明学》",
-      "link": "https://z.arlmy.me/posts/Note/Note_GouKouXiongSan_LiZhuoWuLiangZhongYangMingXue/",
-      "published": "2026-07-11T07:53:46.000Z",
-      "published_parsed": "2026-07-11"
-    },
-    {
-      "title": "摘：《我就要自由》",
-      "link": "https://z.arlmy.me/posts/Note/Note_ZuoYeYangZi_WoJiuYaoZiYou/",
-      "published": "2026-07-11T07:49:46.000Z",
-      "published_parsed": "2026-07-11"
-    },
-    {
-      "title": "摘：《见证疯狂》",
-      "link": "https://z.arlmy.me/posts/Note/Note_MikeJay_ThisWayMadnessLiesTheAsylumAndBeyond/",
-      "published": "2026-07-10T16:14:46.000Z",
-      "published_parsed": "2026-07-10"
-    },
-    {
-      "title": "摘：《微笑偷盗者》",
-      "link": "https://z.arlmy.me/posts/Note/Note_RichardBarnett_TheSmileStealersTheFineAndFoulArtOfDentistry/",
-      "published": "2026-07-08T16:14:46.000Z",
-      "published_parsed": "2026-07-08"
-    },
-    {
-      "title": "最近惦念 20260625",
-      "link": "https://z.arlmy.me/posts/TILs/thoughts/20260625_Recently/",
-      "published": "2026-07-05T00:35:27.000Z",
-      "published_parsed": "2026-07-05"
-    },
-    {
-      "title": "Toots 426 2026 Jun.27 - Jul.4",
-      "link": "https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260704/",
-      "published": "2026-07-05T00:26:27.000Z",
-      "published_parsed": "2026-07-05"
-    },
-    {
-      "title": "经过",
-      "link": "https://z.arlmy.me/posts/Poems/2026/20260629_JingGuo/",
-      "published": "2026-06-29T03:59:27.000Z",
-      "published_parsed": "2026-06-29"
-    },
-    {
-      "title": "但",
-      "link": "https://z.arlmy.me/posts/Poems/2026/20260629_Dan/",
-      "published": "2026-06-29T03:49:27.000Z",
-      "published_parsed": "2026-06-29"
-    },
-    {
-      "title": "普通",
-      "link": "https://z.arlmy.me/posts/Poems/2026/20260621_PuTong/",
-      "published": "2026-06-28T03:49:27.000Z",
-      "published_parsed": "2026-06-28"
-    },
-    {
-      "title": "最近惦念 20260615",
-      "link": "https://z.arlmy.me/posts/TILs/thoughts/20260615_Recently/",
-      "published": "2026-06-28T02:39:27.000Z",
-      "published_parsed": "2026-06-28"
-    },
-    {
-      "title": "Toots 425 2026 Jun.21 - Jun.27",
-      "link": "https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260627/",
-      "published": "2026-06-28T02:34:27.000Z",
-      "published_parsed": "2026-06-28"
-    }
-  ],
-  "https://cyrus19.cc": [],
   "https://usj.cc": [
     {
       "title": "流量卡还真得选御三家😂",
@@ -657,6 +521,26 @@
       "published_parsed": "2026-06-29"
     }
   ],
+  "https://sliun.com": [
+    {
+      "title": "康德与人参果 #1",
+      "link": "https://sliun.com/kantandcaohuandan1/",
+      "published": "2026-07-19T13:56:00+00:00",
+      "published_parsed": "2026-07-19"
+    }
+  ],
+  "https://pathos.page": [],
+  "https://blog.bxaw.name": [
+    {
+      "title": "他想「认识」的不是「我」",
+      "link": "https://blog.bxaw.name/archives/He-Was-Never-Interested-in-Knowing-Me.html",
+      "published": "Wed, 15 Jul 2026 14:35:41 +0800",
+      "published_parsed": "2026-07-15"
+    }
+  ],
+  "https://yihui.org/cn": [],
+  "https://www.glowisle.me": [],
+  "https://www.scarsu.com": [],
   "https://www.demochen.com": [
     {
       "title": "探索 AI 时代的人机协作",
@@ -665,8 +549,13 @@
       "published_parsed": "2026-07-22"
     }
   ],
-  "https://www.scarsu.com": [],
   "https://immarcus.com": [
+    {
+      "title": "2026.07.26 博客阅读周记",
+      "link": "https://www.immarcus.com/blog/weekly-20260726",
+      "published": "Sun, 26 Jul 2026 00:00:00 GMT",
+      "published_parsed": "2026-07-26"
+    },
     {
       "title": "豆子如何产生价值",
       "link": "https://www.immarcus.com/blog/how-a-bean-creates-value",
@@ -828,15 +717,122 @@
       "link": "https://www.immarcus.com/blog/world-of-magic",
       "published": "Mon, 29 Jun 2026 00:00:00 GMT",
       "published_parsed": "2026-06-29"
-    },
-    {
-      "title": "今日驾驶流水账",
-      "link": "https://www.immarcus.com/blog/todays-driving-diary",
-      "published": "Sun, 28 Jun 2026 00:00:00 GMT",
-      "published_parsed": "2026-06-28"
     }
   ],
+  "https://z.arlmy.me": [
+    {
+      "title": "最近惦念 20260716",
+      "link": "https://z.arlmy.me/posts/TILs/thoughts/20260716_Recently/",
+      "published": "2026-07-26T04:10:27.000Z",
+      "published_parsed": "2026-07-26"
+    },
+    {
+      "title": "Toots 429 2026 Jul.19 - Jul.25",
+      "link": "https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260725/",
+      "published": "2026-07-26T04:02:27.000Z",
+      "published_parsed": "2026-07-26"
+    },
+    {
+      "title": "最近惦念 20260705",
+      "link": "https://z.arlmy.me/posts/TILs/thoughts/20260705_Recently/",
+      "published": "2026-07-20T03:21:27.000Z",
+      "published_parsed": "2026-07-20"
+    },
+    {
+      "title": "波动的理解",
+      "link": "https://z.arlmy.me/posts/ZArlmyMe/Damping_20260719/",
+      "published": "2026-07-19T15:51:03.000Z",
+      "published_parsed": "2026-07-19"
+    },
+    {
+      "title": "游牧地活着",
+      "link": "https://z.arlmy.me/posts/ZArlmyMe/BeHunterGatherer_20260719/",
+      "published": "2026-07-19T14:41:03.000Z",
+      "published_parsed": "2026-07-19"
+    },
+    {
+      "title": "Toots 428 2026 Jul.12 - Jul.18",
+      "link": "https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260718/",
+      "published": "2026-07-19T04:00:27.000Z",
+      "published_parsed": "2026-07-19"
+    },
+    {
+      "title": "Toots 427 2026 Jul.5 - Jul.11",
+      "link": "https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260711/",
+      "published": "2026-07-12T09:20:27.000Z",
+      "published_parsed": "2026-07-12"
+    },
+    {
+      "title": "无名",
+      "link": "https://z.arlmy.me/posts/Poems/2026/20260708_WuMing/",
+      "published": "2026-07-12T09:12:27.000Z",
+      "published_parsed": "2026-07-12"
+    },
+    {
+      "title": "摘：《李卓吾·两种阳明学》",
+      "link": "https://z.arlmy.me/posts/Note/Note_GouKouXiongSan_LiZhuoWuLiangZhongYangMingXue/",
+      "published": "2026-07-11T07:53:46.000Z",
+      "published_parsed": "2026-07-11"
+    },
+    {
+      "title": "摘：《我就要自由》",
+      "link": "https://z.arlmy.me/posts/Note/Note_ZuoYeYangZi_WoJiuYaoZiYou/",
+      "published": "2026-07-11T07:49:46.000Z",
+      "published_parsed": "2026-07-11"
+    },
+    {
+      "title": "摘：《见证疯狂》",
+      "link": "https://z.arlmy.me/posts/Note/Note_MikeJay_ThisWayMadnessLiesTheAsylumAndBeyond/",
+      "published": "2026-07-10T16:14:46.000Z",
+      "published_parsed": "2026-07-10"
+    },
+    {
+      "title": "摘：《微笑偷盗者》",
+      "link": "https://z.arlmy.me/posts/Note/Note_RichardBarnett_TheSmileStealersTheFineAndFoulArtOfDentistry/",
+      "published": "2026-07-08T16:14:46.000Z",
+      "published_parsed": "2026-07-08"
+    },
+    {
+      "title": "最近惦念 20260625",
+      "link": "https://z.arlmy.me/posts/TILs/thoughts/20260625_Recently/",
+      "published": "2026-07-05T00:35:27.000Z",
+      "published_parsed": "2026-07-05"
+    },
+    {
+      "title": "Toots 426 2026 Jun.27 - Jul.4",
+      "link": "https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260704/",
+      "published": "2026-07-05T00:26:27.000Z",
+      "published_parsed": "2026-07-05"
+    },
+    {
+      "title": "经过",
+      "link": "https://z.arlmy.me/posts/Poems/2026/20260629_JingGuo/",
+      "published": "2026-06-29T03:59:27.000Z",
+      "published_parsed": "2026-06-29"
+    },
+    {
+      "title": "但",
+      "link": "https://z.arlmy.me/posts/Poems/2026/20260629_Dan/",
+      "published": "2026-06-29T03:49:27.000Z",
+      "published_parsed": "2026-06-29"
+    }
+  ],
+  "https://www.owenyoung.com": [
+    {
+      "title": "当前想置顶的一些内容",
+      "link": "https://www.owenyoung.com/pinned",
+      "published": "2026-07-16T02:54:00.000Z",
+      "published_parsed": "2026-07-16"
+    }
+  ],
+  "https://cyrus19.cc": [],
   "https://blog.cytrogen.icu": [
+    {
+      "title": "大熊猫送快递",
+      "link": "https://blog.cytrogen.icu/posts/3a5e.html",
+      "published": "2026-07-25T04:00:00.000Z",
+      "published_parsed": "2026-07-25"
+    },
     {
       "title": "想法在丙午荷月迭代",
       "link": "https://blog.cytrogen.icu/posts/b02e.html",
@@ -849,6 +845,5 @@
       "published": "2026-07-01T04:00:00.000Z",
       "published_parsed": "2026-07-01"
     }
-  ],
-  "https://www.owenyoung.com": []
+  ]
 }
