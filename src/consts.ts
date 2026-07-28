@@ -28,8 +28,8 @@ export const MENU_ITEMS = [
   // { name: '归档', href: '/archive', icon: 'archive' },
   // { name: '搜索', href: '/search', icon: 'magnify' },
   // { name: '标签', href: '/tags', icon: 'tag' },
-  { name: 'Links', href: '/links', icon: 'link-variant' },
   { name: 'Projects', href: '/projects', icon: 'folder-open' },
+  { name: 'Links', href: '/links', icon: 'link-variant' },
   { name: 'About', href: '/about', icon: 'information-outline' },
 ];
 
