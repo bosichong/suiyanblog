@@ -8,21 +8,16 @@ import Header from '../components/Header.astro';
 import BackToTop from '../components/BackToTop.astro';
 import TagList from '../components/TagList.astro';
 import PostActions from '../components/PostActions.astro';
-import RelatedPosts from '../components/RelatedPosts.astro';
 import { SITE_AUTHOR } from '../consts';
 import { Icon } from 'astro-icon/components';
 import AILabelBadge from '../components/AILabelBadge.astro';
 import ReadingProgress from '../components/ReadingProgress.astro';
 
 type Props = CollectionEntry<'blog'>['data'] & {
-	prevPost?: CollectionEntry<'blog'> | null;
-	nextPost?: CollectionEntry<'blog'> | null;
 	postId?: string;
-	relatedPosts?: CollectionEntry<'blog'>[];
-	readingTime?: number;
 };
 
-const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai_label, prevPost, nextPost, postId, relatedPosts, readingTime } = Astro.props;
+const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai_label, postId } = Astro.props;
 ---
 
 <html lang="zh-CN">
@@ -183,72 +178,17 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 			.meta-item.updated {
 				font-style: italic;
 			}
-			.ai-label {
-				margin-bottom: 0.75em;
-			}
-			.reading-time {
-				display: inline-flex;
-				align-items: center;
+			.meta .ai-label :global(.ai-badge) {
+				padding: 0;
+				background: none;
+				border: none;
+				border-radius: 0;
 				gap: 0.25rem;
-				color: rgb(var(--gray));
-				font-size: 0.9rem;
-			}
-			.reading-time svg {
-				color: var(--accent);
-			}
-			.post-navigation {
-				display: flex;
-				justify-content: space-between;
-				gap: 1rem;
-				margin: 3rem 0;
-				padding: 1.5rem;
-				background: transparent;
-				border: 1px solid var(--border);
-				border-radius: 12px;
-			}
-			.post-navigation a {
-				flex: 1;
-				padding: 1rem;
-				background: var(--bg-soft);
-				border-radius: 8px;
-				text-decoration: none;
-				color: var(--text-color);
-				transition: all 0.2s ease;
-				display: flex;
-				flex-direction: column;
-				gap: 0.5rem;
-			}
-			.post-navigation a:hover {
-				background: var(--accent-soft);
-				color: var(--accent-dark);
-				transform: translateY(-1px);
-			}
-			.post-navigation .nav-label {
-				font-size: 0.85rem;
-				color: var(--footer-text);
-				font-weight: 500;
-			}
-			.post-navigation a:hover .nav-label {
-				color: var(--accent);
-			}
-			.post-navigation .nav-title {
-				font-size: 1rem;
-				font-weight: 600;
-				line-height: 1.4;
-			}
-			.post-navigation .prev {
-				text-align: left;
-			}
-			.post-navigation .next {
-				text-align: right;
+				font-size: inherit;
+				font-weight: inherit;
+				color: inherit;
 			}
 			@media (max-width: 720px) {
-				.post-navigation {
-					flex-direction: column;
-				}
-				.post-navigation a {
-					text-align: center;
-				}
 				.prose table {
 					font-size: 0.85rem;
 				}
@@ -273,6 +213,13 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 						<h1>{title}</h1>
 						<div class="meta">
 							<span class="meta-item">
+								<Icon name="mdi:account" width={18} height={18} aria-hidden="true" />
+								{SITE_AUTHOR}
+							</span>
+							<span class="meta-item ai-label">
+								<AILabelBadge level={ai_label} />
+							</span>
+							<span class="meta-item">
 								<Icon name="mdi:calendar" width={18} height={18} aria-hidden="true" />
 								<FormattedDate date={time} />
 							</span>
@@ -284,20 +231,7 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 									</span>
 								)
 							}
-							<span class="meta-item">
-								<Icon name="mdi:account" width={18} height={18} aria-hidden="true" />
-								{SITE_AUTHOR}
-							</span>
 						</div>
-						<div class="ai-label">
-							<AILabelBadge level={ai_label} />
-						</div>
-						{readingTime && readingTime > 0 && (
-							<div class="reading-time">
-								<Icon name="mdi:clock-outline" width={18} height={18} aria-hidden="true" />
-								{readingTime} 分钟阅读
-							</div>
-						)}
 					</div>
 					<div class="article-body">
 						<slot />
@@ -307,23 +241,7 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 
 					<PostActions postId={postId || ''} postPath={`/blog/${postId}`} />
 
-					<nav class="post-navigation">
-						{prevPost && (
-										<a href={`/blog/${prevPost.id}`} class="prev" aria-label={`上一篇：${prevPost.data.title}`}>
-											<span class="nav-label">上一篇</span>
-											<span class="nav-title">{prevPost.data.title}</span>
-										</a>
-									)}
-									{nextPost && (
-										<a href={`/blog/${nextPost.id}`} class="next" aria-label={`下一篇：${nextPost.data.title}`}>
-											<span class="nav-label">下一篇</span>
-											<span class="nav-title">{nextPost.data.title}</span>
-										</a>
-									)}					</nav>
 
-					{relatedPosts && relatedPosts.length > 0 && (
-						<RelatedPosts posts={relatedPosts} />
-					)}
 				</div>
 			</article>
 		</main>
