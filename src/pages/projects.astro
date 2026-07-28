@@ -1,14 +1,10 @@
 ---
-import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import BackToTop from '../components/BackToTop.astro';
 import { Icon } from 'astro-icon/components';
 import { PROJECTS, PROJECTS_PAGE_TITLE, PROJECTS_PAGE_DESCRIPTION, SITE_DESCRIPTION, SITE_TITLE } from '../consts';
-
-const allPosts = await getCollection('blog');
-const postMap = new Map(allPosts.map(p => [p.id, p.data]));
 
 const pageTitle = PROJECTS_PAGE_TITLE;
 const pageDescription = PROJECTS_PAGE_DESCRIPTION;
@@ -164,19 +160,6 @@ const pageDescription = PROJECTS_PAGE_DESCRIPTION;
 				gap: 0.4rem;
 			}
 
-			.project-meta:has(.post-link) {
-				flex-direction: column;
-				align-items: flex-start;
-				gap: 0.25rem;
-			}
-
-			.project-meta:has(.post-link) .meta-items {
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				gap: 0.25rem;
-			}
-
 			.repo-link {
 				display: inline-flex;
 				align-items: center;
@@ -226,20 +209,6 @@ const pageDescription = PROJECTS_PAGE_DESCRIPTION;
 
 			.project-card:hover .tech-tag {
 				color: var(--text-color);
-			}
-
-			.post-link {
-				display: flex;
-				align-items: center;
-				gap: 0.2rem;
-				font-size: 0.8rem;
-				color: var(--text-color);
-				text-decoration: none;
-				transition: color 0.2s ease;
-			}
-
-			.post-link:hover {
-				color: var(--accent);
 			}
 
 			@media (max-width: 720px) {
@@ -327,25 +296,6 @@ const pageDescription = PROJECTS_PAGE_DESCRIPTION;
 									</div>
 								)}
 
-								{project.relatedPosts && project.relatedPosts.length > 0 && (
-									<div class="project-meta">
-										<span class="meta-label">
-											<Icon name="mdi:file-document-outline" width={14} height={14} aria-hidden="true" />
-											相关文章
-										</span>
-										<span class="meta-items">
-											{project.relatedPosts.map(slug => {
-												const post = postMap.get(slug);
-												return post ? (
-													<a href={`/blog/${slug}`} class="post-link">
-														<Icon name="mdi:file-document-outline" width={13} height={13} aria-hidden="true" />
-														{post.title}
-													</a>
-												) : null;
-											})}
-										</span>
-									</div>
-								)}
 							</li>
 						))}
 					</ul>
