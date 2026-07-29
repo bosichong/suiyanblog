@@ -22,15 +22,7 @@ This is an Astro v5 blog theme based on the official blog starter template, cust
 
 ### Icon Integration
 - Uses `astro-icon` with selective Iconify imports
-- Only includes specific MDI icons: `['mastodon', 'linkedin', 'github', 'email', 'youtube', 'account', 'calendar', 'calendar-outline', 'account-outline', 'weather-sunny', 'weather-night']`
 - Configure in `astro.config.mjs` under integrations
-
-### Dark Mode Implementation
-- **Theme toggle**: Located in header (desktop right, mobile menu)
-- **Persistence**: Uses localStorage + system preference detection
-- **CSS variables**: Defined in `src/styles/global.css` with `[data-theme="dark"]` selector
-- **Accessibility**: Proper contrast ratios, focus states, and aria-labels
-- **Icons**: Sun/moon icons with smooth transitions and rotation effects
 
 ### Responsive Design Patterns
 - Mobile breakpoint: `@media (max-width: 900px)` for navigation

@@ -136,8 +136,6 @@ const commentsConfig = JSON.stringify(COMMENTS_CONFIG);
 	
 	// ---------- 加载 Giscus ----------
 	function loadGiscus(container: HTMLElement, config: any, postId: string) {
-		const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark_dimmed' : 'light';
-		
 		const giscusContainer = document.createElement('div');
 		giscusContainer.className = 'giscus';
 		container.appendChild(giscusContainer);
@@ -154,7 +152,7 @@ const commentsConfig = JSON.stringify(COMMENTS_CONFIG);
 		script.setAttribute('data-reactions-enabled', '1');
 		script.setAttribute('data-emit-metadata', '0');
 		script.setAttribute('data-input-position', 'bottom');
-		script.setAttribute('data-theme', theme);
+		script.setAttribute('data-theme', 'light');
 		script.setAttribute('crossorigin', 'anonymous');
 		script.async = true;
 		
@@ -184,27 +182,5 @@ const commentsConfig = JSON.stringify(COMMENTS_CONFIG);
 		document.head.appendChild(script);
 	}
 	
-	// ---------- 监听主题变化，更新 Giscus 主题 ----------
-	// 只在首次运行时注册一次（全局 documentElement 不会变）
-	if (!(window as any).__commentThemeObserver) {
-		const observer = new MutationObserver(() => {
-			if (!window.__commentState.giscusLoaded || window.__commentState.currentType !== 'giscus') return;
-			
-			const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark_dimmed' : 'light';
-			const content = document.getElementById('comment-content');
-			const iframe = content?.querySelector('iframe.giscus-frame');
-			if (iframe) {
-				(iframe.contentWindow as any)?.postMessage(
-					{ giscus: { setConfig: { theme } } },
-					'https://giscus.app'
-				);
-			}
-		});
-		
-		(window as any).__commentThemeObserver = observer;
-		observer.observe(document.documentElement, {
-			attributes: true,
-			attributeFilter: ['data-theme']
-		});
-	}
+
 </script>

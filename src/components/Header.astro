@@ -1,7 +1,6 @@
 ---
 import { MENU_ITEMS } from '../consts';
 import HeaderLink from './HeaderLink.astro';
-import ThemeToggle from './ThemeToggle.astro';
 import { Icon } from 'astro-icon/components';
 ---
 
@@ -10,7 +9,6 @@ import { Icon } from 'astro-icon/components';
 	<nav>
 		<div class="nav-inner">
 			<div class="nav-left">
-				<ThemeToggle />
 				<a href="/search" class="search-link" aria-label="搜索" title="搜索">
 					<Icon name="mdi:magnify" width={18} height={18} aria-hidden="true" />
 				</a>

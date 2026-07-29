@@ -75,10 +75,6 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 				padding: 0.1em 0.3em;
 				border-radius: 3px;
 			}
-			[data-theme="dark"] mark {
-				background: rgba(var(--gray), 25%);
-				color: var(--text);
-			}
 
 			details {
 				margin: 0;
@@ -224,7 +220,7 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 						<li>样式采用简洁优雅的设计理念，配合自定义 CSS 样式，实现轻量级的视觉效果。专注于性能优化和用户体验。</li>
 						<li>Markdown 文章渲染使用 Astro 的内容集合，支持完整的 Markdown 语法和 MDX 扩展。</li>
 						<li>图标系统使用 astro-icon，提供精美且轻量的 SVG 图标。</li>
-						<li>支持暗色模式切换，提供舒适的阅读体验。</li>
+
 					</ul>
 				</section>
 
@@ -268,9 +264,6 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 						.sponsor-btn:hover {
 							background: var(--accent-dark);
 							transform: translateY(-2px);
-						}
-						[data-theme="dark"] .sponsor-btn:hover {
-							background: var(--accent);
 						}
 					</style>
 				</section>

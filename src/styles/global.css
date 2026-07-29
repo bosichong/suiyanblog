@@ -3,8 +3,7 @@
   原始骨架参考 Bear Blog default.css (MIT)
 */
 
-:root,
-:root[data-theme="light"] {
+:root {
 	/* === 语义色：背景层 === */
 	--bg: #f3f1ec;
 	--bg-soft: #eae7e2;
@@ -55,40 +54,7 @@
 	--box-shadow: var(--shadow-lg);
 }
 
-[data-theme="dark"] {
-	/* 暗色主题 — 暖灰基调 */
-	--bg: #2d2d32;
-	--bg-soft: #404045;
-	--bg-overlay: #48484d;
-	--text: #f2f1ec;
-	--text-soft: #c0bfb8;
-	--text-muted: #888888;
-	--border: #525258;
-	--border-soft: #444449;
-	--accent: #46e856;
-	--accent-dark: #c0bfb8;
-	--accent-soft: #444449;
-	--accent-text: #171717;
 
-	--shadow-sm: none;
-	--shadow-md: none;
-	--shadow-lg: none;
-
-	--header-bg: var(--bg);
-	--nav-text: var(--text);
-	--border-color: var(--border);
-	--text-color: var(--text);
-	--bg-color: var(--bg);
-	--code-bg: var(--bg-soft);
-	--heading-color: var(--text);
-	--footer-text: var(--text-soft);
-	--black: 242, 241, 236;
-	--gray: 136, 136, 136;
-	--gray-light: 82, 82, 88;
-	--gray-dark: 242, 241, 236;
-	--gray-gradient: rgba(64, 64, 69, 50%), var(--bg);
-	--box-shadow: var(--shadow-lg);
-}
 
 body {
 	font-family: var(--font-body);
@@ -235,14 +201,6 @@ th {
 	font-weight: 600;
 }
 
-[data-theme="dark"] th,
-[data-theme="dark"] td {
-	border-color: rgb(var(--gray-light));
-}
-
-[data-theme="dark"] th {
-	background-color: rgba(var(--gray-light), 25%);
-}
 img {
 	max-width: 100%;
 	height: auto;
@@ -316,20 +274,6 @@ hr::before {
 	h4 {
 		font-size: 1.15rem;
 	}
-}
-
-/* === 全站平滑过渡（主题切换除外） === */
-body,
-header,
-main,
-footer,
-.card,
-.tag-link,
-button {
-	transition:
-		background-color 0.25s ease,
-		border-color 0.25s ease,
-		color 0.25s ease;
 }
 
 .sr-only:not(:focus):not(:active) {
