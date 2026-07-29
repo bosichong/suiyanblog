@@ -11,7 +11,6 @@ import PostActions from '../components/PostActions.astro';
 import { SITE_AUTHOR } from '../consts';
 import { Icon } from 'astro-icon/components';
 import AILabelBadge from '../components/AILabelBadge.astro';
-import ReadingProgress from '../components/ReadingProgress.astro';
 
 type Props = CollectionEntry<'blog'>['data'] & {
 	postId?: string;
@@ -199,7 +198,6 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 	</head>
 
 	<body>
-		<ReadingProgress />
 		<Header />
 		<main id="main">
 			<article>
