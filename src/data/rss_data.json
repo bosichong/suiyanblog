@@ -1,4 +1,30 @@
 {
+  "https://www.leitao.cn": [
+    {
+      "title": "新疆自驾游略记",
+      "link": "https://www.leitao.cn/10521.html",
+      "published": "Mon, 27 Jul 2026 06:14:04 +0000",
+      "published_parsed": "2026-07-27"
+    },
+    {
+      "title": "近日杂记之20260723",
+      "link": "https://www.leitao.cn/10428.html",
+      "published": "Thu, 23 Jul 2026 02:26:32 +0000",
+      "published_parsed": "2026-07-23"
+    },
+    {
+      "title": "AI的转变期终于来了",
+      "link": "https://www.leitao.cn/10416.html",
+      "published": "Sun, 05 Jul 2026 10:44:27 +0000",
+      "published_parsed": "2026-07-05"
+    },
+    {
+      "title": "错位",
+      "link": "https://www.leitao.cn/10411.html",
+      "published": "Fri, 03 Jul 2026 09:37:11 +0000",
+      "published_parsed": "2026-07-03"
+    }
+  ],
   "https://liwanr.com": [
     {
       "title": "她的位置",
@@ -35,32 +61,6 @@
       "link": "https://liWanr.com/essays/2026/next/",
       "published": "Wed, 08 Jul 2026 03:34:36 +0800",
       "published_parsed": "2026-07-07"
-    }
-  ],
-  "https://www.leitao.cn": [
-    {
-      "title": "新疆自驾游略记",
-      "link": "https://www.leitao.cn/10521.html",
-      "published": "Mon, 27 Jul 2026 06:14:04 +0000",
-      "published_parsed": "2026-07-27"
-    },
-    {
-      "title": "近日杂记之20260723",
-      "link": "https://www.leitao.cn/10428.html",
-      "published": "Thu, 23 Jul 2026 02:26:32 +0000",
-      "published_parsed": "2026-07-23"
-    },
-    {
-      "title": "AI的转变期终于来了",
-      "link": "https://www.leitao.cn/10416.html",
-      "published": "Sun, 05 Jul 2026 10:44:27 +0000",
-      "published_parsed": "2026-07-05"
-    },
-    {
-      "title": "错位",
-      "link": "https://www.leitao.cn/10411.html",
-      "published": "Fri, 03 Jul 2026 09:37:11 +0000",
-      "published_parsed": "2026-07-03"
     }
   ],
   "https://Vind.ink": [
@@ -189,6 +189,12 @@
   ],
   "https://www.ruanyifeng.com/blog": [
     {
+      "title": "科技爱好者周刊（第 406 期）：道可，道非，常道",
+      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-406.html",
+      "published": "2026-07-31T00:08:55Z",
+      "published_parsed": "2026-07-31"
+    },
+    {
       "title": "科技爱好者周刊（第 405 期）：资源，社会公平与算力",
       "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-405.html",
       "published": "2026-07-24T00:12:16Z",
@@ -199,71 +205,9 @@
       "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-404.html",
       "published": "2026-07-16T23:51:19Z",
       "published_parsed": "2026-07-16"
-    },
-    {
-      "title": "科技爱好者周刊（第 403 期）：为什么 Dropbox 不成功",
-      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-403.html",
-      "published": "2026-07-10T00:05:31Z",
-      "published_parsed": "2026-07-10"
     }
   ],
   "https://wangyurui.com": [],
-  "https://blog.mfwt.top": [
-    {
-      "title": "台风来临，如何准备好应急通信对讲机",
-      "link": "https://blog.mfwt.top/index.php/archives/1479/",
-      "published": "Thu, 30 Jul 2026 21:59:00 +0800",
-      "published_parsed": "2026-07-30"
-    },
-    {
-      "title": "我为小说忙：（四）插件（写入部分）",
-      "link": "https://blog.mfwt.top/index.php/archives/1457/",
-      "published": "Mon, 27 Jul 2026 23:59:00 +0800",
-      "published_parsed": "2026-07-27"
-    },
-    {
-      "title": "无用命途：布谷鸟叫（可选屏蔽）",
-      "link": "https://blog.mfwt.top/index.php/archives/1444/",
-      "published": "Thu, 23 Jul 2026 23:54:00 +0800",
-      "published_parsed": "2026-07-23"
-    },
-    {
-      "title": "我为小说忙：（三）插件（读取部分）",
-      "link": "https://blog.mfwt.top/index.php/archives/1445/",
-      "published": "Sun, 19 Jul 2026 19:59:00 +0800",
-      "published_parsed": "2026-07-19"
-    },
-    {
-      "title": "我为小说忙：（二）插件的几个前端页面",
-      "link": "https://blog.mfwt.top/index.php/archives/1417/",
-      "published": "Tue, 14 Jul 2026 22:24:00 +0800",
-      "published_parsed": "2026-07-14"
-    },
-    {
-      "title": "无用命途：只有 32v 的家用电？",
-      "link": "https://blog.mfwt.top/index.php/archives/1435/",
-      "published": "Mon, 13 Jul 2026 20:59:00 +0800",
-      "published_parsed": "2026-07-13"
-    },
-    {
-      "title": "好像...是放暑假了吧？",
-      "link": "https://blog.mfwt.top/index.php/archives/1427/",
-      "published": "Sat, 11 Jul 2026 21:58:00 +0800",
-      "published_parsed": "2026-07-11"
-    },
-    {
-      "title": "我为小说忙：（一）TPNovel 的规划",
-      "link": "https://blog.mfwt.top/index.php/archives/1414/",
-      "published": "Fri, 10 Jul 2026 00:55:00 +0800",
-      "published_parsed": "2026-07-09"
-    },
-    {
-      "title": "无用命途：酒精，酒精膏？",
-      "link": "https://blog.mfwt.top/index.php/archives/1410/",
-      "published": "Sat, 04 Jul 2026 19:58:00 +0800",
-      "published_parsed": "2026-07-04"
-    }
-  ],
   "https://zhongxiaojie.com": [
     {
       "title": "折耳兔",
@@ -341,64 +285,68 @@
     }
   ],
   "https://www.tortorse.com": [],
+  "https://blog.mfwt.top": [
+    {
+      "title": "台风来临，如何准备好应急通信对讲机",
+      "link": "https://blog.mfwt.top/index.php/archives/1479/",
+      "published": "Thu, 30 Jul 2026 21:59:00 +0800",
+      "published_parsed": "2026-07-30"
+    },
+    {
+      "title": "我为小说忙：（四）插件（写入部分）",
+      "link": "https://blog.mfwt.top/index.php/archives/1457/",
+      "published": "Mon, 27 Jul 2026 23:59:00 +0800",
+      "published_parsed": "2026-07-27"
+    },
+    {
+      "title": "无用命途：布谷鸟叫（可选屏蔽）",
+      "link": "https://blog.mfwt.top/index.php/archives/1444/",
+      "published": "Thu, 23 Jul 2026 23:54:00 +0800",
+      "published_parsed": "2026-07-23"
+    },
+    {
+      "title": "我为小说忙：（三）插件（读取部分）",
+      "link": "https://blog.mfwt.top/index.php/archives/1445/",
+      "published": "Sun, 19 Jul 2026 19:59:00 +0800",
+      "published_parsed": "2026-07-19"
+    },
+    {
+      "title": "我为小说忙：（二）插件的几个前端页面",
+      "link": "https://blog.mfwt.top/index.php/archives/1417/",
+      "published": "Tue, 14 Jul 2026 22:24:00 +0800",
+      "published_parsed": "2026-07-14"
+    },
+    {
+      "title": "无用命途：只有 32v 的家用电？",
+      "link": "https://blog.mfwt.top/index.php/archives/1435/",
+      "published": "Mon, 13 Jul 2026 20:59:00 +0800",
+      "published_parsed": "2026-07-13"
+    },
+    {
+      "title": "好像...是放暑假了吧？",
+      "link": "https://blog.mfwt.top/index.php/archives/1427/",
+      "published": "Sat, 11 Jul 2026 21:58:00 +0800",
+      "published_parsed": "2026-07-11"
+    },
+    {
+      "title": "我为小说忙：（一）TPNovel 的规划",
+      "link": "https://blog.mfwt.top/index.php/archives/1414/",
+      "published": "Fri, 10 Jul 2026 00:55:00 +0800",
+      "published_parsed": "2026-07-09"
+    },
+    {
+      "title": "无用命途：酒精，酒精膏？",
+      "link": "https://blog.mfwt.top/index.php/archives/1410/",
+      "published": "Sat, 04 Jul 2026 19:58:00 +0800",
+      "published_parsed": "2026-07-04"
+    }
+  ],
   "https://www.vergilisme.com": [
     {
       "title": "新起点，新时代，新故事",
       "link": "https://www.vergilisme.com/index.php/2026/07/21/2402.html",
       "published": "Tue, 21 Jul 2026 17:40:00 +0800",
       "published_parsed": "2026-07-21"
-    }
-  ],
-  "https://www.tjsky.net": [
-    {
-      "title": "10小时预警的服务器搬家 vs 零通知重启全球服务器：低价 VPS 界的操作越来越离谱了",
-      "link": "https://www.tjsky.net/natter/1726",
-      "published": "Wed, 22 Jul 2026 03:37:16 +0000",
-      "published_parsed": "2026-07-22"
-    },
-    {
-      "title": "YouTube 无限重定向报错，谷歌账号身份验证无限失败，罪魁祸首居然是“已分区 cookie”？！",
-      "link": "https://www.tjsky.net/tutorial/1708",
-      "published": "Wed, 15 Jul 2026 14:12:22 +0000",
-      "published_parsed": "2026-07-15"
-    },
-    {
-      "title": "CloudCone的鬼才运营：提前 10 小时通知“机房物理搬迁”，还说不服不给退款？",
-      "link": "https://www.tjsky.net/natter/1689",
-      "published": "Wed, 08 Jul 2026 08:05:47 +0000",
-      "published_parsed": "2026-07-08"
-    }
-  ],
-  "https://lawtee.com": [
-    {
-      "title": "不要拿农村是“退路”来骗自己",
-      "link": "https://lawtee.com/article/fallback-countryside/",
-      "published": "Wed, 29 Jul 2026 00:35:58 +0000",
-      "published_parsed": "2026-07-29"
-    },
-    {
-      "title": "湖南经济发展的药方早就开好了，关键是“把药吃下去”",
-      "link": "https://lawtee.com/article/hunan-economy/",
-      "published": "Tue, 28 Jul 2026 01:52:56 +0000",
-      "published_parsed": "2026-07-28"
-    },
-    {
-      "title": "从深圳港口“二次引航”看大湾区规则衔接的困难",
-      "link": "https://lawtee.com/article/secondary-pilotage/",
-      "published": "Sun, 26 Jul 2026 22:24:30 +0000",
-      "published_parsed": "2026-07-26"
-    },
-    {
-      "title": "14亿中国人在世界的位置",
-      "link": "https://lawtee.com/article/economic-status-of-chinese/",
-      "published": "Thu, 16 Jul 2026 18:24:30 +0000",
-      "published_parsed": "2026-07-16"
-    },
-    {
-      "title": "2026年上半年说说：历史的追问",
-      "link": "https://lawtee.com/article/2026-half-year/",
-      "published": "Wed, 15 Jul 2026 02:55:42 +0000",
-      "published_parsed": "2026-07-15"
     }
   ],
   "https://z.arlmy.me": [
@@ -485,6 +433,58 @@
       "link": "https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260704/",
       "published": "2026-07-05T00:26:27.000Z",
       "published_parsed": "2026-07-05"
+    }
+  ],
+  "https://www.tjsky.net": [
+    {
+      "title": "10小时预警的服务器搬家 vs 零通知重启全球服务器：低价 VPS 界的操作越来越离谱了",
+      "link": "https://www.tjsky.net/natter/1726",
+      "published": "Wed, 22 Jul 2026 03:37:16 +0000",
+      "published_parsed": "2026-07-22"
+    },
+    {
+      "title": "YouTube 无限重定向报错，谷歌账号身份验证无限失败，罪魁祸首居然是“已分区 cookie”？！",
+      "link": "https://www.tjsky.net/tutorial/1708",
+      "published": "Wed, 15 Jul 2026 14:12:22 +0000",
+      "published_parsed": "2026-07-15"
+    },
+    {
+      "title": "CloudCone的鬼才运营：提前 10 小时通知“机房物理搬迁”，还说不服不给退款？",
+      "link": "https://www.tjsky.net/natter/1689",
+      "published": "Wed, 08 Jul 2026 08:05:47 +0000",
+      "published_parsed": "2026-07-08"
+    }
+  ],
+  "https://lawtee.com": [
+    {
+      "title": "不要拿农村是“退路”来骗自己",
+      "link": "https://lawtee.com/article/fallback-countryside/",
+      "published": "Wed, 29 Jul 2026 00:35:58 +0000",
+      "published_parsed": "2026-07-29"
+    },
+    {
+      "title": "湖南经济发展的药方早就开好了，关键是“把药吃下去”",
+      "link": "https://lawtee.com/article/hunan-economy/",
+      "published": "Tue, 28 Jul 2026 01:52:56 +0000",
+      "published_parsed": "2026-07-28"
+    },
+    {
+      "title": "从深圳港口“二次引航”看大湾区规则衔接的困难",
+      "link": "https://lawtee.com/article/secondary-pilotage/",
+      "published": "Sun, 26 Jul 2026 22:24:30 +0000",
+      "published_parsed": "2026-07-26"
+    },
+    {
+      "title": "14亿中国人在世界的位置",
+      "link": "https://lawtee.com/article/economic-status-of-chinese/",
+      "published": "Thu, 16 Jul 2026 18:24:30 +0000",
+      "published_parsed": "2026-07-16"
+    },
+    {
+      "title": "2026年上半年说说：历史的追问",
+      "link": "https://lawtee.com/article/2026-half-year/",
+      "published": "Wed, 15 Jul 2026 02:55:42 +0000",
+      "published_parsed": "2026-07-15"
     }
   ],
   "https://yipai.me": [
@@ -589,8 +589,9 @@
       "published_parsed": "2026-07-07"
     }
   ],
-  "https://yihui.org/cn": [],
   "https://pathos.page": [],
+  "https://www.glowisle.me": [],
+  "https://yihui.org/cn": [],
   "https://blog.bxaw.name": [
     {
       "title": "他想「认识」的不是「我」",
@@ -599,7 +600,6 @@
       "published_parsed": "2026-07-15"
     }
   ],
-  "https://www.glowisle.me": [],
   "https://cyrus19.cc": [],
   "https://www.scarsu.com": [],
   "https://www.demochen.com": [
@@ -608,6 +608,68 @@
       "link": "https://demochen.com/posts/20260722/",
       "published": "Wed, 22 Jul 2026 22:36:47 +0800",
       "published_parsed": "2026-07-22"
+    }
+  ],
+  "https://blog.solazy.me": [
+    {
+      "title": "承认吧，你其实根本不爱看书",
+      "link": "https://blog.solazy.me/20260729/",
+      "published": "2026-07-29T15:00:00+00:00",
+      "published_parsed": "2026-07-29"
+    },
+    {
+      "title": "「什么都懂」的人",
+      "link": "https://blog.solazy.me/20260728/",
+      "published": "2026-07-28T15:00:00+00:00",
+      "published_parsed": "2026-07-28"
+    },
+    {
+      "title": "Why me？",
+      "link": "https://blog.solazy.me/20260727/",
+      "published": "2026-07-27T15:00:00+00:00",
+      "published_parsed": "2026-07-27"
+    },
+    {
+      "title": "断层里的心理学",
+      "link": "https://blog.solazy.me/20260726/",
+      "published": "2026-07-26T12:00:00+00:00",
+      "published_parsed": "2026-07-26"
+    },
+    {
+      "title": "周末流水账 0725",
+      "link": "https://blog.solazy.me/20260725/",
+      "published": "2026-07-25T15:00:00+00:00",
+      "published_parsed": "2026-07-25"
+    },
+    {
+      "title": "那些没有拍下来的时刻",
+      "link": "https://blog.solazy.me/20260724/",
+      "published": "2026-07-24T15:00:00+00:00",
+      "published_parsed": "2026-07-24"
+    },
+    {
+      "title": "事情要一件一件来",
+      "link": "https://blog.solazy.me/20260722/",
+      "published": "2026-07-22T15:00:00+00:00",
+      "published_parsed": "2026-07-22"
+    },
+    {
+      "title": "凌晨十二点的工作群",
+      "link": "https://blog.solazy.me/20260721/",
+      "published": "2026-07-21T15:00:00+00:00",
+      "published_parsed": "2026-07-21"
+    },
+    {
+      "title": "壮了，还是胖了",
+      "link": "https://blog.solazy.me/20260720/",
+      "published": "2026-07-20T15:00:00+00:00",
+      "published_parsed": "2026-07-20"
+    },
+    {
+      "title": "SOP 复制不了那双手",
+      "link": "https://blog.solazy.me/20260719/",
+      "published": "2026-07-19T15:00:00+00:00",
+      "published_parsed": "2026-07-19"
     }
   ],
   "https://usj.cc": [
@@ -634,6 +696,26 @@
       "link": "https://usj.cc/20260704094325.html",
       "published": "Sat, 04 Jul 2026 00:00:00 +0000",
       "published_parsed": "2026-07-04"
+    }
+  ],
+  "https://blog.cytrogen.icu": [
+    {
+      "title": "RE：断层里的心理学",
+      "link": "https://blog.cytrogen.icu/posts/221a.html",
+      "published": "2026-07-30T04:00:00.000Z",
+      "published_parsed": "2026-07-30"
+    },
+    {
+      "title": "休息日出去玩吧",
+      "link": "https://blog.cytrogen.icu/posts/c783.html",
+      "published": "2026-07-28T04:00:00.000Z",
+      "published_parsed": "2026-07-28"
+    },
+    {
+      "title": "大熊猫送快递",
+      "link": "https://blog.cytrogen.icu/posts/3a5e.html",
+      "published": "2026-07-25T04:00:00.000Z",
+      "published_parsed": "2026-07-25"
     }
   ],
   "https://immarcus.com": [
@@ -798,40 +880,7 @@
       "link": "https://www.immarcus.com/blog/authoritative-source-of-content",
       "published": "Sat, 04 Jul 2026 00:00:00 GMT",
       "published_parsed": "2026-07-04"
-    },
-    {
-      "title": "恐怖的烤鸡翅",
-      "link": "https://www.immarcus.com/blog/spooky-grilled-chicken-wings",
-      "published": "Fri, 03 Jul 2026 00:00:00 GMT",
-      "published_parsed": "2026-07-03"
     }
   ],
-  "https://blog.cytrogen.icu": [
-    {
-      "title": "RE：断层里的心理学",
-      "link": "https://blog.cytrogen.icu/posts/221a.html",
-      "published": "2026-07-30T04:00:00.000Z",
-      "published_parsed": "2026-07-30"
-    },
-    {
-      "title": "休息日出去玩吧",
-      "link": "https://blog.cytrogen.icu/posts/c783.html",
-      "published": "2026-07-28T04:00:00.000Z",
-      "published_parsed": "2026-07-28"
-    },
-    {
-      "title": "大熊猫送快递",
-      "link": "https://blog.cytrogen.icu/posts/3a5e.html",
-      "published": "2026-07-25T04:00:00.000Z",
-      "published_parsed": "2026-07-25"
-    }
-  ],
-  "https://www.owenyoung.com": [
-    {
-      "title": "当前想置顶的一些内容",
-      "link": "https://www.owenyoung.com/pinned",
-      "published": "2026-07-16T02:54:00.000Z",
-      "published_parsed": "2026-07-16"
-    }
-  ]
+  "https://www.owenyoung.com": []
 }
