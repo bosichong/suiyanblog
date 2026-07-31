@@ -297,6 +297,16 @@ export const FRIENDS_LINKS = [
     rss:'#',
   },
 
+
+    {
+    site_name: 'So!azy',
+    site_url: 'https://blog.solazy.me/',
+    site_description: 'Just a Lazy Sol...',
+    site_avatar: '#',
+    is_active: true,
+    rss:'https://blog.solazy.me/feed/',
+  },
+
   {
     site_name: 'immarcus',
     site_url: 'https://immarcus.com/',
