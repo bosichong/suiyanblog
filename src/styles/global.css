@@ -68,7 +68,7 @@ body {
 	overflow-wrap: break-word;
 	color: var(--text-color);
 	font-size: 18px;
-	line-height: 1.95;
+	line-height: 1.8;
 	letter-spacing: 0.02em;
 	font-feature-settings: "kern" 1;
 	text-rendering: optimizeLegibility;
@@ -257,7 +257,8 @@ hr::before {
 
 @media (max-width: 720px) {
 	body {
-		font-size: 16px;
+		font-size: 17px;
+		line-height: 1.85;
 	}
 	main {
 		padding: 1em;
