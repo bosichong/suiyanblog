@@ -5,9 +5,9 @@
 
 :root {
 	/* === 语义色：背景层 === */
-	--bg: #f3f1ec;
-	--bg-soft: #eae7e2;
-	--bg-overlay: #e2ded8;
+	--bg: #f8f7f3;
+	--bg-soft: #f1efea;
+	--bg-overlay: #eae7e1;
 
 	/* === 语义色：文字层 === */
 	--text: #2a2826;
@@ -48,9 +48,9 @@
 	--footer-text: var(--text-soft);
 	--black: 42, 40, 38;
 	--gray: 136, 136, 136;
-	--gray-light: 200, 197, 192;
+	--gray-light: 213, 211, 206;
 	--gray-dark: 42, 40, 38;
-	--gray-gradient: rgba(200, 197, 192, 30%), var(--bg);
+	--gray-gradient: rgba(213, 211, 206, 30%), var(--bg);
 	--box-shadow: var(--shadow-lg);
 }
 
