@@ -19,51 +19,13 @@
       "published_parsed": "2026-07-23"
     }
   ],
-  "https://liwanr.com": [
-    {
-      "title": "不要试图在书里找答案",
-      "link": "https://liWanr.com/essays/2026/Answer-is-not-in-the-book/",
-      "published": "Sun, 02 Aug 2026 23:10:32 +0800",
-      "published_parsed": "2026-08-02"
-    },
-    {
-      "title": "她的位置",
-      "link": "https://liWanr.com/essays/2026/Her-Place/",
-      "published": "Fri, 31 Jul 2026 17:29:19 +0800",
-      "published_parsed": "2026-07-31"
-    },
-    {
-      "title": "在梦里死了，又活了",
-      "link": "https://liWanr.com/essays/2026/living-after-death/",
-      "published": "Fri, 31 Jul 2026 17:29:19 +0800",
-      "published_parsed": "2026-07-31"
-    },
-    {
-      "title": "皇帝的新衣",
-      "link": "https://liWanr.com/essays/2026/named-silence/",
-      "published": "Thu, 16 Jul 2026 15:33:00 +0800",
-      "published_parsed": "2026-07-16"
-    },
-    {
-      "title": "26 年上半年",
-      "link": "https://liWanr.com/essays/2026/2026-H1/",
-      "published": "Mon, 13 Jul 2026 03:38:42 +0800",
-      "published_parsed": "2026-07-12"
-    },
-    {
-      "title": "回响",
-      "link": "https://liWanr.com/essays/2026/echo/",
-      "published": "Sun, 12 Jul 2026 18:54:04 +0800",
-      "published_parsed": "2026-07-12"
-    },
-    {
-      "title": "下一条",
-      "link": "https://liWanr.com/essays/2026/next/",
-      "published": "Wed, 08 Jul 2026 03:34:36 +0800",
-      "published_parsed": "2026-07-07"
-    }
-  ],
   "https://Vind.ink": [
+    {
+      "title": "上海豫园 2024 春节 2",
+      "link": "https://vind.ink/photos/2024-2-1.html",
+      "published": "Mon, 03 Aug 2026 10:05:00 +0800",
+      "published_parsed": "2026-08-03"
+    },
     {
       "title": "Mac OS 上的打字问题",
       "link": "https://vind.ink/IT-digital/Mac-OS.html",
@@ -117,15 +79,79 @@
       "link": "https://vind.ink/IT-digital/USB.html",
       "published": "Tue, 28 Jul 2026 13:00:00 +0800",
       "published_parsed": "2026-07-28"
+    }
+  ],
+  "https://liwanr.com": [
+    {
+      "title": "不要试图在书里找答案",
+      "link": "https://liWanr.com/essays/2026/Answer-is-not-in-the-book/",
+      "published": "Sun, 02 Aug 2026 23:10:32 +0800",
+      "published_parsed": "2026-08-02"
     },
     {
-      "title": "金山毒霸删除了桌面文件",
-      "link": "https://vind.ink/IT-digital/185.html",
-      "published": "Mon, 27 Jul 2026 18:08:13 +0800",
-      "published_parsed": "2026-07-27"
+      "title": "她的位置",
+      "link": "https://liWanr.com/essays/2026/Her-Place/",
+      "published": "Sun, 02 Aug 2026 23:07:29 +0800",
+      "published_parsed": "2026-08-02"
+    },
+    {
+      "title": "在梦里死了，又活了",
+      "link": "https://liWanr.com/essays/2026/living-after-death/",
+      "published": "Sun, 02 Aug 2026 23:07:29 +0800",
+      "published_parsed": "2026-08-02"
+    },
+    {
+      "title": "皇帝的新衣",
+      "link": "https://liWanr.com/essays/2026/named-silence/",
+      "published": "Thu, 16 Jul 2026 15:33:00 +0800",
+      "published_parsed": "2026-07-16"
+    },
+    {
+      "title": "26 年上半年",
+      "link": "https://liWanr.com/essays/2026/2026-H1/",
+      "published": "Mon, 13 Jul 2026 03:38:42 +0800",
+      "published_parsed": "2026-07-12"
+    },
+    {
+      "title": "回响",
+      "link": "https://liWanr.com/essays/2026/echo/",
+      "published": "Sun, 12 Jul 2026 18:54:04 +0800",
+      "published_parsed": "2026-07-12"
+    },
+    {
+      "title": "下一条",
+      "link": "https://liWanr.com/essays/2026/next/",
+      "published": "Wed, 08 Jul 2026 03:34:36 +0800",
+      "published_parsed": "2026-07-07"
+    }
+  ],
+  "https://www.ruanyifeng.com/blog": [
+    {
+      "title": "科技爱好者周刊（第 406 期）：道可，道非，常道",
+      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-406.html",
+      "published": "2026-07-31T00:08:55Z",
+      "published_parsed": "2026-07-31"
+    },
+    {
+      "title": "科技爱好者周刊（第 405 期）：资源，社会公平与算力",
+      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-405.html",
+      "published": "2026-07-24T00:12:16Z",
+      "published_parsed": "2026-07-24"
+    },
+    {
+      "title": "科技爱好者周刊（第 404 期）：你需要知道的 AI 内存知识",
+      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-404.html",
+      "published": "2026-07-16T23:51:19Z",
+      "published_parsed": "2026-07-16"
     }
   ],
   "https://mobius.blog": [
+    {
+      "title": "流动性时代与未来休克",
+      "link": "https://mobius.blog/25271.html",
+      "published": "Mon, 03 Aug 2026 01:00:00 +0000",
+      "published_parsed": "2026-08-03"
+    },
     {
       "title": "≡ 006｜这一周莫比乌斯环转到了哪里？",
       "link": "https://mobius.blog/2026/08/02/25253/",
@@ -179,39 +205,309 @@
       "link": "https://mobius.blog/25199.html",
       "published": "Sat, 25 Jul 2026 11:50:30 +0000",
       "published_parsed": "2026-07-25"
-    },
-    {
-      "title": "为了反对而反对的人，如何反对为了反对而反对他们的人？",
-      "link": "https://mobius.blog/25145.html",
-      "published": "Fri, 24 Jul 2026 01:00:00 +0000",
-      "published_parsed": "2026-07-24"
     }
   ],
-  "https://www.ruanyifeng.com/blog": [
+  "https://wiki.eryajf.net": [
     {
-      "title": "科技爱好者周刊（第 406 期）：道可，道非，常道",
-      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-406.html",
-      "published": "2026-07-31T00:08:55Z",
-      "published_parsed": "2026-07-31"
+      "title": "学习周刊-总第274期-2026年第31周",
+      "link": "https://wiki.eryajf.net/pages/7216a4/",
+      "published": "Thu, 30 Jul 2026 22:50:25 GMT",
+      "published_parsed": "2026-07-30"
     },
     {
-      "title": "科技爱好者周刊（第 405 期）：资源，社会公平与算力",
-      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-405.html",
-      "published": "2026-07-24T00:12:16Z",
+      "title": "学习周刊-总第273期-2026年第30周",
+      "link": "https://wiki.eryajf.net/pages/8085fe/",
+      "published": "Thu, 23 Jul 2026 21:51:09 GMT",
+      "published_parsed": "2026-07-23"
+    },
+    {
+      "title": "学习周刊-总第272期-2026年第29周",
+      "link": "https://wiki.eryajf.net/pages/b07ecd/",
+      "published": "Thu, 16 Jul 2026 23:18:10 GMT",
+      "published_parsed": "2026-07-16"
+    },
+    {
+      "title": "学习周刊-总第271期-2026年第28周",
+      "link": "https://wiki.eryajf.net/pages/87cbc1/",
+      "published": "Fri, 10 Jul 2026 08:57:16 GMT",
+      "published_parsed": "2026-07-10"
+    }
+  ],
+  "https://wangyurui.com": [],
+  "https://zhongxiaojie.com": [
+    {
+      "title": "折耳兔",
+      "link": "https://zhongxiaojie.cn/2026/07/1703/",
+      "published": "Fri, 24 Jul 2026 01:43:48 +0000",
       "published_parsed": "2026-07-24"
     },
     {
-      "title": "科技爱好者周刊（第 404 期）：你需要知道的 AI 内存知识",
-      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-404.html",
-      "published": "2026-07-16T23:51:19Z",
+      "title": "若生如野草",
+      "link": "https://zhongxiaojie.cn/2026/07/1685/",
+      "published": "Tue, 21 Jul 2026 00:48:36 +0000",
+      "published_parsed": "2026-07-21"
+    },
+    {
+      "title": "北九水",
+      "link": "https://zhongxiaojie.cn/2026/07/1671/",
+      "published": "Mon, 20 Jul 2026 01:58:52 +0000",
+      "published_parsed": "2026-07-20"
+    },
+    {
+      "title": "be water",
+      "link": "https://zhongxiaojie.cn/2026/07/1653/",
+      "published": "Fri, 17 Jul 2026 06:07:02 +0000",
+      "published_parsed": "2026-07-17"
+    },
+    {
+      "title": "Baby APP备案辅助工具",
+      "link": "https://zhongxiaojie.cn/2026/07/1626/",
+      "published": "Tue, 14 Jul 2026 02:49:45 +0000",
+      "published_parsed": "2026-07-14"
+    },
+    {
+      "title": "七月七日",
+      "link": "https://zhongxiaojie.cn/2026/07/1611/",
+      "published": "Wed, 08 Jul 2026 02:35:37 +0000",
+      "published_parsed": "2026-07-08"
+    }
+  ],
+  "https://blog.mfwt.top": [
+    {
+      "title": "台风来临，如何准备好应急通信对讲机",
+      "link": "https://blog.mfwt.top/index.php/archives/1479/",
+      "published": "Thu, 30 Jul 2026 21:59:00 +0800",
+      "published_parsed": "2026-07-30"
+    },
+    {
+      "title": "我为小说忙：（四）插件（写入部分）",
+      "link": "https://blog.mfwt.top/index.php/archives/1457/",
+      "published": "Mon, 27 Jul 2026 23:59:00 +0800",
+      "published_parsed": "2026-07-27"
+    },
+    {
+      "title": "无用命途：布谷鸟叫（可选屏蔽）",
+      "link": "https://blog.mfwt.top/index.php/archives/1444/",
+      "published": "Thu, 23 Jul 2026 23:54:00 +0800",
+      "published_parsed": "2026-07-23"
+    },
+    {
+      "title": "我为小说忙：（三）插件（读取部分）",
+      "link": "https://blog.mfwt.top/index.php/archives/1445/",
+      "published": "Sun, 19 Jul 2026 19:59:00 +0800",
+      "published_parsed": "2026-07-19"
+    },
+    {
+      "title": "我为小说忙：（二）插件的几个前端页面",
+      "link": "https://blog.mfwt.top/index.php/archives/1417/",
+      "published": "Tue, 14 Jul 2026 22:24:00 +0800",
+      "published_parsed": "2026-07-14"
+    },
+    {
+      "title": "无用命途：只有 32v 的家用电？",
+      "link": "https://blog.mfwt.top/index.php/archives/1435/",
+      "published": "Mon, 13 Jul 2026 20:59:00 +0800",
+      "published_parsed": "2026-07-13"
+    },
+    {
+      "title": "好像...是放暑假了吧？",
+      "link": "https://blog.mfwt.top/index.php/archives/1427/",
+      "published": "Sat, 11 Jul 2026 21:58:00 +0800",
+      "published_parsed": "2026-07-11"
+    },
+    {
+      "title": "我为小说忙：（一）TPNovel 的规划",
+      "link": "https://blog.mfwt.top/index.php/archives/1414/",
+      "published": "Fri, 10 Jul 2026 00:55:00 +0800",
+      "published_parsed": "2026-07-09"
+    }
+  ],
+  "https://www.tortorse.com": [],
+  "https://www.vergilisme.com": [
+    {
+      "title": "新起点，新时代，新故事",
+      "link": "https://www.vergilisme.com/index.php/2026/07/21/2402.html",
+      "published": "Tue, 21 Jul 2026 17:40:00 +0800",
+      "published_parsed": "2026-07-21"
+    }
+  ],
+  "https://www.tjsky.net": [
+    {
+      "title": "10小时预警的服务器搬家 vs 零通知重启全球服务器：低价 VPS 界的操作越来越离谱了",
+      "link": "https://www.tjsky.net/natter/1726",
+      "published": "Wed, 22 Jul 2026 03:37:16 +0000",
+      "published_parsed": "2026-07-22"
+    },
+    {
+      "title": "YouTube 无限重定向报错，谷歌账号身份验证无限失败，罪魁祸首居然是“已分区 cookie”？！",
+      "link": "https://www.tjsky.net/tutorial/1708",
+      "published": "Wed, 15 Jul 2026 14:12:22 +0000",
+      "published_parsed": "2026-07-15"
+    },
+    {
+      "title": "CloudCone的鬼才运营：提前 10 小时通知“机房物理搬迁”，还说不服不给退款？",
+      "link": "https://www.tjsky.net/natter/1689",
+      "published": "Wed, 08 Jul 2026 08:05:47 +0000",
+      "published_parsed": "2026-07-08"
+    }
+  ],
+  "https://lawtee.com": [
+    {
+      "title": "一代人的最后一课",
+      "link": "https://lawtee.com/article/my-uncle/",
+      "published": "Sun, 02 Aug 2026 19:39:57 +0000",
+      "published_parsed": "2026-08-02"
+    },
+    {
+      "title": "那些被AI公司吃掉的书",
+      "link": "https://lawtee.com/article/ai-eat-books/",
+      "published": "Thu, 30 Jul 2026 23:08:39 +0000",
+      "published_parsed": "2026-07-30"
+    },
+    {
+      "title": "不要拿农村是“退路”来骗自己",
+      "link": "https://lawtee.com/article/fallback-countryside/",
+      "published": "Wed, 29 Jul 2026 00:35:58 +0000",
+      "published_parsed": "2026-07-29"
+    },
+    {
+      "title": "湖南经济发展的药方早就开好了，关键是“把药吃下去”",
+      "link": "https://lawtee.com/article/hunan-economy/",
+      "published": "Tue, 28 Jul 2026 01:52:56 +0000",
+      "published_parsed": "2026-07-28"
+    },
+    {
+      "title": "从深圳港口“二次引航”看大湾区规则衔接的困难",
+      "link": "https://lawtee.com/article/secondary-pilotage/",
+      "published": "Sun, 26 Jul 2026 22:24:30 +0000",
+      "published_parsed": "2026-07-26"
+    }
+  ],
+  "https://yipai.me": [
+    {
+      "title": "Windows 的 HEVC 扩展收费跟苹果无关",
+      "link": "https://yipai.me/post/2543.html",
+      "published": "Wed, 29 Jul 2026 08:14:00 GMT",
+      "published_parsed": "2026-07-29"
+    },
+    {
+      "title": "邓煜、王虹：获奖理由、人物短片与记者问答翻译",
+      "link": "https://yipai.me/post/2542.html",
+      "published": "Mon, 27 Jul 2026 09:58:00 GMT",
+      "published_parsed": "2026-07-27"
+    },
+    {
+      "title": "反对狗奴与反对虐狗并不冲突",
+      "link": "https://yipai.me/post/2541.html",
+      "published": "Wed, 22 Jul 2026 07:25:00 GMT",
+      "published_parsed": "2026-07-22"
+    },
+    {
+      "title": "地铁安检为何无效？",
+      "link": "https://yipai.me/post/2540.html",
+      "published": "Mon, 20 Jul 2026 03:34:00 GMT",
+      "published_parsed": "2026-07-20"
+    },
+    {
+      "title": "最近够闲的，开发了新网站",
+      "link": "https://yipai.me/post/2539.html",
+      "published": "Thu, 16 Jul 2026 13:04:00 GMT",
       "published_parsed": "2026-07-16"
+    }
+  ],
+  "https://d-d.design": [
+    {
+      "title": "新加坡｜第二次游",
+      "link": "https://d-d.design/single/19878",
+      "published": "Sun, 02 Aug 2026 14:51:33 +0000",
+      "published_parsed": "2026-08-02"
+    },
+    {
+      "title": "机场对线",
+      "link": "https://d-d.design/single/19850",
+      "published": "Thu, 30 Jul 2026 22:12:09 +0000",
+      "published_parsed": "2026-07-30"
+    },
+    {
+      "title": "我做了一张地图",
+      "link": "https://d-d.design/single/19829",
+      "published": "Tue, 28 Jul 2026 16:30:43 +0000",
+      "published_parsed": "2026-07-28"
+    },
+    {
+      "title": "国产模型太NB了",
+      "link": "https://d-d.design/single/19824",
+      "published": "Fri, 24 Jul 2026 21:50:22 +0000",
+      "published_parsed": "2026-07-24"
+    },
+    {
+      "title": "很想写些荷尔蒙很强的东西",
+      "link": "https://d-d.design/single/19816",
+      "published": "Thu, 23 Jul 2026 20:26:03 +0000",
+      "published_parsed": "2026-07-23"
+    },
+    {
+      "title": "我以为凶手是穿越后的自己",
+      "link": "https://d-d.design/single/19812",
+      "published": "Sun, 19 Jul 2026 08:50:31 +0000",
+      "published_parsed": "2026-07-19"
+    },
+    {
+      "title": "我买过一把枪",
+      "link": "https://d-d.design/single/19774",
+      "published": "Thu, 16 Jul 2026 09:43:55 +0000",
+      "published_parsed": "2026-07-16"
+    },
+    {
+      "title": "再写一次设计",
+      "link": "https://d-d.design/single/19741",
+      "published": "Mon, 13 Jul 2026 14:05:58 +0000",
+      "published_parsed": "2026-07-13"
+    },
+    {
+      "title": "我把自己蒸馏了出来",
+      "link": "https://d-d.design/single/19657",
+      "published": "Sat, 11 Jul 2026 18:01:09 +0000",
+      "published_parsed": "2026-07-11"
+    },
+    {
+      "title": "超哥的自动铅笔",
+      "link": "https://d-d.design/single/19600",
+      "published": "Wed, 08 Jul 2026 14:10:08 +0000",
+      "published_parsed": "2026-07-08"
+    }
+  ],
+  "https://sliun.com": [
+    {
+      "title": "康德与人参果 #1",
+      "link": "https://sliun.com/kantandcaohuandan1/",
+      "published": "2026-07-19T13:56:00+00:00",
+      "published_parsed": "2026-07-19"
     }
   ],
   "https://z.arlmy.me": [
     {
+      "title": "并不抗拒表达",
+      "link": "https://z.arlmy.me/posts/ZArlmyMe/Acting_20260803/",
+      "published": "2026-08-03T13:16:03.000Z",
+      "published_parsed": "2026-08-03"
+    },
+    {
+      "title": "问AI的问题备份 20260803",
+      "link": "https://z.arlmy.me/posts/ZArlmyMe/QuestionsWithGemini_20260803/",
+      "published": "2026-08-03T06:34:46.000Z",
+      "published_parsed": "2026-08-03"
+    },
+    {
       "title": "尽量可爱一些",
       "link": "https://z.arlmy.me/posts/ZArlmyMe/BeCuteToAI_20260802/",
       "published": "2026-08-02T10:30:03.000Z",
+      "published_parsed": "2026-08-02"
+    },
+    {
+      "title": "入蜀记 day435 胎息经",
+      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_435/",
+      "published": "2026-08-02T04:48:27.000Z",
       "published_parsed": "2026-08-02"
     },
     {
@@ -224,6 +520,12 @@
       "title": "陌生的花再次盛开",
       "link": "https://z.arlmy.me/posts/Poems/2026/20260726_MoShengDeHuaZaiCiShengKai/",
       "published": "2026-08-01T16:23:27.000Z",
+      "published_parsed": "2026-08-01"
+    },
+    {
+      "title": "入蜀记 day434 穿越来的几天",
+      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_434/",
+      "published": "2026-08-01T04:48:27.000Z",
       "published_parsed": "2026-08-01"
     },
     {
@@ -447,305 +749,27 @@
       "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_409/",
       "published": "2026-07-07T04:48:27.000Z",
       "published_parsed": "2026-07-07"
-    },
-    {
-      "title": "入蜀记 day408 高温橙色预警",
-      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_408/",
-      "published": "2026-07-06T04:48:27.000Z",
-      "published_parsed": "2026-07-06"
     }
   ],
-  "https://wangyurui.com": [],
-  "https://zhongxiaojie.com": [
-    {
-      "title": "折耳兔",
-      "link": "https://zhongxiaojie.cn/2026/07/1703/",
-      "published": "Fri, 24 Jul 2026 01:43:48 +0000",
-      "published_parsed": "2026-07-24"
-    },
-    {
-      "title": "若生如野草",
-      "link": "https://zhongxiaojie.cn/2026/07/1685/",
-      "published": "Tue, 21 Jul 2026 00:48:36 +0000",
-      "published_parsed": "2026-07-21"
-    },
-    {
-      "title": "北九水",
-      "link": "https://zhongxiaojie.cn/2026/07/1671/",
-      "published": "Mon, 20 Jul 2026 01:58:52 +0000",
-      "published_parsed": "2026-07-20"
-    },
-    {
-      "title": "be water",
-      "link": "https://zhongxiaojie.cn/2026/07/1653/",
-      "published": "Fri, 17 Jul 2026 06:07:02 +0000",
-      "published_parsed": "2026-07-17"
-    },
-    {
-      "title": "Baby APP备案辅助工具",
-      "link": "https://zhongxiaojie.cn/2026/07/1626/",
-      "published": "Tue, 14 Jul 2026 02:49:45 +0000",
-      "published_parsed": "2026-07-14"
-    },
-    {
-      "title": "七月七日",
-      "link": "https://zhongxiaojie.cn/2026/07/1611/",
-      "published": "Wed, 08 Jul 2026 02:35:37 +0000",
-      "published_parsed": "2026-07-08"
-    },
-    {
-      "title": "灵魂摆渡",
-      "link": "https://zhongxiaojie.cn/2026/07/1597/",
-      "published": "Mon, 06 Jul 2026 02:10:16 +0000",
-      "published_parsed": "2026-07-06"
-    }
-  ],
-  "https://www.tortorse.com": [],
-  "https://wiki.eryajf.net": [
-    {
-      "title": "学习周刊-总第274期-2026年第31周",
-      "link": "https://wiki.eryajf.net/pages/7216a4/",
-      "published": "Thu, 30 Jul 2026 22:50:25 GMT",
-      "published_parsed": "2026-07-30"
-    },
-    {
-      "title": "学习周刊-总第273期-2026年第30周",
-      "link": "https://wiki.eryajf.net/pages/8085fe/",
-      "published": "Thu, 23 Jul 2026 21:51:09 GMT",
-      "published_parsed": "2026-07-23"
-    },
-    {
-      "title": "学习周刊-总第272期-2026年第29周",
-      "link": "https://wiki.eryajf.net/pages/b07ecd/",
-      "published": "Thu, 16 Jul 2026 23:18:10 GMT",
-      "published_parsed": "2026-07-16"
-    },
-    {
-      "title": "学习周刊-总第271期-2026年第28周",
-      "link": "https://wiki.eryajf.net/pages/87cbc1/",
-      "published": "Fri, 10 Jul 2026 08:57:16 GMT",
-      "published_parsed": "2026-07-10"
-    }
-  ],
-  "https://blog.mfwt.top": [
-    {
-      "title": "台风来临，如何准备好应急通信对讲机",
-      "link": "https://blog.mfwt.top/index.php/archives/1479/",
-      "published": "Thu, 30 Jul 2026 21:59:00 +0800",
-      "published_parsed": "2026-07-30"
-    },
-    {
-      "title": "我为小说忙：（四）插件（写入部分）",
-      "link": "https://blog.mfwt.top/index.php/archives/1457/",
-      "published": "Mon, 27 Jul 2026 23:59:00 +0800",
-      "published_parsed": "2026-07-27"
-    },
-    {
-      "title": "无用命途：布谷鸟叫（可选屏蔽）",
-      "link": "https://blog.mfwt.top/index.php/archives/1444/",
-      "published": "Thu, 23 Jul 2026 23:54:00 +0800",
-      "published_parsed": "2026-07-23"
-    },
-    {
-      "title": "我为小说忙：（三）插件（读取部分）",
-      "link": "https://blog.mfwt.top/index.php/archives/1445/",
-      "published": "Sun, 19 Jul 2026 19:59:00 +0800",
-      "published_parsed": "2026-07-19"
-    },
-    {
-      "title": "我为小说忙：（二）插件的几个前端页面",
-      "link": "https://blog.mfwt.top/index.php/archives/1417/",
-      "published": "Tue, 14 Jul 2026 22:24:00 +0800",
-      "published_parsed": "2026-07-14"
-    },
-    {
-      "title": "无用命途：只有 32v 的家用电？",
-      "link": "https://blog.mfwt.top/index.php/archives/1435/",
-      "published": "Mon, 13 Jul 2026 20:59:00 +0800",
-      "published_parsed": "2026-07-13"
-    },
-    {
-      "title": "好像...是放暑假了吧？",
-      "link": "https://blog.mfwt.top/index.php/archives/1427/",
-      "published": "Sat, 11 Jul 2026 21:58:00 +0800",
-      "published_parsed": "2026-07-11"
-    },
-    {
-      "title": "我为小说忙：（一）TPNovel 的规划",
-      "link": "https://blog.mfwt.top/index.php/archives/1414/",
-      "published": "Fri, 10 Jul 2026 00:55:00 +0800",
-      "published_parsed": "2026-07-09"
-    }
-  ],
-  "https://www.vergilisme.com": [
-    {
-      "title": "新起点，新时代，新故事",
-      "link": "https://www.vergilisme.com/index.php/2026/07/21/2402.html",
-      "published": "Tue, 21 Jul 2026 17:40:00 +0800",
-      "published_parsed": "2026-07-21"
-    }
-  ],
-  "https://lawtee.com": [
-    {
-      "title": "那些被AI公司吃掉的书",
-      "link": "https://lawtee.com/article/ai-eat-books/",
-      "published": "Thu, 30 Jul 2026 23:08:39 +0000",
-      "published_parsed": "2026-07-30"
-    },
-    {
-      "title": "不要拿农村是“退路”来骗自己",
-      "link": "https://lawtee.com/article/fallback-countryside/",
-      "published": "Wed, 29 Jul 2026 00:35:58 +0000",
-      "published_parsed": "2026-07-29"
-    },
-    {
-      "title": "湖南经济发展的药方早就开好了，关键是“把药吃下去”",
-      "link": "https://lawtee.com/article/hunan-economy/",
-      "published": "Tue, 28 Jul 2026 01:52:56 +0000",
-      "published_parsed": "2026-07-28"
-    },
-    {
-      "title": "从深圳港口“二次引航”看大湾区规则衔接的困难",
-      "link": "https://lawtee.com/article/secondary-pilotage/",
-      "published": "Sun, 26 Jul 2026 22:24:30 +0000",
-      "published_parsed": "2026-07-26"
-    },
-    {
-      "title": "14亿中国人在世界的位置",
-      "link": "https://lawtee.com/article/economic-status-of-chinese/",
-      "published": "Thu, 16 Jul 2026 18:24:30 +0000",
-      "published_parsed": "2026-07-16"
-    }
-  ],
-  "https://www.tjsky.net": [
-    {
-      "title": "10小时预警的服务器搬家 vs 零通知重启全球服务器：低价 VPS 界的操作越来越离谱了",
-      "link": "https://www.tjsky.net/natter/1726",
-      "published": "Wed, 22 Jul 2026 03:37:16 +0000",
-      "published_parsed": "2026-07-22"
-    },
-    {
-      "title": "YouTube 无限重定向报错，谷歌账号身份验证无限失败，罪魁祸首居然是“已分区 cookie”？！",
-      "link": "https://www.tjsky.net/tutorial/1708",
-      "published": "Wed, 15 Jul 2026 14:12:22 +0000",
-      "published_parsed": "2026-07-15"
-    },
-    {
-      "title": "CloudCone的鬼才运营：提前 10 小时通知“机房物理搬迁”，还说不服不给退款？",
-      "link": "https://www.tjsky.net/natter/1689",
-      "published": "Wed, 08 Jul 2026 08:05:47 +0000",
-      "published_parsed": "2026-07-08"
-    }
-  ],
-  "https://yipai.me": [
-    {
-      "title": "Windows 的 HEVC 扩展收费跟苹果无关",
-      "link": "https://yipai.me/post/2543.html",
-      "published": "Wed, 29 Jul 2026 08:14:00 GMT",
-      "published_parsed": "2026-07-29"
-    },
-    {
-      "title": "邓煜、王虹：获奖理由、人物短片与记者问答翻译",
-      "link": "https://yipai.me/post/2542.html",
-      "published": "Mon, 27 Jul 2026 09:58:00 GMT",
-      "published_parsed": "2026-07-27"
-    },
-    {
-      "title": "反对狗奴与反对虐狗并不冲突",
-      "link": "https://yipai.me/post/2541.html",
-      "published": "Wed, 22 Jul 2026 07:25:00 GMT",
-      "published_parsed": "2026-07-22"
-    },
-    {
-      "title": "地铁安检为何无效？",
-      "link": "https://yipai.me/post/2540.html",
-      "published": "Mon, 20 Jul 2026 03:34:00 GMT",
-      "published_parsed": "2026-07-20"
-    },
-    {
-      "title": "最近够闲的，开发了新网站",
-      "link": "https://yipai.me/post/2539.html",
-      "published": "Thu, 16 Jul 2026 13:04:00 GMT",
-      "published_parsed": "2026-07-16"
-    }
-  ],
-  "https://sliun.com": [
-    {
-      "title": "康德与人参果 #1",
-      "link": "https://sliun.com/kantandcaohuandan1/",
-      "published": "2026-07-19T13:56:00+00:00",
-      "published_parsed": "2026-07-19"
-    }
-  ],
-  "https://d-d.design": [
-    {
-      "title": "新加坡｜第二次游",
-      "link": "https://d-d.design/single/19878",
-      "published": "Sun, 02 Aug 2026 14:51:33 +0000",
-      "published_parsed": "2026-08-02"
-    },
-    {
-      "title": "机场对线",
-      "link": "https://d-d.design/single/19850",
-      "published": "Thu, 30 Jul 2026 22:12:09 +0000",
-      "published_parsed": "2026-07-30"
-    },
-    {
-      "title": "我做了一张地图",
-      "link": "https://d-d.design/single/19829",
-      "published": "Tue, 28 Jul 2026 16:30:43 +0000",
-      "published_parsed": "2026-07-28"
-    },
-    {
-      "title": "国产模型太NB了",
-      "link": "https://d-d.design/single/19824",
-      "published": "Fri, 24 Jul 2026 21:50:22 +0000",
-      "published_parsed": "2026-07-24"
-    },
-    {
-      "title": "很想写些荷尔蒙很强的东西",
-      "link": "https://d-d.design/single/19816",
-      "published": "Thu, 23 Jul 2026 20:26:03 +0000",
-      "published_parsed": "2026-07-23"
-    },
-    {
-      "title": "我以为凶手是穿越后的自己",
-      "link": "https://d-d.design/single/19812",
-      "published": "Sun, 19 Jul 2026 08:50:31 +0000",
-      "published_parsed": "2026-07-19"
-    },
-    {
-      "title": "我买过一把枪",
-      "link": "https://d-d.design/single/19774",
-      "published": "Thu, 16 Jul 2026 09:43:55 +0000",
-      "published_parsed": "2026-07-16"
-    },
-    {
-      "title": "再写一次设计",
-      "link": "https://d-d.design/single/19741",
-      "published": "Mon, 13 Jul 2026 14:05:58 +0000",
-      "published_parsed": "2026-07-13"
-    },
-    {
-      "title": "我把自己蒸馏了出来",
-      "link": "https://d-d.design/single/19657",
-      "published": "Sat, 11 Jul 2026 18:01:09 +0000",
-      "published_parsed": "2026-07-11"
-    },
-    {
-      "title": "超哥的自动铅笔",
-      "link": "https://d-d.design/single/19600",
-      "published": "Wed, 08 Jul 2026 14:10:08 +0000",
-      "published_parsed": "2026-07-08"
-    }
-  ],
-  "https://yihui.org/cn": [],
+  "https://pathos.page": [],
   "https://blog.bxaw.name": [
     {
       "title": "他想「认识」的不是「我」",
       "link": "https://blog.bxaw.name/archives/He-Was-Never-Interested-in-Knowing-Me.html",
       "published": "Wed, 15 Jul 2026 14:35:41 +0800",
       "published_parsed": "2026-07-15"
+    }
+  ],
+  "https://www.glowisle.me": [],
+  "https://yihui.org/cn": [],
+  "https://cyrus19.cc": [],
+  "https://www.scarsu.com": [],
+  "https://www.demochen.com": [
+    {
+      "title": "探索 AI 时代的人机协作",
+      "link": "https://demochen.com/posts/20260722/",
+      "published": "Wed, 22 Jul 2026 22:36:47 +0800",
+      "published_parsed": "2026-07-22"
     }
   ],
   "https://usj.cc": [
@@ -768,19 +792,13 @@
       "published_parsed": "2026-07-08"
     }
   ],
-  "https://pathos.page": [],
-  "https://www.glowisle.me": [],
-  "https://cyrus19.cc": [],
-  "https://www.demochen.com": [
-    {
-      "title": "探索 AI 时代的人机协作",
-      "link": "https://demochen.com/posts/20260722/",
-      "published": "Wed, 22 Jul 2026 22:36:47 +0800",
-      "published_parsed": "2026-07-22"
-    }
-  ],
-  "https://www.scarsu.com": [],
   "https://blog.solazy.me": [
+    {
+      "title": "别急着说自己做不了",
+      "link": "https://blog.solazy.me/20260803/",
+      "published": "2026-08-03T15:00:00+00:00",
+      "published_parsed": "2026-08-03"
+    },
     {
       "title": "周末流水账 0802",
       "link": "https://blog.solazy.me/20260802/",
@@ -834,15 +852,15 @@
       "link": "https://blog.solazy.me/20260725/",
       "published": "2026-07-25T15:00:00+00:00",
       "published_parsed": "2026-07-25"
-    },
-    {
-      "title": "那些没有拍下来的时刻",
-      "link": "https://blog.solazy.me/20260724/",
-      "published": "2026-07-24T15:00:00+00:00",
-      "published_parsed": "2026-07-24"
     }
   ],
   "https://immarcus.com": [
+    {
+      "title": "美国移民法的逻辑",
+      "link": "https://www.immarcus.com/blog/logic-of-ina",
+      "published": "Mon, 03 Aug 2026 00:00:00 GMT",
+      "published_parsed": "2026-08-03"
+    },
     {
       "title": "草稿有点越积越多了",
       "link": "https://www.immarcus.com/blog/drafts-backlogged",
@@ -1004,15 +1022,15 @@
       "link": "https://www.immarcus.com/blog/calcio-storico",
       "published": "Tue, 07 Jul 2026 00:00:00 GMT",
       "published_parsed": "2026-07-07"
-    },
-    {
-      "title": "世界奇妙物语",
-      "link": "https://www.immarcus.com/blog/yonimo-kimyona-monogatari",
-      "published": "Mon, 06 Jul 2026 00:00:00 GMT",
-      "published_parsed": "2026-07-06"
     }
   ],
   "https://blog.cytrogen.icu": [
+    {
+      "title": "RE：美国梦与美国痛 华裔新移民青少年帮派犯罪",
+      "link": "https://blog.cytrogen.icu/posts/1547.html",
+      "published": "2026-08-03T16:38:00.000Z",
+      "published_parsed": "2026-08-03"
+    },
     {
       "title": "想法在丙午瓜秋迭代",
       "link": "https://blog.cytrogen.icu/posts/3456.html",
