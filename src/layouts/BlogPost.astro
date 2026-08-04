@@ -229,14 +229,13 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 								)
 							}
 						</div>
+						<TagList tags={tags} showLabel={true} />
 					</div>
 					<div class="article-body">
 						<slot />
 					</div>
 					<hr aria-hidden="true" />
 					<Webmentions postId={postId || ''} title={title} />
-
-					<TagList tags={tags} showLabel={true} />
 
 					<PostActions postId={postId || ''} postPath={`/blog/${postId}`} />
 
