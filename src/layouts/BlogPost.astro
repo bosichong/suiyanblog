@@ -234,7 +234,7 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 						<slot />
 					</div>
 					<hr aria-hidden="true" />
-					<Webmentions postId={postId || ''} />
+					<Webmentions postId={postId || ''} title={title} />
 
 					<TagList tags={tags} showLabel={true} />
 

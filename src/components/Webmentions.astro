@@ -3,14 +3,15 @@ import { WEBMENTION_OVERRIDES } from '../consts';
 
 interface Props {
 	postId: string;
+	title?: string;
 }
 
-const { postId } = Astro.props;
+const { postId, title } = Astro.props;
 const targetUrl = new URL(`/blog/${postId}`, Astro.site).toString();
 const overridesJson = JSON.stringify(WEBMENTION_OVERRIDES);
 ---
 
-<div class="webmentions" id="webmentions" data-target={targetUrl} data-overrides={overridesJson}>
+<div class="webmentions" id="webmentions" data-target={targetUrl} data-overrides={overridesJson} data-title={title || ''}>
 	<h2 class="wm-title">🔗 Webmentions (<span class="wm-count">0</span>)</h2>
 
 	<div class="wm-list" id="webmentions-list"></div>
@@ -21,8 +22,9 @@ const overridesJson = JSON.stringify(WEBMENTION_OVERRIDES);
 
 	<p class="wm-hint">
 		本站支持 <a href="https://www.w3.org/TR/webmention/" target="_blank" rel="noopener noreferrer">Webmention</a>。
-		如果你引用了这篇文章，可以通过下方表单通知我，互动会显示在这里。
+		如果你<button type="button" class="wm-quote-btn" id="webmention-quote-btn" aria-label="复制本文引用格式">引用这篇文章</button>，可以通过下方表单通知我，互动会显示在这里。
 	</p>
+	<p class="wm-quote-tip" id="webmention-quote-tip" role="status"></p>
 
 	<form class="wm-form" id="webmention-form" action="https://webmention.io/www.suiyan.cc/webmention" method="POST">
 		<input type="hidden" name="target" value={targetUrl} />
@@ -221,6 +223,42 @@ const overridesJson = JSON.stringify(WEBMENTION_OVERRIDES);
 
 	.wm-form-status.error {
 		color: #b3261e;
+	}
+
+	.wm-quote-btn {
+		display: inline-block;
+		padding: 0.1rem 0.6rem;
+		margin: 0 0.15rem;
+		font-size: 0.8rem;
+		font-family: inherit;
+		color: var(--accent);
+		background: var(--accent-soft);
+		border: 1px solid var(--accent);
+		border-radius: 4px;
+		cursor: pointer;
+		vertical-align: baseline;
+		line-height: 1.5;
+		transition: background 0.2s ease, color 0.2s ease;
+	}
+
+	.wm-quote-btn:hover {
+		background: var(--accent);
+		color: var(--accent-text);
+	}
+
+	.wm-quote-btn:focus-visible {
+		outline: 2px solid var(--accent);
+		outline-offset: 3px;
+		border-radius: 3px;
+	}
+
+	.wm-quote-tip {
+		margin: 0.15rem 0 0;
+		text-align: center;
+		text-indent: 0;
+		font-size: 0.8rem;
+		color: var(--text-muted);
+		min-height: 1.3em;
 	}
 
 	@media (max-width: 480px) {
@@ -426,10 +464,61 @@ const overridesJson = JSON.stringify(WEBMENTION_OVERRIDES);
 		});
 	}
 
+	function copyText(text) {
+		if (navigator.clipboard && window.isSecureContext) {
+			return navigator.clipboard.writeText(text);
+		}
+		return new Promise((resolve, reject) => {
+			const ta = document.createElement('textarea');
+			ta.value = text;
+			ta.style.position = 'fixed';
+			ta.style.opacity = '0';
+			document.body.appendChild(ta);
+			ta.select();
+			try {
+				document.execCommand('copy');
+				resolve();
+			} catch (e) {
+				reject(e);
+			}
+			document.body.removeChild(ta);
+		});
+	}
+
+	function initQuote() {
+		const section = document.getElementById('webmentions');
+		const btn = section && document.getElementById('webmention-quote-btn');
+		if (!btn) return;
+		btn.addEventListener('click', () => {
+			const target = section.getAttribute('data-target') || '';
+			const rawTitle = section.getAttribute('data-title') || '';
+			const title = rawTitle.replace(/[\[\]]/g, (c) => (c === '[' ? '\\[' : '\\]'));
+			const text = rawTitle ? `[${title}](${target})` : target;
+			const tip = document.getElementById('webmention-quote-tip');
+
+			copyText(text)
+				.then(() => {
+					btn.textContent = '已复制 ✓';
+					if (tip) tip.textContent = '可粘贴到你的文章中；发布后回来在此发送 Webmention';
+				})
+				.catch(() => {
+					btn.textContent = '复制失败';
+				})
+				.finally(() => {
+					setTimeout(() => {
+						btn.textContent = '引用这篇文章';
+						if (tip) tip.textContent = '';
+					}, 5000);
+				});
+		});
+	}
+
 	document.addEventListener('astro:after-swap', () => {
 		init();
 		initForm();
+		initQuote();
 	});
 	init();
 	initForm();
+	initQuote();
 </script>
