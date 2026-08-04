@@ -1,0 +1,435 @@
+---
+import { WEBMENTION_OVERRIDES } from '../consts';
+
+interface Props {
+	postId: string;
+}
+
+const { postId } = Astro.props;
+const targetUrl = new URL(`/blog/${postId}`, Astro.site).toString();
+const overridesJson = JSON.stringify(WEBMENTION_OVERRIDES);
+---
+
+<div class="webmentions" id="webmentions" data-target={targetUrl} data-overrides={overridesJson}>
+	<h2 class="wm-title">🔗 Webmentions (<span class="wm-count">0</span>)</h2>
+
+	<div class="wm-list" id="webmentions-list"></div>
+
+	<div class="wm-empty" id="webmentions-empty">
+		<span>暂无 Webmentions</span>
+	</div>
+
+	<p class="wm-hint">
+		本站支持 <a href="https://www.w3.org/TR/webmention/" target="_blank" rel="noopener noreferrer">Webmention</a>。
+		如果你引用了这篇文章，可以通过下方表单通知我，互动会显示在这里。
+	</p>
+
+	<form class="wm-form" id="webmention-form" action="https://webmention.io/www.suiyan.cc/webmention" method="POST">
+		<input type="hidden" name="target" value={targetUrl} />
+		<label class="wm-form-label" for="webmention-source">发送 Webmention</label>
+		<div class="wm-form-row">
+			<input
+				id="webmention-source"
+				type="url"
+				name="source"
+				placeholder="https://example.com/your-post"
+				required
+			/>
+			<button type="submit">发送</button>
+		</div>
+		<div class="wm-form-status" id="webmention-form-status" role="status"></div>
+	</form>
+</div>
+
+<style>
+	.webmentions {
+		margin: 2.5rem 0 1rem;
+	}
+
+	.wm-title {
+		font-family: var(--font-body);
+		font-size: 0.9rem;
+		font-weight: 500;
+		letter-spacing: 0.05em;
+		text-align: center;
+		color: var(--text-muted);
+		margin: 0 0 1rem;
+	}
+
+	.wm-count {
+		color: var(--accent);
+	}
+
+	.wm-list {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
+	.wm-card {
+		display: block;
+		background: var(--bg-soft);
+		border: 1px solid var(--border-soft);
+		border-radius: 8px;
+		padding: 0.9rem 1rem;
+		box-shadow: var(--shadow-sm);
+		text-decoration: none;
+		transition: border-color 0.2s ease, box-shadow 0.2s ease;
+	}
+
+	.wm-card:hover {
+		border-color: var(--border);
+		box-shadow: var(--shadow-md);
+	}
+
+	.wm-card-head {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.wm-avatar {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		object-fit: cover;
+		border: 1px solid var(--border-soft);
+		flex-shrink: 0;
+	}
+
+	.wm-avatar-fallback {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: var(--accent-soft);
+		color: var(--accent-dark);
+		font-size: 1.1rem;
+		font-weight: 600;
+		flex-shrink: 0;
+	}
+
+	.wm-author {
+		color: var(--accent);
+		font-size: 0.95rem;
+		font-weight: 600;
+	}
+
+	.wm-meta {
+		color: var(--text-muted);
+		font-size: 0.8rem;
+	}
+
+	.wm-badge {
+		margin-left: auto;
+		flex-shrink: 0;
+		background: var(--bg-overlay);
+		color: var(--text-soft);
+		font-size: 0.75rem;
+		padding: 0.15rem 0.6rem;
+		border-radius: 999px;
+		white-space: nowrap;
+	}
+
+	.wm-content {
+		margin: 0.6rem 0 0;
+		color: var(--text-soft);
+		font-size: 0.95rem;
+		line-height: 1.6;
+		text-align: left;
+		text-indent: 0;
+	}
+
+	.wm-empty {
+		text-align: center;
+		color: var(--text-muted);
+		font-size: 0.9rem;
+		padding: 0.5rem 0;
+	}
+
+	.wm-hint {
+		margin: 1rem 0;
+		text-align: center;
+		text-indent: 0;
+		font-size: 0.85rem;
+		color: var(--text-muted);
+	}
+
+	.wm-form {
+		background: var(--bg-soft);
+		border: 1px solid var(--border-soft);
+		border-radius: 8px;
+		padding: 0.9rem 1rem;
+	}
+
+	.wm-form-label {
+		display: block;
+		font-size: 0.85rem;
+		font-weight: 500;
+		color: var(--text-soft);
+		margin-bottom: 0.5rem;
+	}
+
+	.wm-form-row {
+		display: flex;
+		gap: 0.5rem;
+	}
+
+	.wm-form input[type='url'] {
+		flex: 1;
+		min-width: 0;
+		padding: 0.45rem 0.75rem;
+		font-size: 0.9rem;
+		font-family: inherit;
+		color: var(--text);
+		background: var(--bg);
+		border: 1px solid var(--border);
+		border-radius: 6px;
+	}
+
+	.wm-form input[type='url']:focus {
+		outline: 2px solid var(--accent);
+		outline-offset: 1px;
+		border-color: var(--accent);
+	}
+
+	.wm-form button {
+		flex-shrink: 0;
+		padding: 0.45rem 1.25rem;
+		font-size: 0.9rem;
+		font-weight: 500;
+		font-family: inherit;
+		color: var(--accent-text);
+		background: var(--accent);
+		border: none;
+		border-radius: 6px;
+		cursor: pointer;
+		transition: background 0.2s ease;
+	}
+
+	.wm-form button:hover {
+		background: var(--accent-dark);
+	}
+
+	.wm-form-status {
+		margin-top: 0.5rem;
+		font-size: 0.85rem;
+		color: var(--text-soft);
+	}
+
+	.wm-form-status.error {
+		color: #b3261e;
+	}
+
+	@media (max-width: 480px) {
+		.wm-form-row {
+			flex-direction: column;
+		}
+
+		.wm-form button {
+			width: 100%;
+		}
+	}
+</style>
+
+<script>
+	const TYPE_META = {
+		'in-reply-to': { label: '回复', emoji: '💬', full: true },
+		'like-of': { label: '喜欢', emoji: '❤️', full: false },
+		'repost-of': { label: '转发', emoji: '🔁', full: false },
+		'bookmark-of': { label: '收藏', emoji: '🔖', full: false },
+		'mention-of': { label: '提及', emoji: '💭', full: true },
+	};
+
+	function escapeHtml(str) {
+		return (str || '').replace(/[&<>"']/g, (c) => ({
+			'&': '&amp;',
+			'<': '&lt;',
+			'>': '&gt;',
+			'"': '&quot;',
+			"'": '&#39;',
+		})[c]);
+	}
+
+	function truncate(text, len) {
+		const t = (text || '').trim();
+		if (t.length <= len) return t;
+		return t.slice(0, len) + '…';
+	}
+
+	function formatDate(iso) {
+		if (!iso) return '';
+		try {
+			const d = new Date(iso);
+			const days = Math.floor((Date.now() - d.getTime()) / 86400000);
+			if (days < 0) return '';
+			if (days === 0) return '今天';
+			if (days === 1) return '昨天';
+			if (days < 30) return `${days}天前`;
+			return d.toLocaleDateString('zh-CN', { year: 'numeric', month: 'short', day: 'numeric' });
+		} catch {
+			return '';
+		}
+	}
+
+	function hostname(url) {
+		try {
+			return new URL(url).hostname.replace(/^www\./, '');
+		} catch {
+			return url;
+		}
+	}
+
+	function card(entry, overrides) {
+		const prop = entry['wm-property'] || 'mention-of';
+		const meta = TYPE_META[prop] || TYPE_META['mention-of'];
+		const author = entry.author || {};
+		const domain = hostname(entry.url || author.url);
+		const ov = overrides[domain] || {};
+		const name = ov.name || author.name || domain || '未知';
+		const avatarUrl = ov.photo || author.photo;
+		const fallback = escapeHtml(name.charAt(0).toUpperCase());
+		const avatar = avatarUrl
+			? `<img class="wm-avatar" src="${escapeHtml(avatarUrl)}" alt="" loading="lazy" decoding="async">`
+			: `<span class="wm-avatar-fallback">${fallback}</span>`;
+		const href = ov.url || entry.url || author.url || '#';
+		const time = formatDate(entry.published);
+
+		let body = '';
+		if (meta.full && entry.content && entry.content.text) {
+			body = `<p class="wm-content">${escapeHtml(truncate(entry.content.text, 200))}</p>`;
+		} else if (!meta.full) {
+			const verb =
+				prop === 'like-of'
+					? '喜欢了这篇文章'
+					: prop === 'repost-of'
+						? '转发了这篇文章'
+						: prop === 'bookmark-of'
+							? '收藏了这篇文章'
+							: '提到了这篇文章';
+			body = `<p class="wm-content">${escapeHtml(name)} ${verb}</p>`;
+		}
+
+		return `<a class="wm-card" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">
+			<div class="wm-card-head">
+				${avatar}
+				<span>
+					<span class="wm-author">${escapeHtml(name)}</span>
+					<span class="wm-meta"> · ${escapeHtml(hostname(href))}${time ? ' · ' + time : ''}</span>
+				</span>
+				<span class="wm-badge">${meta.emoji} ${meta.label}</span>
+			</div>
+			${body}
+		</a>`;
+	}
+
+	function init() {
+		const section = document.getElementById('webmentions');
+		if (!section) return;
+		const target = section.getAttribute('data-target');
+		if (!target) return;
+		if (section.dataset.loading === '1') return;
+		section.dataset.loading = '1';
+
+		let overrides = {};
+		try {
+			overrides = JSON.parse(section.getAttribute('data-overrides') || '{}');
+		} catch {
+			overrides = {};
+		}
+
+		const alt = target.replace('https://www.suiyan.cc', 'https://suiyan.cc');
+		const api = `https://webmention.io/api/mentions.jf2?target[]=${encodeURIComponent(target)}&target[]=${encodeURIComponent(alt)}`;
+
+		fetch(api)
+			.then((r) => {
+				if (!r.ok) throw new Error(String(r.status));
+				return r.json();
+			})
+			.then((data) => {
+				const children = data && data.children ? data.children : [];
+				const countEl = section.querySelector('.wm-count');
+				const list = document.getElementById('webmentions-list');
+				const empty = document.getElementById('webmentions-empty');
+				if (countEl) countEl.textContent = String(children.length);
+				if (!children.length) {
+					if (list) list.style.display = 'none';
+					if (empty) empty.style.display = 'block';
+					return;
+				}
+				if (empty) empty.style.display = 'none';
+				if (list) {
+					const sorted = children.slice().sort((a, b) => (b['wm-id'] || 0) - (a['wm-id'] || 0));
+					list.innerHTML = sorted.map((e) => card(e, overrides)).join('');
+					list.style.display = 'flex';
+				}
+			})
+			.catch(() => {})
+			.finally(() => {
+				section.dataset.loading = '';
+			});
+	}
+
+	function initForm() {
+		const form = document.getElementById('webmention-form');
+		if (!form) return;
+		form.addEventListener('submit', (e) => {
+			const input = form.querySelector('input[name="source"]');
+			const source = input ? input.value.trim() : '';
+			if (!source) return;
+			const status = document.getElementById('webmention-form-status');
+			const submitBtn = form.querySelector('button[type="submit"]');
+
+			e.preventDefault();
+			const setStatus = (msg, isError) => {
+				if (!status) return;
+				status.textContent = msg;
+				status.classList.toggle('error', !!isError);
+			};
+
+			if (submitBtn) {
+				submitBtn.disabled = true;
+				submitBtn.textContent = '发送中…';
+			}
+			setStatus('正在发送，请稍候…', false);
+
+			const target = form.querySelector('input[name="target"]')?.value || '';
+			const body = new URLSearchParams({ source, target });
+
+			fetch(form.action, {
+				method: 'POST',
+				headers: { Accept: 'application/json' },
+				body,
+			})
+				.then((r) => r.json().catch(() => ({})).then((data) => ({ r, data })))
+				.then(({ r, data }) => {
+					if (r.ok && data && (data.result === 'success' || data.error === undefined)) {
+						setStatus('已收到，webmention.io 正在验证来源链接，稍后会显示在这里。', false);
+						if (input) input.value = '';
+					} else {
+						const reason = data && data.summary ? data.summary : data && data.error ? data.error : `HTTP ${r.status}`;
+						setStatus(`发送失败：${reason}`, true);
+					}
+				})
+				.catch(() => {
+					setStatus('网络错误，已转用默认方式提交。', true);
+					form.submit();
+				})
+				.finally(() => {
+					if (submitBtn) {
+						submitBtn.disabled = false;
+						submitBtn.textContent = '发送';
+					}
+				});
+		});
+	}
+
+	document.addEventListener('astro:after-swap', () => {
+		init();
+		initForm();
+	});
+	init();
+	initForm();
+</script>

@@ -11,6 +11,7 @@ import PostActions from '../components/PostActions.astro';
 import { SITE_AUTHOR } from '../consts';
 import { Icon } from 'astro-icon/components';
 import AILabelBadge from '../components/AILabelBadge.astro';
+import Webmentions from '../components/Webmentions.astro';
 
 type Props = CollectionEntry<'blog'>['data'] & {
 	postId?: string;
@@ -236,6 +237,8 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 					<TagList tags={tags} showLabel={true} />
 
 					<PostActions postId={postId || ''} postPath={`/blog/${postId}`} />
+
+					<Webmentions postId={postId || ''} />
 
 
 				</div>

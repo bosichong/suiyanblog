@@ -580,3 +580,11 @@ export const COMMENTS_CONFIG = {
     envId: 'https://twikoo.suiyan.cc/.netlify/functions/twikoo',
   },
 };
+
+// Webmention 来源域名显示覆盖
+// key 为来源站点的域名，命中后使用覆盖的作者信息代替自动抓取的结果
+export const WEBMENTION_OVERRIDES: Record<
+  string,
+  { name?: string; url?: string; photo?: string }
+> = {};
+
