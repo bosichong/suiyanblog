@@ -234,11 +234,11 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 						<slot />
 					</div>
 					<hr aria-hidden="true" />
+					<Webmentions postId={postId || ''} />
+
 					<TagList tags={tags} showLabel={true} />
 
 					<PostActions postId={postId || ''} postPath={`/blog/${postId}`} />
-
-					<Webmentions postId={postId || ''} />
 
 
 				</div>
