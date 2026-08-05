@@ -36,6 +36,16 @@ export const MENU_ITEMS = [
 // 链接
 export const FRIENDS_LINKS = [
 
+
+    {
+    site_name: '非理勿试',
+    site_url: 'https://www.ntiy.com',
+    site_description: '偶尔脑残，喜欢作死，希望大家不要学我，所以给本站命名“Never Try It Yourself”，取了个小巧，篡改了个成语，中文便叫“非理勿试',
+    site_avatar: '#',
+    is_active: true,
+    rss:'https://www.ntiy.com/feed',
+  },
+
   {
     site_name: 'Cytrogen的个人博客',
     site_url: 'https://blog.cytrogen.icu/',
