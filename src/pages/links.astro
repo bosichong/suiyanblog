@@ -4,6 +4,8 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import BackToTop from '../components/BackToTop.astro';
+import Webmentions from '../components/Webmentions.astro';
+import PostActions from '../components/PostActions.astro';
 import { 
 	FRIENDS_PAGE_TITLE, 
 	FRIENDS_PAGE_DESCRIPTION, 
@@ -428,6 +430,9 @@ const linksWithRss = FRIENDS_LINKS
 					</ul>
 				</article>
 			</section>
+			<hr aria-hidden="true" />
+			<Webmentions postId="links" title="链接" postPath="/links" />
+			<PostActions postId="links" postPath="/links" />
 		</main>
 		<Footer />
 		<BackToTop />

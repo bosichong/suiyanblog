@@ -3,6 +3,8 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import BackToTop from '../components/BackToTop.astro';
+import Webmentions from '../components/Webmentions.astro';
+import PostActions from '../components/PostActions.astro';
 import { Icon } from 'astro-icon/components';
 import { PROJECTS, PROJECTS_PAGE_TITLE, PROJECTS_PAGE_DESCRIPTION, SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
@@ -262,6 +264,9 @@ const pageDescription = PROJECTS_PAGE_DESCRIPTION;
 					</ul>
 				</article>
 			</section>
+			<hr aria-hidden="true" />
+			<Webmentions postId="projects" title={pageTitle} postPath="/projects" />
+			<PostActions postId="projects" postPath="/projects" />
 		</main>
 		<Footer />
 		<BackToTop />

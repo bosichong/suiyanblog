@@ -3,6 +3,8 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import BackToTop from '../components/BackToTop.astro';
+import Webmentions from '../components/Webmentions.astro';
+import PostActions from '../components/PostActions.astro';
 import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 ---
 
@@ -421,6 +423,9 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 					</details>
 				</section>
 			</article>
+			<hr aria-hidden="true" />
+			<Webmentions postId="about" title="关于" postPath="/about" />
+			<PostActions postId="about" postPath="/about" />
 		</main>
 		<Footer />
 		<BackToTop />

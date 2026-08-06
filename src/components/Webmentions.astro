@@ -4,10 +4,12 @@ import { WEBMENTION_OVERRIDES } from '../consts';
 interface Props {
 	postId: string;
 	title?: string;
+	postPath?: string;
 }
 
-const { postId, title } = Astro.props;
-const targetUrl = new URL(`/blog/${postId}`, Astro.site).toString();
+const { postId, title, postPath } = Astro.props;
+const targetPath = postPath || `/blog/${postId}`;
+const targetUrl = new URL(targetPath, Astro.site).toString();
 const overridesJson = JSON.stringify(WEBMENTION_OVERRIDES);
 ---
 
