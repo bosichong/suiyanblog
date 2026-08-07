@@ -1,6 +1,12 @@
 {
   "https://www.leitao.cn": [
     {
+      "title": "大憨",
+      "link": "https://www.leitao.cn/10557.html",
+      "published": "Fri, 07 Aug 2026 15:29:45 +0000",
+      "published_parsed": "2026-08-07"
+    },
+    {
       "title": "冠冕与王",
       "link": "https://www.leitao.cn/10546.html",
       "published": "Tue, 04 Aug 2026 12:30:15 +0000",
@@ -25,59 +31,25 @@
       "published_parsed": "2026-07-23"
     }
   ],
-  "https://liwanr.com": [
-    {
-      "title": "她的位置",
-      "link": "https://liWanr.com/essays/2026/Her-Place/",
-      "published": "Mon, 03 Aug 2026 11:33:13 +0800",
-      "published_parsed": "2026-08-03"
-    },
-    {
-      "title": "在梦里死了，又活了",
-      "link": "https://liWanr.com/essays/2026/living-after-death/",
-      "published": "Mon, 03 Aug 2026 11:33:13 +0800",
-      "published_parsed": "2026-08-03"
-    },
-    {
-      "title": "不要试图在书里找答案",
-      "link": "https://liWanr.com/essays/2026/Answer-is-not-in-the-book/",
-      "published": "Mon, 03 Aug 2026 11:33:13 +0800",
-      "published_parsed": "2026-08-03"
-    },
-    {
-      "title": "皇帝的新衣",
-      "link": "https://liWanr.com/essays/2026/named-silence/",
-      "published": "Thu, 16 Jul 2026 15:33:00 +0800",
-      "published_parsed": "2026-07-16"
-    },
-    {
-      "title": "26 年上半年",
-      "link": "https://liWanr.com/essays/2026/2026-H1/",
-      "published": "Mon, 13 Jul 2026 03:38:42 +0800",
-      "published_parsed": "2026-07-12"
-    },
-    {
-      "title": "回响",
-      "link": "https://liWanr.com/essays/2026/echo/",
-      "published": "Sun, 12 Jul 2026 18:54:04 +0800",
-      "published_parsed": "2026-07-12"
-    }
-  ],
-  "https://www.ntiy.com": [
-    {
-      "title": "普通的蠢人",
-      "link": "https://www.ntiy.com/2370.html",
-      "published": "Tue, 04 Aug 2026 13:01:23 +0000",
-      "published_parsed": "2026-08-04"
-    },
-    {
-      "title": "“散帅”成违禁词？我不理解",
-      "link": "https://www.ntiy.com/2365.html",
-      "published": "Sat, 11 Jul 2026 15:34:13 +0000",
-      "published_parsed": "2026-07-11"
-    }
-  ],
   "https://Vind.ink": [
+    {
+      "title": "评论问题",
+      "link": "https://vind.ink/Status/204.html",
+      "published": "Sat, 08 Aug 2026 00:09:08 +0800",
+      "published_parsed": "2026-08-07"
+    },
+    {
+      "title": "备案完成",
+      "link": "https://vind.ink/Status/203.html",
+      "published": "Fri, 07 Aug 2026 21:36:43 +0800",
+      "published_parsed": "2026-08-07"
+    },
+    {
+      "title": "Windows 11 26H2 续",
+      "link": "https://vind.ink/IT-digital/Windows-11-26H2.html",
+      "published": "Fri, 07 Aug 2026 15:47:00 +0800",
+      "published_parsed": "2026-08-07"
+    },
     {
       "title": "还是换到了 Foxmail（更新）",
       "link": "https://vind.ink/IT-digital/Foxmail.html",
@@ -119,27 +91,67 @@
       "link": "https://vind.ink/photos/2024-1-1.html",
       "published": "Sun, 02 Aug 2026 13:15:00 +0800",
       "published_parsed": "2026-08-02"
+    }
+  ],
+  "https://www.ntiy.com": [
+    {
+      "title": "普通的蠢人",
+      "link": "https://www.ntiy.com/2370.html",
+      "published": "Tue, 04 Aug 2026 13:01:23 +0000",
+      "published_parsed": "2026-08-04"
     },
     {
-      "title": "上海豫园 2023 元宵节 4",
-      "link": "https://vind.ink/photos/2023-4.html",
-      "published": "Sun, 02 Aug 2026 00:22:00 +0800",
-      "published_parsed": "2026-08-01"
+      "title": "“散帅”成违禁词？我不理解",
+      "link": "https://www.ntiy.com/2365.html",
+      "published": "Sat, 11 Jul 2026 15:34:13 +0000",
+      "published_parsed": "2026-07-11"
+    }
+  ],
+  "https://liwanr.com": [
+    {
+      "title": "她的位置",
+      "link": "https://liWanr.com/essays/2026/Her-Place/",
+      "published": "Mon, 03 Aug 2026 20:27:12 +0800",
+      "published_parsed": "2026-08-03"
     },
     {
-      "title": "上海豫园 2023 元宵节 3",
-      "link": "https://vind.ink/photos/2023-3.html",
-      "published": "Fri, 31 Jul 2026 13:25:58 +0800",
-      "published_parsed": "2026-07-31"
+      "title": "在梦里死了，又活了",
+      "link": "https://liWanr.com/essays/2026/living-after-death/",
+      "published": "Mon, 03 Aug 2026 20:27:12 +0800",
+      "published_parsed": "2026-08-03"
     },
     {
-      "title": "上海豫园 2023 元宵节 2",
-      "link": "https://vind.ink/photos/2023-2.html",
-      "published": "Thu, 30 Jul 2026 17:03:00 +0800",
-      "published_parsed": "2026-07-30"
+      "title": "不要试图在书里找答案",
+      "link": "https://liWanr.com/essays/2026/Answer-is-not-in-the-book/",
+      "published": "Mon, 03 Aug 2026 20:27:12 +0800",
+      "published_parsed": "2026-08-03"
+    },
+    {
+      "title": "皇帝的新衣",
+      "link": "https://liWanr.com/essays/2026/named-silence/",
+      "published": "Thu, 16 Jul 2026 15:33:00 +0800",
+      "published_parsed": "2026-07-16"
+    },
+    {
+      "title": "26 年上半年",
+      "link": "https://liWanr.com/essays/2026/2026-H1/",
+      "published": "Mon, 13 Jul 2026 03:38:42 +0800",
+      "published_parsed": "2026-07-12"
+    },
+    {
+      "title": "回响",
+      "link": "https://liWanr.com/essays/2026/echo/",
+      "published": "Sun, 12 Jul 2026 18:54:04 +0800",
+      "published_parsed": "2026-07-12"
     }
   ],
   "https://mobius.blog": [
+    {
+      "title": "套皮",
+      "link": "https://mobius.blog/25302.html",
+      "published": "Fri, 07 Aug 2026 01:00:00 +0000",
+      "published_parsed": "2026-08-07"
+    },
     {
       "title": "活、货、与神",
       "link": "https://mobius.blog/25297.html",
@@ -193,16 +205,16 @@
       "link": "https://mobius.blog/25187.html",
       "published": "Thu, 30 Jul 2026 01:24:42 +0000",
       "published_parsed": "2026-07-30"
-    },
-    {
-      "title": "博客一定要为读者负责吗？III",
-      "link": "https://mobius.blog/25183.html",
-      "published": "Wed, 29 Jul 2026 01:00:00 +0000",
-      "published_parsed": "2026-07-29"
     }
   ],
   "https://wangyurui.com": [],
   "https://www.ruanyifeng.com/blog": [
+    {
+      "title": "科技爱好者周刊（第 407 期）：国家为什么需要开源软件？",
+      "link": "http://www.ruanyifeng.com/blog/2026/08/weekly-issue-407.html",
+      "published": "2026-08-07T00:08:27Z",
+      "published_parsed": "2026-08-07"
+    },
     {
       "title": "科技爱好者周刊（第 406 期）：道可，道非，常道",
       "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-406.html",
@@ -214,15 +226,15 @@
       "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-405.html",
       "published": "2026-07-24T00:12:16Z",
       "published_parsed": "2026-07-24"
-    },
-    {
-      "title": "科技爱好者周刊（第 404 期）：你需要知道的 AI 内存知识",
-      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-404.html",
-      "published": "2026-07-16T23:51:19Z",
-      "published_parsed": "2026-07-16"
     }
   ],
   "https://blog.mfwt.top": [
+    {
+      "title": "生活碎碎念：立秋，立马就『秋』？",
+      "link": "https://blog.mfwt.top/index.php/archives/1516/",
+      "published": "Fri, 07 Aug 2026 19:59:00 +0800",
+      "published_parsed": "2026-08-07"
+    },
     {
       "title": "我为小说忙：（五）插件的上线工作",
       "link": "https://blog.mfwt.top/index.php/archives/1476/",
@@ -278,7 +290,40 @@
       "published_parsed": "2026-07-11"
     }
   ],
+  "https://www.tortorse.com": [],
+  "https://wiki.eryajf.net": [
+    {
+      "title": "学习周刊-总第275期-2026年第32周",
+      "link": "https://wiki.eryajf.net/pages/961c90/",
+      "published": "Thu, 06 Aug 2026 22:27:18 GMT",
+      "published_parsed": "2026-08-06"
+    },
+    {
+      "title": "学习周刊-总第274期-2026年第31周",
+      "link": "https://wiki.eryajf.net/pages/7216a4/",
+      "published": "Thu, 30 Jul 2026 22:50:25 GMT",
+      "published_parsed": "2026-07-30"
+    },
+    {
+      "title": "学习周刊-总第273期-2026年第30周",
+      "link": "https://wiki.eryajf.net/pages/8085fe/",
+      "published": "Thu, 23 Jul 2026 21:51:09 GMT",
+      "published_parsed": "2026-07-23"
+    },
+    {
+      "title": "学习周刊-总第272期-2026年第29周",
+      "link": "https://wiki.eryajf.net/pages/b07ecd/",
+      "published": "Thu, 16 Jul 2026 23:18:10 GMT",
+      "published_parsed": "2026-07-16"
+    }
+  ],
   "https://zhongxiaojie.com": [
+    {
+      "title": "休止符",
+      "link": "https://zhongxiaojie.cn/2026/08/1718/",
+      "published": "Fri, 07 Aug 2026 08:19:31 +0000",
+      "published_parsed": "2026-08-07"
+    },
     {
       "title": "折耳兔",
       "link": "https://zhongxiaojie.cn/2026/07/1703/",
@@ -308,6 +353,106 @@
       "link": "https://zhongxiaojie.cn/2026/07/1626/",
       "published": "Tue, 14 Jul 2026 02:49:45 +0000",
       "published_parsed": "2026-07-14"
+    }
+  ],
+  "https://www.vergilisme.com": [
+    {
+      "title": "新起点，新时代，新故事",
+      "link": "https://www.vergilisme.com/index.php/2026/07/21/2402.html",
+      "published": "Tue, 21 Jul 2026 17:40:00 +0800",
+      "published_parsed": "2026-07-21"
+    }
+  ],
+  "https://www.tjsky.net": [
+    {
+      "title": "10小时预警的服务器搬家 vs 零通知重启全球服务器：低价 VPS 界的操作越来越离谱了",
+      "link": "https://www.tjsky.net/natter/1726",
+      "published": "Wed, 22 Jul 2026 03:37:16 +0000",
+      "published_parsed": "2026-07-22"
+    },
+    {
+      "title": "YouTube 无限重定向报错，谷歌账号身份验证无限失败，罪魁祸首居然是“已分区 cookie”？！",
+      "link": "https://www.tjsky.net/tutorial/1708",
+      "published": "Wed, 15 Jul 2026 14:12:22 +0000",
+      "published_parsed": "2026-07-15"
+    }
+  ],
+  "https://lawtee.com": [
+    {
+      "title": "生存高分，发展白卷：用一套自洽框架解构清朝",
+      "link": "https://lawtee.com/article/about-qing-history/",
+      "published": "Tue, 04 Aug 2026 18:09:57 +0000",
+      "published_parsed": "2026-08-04"
+    },
+    {
+      "title": "一代人的最后一课",
+      "link": "https://lawtee.com/article/my-uncle/",
+      "published": "Sun, 02 Aug 2026 19:39:57 +0000",
+      "published_parsed": "2026-08-02"
+    },
+    {
+      "title": "那些被AI公司吃掉的书",
+      "link": "https://lawtee.com/article/ai-eat-books/",
+      "published": "Thu, 30 Jul 2026 23:08:39 +0000",
+      "published_parsed": "2026-07-30"
+    },
+    {
+      "title": "不要拿农村是“退路”来骗自己",
+      "link": "https://lawtee.com/article/fallback-countryside/",
+      "published": "Wed, 29 Jul 2026 00:35:58 +0000",
+      "published_parsed": "2026-07-29"
+    },
+    {
+      "title": "湖南经济发展的药方早就开好了，关键是“把药吃下去”",
+      "link": "https://lawtee.com/article/hunan-economy/",
+      "published": "Tue, 28 Jul 2026 01:52:56 +0000",
+      "published_parsed": "2026-07-28"
+    }
+  ],
+  "https://yipai.me": [
+    {
+      "title": "为什么 AI 也会有缓存命中",
+      "link": "https://yipai.me/post/2545.html",
+      "published": "Thu, 06 Aug 2026 15:38:51 GMT",
+      "published_parsed": "2026-08-06"
+    },
+    {
+      "title": "Windows 的 HEVC 扩展收费跟苹果无关",
+      "link": "https://yipai.me/post/2543.html",
+      "published": "Wed, 29 Jul 2026 08:14:00 GMT",
+      "published_parsed": "2026-07-29"
+    },
+    {
+      "title": "邓煜、王虹：获奖理由、人物短片与记者问答翻译",
+      "link": "https://yipai.me/post/2542.html",
+      "published": "Mon, 27 Jul 2026 09:58:00 GMT",
+      "published_parsed": "2026-07-27"
+    },
+    {
+      "title": "反对狗奴与反对虐狗并不冲突",
+      "link": "https://yipai.me/post/2541.html",
+      "published": "Wed, 22 Jul 2026 07:25:00 GMT",
+      "published_parsed": "2026-07-22"
+    },
+    {
+      "title": "地铁安检为何无效？",
+      "link": "https://yipai.me/post/2540.html",
+      "published": "Mon, 20 Jul 2026 03:34:00 GMT",
+      "published_parsed": "2026-07-20"
+    },
+    {
+      "title": "最近够闲的，开发了新网站",
+      "link": "https://yipai.me/post/2539.html",
+      "published": "Thu, 16 Jul 2026 13:04:00 GMT",
+      "published_parsed": "2026-07-16"
+    }
+  ],
+  "https://sliun.com": [
+    {
+      "title": "康德与人参果 #1",
+      "link": "https://sliun.com/kantandcaohuandan1/",
+      "published": "2026-07-19T13:56:00+00:00",
+      "published_parsed": "2026-07-19"
     }
   ],
   "https://z.arlmy.me": [
@@ -562,154 +707,8 @@
       "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_413/",
       "published": "2026-07-11T04:48:27.000Z",
       "published_parsed": "2026-07-11"
-    },
-    {
-      "title": "摘：《见证疯狂》",
-      "link": "https://z.arlmy.me/posts/Note/Note_MikeJay_ThisWayMadnessLiesTheAsylumAndBeyond/",
-      "published": "2026-07-10T16:14:46.000Z",
-      "published_parsed": "2026-07-10"
-    },
-    {
-      "title": "入蜀记 day412 眼见为实",
-      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_412/",
-      "published": "2026-07-10T04:48:27.000Z",
-      "published_parsed": "2026-07-10"
     }
   ],
-  "https://www.tortorse.com": [],
-  "https://wiki.eryajf.net": [
-    {
-      "title": "学习周刊-总第275期-2026年第32周",
-      "link": "https://wiki.eryajf.net/pages/961c90/",
-      "published": "Thu, 06 Aug 2026 22:27:18 GMT",
-      "published_parsed": "2026-08-06"
-    },
-    {
-      "title": "学习周刊-总第274期-2026年第31周",
-      "link": "https://wiki.eryajf.net/pages/7216a4/",
-      "published": "Thu, 30 Jul 2026 22:50:25 GMT",
-      "published_parsed": "2026-07-30"
-    },
-    {
-      "title": "学习周刊-总第273期-2026年第30周",
-      "link": "https://wiki.eryajf.net/pages/8085fe/",
-      "published": "Thu, 23 Jul 2026 21:51:09 GMT",
-      "published_parsed": "2026-07-23"
-    },
-    {
-      "title": "学习周刊-总第272期-2026年第29周",
-      "link": "https://wiki.eryajf.net/pages/b07ecd/",
-      "published": "Thu, 16 Jul 2026 23:18:10 GMT",
-      "published_parsed": "2026-07-16"
-    },
-    {
-      "title": "学习周刊-总第271期-2026年第28周",
-      "link": "https://wiki.eryajf.net/pages/87cbc1/",
-      "published": "Fri, 10 Jul 2026 08:57:16 GMT",
-      "published_parsed": "2026-07-10"
-    }
-  ],
-  "https://www.tjsky.net": [
-    {
-      "title": "10小时预警的服务器搬家 vs 零通知重启全球服务器：低价 VPS 界的操作越来越离谱了",
-      "link": "https://www.tjsky.net/natter/1726",
-      "published": "Wed, 22 Jul 2026 03:37:16 +0000",
-      "published_parsed": "2026-07-22"
-    },
-    {
-      "title": "YouTube 无限重定向报错，谷歌账号身份验证无限失败，罪魁祸首居然是“已分区 cookie”？！",
-      "link": "https://www.tjsky.net/tutorial/1708",
-      "published": "Wed, 15 Jul 2026 14:12:22 +0000",
-      "published_parsed": "2026-07-15"
-    }
-  ],
-  "https://www.vergilisme.com": [
-    {
-      "title": "新起点，新时代，新故事",
-      "link": "https://www.vergilisme.com/index.php/2026/07/21/2402.html",
-      "published": "Tue, 21 Jul 2026 17:40:00 +0800",
-      "published_parsed": "2026-07-21"
-    }
-  ],
-  "https://yipai.me": [
-    {
-      "title": "为什么 AI 也会有缓存命中",
-      "link": "https://yipai.me/post/2545.html",
-      "published": "Thu, 06 Aug 2026 15:38:51 GMT",
-      "published_parsed": "2026-08-06"
-    },
-    {
-      "title": "Windows 的 HEVC 扩展收费跟苹果无关",
-      "link": "https://yipai.me/post/2543.html",
-      "published": "Wed, 29 Jul 2026 08:14:00 GMT",
-      "published_parsed": "2026-07-29"
-    },
-    {
-      "title": "邓煜、王虹：获奖理由、人物短片与记者问答翻译",
-      "link": "https://yipai.me/post/2542.html",
-      "published": "Mon, 27 Jul 2026 09:58:00 GMT",
-      "published_parsed": "2026-07-27"
-    },
-    {
-      "title": "反对狗奴与反对虐狗并不冲突",
-      "link": "https://yipai.me/post/2541.html",
-      "published": "Wed, 22 Jul 2026 07:25:00 GMT",
-      "published_parsed": "2026-07-22"
-    },
-    {
-      "title": "地铁安检为何无效？",
-      "link": "https://yipai.me/post/2540.html",
-      "published": "Mon, 20 Jul 2026 03:34:00 GMT",
-      "published_parsed": "2026-07-20"
-    },
-    {
-      "title": "最近够闲的，开发了新网站",
-      "link": "https://yipai.me/post/2539.html",
-      "published": "Thu, 16 Jul 2026 13:04:00 GMT",
-      "published_parsed": "2026-07-16"
-    }
-  ],
-  "https://lawtee.com": [
-    {
-      "title": "生存高分，发展白卷：用一套自洽框架解构清朝",
-      "link": "https://lawtee.com/article/about-qing-history/",
-      "published": "Tue, 04 Aug 2026 18:09:57 +0000",
-      "published_parsed": "2026-08-04"
-    },
-    {
-      "title": "一代人的最后一课",
-      "link": "https://lawtee.com/article/my-uncle/",
-      "published": "Sun, 02 Aug 2026 19:39:57 +0000",
-      "published_parsed": "2026-08-02"
-    },
-    {
-      "title": "那些被AI公司吃掉的书",
-      "link": "https://lawtee.com/article/ai-eat-books/",
-      "published": "Thu, 30 Jul 2026 23:08:39 +0000",
-      "published_parsed": "2026-07-30"
-    },
-    {
-      "title": "不要拿农村是“退路”来骗自己",
-      "link": "https://lawtee.com/article/fallback-countryside/",
-      "published": "Wed, 29 Jul 2026 00:35:58 +0000",
-      "published_parsed": "2026-07-29"
-    },
-    {
-      "title": "湖南经济发展的药方早就开好了，关键是“把药吃下去”",
-      "link": "https://lawtee.com/article/hunan-economy/",
-      "published": "Tue, 28 Jul 2026 01:52:56 +0000",
-      "published_parsed": "2026-07-28"
-    }
-  ],
-  "https://sliun.com": [
-    {
-      "title": "康德与人参果 #1",
-      "link": "https://sliun.com/kantandcaohuandan1/",
-      "published": "2026-07-19T13:56:00+00:00",
-      "published_parsed": "2026-07-19"
-    }
-  ],
-  "https://pathos.page": [],
   "https://d-d.design": [
     {
       "title": "Snake Wuwu",
@@ -772,6 +771,7 @@
       "published_parsed": "2026-07-11"
     }
   ],
+  "https://www.glowisle.me": [],
   "https://yihui.org/cn": [],
   "https://blog.bxaw.name": [
     {
@@ -781,10 +781,46 @@
       "published_parsed": "2026-07-15"
     }
   ],
-  "https://www.glowisle.me": [],
-  "https://www.scarsu.com": [],
+  "https://pathos.page": [],
   "https://cyrus19.cc": [],
+  "https://www.owenyoung.com": [
+    {
+      "title": "当前想置顶的一些内容",
+      "link": "https://www.owenyoung.com/pinned",
+      "published": "2026-07-16T02:54:00.000Z",
+      "published_parsed": "2026-07-16"
+    }
+  ],
+  "https://usj.cc": [
+    {
+      "title": "流量卡还真得选御三家😂",
+      "link": "https://usj.cc/20260724101237.html",
+      "published": "Fri, 24 Jul 2026 00:00:00 +0000",
+      "published_parsed": "2026-07-24"
+    },
+    {
+      "title": "最成功的一次红烧鱼",
+      "link": "https://usj.cc/20260718222522.html",
+      "published": "Sat, 18 Jul 2026 00:00:00 +0000",
+      "published_parsed": "2026-07-18"
+    }
+  ],
+  "https://www.demochen.com": [
+    {
+      "title": "探索 AI 时代的人机协作",
+      "link": "https://demochen.com/posts/20260722/",
+      "published": "Wed, 22 Jul 2026 22:36:47 +0800",
+      "published_parsed": "2026-07-22"
+    }
+  ],
+  "https://www.scarsu.com": [],
   "https://blog.solazy.me": [
+    {
+      "title": "生理上的技术债务",
+      "link": "https://blog.solazy.me/20260806/",
+      "published": "2026-08-06T15:00:00+00:00",
+      "published_parsed": "2026-08-06"
+    },
     {
       "title": "入职五个月小结",
       "link": "https://blog.solazy.me/20260805/",
@@ -838,119 +874,15 @@
       "link": "https://blog.solazy.me/20260728/",
       "published": "2026-07-28T15:00:00+00:00",
       "published_parsed": "2026-07-28"
-    },
-    {
-      "title": "Why me？",
-      "link": "https://blog.solazy.me/20260727/",
-      "published": "2026-07-27T15:00:00+00:00",
-      "published_parsed": "2026-07-27"
-    }
-  ],
-  "https://www.demochen.com": [
-    {
-      "title": "探索 AI 时代的人机协作",
-      "link": "https://demochen.com/posts/20260722/",
-      "published": "Wed, 22 Jul 2026 22:36:47 +0800",
-      "published_parsed": "2026-07-22"
-    }
-  ],
-  "https://www.owenyoung.com": [
-    {
-      "title": "当前想置顶的一些内容",
-      "link": "https://www.owenyoung.com/pinned",
-      "published": "2026-07-16T02:54:00.000Z",
-      "published_parsed": "2026-07-16"
-    }
-  ],
-  "https://usj.cc": [
-    {
-      "title": "流量卡还真得选御三家😂",
-      "link": "https://usj.cc/20260724101237.html",
-      "published": "Fri, 24 Jul 2026 00:00:00 +0000",
-      "published_parsed": "2026-07-24"
-    },
-    {
-      "title": "最成功的一次红烧鱼",
-      "link": "https://usj.cc/20260718222522.html",
-      "published": "Sat, 18 Jul 2026 00:00:00 +0000",
-      "published_parsed": "2026-07-18"
-    }
-  ],
-  "https://blog.cytrogen.icu": [
-    {
-      "title": "Meta 和它不聪明的领导者",
-      "link": "https://blog.cytrogen.icu/posts/83ff.html",
-      "published": "2026-08-06T19:30:59.000Z",
-      "published_parsed": "2026-08-06"
-    },
-    {
-      "title": "Hate gifts",
-      "link": "https://blog.cytrogen.icu/posts/b3bc.html",
-      "published": "2026-08-06T19:30:54.000Z",
-      "published_parsed": "2026-08-06"
-    },
-    {
-      "title": "RE：Bloggers, can we make better titles for our posts?",
-      "link": "https://blog.cytrogen.icu/posts/ea71.html",
-      "published": "2026-08-05T23:22:00.000Z",
-      "published_parsed": "2026-08-05"
-    },
-    {
-      "title": "是的，我没有意识形态",
-      "link": "https://blog.cytrogen.icu/posts/1cfd.html",
-      "published": "2026-08-04T14:00:00.000Z",
-      "published_parsed": "2026-08-04"
-    },
-    {
-      "title": "RE：美国梦与美国痛 华裔新移民青少年帮派犯罪",
-      "link": "https://blog.cytrogen.icu/posts/1547.html",
-      "published": "2026-08-03T16:38:00.000Z",
-      "published_parsed": "2026-08-03"
-    },
-    {
-      "title": "想法在丙午瓜秋迭代",
-      "link": "https://blog.cytrogen.icu/posts/3456.html",
-      "published": "2026-08-01T04:00:00.000Z",
-      "published_parsed": "2026-08-01"
-    },
-    {
-      "title": "RE：Post-political",
-      "link": "https://blog.cytrogen.icu/posts/36e6.html",
-      "published": "2026-08-01T00:41:00.000Z",
-      "published_parsed": "2026-08-01"
-    },
-    {
-      "title": "RE：Why China got rich and India didn't",
-      "link": "https://blog.cytrogen.icu/posts/1b10.html",
-      "published": "2026-07-31T21:33:00.000Z",
-      "published_parsed": "2026-07-31"
-    },
-    {
-      "title": "洗澡和洗头发",
-      "link": "https://blog.cytrogen.icu/posts/11d1.html",
-      "published": "2026-07-31T04:00:00.000Z",
-      "published_parsed": "2026-07-31"
-    },
-    {
-      "title": "RE：断层里的心理学",
-      "link": "https://blog.cytrogen.icu/posts/221a.html",
-      "published": "2026-07-30T04:00:00.000Z",
-      "published_parsed": "2026-07-30"
-    },
-    {
-      "title": "休息日出去玩吧",
-      "link": "https://blog.cytrogen.icu/posts/c783.html",
-      "published": "2026-07-28T04:00:00.000Z",
-      "published_parsed": "2026-07-28"
-    },
-    {
-      "title": "大熊猫送快递",
-      "link": "https://blog.cytrogen.icu/posts/3a5e.html",
-      "published": "2026-07-25T04:00:00.000Z",
-      "published_parsed": "2026-07-25"
     }
   ],
   "https://immarcus.com": [
+    {
+      "title": "飙车",
+      "link": "https://www.immarcus.com/blog/reckless-driving",
+      "published": "Fri, 07 Aug 2026 00:00:00 GMT",
+      "published_parsed": "2026-08-07"
+    },
     {
       "title": "自由与动态范围",
       "link": "https://www.immarcus.com/blog/freedom-and-dynamic-range",
@@ -1112,6 +1044,86 @@
       "link": "https://www.immarcus.com/blog/niagara-falls",
       "published": "Sat, 11 Jul 2026 00:00:00 GMT",
       "published_parsed": "2026-07-11"
+    }
+  ],
+  "https://blog.cytrogen.icu": [
+    {
+      "title": "病殃殃的一周",
+      "link": "https://blog.cytrogen.icu/posts/b8c3.html",
+      "published": "2026-08-07T18:30:40.000Z",
+      "published_parsed": "2026-08-07"
+    },
+    {
+      "title": "Meta 和它不聪明的领导者",
+      "link": "https://blog.cytrogen.icu/posts/83ff.html",
+      "published": "2026-08-06T19:30:59.000Z",
+      "published_parsed": "2026-08-06"
+    },
+    {
+      "title": "Hate gifts",
+      "link": "https://blog.cytrogen.icu/posts/b3bc.html",
+      "published": "2026-08-06T19:30:54.000Z",
+      "published_parsed": "2026-08-06"
+    },
+    {
+      "title": "RE：Bloggers, can we make better titles for our posts?",
+      "link": "https://blog.cytrogen.icu/posts/ea71.html",
+      "published": "2026-08-05T23:22:00.000Z",
+      "published_parsed": "2026-08-05"
+    },
+    {
+      "title": "是的，我没有意识形态",
+      "link": "https://blog.cytrogen.icu/posts/1cfd.html",
+      "published": "2026-08-04T14:00:00.000Z",
+      "published_parsed": "2026-08-04"
+    },
+    {
+      "title": "RE：美国梦与美国痛 华裔新移民青少年帮派犯罪",
+      "link": "https://blog.cytrogen.icu/posts/1547.html",
+      "published": "2026-08-03T16:38:00.000Z",
+      "published_parsed": "2026-08-03"
+    },
+    {
+      "title": "想法在丙午瓜秋迭代",
+      "link": "https://blog.cytrogen.icu/posts/3456.html",
+      "published": "2026-08-01T04:00:00.000Z",
+      "published_parsed": "2026-08-01"
+    },
+    {
+      "title": "RE：Post-political",
+      "link": "https://blog.cytrogen.icu/posts/36e6.html",
+      "published": "2026-08-01T00:41:00.000Z",
+      "published_parsed": "2026-08-01"
+    },
+    {
+      "title": "RE：Why China got rich and India didn't",
+      "link": "https://blog.cytrogen.icu/posts/1b10.html",
+      "published": "2026-07-31T21:33:00.000Z",
+      "published_parsed": "2026-07-31"
+    },
+    {
+      "title": "洗澡和洗头发",
+      "link": "https://blog.cytrogen.icu/posts/11d1.html",
+      "published": "2026-07-31T04:00:00.000Z",
+      "published_parsed": "2026-07-31"
+    },
+    {
+      "title": "RE：断层里的心理学",
+      "link": "https://blog.cytrogen.icu/posts/221a.html",
+      "published": "2026-07-30T04:00:00.000Z",
+      "published_parsed": "2026-07-30"
+    },
+    {
+      "title": "休息日出去玩吧",
+      "link": "https://blog.cytrogen.icu/posts/c783.html",
+      "published": "2026-07-28T04:00:00.000Z",
+      "published_parsed": "2026-07-28"
+    },
+    {
+      "title": "大熊猫送快递",
+      "link": "https://blog.cytrogen.icu/posts/3a5e.html",
+      "published": "2026-07-25T04:00:00.000Z",
+      "published_parsed": "2026-07-25"
     }
   ]
 }
