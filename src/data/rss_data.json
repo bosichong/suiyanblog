@@ -1,18 +1,4 @@
 {
-  "https://www.ntiy.com": [
-    {
-      "title": "普通的蠢人",
-      "link": "https://www.ntiy.com/2370.html",
-      "published": "Tue, 04 Aug 2026 13:01:23 +0000",
-      "published_parsed": "2026-08-04"
-    },
-    {
-      "title": "“散帅”成违禁词？我不理解",
-      "link": "https://www.ntiy.com/2365.html",
-      "published": "Sat, 11 Jul 2026 15:34:13 +0000",
-      "published_parsed": "2026-07-11"
-    }
-  ],
   "https://www.leitao.cn": [
     {
       "title": "冠冕与王",
@@ -43,20 +29,20 @@
     {
       "title": "她的位置",
       "link": "https://liWanr.com/essays/2026/Her-Place/",
-      "published": "Sun, 02 Aug 2026 23:10:32 +0800",
-      "published_parsed": "2026-08-02"
+      "published": "Mon, 03 Aug 2026 11:33:13 +0800",
+      "published_parsed": "2026-08-03"
     },
     {
       "title": "在梦里死了，又活了",
       "link": "https://liWanr.com/essays/2026/living-after-death/",
-      "published": "Sun, 02 Aug 2026 23:10:32 +0800",
-      "published_parsed": "2026-08-02"
+      "published": "Mon, 03 Aug 2026 11:33:13 +0800",
+      "published_parsed": "2026-08-03"
     },
     {
       "title": "不要试图在书里找答案",
       "link": "https://liWanr.com/essays/2026/Answer-is-not-in-the-book/",
-      "published": "Sun, 02 Aug 2026 23:10:32 +0800",
-      "published_parsed": "2026-08-02"
+      "published": "Mon, 03 Aug 2026 11:33:13 +0800",
+      "published_parsed": "2026-08-03"
     },
     {
       "title": "皇帝的新衣",
@@ -77,69 +63,27 @@
       "published_parsed": "2026-07-12"
     }
   ],
-  "https://mobius.blog": [
+  "https://www.ntiy.com": [
     {
-      "title": "找到那件值得“浪费一生”的事情",
-      "link": "https://mobius.blog/25290.html",
-      "published": "Wed, 05 Aug 2026 02:24:22 +0000",
-      "published_parsed": "2026-08-05"
-    },
-    {
-      "title": "未来休克并不只是发生在未来",
-      "link": "https://mobius.blog/25282.html",
-      "published": "Tue, 04 Aug 2026 04:36:44 +0000",
+      "title": "普通的蠢人",
+      "link": "https://www.ntiy.com/2370.html",
+      "published": "Tue, 04 Aug 2026 13:01:23 +0000",
       "published_parsed": "2026-08-04"
     },
     {
-      "title": "知了 II",
-      "link": "https://mobius.blog/25277.html",
-      "published": "Tue, 04 Aug 2026 02:36:05 +0000",
-      "published_parsed": "2026-08-04"
-    },
-    {
-      "title": "流动性时代与未来休克",
-      "link": "https://mobius.blog/25271.html",
-      "published": "Mon, 03 Aug 2026 01:00:00 +0000",
-      "published_parsed": "2026-08-03"
-    },
-    {
-      "title": "≡ 006｜这一周莫比乌斯环转到了哪里？",
-      "link": "https://mobius.blog/2026/08/02/25253/",
-      "published": "Sun, 02 Aug 2026 01:00:00 +0000",
-      "published_parsed": "2026-08-02"
-    },
-    {
-      "title": "每个人心中都有……",
-      "link": "https://mobius.blog/25246.html",
-      "published": "Sat, 01 Aug 2026 03:49:53 +0000",
-      "published_parsed": "2026-08-01"
-    },
-    {
-      "title": "该不该让 AI 参与写作？",
-      "link": "https://mobius.blog/25236.html",
-      "published": "Fri, 31 Jul 2026 01:54:44 +0000",
-      "published_parsed": "2026-07-31"
-    },
-    {
-      "title": "博客一定要为读者负责吗？IV",
-      "link": "https://mobius.blog/25187.html",
-      "published": "Thu, 30 Jul 2026 01:24:42 +0000",
-      "published_parsed": "2026-07-30"
-    },
-    {
-      "title": "博客一定要为读者负责吗？III",
-      "link": "https://mobius.blog/25183.html",
-      "published": "Wed, 29 Jul 2026 01:00:00 +0000",
-      "published_parsed": "2026-07-29"
-    },
-    {
-      "title": "博客一定要为读者负责吗？II",
-      "link": "https://mobius.blog/25179.html",
-      "published": "Tue, 28 Jul 2026 01:00:00 +0000",
-      "published_parsed": "2026-07-28"
+      "title": "“散帅”成违禁词？我不理解",
+      "link": "https://www.ntiy.com/2365.html",
+      "published": "Sat, 11 Jul 2026 15:34:13 +0000",
+      "published_parsed": "2026-07-11"
     }
   ],
   "https://Vind.ink": [
+    {
+      "title": "还是换到了 Foxmail（更新）",
+      "link": "https://vind.ink/IT-digital/Foxmail.html",
+      "published": "Thu, 06 Aug 2026 18:27:00 +0800",
+      "published_parsed": "2026-08-06"
+    },
     {
       "title": "电脑杂记-2026年8月初",
       "link": "https://vind.ink/IT-digital/2026-8.html",
@@ -193,14 +137,71 @@
       "link": "https://vind.ink/photos/2023-2.html",
       "published": "Thu, 30 Jul 2026 17:03:00 +0800",
       "published_parsed": "2026-07-30"
-    },
-    {
-      "title": "上海豫园 2023 元宵节 1",
-      "link": "https://vind.ink/photos/2023-1.html",
-      "published": "Thu, 30 Jul 2026 09:35:00 +0800",
-      "published_parsed": "2026-07-30"
     }
   ],
+  "https://mobius.blog": [
+    {
+      "title": "活、货、与神",
+      "link": "https://mobius.blog/25297.html",
+      "published": "Thu, 06 Aug 2026 03:55:58 +0000",
+      "published_parsed": "2026-08-06"
+    },
+    {
+      "title": "找到那件值得“浪费一生”的事情",
+      "link": "https://mobius.blog/25290.html",
+      "published": "Wed, 05 Aug 2026 02:24:22 +0000",
+      "published_parsed": "2026-08-05"
+    },
+    {
+      "title": "未来休克并不只是发生在未来",
+      "link": "https://mobius.blog/25282.html",
+      "published": "Tue, 04 Aug 2026 04:36:44 +0000",
+      "published_parsed": "2026-08-04"
+    },
+    {
+      "title": "知了 II",
+      "link": "https://mobius.blog/25277.html",
+      "published": "Tue, 04 Aug 2026 02:36:05 +0000",
+      "published_parsed": "2026-08-04"
+    },
+    {
+      "title": "流动性时代与未来休克",
+      "link": "https://mobius.blog/25271.html",
+      "published": "Mon, 03 Aug 2026 01:00:00 +0000",
+      "published_parsed": "2026-08-03"
+    },
+    {
+      "title": "≡ 006｜这一周莫比乌斯环转到了哪里？",
+      "link": "https://mobius.blog/2026/08/02/25253/",
+      "published": "Sun, 02 Aug 2026 01:00:00 +0000",
+      "published_parsed": "2026-08-02"
+    },
+    {
+      "title": "每个人心中都有……",
+      "link": "https://mobius.blog/25246.html",
+      "published": "Sat, 01 Aug 2026 03:49:53 +0000",
+      "published_parsed": "2026-08-01"
+    },
+    {
+      "title": "该不该让 AI 参与写作？",
+      "link": "https://mobius.blog/25236.html",
+      "published": "Fri, 31 Jul 2026 01:54:44 +0000",
+      "published_parsed": "2026-07-31"
+    },
+    {
+      "title": "博客一定要为读者负责吗？IV",
+      "link": "https://mobius.blog/25187.html",
+      "published": "Thu, 30 Jul 2026 01:24:42 +0000",
+      "published_parsed": "2026-07-30"
+    },
+    {
+      "title": "博客一定要为读者负责吗？III",
+      "link": "https://mobius.blog/25183.html",
+      "published": "Wed, 29 Jul 2026 01:00:00 +0000",
+      "published_parsed": "2026-07-29"
+    }
+  ],
+  "https://wangyurui.com": [],
   "https://www.ruanyifeng.com/blog": [
     {
       "title": "科技爱好者周刊（第 406 期）：道可，道非，常道",
@@ -221,8 +222,13 @@
       "published_parsed": "2026-07-16"
     }
   ],
-  "https://wangyurui.com": [],
   "https://blog.mfwt.top": [
+    {
+      "title": "我为小说忙：（五）插件的上线工作",
+      "link": "https://blog.mfwt.top/index.php/archives/1476/",
+      "published": "Thu, 06 Aug 2026 16:58:00 +0800",
+      "published_parsed": "2026-08-06"
+    },
     {
       "title": "无用命途：博客深潜者",
       "link": "https://blog.mfwt.top/index.php/archives/1481/",
@@ -270,12 +276,6 @@
       "link": "https://blog.mfwt.top/index.php/archives/1427/",
       "published": "Sat, 11 Jul 2026 21:58:00 +0800",
       "published_parsed": "2026-07-11"
-    },
-    {
-      "title": "我为小说忙：（一）TPNovel 的规划",
-      "link": "https://blog.mfwt.top/index.php/archives/1414/",
-      "published": "Fri, 10 Jul 2026 00:55:00 +0800",
-      "published_parsed": "2026-07-09"
     }
   ],
   "https://zhongxiaojie.com": [
@@ -310,39 +310,30 @@
       "published_parsed": "2026-07-14"
     }
   ],
-  "https://www.tortorse.com": [],
-  "https://wiki.eryajf.net": [
-    {
-      "title": "学习周刊-总第274期-2026年第31周",
-      "link": "https://wiki.eryajf.net/pages/7216a4/",
-      "published": "Thu, 30 Jul 2026 22:50:25 GMT",
-      "published_parsed": "2026-07-30"
-    },
-    {
-      "title": "学习周刊-总第273期-2026年第30周",
-      "link": "https://wiki.eryajf.net/pages/8085fe/",
-      "published": "Thu, 23 Jul 2026 21:51:09 GMT",
-      "published_parsed": "2026-07-23"
-    },
-    {
-      "title": "学习周刊-总第272期-2026年第29周",
-      "link": "https://wiki.eryajf.net/pages/b07ecd/",
-      "published": "Thu, 16 Jul 2026 23:18:10 GMT",
-      "published_parsed": "2026-07-16"
-    },
-    {
-      "title": "学习周刊-总第271期-2026年第28周",
-      "link": "https://wiki.eryajf.net/pages/87cbc1/",
-      "published": "Fri, 10 Jul 2026 08:57:16 GMT",
-      "published_parsed": "2026-07-10"
-    }
-  ],
   "https://z.arlmy.me": [
+    {
+      "title": "入蜀记 day438 北来的风雨",
+      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_438/",
+      "published": "2026-08-06T00:53:27.000Z",
+      "published_parsed": "2026-08-06"
+    },
+    {
+      "title": "入蜀记 day437 靠山邸",
+      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_437/",
+      "published": "2026-08-05T04:48:27.000Z",
+      "published_parsed": "2026-08-05"
+    },
     {
       "title": "信息税",
       "link": "https://z.arlmy.me/posts/ZArlmyMe/Desktop_20260805/",
       "published": "2026-08-05T04:30:03.000Z",
       "published_parsed": "2026-08-05"
+    },
+    {
+      "title": "入蜀记 day436 钟美美",
+      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_436/",
+      "published": "2026-08-04T04:48:27.000Z",
+      "published_parsed": "2026-08-04"
     },
     {
       "title": "并不抗拒表达",
@@ -583,20 +574,39 @@
       "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_412/",
       "published": "2026-07-10T04:48:27.000Z",
       "published_parsed": "2026-07-10"
-    },
-    {
-      "title": "入蜀记 day411 里约热内泸",
-      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_411/",
-      "published": "2026-07-09T04:48:27.000Z",
-      "published_parsed": "2026-07-09"
     }
   ],
-  "https://www.vergilisme.com": [
+  "https://www.tortorse.com": [],
+  "https://wiki.eryajf.net": [
     {
-      "title": "新起点，新时代，新故事",
-      "link": "https://www.vergilisme.com/index.php/2026/07/21/2402.html",
-      "published": "Tue, 21 Jul 2026 17:40:00 +0800",
-      "published_parsed": "2026-07-21"
+      "title": "学习周刊-总第275期-2026年第32周",
+      "link": "https://wiki.eryajf.net/pages/961c90/",
+      "published": "Thu, 06 Aug 2026 22:27:18 GMT",
+      "published_parsed": "2026-08-06"
+    },
+    {
+      "title": "学习周刊-总第274期-2026年第31周",
+      "link": "https://wiki.eryajf.net/pages/7216a4/",
+      "published": "Thu, 30 Jul 2026 22:50:25 GMT",
+      "published_parsed": "2026-07-30"
+    },
+    {
+      "title": "学习周刊-总第273期-2026年第30周",
+      "link": "https://wiki.eryajf.net/pages/8085fe/",
+      "published": "Thu, 23 Jul 2026 21:51:09 GMT",
+      "published_parsed": "2026-07-23"
+    },
+    {
+      "title": "学习周刊-总第272期-2026年第29周",
+      "link": "https://wiki.eryajf.net/pages/b07ecd/",
+      "published": "Thu, 16 Jul 2026 23:18:10 GMT",
+      "published_parsed": "2026-07-16"
+    },
+    {
+      "title": "学习周刊-总第271期-2026年第28周",
+      "link": "https://wiki.eryajf.net/pages/87cbc1/",
+      "published": "Fri, 10 Jul 2026 08:57:16 GMT",
+      "published_parsed": "2026-07-10"
     }
   ],
   "https://www.tjsky.net": [
@@ -611,6 +621,52 @@
       "link": "https://www.tjsky.net/tutorial/1708",
       "published": "Wed, 15 Jul 2026 14:12:22 +0000",
       "published_parsed": "2026-07-15"
+    }
+  ],
+  "https://www.vergilisme.com": [
+    {
+      "title": "新起点，新时代，新故事",
+      "link": "https://www.vergilisme.com/index.php/2026/07/21/2402.html",
+      "published": "Tue, 21 Jul 2026 17:40:00 +0800",
+      "published_parsed": "2026-07-21"
+    }
+  ],
+  "https://yipai.me": [
+    {
+      "title": "为什么 AI 也会有缓存命中",
+      "link": "https://yipai.me/post/2545.html",
+      "published": "Thu, 06 Aug 2026 15:38:51 GMT",
+      "published_parsed": "2026-08-06"
+    },
+    {
+      "title": "Windows 的 HEVC 扩展收费跟苹果无关",
+      "link": "https://yipai.me/post/2543.html",
+      "published": "Wed, 29 Jul 2026 08:14:00 GMT",
+      "published_parsed": "2026-07-29"
+    },
+    {
+      "title": "邓煜、王虹：获奖理由、人物短片与记者问答翻译",
+      "link": "https://yipai.me/post/2542.html",
+      "published": "Mon, 27 Jul 2026 09:58:00 GMT",
+      "published_parsed": "2026-07-27"
+    },
+    {
+      "title": "反对狗奴与反对虐狗并不冲突",
+      "link": "https://yipai.me/post/2541.html",
+      "published": "Wed, 22 Jul 2026 07:25:00 GMT",
+      "published_parsed": "2026-07-22"
+    },
+    {
+      "title": "地铁安检为何无效？",
+      "link": "https://yipai.me/post/2540.html",
+      "published": "Mon, 20 Jul 2026 03:34:00 GMT",
+      "published_parsed": "2026-07-20"
+    },
+    {
+      "title": "最近够闲的，开发了新网站",
+      "link": "https://yipai.me/post/2539.html",
+      "published": "Thu, 16 Jul 2026 13:04:00 GMT",
+      "published_parsed": "2026-07-16"
     }
   ],
   "https://lawtee.com": [
@@ -643,38 +699,6 @@
       "link": "https://lawtee.com/article/hunan-economy/",
       "published": "Tue, 28 Jul 2026 01:52:56 +0000",
       "published_parsed": "2026-07-28"
-    }
-  ],
-  "https://yipai.me": [
-    {
-      "title": "Windows 的 HEVC 扩展收费跟苹果无关",
-      "link": "https://yipai.me/post/2543.html",
-      "published": "Wed, 29 Jul 2026 08:14:00 GMT",
-      "published_parsed": "2026-07-29"
-    },
-    {
-      "title": "邓煜、王虹：获奖理由、人物短片与记者问答翻译",
-      "link": "https://yipai.me/post/2542.html",
-      "published": "Mon, 27 Jul 2026 09:58:00 GMT",
-      "published_parsed": "2026-07-27"
-    },
-    {
-      "title": "反对狗奴与反对虐狗并不冲突",
-      "link": "https://yipai.me/post/2541.html",
-      "published": "Wed, 22 Jul 2026 07:25:00 GMT",
-      "published_parsed": "2026-07-22"
-    },
-    {
-      "title": "地铁安检为何无效？",
-      "link": "https://yipai.me/post/2540.html",
-      "published": "Mon, 20 Jul 2026 03:34:00 GMT",
-      "published_parsed": "2026-07-20"
-    },
-    {
-      "title": "最近够闲的，开发了新网站",
-      "link": "https://yipai.me/post/2539.html",
-      "published": "Thu, 16 Jul 2026 13:04:00 GMT",
-      "published_parsed": "2026-07-16"
     }
   ],
   "https://sliun.com": [
@@ -758,31 +782,15 @@
     }
   ],
   "https://www.glowisle.me": [],
-  "https://cyrus19.cc": [],
-  "https://usj.cc": [
-    {
-      "title": "流量卡还真得选御三家😂",
-      "link": "https://usj.cc/20260724101237.html",
-      "published": "Fri, 24 Jul 2026 00:00:00 +0000",
-      "published_parsed": "2026-07-24"
-    },
-    {
-      "title": "最成功的一次红烧鱼",
-      "link": "https://usj.cc/20260718222522.html",
-      "published": "Sat, 18 Jul 2026 00:00:00 +0000",
-      "published_parsed": "2026-07-18"
-    }
-  ],
-  "https://www.demochen.com": [
-    {
-      "title": "探索 AI 时代的人机协作",
-      "link": "https://demochen.com/posts/20260722/",
-      "published": "Wed, 22 Jul 2026 22:36:47 +0800",
-      "published_parsed": "2026-07-22"
-    }
-  ],
   "https://www.scarsu.com": [],
+  "https://cyrus19.cc": [],
   "https://blog.solazy.me": [
+    {
+      "title": "入职五个月小结",
+      "link": "https://blog.solazy.me/20260805/",
+      "published": "2026-08-05T15:30:00+00:00",
+      "published_parsed": "2026-08-05"
+    },
     {
       "title": "又是一年，祝自己生日快乐",
       "link": "https://blog.solazy.me/20260804/",
@@ -836,15 +844,51 @@
       "link": "https://blog.solazy.me/20260727/",
       "published": "2026-07-27T15:00:00+00:00",
       "published_parsed": "2026-07-27"
+    }
+  ],
+  "https://www.demochen.com": [
+    {
+      "title": "探索 AI 时代的人机协作",
+      "link": "https://demochen.com/posts/20260722/",
+      "published": "Wed, 22 Jul 2026 22:36:47 +0800",
+      "published_parsed": "2026-07-22"
+    }
+  ],
+  "https://www.owenyoung.com": [
+    {
+      "title": "当前想置顶的一些内容",
+      "link": "https://www.owenyoung.com/pinned",
+      "published": "2026-07-16T02:54:00.000Z",
+      "published_parsed": "2026-07-16"
+    }
+  ],
+  "https://usj.cc": [
+    {
+      "title": "流量卡还真得选御三家😂",
+      "link": "https://usj.cc/20260724101237.html",
+      "published": "Fri, 24 Jul 2026 00:00:00 +0000",
+      "published_parsed": "2026-07-24"
     },
     {
-      "title": "断层里的心理学",
-      "link": "https://blog.solazy.me/20260726/",
-      "published": "2026-07-26T12:00:00+00:00",
-      "published_parsed": "2026-07-26"
+      "title": "最成功的一次红烧鱼",
+      "link": "https://usj.cc/20260718222522.html",
+      "published": "Sat, 18 Jul 2026 00:00:00 +0000",
+      "published_parsed": "2026-07-18"
     }
   ],
   "https://blog.cytrogen.icu": [
+    {
+      "title": "Meta 和它不聪明的领导者",
+      "link": "https://blog.cytrogen.icu/posts/83ff.html",
+      "published": "2026-08-06T19:30:59.000Z",
+      "published_parsed": "2026-08-06"
+    },
+    {
+      "title": "Hate gifts",
+      "link": "https://blog.cytrogen.icu/posts/b3bc.html",
+      "published": "2026-08-06T19:30:54.000Z",
+      "published_parsed": "2026-08-06"
+    },
     {
       "title": "RE：Bloggers, can we make better titles for our posts?",
       "link": "https://blog.cytrogen.icu/posts/ea71.html",
@@ -906,15 +950,13 @@
       "published_parsed": "2026-07-25"
     }
   ],
-  "https://www.owenyoung.com": [
-    {
-      "title": "当前想置顶的一些内容",
-      "link": "https://www.owenyoung.com/pinned",
-      "published": "2026-07-16T02:54:00.000Z",
-      "published_parsed": "2026-07-16"
-    }
-  ],
   "https://immarcus.com": [
+    {
+      "title": "自由与动态范围",
+      "link": "https://www.immarcus.com/blog/freedom-and-dynamic-range",
+      "published": "Thu, 06 Aug 2026 00:00:00 GMT",
+      "published_parsed": "2026-08-06"
+    },
     {
       "title": "赌上你的性命",
       "link": "https://www.immarcus.com/blog/stake-your-life",
@@ -1070,12 +1112,6 @@
       "link": "https://www.immarcus.com/blog/niagara-falls",
       "published": "Sat, 11 Jul 2026 00:00:00 GMT",
       "published_parsed": "2026-07-11"
-    },
-    {
-      "title": "独立 vs 依赖",
-      "link": "https://www.immarcus.com/blog/independence-vs-dependence",
-      "published": "Fri, 10 Jul 2026 00:00:00 GMT",
-      "published_parsed": "2026-07-10"
     }
   ]
 }
