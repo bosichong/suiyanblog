@@ -14,7 +14,6 @@ const commentsConfig = JSON.stringify(COMMENTS_CONFIG);
 
 <div class="comment-section" id="comment-section" data-post-id={postId} data-post-path={postPath} data-config={commentsConfig}>
 	<div class="comment-selector">
-		<button class="comment-type-btn" data-type="giscus">💭 GitHub 讨论</button>
 		<button class="comment-type-btn" data-type="twikoo">💬 Twikoo 评论</button>
 	</div>
 	<div class="comment-content" id="comment-content">
@@ -87,14 +86,13 @@ const commentsConfig = JSON.stringify(COMMENTS_CONFIG);
 	// ============================================================
 	
 	// ---------- 全局状态（跨导航重置） ----------
-	window.__commentState = window.__commentState || { currentType: null, giscusLoaded: false };
+	window.__commentState = window.__commentState || { currentType: null };
 	
 	// 视图过渡导航后重置状态，避免跨页面污染。
 	// 同时清除 twikoo 全局实例，下次点击强制重新加载脚本，
 	// 避免旧实例内部的 DOM 引用失效导致样式丢失。
 	document.addEventListener('astro:after-swap', () => {
 		window.__commentState.currentType = null;
-		window.__commentState.giscusLoaded = false;
 		delete (window as any).twikoo;
 	});
 	
@@ -124,41 +122,10 @@ const commentsConfig = JSON.stringify(COMMENTS_CONFIG);
 		// 获取配置（每次从 data-config 读取，确保切换页面后正确）
 		const configStr = section.getAttribute('data-config') || '{}';
 		const config = JSON.parse(configStr);
-		const postId = section.getAttribute('data-post-id') || '';
 		const postPath = section.getAttribute('data-post-path') || '';
 		
-		if (type === 'giscus') {
-			loadGiscus(content, config, postId);
-		} else {
-			loadTwikoo(content, config, postPath);
-		}
+		loadTwikoo(content, config, postPath);
 	});
-	
-	// ---------- 加载 Giscus ----------
-	function loadGiscus(container: HTMLElement, config: any, postId: string) {
-		const giscusContainer = document.createElement('div');
-		giscusContainer.className = 'giscus';
-		container.appendChild(giscusContainer);
-		
-		const script = document.createElement('script');
-		script.src = 'https://giscus.app/client.js';
-		script.setAttribute('data-repo', config.giscus.repo);
-		script.setAttribute('data-repo-id', config.giscus.repoId);
-		script.setAttribute('data-category', config.giscus.category);
-		script.setAttribute('data-category-id', config.giscus.categoryId);
-		script.setAttribute('data-mapping', config.giscus.mapping);
-		script.setAttribute('data-lang', config.giscus.lang);
-		script.setAttribute('data-strict', '0');
-		script.setAttribute('data-reactions-enabled', '1');
-		script.setAttribute('data-emit-metadata', '0');
-		script.setAttribute('data-input-position', 'bottom');
-		script.setAttribute('data-theme', 'light');
-		script.setAttribute('crossorigin', 'anonymous');
-		script.async = true;
-		
-		giscusContainer.appendChild(script);
-		window.__commentState.giscusLoaded = true;
-	}
 	
 	// ---------- 加载 Twikoo ----------
 	function loadTwikoo(container: HTMLElement, config: any, path: string) {

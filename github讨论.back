@@ -1,0 +1,255 @@
+# 备份：💭 GitHub 讨论（Giscus 评论系统）移除备份
+
+> 本文件用于在需要时**恢复 Giscus 评论功能**。此文件主要给 AI 阅读。
+> 若日后需要恢复，按下方【恢复方法】操作即可。
+
+## 基本信息
+
+- **移除时间**：2026-08-07
+- **移除原因**：用户要求清除页面上所有的「💭 GitHub 讨论」（Giscus）评论入口，仅保留「💬 Twikoo 评论」。
+- **移除方式**：备份本节代码 → 修改源文件删除 Giscus。
+
+## 涉及文件清单
+
+| 文件 | 改动 |
+| --- | --- |
+| `src/components/PostActions.astro` | 删除 Giscus 按钮、`loadGiscus()` 函数、`giscusLoaded` 状态及相关分支 |
+| `src/consts.ts` | 删除 `COMMENTS_CONFIG.giscus` 配置 |
+| `src/layouts/BlogPost.astro` | 使用 `<PostActions>`（未改动，所有博客文章页面） |
+| `src/pages/projects.astro` | 使用 `<PostActions>`（未改动，`/projects` 页面） |
+| `src/pages/about.astro` | 使用 `<PostActions>`（未改动，`/about` 页面） |
+| `src/pages/links.astro` | 使用 `<PostActions>`（未改动，`/links` 页面） |
+
+> `PostActions` 组件在以下位置渲染「💭 GitHub 讨论」按钮：
+> - 所有博客文章（通过 `src/layouts/BlogPost.astro` 第 240 行）
+> - `src/pages/projects.astro` 第 269 行
+> - `src/pages/about.astro` 第 428 行
+> - `src/pages/links.astro` 第 435 行
+>
+> 移除时仅需改 `PostActions.astro` 与 `consts.ts`，页面文件无需改动。
+> 博客文章正文中关于 giscus 的文章内容（`20230516211444.md`、`20250123005146.md`、`20260130014503.md`）**未改动**。
+
+---
+
+## 一、原 `src/components/PostActions.astro`（备份前完整内容）
+
+```astro
+---
+import { COMMENTS_CONFIG } from '../consts';
+
+interface Props {
+	postId: string;
+	postPath: string;
+}
+
+const { postId, postPath } = Astro.props;
+
+// 将配置序列化为 JSON 供客户端使用
+const commentsConfig = JSON.stringify(COMMENTS_CONFIG);
+---
+
+<div class="comment-section" id="comment-section" data-post-id={postId} data-post-path={postPath} data-config={commentsConfig}>
+	<div class="comment-selector">
+		<button class="comment-type-btn" data-type="giscus">💭 GitHub 讨论</button>
+		<button class="comment-type-btn" data-type="twikoo">💬 Twikoo 评论</button>
+	</div>
+	<div class="comment-content" id="comment-content">
+		<!-- 评论内容由 JS 动态加载 -->
+	</div>
+</div>
+
+<style>
+	.comment-section {
+		margin: 2rem 0;
+	}
+
+	.comment-selector {
+		display: flex;
+		gap: 0.5rem;
+		justify-content: center;
+		padding: 4px;
+		background: var(--bg-soft);
+		border-radius: 10px;
+		max-width: fit-content;
+		margin: 0 auto;
+	}
+
+	.comment-type-btn {
+		padding: 0.5rem 1.25rem;
+		border: 1px solid transparent;
+		border-radius: 7px;
+		background: transparent;
+		color: var(--text-soft);
+		cursor: pointer;
+		font-size: 0.9rem;
+		font-weight: 500;
+		font-family: inherit;
+		transition: all 0.2s ease;
+	}
+
+	.comment-type-btn:hover {
+		color: var(--accent-dark);
+	}
+
+	.comment-type-btn.active {
+		background: var(--bg);
+		color: var(--accent-dark);
+		border-color: var(--border);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.comment-content {
+		margin-top: 1rem;
+		min-height: 0;
+	}
+
+	@media (max-width: 480px) {
+		.comment-selector {
+			flex-direction: row;
+			width: 100%;
+		}
+
+		.comment-type-btn {
+			flex: 1;
+			text-align: center;
+		}
+	}
+</style>
+
+<script>
+	// ============================================================
+	// 使用事件委托处理评论按钮点击，不依赖脚本重新执行，
+	// 因此在 ClientRouter 视图过渡后仍能正常工作。
+	// ============================================================
+	
+	// ---------- 全局状态（跨导航重置） ----------
+	window.__commentState = window.__commentState || { currentType: null, giscusLoaded: false };
+	
+	// 视图过渡导航后重置状态，避免跨页面污染。
+	// 同时清除 twikoo 全局实例，下次点击强制重新加载脚本，
+	// 避免旧实例内部的 DOM 引用失效导致样式丢失。
+	document.addEventListener('astro:after-swap', () => {
+		window.__commentState.currentType = null;
+		window.__commentState.giscusLoaded = false;
+		delete (window as any).twikoo;
+	});
+	
+	// ---------- 事件委托：按钮点击 ----------
+	document.addEventListener('click', (e) => {
+		const btn = (e.target as HTMLElement).closest('.comment-type-btn') as HTMLElement | null;
+		if (!btn) return;
+		
+		const section = document.getElementById('comment-section');
+		if (!section || !section.contains(btn)) return;
+		
+		const content = document.getElementById('comment-content');
+		if (!content) return;
+		
+		const type = btn.getAttribute('data-type');
+		if (!type) return;
+		if (type === window.__commentState.currentType) return;
+		
+		// 更新按钮状态
+		section.querySelectorAll('.comment-type-btn').forEach(b => b.classList.remove('active'));
+		btn.classList.add('active');
+		
+		// 清空内容
+		content.innerHTML = '';
+		window.__commentState.currentType = type;
+		
+		// 获取配置（每次从 data-config 读取，确保切换页面后正确）
+		const configStr = section.getAttribute('data-config') || '{}';
+		const config = JSON.parse(configStr);
+		const postId = section.getAttribute('data-post-id') || '';
+		const postPath = section.getAttribute('data-post-path') || '';
+		
+		if (type === 'giscus') {
+			loadGiscus(content, config, postId);
+		} else {
+			loadTwikoo(content, config, postPath);
+		}
+	});
+	
+	// ---------- 加载 Giscus ----------
+	function loadGiscus(container: HTMLElement, config: any, postId: string) {
+		const giscusContainer = document.createElement('div');
+		giscusContainer.className = 'giscus';
+		container.appendChild(giscusContainer);
+		
+		const script = document.createElement('script');
+		script.src = 'https://giscus.app/client.js';
+		script.setAttribute('data-repo', config.giscus.repo);
+		script.setAttribute('data-repo-id', config.giscus.repoId);
+		script.setAttribute('data-category', config.giscus.category);
+		script.setAttribute('data-category-id', config.giscus.categoryId);
+		script.setAttribute('data-mapping', config.giscus.mapping);
+		script.setAttribute('data-lang', config.giscus.lang);
+		script.setAttribute('data-strict', '0');
+		script.setAttribute('data-reactions-enabled', '1');
+		script.setAttribute('data-emit-metadata', '0');
+		script.setAttribute('data-input-position', 'bottom');
+		script.setAttribute('data-theme', 'light');
+		script.setAttribute('crossorigin', 'anonymous');
+		script.async = true;
+		
+		giscusContainer.appendChild(script);
+		window.__commentState.giscusLoaded = true;
+	}
+	
+	// ---------- 加载 Twikoo ----------
+	function loadTwikoo(container: HTMLElement, config: any, path: string) {
+		// 用 appendChild 而非 innerHTML 创建容器，避免潜在的渲染问题
+		const twikooDiv = document.createElement('div');
+		twikooDiv.id = 'twikoo-comment';
+		twikooDiv.style.minHeight = '200px';
+		container.appendChild(twikooDiv);
+		
+		// 不缓存 window.twikoo，每次从 CDN 重新加载脚本，
+		// 确保实例内部状态与当前页面的 DOM 一致。
+		const script = document.createElement('script');
+		script.src = 'https://cdn.jsdelivr.net/npm/twikoo@1.7.12/dist/twikoo.all.min.js';
+		script.onload = () => {
+			(window as any).twikoo?.init({
+				envId: config.twikoo.envId,
+				el: '#twikoo-comment',
+				path: path
+			});
+		};
+		document.head.appendChild(script);
+	}
+	
+
+</script>
+```
+
+## 二、原 `src/consts.ts` 中 `COMMENTS_CONFIG`（备份前完整内容）
+
+```ts
+// 评论系统配置
+export const COMMENTS_CONFIG = {
+  giscus: {
+    repo: 'bosichong/suiyanblog',
+    repoId: 'R_kgDONjg2qw',
+    category: 'Announcements',
+    categoryId: 'DIC_kwDONjg2q84ClnrC',
+    mapping: 'pathname',
+    lang: 'zh-CN',
+  },
+  twikoo: {
+    envId: 'https://twikoo.suiyan.cc/.netlify/functions/twikoo',
+  },
+};
+```
+
+> 该代码位于 `src/consts.ts` 第 579-592 行附近。
+
+---
+
+## 恢复方法
+
+> 如需恢复 Giscus 评论功能，把上述两段代码还原回去即可：
+
+1. **还原 `src/components/PostActions.astro`**：用【一】中的完整代码覆盖当前文件。
+2. **还原 `src/consts.ts`**：把 `COMMENTS_CONFIG` 替换回【二】中的完整内容（含 `giscus` 字段）。
+3. 页面文件（`BlogPost.astro`、`projects.astro`、`about.astro`、`links.astro`）无需改动，它们始终通过 `<PostActions>` 渲染评论按钮。
+4. 运行 `npm run build` 验证。

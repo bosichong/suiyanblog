@@ -578,14 +578,6 @@ export const AI_LABEL_CONFIG = {
 
 // 评论系统配置
 export const COMMENTS_CONFIG = {
-  giscus: {
-    repo: 'bosichong/suiyanblog',
-    repoId: 'R_kgDONjg2qw',
-    category: 'Announcements',
-    categoryId: 'DIC_kwDONjg2q84ClnrC',
-    mapping: 'pathname',
-    lang: 'zh-CN',
-  },
   twikoo: {
     envId: 'https://twikoo.suiyan.cc/.netlify/functions/twikoo',
   },
