@@ -1,28 +1,28 @@
 /*
-  碎言博客 — 暖黄书页·现代阅读 设计系统 ("卷帙")
+  碎言博客 — 灰墨书页·现代阅读 设计系统 ("卷帙")
   原始骨架参考 Bear Blog default.css (MIT)
 */
 
 :root {
 	/* === 语义色：背景层 === */
-	--bg: #f8f7f3;
-	--bg-soft: #f1efea;
-	--bg-overlay: #eae7e1;
+	--bg: #fafafa;
+	--bg-soft: #f2f2f2;
+	--bg-overlay: #ebebeb;
 
 	/* === 语义色：文字层 === */
-	--text: #2a2826;
+	--text: #212121;
 	--text-soft: #555555;
-	--text-muted: #888888;
+	--text-muted: #8a8a8a;
 
 	/* === 语义色：边框层 === */
-	--border: #cecac4;
-	--border-soft: #dedad4;
+	--border: #d8d8d8;
+	--border-soft: #e4e4e4;
 
-	/* === 语义色：强调（暖栗色） === */
-	--accent: #7a503a;
-	--accent-dark: #5a3826;
-	--accent-soft: #e8d9cc;
-	--accent-text: #f0ece6;
+	/* === 语义色：强调（灰黑主色 · 雾霾蓝 hover） === */
+	--accent: #3d3d3d;
+	--accent-dark: #7d93a8;
+	--accent-soft: #edf0f4;
+	--accent-text: #ffffff;
 
 	/* === 字体 === */
 	--font-display: "LXGW WenKai", "Noto Serif SC", "Songti SC", "STSong", serif;
@@ -33,9 +33,9 @@
 		monospace;
 
 	/* === 阴影 === */
-	--shadow-sm: 0 1px 2px rgba(42, 40, 38, 0.06);
-	--shadow-md: 0 2px 8px rgba(42, 40, 38, 0.10);
-	--shadow-lg: 0 8px 24px rgba(42, 40, 38, 0.14);
+	--shadow-sm: 0 1px 2px rgba(33, 33, 33, 0.06);
+	--shadow-md: 0 2px 8px rgba(33, 33, 33, 0.10);
+	--shadow-lg: 0 8px 24px rgba(33, 33, 33, 0.14);
 
 	/* === 旧变量别名（保留给现有组件） === */
 	--header-bg: var(--bg);
@@ -46,11 +46,11 @@
 	--code-bg: var(--bg-soft);
 	--heading-color: var(--text);
 	--footer-text: var(--text-soft);
-	--black: 42, 40, 38;
-	--gray: 136, 136, 136;
-	--gray-light: 213, 211, 206;
-	--gray-dark: 42, 40, 38;
-	--gray-gradient: rgba(213, 211, 206, 30%), var(--bg);
+	--black: 33, 33, 33;
+	--gray: 138, 138, 138;
+	--gray-light: 220, 220, 220;
+	--gray-dark: 33, 33, 33;
+	--gray-gradient: rgba(220, 220, 220, 30%), var(--bg);
 	--box-shadow: var(--shadow-lg);
 }
 
