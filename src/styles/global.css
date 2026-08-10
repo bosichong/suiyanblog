@@ -61,9 +61,7 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: linear-gradient(var(--gray-gradient)) no-repeat;
-	background-size: 100% 600px;
-	background-color: var(--bg-color);
+	background-color: var(--bg);
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: var(--text-color);
@@ -81,6 +79,24 @@ main {
 	max-width: calc(100% - 2em);
 	margin: auto;
 	padding: 3em 1em;
+}
+
+/* === 纸张布局：灰底 + 居中白色圆角卡片 === */
+.app-layout {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 32px 20px;
+}
+
+.main-container {
+	width: 100%;
+	max-width: 760px;
+	background: #fff;
+	border: 1px solid var(--border);
+	border-radius: 16px;
+	overflow: hidden;
 }
 
 /* === 标题：统一用衬线/楷体撑场 === */
@@ -259,6 +275,14 @@ hr::before {
 	body {
 		font-size: 17px;
 		line-height: 1.85;
+	}
+	.app-layout {
+		padding: 0;
+	}
+	.main-container {
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
 	}
 	main {
 		padding: 1em;

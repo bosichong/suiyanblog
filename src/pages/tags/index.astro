@@ -1,9 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseHead from '../../components/BaseHead.astro';
-import Footer from '../../components/Footer.astro';
-import Header from '../../components/Header.astro';
-import BackToTop from '../../components/BackToTop.astro';
+import SiteShell from '../../components/SiteShell.astro';
 import { Icon } from 'astro-icon/components';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 import { slugify } from '../../utils/slugify';
@@ -56,19 +54,17 @@ const sortedTags = Object.entries(tagCounts)
 				margin-top: 2rem;
 			}
 			.tag-card {
-				background: var(--bg-soft);
+				background: transparent;
+				border: 1px solid var(--border);
 				border-radius: 16px;
 				padding: 2rem;
-				box-shadow: 0 2px 12px rgba(var(--black), 8%);
 				transition: all 0.3s ease;
 				text-decoration: none;
 				color: inherit;
-				border: 2px solid transparent;
 			}
 			.tag-card:hover {
 				transform: translateY(-4px);
-				box-shadow: 0 8px 25px rgba(var(--black), 15%);
-				border-color: var(--accent-dark);
+				border-color: var(--text);
 			}
 			.tag-name {
 				font-size: 1.5rem;
@@ -109,8 +105,7 @@ const sortedTags = Object.entries(tagCounts)
 		</style>
 	</head>
 	<body>
-		<Header />
-		<main id="main">
+		<SiteShell>
 			<section>
 				<div class="tags-header">
 					<h1>所有标签</h1>
@@ -132,8 +127,6 @@ const sortedTags = Object.entries(tagCounts)
 					}
 				</div>
 			</section>
-		</main>
-		<Footer />
-		<BackToTop />
+		</SiteShell>
 	</body>
 </html>

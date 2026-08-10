@@ -1,8 +1,6 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import BackToTop from '../components/BackToTop.astro';
+import SiteShell from '../components/SiteShell.astro';
 import Webmentions from '../components/Webmentions.astro';
 import PostActions from '../components/PostActions.astro';
 import { Icon } from 'astro-icon/components';
@@ -31,9 +29,9 @@ const pageDescription = PROJECTS_PAGE_DESCRIPTION;
 			hgroup {
 				margin-bottom: 2rem;
 				padding: 2rem;
-				background: var(--bg-soft);
+				background: transparent;
+				border: 1px solid var(--border);
 				border-radius: 12px;
-				box-shadow: 0 2px 8px rgba(var(--black), 5%);
 			}
 
 			hgroup h2 {
@@ -60,48 +58,16 @@ const pageDescription = PROJECTS_PAGE_DESCRIPTION;
 			.project-card {
 				position: relative;
 				padding: 1.25rem;
-				background: var(--bg-soft);
+				background: transparent;
+				border: 1px solid var(--border);
 				border-radius: 12px;
-				box-shadow: 0 2px 8px rgba(var(--black), 5%);
 				transition: all 0.3s ease;
-				border: 1px solid transparent;
 				overflow: hidden;
 			}
 
-			@keyframes shimmer {
-				from { transform: translateX(-100%); }
-				to { transform: translateX(100%); }
-			}
-
-			.project-card::after {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				transform: translateX(-100%);
-				background: linear-gradient(
-					105deg,
-					transparent 30%,
-					rgba(255, 255, 255, 0.18) 45%,
-					rgba(255, 255, 255, 0.3) 50%,
-					rgba(255, 255, 255, 0.18) 55%,
-					transparent 70%
-				);
-				pointer-events: none;
-			}
-
-			.project-card.hover::after,
-			.project-card:hover::after {
-				animation: shimmer 0.7s ease;
-			}
-
-
 			.project-card:hover {
-				box-shadow: 0 4px 20px rgba(var(--black), 12%);
 				transform: translateY(-2px);
-				border-color: var(--border-color);
+				border-color: var(--text);
 			}
 
 			.project-header {
@@ -212,8 +178,7 @@ const pageDescription = PROJECTS_PAGE_DESCRIPTION;
 		</style>
 	</head>
 	<body>
-		<Header />
-		<main id="main">
+		<SiteShell>
 			<section>
 				<article>
 					<hgroup>
@@ -267,9 +232,7 @@ const pageDescription = PROJECTS_PAGE_DESCRIPTION;
 			<hr aria-hidden="true" />
 			<Webmentions postId="projects" title={pageTitle} postPath="/projects" />
 			<PostActions postId="projects" postPath="/projects" />
-		</main>
-		<Footer />
-		<BackToTop />
+		</SiteShell>
 
 		<script>
 			const list = document.querySelector('.project-list');

@@ -1,0 +1,16 @@
+---
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import BackToTop from './BackToTop.astro';
+---
+
+<div class="app-layout">
+	<div class="main-container">
+		<Header />
+		<main id="main">
+			<slot />
+		</main>
+		<Footer />
+	</div>
+</div>
+<BackToTop />

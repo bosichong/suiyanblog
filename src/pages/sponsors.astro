@@ -1,8 +1,6 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import BackToTop from '../components/BackToTop.astro';
+import SiteShell from '../components/SiteShell.astro';
 import { SITE_TITLE } from '../consts';
 
 const sponsorConfig = {
@@ -37,7 +35,8 @@ const sponsorConfig = {
 			}
 			
 			.sponsor-intro {
-				background: var(--bg-soft);
+				background: transparent;
+				border: 1px solid var(--border);
 				padding: 2rem;
 				border-radius: 12px;
 				margin: 2rem 0;
@@ -92,8 +91,7 @@ const sponsorConfig = {
 	</head>
 
 	<body>
-		<Header />
-		<main>
+		<SiteShell>
 			<h1>{sponsorConfig.title}</h1>
 			
 			<div class="sponsor-intro">
@@ -132,8 +130,6 @@ const sponsorConfig = {
 					<div class="no-records">暂无赞赏记录</div>
 				)}
 			</div>
-		</main>
-		<Footer />
-		<BackToTop />
+		</SiteShell>
 	</body>
 </html>

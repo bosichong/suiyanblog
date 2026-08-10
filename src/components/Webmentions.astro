@@ -72,18 +72,16 @@ const overridesJson = JSON.stringify(WEBMENTION_OVERRIDES);
 
 	:global(.wm-card) {
 		display: block;
-		background: var(--bg-soft);
-		border: 1px solid var(--border-soft);
+		background: transparent;
+		border: 1px solid var(--border);
 		border-radius: 8px;
 		padding: 0.9rem 1rem;
-		box-shadow: var(--shadow-sm);
 		text-decoration: none;
-		transition: border-color 0.2s ease, box-shadow 0.2s ease;
+		transition: border-color 0.2s ease;
 	}
 
 	:global(.wm-card:hover) {
-		border-color: var(--border);
-		box-shadow: var(--shadow-md);
+		border-color: var(--text);
 	}
 
 	:global(.wm-card-head) {
@@ -129,7 +127,8 @@ const overridesJson = JSON.stringify(WEBMENTION_OVERRIDES);
 	:global(.wm-badge) {
 		margin-left: auto;
 		flex-shrink: 0;
-		background: var(--bg-overlay);
+		background: transparent;
+		border: 1px solid var(--border);
 		color: var(--text-soft);
 		font-size: 0.75rem;
 		padding: 0.15rem 0.6rem;
@@ -162,8 +161,8 @@ const overridesJson = JSON.stringify(WEBMENTION_OVERRIDES);
 	}
 
 	.wm-form {
-		background: var(--bg-soft);
-		border: 1px solid var(--border-soft);
+		background: transparent;
+		border: 1px solid var(--border);
 		border-radius: 8px;
 		padding: 0.9rem 1rem;
 	}
@@ -188,7 +187,7 @@ const overridesJson = JSON.stringify(WEBMENTION_OVERRIDES);
 		font-size: 0.9rem;
 		font-family: inherit;
 		color: var(--text);
-		background: var(--bg);
+		background: transparent;
 		border: 1px solid var(--border);
 		border-radius: 6px;
 	}

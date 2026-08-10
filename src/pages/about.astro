@@ -1,8 +1,6 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import BackToTop from '../components/BackToTop.astro';
+import SiteShell from '../components/SiteShell.astro';
 import Webmentions from '../components/Webmentions.astro';
 import PostActions from '../components/PostActions.astro';
 import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
@@ -30,9 +28,9 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 
 			section {
 				padding: 2rem;
-				background: var(--bg-soft);
+				background: transparent;
+				border: 1px solid var(--border);
 				border-radius: 12px;
-				box-shadow: 0 2px 8px rgba(var(--black), 5%);
 				transition: all 0.3s ease;
 			}
 
@@ -80,19 +78,16 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 
 			details {
 				margin: 0;
-				background: var(--bg-soft);
+				background: transparent;
+				border: 1px solid var(--border);
 				border-radius: 12px;
-				box-shadow: 0 2px 8px rgba(var(--black), 5%);
 				overflow: hidden;
 				transition: all 0.3s ease;
 			}
 
-			details:hover {
-				box-shadow: 0 4px 16px rgba(var(--black), 10%);
-			}
-
+			details:hover,
 			details[open] {
-				box-shadow: 0 4px 16px rgba(var(--black), 10%);
+				border-color: var(--text);
 			}
 
 			summary {
@@ -106,10 +101,6 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
-			}
-
-			summary:hover {
-				background-color: rgba(var(--gray), 5%);
 			}
 
 			summary::-webkit-details-marker {
@@ -152,9 +143,10 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 			}
 
 			.ai-label-list {
-				background: var(--bg);
+				background: transparent;
 				padding: 1.5rem;
 				border-radius: 12px;
+				border: 1px solid var(--border);
 				border-left: 4px solid var(--accent);
 				margin-bottom: 0;
 			}
@@ -200,8 +192,7 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 		</style>
 	</head>
 	<body>
-		<Header />
-		<main id="main">
+		<SiteShell>
 			<h1>About</h1>
 			
 			<article>
@@ -426,8 +417,6 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 			<hr aria-hidden="true" />
 			<Webmentions postId="about" title="关于" postPath="/about" />
 			<PostActions postId="about" postPath="/about" />
-		</main>
-		<Footer />
-		<BackToTop />
+		</SiteShell>
 	</body>
 </html>

@@ -1,10 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
-import Header from '../components/Header.astro';
-import BackToTop from '../components/BackToTop.astro';
+import SiteShell from '../components/SiteShell.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import { formatDateMedium } from '../utils/date';
 
@@ -56,9 +54,9 @@ const lastUpdated = allPosts[0]?.data.time ? new Date(allPosts[0].data.time) : n
 				text-align: center;
 				margin-bottom: 3rem;
 				padding: 2rem;
-				background: var(--bg-soft);
+				background: transparent;
+				border: 1px solid var(--border);
 				border-radius: 16px;
-				box-shadow: 0 2px 12px rgba(var(--black), 8%);
 			}
 			
 			.archive-header h1 {
@@ -73,21 +71,18 @@ const lastUpdated = allPosts[0]?.data.time ? new Date(allPosts[0].data.time) : n
 			
 			details {
 				margin-bottom: 2rem;
-				background: var(--bg-soft);
+				background: transparent;
+				border: 1px solid var(--border);
 				border-radius: 12px;
-				box-shadow: 0 2px 8px rgba(var(--black), 5%);
 				overflow: hidden;
 				transition: all 0.3s ease;
 			}
-			
-			details:hover {
-				box-shadow: 0 4px 16px rgba(var(--black), 10%);
-			}
-			
+
+			details:hover,
 			details[open] {
-				box-shadow: 0 4px 16px rgba(var(--black), 10%);
+				border-color: var(--text);
 			}
-			
+
 			summary {
 				padding: 1.5rem 2rem;
 				cursor: pointer;
@@ -99,10 +94,6 @@ const lastUpdated = allPosts[0]?.data.time ? new Date(allPosts[0].data.time) : n
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
-			}
-			
-			summary:hover {
-				background-color: rgba(var(--gray), 5%);
 			}
 			
 			summary::-webkit-details-marker {
@@ -206,8 +197,7 @@ const lastUpdated = allPosts[0]?.data.time ? new Date(allPosts[0].data.time) : n
 		</style>
 	</head>
 	<body>
-		<Header />
-		<main id="main">
+		<SiteShell>
 			<section>
 				<div class="archive-header">
 					<h1>文章归档</h1>
@@ -234,8 +224,6 @@ const lastUpdated = allPosts[0]?.data.time ? new Date(allPosts[0].data.time) : n
 					</details>
 				))}
 			</section>
-		</main>
-		<Footer />
-		<BackToTop />
+		</SiteShell>
 	</body>
 </html>

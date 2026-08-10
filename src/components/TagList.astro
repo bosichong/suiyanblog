@@ -72,9 +72,8 @@ const hasMoreTags = limit && tags.length > limit;
 	}
 
 	.tag-link:hover {
-		background: var(--bg-soft);
-		border-color: var(--accent-dark);
-		color: var(--accent-dark);
+		border-color: var(--text);
+		color: var(--text);
 	}
 
 	.tag-link:focus {
@@ -85,7 +84,8 @@ const hasMoreTags = limit && tags.length > limit;
 	.tag-more {
 		display: inline-block;
 		padding: 0.25rem 0.75rem;
-		background: var(--bg-soft);
+		background: transparent;
+		border: 1px solid var(--border);
 		color: var(--text-muted);
 		border-radius: 9999px;
 		font-size: 0.875rem;

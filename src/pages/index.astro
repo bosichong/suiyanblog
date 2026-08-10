@@ -1,9 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import BackToTop from '../components/BackToTop.astro';
+import SiteShell from '../components/SiteShell.astro';
 import { SITE_DESCRIPTION, SITE_AUTHOR, SITE_TITLE, HOME_POSTS_COUNT } from '../consts';
 import { formatDateShort } from '../utils/date';
 
@@ -147,8 +145,7 @@ const recentPosts = (await getCollection('blog'))
 		</style>
 	</head>
 	<body>
-		<Header />
-		<main id="main">
+		<SiteShell>
 			<header class="hero">
 				<a href="/">
 					<img src="/assets/images/avatar.jpg" alt={SITE_AUTHOR} class="hero-avatar" loading="eager" fetchpriority="high" decoding="async" width="80" height="80" />
@@ -170,9 +167,7 @@ const recentPosts = (await getCollection('blog'))
 				))}
 				<a href="/archive" class="view-more">更多文章...</a>
 			</section>
-		</main>
-		<Footer />
-		<BackToTop />
+		</SiteShell>
 		<script>
 			document.addEventListener('mouseover', (e) => {
 				const item = e.target.closest('.category-section .post-item');

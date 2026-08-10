@@ -1,8 +1,6 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import BackToTop from '../components/BackToTop.astro';
+import SiteShell from '../components/SiteShell.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
@@ -79,8 +77,7 @@ import { SITE_TITLE } from '../consts';
 		</style>
 	</head>
 	<body>
-		<Header />
-		<main>
+		<SiteShell>
 			<div class="error-container">
 				<div class="error-content">
 					<img src="/assets/images/404.avif" alt="404" class="error-image" />
@@ -92,8 +89,6 @@ import { SITE_TITLE } from '../consts';
 					</div>
 				</div>
 			</div>
-		</main>
-		<Footer />
-		<BackToTop />
+		</SiteShell>
 	</body>
 </html>

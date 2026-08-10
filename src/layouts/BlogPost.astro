@@ -2,10 +2,8 @@
 import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
-import Header from '../components/Header.astro';
-import BackToTop from '../components/BackToTop.astro';
+import SiteShell from '../components/SiteShell.astro';
 import TagList from '../components/TagList.astro';
 import PostActions from '../components/PostActions.astro';
 import { SITE_AUTHOR } from '../consts';
@@ -199,8 +197,7 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 	</head>
 
 	<body>
-		<Header />
-		<main id="main">
+		<SiteShell>
 			<article>
 				<div class="hero-image">
 					{heroImage && <Image width={1020} height={510} src={heroImage} alt={heroImageAlt || ''} />}
@@ -242,8 +239,6 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 
 				</div>
 			</article>
-		</main>
-		<Footer />
-		<BackToTop />
+		</SiteShell>
 	</body>
 </html>
