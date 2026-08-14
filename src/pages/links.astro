@@ -5,6 +5,8 @@ import SiteShell from '../components/SiteShell.astro';
 import Webmentions from '../components/Webmentions.astro';
 import PostActions from '../components/PostActions.astro';
 import { 
+	LINKS_PAGE_TITLE, 
+	LINKS_PAGE_DESCRIPTION, 
 	FRIENDS_PAGE_TITLE, 
 	FRIENDS_PAGE_DESCRIPTION, 
 	FRIENDS_LINKS, 
@@ -38,6 +40,9 @@ const linksWithRss = FRIENDS_LINKS
 		const bDate = b.rssArticles[0]?.published_parsed || '';
 		return bDate.localeCompare(aDate) || a._index - b._index;
 	});
+
+const regularLinks = linksWithRss.filter(link => link.is_friend !== true);
+const friendLinks = linksWithRss.filter(link => link.is_friend === true);
 ---
 
 <!doctype html>
@@ -314,7 +319,67 @@ const linksWithRss = FRIENDS_LINKS
 						<p>{FRIENDS_PAGE_DESCRIPTION}</p>
 					</hgroup>
 					<ul class="link-grid">
-						{linksWithRss.map(link => (
+						{friendLinks.map(link => (
+							<li class="link-card">
+								<div class="card-main">
+									<div class="card-avatar">
+										{link.site_avatar && link.site_avatar !== '#' ? (
+											<img src={link.site_avatar} alt={link.site_name} loading="lazy" />
+										) : (
+											<span class="avatar-placeholder">{link.site_name[0]}</span>
+										)}
+									</div>
+									<div class="card-body">
+										<a href={link.site_url} target="_blank" rel="noopener noreferrer" class="card-name">
+											{link.is_active !== false ? (
+												<>
+													{link.site_name}
+													<svg class="external-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+														<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+														<polyline points="15 3 21 3 21 9" />
+														<line x1="10" y1="14" x2="21" y2="3" />
+													</svg>
+												</>
+											) : (
+												<>
+													{link.site_name}
+													<span class="link-inactive">链接失效</span>
+												</>
+											)}
+										</a>
+										<p class="card-desc" title={link.site_description}>{link.site_description}</p>
+										{link.rssArticles.length > 0 && (
+											<div class="rss-section">
+												<div class="rss-header">
+													<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93v-2.83Z"/></svg>
+													<span>最近文章</span>
+												</div>
+												{link.rssArticles.slice(0, 3).map((item, idx) => (
+													<a href={item.link} target="_blank" rel="noopener noreferrer" class="rss-item" style={`animation-delay: ${idx * 0.05}s`}>
+														<span class="rss-link">{item.title}</span>
+														<span class="rss-time">{formatMD(item.published_parsed)}</span>
+													</a>
+												))}
+											</div>
+										)}
+									</div>
+								</div>
+							</li>
+						))}
+					</ul>
+				</article>
+			</section>
+			
+			<hr class="divider" />
+			
+			<section>
+				<article>
+					<hgroup>
+						<h2>{LINKS_PAGE_TITLE}</h2>
+						<p>{LINKS_PAGE_DESCRIPTION}</p>
+					</hgroup>
+					<ul class="link-grid">
+						{regularLinks.map(link => (
 							<li class="link-card">
 								<div class="card-main">
 									<div class="card-avatar">

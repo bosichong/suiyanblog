@@ -15,8 +15,10 @@ export const POSTS_PER_PAGE = 25;
 export const HOME_POSTS_COUNT = 16;
 
 // 页面标题和描述
-export const FRIENDS_PAGE_TITLE = 'Links';
-export const FRIENDS_PAGE_DESCRIPTION = '这里是我常逛的独立博客，收录标准很简单：能让我思考、对我有价值。内容来自各站RSS，如不愿展示请联系我删除。欢迎逛逛。';
+export const LINKS_PAGE_TITLE = 'Links';
+export const LINKS_PAGE_DESCRIPTION = '这里是我常逛的独立博客，收录标准很简单：能让我思考、对我有价值。内容来自各站RSS，如不愿展示请联系我删除。欢迎逛逛。';
+export const FRIENDS_PAGE_TITLE = 'Friends Links';
+export const FRIENDS_PAGE_DESCRIPTION = '友情链接接待处，欢迎交换友链。';
 export const BLOG_AGGREGATION_TITLE = '博客聚合';
 export const BLOG_AGGREGATION_DESCRIPTION = '一些优秀的博客聚合平台，可以发现更多有趣的独立博客。';
 export const PROJECTS_PAGE_TITLE = 'Projects';
@@ -61,6 +63,7 @@ export const FRIENDS_LINKS = [
     site_description: '风舞弦，墨凝影。',
     site_avatar: 'https://Vind.ink/icon.png',
     is_active: true,
+    is_friend: true,
     rss:'https://Vind.ink/feed/',
   },
 
@@ -70,6 +73,7 @@ export const FRIENDS_LINKS = [
     site_description: 'Every nobody is somebody.',
     site_avatar: 'https://liwanr.com/assets/avatar.png',
     is_active: true,
+    is_friend: true,
     rss:'https://liwanr.com/rss.xml',
   },
 
@@ -124,6 +128,7 @@ export const FRIENDS_LINKS = [
     site_description: '喜欢折腾博客、制作主题、分享前端技术的独立开发者。',
     site_avatar: 'https://usj.cc/image/avatar/tx7.jpg',
     is_active: true,
+    is_friend: true,
     rss:'https://usj.cc/rss.xml',
   },
 
@@ -142,6 +147,7 @@ export const FRIENDS_LINKS = [
     site_description: '💻学习📝记录🔗分享',
     site_avatar: 'https://wiki.eryajf.net/img/logo.png',
     is_active: true,
+    is_friend: true,
     rss:'https://wiki.eryajf.net/rss.xml',
   },
 
@@ -160,6 +166,7 @@ export const FRIENDS_LINKS = [
     site_description: '黑客程序媛 / 逆向工程师 / 人工智能学徒 / 用爱发电的独立开发者',
     site_avatar: 'https://gg.lang.bi/avatar/d6ebc088df916bcc9e8b94a09f9b0f604e57be54b04bd520c6db2492740fc563?s=64&d=initials&r=pg&initials=ob',
     is_active: true,
+    is_friend: true,
     rss:'https://zhongxiaojie.com/feed/',
   },
 
@@ -187,6 +194,7 @@ export const FRIENDS_LINKS = [
     site_description: '秋风于渭水，别看名字整得挺文艺范儿，其实本质就是个 佛系码农（伪）的小窝。',
     site_avatar: 'https://www.tjsky.net/wp-content/uploads/2024/02/logo.png',
     is_active: true,
+    is_friend: true,
     rss:'https://www.tjsky.net/feed',
   },
 
@@ -196,6 +204,7 @@ export const FRIENDS_LINKS = [
     site_description: '思君如满月，夜夜减清辉',
     site_avatar: 'https://www.vergilisme.com/usr/themes/Lumieres/fonts/logo_vertical.svg',
     is_active: true,
+    is_friend: true,
     rss:'https://www.vergilisme.com/index.php/feed/',
   },
 
@@ -277,6 +286,7 @@ export const FRIENDS_LINKS = [
     site_description: '一张肆无忌惮的脸，一颗桀骜不驯的心。',
     site_avatar: 'https://www.demochen.com/images/avatar.png',
     is_active: true,
+    is_friend: true,
     rss:'https://demochen.com/atom.xml',
   },
 
@@ -286,6 +296,7 @@ export const FRIENDS_LINKS = [
     site_description: '96女性程序员，以终身成长为人生意义，热爱前端技术，喜欢读各种书，关注效率提升、自我管理、心智成长、认知提升、极简生活。',
     site_avatar: 'https://scarsu.oss-cn-shanghai.aliyuncs.com/picgo20201012144739.jpg',
     is_active: true,
+    is_friend: true,
     rss:'https://scarsu.com/rss',
   },
 
@@ -295,6 +306,7 @@ export const FRIENDS_LINKS = [
     site_description: '跌宕歌词 纵横书卷 不与遣年华',
     site_avatar: 'https://cdn.jsdelivr.net/gh/Borber/PublicPic1/headImg/head.png',
     is_active: true,
+    is_friend: true,
     rss:'#',
   },
 
@@ -304,6 +316,7 @@ export const FRIENDS_LINKS = [
     site_description: '徐奕的专栏-机器学习、软件工程、计算机大佬。',
     site_avatar: 'https://cdn.omegaxyz.com/2020/02/omegaxyz-logo-100.png',
     is_active: true,
+    is_friend: true,
     rss:'#',
   },
 
