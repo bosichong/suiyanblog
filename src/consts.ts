@@ -221,7 +221,7 @@ export const FRIENDS_LINKS = [
     site_name: '一派胡言',
     site_url: 'https://yipai.me',
     site_description: '一派胡言 – 如果你在纵容，就不要抱怨世道变坏。',
-    site_avatar: 'https://yipai.me/wp-content/uploads/2024/10/cropped-yipai-180x180.png',
+    site_avatar: '#',
     is_active: true,
     rss:'https://yipai.me/feed',
   },
