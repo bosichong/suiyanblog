@@ -27,7 +27,8 @@
 	/* === 字体 === */
 	--font-display: "LXGW WenKai", "Noto Serif SC", "Songti SC", "STSong", serif;
 	--font-body:
-		var(--font-atkinson), "LXGW WenKai", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+		var(--font-atkinson), "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun",
+		"LXGW WenKai", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
 	--font-mono:
 		var(--font-atkinson-mono), "LXGW WenKai Mono", "Noto Sans Mono CJK SC", "Source Code Pro", Consolas,
 		monospace;
