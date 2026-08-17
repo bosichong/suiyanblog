@@ -2,5 +2,6 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "astro",
-  "installCommand": "npm install"
+  "installCommand": "npm install",
+  "node": "22.x"
 }
