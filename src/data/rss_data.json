@@ -1,13 +1,11 @@
 {
-  "https://www.ntiy.com": [
-    {
-      "title": "普通的蠢人",
-      "link": "https://www.ntiy.com/2370.html",
-      "published": "Tue, 04 Aug 2026 13:01:23 +0000",
-      "published_parsed": "2026-08-04"
-    }
-  ],
   "https://www.leitao.cn": [
+    {
+      "title": "美国债务简记",
+      "link": "https://www.leitao.cn/10605.html",
+      "published": "Wed, 19 Aug 2026 02:37:09 +0000",
+      "published_parsed": "2026-08-19"
+    },
     {
       "title": "信仰之爱与理性之爱",
       "link": "https://www.leitao.cn/10585.html",
@@ -57,6 +55,96 @@
       "published_parsed": "2026-07-23"
     }
   ],
+  "https://Vind.ink": [
+    {
+      "title": "杂篇 7",
+      "link": "https://vind.ink/photos/7-3.html",
+      "published": "Wed, 19 Aug 2026 12:22:00 +0800",
+      "published_parsed": "2026-08-19"
+    },
+    {
+      "title": "徐汇-衡山路 1",
+      "link": "https://vind.ink/photos/henshanroad1.html",
+      "published": "Wed, 19 Aug 2026 11:04:00 +0800",
+      "published_parsed": "2026-08-19"
+    },
+    {
+      "title": "还是决定用单栏",
+      "link": "https://vind.ink/Status/use-single-column.html",
+      "published": "Tue, 18 Aug 2026 18:01:00 +0800",
+      "published_parsed": "2026-08-18"
+    },
+    {
+      "title": "我与Cloudflare R2无缘",
+      "link": "https://vind.ink/Blogervoice/315.html",
+      "published": "Tue, 18 Aug 2026 17:42:00 +0800",
+      "published_parsed": "2026-08-18"
+    },
+    {
+      "title": "换图床 更新",
+      "link": "https://vind.ink/Status/283.html",
+      "published": "Tue, 18 Aug 2026 15:00:00 +0800",
+      "published_parsed": "2026-08-18"
+    },
+    {
+      "title": "徐汇-衡山路 3",
+      "link": "https://vind.ink/photos/henshanroad3.html",
+      "published": "Fri, 14 Aug 2026 10:30:00 +0800",
+      "published_parsed": "2026-08-14"
+    },
+    {
+      "title": "关于图床供应商",
+      "link": "https://vind.ink/Status/276.html",
+      "published": "Thu, 13 Aug 2026 13:06:00 +0800",
+      "published_parsed": "2026-08-13"
+    },
+    {
+      "title": "徐汇-衡山路 2 徐汇公园",
+      "link": "https://vind.ink/photos/henshanroad2.html",
+      "published": "Thu, 13 Aug 2026 11:05:00 +0800",
+      "published_parsed": "2026-08-13"
+    },
+    {
+      "title": "又更新了几个页面",
+      "link": "https://vind.ink/Status/244.html",
+      "published": "Wed, 12 Aug 2026 18:02:00 +0800",
+      "published_parsed": "2026-08-12"
+    },
+    {
+      "title": "台风白海豚正面登录——来自军爸的分享",
+      "link": "https://vind.ink/photos/228.html",
+      "published": "Tue, 11 Aug 2026 16:21:00 +0800",
+      "published_parsed": "2026-08-11"
+    }
+  ],
+  "https://www.ntiy.com": [
+    {
+      "title": "普通的蠢人",
+      "link": "https://www.ntiy.com/2370.html",
+      "published": "Tue, 04 Aug 2026 13:01:23 +0000",
+      "published_parsed": "2026-08-04"
+    }
+  ],
+  "https://www.ruanyifeng.com/blog": [
+    {
+      "title": "科技爱好者周刊（第 408 期）：你需要知道的 AI 缓存知识",
+      "link": "http://www.ruanyifeng.com/blog/2026/08/weekly-issue-408.html",
+      "published": "2026-08-13T23:54:49Z",
+      "published_parsed": "2026-08-13"
+    },
+    {
+      "title": "科技爱好者周刊（第 407 期）：国家为什么需要开源软件？",
+      "link": "http://www.ruanyifeng.com/blog/2026/08/weekly-issue-407.html",
+      "published": "2026-08-07T00:08:27Z",
+      "published_parsed": "2026-08-07"
+    },
+    {
+      "title": "科技爱好者周刊（第 406 期）：道可，道非，常道",
+      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-406.html",
+      "published": "2026-07-31T00:08:55Z",
+      "published_parsed": "2026-07-31"
+    }
+  ],
   "https://liwanr.com": [
     {
       "title": "快看！荔枝还在树上？哈哈哈",
@@ -83,27 +171,14 @@
       "published_parsed": "2026-08-07"
     }
   ],
-  "https://www.ruanyifeng.com/blog": [
-    {
-      "title": "科技爱好者周刊（第 408 期）：你需要知道的 AI 缓存知识",
-      "link": "http://www.ruanyifeng.com/blog/2026/08/weekly-issue-408.html",
-      "published": "2026-08-13T23:54:49Z",
-      "published_parsed": "2026-08-13"
-    },
-    {
-      "title": "科技爱好者周刊（第 407 期）：国家为什么需要开源软件？",
-      "link": "http://www.ruanyifeng.com/blog/2026/08/weekly-issue-407.html",
-      "published": "2026-08-07T00:08:27Z",
-      "published_parsed": "2026-08-07"
-    },
-    {
-      "title": "科技爱好者周刊（第 406 期）：道可，道非，常道",
-      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-406.html",
-      "published": "2026-07-31T00:08:55Z",
-      "published_parsed": "2026-07-31"
-    }
-  ],
+  "https://wangyurui.com": [],
   "https://mobius.blog": [
+    {
+      "title": "房主任塌人筑房",
+      "link": "https://mobius.blog/25428.html",
+      "published": "Wed, 19 Aug 2026 01:30:00 +0000",
+      "published_parsed": "2026-08-19"
+    },
     {
       "title": "门缝",
       "link": "https://mobius.blog/25423.html",
@@ -157,12 +232,6 @@
       "link": "https://mobius.blog/25346.html",
       "published": "Tue, 11 Aug 2026 01:30:00 +0000",
       "published_parsed": "2026-08-11"
-    },
-    {
-      "title": "事儿逼提喻法",
-      "link": "https://mobius.blog/25339.html",
-      "published": "Mon, 10 Aug 2026 01:30:45 +0000",
-      "published_parsed": "2026-08-10"
     }
   ],
   "https://wiki.eryajf.net": [
@@ -189,6 +258,14 @@
       "link": "https://wiki.eryajf.net/pages/8085fe/",
       "published": "Thu, 23 Jul 2026 21:51:09 GMT",
       "published_parsed": "2026-07-23"
+    }
+  ],
+  "https://usj.cc": [
+    {
+      "title": "流量卡还真得选御三家😂",
+      "link": "https://usj.cc/20260724101237.html",
+      "published": "Fri, 24 Jul 2026 00:00:00 +0000",
+      "published_parsed": "2026-07-24"
     }
   ],
   "https://blog.mfwt.top": [
@@ -247,7 +324,33 @@
       "published_parsed": "2026-07-23"
     }
   ],
-  "https://wangyurui.com": [],
+  "https://zhongxiaojie.com": [
+    {
+      "title": "七夕快乐",
+      "link": "https://zhongxiaojie.cn/2026/08/1751/",
+      "published": "Wed, 19 Aug 2026 08:48:58 +0000",
+      "published_parsed": "2026-08-19"
+    },
+    {
+      "title": "Findu — 十年",
+      "link": "https://zhongxiaojie.cn/2026/08/1728/",
+      "published": "Mon, 17 Aug 2026 01:52:57 +0000",
+      "published_parsed": "2026-08-17"
+    },
+    {
+      "title": "平静",
+      "link": "https://zhongxiaojie.cn/2026/08/1722/",
+      "published": "Tue, 11 Aug 2026 02:27:39 +0000",
+      "published_parsed": "2026-08-11"
+    },
+    {
+      "title": "折耳兔",
+      "link": "https://zhongxiaojie.cn/2026/07/1703/",
+      "published": "Fri, 24 Jul 2026 01:43:48 +0000",
+      "published_parsed": "2026-07-24"
+    }
+  ],
+  "https://www.vergilisme.com": [],
   "https://www.tortorse.com": [
     {
       "title": "1998，游戏厅外的世界",
@@ -268,15 +371,6 @@
       "published_parsed": "2026-08-11"
     }
   ],
-  "https://usj.cc": [
-    {
-      "title": "流量卡还真得选御三家😂",
-      "link": "https://usj.cc/20260724101237.html",
-      "published": "Fri, 24 Jul 2026 00:00:00 +0000",
-      "published_parsed": "2026-07-24"
-    }
-  ],
-  "https://www.vergilisme.com": [],
   "https://www.tjsky.net": [
     {
       "title": "宝塔面板升级 13.0.0 后 Nginx 免费防火墙全是 undefined？替换两个文件就好",
@@ -301,32 +395,6 @@
       "link": "https://www.tjsky.net/natter/1751",
       "published": "Mon, 10 Aug 2026 09:12:31 +0000",
       "published_parsed": "2026-08-10"
-    },
-    {
-      "title": "10小时预警的服务器搬家 vs 零通知重启全球服务器：低价 VPS 界的操作越来越离谱了",
-      "link": "https://www.tjsky.net/natter/1726",
-      "published": "Wed, 22 Jul 2026 03:37:16 +0000",
-      "published_parsed": "2026-07-22"
-    }
-  ],
-  "https://zhongxiaojie.com": [
-    {
-      "title": "Findu — 十年",
-      "link": "https://zhongxiaojie.cn/2026/08/1728/",
-      "published": "Mon, 17 Aug 2026 01:52:57 +0000",
-      "published_parsed": "2026-08-17"
-    },
-    {
-      "title": "平静",
-      "link": "https://zhongxiaojie.cn/2026/08/1722/",
-      "published": "Tue, 11 Aug 2026 02:27:39 +0000",
-      "published_parsed": "2026-08-11"
-    },
-    {
-      "title": "折耳兔",
-      "link": "https://zhongxiaojie.cn/2026/07/1703/",
-      "published": "Fri, 24 Jul 2026 01:43:48 +0000",
-      "published_parsed": "2026-07-24"
     }
   ],
   "https://lawtee.com": [
@@ -391,77 +459,8 @@
       "link": "https://yipai.me/post/2542.html",
       "published": "Mon, 27 Jul 2026 09:58:00 GMT",
       "published_parsed": "2026-07-27"
-    },
-    {
-      "title": "反对狗奴与反对虐狗并不冲突",
-      "link": "https://yipai.me/post/2541.html",
-      "published": "Wed, 22 Jul 2026 07:25:00 GMT",
-      "published_parsed": "2026-07-22"
     }
   ],
-  "https://Vind.ink": [
-    {
-      "title": "还是决定用单栏",
-      "link": "https://vind.ink/Status/use-single-column.html",
-      "published": "Tue, 18 Aug 2026 18:01:00 +0800",
-      "published_parsed": "2026-08-18"
-    },
-    {
-      "title": "我与Cloudflare R2无缘",
-      "link": "https://vind.ink/Blogervoice/315.html",
-      "published": "Tue, 18 Aug 2026 17:42:00 +0800",
-      "published_parsed": "2026-08-18"
-    },
-    {
-      "title": "换图床 更新",
-      "link": "https://vind.ink/Status/283.html",
-      "published": "Tue, 18 Aug 2026 15:00:00 +0800",
-      "published_parsed": "2026-08-18"
-    },
-    {
-      "title": "徐汇-衡山路 3",
-      "link": "https://vind.ink/photos/he.html",
-      "published": "Fri, 14 Aug 2026 10:30:00 +0800",
-      "published_parsed": "2026-08-14"
-    },
-    {
-      "title": "关于图床供应商",
-      "link": "https://vind.ink/Status/276.html",
-      "published": "Thu, 13 Aug 2026 13:06:00 +0800",
-      "published_parsed": "2026-08-13"
-    },
-    {
-      "title": "徐汇-衡山路 2 公园",
-      "link": "https://vind.ink/photos/268.html",
-      "published": "Thu, 13 Aug 2026 11:05:00 +0800",
-      "published_parsed": "2026-08-13"
-    },
-    {
-      "title": "又更新了几个页面",
-      "link": "https://vind.ink/Status/244.html",
-      "published": "Wed, 12 Aug 2026 18:02:00 +0800",
-      "published_parsed": "2026-08-12"
-    },
-    {
-      "title": "台风白海豚正面登录——来自军爸的分享",
-      "link": "https://vind.ink/photos/228.html",
-      "published": "Tue, 11 Aug 2026 16:21:00 +0800",
-      "published_parsed": "2026-08-11"
-    },
-    {
-      "title": "徕卡中国官网把相机固件搞错了（结局）",
-      "link": "https://vind.ink/IT-digital/211.html",
-      "published": "Tue, 11 Aug 2026 16:20:00 +0800",
-      "published_parsed": "2026-08-11"
-    },
-    {
-      "title": "共青森林公园 10",
-      "link": "https://vind.ink/photos/224.html",
-      "published": "Tue, 11 Aug 2026 11:15:00 +0800",
-      "published_parsed": "2026-08-11"
-    }
-  ],
-  "https://pathos.page": [],
   "https://d-d.design": [
     {
       "title": "操，原来我真的长大了",
@@ -524,6 +523,7 @@
       "published_parsed": "2026-07-28"
     }
   ],
+  "https://sliun.com": [],
   "https://yihui.org/cn": [],
   "https://www.glowisle.me": [],
   "https://blog.bxaw.name": [],
@@ -536,9 +536,21 @@
     }
   ],
   "https://www.scarsu.com": [],
-  "https://sliun.com": [],
   "https://www.owenyoung.com": [],
+  "https://pathos.page": [],
   "https://blog.solazy.me": [
+    {
+      "title": "不该露怯的人",
+      "link": "https://blog.solazy.me/20260818/",
+      "published": "2026-08-18T14:00:00+00:00",
+      "published_parsed": "2026-08-18"
+    },
+    {
+      "title": "有些事情没有答案，只有选择",
+      "link": "https://blog.solazy.me/20260817/",
+      "published": "2026-08-17T15:00:00+00:00",
+      "published_parsed": "2026-08-17"
+    },
     {
       "title": "放弃自证的减负感",
       "link": "https://blog.solazy.me/20260816/",
@@ -586,21 +598,39 @@
       "link": "https://blog.solazy.me/20260809/",
       "published": "2026-08-09T15:00:00+00:00",
       "published_parsed": "2026-08-09"
-    },
-    {
-      "title": "周末流水账 0808",
-      "link": "https://blog.solazy.me/20260808/",
-      "published": "2026-08-08T15:30:00+00:00",
-      "published_parsed": "2026-08-08"
-    },
-    {
-      "title": "生理上的技术债务",
-      "link": "https://blog.solazy.me/20260806/",
-      "published": "2026-08-06T15:00:00+00:00",
-      "published_parsed": "2026-08-06"
     }
   ],
   "https://z.arlmy.me": [
+    {
+      "title": "入蜀记 day446 FCF",
+      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_446/",
+      "published": "2026-08-19T11:17:27.000Z",
+      "published_parsed": "2026-08-19"
+    },
+    {
+      "title": "入蜀记 day445 幺妹峰",
+      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_445/",
+      "published": "2026-08-19T11:16:27.000Z",
+      "published_parsed": "2026-08-19"
+    },
+    {
+      "title": "入蜀记 day444 没有工位",
+      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_444/",
+      "published": "2026-08-19T11:15:27.000Z",
+      "published_parsed": "2026-08-19"
+    },
+    {
+      "title": "入蜀记 day443 打呼噜",
+      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_443/",
+      "published": "2026-08-19T11:14:27.000Z",
+      "published_parsed": "2026-08-19"
+    },
+    {
+      "title": "Toots 432 2026 Aug.9 - Aug.15",
+      "link": "https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260815/",
+      "published": "2026-08-19T10:58:27.000Z",
+      "published_parsed": "2026-08-19"
+    },
     {
       "title": "简化与收敛",
       "link": "https://z.arlmy.me/posts/ZArlmyMe/Decrease_20260811/",
@@ -780,12 +810,6 @@
       "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_425/",
       "published": "2026-07-23T04:48:27.000Z",
       "published_parsed": "2026-07-23"
-    },
-    {
-      "title": "入蜀记 day424 大拇脚趾点地？",
-      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_424/",
-      "published": "2026-07-22T04:48:27.000Z",
-      "published_parsed": "2026-07-22"
     }
   ],
   "https://cyrus19.cc": [
@@ -797,6 +821,12 @@
     }
   ],
   "https://immarcus.com": [
+    {
+      "title": "社交媒体上充钱",
+      "link": "https://www.immarcus.com/blog/money-in-social-media",
+      "published": "Wed, 19 Aug 2026 00:00:00 GMT",
+      "published_parsed": "2026-08-19"
+    },
     {
       "title": "数学的精髓不是对错",
       "link": "https://www.immarcus.com/blog/correctness-is-not-the-essence-of-math",
@@ -958,15 +988,15 @@
       "link": "https://www.immarcus.com/blog/crazy-sports-culture-in-usa",
       "published": "Thu, 23 Jul 2026 00:00:00 GMT",
       "published_parsed": "2026-07-23"
-    },
-    {
-      "title": "re² 三种法律，三种世界",
-      "link": "https://www.immarcus.com/blog/re-re-three-laws-three-worlds",
-      "published": "Wed, 22 Jul 2026 00:00:00 GMT",
-      "published_parsed": "2026-07-22"
     }
   ],
   "https://blog.cytrogen.icu": [
+    {
+      "title": "休息日逛下城",
+      "link": "https://blog.cytrogen.icu/posts/ed86.html",
+      "published": "2026-08-19T03:13:55.000Z",
+      "published_parsed": "2026-08-19"
+    },
     {
       "title": "好转和博客和主流和教会和性别和大扫除",
       "link": "https://blog.cytrogen.icu/posts/955e.html",
