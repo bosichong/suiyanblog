@@ -47,12 +47,32 @@
       "link": "https://www.leitao.cn/10521.html",
       "published": "Mon, 27 Jul 2026 06:14:04 +0000",
       "published_parsed": "2026-07-27"
+    }
+  ],
+  "https://liwanr.com": [
+    {
+      "title": "快看！荔枝还在树上？哈哈哈",
+      "link": "https://liWanr.com/essays/2026/lychee/",
+      "published": "Thu, 13 Aug 2026 19:23:01 +0800",
+      "published_parsed": "2026-08-13"
     },
     {
-      "title": "近日杂记之20260723",
-      "link": "https://www.leitao.cn/10428.html",
-      "published": "Thu, 23 Jul 2026 02:26:32 +0000",
-      "published_parsed": "2026-07-23"
+      "title": "她的位置",
+      "link": "https://liWanr.com/essays/2026/Her-Place/",
+      "published": "Fri, 07 Aug 2026 18:19:19 +0800",
+      "published_parsed": "2026-08-07"
+    },
+    {
+      "title": "在梦里死了，又活了",
+      "link": "https://liWanr.com/essays/2026/living-after-death/",
+      "published": "Fri, 07 Aug 2026 18:19:19 +0800",
+      "published_parsed": "2026-08-07"
+    },
+    {
+      "title": "不要试图在书里找答案",
+      "link": "https://liWanr.com/essays/2026/Answer-is-not-in-the-book/",
+      "published": "Fri, 07 Aug 2026 18:19:19 +0800",
+      "published_parsed": "2026-08-07"
     }
   ],
   "https://Vind.ink": [
@@ -125,54 +145,19 @@
       "published_parsed": "2026-08-04"
     }
   ],
-  "https://www.ruanyifeng.com/blog": [
-    {
-      "title": "科技爱好者周刊（第 408 期）：你需要知道的 AI 缓存知识",
-      "link": "http://www.ruanyifeng.com/blog/2026/08/weekly-issue-408.html",
-      "published": "2026-08-13T23:54:49Z",
-      "published_parsed": "2026-08-13"
-    },
-    {
-      "title": "科技爱好者周刊（第 407 期）：国家为什么需要开源软件？",
-      "link": "http://www.ruanyifeng.com/blog/2026/08/weekly-issue-407.html",
-      "published": "2026-08-07T00:08:27Z",
-      "published_parsed": "2026-08-07"
-    },
-    {
-      "title": "科技爱好者周刊（第 406 期）：道可，道非，常道",
-      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-406.html",
-      "published": "2026-07-31T00:08:55Z",
-      "published_parsed": "2026-07-31"
-    }
-  ],
-  "https://liwanr.com": [
-    {
-      "title": "快看！荔枝还在树上？哈哈哈",
-      "link": "https://liWanr.com/essays/2026/lychee/",
-      "published": "Thu, 13 Aug 2026 19:23:01 +0800",
-      "published_parsed": "2026-08-13"
-    },
-    {
-      "title": "她的位置",
-      "link": "https://liWanr.com/essays/2026/Her-Place/",
-      "published": "Fri, 07 Aug 2026 18:19:19 +0800",
-      "published_parsed": "2026-08-07"
-    },
-    {
-      "title": "在梦里死了，又活了",
-      "link": "https://liWanr.com/essays/2026/living-after-death/",
-      "published": "Fri, 07 Aug 2026 18:19:19 +0800",
-      "published_parsed": "2026-08-07"
-    },
-    {
-      "title": "不要试图在书里找答案",
-      "link": "https://liWanr.com/essays/2026/Answer-is-not-in-the-book/",
-      "published": "Fri, 07 Aug 2026 18:19:19 +0800",
-      "published_parsed": "2026-08-07"
-    }
-  ],
-  "https://wangyurui.com": [],
   "https://mobius.blog": [
+    {
+      "title": "丁达尔",
+      "link": "https://mobius.blog/25454.html",
+      "published": "Thu, 20 Aug 2026 11:57:31 +0000",
+      "published_parsed": "2026-08-20"
+    },
+    {
+      "title": "独树不成林，牛来人来疯",
+      "link": "https://mobius.blog/25443.html",
+      "published": "Thu, 20 Aug 2026 01:30:00 +0000",
+      "published_parsed": "2026-08-20"
+    },
     {
       "title": "房主任塌人筑房",
       "link": "https://mobius.blog/25428.html",
@@ -220,18 +205,6 @@
       "link": "https://mobius.blog/25371.html",
       "published": "Thu, 13 Aug 2026 01:30:00 +0000",
       "published_parsed": "2026-08-13"
-    },
-    {
-      "title": "现在几点？",
-      "link": "https://mobius.blog/25356.html",
-      "published": "Wed, 12 Aug 2026 01:30:00 +0000",
-      "published_parsed": "2026-08-12"
-    },
-    {
-      "title": "污染源",
-      "link": "https://mobius.blog/25346.html",
-      "published": "Tue, 11 Aug 2026 01:30:00 +0000",
-      "published_parsed": "2026-08-11"
     }
   ],
   "https://wiki.eryajf.net": [
@@ -260,15 +233,59 @@
       "published_parsed": "2026-07-23"
     }
   ],
-  "https://usj.cc": [
+  "https://www.ruanyifeng.com/blog": [
     {
-      "title": "流量卡还真得选御三家😂",
-      "link": "https://usj.cc/20260724101237.html",
-      "published": "Fri, 24 Jul 2026 00:00:00 +0000",
+      "title": "科技爱好者周刊（第 408 期）：你需要知道的 AI 缓存知识",
+      "link": "http://www.ruanyifeng.com/blog/2026/08/weekly-issue-408.html",
+      "published": "2026-08-13T23:54:49Z",
+      "published_parsed": "2026-08-13"
+    },
+    {
+      "title": "科技爱好者周刊（第 407 期）：国家为什么需要开源软件？",
+      "link": "http://www.ruanyifeng.com/blog/2026/08/weekly-issue-407.html",
+      "published": "2026-08-07T00:08:27Z",
+      "published_parsed": "2026-08-07"
+    },
+    {
+      "title": "科技爱好者周刊（第 406 期）：道可，道非，常道",
+      "link": "http://www.ruanyifeng.com/blog/2026/07/weekly-issue-406.html",
+      "published": "2026-07-31T00:08:55Z",
+      "published_parsed": "2026-07-31"
+    }
+  ],
+  "https://zhongxiaojie.com": [
+    {
+      "title": "七夕快乐",
+      "link": "https://zhongxiaojie.cn/2026/08/1751/",
+      "published": "Wed, 19 Aug 2026 08:48:58 +0000",
+      "published_parsed": "2026-08-19"
+    },
+    {
+      "title": "Findu — 十年",
+      "link": "https://zhongxiaojie.cn/2026/08/1728/",
+      "published": "Mon, 17 Aug 2026 01:52:57 +0000",
+      "published_parsed": "2026-08-17"
+    },
+    {
+      "title": "平静",
+      "link": "https://zhongxiaojie.cn/2026/08/1722/",
+      "published": "Tue, 11 Aug 2026 02:27:39 +0000",
+      "published_parsed": "2026-08-11"
+    },
+    {
+      "title": "折耳兔",
+      "link": "https://zhongxiaojie.cn/2026/07/1703/",
+      "published": "Fri, 24 Jul 2026 01:43:48 +0000",
       "published_parsed": "2026-07-24"
     }
   ],
   "https://blog.mfwt.top": [
+    {
+      "title": "无用命途：动态海景灯，用电脑说脏话",
+      "link": "https://blog.mfwt.top/index.php/archives/1523/",
+      "published": "Thu, 20 Aug 2026 21:59:16 +0800",
+      "published_parsed": "2026-08-20"
+    },
     {
       "title": "冷知识：博客的评论区不是广告区",
       "link": "https://blog.mfwt.top/index.php/archives/1529/",
@@ -324,32 +341,7 @@
       "published_parsed": "2026-07-23"
     }
   ],
-  "https://zhongxiaojie.com": [
-    {
-      "title": "七夕快乐",
-      "link": "https://zhongxiaojie.cn/2026/08/1751/",
-      "published": "Wed, 19 Aug 2026 08:48:58 +0000",
-      "published_parsed": "2026-08-19"
-    },
-    {
-      "title": "Findu — 十年",
-      "link": "https://zhongxiaojie.cn/2026/08/1728/",
-      "published": "Mon, 17 Aug 2026 01:52:57 +0000",
-      "published_parsed": "2026-08-17"
-    },
-    {
-      "title": "平静",
-      "link": "https://zhongxiaojie.cn/2026/08/1722/",
-      "published": "Tue, 11 Aug 2026 02:27:39 +0000",
-      "published_parsed": "2026-08-11"
-    },
-    {
-      "title": "折耳兔",
-      "link": "https://zhongxiaojie.cn/2026/07/1703/",
-      "published": "Fri, 24 Jul 2026 01:43:48 +0000",
-      "published_parsed": "2026-07-24"
-    }
-  ],
+  "https://wangyurui.com": [],
   "https://www.vergilisme.com": [],
   "https://www.tortorse.com": [
     {
@@ -372,6 +364,12 @@
     }
   ],
   "https://www.tjsky.net": [
+    {
+      "title": "IDM 扩展老劫持下载、下载文件名乱码？我写了个小扩展让它按需开关",
+      "link": "https://www.tjsky.net/best-software/1819",
+      "published": "Thu, 20 Aug 2026 09:20:47 +0000",
+      "published_parsed": "2026-08-20"
+    },
     {
       "title": "宝塔面板升级 13.0.0 后 Nginx 免费防火墙全是 undefined？替换两个文件就好",
       "link": "https://www.tjsky.net/tutorial/1792",
@@ -397,7 +395,33 @@
       "published_parsed": "2026-08-10"
     }
   ],
+  "https://usj.cc": [
+    {
+      "title": "流量卡还真得选御三家😂",
+      "link": "https://usj.cc/20260724101237.html",
+      "published": "Fri, 24 Jul 2026 00:00:00 +0000",
+      "published_parsed": "2026-07-24"
+    }
+  ],
   "https://lawtee.com": [
+    {
+      "title": "【南海沉船系列三】交州是如何取代广州成为外贸枢纽的",
+      "link": "https://lawtee.com/article/binh-chau-wreck-late-tang-trade/",
+      "published": "Wed, 19 Aug 2026 23:00:00 +0000",
+      "published_parsed": "2026-08-19"
+    },
+    {
+      "title": "【南海沉船系列二】湖南是唐朝外贸真正的隐藏王者",
+      "link": "https://lawtee.com/article/changsha-ware-tang-export-king/",
+      "published": "Wed, 19 Aug 2026 00:00:00 +0000",
+      "published_parsed": "2026-08-19"
+    },
+    {
+      "title": "【南海沉船系列一】为什么林姓和蓝姓共用祠堂",
+      "link": "https://lawtee.com/article/lin-lan-temple-vietnam-chinese-clan/",
+      "published": "Tue, 18 Aug 2026 00:00:00 +0000",
+      "published_parsed": "2026-08-18"
+    },
     {
       "title": "跟印度人接触几个月后我发现“印度赢学”没那么简单",
       "link": "https://lawtee.com/article/india-win-narrative/",
@@ -409,26 +433,9 @@
       "link": "https://lawtee.com/article/why-we-resist-standard-measurements/",
       "published": "Fri, 14 Aug 2026 19:30:00 +0000",
       "published_parsed": "2026-08-14"
-    },
-    {
-      "title": "生存高分，发展白卷：用一套自洽框架解构清朝",
-      "link": "https://lawtee.com/article/about-qing-history/",
-      "published": "Tue, 04 Aug 2026 18:09:57 +0000",
-      "published_parsed": "2026-08-04"
-    },
-    {
-      "title": "一代人的最后一课",
-      "link": "https://lawtee.com/article/my-uncle/",
-      "published": "Sun, 02 Aug 2026 19:39:57 +0000",
-      "published_parsed": "2026-08-02"
-    },
-    {
-      "title": "那些被AI公司吃掉的书",
-      "link": "https://lawtee.com/article/ai-eat-books/",
-      "published": "Thu, 30 Jul 2026 23:08:39 +0000",
-      "published_parsed": "2026-07-30"
     }
   ],
+  "https://pathos.page": [],
   "https://yipai.me": [
     {
       "title": "牛来",
@@ -462,6 +469,12 @@
     }
   ],
   "https://d-d.design": [
+    {
+      "title": "我只是想让小蛇颠个球",
+      "link": "https://d-d.design/single/20148",
+      "published": "Wed, 19 Aug 2026 18:56:32 +0000",
+      "published_parsed": "2026-08-19"
+    },
     {
       "title": "操，原来我真的长大了",
       "link": "https://d-d.design/single/20118",
@@ -515,29 +528,28 @@
       "link": "https://d-d.design/single/19850",
       "published": "Thu, 30 Jul 2026 22:12:09 +0000",
       "published_parsed": "2026-07-30"
+    }
+  ],
+  "https://blog.bxaw.name": [],
+  "https://sliun.com": [
+    {
+      "title": "问题的生成（二）",
+      "link": "https://sliun.com/problemmake2/",
+      "published": "2026-08-20T13:58:00+00:00",
+      "published_parsed": "2026-08-20"
     },
     {
-      "title": "我做了一张地图",
-      "link": "https://d-d.design/single/19829",
-      "published": "Tue, 28 Jul 2026 16:30:43 +0000",
-      "published_parsed": "2026-07-28"
+      "title": "问题的生成（一）",
+      "link": "https://sliun.com/problemmake1/",
+      "published": "2026-08-19T14:29:00+00:00",
+      "published_parsed": "2026-08-19"
     }
   ],
-  "https://sliun.com": [],
-  "https://yihui.org/cn": [],
   "https://www.glowisle.me": [],
-  "https://blog.bxaw.name": [],
-  "https://www.demochen.com": [
-    {
-      "title": "探索 AI 时代的人机协作",
-      "link": "https://demochen.com/posts/20260722/",
-      "published": "Wed, 22 Jul 2026 22:36:47 +0800",
-      "published_parsed": "2026-07-22"
-    }
-  ],
-  "https://www.scarsu.com": [],
   "https://www.owenyoung.com": [],
-  "https://pathos.page": [],
+  "https://www.scarsu.com": [],
+  "https://yihui.org/cn": [],
+  "https://www.demochen.com": [],
   "https://blog.solazy.me": [
     {
       "title": "不该露怯的人",
@@ -601,6 +613,18 @@
     }
   ],
   "https://z.arlmy.me": [
+    {
+      "title": "最近惦念 20260727",
+      "link": "https://z.arlmy.me/posts/TILs/thoughts/20260727_Recently/",
+      "published": "2026-08-20T03:25:27.000Z",
+      "published_parsed": "2026-08-20"
+    },
+    {
+      "title": "你就瞎活",
+      "link": "https://z.arlmy.me/posts/Essays/2026/LiveLikeWind_20260819/",
+      "published": "2026-08-19T16:24:03.000Z",
+      "published_parsed": "2026-08-19"
+    },
     {
       "title": "入蜀记 day446 FCF",
       "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_446/",
@@ -804,12 +828,6 @@
       "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_426/",
       "published": "2026-07-24T04:48:27.000Z",
       "published_parsed": "2026-07-24"
-    },
-    {
-      "title": "入蜀记 day425 乡里别",
-      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_425/",
-      "published": "2026-07-23T04:48:27.000Z",
-      "published_parsed": "2026-07-23"
     }
   ],
   "https://cyrus19.cc": [
@@ -821,6 +839,12 @@
     }
   ],
   "https://immarcus.com": [
+    {
+      "title": "滑坡谬误",
+      "link": "https://www.immarcus.com/blog/slippery-slope-fallacy",
+      "published": "Thu, 20 Aug 2026 00:00:00 GMT",
+      "published_parsed": "2026-08-20"
+    },
     {
       "title": "社交媒体上充钱",
       "link": "https://www.immarcus.com/blog/money-in-social-media",
@@ -982,12 +1006,6 @@
       "link": "https://www.immarcus.com/blog/cytrogen-returns-s",
       "published": "Fri, 24 Jul 2026 00:00:00 GMT",
       "published_parsed": "2026-07-24"
-    },
-    {
-      "title": "疯狂的美国体育文化",
-      "link": "https://www.immarcus.com/blog/crazy-sports-culture-in-usa",
-      "published": "Thu, 23 Jul 2026 00:00:00 GMT",
-      "published_parsed": "2026-07-23"
     }
   ],
   "https://blog.cytrogen.icu": [
