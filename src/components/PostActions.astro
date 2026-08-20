@@ -143,7 +143,7 @@ const commentsConfig = JSON.stringify(COMMENTS_CONFIG);
 		// 不缓存 window.twikoo，每次从 CDN 重新加载脚本，
 		// 确保实例内部状态与当前页面的 DOM 一致。
 		const script = document.createElement('script');
-		script.src = 'https://cdn.jsdelivr.net/npm/twikoo@1.7.12/dist/twikoo.all.min.js';
+		script.src = 'https://cdn.jsdelivr.net/npm/twikoo@1.7.19/dist/twikoo.all.min.js';
 		script.onload = () => {
 			(window as any).twikoo?.init({
 				envId: config.twikoo.envId,
