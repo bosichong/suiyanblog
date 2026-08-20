@@ -97,7 +97,7 @@ main {
 	max-width: 760px;
 	background: #fff;
 	border: 1px solid var(--border);
-	border-radius: 16px;
+	border-radius: 0;
 	overflow: hidden;
 }
 
@@ -222,7 +222,7 @@ th {
 img {
 	max-width: 100%;
 	height: auto;
-	border-radius: 8px;
+	border-radius: 0;
 }
 
 /* === 代码：内联 + 块 === */
@@ -237,7 +237,7 @@ code {
 }
 pre {
 	padding: 1.5em;
-	border-radius: 12px;
+	border-radius: 0;
 	background: var(--bg-soft);
 	border: 1px solid var(--border);
 }
@@ -252,7 +252,7 @@ blockquote {
 	border-left: 3px solid var(--text-muted);
 	padding: 1em 1.5em;
 	margin: 1.5em 0;
-	border-radius: 0 8px 8px 0;
+	border-radius: 0;
 	color: var(--text-soft);
 	font-style: italic;
 }
