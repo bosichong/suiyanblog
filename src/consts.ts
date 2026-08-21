@@ -38,6 +38,14 @@ export const MENU_ITEMS = [
 // 链接
 export const FRIENDS_LINKS = [
 
+    {
+    site_name: '鹅玉',
+    site_url: 'https://eyu.at/',
+    site_description: '这个博客，它是一本关于我的书，写满我生活/日常的细节，偶尔也有吐槽/骂领导和低谷，他们都是真实的我',
+    site_avatar: '#',
+    is_active: true,
+    rss:'#',
+  },
 
     {
     site_name: '非理勿试',
