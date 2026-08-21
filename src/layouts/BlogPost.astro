@@ -184,6 +184,21 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 				font-weight: inherit;
 				color: inherit;
 			}
+			.iine-wrapper {
+				display: flex;
+				justify-content: center;
+				margin: 1.5rem 0;
+			}
+			.iine-button {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.35em;
+				background: #f0f0f0;
+				border: none;
+				border-radius: 999px;
+				padding: 0.4em 0.8em;
+				cursor: pointer;
+			}
 			@media (max-width: 720px) {
 				.prose table {
 					font-size: 0.85rem;
@@ -195,6 +210,15 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 			}
 		</style>
 	</head>
+
+	<style is:global>
+		.iine-button .icon {
+			color: #e74c3c;
+		}
+		.iine-button .icon svg {
+			color: #e74c3c;
+		}
+	</style>
 
 	<body>
 		<SiteShell>
@@ -231,6 +255,13 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 					<div class="article-body">
 						<slot />
 					</div>
+					<div class="iine-wrapper">
+						<button
+							class="iine-button"
+							data-icon="heart"
+							aria-hidden="true">
+						</button>
+					</div>
 					<hr aria-hidden="true" />
 					<Webmentions postId={postId || ''} title={title} />
 
@@ -240,5 +271,6 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 				</div>
 			</article>
 		</SiteShell>
+		<script src="https://cdn.jsdelivr.net/gh/welpo/iine@main/iine.mini.js"></script>
 	</body>
 </html>
