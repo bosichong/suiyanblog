@@ -13,9 +13,6 @@ const commentsConfig = JSON.stringify(COMMENTS_CONFIG);
 ---
 
 <div class="comment-section" id="comment-section" data-post-id={postId} data-post-path={postPath} data-config={commentsConfig}>
-	<div class="comment-selector">
-		<button class="comment-type-btn" data-type="twikoo">💬 Twikoo 评论</button>
-	</div>
 	<div class="comment-content" id="comment-content">
 		<!-- 评论内容由 JS 动态加载 -->
 	</div>
@@ -26,122 +23,73 @@ const commentsConfig = JSON.stringify(COMMENTS_CONFIG);
 		margin: 2rem 0;
 	}
 
-	.comment-selector {
-		display: flex;
-		gap: 0.5rem;
-		justify-content: center;
-		padding: 4px;
-		background: transparent;
-		border-radius: 10px;
-		max-width: fit-content;
-		margin: 0 auto;
-	}
-
-	.comment-type-btn {
-		padding: 0.5rem 1.25rem;
-		border: 1px solid var(--border);
-		border-radius: 7px;
-		background: transparent;
-		color: var(--text-soft);
-		cursor: pointer;
-		font-size: 0.9rem;
-		font-weight: 500;
-		font-family: inherit;
-		transition: all 0.2s ease;
-	}
-
-	.comment-type-btn:hover {
-		border-color: var(--text);
-		color: var(--text);
-	}
-
-	.comment-type-btn:focus,
-	.comment-type-btn:focus-visible {
-		outline: none;
-	}
-
-	.comment-type-btn.active {
-		background: #fafafa;
-		color: var(--text);
-		border-color: var(--text);
-	}
-
 	.comment-content {
 		margin-top: 1rem;
 		min-height: 0;
-	}
-
-	@media (max-width: 480px) {
-		.comment-selector {
-			flex-direction: row;
-			width: 100%;
-		}
-
-		.comment-type-btn {
-			flex: 1;
-			text-align: center;
-		}
 	}
 </style>
 
 <script>
 	// ============================================================
-	// 使用事件委托处理评论按钮点击，不依赖脚本重新执行，
-	// 因此在 ClientRouter 视图过渡后仍能正常工作。
+	// 评论懒加载：使用 IntersectionObserver 监听评论区域，
+	// 当用户滚动到评论区域附近时自动加载 Twikoo 评论。
 	// ============================================================
 	
 	// ---------- 全局状态（跨导航重置） ----------
-	window.__commentState = window.__commentState || { currentType: null };
+	window.__commentState = window.__commentState || { loaded: false, observer: null };
 	
 	// 视图过渡导航后重置状态，避免跨页面污染。
-	// 同时清除 twikoo 全局实例，下次点击强制重新加载脚本，
-	// 避免旧实例内部的 DOM 引用失效导致样式丢失。
+	// 同时清除 twikoo 全局实例，确保下次加载时重新初始化。
 	document.addEventListener('astro:after-swap', () => {
-		window.__commentState.currentType = null;
+		window.__commentState.loaded = false;
+		if (window.__commentState.observer) {
+			window.__commentState.observer.disconnect();
+			window.__commentState.observer = null;
+		}
 		delete (window as any).twikoo;
+		// 重新初始化观察器
+		initObserver();
 	});
 	
-	// ---------- 事件委托：按钮点击 ----------
-	document.addEventListener('click', (e) => {
-		const btn = (e.target as HTMLElement).closest('.comment-type-btn') as HTMLElement | null;
-		if (!btn) return;
-		
-		const section = document.getElementById('comment-section');
-		if (!section || !section.contains(btn)) return;
-		
+	// ---------- 初始化 IntersectionObserver ----------
+	function initObserver() {
 		const content = document.getElementById('comment-content');
-		if (!content) return;
+		const section = document.getElementById('comment-section');
+		if (!content || !section) return;
 		
-		const type = btn.getAttribute('data-type');
-		if (!type) return;
-		if (type === window.__commentState.currentType) return;
+		// 如果已经加载过，不再观察
+		if (window.__commentState.loaded) return;
 		
-		// 更新按钮状态
-		section.querySelectorAll('.comment-type-btn').forEach(b => b.classList.remove('active'));
-		btn.classList.add('active');
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting && !window.__commentState.loaded) {
+					window.__commentState.loaded = true;
+					observer.disconnect();
+					
+					// 获取配置
+					const configStr = section.getAttribute('data-config') || '{}';
+					const config = JSON.parse(configStr);
+					const postPath = section.getAttribute('data-post-path') || '';
+					
+					loadTwikoo(content, config, postPath);
+				}
+			});
+		}, {
+			rootMargin: '200px 0px',
+			threshold: 0
+		});
 		
-		// 清空内容
-		content.innerHTML = '';
-		window.__commentState.currentType = type;
-		
-		// 获取配置（每次从 data-config 读取，确保切换页面后正确）
-		const configStr = section.getAttribute('data-config') || '{}';
-		const config = JSON.parse(configStr);
-		const postPath = section.getAttribute('data-post-path') || '';
-		
-		loadTwikoo(content, config, postPath);
-	});
+		observer.observe(content);
+		window.__commentState.observer = observer;
+	}
 	
 	// ---------- 加载 Twikoo ----------
 	function loadTwikoo(container: HTMLElement, config: any, path: string) {
-		// 用 appendChild 而非 innerHTML 创建容器，避免潜在的渲染问题
 		const twikooDiv = document.createElement('div');
 		twikooDiv.id = 'twikoo-comment';
 		twikooDiv.style.minHeight = '200px';
 		container.appendChild(twikooDiv);
 		
-		// 不缓存 window.twikoo，每次从 CDN 重新加载脚本，
-		// 确保实例内部状态与当前页面的 DOM 一致。
 		const script = document.createElement('script');
 		script.src = 'https://cdn.jsdelivr.net/npm/twikoo@1.7.19/dist/twikoo.all.min.js';
 		script.onload = () => {
@@ -154,5 +102,7 @@ const commentsConfig = JSON.stringify(COMMENTS_CONFIG);
 		document.head.appendChild(script);
 	}
 	
+	// ---------- 页面加载时初始化 ----------
+	initObserver();
 
 </script>
