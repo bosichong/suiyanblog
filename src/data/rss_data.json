@@ -1,6 +1,12 @@
 {
   "https://www.leitao.cn": [
     {
+      "title": "能力天花板与命运",
+      "link": "https://www.leitao.cn/10764.html",
+      "published": "Thu, 27 Aug 2026 02:11:27 +0000",
+      "published_parsed": "2026-08-27"
+    },
+    {
       "title": "博客与生活",
       "link": "https://www.leitao.cn/10693.html",
       "published": "Sat, 22 Aug 2026 14:42:05 +0000",
@@ -61,15 +67,13 @@
       "published_parsed": "2026-07-31"
     }
   ],
-  "https://www.ntiy.com": [
-    {
-      "title": "普通的蠢人",
-      "link": "https://www.ntiy.com/2370.html",
-      "published": "Tue, 04 Aug 2026 13:01:23 +0000",
-      "published_parsed": "2026-08-04"
-    }
-  ],
   "https://Vind.ink": [
+    {
+      "title": "Nord Anglia School 2 年会",
+      "link": "https://vind.ink/photos/Nord-Anglia-School-2.html",
+      "published": "Thu, 27 Aug 2026 19:03:00 +0800",
+      "published_parsed": "2026-08-27"
+    },
     {
       "title": "汇龙潭与秋霞圃（avif）",
       "link": "https://vind.ink/photos/113.html",
@@ -123,15 +127,49 @@
       "link": "https://vind.ink/photos/colorormonochrome.html",
       "published": "Fri, 21 Aug 2026 18:01:00 +0800",
       "published_parsed": "2026-08-21"
+    }
+  ],
+  "https://liwanr.com": [
+    {
+      "title": "快看！荔枝还在树上？哈哈哈",
+      "link": "https://liWanr.com/essays/2026/lychee/",
+      "published": "Thu, 13 Aug 2026 19:23:01 +0800",
+      "published_parsed": "2026-08-13"
     },
     {
-      "title": "【更新】注销和卸载千问和Kimi",
-      "link": "https://vind.ink/IT-digital/deleteqwenandkimi.html",
-      "published": "Fri, 21 Aug 2026 16:46:00 +0800",
-      "published_parsed": "2026-08-21"
+      "title": "她的位置",
+      "link": "https://liWanr.com/essays/2026/Her-Place/",
+      "published": "Sun, 09 Aug 2026 15:42:15 +0800",
+      "published_parsed": "2026-08-09"
+    },
+    {
+      "title": "在梦里死了，又活了",
+      "link": "https://liWanr.com/essays/2026/living-after-death/",
+      "published": "Sun, 09 Aug 2026 15:42:15 +0800",
+      "published_parsed": "2026-08-09"
+    },
+    {
+      "title": "不要试图在书里找答案",
+      "link": "https://liWanr.com/essays/2026/Answer-is-not-in-the-book/",
+      "published": "Sun, 09 Aug 2026 15:42:15 +0800",
+      "published_parsed": "2026-08-09"
+    }
+  ],
+  "https://www.ntiy.com": [
+    {
+      "title": "普通的蠢人",
+      "link": "https://www.ntiy.com/2370.html",
+      "published": "Tue, 04 Aug 2026 13:01:23 +0000",
+      "published_parsed": "2026-08-04"
     }
   ],
   "https://mobius.blog": [
+    {
+      "title": "公共厕所与公共知识",
+      "link": "https://mobius.blog/25511.html",
+      "published": "Thu, 27 Aug 2026 02:13:23 +0000",
+      "published_parsed": "2026-08-27"
+    },
     {
       "title": "偶像崩塌三部曲",
       "link": "https://mobius.blog/25504.html",
@@ -185,61 +223,8 @@
       "link": "https://mobius.blog/25443.html",
       "published": "Thu, 20 Aug 2026 01:30:00 +0000",
       "published_parsed": "2026-08-20"
-    },
-    {
-      "title": "房主任塌人筑房",
-      "link": "https://mobius.blog/25428.html",
-      "published": "Wed, 19 Aug 2026 01:30:00 +0000",
-      "published_parsed": "2026-08-19"
     }
   ],
-  "https://www.ruanyifeng.com/blog": [
-    {
-      "title": "科技爱好者周刊（第 409 期）：程序员的职业未来",
-      "link": "http://www.ruanyifeng.com/blog/2026/08/weekly-issue-409.html",
-      "published": "2026-08-20T23:53:54Z",
-      "published_parsed": "2026-08-20"
-    },
-    {
-      "title": "科技爱好者周刊（第 408 期）：你需要知道的 AI 缓存知识",
-      "link": "http://www.ruanyifeng.com/blog/2026/08/weekly-issue-408.html",
-      "published": "2026-08-13T23:54:49Z",
-      "published_parsed": "2026-08-13"
-    },
-    {
-      "title": "科技爱好者周刊（第 407 期）：国家为什么需要开源软件？",
-      "link": "http://www.ruanyifeng.com/blog/2026/08/weekly-issue-407.html",
-      "published": "2026-08-07T00:08:27Z",
-      "published_parsed": "2026-08-07"
-    }
-  ],
-  "https://liwanr.com": [
-    {
-      "title": "快看！荔枝还在树上？哈哈哈",
-      "link": "https://liWanr.com/essays/2026/lychee/",
-      "published": "Thu, 13 Aug 2026 19:23:01 +0800",
-      "published_parsed": "2026-08-13"
-    },
-    {
-      "title": "她的位置",
-      "link": "https://liWanr.com/essays/2026/Her-Place/",
-      "published": "Fri, 07 Aug 2026 18:19:19 +0800",
-      "published_parsed": "2026-08-07"
-    },
-    {
-      "title": "在梦里死了，又活了",
-      "link": "https://liWanr.com/essays/2026/living-after-death/",
-      "published": "Fri, 07 Aug 2026 18:19:19 +0800",
-      "published_parsed": "2026-08-07"
-    },
-    {
-      "title": "不要试图在书里找答案",
-      "link": "https://liWanr.com/essays/2026/Answer-is-not-in-the-book/",
-      "published": "Fri, 07 Aug 2026 18:19:19 +0800",
-      "published_parsed": "2026-08-07"
-    }
-  ],
-  "https://wangyurui.com": [],
   "https://wiki.eryajf.net": [
     {
       "title": "学习周刊-总第277期-2026年第34周",
@@ -266,68 +251,55 @@
       "published_parsed": "2026-07-30"
     }
   ],
-  "https://blog.mfwt.top": [
+  "https://www.ruanyifeng.com/blog": [
     {
-      "title": "中元节随笔",
-      "link": "https://blog.mfwt.top/index.php/archives/1556/",
-      "published": "Wed, 26 Aug 2026 20:51:10 +0800",
-      "published_parsed": "2026-08-26"
-    },
-    {
-      "title": "业余频段的对讲机，不能再商业应用了",
-      "link": "https://blog.mfwt.top/index.php/archives/1550/",
-      "published": "Sun, 23 Aug 2026 22:57:00 +0800",
-      "published_parsed": "2026-08-23"
-    },
-    {
-      "title": "无用命途：动态海景灯，用电脑说脏话",
-      "link": "https://blog.mfwt.top/index.php/archives/1523/",
-      "published": "Thu, 20 Aug 2026 21:59:00 +0800",
+      "title": "科技爱好者周刊（第 409 期）：程序员的职业未来",
+      "link": "http://www.ruanyifeng.com/blog/2026/08/weekly-issue-409.html",
+      "published": "2026-08-20T23:53:54Z",
       "published_parsed": "2026-08-20"
     },
     {
-      "title": "冷知识：博客的评论区不是广告区",
-      "link": "https://blog.mfwt.top/index.php/archives/1529/",
-      "published": "Sat, 15 Aug 2026 21:59:00 +0800",
-      "published_parsed": "2026-08-15"
-    },
-    {
-      "title": "今日站点异常流量的分析",
-      "link": "https://blog.mfwt.top/index.php/archives/1526/",
-      "published": "Thu, 13 Aug 2026 23:59:00 +0800",
+      "title": "科技爱好者周刊（第 408 期）：你需要知道的 AI 缓存知识",
+      "link": "http://www.ruanyifeng.com/blog/2026/08/weekly-issue-408.html",
+      "published": "2026-08-13T23:54:49Z",
       "published_parsed": "2026-08-13"
     },
     {
-      "title": "MURS：少见的 VHF 对讲机",
-      "link": "https://blog.mfwt.top/index.php/archives/1519/",
-      "published": "Mon, 10 Aug 2026 23:54:47 +0800",
-      "published_parsed": "2026-08-10"
-    },
-    {
-      "title": "生活碎碎念：立秋，立马就『秋』？",
-      "link": "https://blog.mfwt.top/index.php/archives/1516/",
-      "published": "Fri, 07 Aug 2026 19:59:00 +0800",
+      "title": "科技爱好者周刊（第 407 期）：国家为什么需要开源软件？",
+      "link": "http://www.ruanyifeng.com/blog/2026/08/weekly-issue-407.html",
+      "published": "2026-08-07T00:08:27Z",
       "published_parsed": "2026-08-07"
-    },
-    {
-      "title": "我为小说忙：（五）插件的上线工作",
-      "link": "https://blog.mfwt.top/index.php/archives/1476/",
-      "published": "Thu, 06 Aug 2026 16:58:00 +0800",
-      "published_parsed": "2026-08-06"
-    },
-    {
-      "title": "无用命途：博客深潜者",
-      "link": "https://blog.mfwt.top/index.php/archives/1481/",
-      "published": "Tue, 04 Aug 2026 23:59:00 +0800",
-      "published_parsed": "2026-08-04"
-    },
-    {
-      "title": "台风来临，如何准备好应急通信对讲机",
-      "link": "https://blog.mfwt.top/index.php/archives/1479/",
-      "published": "Thu, 30 Jul 2026 21:59:00 +0800",
-      "published_parsed": "2026-07-30"
     }
   ],
+  "https://wangyurui.com": [],
+  "https://usj.cc": [],
+  "https://zhongxiaojie.com": [
+    {
+      "title": "猫",
+      "link": "https://zhongxiaojie.cn/2026/08/1768/",
+      "published": "Tue, 25 Aug 2026 11:01:35 +0000",
+      "published_parsed": "2026-08-25"
+    },
+    {
+      "title": "七夕快乐",
+      "link": "https://zhongxiaojie.cn/2026/08/1751/",
+      "published": "Wed, 19 Aug 2026 08:48:58 +0000",
+      "published_parsed": "2026-08-19"
+    },
+    {
+      "title": "Findu — 十年",
+      "link": "https://zhongxiaojie.cn/2026/08/1728/",
+      "published": "Mon, 17 Aug 2026 01:52:57 +0000",
+      "published_parsed": "2026-08-17"
+    },
+    {
+      "title": "平静",
+      "link": "https://zhongxiaojie.cn/2026/08/1722/",
+      "published": "Tue, 11 Aug 2026 02:27:39 +0000",
+      "published_parsed": "2026-08-11"
+    }
+  ],
+  "https://www.vergilisme.com": [],
   "https://www.tortorse.com": [
     {
       "title": "在浙大的走廊里，我看见了1947年的爷爷",
@@ -360,8 +332,6 @@
       "published_parsed": "2026-08-11"
     }
   ],
-  "https://usj.cc": [],
-  "https://www.vergilisme.com": [],
   "https://www.tjsky.net": [
     {
       "title": "给 memos 加个自动压缩图片为 Webp 的功能",
@@ -432,53 +402,71 @@
       "published_parsed": "2026-08-18"
     }
   ],
-  "https://yipai.me": [
+  "https://blog.mfwt.top": [
     {
-      "title": "牛来",
-      "link": "https://yipai.me/post/2547.html",
-      "published": "Mon, 17 Aug 2026 03:26:00 GMT",
-      "published_parsed": "2026-08-17"
+      "title": "中元节随笔",
+      "link": "https://blog.mfwt.top/index.php/archives/1556/",
+      "published": "Wed, 26 Aug 2026 20:51:10 +0800",
+      "published_parsed": "2026-08-26"
     },
     {
-      "title": "失眠遐想",
-      "link": "https://yipai.me/post/2546.html",
-      "published": "Sun, 09 Aug 2026 19:13:47 GMT",
-      "published_parsed": "2026-08-09"
+      "title": "业余频段的对讲机，不能再商业应用了",
+      "link": "https://blog.mfwt.top/index.php/archives/1550/",
+      "published": "Sun, 23 Aug 2026 22:57:00 +0800",
+      "published_parsed": "2026-08-23"
     },
     {
-      "title": "为什么 AI 也会有缓存命中",
-      "link": "https://yipai.me/post/2545.html",
-      "published": "Thu, 06 Aug 2026 15:38:51 GMT",
+      "title": "无用命途：动态海景灯，用电脑说脏话",
+      "link": "https://blog.mfwt.top/index.php/archives/1523/",
+      "published": "Thu, 20 Aug 2026 21:59:00 +0800",
+      "published_parsed": "2026-08-20"
+    },
+    {
+      "title": "冷知识：博客的评论区不是广告区",
+      "link": "https://blog.mfwt.top/index.php/archives/1529/",
+      "published": "Sat, 15 Aug 2026 21:59:00 +0800",
+      "published_parsed": "2026-08-15"
+    },
+    {
+      "title": "今日站点异常流量的分析",
+      "link": "https://blog.mfwt.top/index.php/archives/1526/",
+      "published": "Thu, 13 Aug 2026 23:59:00 +0800",
+      "published_parsed": "2026-08-13"
+    },
+    {
+      "title": "MURS：少见的 VHF 对讲机",
+      "link": "https://blog.mfwt.top/index.php/archives/1519/",
+      "published": "Mon, 10 Aug 2026 23:54:47 +0800",
+      "published_parsed": "2026-08-10"
+    },
+    {
+      "title": "生活碎碎念：立秋，立马就『秋』？",
+      "link": "https://blog.mfwt.top/index.php/archives/1516/",
+      "published": "Fri, 07 Aug 2026 19:59:00 +0800",
+      "published_parsed": "2026-08-07"
+    },
+    {
+      "title": "我为小说忙：（五）插件的上线工作",
+      "link": "https://blog.mfwt.top/index.php/archives/1476/",
+      "published": "Thu, 06 Aug 2026 16:58:00 +0800",
       "published_parsed": "2026-08-06"
+    },
+    {
+      "title": "无用命途：博客深潜者",
+      "link": "https://blog.mfwt.top/index.php/archives/1481/",
+      "published": "Tue, 04 Aug 2026 23:59:00 +0800",
+      "published_parsed": "2026-08-04"
     }
   ],
-  "https://zhongxiaojie.com": [
-    {
-      "title": "猫",
-      "link": "https://zhongxiaojie.cn/2026/08/1768/",
-      "published": "Tue, 25 Aug 2026 11:01:35 +0000",
-      "published_parsed": "2026-08-25"
-    },
-    {
-      "title": "七夕快乐",
-      "link": "https://zhongxiaojie.cn/2026/08/1751/",
-      "published": "Wed, 19 Aug 2026 08:48:58 +0000",
-      "published_parsed": "2026-08-19"
-    },
-    {
-      "title": "Findu — 十年",
-      "link": "https://zhongxiaojie.cn/2026/08/1728/",
-      "published": "Mon, 17 Aug 2026 01:52:57 +0000",
-      "published_parsed": "2026-08-17"
-    },
-    {
-      "title": "平静",
-      "link": "https://zhongxiaojie.cn/2026/08/1722/",
-      "published": "Tue, 11 Aug 2026 02:27:39 +0000",
-      "published_parsed": "2026-08-11"
-    }
-  ],
+  "https://pathos.page": [],
+  "https://yihui.org/cn": [],
   "https://d-d.design": [
+    {
+      "title": "800×600 的夏天",
+      "link": "https://d-d.design/single/20251",
+      "published": "Wed, 26 Aug 2026 21:07:06 +0000",
+      "published_parsed": "2026-08-26"
+    },
     {
       "title": "如果他们也曾生活在网络里",
       "link": "https://d-d.design/single/20242",
@@ -532,15 +520,32 @@
       "link": "https://d-d.design/single/20018",
       "published": "Sat, 08 Aug 2026 07:47:02 +0000",
       "published_parsed": "2026-08-08"
+    }
+  ],
+  "https://yipai.me": [
+    {
+      "title": "牛来",
+      "link": "https://yipai.me/post/2547.html",
+      "published": "Mon, 17 Aug 2026 03:26:00 GMT",
+      "published_parsed": "2026-08-17"
     },
     {
-      "title": "Snake Wuwu",
-      "link": "https://d-d.design/single/20005",
-      "published": "Tue, 04 Aug 2026 16:46:12 +0000",
-      "published_parsed": "2026-08-04"
+      "title": "失眠遐想",
+      "link": "https://yipai.me/post/2546.html",
+      "published": "Sun, 09 Aug 2026 19:13:47 GMT",
+      "published_parsed": "2026-08-09"
+    },
+    {
+      "title": "为什么 AI 也会有缓存命中",
+      "link": "https://yipai.me/post/2545.html",
+      "published": "Thu, 06 Aug 2026 15:38:51 GMT",
+      "published_parsed": "2026-08-06"
     }
   ],
   "https://blog.bxaw.name": [],
+  "https://www.glowisle.me": [],
+  "https://www.demochen.com": [],
+  "https://www.scarsu.com": [],
   "https://sliun.com": [
     {
       "title": "问题的生成（二）",
@@ -555,11 +560,19 @@
       "published_parsed": "2026-08-19"
     }
   ],
-  "https://yihui.org/cn": [],
-  "https://pathos.page": [],
-  "https://www.glowisle.me": [],
-  "https://www.owenyoung.com": [],
   "https://blog.solazy.me": [
+    {
+      "title": "模糊规则与最终解释权",
+      "link": "https://blog.solazy.me/20260826/",
+      "published": "2026-08-26T15:00:00+00:00",
+      "published_parsed": "2026-08-26"
+    },
+    {
+      "title": "不可证伪的黑盒",
+      "link": "https://blog.solazy.me/20260825/",
+      "published": "2026-08-25T15:30:00+00:00",
+      "published_parsed": "2026-08-25"
+    },
     {
       "title": "先把自己的水桶装满",
       "link": "https://blog.solazy.me/20260824/",
@@ -607,22 +620,9 @@
       "link": "https://blog.solazy.me/20260816/",
       "published": "2026-08-16T15:00:00+00:00",
       "published_parsed": "2026-08-16"
-    },
-    {
-      "title": "我不敢随便推荐 App 了",
-      "link": "https://blog.solazy.me/20260815/",
-      "published": "2026-08-15T15:00:00+00:00",
-      "published_parsed": "2026-08-15"
-    },
-    {
-      "title": "逻辑自洽不等于事实完整",
-      "link": "https://blog.solazy.me/20260814/",
-      "published": "2026-08-14T14:00:00+00:00",
-      "published_parsed": "2026-08-14"
     }
   ],
-  "https://www.demochen.com": [],
-  "https://www.scarsu.com": [],
+  "https://www.owenyoung.com": [],
   "https://z.arlmy.me": [
     {
       "title": "入蜀记 day457 桂花香！",
@@ -863,12 +863,6 @@
       "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_433/",
       "published": "2026-07-31T04:48:27.000Z",
       "published_parsed": "2026-07-31"
-    },
-    {
-      "title": "入蜀记 day432 苦集灭道",
-      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_432/",
-      "published": "2026-07-30T04:48:27.000Z",
-      "published_parsed": "2026-07-30"
     }
   ],
   "https://cyrus19.cc": [
@@ -880,6 +874,12 @@
     }
   ],
   "https://immarcus.com": [
+    {
+      "title": "芝加哥的反义词",
+      "link": "https://www.immarcus.com/blog/chickadee",
+      "published": "Thu, 27 Aug 2026 00:00:00 GMT",
+      "published_parsed": "2026-08-27"
+    },
     {
       "title": "纪录片《开盘》",
       "link": "https://www.immarcus.com/blog/documentary-launch",
@@ -1041,12 +1041,6 @@
       "link": "https://www.immarcus.com/blog/bloodboiling-price",
       "published": "Fri, 31 Jul 2026 00:00:00 GMT",
       "published_parsed": "2026-07-31"
-    },
-    {
-      "title": "幕后黑手",
-      "link": "https://www.immarcus.com/blog/hidden-villain",
-      "published": "Thu, 30 Jul 2026 00:00:00 GMT",
-      "published_parsed": "2026-07-30"
     }
   ],
   "https://blog.cytrogen.icu": [
@@ -1145,12 +1139,6 @@
       "link": "https://blog.cytrogen.icu/posts/11d1.html",
       "published": "2026-07-31T04:00:00.000Z",
       "published_parsed": "2026-07-31"
-    },
-    {
-      "title": "RE：断层里的心理学",
-      "link": "https://blog.cytrogen.icu/posts/221a.html",
-      "published": "2026-07-30T04:00:00.000Z",
-      "published_parsed": "2026-07-30"
     }
   ]
 }
