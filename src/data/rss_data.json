@@ -1,6 +1,11 @@
 {
-  "https://www.ntiy.com": [],
   "https://www.leitao.cn": [
+    {
+      "title": "博客动静的选择",
+      "link": "https://www.leitao.cn/10790.html",
+      "published": "Wed, 02 Sep 2026 08:10:32 +0000",
+      "published_parsed": "2026-09-02"
+    },
     {
       "title": "休谟《人性论》导读手册",
       "link": "https://www.leitao.cn/10774.html",
@@ -68,6 +73,69 @@
       "published_parsed": "2026-08-07"
     }
   ],
+  "https://Vind.ink": [
+    {
+      "title": "学小彦拍妹子系列——静安大悦城 3",
+      "link": "https://vind.ink/photos/JinganDayuecheng3.html",
+      "published": "Wed, 02 Sep 2026 11:22:00 +0800",
+      "published_parsed": "2026-09-02"
+    },
+    {
+      "title": "浏览器再换到Chrome",
+      "link": "https://vind.ink/IT-digital/BrowserTurntoChrome.html",
+      "published": "Tue, 01 Sep 2026 23:16:00 +0800",
+      "published_parsed": "2026-09-01"
+    },
+    {
+      "title": "学小彦拍妹子系列——静安大悦城 2",
+      "link": "https://vind.ink/photos/JinganDayuecheng2.html",
+      "published": "Tue, 01 Sep 2026 17:24:00 +0800",
+      "published_parsed": "2026-09-01"
+    },
+    {
+      "title": "学小彦拍妹子系列——静安大悦城 1",
+      "link": "https://vind.ink/photos/JinganDayuecheng1.html",
+      "published": "Tue, 01 Sep 2026 09:43:00 +0800",
+      "published_parsed": "2026-09-01"
+    },
+    {
+      "title": "Fotografiska 上海 25",
+      "link": "https://vind.ink/photos/Fotografiska-25.html",
+      "published": "Mon, 31 Aug 2026 09:36:00 +0800",
+      "published_parsed": "2026-08-31"
+    },
+    {
+      "title": "还是用 webp 格式照片吧",
+      "link": "https://vind.ink/Status/usewebp.html",
+      "published": "Sun, 30 Aug 2026 19:49:00 +0800",
+      "published_parsed": "2026-08-30"
+    },
+    {
+      "title": "Nord Anglia School 4 艺术展",
+      "link": "https://vind.ink/photos/Nord-Anglia-School-4.html",
+      "published": "Sat, 29 Aug 2026 19:15:00 +0800",
+      "published_parsed": "2026-08-29"
+    },
+    {
+      "title": "Nord Anglia School 3 奇装异服",
+      "link": "https://vind.ink/photos/Nord-Anglia-School-3.html",
+      "published": "Fri, 28 Aug 2026 19:08:00 +0800",
+      "published_parsed": "2026-08-28"
+    },
+    {
+      "title": "Nord Anglia School 2 年会",
+      "link": "https://vind.ink/photos/Nord-Anglia-School-2.html",
+      "published": "Thu, 27 Aug 2026 19:03:00 +0800",
+      "published_parsed": "2026-08-27"
+    },
+    {
+      "title": "汇龙潭与秋霞圃（avif）",
+      "link": "https://vind.ink/photos/113.html",
+      "published": "Wed, 26 Aug 2026 17:00:00 +0800",
+      "published_parsed": "2026-08-26"
+    }
+  ],
+  "https://www.ntiy.com": [],
   "https://liwanr.com": [
     {
       "title": "快看！荔枝还在树上？哈哈哈",
@@ -94,28 +162,13 @@
       "published_parsed": "2026-08-11"
     }
   ],
-  "https://www.ruanyifeng.com/blog": [
-    {
-      "title": "科技爱好者周刊（第 410 期）：你需要知道的 AI 三种机制",
-      "link": "http://www.ruanyifeng.com/blog/2026/08/weekly-issue-410.html",
-      "published": "2026-08-27T23:56:43Z",
-      "published_parsed": "2026-08-27"
-    },
-    {
-      "title": "科技爱好者周刊（第 409 期）：程序员的职业未来",
-      "link": "http://www.ruanyifeng.com/blog/2026/08/weekly-issue-409.html",
-      "published": "2026-08-20T23:53:54Z",
-      "published_parsed": "2026-08-20"
-    },
-    {
-      "title": "科技爱好者周刊（第 408 期）：你需要知道的 AI 缓存知识",
-      "link": "http://www.ruanyifeng.com/blog/2026/08/weekly-issue-408.html",
-      "published": "2026-08-13T23:54:49Z",
-      "published_parsed": "2026-08-13"
-    }
-  ],
-  "https://wangyurui.com": [],
   "https://mobius.blog": [
+    {
+      "title": "哪有厨师天天自己逛菜市场的？",
+      "link": "https://mobius.blog/25578.html",
+      "published": "Wed, 02 Sep 2026 01:30:00 +0000",
+      "published_parsed": "2026-09-02"
+    },
     {
       "title": "炒饭的顺序",
       "link": "https://mobius.blog/25571.html",
@@ -169,15 +222,62 @@
       "link": "https://mobius.blog/25500.html",
       "published": "Tue, 25 Aug 2026 01:34:46 +0000",
       "published_parsed": "2026-08-25"
+    }
+  ],
+  "https://wiki.eryajf.net": [
+    {
+      "title": "学习周刊-总第278期-2026年第35周",
+      "link": "https://wiki.eryajf.net/pages/4327cf/",
+      "published": "Thu, 27 Aug 2026 23:25:42 GMT",
+      "published_parsed": "2026-08-27"
     },
     {
-      "title": "迷幻",
-      "link": "https://mobius.blog/25491.html",
-      "published": "Mon, 24 Aug 2026 17:16:12 +0000",
-      "published_parsed": "2026-08-24"
+      "title": "学习周刊-总第277期-2026年第34周",
+      "link": "https://wiki.eryajf.net/pages/5df013/",
+      "published": "Thu, 20 Aug 2026 22:23:05 GMT",
+      "published_parsed": "2026-08-20"
+    },
+    {
+      "title": "学习周刊-总第276期-2026年第33周",
+      "link": "https://wiki.eryajf.net/pages/630ab4/",
+      "published": "Thu, 13 Aug 2026 23:58:48 GMT",
+      "published_parsed": "2026-08-13"
+    },
+    {
+      "title": "学习周刊-总第275期-2026年第32周",
+      "link": "https://wiki.eryajf.net/pages/961c90/",
+      "published": "Thu, 06 Aug 2026 22:27:18 GMT",
+      "published_parsed": "2026-08-06"
+    }
+  ],
+  "https://wangyurui.com": [],
+  "https://www.ruanyifeng.com/blog": [
+    {
+      "title": "科技爱好者周刊（第 410 期）：你需要知道的 AI 三种机制",
+      "link": "http://www.ruanyifeng.com/blog/2026/08/weekly-issue-410.html",
+      "published": "2026-08-27T23:56:43Z",
+      "published_parsed": "2026-08-27"
+    },
+    {
+      "title": "科技爱好者周刊（第 409 期）：程序员的职业未来",
+      "link": "http://www.ruanyifeng.com/blog/2026/08/weekly-issue-409.html",
+      "published": "2026-08-20T23:53:54Z",
+      "published_parsed": "2026-08-20"
+    },
+    {
+      "title": "科技爱好者周刊（第 408 期）：你需要知道的 AI 缓存知识",
+      "link": "http://www.ruanyifeng.com/blog/2026/08/weekly-issue-408.html",
+      "published": "2026-08-13T23:54:49Z",
+      "published_parsed": "2026-08-13"
     }
   ],
   "https://blog.mfwt.top": [
+    {
+      "title": "和校园网斗智斗勇的日子（第九辑）",
+      "link": "https://blog.mfwt.top/index.php/archives/1570/",
+      "published": "Wed, 02 Sep 2026 21:53:46 +0800",
+      "published_parsed": "2026-09-02"
+    },
     {
       "title": "开学前，文具店小景",
       "link": "https://blog.mfwt.top/index.php/archives/1561/",
@@ -231,41 +331,17 @@
       "link": "https://blog.mfwt.top/index.php/archives/1516/",
       "published": "Fri, 07 Aug 2026 19:59:00 +0800",
       "published_parsed": "2026-08-07"
-    },
-    {
-      "title": "我为小说忙：（五）插件的上线工作",
-      "link": "https://blog.mfwt.top/index.php/archives/1476/",
-      "published": "Thu, 06 Aug 2026 16:58:00 +0800",
-      "published_parsed": "2026-08-06"
     }
   ],
-  "https://wiki.eryajf.net": [
-    {
-      "title": "学习周刊-总第278期-2026年第35周",
-      "link": "https://wiki.eryajf.net/pages/4327cf/",
-      "published": "Thu, 27 Aug 2026 23:25:42 GMT",
-      "published_parsed": "2026-08-27"
-    },
-    {
-      "title": "学习周刊-总第277期-2026年第34周",
-      "link": "https://wiki.eryajf.net/pages/5df013/",
-      "published": "Thu, 20 Aug 2026 22:23:05 GMT",
-      "published_parsed": "2026-08-20"
-    },
-    {
-      "title": "学习周刊-总第276期-2026年第33周",
-      "link": "https://wiki.eryajf.net/pages/630ab4/",
-      "published": "Thu, 13 Aug 2026 23:58:48 GMT",
-      "published_parsed": "2026-08-13"
-    },
-    {
-      "title": "学习周刊-总第275期-2026年第32周",
-      "link": "https://wiki.eryajf.net/pages/961c90/",
-      "published": "Thu, 06 Aug 2026 22:27:18 GMT",
-      "published_parsed": "2026-08-06"
-    }
-  ],
+  "https://usj.cc": [],
+  "https://www.vergilisme.com": [],
   "https://www.tortorse.com": [
+    {
+      "title": "1999，互联网到了校门外",
+      "link": "https://www.tortorse.com/archives/internet-outside-the-school-gate-1999/",
+      "published": "2026-09-01T01:13:32.000Z",
+      "published_parsed": "2026-09-01"
+    },
     {
       "title": "在浙大的走廊里，我看见了1947年的爷爷",
       "link": "https://www.tortorse.com/archives/zhejiang-university-1947-grandfather/",
@@ -297,8 +373,6 @@
       "published_parsed": "2026-08-11"
     }
   ],
-  "https://usj.cc": [],
-  "https://www.vergilisme.com": [],
   "https://www.tjsky.net": [
     {
       "title": "碎碎谈 · 8月27日 16:51",
@@ -322,12 +396,6 @@
       "title": "碎碎谈 · 8月21日 15:51",
       "link": "https://www.tjsky.net/shuoshuo/nxqj2lenuw9skcczpdzze8",
       "published": "Fri, 21 Aug 2026 15:51:29 +0000",
-      "published_parsed": "2026-08-21"
-    },
-    {
-      "title": "bqFyZjT78YFKc5tjGnv8WJ",
-      "link": "https://www.tjsky.net/shuoshuo/bqfyzjt78yfkc5tjgnv8wj",
-      "published": "Fri, 21 Aug 2026 08:59:44 +0000",
       "published_parsed": "2026-08-21"
     },
     {
@@ -359,6 +427,56 @@
       "link": "https://www.tjsky.net/shuoshuo/uskapqxprcaf7gede9pddu",
       "published": "Wed, 19 Aug 2026 17:30:55 +0000",
       "published_parsed": "2026-08-19"
+    },
+    {
+      "title": "碎碎谈 · 8月18日 23:33",
+      "link": "https://www.tjsky.net/shuoshuo/lpckz799ruabcpzxds65i7",
+      "published": "Tue, 18 Aug 2026 23:33:22 +0000",
+      "published_parsed": "2026-08-18"
+    }
+  ],
+  "https://zhongxiaojie.com": [
+    {
+      "title": "迟钝",
+      "link": "https://zhongxiaojie.com/2026/09/1822/",
+      "published": "Wed, 02 Sep 2026 02:59:39 +0000",
+      "published_parsed": "2026-09-02"
+    },
+    {
+      "title": "买垃圾",
+      "link": "https://zhongxiaojie.com/2026/08/1798/",
+      "published": "Mon, 31 Aug 2026 07:12:42 +0000",
+      "published_parsed": "2026-08-31"
+    },
+    {
+      "title": "纸嫁衣",
+      "link": "https://zhongxiaojie.com/2026/08/1783/",
+      "published": "Fri, 28 Aug 2026 03:05:07 +0000",
+      "published_parsed": "2026-08-28"
+    },
+    {
+      "title": "猫",
+      "link": "https://zhongxiaojie.com/2026/08/1768/",
+      "published": "Tue, 25 Aug 2026 11:01:35 +0000",
+      "published_parsed": "2026-08-25"
+    },
+    {
+      "title": "七夕快乐",
+      "link": "https://zhongxiaojie.com/2026/08/1751/",
+      "published": "Wed, 19 Aug 2026 08:48:58 +0000",
+      "published_parsed": "2026-08-19"
+    },
+    {
+      "title": "Findu — 十年",
+      "link": "https://zhongxiaojie.com/2026/08/1728/",
+      "published": "Mon, 17 Aug 2026 01:52:57 +0000",
+      "published_parsed": "2026-08-17"
+    },
+    {
+      "title": "平静",
+      "link": "https://zhongxiaojie.com/2026/08/1722/",
+      "published": "Tue, 11 Aug 2026 02:27:39 +0000",
+      "published_parsed": "2026-08-11"
     }
   ],
   "https://lawtee.com": [
@@ -393,7 +511,33 @@
       "published_parsed": "2026-08-19"
     }
   ],
+  "https://sliun.com": [
+    {
+      "title": "问题的生成（三）",
+      "link": "https://sliun.com/problemmake3/",
+      "published": "2026-08-28T14:03:00+00:00",
+      "published_parsed": "2026-08-28"
+    },
+    {
+      "title": "问题的生成（二）",
+      "link": "https://sliun.com/problemmake2/",
+      "published": "2026-08-20T13:58:00+00:00",
+      "published_parsed": "2026-08-20"
+    },
+    {
+      "title": "问题的生成（一）",
+      "link": "https://sliun.com/problemmake1/",
+      "published": "2026-08-19T14:29:00+00:00",
+      "published_parsed": "2026-08-19"
+    }
+  ],
   "https://d-d.design": [
+    {
+      "title": "注入瞬时记忆",
+      "link": "https://d-d.design/single/20275",
+      "published": "Wed, 02 Sep 2026 12:26:55 +0000",
+      "published_parsed": "2026-09-02"
+    },
     {
       "title": "命运惯性 II",
       "link": "https://d-d.design/single/20272",
@@ -447,14 +591,9 @@
       "link": "https://d-d.design/single/20071",
       "published": "Wed, 12 Aug 2026 08:50:23 +0000",
       "published_parsed": "2026-08-12"
-    },
-    {
-      "title": "高考可以改变命运",
-      "link": "https://d-d.design/single/20066",
-      "published": "Tue, 11 Aug 2026 14:28:13 +0000",
-      "published_parsed": "2026-08-11"
     }
   ],
+  "https://yihui.org/cn": [],
   "https://yipai.me": [
     {
       "title": "牛来",
@@ -475,65 +614,107 @@
       "published_parsed": "2026-08-06"
     }
   ],
-  "https://zhongxiaojie.com": [
+  "https://blog.bxaw.name": [
     {
-      "title": "买垃圾",
-      "link": "https://zhongxiaojie.com/2026/08/1798/",
-      "published": "Mon, 31 Aug 2026 07:12:42 +0000",
+      "title": "葬礼之前",
+      "link": "https://blog.bxaw.name/archives/Before-the-Funeral.html",
+      "published": "Tue, 01 Sep 2026 05:30:44 +0800",
       "published_parsed": "2026-08-31"
     },
     {
-      "title": "纸嫁衣",
-      "link": "https://zhongxiaojie.com/2026/08/1783/",
-      "published": "Fri, 28 Aug 2026 03:05:07 +0000",
+      "title": "我知道你为什么不喜欢我",
+      "link": "https://blog.bxaw.name/archives/I-Know-Why-You-Dont-Like-Me.html",
+      "published": "Mon, 31 Aug 2026 02:42:00 +0800",
+      "published_parsed": "2026-08-30"
+    }
+  ],
+  "https://pathos.page": [],
+  "https://www.demochen.com": [],
+  "https://www.owenyoung.com": [
+    {
+      "title": "介绍一家最近去的头马 Toastmasters 演讲俱乐部",
+      "link": "https://www.owenyoung.com/toastmasters",
+      "published": "2026-08-28T19:00:59.000Z",
       "published_parsed": "2026-08-28"
+    }
+  ],
+  "https://www.scarsu.com": [],
+  "https://blog.solazy.me": [
+    {
+      "title": "谁在替你的生疏买单",
+      "link": "https://blog.solazy.me/20260902/",
+      "published": "2026-09-02T11:00:00+00:00",
+      "published_parsed": "2026-09-02"
     },
     {
-      "title": "猫",
-      "link": "https://zhongxiaojie.com/2026/08/1768/",
-      "published": "Tue, 25 Aug 2026 11:01:35 +0000",
+      "title": "不再期待下一份工作",
+      "link": "https://blog.solazy.me/20260901/",
+      "published": "2026-09-01T02:00:00+00:00",
+      "published_parsed": "2026-09-01"
+    },
+    {
+      "title": "搬工位时的三波人",
+      "link": "https://blog.solazy.me/20260831/",
+      "published": "2026-08-31T08:00:00+00:00",
+      "published_parsed": "2026-08-31"
+    },
+    {
+      "title": "隔壁桌的暧昧学",
+      "link": "https://blog.solazy.me/20260830/",
+      "published": "2026-08-30T06:00:00+00:00",
+      "published_parsed": "2026-08-30"
+    },
+    {
+      "title": "一些切片的终止",
+      "link": "https://blog.solazy.me/20260829/",
+      "published": "2026-08-29T15:00:00+00:00",
+      "published_parsed": "2026-08-29"
+    },
+    {
+      "title": "模糊规则与最终解释权",
+      "link": "https://blog.solazy.me/20260826/",
+      "published": "2026-08-26T15:00:00+00:00",
+      "published_parsed": "2026-08-26"
+    },
+    {
+      "title": "不可证伪的黑盒",
+      "link": "https://blog.solazy.me/20260825/",
+      "published": "2026-08-25T15:30:00+00:00",
       "published_parsed": "2026-08-25"
     },
     {
-      "title": "七夕快乐",
-      "link": "https://zhongxiaojie.com/2026/08/1751/",
-      "published": "Wed, 19 Aug 2026 08:48:58 +0000",
-      "published_parsed": "2026-08-19"
+      "title": "先把自己的水桶装满",
+      "link": "https://blog.solazy.me/20260824/",
+      "published": "2026-08-24T15:00:00+00:00",
+      "published_parsed": "2026-08-24"
     },
     {
-      "title": "Findu — 十年",
-      "link": "https://zhongxiaojie.com/2026/08/1728/",
-      "published": "Mon, 17 Aug 2026 01:52:57 +0000",
-      "published_parsed": "2026-08-17"
+      "title": "周末流水账 0823",
+      "link": "https://blog.solazy.me/20260823/",
+      "published": "2026-08-23T12:00:00+00:00",
+      "published_parsed": "2026-08-23"
     },
     {
-      "title": "平静",
-      "link": "https://zhongxiaojie.com/2026/08/1722/",
-      "published": "Tue, 11 Aug 2026 02:27:39 +0000",
-      "published_parsed": "2026-08-11"
+      "title": "周末流水账 0822",
+      "link": "https://blog.solazy.me/20260822/",
+      "published": "2026-08-22T15:00:00+00:00",
+      "published_parsed": "2026-08-22"
     }
   ],
-  "https://sliun.com": [
-    {
-      "title": "问题的生成（三）",
-      "link": "https://sliun.com/problemmake3/",
-      "published": "2026-08-28T14:03:00+00:00",
-      "published_parsed": "2026-08-28"
-    },
-    {
-      "title": "问题的生成（二）",
-      "link": "https://sliun.com/problemmake2/",
-      "published": "2026-08-20T13:58:00+00:00",
-      "published_parsed": "2026-08-20"
-    },
-    {
-      "title": "问题的生成（一）",
-      "link": "https://sliun.com/problemmake1/",
-      "published": "2026-08-19T14:29:00+00:00",
-      "published_parsed": "2026-08-19"
-    }
-  ],
+  "https://www.glowisle.me": [],
   "https://z.arlmy.me": [
+    {
+      "title": "可感",
+      "link": "https://z.arlmy.me/posts/Poems/2026/20260831_KeGan/",
+      "published": "2026-09-02T08:50:27.000Z",
+      "published_parsed": "2026-09-02"
+    },
+    {
+      "title": "旧书店",
+      "link": "https://z.arlmy.me/posts/Poems/2026/20260813_JiuShuDian/",
+      "published": "2026-09-02T08:44:27.000Z",
+      "published_parsed": "2026-09-02"
+    },
     {
       "title": "最近惦念 20260820",
       "link": "https://z.arlmy.me/posts/TILs/thoughts/20260820_Recently/",
@@ -779,176 +960,6 @@
       "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_438/",
       "published": "2026-08-06T00:53:27.000Z",
       "published_parsed": "2026-08-06"
-    },
-    {
-      "title": "入蜀记 day437 靠山邸",
-      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_437/",
-      "published": "2026-08-05T04:48:27.000Z",
-      "published_parsed": "2026-08-05"
-    },
-    {
-      "title": "信息税",
-      "link": "https://z.arlmy.me/posts/ZArlmyMe/Desktop_20260805/",
-      "published": "2026-08-05T04:30:03.000Z",
-      "published_parsed": "2026-08-05"
-    }
-  ],
-  "https://pathos.page": [],
-  "https://yihui.org/cn": [],
-  "https://blog.bxaw.name": [
-    {
-      "title": "葬礼之前",
-      "link": "https://blog.bxaw.name/archives/Before-the-Funeral.html",
-      "published": "Tue, 01 Sep 2026 05:30:44 +0800",
-      "published_parsed": "2026-08-31"
-    },
-    {
-      "title": "我知道你为什么不喜欢我",
-      "link": "https://blog.bxaw.name/archives/I-Know-Why-You-Dont-Like-Me.html",
-      "published": "Mon, 31 Aug 2026 02:42:00 +0800",
-      "published_parsed": "2026-08-30"
-    }
-  ],
-  "https://www.glowisle.me": [],
-  "https://www.demochen.com": [],
-  "https://www.owenyoung.com": [
-    {
-      "title": "介绍一家最近去的头马 Toastmasters 演讲俱乐部",
-      "link": "https://www.owenyoung.com/toastmasters",
-      "published": "2026-08-28T19:00:59.000Z",
-      "published_parsed": "2026-08-28"
-    }
-  ],
-  "https://blog.solazy.me": [
-    {
-      "title": "不再期待下一份工作",
-      "link": "https://blog.solazy.me/20260901/",
-      "published": "2026-09-01T02:00:00+00:00",
-      "published_parsed": "2026-09-01"
-    },
-    {
-      "title": "搬工位时的三波人",
-      "link": "https://blog.solazy.me/20260831/",
-      "published": "2026-08-31T08:00:00+00:00",
-      "published_parsed": "2026-08-31"
-    },
-    {
-      "title": "隔壁桌的暧昧学",
-      "link": "https://blog.solazy.me/20260830/",
-      "published": "2026-08-30T06:00:00+00:00",
-      "published_parsed": "2026-08-30"
-    },
-    {
-      "title": "一些切片的终止",
-      "link": "https://blog.solazy.me/20260829/",
-      "published": "2026-08-29T15:00:00+00:00",
-      "published_parsed": "2026-08-29"
-    },
-    {
-      "title": "模糊规则与最终解释权",
-      "link": "https://blog.solazy.me/20260826/",
-      "published": "2026-08-26T15:00:00+00:00",
-      "published_parsed": "2026-08-26"
-    },
-    {
-      "title": "不可证伪的黑盒",
-      "link": "https://blog.solazy.me/20260825/",
-      "published": "2026-08-25T15:30:00+00:00",
-      "published_parsed": "2026-08-25"
-    },
-    {
-      "title": "先把自己的水桶装满",
-      "link": "https://blog.solazy.me/20260824/",
-      "published": "2026-08-24T15:00:00+00:00",
-      "published_parsed": "2026-08-24"
-    },
-    {
-      "title": "周末流水账 0823",
-      "link": "https://blog.solazy.me/20260823/",
-      "published": "2026-08-23T12:00:00+00:00",
-      "published_parsed": "2026-08-23"
-    },
-    {
-      "title": "周末流水账 0822",
-      "link": "https://blog.solazy.me/20260822/",
-      "published": "2026-08-22T15:00:00+00:00",
-      "published_parsed": "2026-08-22"
-    },
-    {
-      "title": "错位的会员体系",
-      "link": "https://blog.solazy.me/20260821/",
-      "published": "2026-08-21T15:00:00+00:00",
-      "published_parsed": "2026-08-21"
-    }
-  ],
-  "https://Vind.ink": [],
-  "https://www.scarsu.com": [],
-  "https://blog.cytrogen.icu": [
-    {
-      "title": "RE：The ordinariness of evil",
-      "link": "https://blog.cytrogen.icu/posts/f9e7.html",
-      "published": "2026-08-30T01:00:00.000Z",
-      "published_parsed": "2026-08-30"
-    },
-    {
-      "title": "做导游的这几天：星期三",
-      "link": "https://blog.cytrogen.icu/posts/62c8.html",
-      "published": "2026-08-23T21:00:00.000Z",
-      "published_parsed": "2026-08-23"
-    },
-    {
-      "title": "RE：The Becoming Chinese Trend Is Nonsense",
-      "link": "https://blog.cytrogen.icu/posts/dbcb.html",
-      "published": "2026-08-23T04:00:00.000Z",
-      "published_parsed": "2026-08-23"
-    },
-    {
-      "title": "牛郎织女和父权",
-      "link": "https://blog.cytrogen.icu/posts/ef30.html",
-      "published": "2026-08-22T04:00:00.000Z",
-      "published_parsed": "2026-08-22"
-    },
-    {
-      "title": "做导游的这几天：上",
-      "link": "https://blog.cytrogen.icu/posts/6c9d.html",
-      "published": "2026-08-20T04:00:00.000Z",
-      "published_parsed": "2026-08-20"
-    },
-    {
-      "title": "休息日逛下城",
-      "link": "https://blog.cytrogen.icu/posts/ed86.html",
-      "published": "2026-08-19T03:13:55.000Z",
-      "published_parsed": "2026-08-19"
-    },
-    {
-      "title": "好转和博客和主流和教会和性别和大扫除",
-      "link": "https://blog.cytrogen.icu/posts/955e.html",
-      "published": "2026-08-11T04:00:00.000Z",
-      "published_parsed": "2026-08-11"
-    },
-    {
-      "title": "病殃殃的一周",
-      "link": "https://blog.cytrogen.icu/posts/b8c3.html",
-      "published": "2026-08-07T18:30:40.000Z",
-      "published_parsed": "2026-08-07"
-    },
-    {
-      "title": "Meta 和它不聪明的领导者",
-      "link": "https://blog.cytrogen.icu/posts/83ff.html",
-      "published": "2026-08-06T19:30:59.000Z",
-      "published_parsed": "2026-08-06"
-    },
-    {
-      "title": "Hate gifts",
-      "link": "https://blog.cytrogen.icu/posts/b3bc.html",
-      "published": "2026-08-06T19:30:54.000Z",
-      "published_parsed": "2026-08-06"
-    },
-    {
-      "title": "RE：Bloggers, can we make better titles for our posts?",
-      "link": "https://blog.cytrogen.icu/posts/ea71.html",
-      "published": "2026-08-05T23:22:00.000Z",
-      "published_parsed": "2026-08-05"
     }
   ],
   "https://cyrus19.cc": [
@@ -960,6 +971,12 @@
     }
   ],
   "https://immarcus.com": [
+    {
+      "title": "甩门",
+      "link": "https://www.immarcus.com/blog/door-slam",
+      "published": "Wed, 02 Sep 2026 00:00:00 GMT",
+      "published_parsed": "2026-09-02"
+    },
     {
       "title": "星期二的下午",
       "link": "https://www.immarcus.com/blog/tuesday-afternoons",
@@ -1121,11 +1138,73 @@
       "link": "https://www.immarcus.com/blog/freedom-and-dynamic-range",
       "published": "Thu, 06 Aug 2026 00:00:00 GMT",
       "published_parsed": "2026-08-06"
+    }
+  ],
+  "https://blog.cytrogen.icu": [
+    {
+      "title": "RE：The ordinariness of evil",
+      "link": "https://blog.cytrogen.icu/posts/f9e7.html",
+      "published": "2026-08-30T01:00:00.000Z",
+      "published_parsed": "2026-08-30"
     },
     {
-      "title": "赌上你的性命",
-      "link": "https://www.immarcus.com/blog/stake-your-life",
-      "published": "Wed, 05 Aug 2026 00:00:00 GMT",
+      "title": "做导游的这几天：星期三",
+      "link": "https://blog.cytrogen.icu/posts/62c8.html",
+      "published": "2026-08-23T21:00:00.000Z",
+      "published_parsed": "2026-08-23"
+    },
+    {
+      "title": "RE：The Becoming Chinese Trend Is Nonsense",
+      "link": "https://blog.cytrogen.icu/posts/dbcb.html",
+      "published": "2026-08-23T04:00:00.000Z",
+      "published_parsed": "2026-08-23"
+    },
+    {
+      "title": "牛郎织女和父权",
+      "link": "https://blog.cytrogen.icu/posts/ef30.html",
+      "published": "2026-08-22T04:00:00.000Z",
+      "published_parsed": "2026-08-22"
+    },
+    {
+      "title": "做导游的这几天：上",
+      "link": "https://blog.cytrogen.icu/posts/6c9d.html",
+      "published": "2026-08-20T04:00:00.000Z",
+      "published_parsed": "2026-08-20"
+    },
+    {
+      "title": "休息日逛下城",
+      "link": "https://blog.cytrogen.icu/posts/ed86.html",
+      "published": "2026-08-19T03:13:55.000Z",
+      "published_parsed": "2026-08-19"
+    },
+    {
+      "title": "好转和博客和主流和教会和性别和大扫除",
+      "link": "https://blog.cytrogen.icu/posts/955e.html",
+      "published": "2026-08-11T04:00:00.000Z",
+      "published_parsed": "2026-08-11"
+    },
+    {
+      "title": "病殃殃的一周",
+      "link": "https://blog.cytrogen.icu/posts/b8c3.html",
+      "published": "2026-08-07T18:30:40.000Z",
+      "published_parsed": "2026-08-07"
+    },
+    {
+      "title": "Meta 和它不聪明的领导者",
+      "link": "https://blog.cytrogen.icu/posts/83ff.html",
+      "published": "2026-08-06T19:30:59.000Z",
+      "published_parsed": "2026-08-06"
+    },
+    {
+      "title": "Hate gifts",
+      "link": "https://blog.cytrogen.icu/posts/b3bc.html",
+      "published": "2026-08-06T19:30:54.000Z",
+      "published_parsed": "2026-08-06"
+    },
+    {
+      "title": "RE：Bloggers, can we make better titles for our posts?",
+      "link": "https://blog.cytrogen.icu/posts/ea71.html",
+      "published": "2026-08-05T23:22:00.000Z",
       "published_parsed": "2026-08-05"
     }
   ]
