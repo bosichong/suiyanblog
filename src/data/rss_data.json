@@ -1,6 +1,12 @@
 {
   "https://www.leitao.cn": [
     {
+      "title": "未来与命运",
+      "link": "https://www.leitao.cn/10866.html",
+      "published": "Fri, 11 Sep 2026 08:05:19 +0000",
+      "published_parsed": "2026-09-11"
+    },
+    {
       "title": "为你的发言付费",
       "link": "https://www.leitao.cn/10861.html",
       "published": "Wed, 09 Sep 2026 01:49:04 +0000",
@@ -79,8 +85,28 @@
       "published_parsed": "2026-08-16"
     }
   ],
+  "https://liwanr.com": [
+    {
+      "title": "九五至会",
+      "link": "https://liWanr.com/essays/2026/birthday/",
+      "published": "Sat, 05 Sep 2026 23:59:59 +0800",
+      "published_parsed": "2026-09-05"
+    }
+  ],
   "https://www.ntiy.com": [],
   "https://Vind.ink": [
+    {
+      "title": "被美团共享单车坑了",
+      "link": "https://vind.ink/Blogervoice/551.html",
+      "published": "Fri, 11 Sep 2026 13:33:00 +0800",
+      "published_parsed": "2026-09-11"
+    },
+    {
+      "title": "上海博物馆 美洲展 3",
+      "link": "https://vind.ink/photos/American-Exhibition-Workbuddy-3.html",
+      "published": "Fri, 11 Sep 2026 09:45:00 +0800",
+      "published_parsed": "2026-09-11"
+    },
     {
       "title": "上海博物馆 美洲展 2",
       "link": "https://vind.ink/photos/American-Exhibition-Workbuddy-2.html",
@@ -128,50 +154,15 @@
       "link": "https://vind.ink/AI-tools/workbuddy-2-download-photos.html",
       "published": "Sat, 05 Sep 2026 14:35:00 +0800",
       "published_parsed": "2026-09-05"
-    },
-    {
-      "title": "学小彦拍妹子系列——静安大悦城 6",
-      "link": "https://vind.ink/photos/JinganDayuecheng6.html",
-      "published": "Sat, 05 Sep 2026 12:35:00 +0800",
-      "published_parsed": "2026-09-05"
-    },
-    {
-      "title": "学小彦拍妹子系列——静安大悦城 5",
-      "link": "https://vind.ink/photos/JinganDayuecheng5.html",
-      "published": "Fri, 04 Sep 2026 16:45:00 +0800",
-      "published_parsed": "2026-09-04"
     }
   ],
-  "https://liwanr.com": [
-    {
-      "title": "九五至会",
-      "link": "https://liWanr.com/essays/2026/birthday/",
-      "published": "Sat, 05 Sep 2026 23:59:59 +0800",
-      "published_parsed": "2026-09-05"
-    }
-  ],
-  "https://wiki.eryajf.net": [
-    {
-      "title": "学习周刊-总第278期-2026年第35周",
-      "link": "https://wiki.eryajf.net/pages/4327cf/",
-      "published": "Thu, 27 Aug 2026 23:25:42 GMT",
-      "published_parsed": "2026-08-27"
-    },
-    {
-      "title": "学习周刊-总第277期-2026年第34周",
-      "link": "https://wiki.eryajf.net/pages/5df013/",
-      "published": "Thu, 20 Aug 2026 22:23:05 GMT",
-      "published_parsed": "2026-08-20"
-    },
-    {
-      "title": "学习周刊-总第276期-2026年第33周",
-      "link": "https://wiki.eryajf.net/pages/630ab4/",
-      "published": "Thu, 13 Aug 2026 23:58:48 GMT",
-      "published_parsed": "2026-08-13"
-    }
-  ],
-  "https://wangyurui.com": [],
   "https://mobius.blog": [
+    {
+      "title": "只要结果，拒绝理由",
+      "link": "https://mobius.blog/25700.html",
+      "published": "Fri, 11 Sep 2026 01:48:45 +0000",
+      "published_parsed": "2026-09-11"
+    },
     {
       "title": "为需求创造的回忆",
       "link": "https://mobius.blog/25696.html",
@@ -225,483 +216,51 @@
       "link": "https://mobius.blog/25584.html",
       "published": "Thu, 03 Sep 2026 02:02:19 +0000",
       "published_parsed": "2026-09-03"
-    },
-    {
-      "title": "哪有厨师天天自己逛菜市场的？",
-      "link": "https://mobius.blog/25578.html",
-      "published": "Wed, 02 Sep 2026 01:30:00 +0000",
-      "published_parsed": "2026-09-02"
-    }
-  ],
-  "https://www.tortorse.com": [
-    {
-      "title": "2001，电脑进了家门",
-      "link": "https://www.tortorse.com/archives/computer-came-home-2001/",
-      "published": "2026-09-05T05:03:56.000Z",
-      "published_parsed": "2026-09-05"
-    },
-    {
-      "title": "2000，跨世纪的旧日常",
-      "link": "https://www.tortorse.com/archives/old-daily-life-at-the-turn-of-the-century-2000/",
-      "published": "2026-09-04T00:57:42.000Z",
-      "published_parsed": "2026-09-04"
-    },
-    {
-      "title": "1999，互联网到了校门外",
-      "link": "https://www.tortorse.com/archives/internet-outside-the-school-gate-1999/",
-      "published": "2026-09-01T01:13:32.000Z",
-      "published_parsed": "2026-09-01"
-    },
-    {
-      "title": "在浙大的走廊里，我看见了1947年的爷爷",
-      "link": "https://www.tortorse.com/archives/zhejiang-university-1947-grandfather/",
-      "published": "2026-08-24T13:39:00.000Z",
-      "published_parsed": "2026-08-24"
-    },
-    {
-      "title": "我和 ChatGPT 聊了七十公里",
-      "link": "https://www.tortorse.com/archives/chatgpt-seventy-kilometers/",
-      "published": "2026-08-23T01:30:56.000Z",
-      "published_parsed": "2026-08-23"
-    },
-    {
-      "title": "1998，游戏厅外的世界",
-      "link": "https://www.tortorse.com/archives/the-world-outside-the-arcade-1998/",
-      "published": "2026-08-15T03:29:04.000Z",
-      "published_parsed": "2026-08-15"
-    },
-    {
-      "title": "第一次走进互联网",
-      "link": "https://www.tortorse.com/archives/first-step-into-the-internet/",
-      "published": "2026-08-14T14:16:43.000Z",
-      "published_parsed": "2026-08-14"
-    }
-  ],
-  "https://usj.cc": [],
-  "https://www.ruanyifeng.com/blog": [
-    {
-      "title": "科技爱好者周刊（第 411 期）：OpenClaw 2.0 是一个缩影",
-      "link": "http://www.ruanyifeng.com/blog/2026/09/weekly-issue-411.html",
-      "published": "2026-09-03T23:59:05Z",
-      "published_parsed": "2026-09-03"
-    },
-    {
-      "title": "科技爱好者周刊（第 410 期）：你需要知道的 AI 三种机制",
-      "link": "http://www.ruanyifeng.com/blog/2026/08/weekly-issue-410.html",
-      "published": "2026-08-27T23:56:43Z",
-      "published_parsed": "2026-08-27"
-    },
-    {
-      "title": "科技爱好者周刊（第 409 期）：程序员的职业未来",
-      "link": "http://www.ruanyifeng.com/blog/2026/08/weekly-issue-409.html",
-      "published": "2026-08-20T23:53:54Z",
-      "published_parsed": "2026-08-20"
-    }
-  ],
-  "https://blog.mfwt.top": [
-    {
-      "title": "小论博客的更新速度",
-      "link": "https://blog.mfwt.top/index.php/archives/1582/",
-      "published": "Mon, 07 Sep 2026 21:20:54 +0800",
-      "published_parsed": "2026-09-07"
-    },
-    {
-      "title": "和校园网斗智斗勇的日子（第九辑）",
-      "link": "https://blog.mfwt.top/index.php/archives/1570/",
-      "published": "Wed, 02 Sep 2026 21:53:00 +0800",
-      "published_parsed": "2026-09-02"
-    },
-    {
-      "title": "开学前，文具店小景",
-      "link": "https://blog.mfwt.top/index.php/archives/1561/",
-      "published": "Mon, 31 Aug 2026 18:58:00 +0800",
-      "published_parsed": "2026-08-31"
-    },
-    {
-      "title": "生活碎碎念：升学首日有感",
-      "link": "https://blog.mfwt.top/index.php/archives/1562/",
-      "published": "Sun, 30 Aug 2026 23:34:00 +0800",
-      "published_parsed": "2026-08-30"
-    },
-    {
-      "title": "中元节随笔",
-      "link": "https://blog.mfwt.top/index.php/archives/1556/",
-      "published": "Wed, 26 Aug 2026 20:51:00 +0800",
-      "published_parsed": "2026-08-26"
-    },
-    {
-      "title": "业余频段的对讲机，不能再商业应用了",
-      "link": "https://blog.mfwt.top/index.php/archives/1550/",
-      "published": "Sun, 23 Aug 2026 22:57:00 +0800",
-      "published_parsed": "2026-08-23"
-    },
-    {
-      "title": "无用命途：动态海景灯，用电脑说脏话",
-      "link": "https://blog.mfwt.top/index.php/archives/1523/",
-      "published": "Thu, 20 Aug 2026 21:59:00 +0800",
-      "published_parsed": "2026-08-20"
-    },
-    {
-      "title": "冷知识：博客的评论区不是广告区",
-      "link": "https://blog.mfwt.top/index.php/archives/1529/",
-      "published": "Sat, 15 Aug 2026 21:59:00 +0800",
-      "published_parsed": "2026-08-15"
-    },
-    {
-      "title": "今日站点异常流量的分析",
-      "link": "https://blog.mfwt.top/index.php/archives/1526/",
-      "published": "Thu, 13 Aug 2026 23:59:00 +0800",
-      "published_parsed": "2026-08-13"
-    }
-  ],
-  "https://zhongxiaojie.com": [
-    {
-      "title": "大好人",
-      "link": "https://zhongxiaojie.com/2026/09/1867/",
-      "published": "Tue, 08 Sep 2026 05:25:57 +0000",
-      "published_parsed": "2026-09-08"
-    },
-    {
-      "title": "重生",
-      "link": "https://zhongxiaojie.com/2026/09/1857/",
-      "published": "Mon, 07 Sep 2026 05:11:06 +0000",
-      "published_parsed": "2026-09-07"
-    },
-    {
-      "title": "罩亮前程👙",
-      "link": "https://zhongxiaojie.com/2026/09/1840/",
-      "published": "Fri, 04 Sep 2026 07:12:52 +0000",
-      "published_parsed": "2026-09-04"
-    },
-    {
-      "title": "迟钝",
-      "link": "https://zhongxiaojie.com/2026/09/1822/",
-      "published": "Wed, 02 Sep 2026 02:59:39 +0000",
-      "published_parsed": "2026-09-02"
-    },
-    {
-      "title": "买垃圾",
-      "link": "https://zhongxiaojie.com/2026/08/1798/",
-      "published": "Mon, 31 Aug 2026 07:12:42 +0000",
-      "published_parsed": "2026-08-31"
-    },
-    {
-      "title": "纸嫁衣",
-      "link": "https://zhongxiaojie.com/2026/08/1783/",
-      "published": "Fri, 28 Aug 2026 03:05:07 +0000",
-      "published_parsed": "2026-08-28"
-    },
-    {
-      "title": "猫",
-      "link": "https://zhongxiaojie.com/2026/08/1768/",
-      "published": "Tue, 25 Aug 2026 11:01:35 +0000",
-      "published_parsed": "2026-08-25"
-    },
-    {
-      "title": "Portable Claw – 手机龙虾客户端",
-      "link": "https://zhongxiaojie.com/2026/08/1631/",
-      "published": "Thu, 20 Aug 2026 01:19:33 +0000",
-      "published_parsed": "2026-08-20"
-    },
-    {
-      "title": "七夕快乐",
-      "link": "https://zhongxiaojie.com/2026/08/1751/",
-      "published": "Wed, 19 Aug 2026 08:48:58 +0000",
-      "published_parsed": "2026-08-19"
-    },
-    {
-      "title": "Findu — 十年",
-      "link": "https://zhongxiaojie.com/2026/08/1728/",
-      "published": "Mon, 17 Aug 2026 01:52:57 +0000",
-      "published_parsed": "2026-08-17"
-    }
-  ],
-  "https://www.vergilisme.com": [],
-  "https://www.tjsky.net": [
-    {
-      "title": "碎碎谈 · 9月10日 09:55",
-      "link": "https://www.tjsky.net/shuoshuo/nfwfprmsgcg6raymin6ref",
-      "published": "Thu, 10 Sep 2026 01:55:33 +0000",
-      "published_parsed": "2026-09-10"
-    },
-    {
-      "title": "OpenCode Go 请求失败？NewAPI 中转配置 x-opencode-session 请求头教程",
-      "link": "https://www.tjsky.net/tutorial/1905",
-      "published": "Tue, 08 Sep 2026 01:03:36 +0000",
-      "published_parsed": "2026-09-08"
-    },
-    {
-      "title": "腾讯云轻量应用服务器续费1折：老用户难得比新用户便宜的活动",
-      "link": "https://www.tjsky.net/news/1895",
-      "published": "Thu, 03 Sep 2026 03:38:44 +0000",
-      "published_parsed": "2026-09-03"
-    },
-    {
-      "title": "碎碎谈 · 8月27日 16:51",
-      "link": "https://www.tjsky.net/shuoshuo/va2hnq6oijhwmgqad6ga7e",
-      "published": "Thu, 27 Aug 2026 16:51:43 +0000",
-      "published_parsed": "2026-08-27"
-    },
-    {
-      "title": "碎碎谈 · 8月26日 17:17",
-      "link": "https://www.tjsky.net/shuoshuo/z5a374qaz2gonsrukegrzg",
-      "published": "Wed, 26 Aug 2026 17:17:01 +0000",
-      "published_parsed": "2026-08-26"
-    },
-    {
-      "title": "碎碎谈 · 8月25日 08:24",
-      "link": "https://www.tjsky.net/shuoshuo/ijp2dbhfqqnsvgyggrc9mn",
-      "published": "Tue, 25 Aug 2026 08:24:41 +0000",
-      "published_parsed": "2026-08-25"
-    },
-    {
-      "title": "碎碎谈 · 8月21日 15:51",
-      "link": "https://www.tjsky.net/shuoshuo/nxqj2lenuw9skcczpdzze8",
-      "published": "Fri, 21 Aug 2026 15:51:29 +0000",
-      "published_parsed": "2026-08-21"
-    },
-    {
-      "title": "给 memos 加个自动压缩图片为 Webp 的功能",
-      "link": "https://www.tjsky.net/tutorial/1826",
-      "published": "Fri, 21 Aug 2026 04:02:11 +0000",
-      "published_parsed": "2026-08-21"
-    },
-    {
-      "title": "碎碎谈 · 8月20日 20:37",
-      "link": "https://www.tjsky.net/shuoshuo/gpgzpv9kezxc5v5ynjwjnh",
-      "published": "Thu, 20 Aug 2026 20:37:11 +0000",
-      "published_parsed": "2026-08-20"
-    },
-    {
-      "title": "IDM 扩展老劫持下载、下载文件名乱码？我写了个小扩展让它按需开关",
-      "link": "https://www.tjsky.net/best-software/1819",
-      "published": "Thu, 20 Aug 2026 09:20:47 +0000",
-      "published_parsed": "2026-08-20"
-    }
-  ],
-  "https://lawtee.com": [
-    {
-      "title": "是时候认真讨论汽车的行人保护设计了",
-      "link": "https://lawtee.com/article/pedestrian-protection-design/",
-      "published": "Thu, 10 Sep 2026 08:30:00 +0000",
-      "published_parsed": "2026-09-10"
-    },
-    {
-      "title": "当全世界都不喜欢英文专业",
-      "link": "https://lawtee.com/article/english-major-decline/",
-      "published": "Sat, 05 Sep 2026 16:55:00 +0000",
-      "published_parsed": "2026-09-05"
-    },
-    {
-      "title": "越南从劳动力出口到劳动力进口",
-      "link": "https://lawtee.com/article/vietnam-import-labor/",
-      "published": "Fri, 04 Sep 2026 21:22:55 +0000",
-      "published_parsed": "2026-09-04"
-    },
-    {
-      "title": "越南拟将死刑罪名砍到只剩4个，到底发生了什么",
-      "link": "https://lawtee.com/article/vietnam-crime-law/",
-      "published": "Thu, 27 Aug 2026 22:22:55 +0000",
-      "published_parsed": "2026-08-27"
-    },
-    {
-      "title": "南宋和蒙古帝国，直到灭亡也不知道自己遇到了什么",
-      "link": "https://lawtee.com/article/south-song-mongol-empire/",
-      "published": "Wed, 26 Aug 2026 00:22:55 +0000",
-      "published_parsed": "2026-08-26"
-    }
-  ],
-  "https://pathos.page": [],
-  "https://yihui.org/cn": [],
-  "https://sliun.com": [
-    {
-      "title": "问题的生成（四）",
-      "link": "https://sliun.com/problemmake4/",
-      "published": "2026-09-05T07:25:00+00:00",
-      "published_parsed": "2026-09-05"
-    },
-    {
-      "title": "问题的生成（三）",
-      "link": "https://sliun.com/problemmake3/",
-      "published": "2026-08-28T14:03:00+00:00",
-      "published_parsed": "2026-08-28"
-    },
-    {
-      "title": "问题的生成（二）",
-      "link": "https://sliun.com/problemmake2/",
-      "published": "2026-08-20T13:58:00+00:00",
-      "published_parsed": "2026-08-20"
-    },
-    {
-      "title": "问题的生成（一）",
-      "link": "https://sliun.com/problemmake1/",
-      "published": "2026-08-19T14:29:00+00:00",
-      "published_parsed": "2026-08-19"
-    }
-  ],
-  "https://blog.bxaw.name": [
-    {
-      "title": "葬礼之前",
-      "link": "https://blog.bxaw.name/archives/Before-the-Funeral.html",
-      "published": "Tue, 01 Sep 2026 05:30:44 +0800",
-      "published_parsed": "2026-08-31"
-    },
-    {
-      "title": "我知道你为什么不喜欢我",
-      "link": "https://blog.bxaw.name/archives/I-Know-Why-You-Dont-Like-Me.html",
-      "published": "Mon, 31 Aug 2026 02:42:00 +0800",
-      "published_parsed": "2026-08-30"
-    }
-  ],
-  "https://yipai.me": [
-    {
-      "title": "牛来",
-      "link": "https://yipai.me/post/2547.html",
-      "published": "Mon, 17 Aug 2026 03:26:00 GMT",
-      "published_parsed": "2026-08-17"
-    }
-  ],
-  "https://www.glowisle.me": [],
-  "https://www.demochen.com": [
-    {
-      "title": "我为什么要记录自己一天说过的话？",
-      "link": "https://demochen.com/posts/20260827/",
-      "published": "Thu, 27 Aug 2026 22:44:00 +0800",
-      "published_parsed": "2026-08-27"
-    },
-    {
-      "title": "试戴 Looki 一周：我很喜欢，最后还是决定退货",
-      "link": "https://demochen.com/posts/20260823/",
-      "published": "Sun, 23 Aug 2026 18:18:00 +0800",
-      "published_parsed": "2026-08-23"
-    }
-  ],
-  "https://d-d.design": [
-    {
-      "title": "二十年后，我又迷路了",
-      "link": "https://d-d.design/single/20339",
-      "published": "Tue, 08 Sep 2026 06:00:09 +0000",
-      "published_parsed": "2026-09-08"
-    },
-    {
-      "title": "你骗了我，却只字未提",
-      "link": "https://d-d.design/single/20301",
-      "published": "Sat, 05 Sep 2026 14:34:41 +0000",
-      "published_parsed": "2026-09-05"
-    },
-    {
-      "title": "我原本根本不会",
-      "link": "https://d-d.design/single/20295",
-      "published": "Sat, 05 Sep 2026 07:45:55 +0000",
-      "published_parsed": "2026-09-05"
-    },
-    {
-      "title": "注入瞬时记忆",
-      "link": "https://d-d.design/single/20275",
-      "published": "Wed, 02 Sep 2026 12:26:55 +0000",
-      "published_parsed": "2026-09-02"
-    },
-    {
-      "title": "命运惯性 II",
-      "link": "https://d-d.design/single/20272",
-      "published": "Tue, 01 Sep 2026 05:05:18 +0000",
-      "published_parsed": "2026-09-01"
-    },
-    {
-      "title": "帮我传给那边那个谁",
-      "link": "https://d-d.design/single/20261",
-      "published": "Sat, 29 Aug 2026 14:53:32 +0000",
-      "published_parsed": "2026-08-29"
-    },
-    {
-      "title": "800×600 的夏天",
-      "link": "https://d-d.design/single/20251",
-      "published": "Wed, 26 Aug 2026 21:07:06 +0000",
-      "published_parsed": "2026-08-26"
-    },
-    {
-      "title": "如果他们也曾生活在网络里",
-      "link": "https://d-d.design/single/20242",
-      "published": "Tue, 25 Aug 2026 21:50:10 +0000",
-      "published_parsed": "2026-08-25"
-    },
-    {
-      "title": "爱就是爱",
-      "link": "https://d-d.design/single/20169",
-      "published": "Sat, 22 Aug 2026 07:10:46 +0000",
-      "published_parsed": "2026-08-22"
-    },
-    {
-      "title": "我只是想让小蛇颠个球",
-      "link": "https://d-d.design/single/20148",
-      "published": "Wed, 19 Aug 2026 18:56:32 +0000",
-      "published_parsed": "2026-08-19"
-    }
-  ],
-  "https://www.scarsu.com": [],
-  "https://blog.solazy.me": [
-    {
-      "title": "爹味人的自由",
-      "link": "https://blog.solazy.me/20260910/",
-      "published": "2026-09-10T12:00:00+00:00",
-      "published_parsed": "2026-09-10"
-    },
-    {
-      "title": "放下助人情结，我又辞职了",
-      "link": "https://blog.solazy.me/20260909/",
-      "published": "2026-09-09T15:00:00+00:00",
-      "published_parsed": "2026-09-09"
-    },
-    {
-      "title": "终究还是要搬家了",
-      "link": "https://blog.solazy.me/20260907/",
-      "published": "2026-09-07T15:00:00+00:00",
-      "published_parsed": "2026-09-07"
-    },
-    {
-      "title": "周末流水账 0906",
-      "link": "https://blog.solazy.me/20260906/",
-      "published": "2026-09-06T15:00:00+00:00",
-      "published_parsed": "2026-09-06"
-    },
-    {
-      "title": "周末流水账 0905",
-      "link": "https://blog.solazy.me/20260905/",
-      "published": "2026-09-05T12:00:00+00:00",
-      "published_parsed": "2026-09-05"
-    },
-    {
-      "title": "只活到 50 岁也挺好",
-      "link": "https://blog.solazy.me/20260904/",
-      "published": "2026-09-04T14:00:00+00:00",
-      "published_parsed": "2026-09-04"
-    },
-    {
-      "title": "把焦虑推迟到最后一天",
-      "link": "https://blog.solazy.me/20260903/",
-      "published": "2026-09-03T15:00:00+00:00",
-      "published_parsed": "2026-09-03"
-    },
-    {
-      "title": "谁在替你的生疏买单",
-      "link": "https://blog.solazy.me/20260902/",
-      "published": "2026-09-02T11:00:00+00:00",
-      "published_parsed": "2026-09-02"
-    },
-    {
-      "title": "不再期待下一份工作",
-      "link": "https://blog.solazy.me/20260901/",
-      "published": "2026-09-01T02:00:00+00:00",
-      "published_parsed": "2026-09-01"
-    },
-    {
-      "title": "搬工位时的三波人",
-      "link": "https://blog.solazy.me/20260831/",
-      "published": "2026-08-31T08:00:00+00:00",
-      "published_parsed": "2026-08-31"
     }
   ],
   "https://z.arlmy.me": [
+    {
+      "title": "入蜀记 day473 索书号",
+      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_473/",
+      "published": "2026-09-11T16:16:27.000Z",
+      "published_parsed": "2026-09-11"
+    },
+    {
+      "title": "入蜀记 day472 五块石",
+      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_472/",
+      "published": "2026-09-11T16:13:27.000Z",
+      "published_parsed": "2026-09-11"
+    },
+    {
+      "title": "入蜀记 day471 白露、快降温、冰糖雪梨",
+      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_471/",
+      "published": "2026-09-11T16:11:27.000Z",
+      "published_parsed": "2026-09-11"
+    },
+    {
+      "title": "摘：《说灵魂》",
+      "link": "https://z.arlmy.me/posts/Note/Note_ChengBaoYi_ShuoLingHun/",
+      "published": "2026-09-11T05:18:46.000Z",
+      "published_parsed": "2026-09-11"
+    },
+    {
+      "title": "摘：《熟食动物》",
+      "link": "https://z.arlmy.me/posts/Note/Note_RichardWrangham_CatchingFire/",
+      "published": "2026-09-11T05:16:46.000Z",
+      "published_parsed": "2026-09-11"
+    },
+    {
+      "title": "最近惦念 20260831",
+      "link": "https://z.arlmy.me/posts/TILs/thoughts/20260831_Recently/",
+      "published": "2026-09-11T01:38:27.000Z",
+      "published_parsed": "2026-09-11"
+    },
+    {
+      "title": "2026 纸书单",
+      "link": "https://z.arlmy.me/posts/YearlyBooks/BookList_2026/",
+      "published": "2026-09-11T01:34:00.000Z",
+      "published_parsed": "2026-09-11"
+    },
     {
       "title": "摘：《听客溪的朝圣》",
       "link": "https://z.arlmy.me/posts/Note/Note_AnnieDillard_PilgrimAtTinkerCreek/",
@@ -935,31 +494,511 @@
       "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_448/",
       "published": "2026-08-15T09:22:27.000Z",
       "published_parsed": "2026-08-15"
+    }
+  ],
+  "https://www.ruanyifeng.com/blog": [
+    {
+      "title": "科技爱好者周刊（第 412 期）：禁止 issue，只用 PR",
+      "link": "http://www.ruanyifeng.com/blog/2026/09/weekly-issue-412.html",
+      "published": "2026-09-11T00:11:50Z",
+      "published_parsed": "2026-09-11"
     },
     {
-      "title": "入蜀记 day447 辽宁大厦",
-      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_447/",
-      "published": "2026-08-14T09:18:27.000Z",
-      "published_parsed": "2026-08-14"
+      "title": "科技爱好者周刊（第 411 期）：OpenClaw 2.0 是一个缩影",
+      "link": "http://www.ruanyifeng.com/blog/2026/09/weekly-issue-411.html",
+      "published": "2026-09-03T23:59:05Z",
+      "published_parsed": "2026-09-03"
+    },
+    {
+      "title": "科技爱好者周刊（第 410 期）：你需要知道的 AI 三种机制",
+      "link": "http://www.ruanyifeng.com/blog/2026/08/weekly-issue-410.html",
+      "published": "2026-08-27T23:56:43Z",
+      "published_parsed": "2026-08-27"
     }
   ],
-  "https://cyrus19.cc": [
+  "https://wangyurui.com": [],
+  "https://wiki.eryajf.net": [
     {
-      "title": "近期“补完记录”",
-      "link": "https://cyrus19.cc/archives/2035",
-      "published": "Fri, 14 Aug 2026 08:21:28 +0000",
-      "published_parsed": "2026-08-14"
+      "title": "学习周刊-总第280期-2026年第37周",
+      "link": "https://wiki.eryajf.net/pages/eb7d06/",
+      "published": "Thu, 10 Sep 2026 22:24:08 GMT",
+      "published_parsed": "2026-09-10"
+    },
+    {
+      "title": "学习周刊-总第279期-2026年第36周",
+      "link": "https://wiki.eryajf.net/pages/702d84/",
+      "published": "Thu, 10 Sep 2026 22:24:02 GMT",
+      "published_parsed": "2026-09-10"
+    },
+    {
+      "title": "学习周刊-总第278期-2026年第35周",
+      "link": "https://wiki.eryajf.net/pages/4327cf/",
+      "published": "Thu, 27 Aug 2026 23:25:42 GMT",
+      "published_parsed": "2026-08-27"
+    },
+    {
+      "title": "学习周刊-总第277期-2026年第34周",
+      "link": "https://wiki.eryajf.net/pages/5df013/",
+      "published": "Thu, 20 Aug 2026 22:23:05 GMT",
+      "published_parsed": "2026-08-20"
     }
   ],
-  "https://www.owenyoung.com": [
+  "https://blog.mfwt.top": [
     {
-      "title": "介绍一家最近去的头马 Toastmasters 演讲俱乐部",
-      "link": "https://www.owenyoung.com/toastmasters",
-      "published": "2026-08-28T19:00:59.000Z",
+      "title": "小论博客的更新速度",
+      "link": "https://blog.mfwt.top/index.php/archives/1582/",
+      "published": "Mon, 07 Sep 2026 21:20:54 +0800",
+      "published_parsed": "2026-09-07"
+    },
+    {
+      "title": "和校园网斗智斗勇的日子（第九辑）",
+      "link": "https://blog.mfwt.top/index.php/archives/1570/",
+      "published": "Wed, 02 Sep 2026 21:53:00 +0800",
+      "published_parsed": "2026-09-02"
+    },
+    {
+      "title": "开学前，文具店小景",
+      "link": "https://blog.mfwt.top/index.php/archives/1561/",
+      "published": "Mon, 31 Aug 2026 18:58:00 +0800",
+      "published_parsed": "2026-08-31"
+    },
+    {
+      "title": "生活碎碎念：升学首日有感",
+      "link": "https://blog.mfwt.top/index.php/archives/1562/",
+      "published": "Sun, 30 Aug 2026 23:34:00 +0800",
+      "published_parsed": "2026-08-30"
+    },
+    {
+      "title": "中元节随笔",
+      "link": "https://blog.mfwt.top/index.php/archives/1556/",
+      "published": "Wed, 26 Aug 2026 20:51:00 +0800",
+      "published_parsed": "2026-08-26"
+    },
+    {
+      "title": "业余频段的对讲机，不能再商业应用了",
+      "link": "https://blog.mfwt.top/index.php/archives/1550/",
+      "published": "Sun, 23 Aug 2026 22:57:00 +0800",
+      "published_parsed": "2026-08-23"
+    },
+    {
+      "title": "无用命途：动态海景灯，用电脑说脏话",
+      "link": "https://blog.mfwt.top/index.php/archives/1523/",
+      "published": "Thu, 20 Aug 2026 21:59:00 +0800",
+      "published_parsed": "2026-08-20"
+    },
+    {
+      "title": "冷知识：博客的评论区不是广告区",
+      "link": "https://blog.mfwt.top/index.php/archives/1529/",
+      "published": "Sat, 15 Aug 2026 21:59:00 +0800",
+      "published_parsed": "2026-08-15"
+    }
+  ],
+  "https://www.tortorse.com": [
+    {
+      "title": "2002，宿舍里的网线",
+      "link": "https://www.tortorse.com/archives/dorm-room-ethernet-2002/",
+      "published": "2026-09-11T05:13:22.000Z",
+      "published_parsed": "2026-09-11"
+    },
+    {
+      "title": "2001，电脑进了家门",
+      "link": "https://www.tortorse.com/archives/computer-came-home-2001/",
+      "published": "2026-09-05T05:03:56.000Z",
+      "published_parsed": "2026-09-05"
+    },
+    {
+      "title": "2000，跨世纪的旧日常",
+      "link": "https://www.tortorse.com/archives/old-daily-life-at-the-turn-of-the-century-2000/",
+      "published": "2026-09-04T00:57:42.000Z",
+      "published_parsed": "2026-09-04"
+    },
+    {
+      "title": "1999，互联网到了校门外",
+      "link": "https://www.tortorse.com/archives/internet-outside-the-school-gate-1999/",
+      "published": "2026-09-01T01:13:32.000Z",
+      "published_parsed": "2026-09-01"
+    },
+    {
+      "title": "在浙大的走廊里，我看见了1947年的爷爷",
+      "link": "https://www.tortorse.com/archives/zhejiang-university-1947-grandfather/",
+      "published": "2026-08-24T13:39:00.000Z",
+      "published_parsed": "2026-08-24"
+    },
+    {
+      "title": "我和 ChatGPT 聊了七十公里",
+      "link": "https://www.tortorse.com/archives/chatgpt-seventy-kilometers/",
+      "published": "2026-08-23T01:30:56.000Z",
+      "published_parsed": "2026-08-23"
+    },
+    {
+      "title": "1998，游戏厅外的世界",
+      "link": "https://www.tortorse.com/archives/the-world-outside-the-arcade-1998/",
+      "published": "2026-08-15T03:29:04.000Z",
+      "published_parsed": "2026-08-15"
+    }
+  ],
+  "https://zhongxiaojie.com": [
+    {
+      "title": "大好人",
+      "link": "https://zhongxiaojie.com/2026/09/1867/",
+      "published": "Tue, 08 Sep 2026 05:25:57 +0000",
+      "published_parsed": "2026-09-08"
+    },
+    {
+      "title": "重生",
+      "link": "https://zhongxiaojie.com/2026/09/1857/",
+      "published": "Mon, 07 Sep 2026 05:11:06 +0000",
+      "published_parsed": "2026-09-07"
+    },
+    {
+      "title": "罩亮前程👙",
+      "link": "https://zhongxiaojie.com/2026/09/1840/",
+      "published": "Fri, 04 Sep 2026 07:12:52 +0000",
+      "published_parsed": "2026-09-04"
+    },
+    {
+      "title": "迟钝",
+      "link": "https://zhongxiaojie.com/2026/09/1822/",
+      "published": "Wed, 02 Sep 2026 02:59:39 +0000",
+      "published_parsed": "2026-09-02"
+    },
+    {
+      "title": "买垃圾",
+      "link": "https://zhongxiaojie.com/2026/08/1798/",
+      "published": "Mon, 31 Aug 2026 07:12:42 +0000",
+      "published_parsed": "2026-08-31"
+    },
+    {
+      "title": "纸嫁衣",
+      "link": "https://zhongxiaojie.com/2026/08/1783/",
+      "published": "Fri, 28 Aug 2026 03:05:07 +0000",
       "published_parsed": "2026-08-28"
+    },
+    {
+      "title": "猫",
+      "link": "https://zhongxiaojie.com/2026/08/1768/",
+      "published": "Tue, 25 Aug 2026 11:01:35 +0000",
+      "published_parsed": "2026-08-25"
+    },
+    {
+      "title": "Portable Claw – 手机龙虾客户端",
+      "link": "https://zhongxiaojie.com/2026/08/1631/",
+      "published": "Thu, 20 Aug 2026 01:19:33 +0000",
+      "published_parsed": "2026-08-20"
+    },
+    {
+      "title": "七夕快乐",
+      "link": "https://zhongxiaojie.com/2026/08/1751/",
+      "published": "Wed, 19 Aug 2026 08:48:58 +0000",
+      "published_parsed": "2026-08-19"
+    },
+    {
+      "title": "Findu — 十年",
+      "link": "https://zhongxiaojie.com/2026/08/1728/",
+      "published": "Mon, 17 Aug 2026 01:52:57 +0000",
+      "published_parsed": "2026-08-17"
+    }
+  ],
+  "https://www.vergilisme.com": [],
+  "https://www.tjsky.net": [
+    {
+      "title": "碎碎谈 · 9月10日 09:55",
+      "link": "https://www.tjsky.net/shuoshuo/nfwfprmsgcg6raymin6ref",
+      "published": "Thu, 10 Sep 2026 01:55:33 +0000",
+      "published_parsed": "2026-09-10"
+    },
+    {
+      "title": "OpenCode Go 请求失败？NewAPI 中转配置 x-opencode-session 请求头教程",
+      "link": "https://www.tjsky.net/tutorial/1905",
+      "published": "Tue, 08 Sep 2026 01:03:36 +0000",
+      "published_parsed": "2026-09-08"
+    },
+    {
+      "title": "腾讯云轻量应用服务器续费1折：老用户难得比新用户便宜的活动",
+      "link": "https://www.tjsky.net/news/1895",
+      "published": "Thu, 03 Sep 2026 03:38:44 +0000",
+      "published_parsed": "2026-09-03"
+    },
+    {
+      "title": "碎碎谈 · 8月27日 16:51",
+      "link": "https://www.tjsky.net/shuoshuo/va2hnq6oijhwmgqad6ga7e",
+      "published": "Thu, 27 Aug 2026 08:51:43 +0000",
+      "published_parsed": "2026-08-27"
+    },
+    {
+      "title": "碎碎谈 · 8月26日 17:17",
+      "link": "https://www.tjsky.net/shuoshuo/z5a374qaz2gonsrukegrzg",
+      "published": "Wed, 26 Aug 2026 09:17:01 +0000",
+      "published_parsed": "2026-08-26"
+    },
+    {
+      "title": "碎碎谈 · 8月25日 08:24",
+      "link": "https://www.tjsky.net/shuoshuo/ijp2dbhfqqnsvgyggrc9mn",
+      "published": "Tue, 25 Aug 2026 00:24:41 +0000",
+      "published_parsed": "2026-08-25"
+    },
+    {
+      "title": "碎碎谈 · 8月21日 15:51",
+      "link": "https://www.tjsky.net/shuoshuo/nxqj2lenuw9skcczpdzze8",
+      "published": "Fri, 21 Aug 2026 07:51:29 +0000",
+      "published_parsed": "2026-08-21"
+    },
+    {
+      "title": "给 memos 加个自动压缩图片为 Webp 的功能",
+      "link": "https://www.tjsky.net/tutorial/1826",
+      "published": "Fri, 21 Aug 2026 04:02:11 +0000",
+      "published_parsed": "2026-08-21"
+    },
+    {
+      "title": "碎碎谈 · 8月20日 20:37",
+      "link": "https://www.tjsky.net/shuoshuo/gpgzpv9kezxc5v5ynjwjnh",
+      "published": "Thu, 20 Aug 2026 12:37:11 +0000",
+      "published_parsed": "2026-08-20"
+    },
+    {
+      "title": "IDM 扩展老劫持下载、下载文件名乱码？我写了个小扩展让它按需开关",
+      "link": "https://www.tjsky.net/best-software/1819",
+      "published": "Thu, 20 Aug 2026 09:20:47 +0000",
+      "published_parsed": "2026-08-20"
+    }
+  ],
+  "https://usj.cc": [],
+  "https://lawtee.com": [
+    {
+      "title": "是时候认真讨论汽车的行人保护设计了",
+      "link": "https://lawtee.com/article/pedestrian-protection-design/",
+      "published": "Thu, 10 Sep 2026 08:30:00 +0000",
+      "published_parsed": "2026-09-10"
+    },
+    {
+      "title": "当全世界都不喜欢英文专业",
+      "link": "https://lawtee.com/article/english-major-decline/",
+      "published": "Sat, 05 Sep 2026 16:55:00 +0000",
+      "published_parsed": "2026-09-05"
+    },
+    {
+      "title": "越南从劳动力出口到劳动力进口",
+      "link": "https://lawtee.com/article/vietnam-import-labor/",
+      "published": "Fri, 04 Sep 2026 21:22:55 +0000",
+      "published_parsed": "2026-09-04"
+    },
+    {
+      "title": "越南拟将死刑罪名砍到只剩4个，到底发生了什么",
+      "link": "https://lawtee.com/article/vietnam-crime-law/",
+      "published": "Thu, 27 Aug 2026 22:22:55 +0000",
+      "published_parsed": "2026-08-27"
+    },
+    {
+      "title": "南宋和蒙古帝国，直到灭亡也不知道自己遇到了什么",
+      "link": "https://lawtee.com/article/south-song-mongol-empire/",
+      "published": "Wed, 26 Aug 2026 00:22:55 +0000",
+      "published_parsed": "2026-08-26"
+    }
+  ],
+  "https://cyrus19.cc": [],
+  "https://yipai.me": [
+    {
+      "title": "牛来",
+      "link": "https://yipai.me/post/2547.html",
+      "published": "Mon, 17 Aug 2026 03:26:00 GMT",
+      "published_parsed": "2026-08-17"
+    }
+  ],
+  "https://d-d.design": [
+    {
+      "title": "无法确定的真相",
+      "link": "https://d-d.design/single/20351",
+      "published": "Fri, 11 Sep 2026 06:22:17 +0000",
+      "published_parsed": "2026-09-11"
+    },
+    {
+      "title": "二十年后，我又迷路了",
+      "link": "https://d-d.design/single/20339",
+      "published": "Tue, 08 Sep 2026 06:00:09 +0000",
+      "published_parsed": "2026-09-08"
+    },
+    {
+      "title": "你骗了我，却只字未提",
+      "link": "https://d-d.design/single/20301",
+      "published": "Sat, 05 Sep 2026 14:34:41 +0000",
+      "published_parsed": "2026-09-05"
+    },
+    {
+      "title": "我原本根本不会",
+      "link": "https://d-d.design/single/20295",
+      "published": "Sat, 05 Sep 2026 07:45:55 +0000",
+      "published_parsed": "2026-09-05"
+    },
+    {
+      "title": "注入瞬时记忆",
+      "link": "https://d-d.design/single/20275",
+      "published": "Wed, 02 Sep 2026 12:26:55 +0000",
+      "published_parsed": "2026-09-02"
+    },
+    {
+      "title": "命运惯性 II",
+      "link": "https://d-d.design/single/20272",
+      "published": "Tue, 01 Sep 2026 05:05:18 +0000",
+      "published_parsed": "2026-09-01"
+    },
+    {
+      "title": "帮我传给那边那个谁",
+      "link": "https://d-d.design/single/20261",
+      "published": "Sat, 29 Aug 2026 14:53:32 +0000",
+      "published_parsed": "2026-08-29"
+    },
+    {
+      "title": "800×600 的夏天",
+      "link": "https://d-d.design/single/20251",
+      "published": "Wed, 26 Aug 2026 21:07:06 +0000",
+      "published_parsed": "2026-08-26"
+    },
+    {
+      "title": "如果他们也曾生活在网络里",
+      "link": "https://d-d.design/single/20242",
+      "published": "Tue, 25 Aug 2026 21:50:10 +0000",
+      "published_parsed": "2026-08-25"
+    },
+    {
+      "title": "爱就是爱",
+      "link": "https://d-d.design/single/20169",
+      "published": "Sat, 22 Aug 2026 07:10:46 +0000",
+      "published_parsed": "2026-08-22"
+    }
+  ],
+  "https://sliun.com": [
+    {
+      "title": "外星人是不是拉稀的（上）？",
+      "link": "https://sliun.com/etshit1/",
+      "published": "2026-09-10T14:33:00+00:00",
+      "published_parsed": "2026-09-10"
+    },
+    {
+      "title": "问题的生成（四）",
+      "link": "https://sliun.com/problemmake4/",
+      "published": "2026-09-05T07:25:00+00:00",
+      "published_parsed": "2026-09-05"
+    },
+    {
+      "title": "问题的生成（三）",
+      "link": "https://sliun.com/problemmake3/",
+      "published": "2026-08-28T14:03:00+00:00",
+      "published_parsed": "2026-08-28"
+    },
+    {
+      "title": "问题的生成（二）",
+      "link": "https://sliun.com/problemmake2/",
+      "published": "2026-08-20T13:58:00+00:00",
+      "published_parsed": "2026-08-20"
+    },
+    {
+      "title": "问题的生成（一）",
+      "link": "https://sliun.com/problemmake1/",
+      "published": "2026-08-19T14:29:00+00:00",
+      "published_parsed": "2026-08-19"
+    }
+  ],
+  "https://pathos.page": [],
+  "https://blog.bxaw.name": [
+    {
+      "title": "葬礼之前",
+      "link": "https://blog.bxaw.name/archives/Before-the-Funeral.html",
+      "published": "Tue, 01 Sep 2026 05:30:44 +0800",
+      "published_parsed": "2026-08-31"
+    },
+    {
+      "title": "我知道你为什么不喜欢我",
+      "link": "https://blog.bxaw.name/archives/I-Know-Why-You-Dont-Like-Me.html",
+      "published": "Mon, 31 Aug 2026 02:42:00 +0800",
+      "published_parsed": "2026-08-30"
+    }
+  ],
+  "https://yihui.org/cn": [],
+  "https://www.glowisle.me": [],
+  "https://www.scarsu.com": [],
+  "https://www.demochen.com": [
+    {
+      "title": "我为什么要记录自己一天说过的话？",
+      "link": "https://demochen.com/posts/20260827/",
+      "published": "Thu, 27 Aug 2026 22:44:00 +0800",
+      "published_parsed": "2026-08-27"
+    },
+    {
+      "title": "试戴 Looki 一周：我很喜欢，最后还是决定退货",
+      "link": "https://demochen.com/posts/20260823/",
+      "published": "Sun, 23 Aug 2026 18:18:00 +0800",
+      "published_parsed": "2026-08-23"
+    }
+  ],
+  "https://blog.solazy.me": [
+    {
+      "title": "爹味人的自由",
+      "link": "https://blog.solazy.me/20260910/",
+      "published": "2026-09-10T12:00:00+00:00",
+      "published_parsed": "2026-09-10"
+    },
+    {
+      "title": "放下助人情结，我又辞职了",
+      "link": "https://blog.solazy.me/20260909/",
+      "published": "2026-09-09T15:00:00+00:00",
+      "published_parsed": "2026-09-09"
+    },
+    {
+      "title": "终究还是要搬家了",
+      "link": "https://blog.solazy.me/20260907/",
+      "published": "2026-09-07T15:00:00+00:00",
+      "published_parsed": "2026-09-07"
+    },
+    {
+      "title": "周末流水账 0906",
+      "link": "https://blog.solazy.me/20260906/",
+      "published": "2026-09-06T15:00:00+00:00",
+      "published_parsed": "2026-09-06"
+    },
+    {
+      "title": "周末流水账 0905",
+      "link": "https://blog.solazy.me/20260905/",
+      "published": "2026-09-05T12:00:00+00:00",
+      "published_parsed": "2026-09-05"
+    },
+    {
+      "title": "只活到 50 岁也挺好",
+      "link": "https://blog.solazy.me/20260904/",
+      "published": "2026-09-04T14:00:00+00:00",
+      "published_parsed": "2026-09-04"
+    },
+    {
+      "title": "把焦虑推迟到最后一天",
+      "link": "https://blog.solazy.me/20260903/",
+      "published": "2026-09-03T15:00:00+00:00",
+      "published_parsed": "2026-09-03"
+    },
+    {
+      "title": "谁在替你的生疏买单",
+      "link": "https://blog.solazy.me/20260902/",
+      "published": "2026-09-02T11:00:00+00:00",
+      "published_parsed": "2026-09-02"
+    },
+    {
+      "title": "不再期待下一份工作",
+      "link": "https://blog.solazy.me/20260901/",
+      "published": "2026-09-01T02:00:00+00:00",
+      "published_parsed": "2026-09-01"
+    },
+    {
+      "title": "搬工位时的三波人",
+      "link": "https://blog.solazy.me/20260831/",
+      "published": "2026-08-31T08:00:00+00:00",
+      "published_parsed": "2026-08-31"
     }
   ],
   "https://immarcus.com": [
+    {
+      "title": "MVP",
+      "link": "https://www.immarcus.com/blog/minimum-viable-product",
+      "published": "Fri, 11 Sep 2026 00:00:00 GMT",
+      "published_parsed": "2026-09-11"
+    },
     {
       "title": "松露",
       "link": "https://www.immarcus.com/blog/truffle",
@@ -1115,18 +1154,6 @@
       "link": "https://www.immarcus.com/blog/weekly-20260816",
       "published": "Sun, 16 Aug 2026 00:00:00 GMT",
       "published_parsed": "2026-08-16"
-    },
-    {
-      "title": "Hyper-tapping",
-      "link": "https://www.immarcus.com/blog/hyper-tapping",
-      "published": "Sat, 15 Aug 2026 00:00:00 GMT",
-      "published_parsed": "2026-08-15"
-    },
-    {
-      "title": "制造消费",
-      "link": "https://www.immarcus.com/blog/manufactured-spending",
-      "published": "Fri, 14 Aug 2026 00:00:00 GMT",
-      "published_parsed": "2026-08-14"
     }
   ],
   "https://blog.cytrogen.icu": [
@@ -1183,6 +1210,14 @@
       "link": "https://blog.cytrogen.icu/posts/ed86.html",
       "published": "2026-08-19T03:13:55.000Z",
       "published_parsed": "2026-08-19"
+    }
+  ],
+  "https://www.owenyoung.com": [
+    {
+      "title": "介绍一家最近去的头马 Toastmasters 演讲俱乐部",
+      "link": "https://www.owenyoung.com/toastmasters",
+      "published": "2026-08-28T19:00:59.000Z",
+      "published_parsed": "2026-08-28"
     }
   ]
 }
