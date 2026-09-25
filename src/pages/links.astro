@@ -2,7 +2,6 @@
 import { readFileSync, existsSync } from 'node:fs';
 import BaseHead from '../components/BaseHead.astro';
 import SiteShell from '../components/SiteShell.astro';
-import Webmentions from '../components/Webmentions.astro';
 import PostActions from '../components/PostActions.astro';
 import { 
 	LINKS_PAGE_TITLE, 
@@ -460,7 +459,6 @@ const friendLinks = linksWithRss.filter(link => link.is_friend === true);
 				</article>
 			</section>
 			<hr aria-hidden="true" />
-			<Webmentions postId="links" title="链接" postPath="/links" />
 			<PostActions postId="links" postPath="/links" />
 		</SiteShell>
 

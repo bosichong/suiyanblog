@@ -1,7 +1,6 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import SiteShell from '../components/SiteShell.astro';
-import Webmentions from '../components/Webmentions.astro';
 import PostActions from '../components/PostActions.astro';
 import { Icon } from 'astro-icon/components';
 import { PROJECTS, PROJECTS_PAGE_TITLE, PROJECTS_PAGE_DESCRIPTION, SITE_DESCRIPTION, SITE_TITLE } from '../consts';
@@ -230,7 +229,6 @@ const pageDescription = PROJECTS_PAGE_DESCRIPTION;
 				</article>
 			</section>
 			<hr aria-hidden="true" />
-			<Webmentions postId="projects" title={pageTitle} postPath="/projects" />
 			<PostActions postId="projects" postPath="/projects" />
 		</SiteShell>
 
