@@ -53,15 +53,85 @@
       "link": "https://www.leitao.cn/10790.html",
       "published": "Wed, 02 Sep 2026 08:10:32 +0000",
       "published_parsed": "2026-09-02"
+    }
+  ],
+  "https://www.ntiy.com": [
+    {
+      "title": "关于“摄影”和“摄影大赛获奖作品”的一些想法",
+      "link": "https://www.ntiy.com/2377.html",
+      "published": "Fri, 18 Sep 2026 06:22:44 +0000",
+      "published_parsed": "2026-09-18"
+    }
+  ],
+  "https://liwanr.com": [
+    {
+      "title": "尘归尘",
+      "link": "https://liWanr.com/essays/2026/dust2dust/",
+      "published": "Sat, 26 Sep 2026 17:41:40 +0000",
+      "published_parsed": "2026-09-26"
     },
     {
-      "title": "休谟《人性论》导读手册",
-      "link": "https://www.leitao.cn/10774.html",
-      "published": "Sun, 30 Aug 2026 04:54:28 +0000",
-      "published_parsed": "2026-08-30"
+      "title": "26 年上半年",
+      "link": "https://liWanr.com/essays/2026/2026-H1/",
+      "published": "Sat, 26 Sep 2026 07:10:59 +0000",
+      "published_parsed": "2026-09-26"
+    },
+    {
+      "title": "不要试图在书里找答案",
+      "link": "https://liWanr.com/essays/2026/Answer-is-not-in-the-book/",
+      "published": "Sat, 26 Sep 2026 07:10:59 +0000",
+      "published_parsed": "2026-09-26"
+    },
+    {
+      "title": "囚徒日记",
+      "link": "https://liWanr.com/essays/2026/Captive-Journal/",
+      "published": "Sat, 26 Sep 2026 07:10:59 +0000",
+      "published_parsed": "2026-09-26"
+    },
+    {
+      "title": "她的位置",
+      "link": "https://liWanr.com/essays/2026/Her-Place/",
+      "published": "Sat, 26 Sep 2026 07:10:59 +0000",
+      "published_parsed": "2026-09-26"
+    },
+    {
+      "title": "资料",
+      "link": "https://liWanr.com/essays/2026/about-sources/",
+      "published": "Sat, 26 Sep 2026 07:10:59 +0000",
+      "published_parsed": "2026-09-26"
+    },
+    {
+      "title": "九五至会",
+      "link": "https://liWanr.com/essays/2026/birthday/",
+      "published": "Sat, 26 Sep 2026 07:10:59 +0000",
+      "published_parsed": "2026-09-26"
+    },
+    {
+      "title": "回响",
+      "link": "https://liWanr.com/essays/2026/echo/",
+      "published": "Sat, 26 Sep 2026 07:10:59 +0000",
+      "published_parsed": "2026-09-26"
+    },
+    {
+      "title": "风筝",
+      "link": "https://liWanr.com/essays/2026/kite/",
+      "published": "Sat, 26 Sep 2026 07:10:59 +0000",
+      "published_parsed": "2026-09-26"
+    },
+    {
+      "title": "在梦里死了，又活了",
+      "link": "https://liWanr.com/essays/2026/living-after-death/",
+      "published": "Sat, 26 Sep 2026 07:10:59 +0000",
+      "published_parsed": "2026-09-26"
     }
   ],
   "https://Vind.ink": [
+    {
+      "title": "富士展览 2023 4 打鸟",
+      "link": "https://vind.ink/photos/Fujifilm-show-2023-04.html",
+      "published": "Sun, 27 Sep 2026 09:37:00 +0800",
+      "published_parsed": "2026-09-27"
+    },
     {
       "title": "富士展览 2023 3 天使人像",
       "link": "https://vind.ink/photos/Fujifilm-show-2023-03.html",
@@ -115,28 +185,6 @@
       "link": "https://vind.ink/photos/zapian10.html",
       "published": "Mon, 21 Sep 2026 12:12:00 +0800",
       "published_parsed": "2026-09-21"
-    },
-    {
-      "title": "杂篇 9",
-      "link": "https://vind.ink/photos/zapian09.html",
-      "published": "Sun, 20 Sep 2026 13:28:00 +0800",
-      "published_parsed": "2026-09-20"
-    }
-  ],
-  "https://www.ntiy.com": [
-    {
-      "title": "摄影与摄影大赛获奖作品",
-      "link": "https://www.ntiy.com/2377.html",
-      "published": "Fri, 18 Sep 2026 06:22:44 +0000",
-      "published_parsed": "2026-09-18"
-    }
-  ],
-  "https://liwanr.com": [
-    {
-      "title": "九五至会",
-      "link": "https://liWanr.com/essays/2026/birthday/",
-      "published": "Mon, 07 Sep 2026 08:38:28 +0000",
-      "published_parsed": "2026-09-07"
     }
   ],
   "https://www.ruanyifeng.com/blog": [
@@ -159,68 +207,6 @@
       "published_parsed": "2026-09-03"
     }
   ],
-  "https://mobius.blog": [
-    {
-      "title": "开水",
-      "link": "https://mobius.blog/25780.html",
-      "published": "Fri, 25 Sep 2026 01:30:00 +0000",
-      "published_parsed": "2026-09-25"
-    },
-    {
-      "title": "书店消费区",
-      "link": "https://mobius.blog/25771.html",
-      "published": "Thu, 24 Sep 2026 01:30:00 +0000",
-      "published_parsed": "2026-09-24"
-    },
-    {
-      "title": "爹而不自知 III",
-      "link": "https://mobius.blog/25768.html",
-      "published": "Wed, 23 Sep 2026 01:30:00 +0000",
-      "published_parsed": "2026-09-23"
-    },
-    {
-      "title": "爹而不自知 II",
-      "link": "https://mobius.blog/25763.html",
-      "published": "Tue, 22 Sep 2026 01:55:46 +0000",
-      "published_parsed": "2026-09-22"
-    },
-    {
-      "title": "爹而不自知 I",
-      "link": "https://mobius.blog/25758.html",
-      "published": "Mon, 21 Sep 2026 02:26:10 +0000",
-      "published_parsed": "2026-09-21"
-    },
-    {
-      "title": "幸福者退让论其实是内耗的始作俑者？",
-      "link": "https://mobius.blog/25748.html",
-      "published": "Sun, 20 Sep 2026 01:30:00 +0000",
-      "published_parsed": "2026-09-20"
-    },
-    {
-      "title": "从废品回收，到自我价值",
-      "link": "https://mobius.blog/25745.html",
-      "published": "Fri, 18 Sep 2026 01:50:16 +0000",
-      "published_parsed": "2026-09-18"
-    },
-    {
-      "title": "这个世界暂时还不能没有照相馆",
-      "link": "https://mobius.blog/25729.html",
-      "published": "Thu, 17 Sep 2026 01:30:00 +0000",
-      "published_parsed": "2026-09-17"
-    },
-    {
-      "title": "把另一个人拖下水，有助于改善困境吗？II",
-      "link": "https://mobius.blog/25724.html",
-      "published": "Wed, 16 Sep 2026 01:30:00 +0000",
-      "published_parsed": "2026-09-16"
-    },
-    {
-      "title": "把另一个人拖下水，有助于改善困境吗？I",
-      "link": "https://mobius.blog/25721.html",
-      "published": "Tue, 15 Sep 2026 01:30:00 +0000",
-      "published_parsed": "2026-09-15"
-    }
-  ],
   "https://wiki.eryajf.net": [
     {
       "title": "学习周刊-总第281期-2026年第38周",
@@ -241,8 +227,14 @@
       "published_parsed": "2026-09-10"
     }
   ],
-  "https://usj.cc": [],
+  "https://wangyurui.com": [],
   "https://blog.mfwt.top": [
+    {
+      "title": "如何寻找与选购免执照的 409MHz 公众对讲机",
+      "link": "https://blog.mfwt.top/index.php/archives/1640/",
+      "published": "Sun, 27 Sep 2026 21:05:13 +0800",
+      "published_parsed": "2026-09-27"
+    },
     {
       "title": "博客三周年，依旧是一些记录",
       "link": "https://blog.mfwt.top/index.php/archives/1633/",
@@ -342,6 +334,69 @@
       "published_parsed": "2026-09-01"
     }
   ],
+  "https://usj.cc": [],
+  "https://mobius.blog": [
+    {
+      "title": "写作能解决什么？",
+      "link": "https://mobius.blog/25783.html",
+      "published": "Sun, 27 Sep 2026 03:09:28 +0000",
+      "published_parsed": "2026-09-27"
+    },
+    {
+      "title": "开水",
+      "link": "https://mobius.blog/25780.html",
+      "published": "Fri, 25 Sep 2026 01:30:00 +0000",
+      "published_parsed": "2026-09-25"
+    },
+    {
+      "title": "书店消费区",
+      "link": "https://mobius.blog/25771.html",
+      "published": "Thu, 24 Sep 2026 01:30:00 +0000",
+      "published_parsed": "2026-09-24"
+    },
+    {
+      "title": "爹而不自知 III",
+      "link": "https://mobius.blog/25768.html",
+      "published": "Wed, 23 Sep 2026 01:30:00 +0000",
+      "published_parsed": "2026-09-23"
+    },
+    {
+      "title": "爹而不自知 II",
+      "link": "https://mobius.blog/25763.html",
+      "published": "Tue, 22 Sep 2026 01:55:46 +0000",
+      "published_parsed": "2026-09-22"
+    },
+    {
+      "title": "爹而不自知 I",
+      "link": "https://mobius.blog/25758.html",
+      "published": "Mon, 21 Sep 2026 02:26:10 +0000",
+      "published_parsed": "2026-09-21"
+    },
+    {
+      "title": "幸福者退让论其实是内耗的始作俑者？",
+      "link": "https://mobius.blog/25748.html",
+      "published": "Sun, 20 Sep 2026 01:30:00 +0000",
+      "published_parsed": "2026-09-20"
+    },
+    {
+      "title": "从废品回收，到自我价值",
+      "link": "https://mobius.blog/25745.html",
+      "published": "Fri, 18 Sep 2026 01:50:16 +0000",
+      "published_parsed": "2026-09-18"
+    },
+    {
+      "title": "这个世界暂时还不能没有照相馆",
+      "link": "https://mobius.blog/25729.html",
+      "published": "Thu, 17 Sep 2026 01:30:00 +0000",
+      "published_parsed": "2026-09-17"
+    },
+    {
+      "title": "把另一个人拖下水，有助于改善困境吗？II",
+      "link": "https://mobius.blog/25724.html",
+      "published": "Wed, 16 Sep 2026 01:30:00 +0000",
+      "published_parsed": "2026-09-16"
+    }
+  ],
   "https://www.vergilisme.com": [
     {
       "title": "替身式数据库连接",
@@ -351,6 +406,12 @@
     }
   ],
   "https://www.tjsky.net": [
+    {
+      "title": "碎碎谈 · 9月27日 17:55",
+      "link": "https://www.tjsky.net/shuoshuo/j9jldpwbbdrhgqvhsb3yv5",
+      "published": "Sun, 27 Sep 2026 09:55:48 +0000",
+      "published_parsed": "2026-09-27"
+    },
     {
       "title": "碎碎谈 · 9月21日 11:49",
       "link": "https://www.tjsky.net/shuoshuo/d6iofcapbngtqnvcqdlhpw",
@@ -374,6 +435,12 @@
       "link": "https://www.tjsky.net/ai/1928",
       "published": "Sun, 13 Sep 2026 03:36:34 +0000",
       "published_parsed": "2026-09-13"
+    },
+    {
+      "title": "碎碎谈 · 9月10日 09:55",
+      "link": "https://www.tjsky.net/shuoshuo/nfwfprmsgcg6raymin6ref",
+      "published": "Thu, 10 Sep 2026 01:55:33 +0000",
+      "published_parsed": "2026-09-10"
     },
     {
       "title": "OpenCode Go 请求失败？NewAPI 中转配置 x-opencode-session 请求头教程",
@@ -482,7 +549,6 @@
       "published_parsed": "2026-09-04"
     }
   ],
-  "https://wangyurui.com": [],
   "https://yipai.me": [],
   "https://pathos.page": [],
   "https://blog.bxaw.name": [
@@ -497,32 +563,6 @@
       "link": "https://blog.bxaw.name/archives/I-Know-Why-You-Dont-Like-Me.html",
       "published": "Mon, 31 Aug 2026 02:42:00 +0800",
       "published_parsed": "2026-08-30"
-    }
-  ],
-  "https://sliun.com": [
-    {
-      "title": "外星人是不是拉稀的（下）？",
-      "link": "https://sliun.com/etshit2/",
-      "published": "2026-09-19T14:58:00+00:00",
-      "published_parsed": "2026-09-19"
-    },
-    {
-      "title": "人工智能的意识算什么？",
-      "link": "https://sliun.com/aithinkno/",
-      "published": "2026-09-13T03:31:00+00:00",
-      "published_parsed": "2026-09-13"
-    },
-    {
-      "title": "外星人是不是拉稀的（上）？",
-      "link": "https://sliun.com/etshit1/",
-      "published": "2026-09-10T14:33:00+00:00",
-      "published_parsed": "2026-09-10"
-    },
-    {
-      "title": "问题的生成（四）",
-      "link": "https://sliun.com/problemmake4/",
-      "published": "2026-09-05T07:25:00+00:00",
-      "published_parsed": "2026-09-05"
     }
   ],
   "https://d-d.design": [
@@ -587,10 +627,40 @@
       "published_parsed": "2026-09-05"
     }
   ],
-  "https://www.glowisle.me": [],
   "https://yihui.org/cn": [],
-  "https://www.scarsu.com": [],
+  "https://www.glowisle.me": [],
+  "https://www.demochen.com": [],
   "https://z.arlmy.me": [
+    {
+      "title": "Toots 438 2026 Sep.20 - Sep.26",
+      "link": "https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260926/",
+      "published": "2026-09-27T13:43:27.000Z",
+      "published_parsed": "2026-09-27"
+    },
+    {
+      "title": "入蜀记 day488 非中非欧美",
+      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_488/",
+      "published": "2026-09-27T13:37:27.000Z",
+      "published_parsed": "2026-09-27"
+    },
+    {
+      "title": "入蜀记 day487 多、小、控、熵、逆",
+      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_487/",
+      "published": "2026-09-27T13:32:27.000Z",
+      "published_parsed": "2026-09-27"
+    },
+    {
+      "title": "入蜀记 day486 潮湿",
+      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_486/",
+      "published": "2026-09-27T13:29:27.000Z",
+      "published_parsed": "2026-09-27"
+    },
+    {
+      "title": "入蜀记 day485 海鲜pasta",
+      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_485/",
+      "published": "2026-09-27T13:27:27.000Z",
+      "published_parsed": "2026-09-27"
+    },
     {
       "title": "入蜀记 day484 桂香入肺",
       "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_484/",
@@ -836,22 +906,54 @@
       "link": "https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260829/",
       "published": "2026-08-30T15:36:27.000Z",
       "published_parsed": "2026-08-30"
-    },
-    {
-      "title": "入蜀记 day463 BIGGER Art Fair",
-      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_463/",
-      "published": "2026-08-30T08:00:27.000Z",
-      "published_parsed": "2026-08-30"
-    },
-    {
-      "title": "入蜀记 day462 猎人与ADHD",
-      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_462/",
-      "published": "2026-08-29T15:30:27.000Z",
-      "published_parsed": "2026-08-29"
     }
   ],
-  "https://www.demochen.com": [],
+  "https://www.scarsu.com": [],
+  "https://sliun.com": [
+    {
+      "title": "问题的生成（五）",
+      "link": "https://sliun.com/problemmake5/",
+      "published": "2026-09-26T14:25:00+00:00",
+      "published_parsed": "2026-09-26"
+    },
+    {
+      "title": "外星人是不是拉稀的（下）？",
+      "link": "https://sliun.com/etshit2/",
+      "published": "2026-09-19T14:58:00+00:00",
+      "published_parsed": "2026-09-19"
+    },
+    {
+      "title": "人工智能的意识算什么？",
+      "link": "https://sliun.com/aithinkno/",
+      "published": "2026-09-13T03:31:00+00:00",
+      "published_parsed": "2026-09-13"
+    },
+    {
+      "title": "外星人是不是拉稀的（上）？",
+      "link": "https://sliun.com/etshit1/",
+      "published": "2026-09-10T14:33:00+00:00",
+      "published_parsed": "2026-09-10"
+    },
+    {
+      "title": "问题的生成（四）",
+      "link": "https://sliun.com/problemmake4/",
+      "published": "2026-09-05T07:25:00+00:00",
+      "published_parsed": "2026-09-05"
+    }
+  ],
   "https://blog.solazy.me": [
+    {
+      "title": "前挡玻璃上的划痕",
+      "link": "https://blog.solazy.me/20260927/",
+      "published": "2026-09-27T09:00:00+00:00",
+      "published_parsed": "2026-09-27"
+    },
+    {
+      "title": "没有一劳永逸的习惯",
+      "link": "https://blog.solazy.me/20260926/",
+      "published": "2026-09-26T15:00:00+00:00",
+      "published_parsed": "2026-09-26"
+    },
     {
       "title": "中秋快乐",
       "link": "https://blog.solazy.me/20260925/",
@@ -899,21 +1001,8 @@
       "link": "https://blog.solazy.me/20260915/",
       "published": "2026-09-15T15:00:00+00:00",
       "published_parsed": "2026-09-15"
-    },
-    {
-      "title": "细数一下我所有的离职瞬间",
-      "link": "https://blog.solazy.me/20260914/",
-      "published": "2026-09-14T15:00:00+00:00",
-      "published_parsed": "2026-09-14"
-    },
-    {
-      "title": "周末流水账 0913",
-      "link": "https://blog.solazy.me/20260913/",
-      "published": "2026-09-13T14:00:00+00:00",
-      "published_parsed": "2026-09-13"
     }
   ],
-  "https://www.owenyoung.com": [],
   "https://cyrus19.cc": [
     {
       "title": "古老的光明与黑暗之魂已经释放",
@@ -922,6 +1011,7 @@
       "published_parsed": "2026-09-17"
     }
   ],
+  "https://www.owenyoung.com": [],
   "https://blog.cytrogen.icu": [
     {
       "title": "写作不是唯一的表达方式",
@@ -988,15 +1078,15 @@
       "link": "https://blog.cytrogen.icu/posts/ee8d.html",
       "published": "2026-09-02T17:16:00.000Z",
       "published_parsed": "2026-09-02"
-    },
-    {
-      "title": "RE：The ordinariness of evil",
-      "link": "https://blog.cytrogen.icu/posts/f9e7.html",
-      "published": "2026-08-30T01:00:00.000Z",
-      "published_parsed": "2026-08-30"
     }
   ],
   "https://immarcus.com": [
+    {
+      "title": "2026.09.27 博客阅读周荐 - Jaron Writes",
+      "link": "https://www.immarcus.com/blog/weekly-20260927",
+      "published": "Sun, 27 Sep 2026 00:00:00 GMT",
+      "published_parsed": "2026-09-27"
+    },
     {
       "title": "美国的「医疗斩杀线」是否存在",
       "link": "https://www.immarcus.com/blog/does-medical-kill-threshold-exist-in-usa",
@@ -1158,12 +1248,6 @@
       "link": "https://www.immarcus.com/blog/catch-of-ballots",
       "published": "Mon, 31 Aug 2026 00:00:00 GMT",
       "published_parsed": "2026-08-31"
-    },
-    {
-      "title": "座次考试",
-      "link": "https://www.immarcus.com/blog/seating-audition",
-      "published": "Sun, 30 Aug 2026 00:00:00 GMT",
-      "published_parsed": "2026-08-30"
     }
   ]
 }
