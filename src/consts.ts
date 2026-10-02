@@ -12,7 +12,7 @@ export const META_DESCRIPTION = SITE_DESCRIPTION;
 export const META_KEYWORDS = 'Python,JavaScript,程序员,Godot,编程,技术博客,学习笔记,碎言,哲学,人生,成长';
 export const PROFILE_IMAGE = 'assets/images/avatar.png';
 export const POSTS_PER_PAGE = 25;
-export const HOME_POSTS_COUNT = 16;
+export const HOME_POSTS_COUNT = 20;
 
 // 页面标题和描述
 export const LINKS_PAGE_TITLE = 'Links';
