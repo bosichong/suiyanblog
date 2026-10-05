@@ -1,4 +1,12 @@
 {
+  "https://www.ntiy.com": [
+    {
+      "title": "关于“摄影”和“摄影大赛获奖作品”的一些想法",
+      "link": "https://www.ntiy.com/2377.html",
+      "published": "Fri, 18 Sep 2026 06:22:44 +0000",
+      "published_parsed": "2026-09-18"
+    }
+  ],
   "https://www.leitao.cn": [
     {
       "title": "近日杂记之20260920",
@@ -37,12 +45,66 @@
       "published_parsed": "2026-09-07"
     }
   ],
-  "https://www.ntiy.com": [
+  "https://Vind.ink": [
     {
-      "title": "关于“摄影”和“摄影大赛获奖作品”的一些想法",
-      "link": "https://www.ntiy.com/2377.html",
-      "published": "Fri, 18 Sep 2026 06:22:44 +0000",
-      "published_parsed": "2026-09-18"
+      "title": "富士展览 2023 10 建筑",
+      "link": "https://vind.ink/photos/Fujifilm-show-2023-10.html",
+      "published": "Sun, 04 Oct 2026 21:30:00 +0800",
+      "published_parsed": "2026-10-04"
+    },
+    {
+      "title": "富士展览 2023 9",
+      "link": "https://vind.ink/photos/Fujifilm-show-2023-09.html",
+      "published": "Sat, 03 Oct 2026 13:18:00 +0800",
+      "published_parsed": "2026-10-03"
+    },
+    {
+      "title": "2026年9月运动月报",
+      "link": "https://vind.ink/photos/202609sports.html",
+      "published": "Thu, 01 Oct 2026 21:50:00 +0800",
+      "published_parsed": "2026-10-01"
+    },
+    {
+      "title": "富士展览 2023 7 翻拍油画",
+      "link": "https://vind.ink/photos/Fujifilm-show-2023-07.html",
+      "published": "Thu, 01 Oct 2026 16:37:00 +0800",
+      "published_parsed": "2026-10-01"
+    },
+    {
+      "title": "照片加载速度调查",
+      "link": "https://vind.ink/Status/683.html",
+      "published": "Thu, 01 Oct 2026 11:22:00 +0800",
+      "published_parsed": "2026-10-01"
+    },
+    {
+      "title": "富士展览 2023 6 风光 II",
+      "link": "https://vind.ink/photos/Fujifilm-show-2023-06.html",
+      "published": "Wed, 30 Sep 2026 11:36:00 +0800",
+      "published_parsed": "2026-09-30"
+    },
+    {
+      "title": "相册程序更新 V0.6",
+      "link": "https://vind.ink/Status/Gallary-update-06.html",
+      "published": "Tue, 29 Sep 2026 23:10:00 +0800",
+      "published_parsed": "2026-09-29"
+    },
+    {
+      "title": "长猫模型办不了事（有更新）",
+      "link": "https://vind.ink/AI-tools/longcat-cannot-work.html",
+      "published": "Tue, 29 Sep 2026 18:27:00 +0800",
+      "published_parsed": "2026-09-29"
+    },
+    {
+      "title": "富士展览 2023 5 风光 I",
+      "link": "https://vind.ink/photos/Fujifilm-show-2023-05.html",
+      "published": "Mon, 28 Sep 2026 21:32:00 +0800",
+      "published_parsed": "2026-09-28"
+    },
+    {
+      "title": "富士展览 2023 4 打鸟",
+      "link": "https://vind.ink/photos/Fujifilm-show-2023-04.html",
+      "published": "Sun, 27 Sep 2026 09:37:00 +0800",
+      "published_parsed": "2026-09-27"
     }
   ],
   "https://liwanr.com": [
@@ -105,68 +167,6 @@
       "link": "https://liWanr.com/essays/2026/kite/",
       "published": "Sun, 27 Sep 2026 09:26:49 +0000",
       "published_parsed": "2026-09-27"
-    }
-  ],
-  "https://Vind.ink": [
-    {
-      "title": "富士展览 2023 9",
-      "link": "https://vind.ink/photos/Fujifilm-show-2023-09.html",
-      "published": "Sat, 03 Oct 2026 13:18:00 +0800",
-      "published_parsed": "2026-10-03"
-    },
-    {
-      "title": "2026年9月运动月报",
-      "link": "https://vind.ink/photos/202609sports.html",
-      "published": "Thu, 01 Oct 2026 21:50:00 +0800",
-      "published_parsed": "2026-10-01"
-    },
-    {
-      "title": "富士展览 2023 7 翻拍油画",
-      "link": "https://vind.ink/photos/Fujifilm-show-2023-07.html",
-      "published": "Thu, 01 Oct 2026 16:37:00 +0800",
-      "published_parsed": "2026-10-01"
-    },
-    {
-      "title": "照片加载速度调查",
-      "link": "https://vind.ink/Status/683.html",
-      "published": "Thu, 01 Oct 2026 11:22:00 +0800",
-      "published_parsed": "2026-10-01"
-    },
-    {
-      "title": "富士展览 2023 6 风光 II",
-      "link": "https://vind.ink/photos/Fujifilm-show-2023-06.html",
-      "published": "Wed, 30 Sep 2026 11:36:00 +0800",
-      "published_parsed": "2026-09-30"
-    },
-    {
-      "title": "相册程序更新 V0.6",
-      "link": "https://vind.ink/Status/Gallary-update-06.html",
-      "published": "Tue, 29 Sep 2026 23:10:00 +0800",
-      "published_parsed": "2026-09-29"
-    },
-    {
-      "title": "长猫模型办不了事（有更新）",
-      "link": "https://vind.ink/AI-tools/longcat-cannot-work.html",
-      "published": "Tue, 29 Sep 2026 18:27:00 +0800",
-      "published_parsed": "2026-09-29"
-    },
-    {
-      "title": "富士展览 2023 5 风光 I",
-      "link": "https://vind.ink/photos/Fujifilm-show-2023-05.html",
-      "published": "Mon, 28 Sep 2026 21:32:00 +0800",
-      "published_parsed": "2026-09-28"
-    },
-    {
-      "title": "富士展览 2023 4 打鸟",
-      "link": "https://vind.ink/photos/Fujifilm-show-2023-04.html",
-      "published": "Sun, 27 Sep 2026 09:37:00 +0800",
-      "published_parsed": "2026-09-27"
-    },
-    {
-      "title": "富士展览 2023 3 天使人像",
-      "link": "https://vind.ink/photos/Fujifilm-show-2023-03.html",
-      "published": "Fri, 25 Sep 2026 15:24:00 +0800",
-      "published_parsed": "2026-09-25"
     }
   ],
   "https://mobius.blog": [
@@ -473,27 +473,33 @@
       "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_472/",
       "published": "2026-09-07T16:13:27.000Z",
       "published_parsed": "2026-09-07"
-    },
-    {
-      "title": "入蜀记 day471 白露、快降温、冰糖雪梨",
-      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_471/",
-      "published": "2026-09-06T16:11:27.000Z",
-      "published_parsed": "2026-09-06"
-    },
-    {
-      "title": "Toots 435 2026 Aug.30 - Sep.5",
-      "link": "https://z.arlmy.me/posts/MastodonArchives/2026/MastodonTootsArchives_20260905/",
-      "published": "2026-09-06T14:56:27.000Z",
-      "published_parsed": "2026-09-06"
-    },
-    {
-      "title": "入蜀记 day470 处境是一种外来的东西",
-      "link": "https://z.arlmy.me/posts/BBBPandINSW/INSW-ko/INSW_470/",
-      "published": "2026-09-06T08:09:27.000Z",
-      "published_parsed": "2026-09-06"
     }
   ],
   "https://wiki.eryajf.net": [
+    {
+      "title": "学习周刊-总第285期-2026年第42周",
+      "link": "https://wiki.eryajf.net/pages/6be37e/",
+      "published": "Thu, 15 Oct 2026 11:38:56 GMT",
+      "published_parsed": "2026-10-15"
+    },
+    {
+      "title": "学习周刊-总第284期-2026年第41周",
+      "link": "https://wiki.eryajf.net/pages/fdfe24/",
+      "published": "Thu, 08 Oct 2026 11:37:56 GMT",
+      "published_parsed": "2026-10-08"
+    },
+    {
+      "title": "学习周刊-总第283期-2026年第40周",
+      "link": "https://wiki.eryajf.net/pages/be530a/",
+      "published": "Thu, 01 Oct 2026 11:36:56 GMT",
+      "published_parsed": "2026-10-01"
+    },
+    {
+      "title": "学习周刊-总第282期-2026年第39周",
+      "link": "https://wiki.eryajf.net/pages/fe2bb1/",
+      "published": "Thu, 24 Sep 2026 11:35:42 GMT",
+      "published_parsed": "2026-09-24"
+    },
     {
       "title": "学习周刊-总第281期-2026年第38周",
       "link": "https://wiki.eryajf.net/pages/f4b3b4/",
@@ -514,6 +520,102 @@
     }
   ],
   "https://wangyurui.com": [],
+  "https://blog.mfwt.top": [
+    {
+      "title": "生活碎碎念：在夹缝里成长的人",
+      "link": "https://blog.mfwt.top/index.php/archives/1518/",
+      "published": "Thu, 01 Oct 2026 19:39:00 +0800",
+      "published_parsed": "2026-10-01"
+    },
+    {
+      "title": "如何寻找与选购免执照的 409MHz 公众对讲机",
+      "link": "https://blog.mfwt.top/index.php/archives/1640/",
+      "published": "Sun, 27 Sep 2026 21:05:00 +0800",
+      "published_parsed": "2026-09-27"
+    },
+    {
+      "title": "博客三周年，依旧是一些记录",
+      "link": "https://blog.mfwt.top/index.php/archives/1633/",
+      "published": "Thu, 24 Sep 2026 23:58:36 +0800",
+      "published_parsed": "2026-09-24"
+    },
+    {
+      "title": "博客接入 Google AdSense：初体验并不好",
+      "link": "https://blog.mfwt.top/index.php/archives/1617/",
+      "published": "Sun, 20 Sep 2026 21:57:00 +0800",
+      "published_parsed": "2026-09-20"
+    },
+    {
+      "title": "当苍蝇尝试在蛋上钻缝：又谈站点垃圾广告",
+      "link": "https://blog.mfwt.top/index.php/archives/1598/",
+      "published": "Fri, 18 Sep 2026 15:56:00 +0800",
+      "published_parsed": "2026-09-18"
+    },
+    {
+      "title": "无用命途：自制三天王",
+      "link": "https://blog.mfwt.top/index.php/archives/1546/",
+      "published": "Sat, 12 Sep 2026 23:56:19 +0800",
+      "published_parsed": "2026-09-12"
+    },
+    {
+      "title": "小论博客的更新速度",
+      "link": "https://blog.mfwt.top/index.php/archives/1582/",
+      "published": "Mon, 07 Sep 2026 21:20:54 +0800",
+      "published_parsed": "2026-09-07"
+    }
+  ],
+  "https://www.tjsky.net": [
+    {
+      "title": "碎碎谈 · 9月27日 17:55",
+      "link": "https://www.tjsky.net/shuoshuo/j9jldpwbbdrhgqvhsb3yv5",
+      "published": "Sun, 27 Sep 2026 09:55:48 +0000",
+      "published_parsed": "2026-09-27"
+    },
+    {
+      "title": "碎碎谈 · 9月21日 11:49",
+      "link": "https://www.tjsky.net/shuoshuo/d6iofcapbngtqnvcqdlhpw",
+      "published": "Mon, 21 Sep 2026 03:49:03 +0000",
+      "published_parsed": "2026-09-21"
+    },
+    {
+      "title": "服务器 CPU 占用异常排查实录：从误杀 Wordfence 到抓出 FreshRSS 死循环",
+      "link": "https://www.tjsky.net/tutorial/1971",
+      "published": "Sat, 19 Sep 2026 16:19:50 +0000",
+      "published_parsed": "2026-09-19"
+    },
+    {
+      "title": "升级 VMware Workstation 的九九八十一难：幽灵虚拟机、1603 报错和手工装 Tools",
+      "link": "https://www.tjsky.net/tutorial/1938",
+      "published": "Mon, 14 Sep 2026 03:42:01 +0000",
+      "published_parsed": "2026-09-14"
+    },
+    {
+      "title": "GLM-5.3-Flash 可能比 DeepSeek-V4.1-Flash 还贵，价格表和实际场景不是一回事",
+      "link": "https://www.tjsky.net/ai/1928",
+      "published": "Sun, 13 Sep 2026 03:36:34 +0000",
+      "published_parsed": "2026-09-13"
+    },
+    {
+      "title": "OpenCode Go 请求失败？NewAPI 中转配置 x-opencode-session 请求头教程",
+      "link": "https://www.tjsky.net/tutorial/1905",
+      "published": "Tue, 08 Sep 2026 01:03:36 +0000",
+      "published_parsed": "2026-09-08"
+    }
+  ],
+  "https://www.vergilisme.com": [
+    {
+      "title": "忒修斯机箱",
+      "link": "https://www.vergilisme.com/index.php/2026/09/30/2406.html",
+      "published": "Wed, 30 Sep 2026 11:53:00 +0800",
+      "published_parsed": "2026-09-30"
+    },
+    {
+      "title": "替身式数据库连接",
+      "link": "https://www.vergilisme.com/index.php/2026/09/24/2403.html",
+      "published": "Thu, 24 Sep 2026 14:30:00 +0800",
+      "published_parsed": "2026-09-24"
+    }
+  ],
   "https://www.tortorse.com": [
     {
       "title": "2005，网页那一头",
@@ -614,116 +716,6 @@
       "published_parsed": "2026-09-07"
     }
   ],
-  "https://blog.mfwt.top": [
-    {
-      "title": "生活碎碎念：在夹缝里成长的人",
-      "link": "https://blog.mfwt.top/index.php/archives/1518/",
-      "published": "Thu, 01 Oct 2026 19:39:00 +0800",
-      "published_parsed": "2026-10-01"
-    },
-    {
-      "title": "如何寻找与选购免执照的 409MHz 公众对讲机",
-      "link": "https://blog.mfwt.top/index.php/archives/1640/",
-      "published": "Sun, 27 Sep 2026 21:05:00 +0800",
-      "published_parsed": "2026-09-27"
-    },
-    {
-      "title": "博客三周年，依旧是一些记录",
-      "link": "https://blog.mfwt.top/index.php/archives/1633/",
-      "published": "Thu, 24 Sep 2026 23:58:36 +0800",
-      "published_parsed": "2026-09-24"
-    },
-    {
-      "title": "博客接入 Google AdSense：初体验并不好",
-      "link": "https://blog.mfwt.top/index.php/archives/1617/",
-      "published": "Sun, 20 Sep 2026 21:57:00 +0800",
-      "published_parsed": "2026-09-20"
-    },
-    {
-      "title": "当苍蝇尝试在蛋上钻缝：又谈站点垃圾广告",
-      "link": "https://blog.mfwt.top/index.php/archives/1598/",
-      "published": "Fri, 18 Sep 2026 15:56:00 +0800",
-      "published_parsed": "2026-09-18"
-    },
-    {
-      "title": "无用命途：自制三天王",
-      "link": "https://blog.mfwt.top/index.php/archives/1546/",
-      "published": "Sat, 12 Sep 2026 23:56:19 +0800",
-      "published_parsed": "2026-09-12"
-    },
-    {
-      "title": "小论博客的更新速度",
-      "link": "https://blog.mfwt.top/index.php/archives/1582/",
-      "published": "Mon, 07 Sep 2026 21:20:54 +0800",
-      "published_parsed": "2026-09-07"
-    }
-  ],
-  "https://www.tjsky.net": [
-    {
-      "title": "碎碎谈 · 9月27日 17:55",
-      "link": "https://www.tjsky.net/shuoshuo/j9jldpwbbdrhgqvhsb3yv5",
-      "published": "Sun, 27 Sep 2026 09:55:48 +0000",
-      "published_parsed": "2026-09-27"
-    },
-    {
-      "title": "碎碎谈 · 9月21日 11:49",
-      "link": "https://www.tjsky.net/shuoshuo/d6iofcapbngtqnvcqdlhpw",
-      "published": "Mon, 21 Sep 2026 03:49:03 +0000",
-      "published_parsed": "2026-09-21"
-    },
-    {
-      "title": "服务器 CPU 占用异常排查实录：从误杀 Wordfence 到抓出 FreshRSS 死循环",
-      "link": "https://www.tjsky.net/tutorial/1971",
-      "published": "Sat, 19 Sep 2026 16:19:50 +0000",
-      "published_parsed": "2026-09-19"
-    },
-    {
-      "title": "升级 VMware Workstation 的九九八十一难：幽灵虚拟机、1603 报错和手工装 Tools",
-      "link": "https://www.tjsky.net/tutorial/1938",
-      "published": "Mon, 14 Sep 2026 03:42:01 +0000",
-      "published_parsed": "2026-09-14"
-    },
-    {
-      "title": "GLM-5.3-Flash 可能比 DeepSeek-V4.1-Flash 还贵，价格表和实际场景不是一回事",
-      "link": "https://www.tjsky.net/ai/1928",
-      "published": "Sun, 13 Sep 2026 03:36:34 +0000",
-      "published_parsed": "2026-09-13"
-    },
-    {
-      "title": "OpenCode Go 请求失败？NewAPI 中转配置 x-opencode-session 请求头教程",
-      "link": "https://www.tjsky.net/tutorial/1905",
-      "published": "Tue, 08 Sep 2026 01:03:36 +0000",
-      "published_parsed": "2026-09-08"
-    }
-  ],
-  "https://www.vergilisme.com": [
-    {
-      "title": "忒修斯机箱",
-      "link": "https://www.vergilisme.com/index.php/2026/09/30/2406.html",
-      "published": "Wed, 30 Sep 2026 11:53:00 +0800",
-      "published_parsed": "2026-09-30"
-    },
-    {
-      "title": "替身式数据库连接",
-      "link": "https://www.vergilisme.com/index.php/2026/09/24/2403.html",
-      "published": "Thu, 24 Sep 2026 14:30:00 +0800",
-      "published_parsed": "2026-09-24"
-    }
-  ],
-  "https://usj.cc": [
-    {
-      "title": "评论组件被人恶意sql注入，25端口被封，邮件无法发信",
-      "link": "https://usj.cc/202610021614.html",
-      "published": "Fri, 02 Oct 2026 00:00:00 +0000",
-      "published_parsed": "2026-10-02"
-    },
-    {
-      "title": "测试部署",
-      "link": "https://usj.cc/202610012049.html",
-      "published": "Thu, 01 Oct 2026 00:00:00 +0000",
-      "published_parsed": "2026-10-01"
-    }
-  ],
   "https://lawtee.com": [
     {
       "title": "绿水青山里边的“山”到底应该是哪些树构成？",
@@ -783,7 +775,22 @@
       "published_parsed": "2026-09-10"
     }
   ],
+  "https://cyrus19.cc": [
+    {
+      "title": "《最后生还者Part1》补完记录",
+      "link": "https://cyrus19.cc/archives/2100",
+      "published": "Mon, 28 Sep 2026 07:57:36 +0000",
+      "published_parsed": "2026-09-28"
+    },
+    {
+      "title": "古老的光明与黑暗之魂已经释放",
+      "link": "https://cyrus19.cc/archives/2090",
+      "published": "Thu, 17 Sep 2026 06:08:32 +0000",
+      "published_parsed": "2026-09-17"
+    }
+  ],
   "https://pathos.page": [],
+  "https://yihui.org/cn": [],
   "https://d-d.design": [
     {
       "title": "吉隆坡之行",
@@ -841,11 +848,24 @@
     }
   ],
   "https://blog.bxaw.name": [],
-  "https://yihui.org/cn": [],
+  "https://usj.cc": [],
+  "https://www.owenyoung.com": [],
   "https://www.glowisle.me": [],
   "https://www.demochen.com": [],
   "https://www.scarsu.com": [],
   "https://blog.solazy.me": [
+    {
+      "title": "莫名其妙的优越感",
+      "link": "https://blog.solazy.me/20261003/",
+      "published": "2026-10-03T15:00:00+00:00",
+      "published_parsed": "2026-10-03"
+    },
+    {
+      "title": "放弃是需要筹码的",
+      "link": "https://blog.solazy.me/20261002/",
+      "published": "2026-10-02T15:00:00+00:00",
+      "published_parsed": "2026-10-02"
+    },
     {
       "title": "久违的电影日",
       "link": "https://blog.solazy.me/20261001/",
@@ -893,35 +913,15 @@
       "link": "https://blog.solazy.me/20260923/",
       "published": "2026-09-23T13:30:00+00:00",
       "published_parsed": "2026-09-23"
-    },
-    {
-      "title": "写在两份工作的 Gap 之时",
-      "link": "https://blog.solazy.me/20260921/",
-      "published": "2026-09-21T06:00:00+00:00",
-      "published_parsed": "2026-09-21"
-    },
-    {
-      "title": "或许没人关心的细节",
-      "link": "https://blog.solazy.me/20260920/",
-      "published": "2026-09-20T15:00:00+00:00",
-      "published_parsed": "2026-09-20"
-    }
-  ],
-  "https://cyrus19.cc": [
-    {
-      "title": "《最后生还者Part1》补完记录",
-      "link": "https://cyrus19.cc/archives/2100",
-      "published": "Mon, 28 Sep 2026 07:57:36 +0000",
-      "published_parsed": "2026-09-28"
-    },
-    {
-      "title": "古老的光明与黑暗之魂已经释放",
-      "link": "https://cyrus19.cc/archives/2090",
-      "published": "Thu, 17 Sep 2026 06:08:32 +0000",
-      "published_parsed": "2026-09-17"
     }
   ],
   "https://immarcus.com": [
+    {
+      "title": "网约车司机",
+      "link": "https://www.immarcus.com/blog/uber-driver-russian",
+      "published": "Sun, 04 Oct 2026 00:00:00 GMT",
+      "published_parsed": "2026-10-04"
+    },
     {
       "title": "最重要的一篇作文",
       "link": "https://www.immarcus.com/blog/one-most-important-composition",
@@ -1077,12 +1077,6 @@
       "link": "https://www.immarcus.com/blog/modern-slavery",
       "published": "Tue, 08 Sep 2026 00:00:00 GMT",
       "published_parsed": "2026-09-08"
-    },
-    {
-      "title": "Geometry Dash",
-      "link": "https://www.immarcus.com/blog/geometry-dash",
-      "published": "Mon, 07 Sep 2026 00:00:00 GMT",
-      "published_parsed": "2026-09-07"
     }
   ],
   "https://blog.cytrogen.icu": [
@@ -1146,6 +1140,5 @@
       "published": "2026-09-10T05:02:00.000Z",
       "published_parsed": "2026-09-10"
     }
-  ],
-  "https://www.owenyoung.com": []
+  ]
 }
