@@ -28,7 +28,7 @@
 │   ├── pages/                # 路由页面
 │   ├── styles/               # 全局样式
 │   ├── utils/                # 工具函数（date / readingTime / slugify）
-│   └── consts.ts             # 站点全局常量（菜单、友链、AI 标识、评论配置等）
+│   └── consts.ts             # 站点全局常量（菜单、链接、AI 标识、评论配置等）
 ├── scripts/                  # Node 脚本（搜索索引、新建文章等）
 ├── public/                   # 静态资源
 └── astro.config.mjs          # Astro 配置

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""采集友链 RSS 最近一个月文章，输出到 src/data/rss_data.json，供 links.astro 动态排序展示"""
+"""采集链接 RSS 最近一个月文章，输出到 src/data/rss_data.json，供 links.astro 动态排序展示"""
 
 import feedparser
 import requests
@@ -23,14 +23,14 @@ def tag(t, msg):
     print(f"[{t:>5}] {msg}")
 
 
-def parse_friends():
-    """从 consts.ts 解析出友链列表"""
+def parse_links():
+    """从 consts.ts 解析出链接列表"""
     with open(CONSTS_PATH, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    array_start = content.find('export const FRIENDS_LINKS = [')
+    array_start = content.find('export const LINKS = [')
     if array_start == -1:
-        tag('ERROR', 'FRIENDS_LINKS not found in consts.ts')
+        tag('ERROR', 'LINKS not found in consts.ts')
         sys.exit(1)
 
     bracket_start = content.index('[', array_start)
@@ -47,7 +47,7 @@ def parse_friends():
 
     array_body = content[bracket_start + 1:array_end - 1]
 
-    friends = []
+    links = []
     i = 0
     while i < len(array_body):
         ch = array_body[i]
@@ -67,7 +67,7 @@ def parse_friends():
                         site_name = m2.group(1) if m2 else ''
                         m3 = re.search(r"rss:\s*'([^']+)'", block)
                         rss_url = m3.group(1) if m3 else '#'
-                        friends.append({
+                        links.append({
                             'name': site_name,
                             'site_url': site_url,
                             'rss': rss_url,
@@ -77,7 +77,7 @@ def parse_friends():
         else:
             i += 1
 
-    return friends
+    return links
 
 
 def normalize_datetime(published_str):
@@ -150,13 +150,13 @@ def main():
     start_time = datetime.now()
     tag('INFO', f'RSS 采集开始')
 
-    friends = parse_friends()
-    tag('INFO', f'共 {len(friends)} 个友链')
+    links = parse_links()
+    tag('INFO', f'共 {len(links)} 个链接')
 
     # 分类：有 RSS vs 跳过
     feed_tasks = []
     skipped = []
-    for b in friends:
+    for b in links:
         if b['rss'] and b['rss'] != '#':
             feed_tasks.append(b)
         else:
@@ -217,7 +217,7 @@ def main():
     print(f'   RSS 采集报告')
     print(f'{sep}')
     print(f'   时间:     {start_time.strftime("%Y-%m-%d %H:%M:%S")}')
-    print(f'   总站点:   {len(friends)}')
+    print(f'   总站点:   {len(links)}')
     print(f'   有 RSS:   {len(feed_tasks)}')
     print(f'   成功:     {len(feed_tasks) - len(failures)}')
     print(f'   失败:     {len(failures)}')
