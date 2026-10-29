@@ -144,14 +144,6 @@ export const LINKS = [
     rss:'https://www.tortorse.com/atom.xml',
   },
 
-  {
-    site_name: '二丫讲梵',
-    site_url: 'https://wiki.eryajf.net',
-    site_description: '💻学习📝记录🔗分享',
-    site_avatar: 'https://wiki.eryajf.net/img/logo.png',
-    is_active: true,
-    rss:'https://wiki.eryajf.net/rss.xml',
-  },
 
 {
     site_name: '枫林灯语',
