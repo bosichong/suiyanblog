@@ -381,6 +381,11 @@ export const BLOG_AGGREGATIONS = [
     site_name: '十年之约',
     site_url: 'https://www.foreverblog.cn',
     site_description: '十年之约 · 一个人的寂寞，一群人的狂欢。'
+  },
+  {
+    site_name: '博客汇',
+    site_url: 'https://bloghui.com/',
+    site_description: '万博汇聚，一源知新。通过 RSS 汇集独立博客的最新文章，让好文章不被错过。'
   }
 ];
 
