@@ -198,8 +198,7 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 
 				<section>
 					<h2>关于我</h2>
-					<p>几时归去，作个闲人。对一张琴，一壶酒，一溪云。</p>
-					<p>—— 这里是一位喜欢哲学、画画和写代码的程序猿老登的碎言片语。</p>
+					<p>我会在这里记录一些碎言片语，记录一些奇怪的想法和生活点滴。</p>
 				</section>
 
 				<section>
@@ -299,6 +298,9 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 					<details>
 						<summary>博客优化日志</summary>
 						<ul>
+							<li>
+								<strong>2026-11-03</strong> 再次精简了博客的样式和功能，移除了不必要的依赖和组件，进一步提升了性能和加载速度。
+							</li>
 							<li>
 								<strong>2026-07-11</strong> 亮色主题全面翻新：强调色从赭石黄（#b5651d）换为靛蓝（#4f46e5），背景从暖黄奶油色换为冷调灰白（#f0f2f5），整体更清爽干净。暗色主题重新定调：背景从纯黑（#171717）调亮为暖灰（#2d2d32），各层级颜色同步提亮，区块背景（--bg-soft）提至 #404045 与页面底色形成明显区分，移除阴影使界面更平整。修复多处配色问题：硬编码 RGBA 波浪下划线和链接下划线改用 CSS 变量自适应主题；暗色下白字绿底对比度不足 → 新增 --accent-text 变量统一治理；archive/tags 徽章暗色灰字修白；about 赞赏按钮 hover 暗色不可见修绿底；表格表头暗色透明度从 15% 提至 25%。Giscus 评论暗色主题从 dark 换为 dark_dimmed。卡片背景从 var(--header-bg) 统一改为 var(--bg-soft)，覆盖 links/about/blog/archive/search/tags/sponsors 等页面，暗色下卡片与页面底层次分明。
 							</li>
