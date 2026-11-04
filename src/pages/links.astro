@@ -12,6 +12,19 @@ import {
 	SITE_DESCRIPTION,
 	SITE_TITLE
 } from '../consts';
+
+// 洗牌：返回打乱顺序后的新数组（不修改原数组）
+function shuffle<T>(items: readonly T[]): T[] {
+	const result = [...items];
+	for (let i = result.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[result[i], result[j]] = [result[j], result[i]];
+	}
+	return result;
+}
+
+const shuffledLinks = shuffle(LINKS);
+const shuffledBlogAggregations = shuffle(BLOG_AGGREGATIONS);
 ---
 
 <!doctype html>
@@ -129,7 +142,7 @@ import {
 						<p>{LINKS_PAGE_DESCRIPTION}</p>
 					</hgroup>
 					<ul class="link-list">
-						{LINKS.map(link => (
+						{shuffledLinks.map(link => (
 							<li>
 								<a href={link.site_url} target="_blank" rel="noopener noreferrer">
 									<span>{link.site_name}</span>
@@ -154,7 +167,7 @@ import {
 						<p>{BLOG_AGGREGATION_DESCRIPTION}</p>
 					</hgroup>
 					<ul class="link-list">
-						{BLOG_AGGREGATIONS.map(link => (
+						{shuffledBlogAggregations.map(link => (
 							<li>
 								<a href={link.site_url} target="_blank" rel="noopener noreferrer">
 									<span>{link.site_name}</span>
