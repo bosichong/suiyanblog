@@ -26,7 +26,11 @@ const sponsorConfig = {
 <!doctype html>
 <html lang="zh-CN">
 	<head>
-		<BaseHead title={`赞赏支持 | ${SITE_TITLE}`} description="赞赏支持碎言博客" />
+		<BaseHead
+			title={`赞赏支持 | ${SITE_TITLE}`}
+			description="赞赏支持碎言博客"
+			motionMode="reveal"
+		/>
 		<style>
 			main {
 				width: 720px;
@@ -90,21 +94,21 @@ const sponsorConfig = {
 		</style>
 	</head>
 
-	<body>
+	<body data-motion-page="static">
 		<SiteShell>
-			<h1>{sponsorConfig.title}</h1>
+			<h1 data-motion-scene>{sponsorConfig.title}</h1>
 			
-			<div class="sponsor-intro">
+			<div class="sponsor-intro" data-motion-scene>
 				{sponsorConfig.description}
 			</div>
 			
-			<h2>赞赏码</h2>
-			<div class="sponsor-code">
+			<h2 data-motion-scene>赞赏码</h2>
+			<div class="sponsor-code" data-motion-scene>
 				<img src={sponsorConfig.sponsorCode} alt="赞赏码" />
 			</div>
 			
-			<h2>赞赏记录</h2>
-			<div class="sponsor-records">
+			<h2 data-motion-scene>赞赏记录</h2>
+			<div class="sponsor-records" data-motion-scene>
 				{sponsorConfig.records.length > 0 ? (
 					<table>
 						<thead>
@@ -131,5 +135,8 @@ const sponsorConfig = {
 				)}
 			</div>
 		</SiteShell>
+		<script>
+			import '../scripts/page-motion';
+		</script>
 	</body>
 </html>

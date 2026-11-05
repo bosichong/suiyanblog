@@ -8,7 +8,11 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 <!doctype html>
 <html lang="zh-CN">
 	<head>
-		<BaseHead title={`关于 | ${SITE_TITLE}`} description={`关于${SITE_TITLE}博客和博主${SITE_AUTHOR}的个人介绍`} />
+		<BaseHead
+			title={`关于 | ${SITE_TITLE}`}
+			description={`关于${SITE_TITLE}博客和博主${SITE_AUTHOR}的个人介绍`}
+			motionMode="full"
+		/>
 		<style>
 			main {
 				width: 720px;
@@ -190,19 +194,31 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 			}
 		</style>
 	</head>
-	<body>
+	<body data-motion-page="about">
 		<SiteShell>
-			<h1>About</h1>
+			<h1>
+				<span class="sr-only">About</span>
+				<span aria-hidden="true" data-motion-page-title data-typewriter>About</span>
+			</h1>
 			
 			<article>
 
-				<section>
-					<h2>关于我</h2>
-					<p>我会在这里记录一些碎言片语，记录一些奇怪的想法和生活点滴。</p>
+				<section data-motion-frame data-motion-section>
+					<h2>
+						<span class="sr-only">关于我</span>
+						<span aria-hidden="true" data-typewriter>关于我</span>
+					</h2>
+					<p>
+						<span class="sr-only">我会在这里记录一些碎言片语，记录一些奇怪的想法和生活点滴。</span>
+						<span aria-hidden="true" data-motion-intro data-typewriter>我会在这里记录一些碎言片语，记录一些奇怪的想法和生活点滴。</span>
+					</p>
 				</section>
 
-				<section>
-					<h2>近况</h2>
+				<section data-motion-frame data-motion-section>
+					<h2>
+						<span class="sr-only">近况</span>
+						<span aria-hidden="true" data-typewriter>近况</span>
+					</h2>
 					<ul>
 						<li>刚刚读完《世界简史》</li>
 						<li>正在读《人类简史》</li>
@@ -215,8 +231,11 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 					</ul>
 				</section>
 
-				<section>
-					<h2>关于博客</h2>
+				<section data-motion-frame data-motion-section>
+					<h2>
+						<span class="sr-only">关于博客</span>
+						<span aria-hidden="true" data-typewriter>关于博客</span>
+					</h2>
 					<p>
 						碎言博客的名字，取自于碎言片语。很早就建立过很多杂七杂八的网站，具体页面底下有详细的博客更新日志。
 					</p>
@@ -230,15 +249,21 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 					</ul>
 				</section>
 
-				<section>
-					<h2>RSS订阅</h2>
+				<section data-motion-frame data-motion-section>
+					<h2>
+						<span class="sr-only">RSS订阅</span>
+						<span aria-hidden="true" data-typewriter>RSS订阅</span>
+					</h2>
 					<p>
 						<a href="/feed.xml" target="_blank" rel="noopener noreferrer">http://www.suiyan.cc/feed.xml</a>
 					</p>
 				</section>
 
-				<section>
-					<h2>赞赏我</h2>
+				<section data-motion-frame data-motion-section>
+					<h2>
+						<span class="sr-only">赞赏我</span>
+						<span aria-hidden="true" data-typewriter>赞赏我</span>
+					</h2>
 					<p>如果我的文章对你有帮助，欢迎请我喝杯咖啡 ☕</p>
 					<p>
 						<a 
@@ -274,8 +299,11 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 					</style>
 				</section>
 
-				<section>
-					<h2>AI 创作等级标识</h2>
+				<section data-motion-frame data-motion-section>
+					<h2>
+						<span class="sr-only">AI 创作等级标识</span>
+						<span aria-hidden="true" data-typewriter>AI 创作等级标识</span>
+					</h2>
 					<p>
 						本站所有文章均标注 AI 创作等级，让读者清楚了解每篇文章的创作方式。
 					</p>
@@ -288,13 +316,19 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 					</ul>
 				</section>
 
-				<section>
-					<h2>联系我</h2>
+				<section data-motion-frame data-motion-section>
+					<h2>
+						<span class="sr-only">联系我</span>
+						<span aria-hidden="true" data-typewriter>联系我</span>
+					</h2>
 					<p>方式很多，详见页面底部的sns图标，欢迎留言交流。</p>
 				</section>
 
-				<section>
-					<h2>博客优化日志</h2>
+				<section data-motion-frame data-motion-section>
+					<h2>
+						<span class="sr-only">博客优化日志</span>
+						<span aria-hidden="true" data-typewriter>博客优化日志</span>
+					</h2>
 					<details>
 						<summary>博客优化日志</summary>
 						<ul>
@@ -433,5 +467,8 @@ import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR } from '../consts';
 			<hr aria-hidden="true" />
 			<PostActions postId="about" postPath="/about" />
 		</SiteShell>
+		<script>
+			import '../scripts/page-motion';
+		</script>
 	</body>
 </html>

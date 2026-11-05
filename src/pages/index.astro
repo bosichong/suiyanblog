@@ -14,7 +14,11 @@ const recentPosts = (await getCollection('blog'))
 <!doctype html>
 <html lang="zh-CN">
 	<head>
-		<BaseHead title={`首页 | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+		<BaseHead
+			title={`首页 | ${SITE_TITLE}`}
+			description={SITE_DESCRIPTION}
+			motionMode="full"
+		/>
 		<style>
 			main {
 				width: 720px;
@@ -94,23 +98,16 @@ const recentPosts = (await getCollection('blog'))
 				text-decoration: none;
 				color: var(--text-color);
 				padding: 0.6rem 0;
+				transition: color 0.2s ease, padding-left 0.2s ease;
+			}
+			.post-item:hover {
+				color: var(--accent);
+				padding-left: 0.75rem;
 			}
 			.post-line {
 				flex: 1;
 				height: 1px;
 				background: var(--border-color);
-				transition: background 1s ease;
-			}
-			@keyframes lineWipe {
-				0% { transform: scaleX(1); }
-				25% { transform: scaleX(0); }
-				50% { transform: scaleX(0); }
-				100% { transform: scaleX(1); }
-			}
-			.post-line.line-anim {
-				animation: lineWipe 0.7s ease-in-out forwards;
-				transform-origin: left;
-				background: var(--text);
 			}
 			.post-title {
 				font-size: 1.125rem;
@@ -130,7 +127,7 @@ const recentPosts = (await getCollection('blog'))
 				transition: color 0.2s ease;
 			}
 			.post-item:hover .post-date {
-				color: var(--text);
+				color: var(--accent);
 			}
 
 			@media (max-width: 720px) {
@@ -144,52 +141,40 @@ const recentPosts = (await getCollection('blog'))
 
 		</style>
 	</head>
-	<body>
+	<body data-motion-page="home">
 		<SiteShell>
-			<header class="hero">
-				<a href="/">
+			<header class="hero" data-motion-frame>
+				<a href="/" data-motion-avatar>
 					<img src="/assets/images/avatar.jpg" alt={SITE_AUTHOR} class="hero-avatar" loading="eager" fetchpriority="high" decoding="async" width="80" height="80" />
 				</a>
-				<div class="hero-text">
+				<div class="hero-text" data-motion-content>
 					<p class="hero-title">{SITE_TITLE}</p>
-					<p class="hero-desc">{SITE_DESCRIPTION}</p>
+					<p class="hero-desc">
+						<span class="sr-only">{SITE_DESCRIPTION}</span>
+						<span aria-hidden="true" data-typewriter>{SITE_DESCRIPTION}</span>
+					</p>
 				</div>
 			</header>
-			<section class="category-section">
+			<section class="category-section" data-motion-frame>
 				{recentPosts.map((post) => (
-					<a href={`/blog/${post.id}`} class="post-item" >
-						<span class="post-title">{post.data.title}</span>
-						<div class="post-line"></div>
-						<time class="post-date" datetime={post.data.time}>
+					<a href={`/blog/${post.id}`} class="post-item" data-motion-item>
+						<span class="post-title">
+							<span class="sr-only">
+								{post.data.title}，{formatDateShort(post.data.time)}
+							</span>
+							<span aria-hidden="true" data-typewriter>{post.data.title}</span>
+						</span>
+						<div class="post-line" aria-hidden="true"></div>
+						<time class="post-date" datetime={post.data.time} aria-hidden="true">
 							{formatDateShort(post.data.time)}
 						</time>
 					</a>
 				))}
-				<a href="/archive" class="view-more">「更多文章」</a>
+				<a href="/archive" class="view-more" data-motion-item>「更多文章」</a>
 			</section>
 		</SiteShell>
 		<script>
-			document.addEventListener('mouseover', (e) => {
-				const item = e.target.closest('.category-section .post-item');
-				if (!item) return;
-				const line = item.querySelector('.post-line');
-				if (!line || line.dataset.animating === '1') return;
-				line.dataset.animating = '1';
-				line.classList.add('line-anim');
-			});
-			document.addEventListener('mouseout', (e) => {
-				const item = e.target.closest('.category-section .post-item');
-				if (!item) return;
-				const related = e.relatedTarget;
-				if (related && item.contains(related)) return;
-				const line = item.querySelector('.post-line');
-				if (line) delete line.dataset.animating;
-			});
-			document.addEventListener('animationend', (e) => {
-				if (e.animationName === 'lineWipe') {
-					e.target.classList.remove('line-anim');
-				}
-			});
+			import '../scripts/page-motion';
 		</script>
 	</body>
 </html>

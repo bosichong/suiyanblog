@@ -93,12 +93,124 @@ main {
 }
 
 .main-container {
+	position: relative;
 	width: 100%;
 	max-width: 760px;
 	background: #fff;
 	border: 1px solid var(--border);
 	border-radius: 0;
 	overflow: hidden;
+}
+
+html.motion-active .main-container {
+	border-color: transparent;
+}
+
+html.motion-active.motion-shell-drawn .main-container {
+	border-color: var(--border);
+}
+
+.motion-drawing-layer {
+	position: fixed;
+	inset: 0;
+	z-index: 9999;
+	overflow: hidden;
+	pointer-events: none;
+	contain: layout style paint;
+}
+
+.motion-pointer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 18px;
+	height: 22px;
+	opacity: 0;
+	transform-origin: 2px 2px;
+	filter: drop-shadow(0 2px 3px rgba(33, 33, 33, 0.24));
+	will-change: transform, opacity;
+}
+
+.motion-pointer::before {
+	content: "";
+	position: absolute;
+	left: -4px;
+	top: -3px;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background: radial-gradient(
+		circle,
+		rgba(125, 147, 168, 0.28) 0%,
+		rgba(125, 147, 168, 0.08) 48%,
+		transparent 72%
+	);
+	opacity: 0.32;
+	transform: scale(0.82);
+	transition: opacity 220ms ease, transform 220ms ease;
+	pointer-events: none;
+}
+
+.motion-pointer::after {
+	content: "";
+	position: absolute;
+	left: -8px;
+	top: -7px;
+	width: 34px;
+	height: 34px;
+	border: 1px solid rgba(125, 147, 168, 0.5);
+	border-radius: 50%;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.motion-pointer svg {
+	position: static;
+	display: block;
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+	transform-origin: 2px 2px;
+	transition: transform 280ms cubic-bezier(0.37, 0, 0.63, 1);
+	will-change: transform;
+}
+
+.motion-pointer.is-working svg {
+	transform: scale(0.82);
+}
+
+.motion-pointer.is-working::before {
+	opacity: 0.55;
+	transform: scale(1);
+}
+
+.motion-pointer.is-working.is-revealing svg {
+	animation: suiyan-pointer-press 240ms cubic-bezier(0.37, 0, 0.63, 1);
+}
+
+.motion-pointer.is-working.is-revealing::after {
+	animation: suiyan-pointer-ring 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes suiyan-pointer-press {
+	0%,
+	100% {
+		transform: scale(0.82) translateY(0);
+	}
+	45% {
+		transform: scale(0.73) translateY(1px);
+	}
+}
+
+@keyframes suiyan-pointer-ring {
+	0% {
+		opacity: 0.55;
+		transform: scale(0.35);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.35);
+	}
 }
 
 /* === 标题：统一用衬线/楷体撑场 === */
@@ -319,4 +431,93 @@ hr::before {
 	clip-path: inset(50%);
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
+}
+
+/* === 页面动效：模块依次展开 === */
+html.motion-active [data-motion-frame] {
+	opacity: 0;
+	clip-path: inset(0 100% 0 0);
+	will-change: transform, opacity, clip-path;
+}
+
+html.motion-active [data-motion-nav-item],
+html.motion-active [data-motion-avatar],
+html.motion-active [data-motion-content],
+html.motion-active [data-motion-item],
+html.motion-active [data-motion-scene],
+html.motion-active [data-motion-article-title],
+html.motion-active [data-motion-meta-item],
+html.motion-active [data-motion-tags],
+html.motion-active [data-motion-footer],
+html.motion-active [data-motion-page-title],
+html.motion-active [data-motion-divider] {
+	opacity: 0;
+	will-change: transform, opacity;
+}
+
+html.motion-active [data-motion-section] > *:not(style) {
+	opacity: 0;
+}
+
+[data-motion-frame] {
+	position: relative;
+}
+
+[data-typewriter].is-typing::after {
+	content: "▌";
+	display: inline-block;
+	margin-left: 0.08em;
+	color: var(--accent-dark);
+	animation: suiyan-caret 640ms steps(1, end) infinite;
+}
+
+@keyframes suiyan-caret {
+	0%,
+	48% {
+		opacity: 1;
+	}
+	49%,
+	100% {
+		opacity: 0;
+	}
+}
+
+html.motion-finished [data-motion-frame],
+html.motion-finished [data-motion-nav-item],
+html.motion-finished [data-motion-avatar],
+html.motion-finished [data-motion-content],
+html.motion-finished [data-motion-item],
+html.motion-finished [data-motion-scene],
+html.motion-finished [data-motion-article-title],
+html.motion-finished [data-motion-meta-item],
+html.motion-finished [data-motion-tags],
+html.motion-finished [data-motion-footer],
+html.motion-finished [data-motion-page-title],
+html.motion-finished [data-motion-divider] {
+	will-change: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html.motion-active [data-motion-frame],
+	html.motion-active [data-motion-nav-item],
+	html.motion-active [data-motion-avatar],
+	html.motion-active [data-motion-content],
+	html.motion-active [data-motion-item],
+	html.motion-active [data-motion-scene],
+	html.motion-active [data-motion-article-title],
+	html.motion-active [data-motion-meta-item],
+	html.motion-active [data-motion-tags],
+	html.motion-active [data-motion-footer],
+	html.motion-active [data-motion-page-title],
+	html.motion-active [data-motion-divider],
+	html.motion-active [data-motion-section] > *:not(style) {
+		opacity: 1 !important;
+		clip-path: none !important;
+		transform: none !important;
+	}
+
+	[data-typewriter].is-typing::after {
+		display: none !important;
+	}
+
 }

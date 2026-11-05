@@ -9,13 +9,13 @@ import { Icon } from 'astro-icon/components';
 	<nav>
 		<div class="nav-inner">
 			<div class="nav-left">
-				<a href="/search" class="search-link" aria-label="搜索" title="搜索">
+				<a href="/search" class="search-link" aria-label="搜索" title="搜索" data-motion-nav-item>
 					<Icon name="mdi:magnify" width={18} height={18} aria-hidden="true" />
 				</a>
 			</div>
 			<div class="internal-links" id="nav-menu">
 				{MENU_ITEMS.map(item => (
-					<HeaderLink href={item.href} aria-label={item.name} title={item.name}>
+					<HeaderLink href={item.href} aria-label={item.name} title={item.name} data-motion-nav-item>
 						<Icon name={`mdi:${item.icon}`} width={20} height={20} aria-hidden="true" />
 					</HeaderLink>
 				))}

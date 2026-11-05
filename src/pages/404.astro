@@ -7,7 +7,11 @@ import { SITE_TITLE } from '../consts';
 <!doctype html>
 <html lang="zh-CN">
 	<head>
-		<BaseHead title={`404 - 页面走丢了 | ${SITE_TITLE}`} description="抱歉，您访问的页面不存在" />
+		<BaseHead
+			title={`404 - 页面走丢了 | ${SITE_TITLE}`}
+			description="抱歉，您访问的页面不存在"
+			motionMode="reveal"
+		/>
 		<style>
 			main {
 				width: 720px;
@@ -75,10 +79,10 @@ import { SITE_TITLE } from '../consts';
 			}
 		</style>
 	</head>
-	<body>
+	<body data-motion-page="static">
 		<SiteShell>
 			<div class="error-container">
-				<div class="error-content">
+				<div class="error-content" data-motion-scene>
 					<img src="/assets/images/404.avif" alt="404" class="error-image" />
 					<div class="error-text">
 						<p>错误 404</p>
@@ -89,5 +93,8 @@ import { SITE_TITLE } from '../consts';
 				</div>
 			</div>
 		</SiteShell>
+		<script>
+			import '../scripts/page-motion';
+		</script>
 	</body>
 </html>
