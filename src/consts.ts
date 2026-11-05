@@ -57,6 +57,15 @@ export const LINKS = [
   { site_name: '花墨', site_url: 'https://flowersink.com/' },
   { site_name: '只是玩玩', site_url: 'https://1900.live/' },
   { site_name: '姓王者的博客', site_url: 'https://xingwangzhe.fun/' },
+  { site_name: '極客死亡計劃', site_url: 'https://www.geedea.pro/' },
+  { site_name: '松易涅的写作分享站', site_url: 'https://www.sungyinieh.com/' },
+  { site_name: 'Rolen', site_url: 'https://rolen.wiki/' },
+  { site_name: '时歌的博客', site_url: 'https://www.lapis.cafe/' },
+  { site_name: '收錄 · CRIVU', site_url: 'https://cbc688.com/' },
+  { site_name: 'LQQ', site_url: 'https://lqq.ai/' },
+  { site_name: '刘果', site_url: 'https://www.liu-guo.com/' },
+  { site_name: '槐序的序章', site_url: 'https://prologue.dev/' },
+  { site_name: '金色河流', site_url: 'https://goldenriver.site/' },
 ];
 
 // 博客聚合平台
