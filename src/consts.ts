@@ -56,6 +56,7 @@ export const LINKS = [
   { site_name: 'immarcus', site_url: 'https://immarcus.com/' },
   { site_name: '花墨', site_url: 'https://flowersink.com/' },
   { site_name: '只是玩玩', site_url: 'https://1900.live/' },
+  { site_name: '姓王者的博客', site_url: 'https://xingwangzhe.fun/' },
 ];
 
 // 博客聚合平台
