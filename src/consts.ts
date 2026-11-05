@@ -10,9 +10,9 @@ export const HOME_POSTS_COUNT = 20;
 
 // 页面标题和描述
 export const LINKS_PAGE_TITLE = 'Links';
-export const LINKS_PAGE_DESCRIPTION = '一些我经常访问的博客列表，排名随机，如不希望在这里展示请联系我删除。欢迎逛逛。';
+export const LINKS_PAGE_DESCRIPTION = '能出现在这里说明你已经很流弊了！';
 export const BLOG_AGGREGATION_TITLE = '博客聚合';
-export const BLOG_AGGREGATION_DESCRIPTION = '一些优秀的博客聚合平台，排名随机，可以发现更多有趣的独立博客。';
+export const BLOG_AGGREGATION_DESCRIPTION = '一些优秀的博客聚合平台（也有不优秀的），排名随机，可以发现更多有趣的独立博客。';
 
 
 // 导航菜单项
