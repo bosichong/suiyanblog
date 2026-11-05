@@ -13,18 +13,6 @@ import {
 	SITE_TITLE
 } from '../consts';
 
-// 洗牌：返回打乱顺序后的新数组（不修改原数组）
-function shuffle<T>(items: readonly T[]): T[] {
-	const result = [...items];
-	for (let i = result.length - 1; i > 0; i--) {
-		const j = Math.floor(Math.random() * (i + 1));
-		[result[i], result[j]] = [result[j], result[i]];
-	}
-	return result;
-}
-
-const shuffledLinks = shuffle(LINKS);
-const shuffledBlogAggregations = shuffle(BLOG_AGGREGATIONS);
 ---
 
 <!doctype html>
@@ -148,8 +136,8 @@ const shuffledBlogAggregations = shuffle(BLOG_AGGREGATIONS);
 							<span aria-hidden="true" data-typewriter>{LINKS_PAGE_DESCRIPTION}</span>
 						</p>
 					</hgroup>
-					<ul class="link-list">
-						{shuffledLinks.map(link => (
+					<ul class="link-list" data-shuffle-list>
+						{LINKS.map(link => (
 							<li data-motion-item>
 								<a href={link.site_url} target="_blank" rel="noopener noreferrer">
 									<span class="sr-only">{link.site_name}</span>
@@ -180,8 +168,8 @@ const shuffledBlogAggregations = shuffle(BLOG_AGGREGATIONS);
 							<span aria-hidden="true" data-typewriter>{BLOG_AGGREGATION_DESCRIPTION}</span>
 						</p>
 					</hgroup>
-					<ul class="link-list">
-						{shuffledBlogAggregations.map(link => (
+					<ul class="link-list" data-shuffle-list>
+						{BLOG_AGGREGATIONS.map(link => (
 							<li data-motion-item>
 								<a href={link.site_url} target="_blank" rel="noopener noreferrer">
 									<span class="sr-only">{link.site_name}</span>
@@ -201,6 +189,25 @@ const shuffledBlogAggregations = shuffle(BLOG_AGGREGATIONS);
 			<hr aria-hidden="true" />
 			<PostActions postId="links" postPath="/links" />
 		</SiteShell>
+		<script is:inline>
+			(() => {
+				const shuffleLists = () => {
+					document.querySelectorAll('[data-shuffle-list]').forEach((list) => {
+						const items = Array.from(list.children);
+						for (let i = items.length - 1; i > 0; i--) {
+							const j = Math.floor(Math.random() * (i + 1));
+							[items[i], items[j]] = [items[j], items[i]];
+						}
+						list.replaceChildren(...items);
+					});
+				};
+
+				shuffleLists();
+				window.addEventListener('pageshow', (event) => {
+					if (event.persisted) shuffleLists();
+				});
+			})();
+		</script>
 		<script>
 			import '../scripts/page-motion';
 		</script>
