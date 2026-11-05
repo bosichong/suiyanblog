@@ -33,6 +33,7 @@ const shuffledBlogAggregations = shuffle(BLOG_AGGREGATIONS);
 		<BaseHead
 			title={`链接 | ${SITE_TITLE}`}
 			description={`${SITE_DESCRIPTION} - 链接和博客聚合平台`}
+			motionMode="full"
 		/>
 		<style>
 			main {
@@ -133,19 +134,26 @@ const shuffledBlogAggregations = shuffle(BLOG_AGGREGATIONS);
 			}
 		</style>
 	</head>
-	<body>
+	<body data-motion-page="links">
 		<SiteShell>
-			<section>
+			<section class="link-section" data-motion-frame>
 				<article>
-					<hgroup>
-						<h2>{LINKS_PAGE_TITLE}</h2>
-						<p>{LINKS_PAGE_DESCRIPTION}</p>
+					<hgroup class="link-section-heading">
+						<h2>
+							<span class="sr-only">{LINKS_PAGE_TITLE}</span>
+							<span aria-hidden="true" data-typewriter>{LINKS_PAGE_TITLE}</span>
+						</h2>
+						<p>
+							<span class="sr-only">{LINKS_PAGE_DESCRIPTION}</span>
+							<span aria-hidden="true" data-typewriter>{LINKS_PAGE_DESCRIPTION}</span>
+						</p>
 					</hgroup>
 					<ul class="link-list">
 						{shuffledLinks.map(link => (
-							<li>
+							<li data-motion-item>
 								<a href={link.site_url} target="_blank" rel="noopener noreferrer">
-									<span>{link.site_name}</span>
+									<span class="sr-only">{link.site_name}</span>
+									<span aria-hidden="true" data-typewriter>{link.site_name}</span>
 									<svg class="external-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 										<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
 										<polyline points="15 3 21 3 21 9" />
@@ -158,19 +166,26 @@ const shuffledBlogAggregations = shuffle(BLOG_AGGREGATIONS);
 				</article>
 			</section>
 
-			<hr class="divider" />
+			<hr class="divider" data-motion-divider aria-hidden="true" />
 
-			<section>
+			<section class="link-section" data-motion-frame>
 				<article>
-					<hgroup>
-						<h2>{BLOG_AGGREGATION_TITLE}</h2>
-						<p>{BLOG_AGGREGATION_DESCRIPTION}</p>
+					<hgroup class="link-section-heading">
+						<h2>
+							<span class="sr-only">{BLOG_AGGREGATION_TITLE}</span>
+							<span aria-hidden="true" data-typewriter>{BLOG_AGGREGATION_TITLE}</span>
+						</h2>
+						<p>
+							<span class="sr-only">{BLOG_AGGREGATION_DESCRIPTION}</span>
+							<span aria-hidden="true" data-typewriter>{BLOG_AGGREGATION_DESCRIPTION}</span>
+						</p>
 					</hgroup>
 					<ul class="link-list">
 						{shuffledBlogAggregations.map(link => (
-							<li>
+							<li data-motion-item>
 								<a href={link.site_url} target="_blank" rel="noopener noreferrer">
-									<span>{link.site_name}</span>
+									<span class="sr-only">{link.site_name}</span>
+									<span aria-hidden="true" data-typewriter>{link.site_name}</span>
 									<svg class="external-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 										<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
 										<polyline points="15 3 21 3 21 9" />
@@ -186,5 +201,8 @@ const shuffledBlogAggregations = shuffle(BLOG_AGGREGATIONS);
 			<hr aria-hidden="true" />
 			<PostActions postId="links" postPath="/links" />
 		</SiteShell>
+		<script>
+			import '../scripts/page-motion';
+		</script>
 	</body>
 </html>

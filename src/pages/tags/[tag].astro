@@ -31,7 +31,11 @@ const { posts, tagName } = Astro.props;
 <!doctype html>
 <html lang="zh-CN">
 	<head>
-		<BaseHead title={`标签：${tagName} - ${SITE_TITLE}`} description={`所有带有"${tagName}"标签的文章`} />
+		<BaseHead
+			title={`标签：${tagName} - ${SITE_TITLE}`}
+			description={`所有带有"${tagName}"标签的文章`}
+			motionMode="reveal"
+		/>
 		<style>
 			main {
 				width: 720px;
@@ -123,15 +127,15 @@ const { posts, tagName } = Astro.props;
 			}
 		</style>
 	</head>
-	<body>
+	<body data-motion-page="static">
 		<SiteShell>
 			<section>
-				<div class="tag-header">
+				<div class="tag-header" data-motion-scene>
 					<h1>标签</h1>
 					<div class="tag-badge">{tagName}</div>
 					<p class="subtitle">找到 {posts.length} 篇文章</p>
 				</div>
-				<div class="post-list">
+				<div class="post-list" data-motion-scene>
 					{
 					   posts.map((post) => (
 						   <a href={`/blog/${post.id}`} class="post-item" >
@@ -144,5 +148,8 @@ const { posts, tagName } = Astro.props;
 				   </div>
 			</section>
 		</SiteShell>
+		<script>
+			import '../../scripts/page-motion';
+		</script>
 	</body>
 </html>

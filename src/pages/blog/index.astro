@@ -16,7 +16,11 @@ const posts = (await getCollection('blog')).sort(
 <!doctype html>
 <html lang="zh-CN">
 	<head>
-		<BaseHead title=`Blog - ${SITE_TITLE}` description={SITE_DESCRIPTION} />
+		<BaseHead
+			title={`Blog - ${SITE_TITLE}`}
+			description={SITE_DESCRIPTION}
+			motionMode="reveal"
+		/>
 		<style>
 			main {
 				width: 720px;
@@ -164,15 +168,15 @@ const posts = (await getCollection('blog')).sort(
 			}
 		</style>
 	</head>
-	<body>
+	<body data-motion-page="static">
 		<SiteShell>
 			<section>
-				<div class="blog-header">
+				<div class="blog-header" data-motion-scene>
 					<h1>Blog</h1>
 					<p class="subtitle">Learnings, thoughts, and more.</p>
 					<a href="/tags" style="color: var(--accent); text-decoration: none; font-weight: 500;">Browse all tags →</a>
 				</div>
-				<ul>
+				<ul data-motion-scene>
 					{
 						   posts.map((post, idx) => (
 							   <li>
@@ -214,5 +218,8 @@ const posts = (await getCollection('blog')).sort(
 				   </ul>
 			</section>
 		</SiteShell>
+		<script>
+			import '../../scripts/page-motion';
+		</script>
 	</body>
 </html>

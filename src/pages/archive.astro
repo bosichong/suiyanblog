@@ -44,6 +44,7 @@ const lastUpdated = allPosts[0]?.data.time ? new Date(allPosts[0].data.time) : n
 		<BaseHead 
 			title={`文章归档 | ${SITE_TITLE}`} 
 			description={`${SITE_DESCRIPTION} - 所有文章归档，按时间顺序整理的全部技术文章和随笔`}
+			motionMode="reveal"
 		/>
 		<style>
 			main {
@@ -196,10 +197,10 @@ const lastUpdated = allPosts[0]?.data.time ? new Date(allPosts[0].data.time) : n
 			}
 		</style>
 	</head>
-	<body>
+	<body data-motion-page="archive">
 		<SiteShell>
 			<section>
-				<div class="archive-header">
+				<div class="archive-header" data-motion-archive-header data-motion-frame>
 					<h1>文章归档</h1>
 					<p class="stats">
 						共有文章：{totalPosts} 篇，最后更新于 <FormattedDate date={lastUpdated} />
@@ -207,7 +208,7 @@ const lastUpdated = allPosts[0]?.data.time ? new Date(allPosts[0].data.time) : n
 				</div>
 				
 				{sortedMonths.map((month, index) => (
-					<details name="archive" open={index === 0}>
+					<details name="archive" open={index === 0} data-motion-month data-motion-frame>
 						<summary>
 							<span>
 								<span class="month-badge">{month}</span>
@@ -225,5 +226,8 @@ const lastUpdated = allPosts[0]?.data.time ? new Date(allPosts[0].data.time) : n
 				))}
 			</section>
 		</SiteShell>
+		<script>
+			import '../scripts/page-motion';
+		</script>
 	</body>
 </html>

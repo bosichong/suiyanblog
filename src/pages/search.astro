@@ -11,6 +11,7 @@ import { Icon } from 'astro-icon/components';
 		<BaseHead 
 			title={`搜索 | ${SITE_TITLE}`} 
 			description={`${SITE_TITLE} 博客搜索功能，支持全文搜索所有文章`}
+			motionMode="reveal"
 		/>
 		<style>
 			* {
@@ -157,10 +158,10 @@ import { Icon } from 'astro-icon/components';
 			}
 		</style>
 	</head>
-	<body>
+	<body data-motion-page="static">
 		<SiteShell>
 			<section>
-				<div class="search-container">
+				<div class="search-container" data-motion-scene>
 					<h1>搜索文章</h1>
 					<div class="search-input-wrapper">
 						<Icon name="mdi:magnify" class="search-icon" />
@@ -178,6 +179,9 @@ import { Icon } from 'astro-icon/components';
 				</div>
 			</section>
 		</SiteShell>
+		<script>
+			import '../scripts/page-motion';
+		</script>
 		
 		<script>
 			const searchInput = document.getElementById('searchInput');

@@ -29,7 +29,11 @@ const sortedTags = Object.entries(tagCounts)
 <!doctype html>
 <html lang="zh-CN">
 	<head>
-		<BaseHead title={`所有标签 - ${SITE_TITLE}`} description="浏览所有博客标签" />
+		<BaseHead
+			title={`所有标签 - ${SITE_TITLE}`}
+			description="浏览所有博客标签"
+			motionMode="reveal"
+		/>
 		<style>
 			main {
 				width: 720px;
@@ -104,14 +108,14 @@ const sortedTags = Object.entries(tagCounts)
 			}
 		</style>
 	</head>
-	<body>
+	<body data-motion-page="static">
 		<SiteShell>
 			<section>
-				<div class="tags-header">
+				<div class="tags-header" data-motion-scene>
 					<h1>所有标签</h1>
 					<p class="subtitle">共有 {sortedTags.length} 个标签</p>
 				</div>
-				<div class="tags-grid">
+				<div class="tags-grid" data-motion-scene>
 					{
 						sortedTags.map(([tag, count]) => (
 							<a href={`/tags/${slugify(tag)}`} class="tag-card">
@@ -128,5 +132,8 @@ const sortedTags = Object.entries(tagCounts)
 				</div>
 			</section>
 		</SiteShell>
+		<script>
+			import '../../scripts/page-motion';
+		</script>
 	</body>
 </html>

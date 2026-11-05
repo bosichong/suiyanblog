@@ -19,7 +19,12 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 
 <html lang="zh-CN">
 	<head>
-		<BaseHead title={title} description={description} image={heroImage} />
+		<BaseHead
+			title={title}
+			description={description}
+			image={heroImage}
+			motionMode="reveal"
+		/>
 		
 		<!-- JSON-LD 结构化数据 -->
 		<script type="application/ld+json" set:html={JSON.stringify({
@@ -219,42 +224,47 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 		}
 	</style>
 
-	<body>
+	<body data-motion-page="article">
 		<SiteShell>
 			<article>
-				<div class="hero-image">
+				<div class="hero-image" data-motion-scene={heroImage ? 'article-hero' : undefined}>
 					{heroImage && <Image width={1020} height={510} src={heroImage} alt={heroImageAlt || ''} />}
 				</div>
 				<div class="prose">
 					<div class="title">
-						<h1>{title}</h1>
+						<h1 data-motion-article-title>
+							<span class="sr-only">{title}</span>
+							<span aria-hidden="true" data-typewriter>{title}</span>
+						</h1>
 						<div class="meta">
-							<span class="meta-item">
+							<span class="meta-item" data-motion-meta-item>
 								<Icon name="mdi:account" width={18} height={18} aria-hidden="true" />
 								{SITE_AUTHOR}
 							</span>
-							<span class="meta-item ai-label">
+							<span class="meta-item ai-label" data-motion-meta-item>
 								<AILabelBadge level={ai_label} />
 							</span>
-							<span class="meta-item">
+							<span class="meta-item" data-motion-meta-item>
 								<Icon name="mdi:calendar" width={18} height={18} aria-hidden="true" />
 								<FormattedDate date={time} />
 							</span>
 							{
 								updatedDate && (
-									<span class="meta-item updated">
+									<span class="meta-item updated" data-motion-meta-item>
 										<Icon name="mdi:calendar-outline" width={18} height={18} aria-hidden="true" />
 										更新于 <FormattedDate date={updatedDate} />
 									</span>
 								)
 							}
 						</div>
-						<TagList tags={tags} showLabel={true} />
+						<div data-motion-tags>
+							<TagList tags={tags} showLabel={true} />
+						</div>
 					</div>
-					<div class="article-body">
+					<div class="article-body" data-motion-scene="article-body">
 						<slot />
 					</div>
-					<div class="iine-wrapper">
+					<div class="iine-wrapper" data-motion-scene="article-feedback">
 						<button
 							class="iine-button"
 							data-icon="heart"
@@ -263,12 +273,17 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 					</div>
 					<hr aria-hidden="true" />
 
-					<PostActions postId={postId || ''} postPath={`/blog/${postId}`} />
+					<div data-motion-scene="article-comments">
+						<PostActions postId={postId || ''} postPath={`/blog/${postId}`} />
+					</div>
 
 
 				</div>
 			</article>
 		</SiteShell>
+		<script>
+			import '../scripts/page-motion';
+		</script>
 		<script src="https://cdn.jsdelivr.net/gh/welpo/iine@main/iine.mini.js"></script>
 	</body>
 </html>
