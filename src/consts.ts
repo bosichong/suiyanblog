@@ -18,6 +18,7 @@ export const BLOG_AGGREGATION_DESCRIPTION = '一些优秀的博客聚合平台�
 // 导航菜单项
 export const MENU_ITEMS = [
   { name: 'Home', href: '/', icon: 'home' },
+  { name: 'Tags', href: '/tags', icon: 'tag' },
   { name: 'Links', href: '/links', icon: 'link-variant' },
   { name: 'About', href: '/about', icon: 'information-outline' },
 ];
