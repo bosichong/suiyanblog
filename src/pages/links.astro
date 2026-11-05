@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import SiteShell from '../components/SiteShell.astro';
 import PostActions from '../components/PostActions.astro';
+import { Icon } from 'astro-icon/components';
 import {
 	LINKS_PAGE_TITLE,
 	LINKS_PAGE_DESCRIPTION,
@@ -83,6 +84,21 @@ import {
 				padding-left: 0.75rem;
 			}
 
+			.site-name {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.3rem;
+				min-width: 0;
+			}
+
+			.site-name--female {
+				color: #d81b60;
+			}
+
+			.female-icon {
+				flex-shrink: 0;
+			}
+
 			.external-icon {
 				flex-shrink: 0;
 				color: var(--footer-text);
@@ -140,8 +156,24 @@ import {
 						{LINKS.map(link => (
 							<li data-motion-item>
 								<a href={link.site_url} target="_blank" rel="noopener noreferrer">
-									<span class="sr-only">{link.site_name}</span>
-									<span aria-hidden="true" data-typewriter>{link.site_name}</span>
+									<span class="sr-only">
+										{link.site_name}{link.is_female ? '（女性博主）' : ''}
+									</span>
+									<span
+										class:list={['site-name', { 'site-name--female': link.is_female }]}
+										aria-hidden="true"
+									>
+										<span data-typewriter>{link.site_name}</span>
+										{link.is_female && (
+											<Icon
+												name="mdi:gender-female"
+												class="female-icon"
+												width={16}
+												height={16}
+												aria-hidden="true"
+											/>
+										)}
+									</span>
 									<svg class="external-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 										<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
 										<polyline points="15 3 21 3 21 9" />
@@ -173,7 +205,9 @@ import {
 							<li data-motion-item>
 								<a href={link.site_url} target="_blank" rel="noopener noreferrer">
 									<span class="sr-only">{link.site_name}</span>
-									<span aria-hidden="true" data-typewriter>{link.site_name}</span>
+									<span class="site-name" aria-hidden="true">
+										<span data-typewriter>{link.site_name}</span>
+									</span>
 									<svg class="external-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 										<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
 										<polyline points="15 3 21 3 21 9" />

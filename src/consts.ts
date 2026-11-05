@@ -25,9 +25,9 @@ export const MENU_ITEMS = [
 
 // 链接
 export const LINKS = [
-  { site_name: '鹅玉', site_url: 'https://eyu.at/' },
+  { site_name: '鹅玉', site_url: 'https://eyu.at/', is_female: true },
   { site_name: '非理勿试', site_url: 'https://www.ntiy.com' },
-  { site_name: 'Cytrogen的个人博客', site_url: 'https://blog.cytrogen.icu/' },
+  { site_name: 'Cytrogen的个人博客', site_url: 'https://blog.cytrogen.icu/', is_female: true },
   { site_name: '风·墨', site_url: 'https://Vind.ink' },
   { site_name: 'liWanr', site_url: 'https://liwanr.com' },
   { site_name: '莫比乌斯', site_url: 'https://mobius.blog/' },
@@ -38,7 +38,7 @@ export const LINKS = [
   { site_name: '优世界', site_url: 'https://usj.cc' },
   { site_name: '愆伏', site_url: 'https://www.tortorse.com' },
   { site_name: '枫林灯语', site_url: 'https://blog.mfwt.top' },
-  { site_name: 'Obaby', site_url: 'https://zhongxiaojie.com' },
+  { site_name: 'Obaby', site_url: 'https://zhongxiaojie.com', is_female: true },
   { site_name: 'CC的数字花园', site_url: 'https://cyrus19.cc' },
   { site_name: '孤斗', site_url: 'https://d-d.design' },
   { site_name: '秋风于渭水', site_url: 'https://www.tjsky.net' },
@@ -51,7 +51,7 @@ export const LINKS = [
   { site_name: 'Yihui Xie', site_url: 'https://yihui.org/cn' },
   { site_name: 'Owen的博客', site_url: 'https://www.owenyoung.com' },
   { site_name: '映屿', site_url: 'https://www.glowisle.me' },
-  { site_name: 'ScarSu', site_url: 'https://www.scarsu.com' },
+  { site_name: 'ScarSu', site_url: 'https://www.scarsu.com', is_female: true },
   { site_name: '图灵技术域', site_url: 'http://www.omegaxyz.com' },
   { site_name: 'So!azy', site_url: 'https://blog.solazy.me/' },
   { site_name: 'immarcus', site_url: 'https://immarcus.com/' },
@@ -63,7 +63,7 @@ export const LINKS = [
   { site_name: 'Rolen', site_url: 'https://rolen.wiki/' },
   { site_name: '时歌的博客', site_url: 'https://www.lapis.cafe/' },
   { site_name: '收錄 · CRIVU', site_url: 'https://cbc688.com/' },
-  { site_name: 'LQQ', site_url: 'https://lqq.ai/' },
+  { site_name: 'LQQ', site_url: 'https://lqq.ai/', is_female: true },
   { site_name: '刘果', site_url: 'https://www.liu-guo.com/' },
   { site_name: '槐序的序章', site_url: 'https://prologue.dev/' },
   { site_name: '金色河流', site_url: 'https://goldenriver.site/' },

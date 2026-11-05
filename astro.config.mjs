@@ -54,7 +54,25 @@ export default defineConfig({
 		icon({
 			// Only include the small set of Iconify mdi icons we need
 			include: {
-				   mdi: ['mastodon', 'github', 'email', 'account', 'calendar', 'calendar-outline', 'magnify', 'pencil', 'microphone', 'auto-fix', 'hand-wave', 'robot', 'home', 'link-variant', 'information-outline'],
+				mdi: [
+					'mastodon',
+					'github',
+					'email',
+					'account',
+					'calendar',
+					'calendar-outline',
+					'magnify',
+					'pencil',
+					'microphone',
+					'auto-fix',
+					'hand-wave',
+					'robot',
+					'home',
+					'tag',
+					'link-variant',
+					'information-outline',
+					'gender-female',
+				],
 			},
 		}),
 	],
