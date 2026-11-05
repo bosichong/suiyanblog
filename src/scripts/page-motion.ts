@@ -205,7 +205,7 @@ async function initialiseMotion(currentPage: MotionPage) {
 		const distance = Math.max(distanceBetween(from, to), 1);
 		const normalX = -(to.y - from.y) / distance;
 		const normalY = (to.x - from.x) / distance;
-		const bend = Math.max(14, Math.min(125, distance * 0.25)) * direction;
+		const bend = Math.max(45, Math.min(260, distance * 0.5)) * direction;
 		const controlOne = {
 			x: from.x + (to.x - from.x) * 0.26 + normalX * bend * 0.9,
 			y: from.y + (to.y - from.y) * 0.26 + normalY * bend * 0.9,
@@ -362,7 +362,7 @@ async function initialiseMotion(currentPage: MotionPage) {
 			Math.random() < 0.5 ? 1 : -1,
 		);
 		const snakeAnchorIndexes = Array.from({ length: 8 }, (_, index) =>
-			Math.min(index * 3, snakeEntryPath.length - 6),
+			Math.round((index / 7) * (snakeEntryPath.length - 1)),
 		);
 		const anchors: Point[] = snakeAnchorIndexes.map((index) => ({
 			...snakeEntryPath[index],
@@ -393,6 +393,31 @@ async function initialiseMotion(currentPage: MotionPage) {
 			scene.element.hasAttribute('data-motion-footer'),
 		);
 		const workQueue = scenes.filter((scene) => scene !== footerScene);
+
+		const roamPointerOnce = async (pointer: Element, pointerIndex: number) => {
+			const from = currentPositions[pointerIndex];
+			const angle = Math.random() * Math.PI * 2;
+			const distance = randomBetween(70, 220);
+			const target = {
+				x: Math.min(
+					Math.max(from.x + Math.cos(angle) * distance, 24),
+					viewportWidth - 24,
+				),
+				y: Math.min(
+					Math.max(from.y + Math.sin(angle) * distance * 0.6, 40),
+					viewportHeight - 48,
+				),
+			};
+
+			await travelPointer(
+				pointer,
+				from,
+				target,
+				randomBetween(0.34, 0.56),
+				Math.random() < 0.5 ? 1 : -1,
+			);
+			currentPositions[pointerIndex] = target;
+		};
 
 		try {
 			await Promise.all(
@@ -428,25 +453,35 @@ async function initialiseMotion(currentPage: MotionPage) {
 			root.classList.add('motion-shell-drawn');
 			pointers.forEach((pointer) => pointer.classList.add('is-working'));
 
+			let tasksInFlight = 0;
 			await Promise.all(
 				pointers.map(async (pointer, pointerIndex) => {
-					let current = currentPositions[pointerIndex];
-
-					while (workQueue.length > 0) {
+					while (workQueue.length > 0 || tasksInFlight > 0) {
 						const scene = workQueue.shift();
-						if (!scene) break;
-						const target = scenePoint(scene.element);
-						const duration = 0.34 + Math.min(0.34, distanceBetween(current, target) / 1800);
-						await travelPointer(
-							pointer,
-							current,
-							target,
-							duration,
-							Math.random() < 0.5 ? 1 : -1,
-						);
-						await revealScene(scene, pointer);
-						current = target;
-						currentPositions[pointerIndex] = target;
+						if (!scene) {
+							await roamPointerOnce(pointer, pointerIndex);
+							continue;
+						}
+
+						tasksInFlight++;
+						try {
+							const current = currentPositions[pointerIndex];
+							const target = scenePoint(scene.element);
+							const duration =
+								0.34 +
+								Math.min(0.34, distanceBetween(current, target) / 1800);
+							await travelPointer(
+								pointer,
+								current,
+								target,
+								duration,
+								Math.random() < 0.5 ? 1 : -1,
+							);
+							await revealScene(scene, pointer);
+							currentPositions[pointerIndex] = target;
+						} finally {
+							tasksInFlight--;
+						}
 						await sleep(110 + Math.random() * 90);
 					}
 				}),
@@ -454,16 +489,35 @@ async function initialiseMotion(currentPage: MotionPage) {
 
 			if (footerScene) {
 				const pointer = pointers[0];
-				const target = scenePoint(footerScene.element);
-				await travelPointer(
-					pointer,
-					currentPositions[0],
-					target,
-					0.48 + Math.min(0.24, distanceBetween(currentPositions[0], target) / 2200),
-					Math.random() < 0.5 ? 1 : -1,
+				let footerDone = false;
+				const idleRoaming = Promise.all(
+					pointers.slice(1).map(async (idlePointer, index) => {
+						const pointerIndex = index + 1;
+						while (!footerDone) {
+							await roamPointerOnce(idlePointer, pointerIndex);
+						}
+					}),
 				);
-				await revealScene(footerScene, pointer);
-				currentPositions[0] = target;
+
+				try {
+					const target = scenePoint(footerScene.element);
+					await travelPointer(
+						pointer,
+						currentPositions[0],
+						target,
+						0.48 +
+							Math.min(
+								0.24,
+								distanceBetween(currentPositions[0], target) / 2200,
+							),
+						Math.random() < 0.5 ? 1 : -1,
+					);
+					await revealScene(footerScene, pointer);
+					currentPositions[0] = target;
+				} finally {
+					footerDone = true;
+					await idleRoaming;
+				}
 			}
 			pointers.forEach((pointer) => pointer.classList.remove('is-working'));
 
