@@ -57,31 +57,43 @@ import {
 				line-height: 1.6;
 			}
 
+			/* 宽屏：三列卡片式网格 */
 			.link-list {
 				list-style: none;
 				padding: 0;
 				margin: 0;
-				border-top: 1px solid var(--border);
+				display: grid;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 0.6rem;
 			}
 
 			.link-list li {
-				border-bottom: 1px solid var(--border);
+				display: flex;
+				min-width: 0;
+				border: 1px solid var(--border);
+				transition: border-color 0.2s ease, background-color 0.2s ease;
+			}
+
+			.link-list li:hover,
+			.link-list li:focus-within {
+				border-color: var(--accent);
+				background: var(--accent-soft);
 			}
 
 			.link-list a {
 				display: flex;
+				flex: 1 1 auto;
 				align-items: center;
 				justify-content: space-between;
-				gap: 1rem;
-				padding: 0.9rem 0.25rem;
+				gap: 0.6rem;
+				padding: 0.8rem 0.85rem;
 				color: var(--heading-color);
 				text-decoration: none;
-				transition: color 0.2s ease, padding-left 0.2s ease;
+				transition: color 0.2s ease;
 			}
 
 			.link-list a:hover {
 				color: var(--accent);
-				padding-left: 0.75rem;
 			}
 
 			.site-name {
@@ -123,6 +135,7 @@ import {
 				);
 			}
 
+			/* 移动端 / 窄屏：恢复一行一个 */
 			@media (max-width: 720px) {
 				hgroup {
 					padding: 1.5rem;
@@ -132,8 +145,32 @@ import {
 					font-size: 1.5rem;
 				}
 
+				.link-list {
+					grid-template-columns: 1fr;
+					gap: 0;
+					border-top: 1px solid var(--border);
+				}
+
+				.link-list li {
+					border: none;
+					border-bottom: 1px solid var(--border);
+					transition: none;
+				}
+
+				.link-list li:hover,
+				.link-list li:focus-within {
+					background: transparent;
+				}
+
 				.link-list a {
+					flex: 1 1 auto;
 					padding: 0.8rem 0.25rem;
+					transition: color 0.2s ease, padding-left 0.2s ease;
+				}
+
+				.link-list a:hover {
+					color: var(--accent);
+					padding-left: 0.75rem;
 				}
 			}
 		</style>
