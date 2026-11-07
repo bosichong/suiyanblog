@@ -83,6 +83,7 @@ export const BLOG_AGGREGATIONS = [
   { site_name: '好站网', site_url: 'https://haozhan.wang/' },
   { site_name: '十年之约', site_url: 'https://www.foreverblog.cn' },
   { site_name: '博客汇', site_url: 'https://bloghui.com/' },
+  { site_name: '中文博客琅琊榜', site_url: 'https://github.com/qianguyihao/blog-list' },
 ];
 
 // 社交媒体链接
