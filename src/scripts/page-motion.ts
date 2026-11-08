@@ -20,6 +20,16 @@ type PointerScene = {
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 const POINTER_EASE = [0.37, 0, 0.63, 1] as const;
+const POINTER_COLORS = [
+	'82, 111, 141',
+	'177, 91, 91',
+	'73, 139, 111',
+	'176, 133, 65',
+	'126, 93, 169',
+	'62, 145, 157',
+	'184, 99, 139',
+	'105, 119, 172',
+] as const;
 const page = document.body.dataset.motionPage as MotionPage | undefined;
 const root = document.documentElement;
 
@@ -299,9 +309,12 @@ async function initialiseMotion(currentPage: MotionPage) {
 		timers.add(timer);
 	};
 
+	let drawGuideFrame: (element: Element) => void = () => {};
+
 	const revealScene = (scene: PointerScene, pointer?: Element) => {
 		if (pointer) pulsePointer(pointer);
 		scene.reveal();
+		drawGuideFrame(scene.element);
 	};
 
 	const runPointerJourney = async (scenes: PointerScene[]) => {
@@ -312,6 +325,9 @@ async function initialiseMotion(currentPage: MotionPage) {
 		const layer = document.createElement('div');
 		layer.className = 'motion-drawing-layer';
 		layer.setAttribute('aria-hidden', 'true');
+		const guideLayer = document.createElement('div');
+		guideLayer.className = 'motion-guide-layer';
+		layer.append(guideLayer);
 
 		const randomBetween = (minimum: number, maximum: number) =>
 			minimum + Math.random() * (maximum - minimum);
@@ -334,18 +350,26 @@ async function initialiseMotion(currentPage: MotionPage) {
 			y: randomBetween(viewportHeight * 0.14, viewportHeight * 0.78),
 		}));
 
-		const pointers = origins.map((origin, index) => {
+		const pointerMarkup = `
+			<svg viewBox="0 0 24 28" aria-hidden="true">
+				<path d="M2 2v20l5.3-4.8 4.1 8.5 3.8-1.8-4-8.3H19L2 2Z"
+					fill="#fff" stroke="currentColor" stroke-width="1.8"
+					stroke-linejoin="round" />
+			</svg>
+		`;
+		const createPointer = (index: number, point: Point) => {
 			const pointer = document.createElement('div');
+			const color = POINTER_COLORS[index % POINTER_COLORS.length];
 			pointer.className = 'motion-pointer';
-			pointer.style.color = index % 3 === 0 ? 'var(--accent-dark)' : 'var(--text)';
-			pointer.style.transform = pointerTransform(origin);
-			pointer.innerHTML = `
-				<svg viewBox="0 0 24 28" aria-hidden="true">
-					<path d="M2 2v20l5.3-4.8 4.1 8.5 3.8-1.8-4-8.3H19L2 2Z"
-						fill="#fff" stroke="currentColor" stroke-width="1.8"
-						stroke-linejoin="round" />
-				</svg>
-			`;
+			pointer.style.color = `rgb(${color})`;
+			pointer.style.setProperty('--pointer-rgb', color);
+			pointer.style.transform = pointerTransform(point);
+			pointer.innerHTML = pointerMarkup;
+			return pointer;
+		};
+
+		const pointers = origins.map((origin, index) => {
+			const pointer = createPointer(index, origin);
 			layer.append(pointer);
 			return pointer;
 		});
@@ -373,6 +397,129 @@ async function initialiseMotion(currentPage: MotionPage) {
 					false,
 				).finished.catch(() => undefined),
 			]);
+		};
+
+		const maxGuideFrames = 2;
+		let activeGuideFrames = 0;
+		const guideWaiters: Array<() => void> = [];
+		const acquireGuideSlot = () => {
+			if (activeGuideFrames < maxGuideFrames) {
+				activeGuideFrames++;
+				return Promise.resolve();
+			}
+			return new Promise<void>((resolve) => guideWaiters.push(resolve));
+		};
+		const releaseGuideSlot = () => {
+			const next = guideWaiters.shift();
+			if (next) {
+				next();
+				return;
+			}
+			activeGuideFrames--;
+		};
+
+		const drawGuideFrameEffect = async (element: Element) => {
+			await acquireGuideSlot();
+			let frame: HTMLElement | undefined;
+
+			try {
+				if (stopped) return;
+				const rect = element.getBoundingClientRect();
+				if (rect.bottom < 0 || rect.top > viewportHeight) return;
+
+				const top = Math.max(1, Math.min(rect.top, viewportHeight - 1));
+				const bottom = Math.max(1, Math.min(rect.bottom, viewportHeight - 1));
+				const left = Math.max(1, Math.min(rect.left, viewportWidth - 1));
+				const right = Math.max(1, Math.min(rect.right, viewportWidth - 1));
+
+				frame = document.createElement('div');
+				frame.className = 'motion-guide-frame';
+				guideLayer.append(frame);
+
+				const edges = [
+					{
+						orientation: 'horizontal',
+						start: { x: 0, y: top },
+						end: { x: viewportWidth, y: top },
+						clipStart: 'inset(0 100% 0 0)',
+					},
+					{
+						orientation: 'vertical',
+						start: { x: right, y: 0 },
+						end: { x: right, y: viewportHeight },
+						clipStart: 'inset(0 0 100% 0)',
+					},
+					{
+						orientation: 'horizontal',
+						start: { x: viewportWidth, y: bottom },
+						end: { x: 0, y: bottom },
+						clipStart: 'inset(0 0 0 100%)',
+					},
+					{
+						orientation: 'vertical',
+						start: { x: left, y: viewportHeight },
+						end: { x: left, y: 0 },
+						clipStart: 'inset(100% 0 0 0)',
+					},
+				] as const;
+				const colorOffset = Math.floor(
+					Math.random() * POINTER_COLORS.length,
+				);
+
+				await Promise.all(
+					edges.map(async (edge, index) => {
+						const delay = index * 0.018;
+						const colorIndex = (colorOffset + index) % POINTER_COLORS.length;
+						const color = POINTER_COLORS[colorIndex];
+						const line = document.createElement('span');
+						line.className = `motion-guide-line is-${edge.orientation}`;
+						line.style.setProperty('--guide-rgb', color);
+						if (edge.orientation === 'horizontal') {
+							line.style.left = '0';
+							line.style.top = `${edge.start.y}px`;
+							line.style.width = `${viewportWidth}px`;
+						} else {
+							line.style.left = `${edge.start.x}px`;
+							line.style.top = '0';
+							line.style.height = `${viewportHeight}px`;
+						}
+						frame?.append(line);
+
+						const helper = createPointer(colorIndex, edge.start);
+						helper.classList.add('is-guide');
+						(helper as HTMLElement).style.opacity = '1';
+						layer.append(helper);
+
+						await Promise.all([
+							animatePointerPath(
+								helper,
+								[edge.start, edge.end],
+								0.18,
+								delay,
+							),
+							motionAnimate(
+								line,
+								{ clipPath: [edge.clipStart, 'inset(0 0 0 0)'] },
+								{ duration: 0.18, delay, ease: POINTER_EASE },
+								false,
+							).finished.catch(() => undefined),
+						]);
+						helper.remove();
+					}),
+				);
+			} finally {
+				frame?.remove();
+				releaseGuideSlot();
+			}
+		};
+
+		drawGuideFrame = (element) => {
+			const completion = drawGuideFrameEffect(element);
+			pendingMotions.add(completion);
+			completion.then(
+				() => pendingMotions.delete(completion),
+				() => pendingMotions.delete(completion),
+			);
 		};
 
 		try {
@@ -420,6 +567,7 @@ async function initialiseMotion(currentPage: MotionPage) {
 				await Promise.allSettled(Array.from(pendingMotions));
 			}
 		} finally {
+			drawGuideFrame = () => {};
 			layer.remove();
 		}
 	};

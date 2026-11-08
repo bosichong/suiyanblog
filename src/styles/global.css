@@ -124,16 +124,70 @@ html.motion-active.motion-shell-drawn .main-container {
 	contain: layout style paint;
 }
 
+.motion-guide-layer,
+.motion-guide-frame {
+	position: absolute;
+	inset: 0;
+	overflow: hidden;
+	pointer-events: none;
+}
+
+.motion-guide-layer {
+	z-index: 0;
+}
+
+.motion-guide-line {
+	position: absolute;
+	display: block;
+	opacity: 0.82;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(var(--guide-rgb), 0.78) 8%,
+		rgba(var(--guide-rgb), 0.92) 50%,
+		rgba(var(--guide-rgb), 0.78) 92%,
+		transparent
+	);
+	box-shadow: 0 0 8px rgba(var(--guide-rgb), 0.42);
+	will-change: clip-path;
+}
+
+.motion-guide-line.is-horizontal {
+	height: 1px;
+}
+
+.motion-guide-line.is-vertical {
+	width: 1px;
+	background: linear-gradient(
+		180deg,
+		transparent,
+		rgba(var(--guide-rgb), 0.78) 8%,
+		rgba(var(--guide-rgb), 0.92) 50%,
+		rgba(var(--guide-rgb), 0.78) 92%,
+		transparent
+	);
+}
+
 .motion-pointer {
 	position: absolute;
 	top: 0;
 	left: 0;
+	z-index: 2;
 	width: 18px;
 	height: 22px;
 	opacity: 0;
 	transform-origin: 2px 2px;
 	filter: drop-shadow(0 2px 3px rgba(33, 33, 33, 0.24));
 	will-change: transform, opacity;
+}
+
+.motion-pointer.is-guide svg {
+	transform: scale(0.78);
+}
+
+.motion-pointer.is-guide::before {
+	opacity: 0.52;
+	transform: scale(1);
 }
 
 .motion-pointer::before {
@@ -146,8 +200,8 @@ html.motion-active.motion-shell-drawn .main-container {
 	border-radius: 50%;
 	background: radial-gradient(
 		circle,
-		rgba(125, 147, 168, 0.28) 0%,
-		rgba(125, 147, 168, 0.08) 48%,
+		rgba(var(--pointer-rgb), 0.28) 0%,
+		rgba(var(--pointer-rgb), 0.08) 48%,
 		transparent 72%
 	);
 	opacity: 0.32;
@@ -163,7 +217,7 @@ html.motion-active.motion-shell-drawn .main-container {
 	top: -7px;
 	width: 34px;
 	height: 34px;
-	border: 1px solid rgba(125, 147, 168, 0.5);
+	border: 1px solid rgba(var(--pointer-rgb), 0.5);
 	border-radius: 50%;
 	opacity: 0;
 	pointer-events: none;
