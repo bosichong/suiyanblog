@@ -48,11 +48,19 @@ const { title, description, image, motionMode } = Astro.props;
 			document.documentElement.classList.add('motion-active');
 			document.documentElement.classList.add('motion-loading');
 			window.__suiyanMotionTimer = window.setTimeout(function () {
-				document.documentElement.classList.remove('motion-active', 'motion-loading');
+				if (window.__suiyanFinishMotion) {
+					window.__suiyanFinishMotion(true);
+					return;
+				}
+				document.documentElement.classList.remove(
+					'motion-active',
+					'motion-loading',
+					'motion-shell-drawn'
+				);
 				document.documentElement.classList.add('motion-fallback', 'motion-finished');
 				var loader = document.querySelector('[data-page-loader]');
 				if (loader) loader.remove();
-			}, 10000);
+			}, 12000);
 		})();
 	</script>
 )}

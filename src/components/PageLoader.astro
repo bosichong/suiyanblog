@@ -391,7 +391,10 @@
 		const loader = document.querySelector('[data-page-loader]');
 		if (!loader) return;
 
-		if (!document.documentElement.classList.contains('motion-active')) {
+		if (
+			!document.body.dataset.motionPage ||
+			!document.documentElement.classList.contains('motion-active')
+		) {
 			loader.remove();
 			return;
 		}
@@ -433,11 +436,15 @@
 			const content = document.createElement('span');
 			line.append(content);
 			const characters = Array.from(text);
+			const frameDelay = Math.max(16, speed);
+			const chunkSize = Math.max(1, Math.round(frameDelay / speed));
 
-			for (const character of characters) {
+			for (let index = 0; index < characters.length; index += chunkSize) {
 				if (!canContinue(runId)) return false;
-				content.textContent += character;
-				await wait(speed);
+				content.textContent += characters
+					.slice(index, index + chunkSize)
+					.join('');
+				await wait(frameDelay);
 			}
 
 			line.classList.remove('is-typing');

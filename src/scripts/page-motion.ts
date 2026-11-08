@@ -13,6 +13,17 @@ type Point = {
 	y: number;
 };
 
+type SparkParticle = {
+	x: number;
+	y: number;
+	vx: number;
+	vy: number;
+	life: number;
+	maxLife: number;
+	size: number;
+	color: string;
+};
+
 type PointerScene = {
 	element: Element;
 	reveal: () => void;
@@ -35,30 +46,62 @@ const root = document.documentElement;
 
 if (page && root.classList.contains('motion-active')) {
 	void initialiseMotion(page).catch(() => {
-		window.__suiyanFinishMotion?.();
-		if (!window.__suiyanFinishMotion) {
-			root.classList.remove('motion-active', 'motion-loading');
-			root.classList.add('motion-finished', 'motion-fallback');
-			document.querySelector('[data-page-loader]')?.remove();
+		const finishMotion = window.__suiyanFinishMotion;
+		if (finishMotion) {
+			finishMotion(true);
+			return;
 		}
+		root.classList.remove('motion-active', 'motion-loading', 'motion-shell-drawn');
+		root.classList.add('motion-finished', 'motion-fallback');
+		document.querySelector('[data-page-loader]')?.remove();
 	});
 }
 
 async function initialiseMotion(currentPage: MotionPage) {
 	let typewriters: TypewriterJob[] = [];
 	const animations: AnimationPlaybackControls[] = [];
+	const animatedElements = new Set<Element>();
 	const pendingMotions = new Set<Promise<unknown>>();
 	const timers = new Set<number>();
+	const sleepResolvers = new Map<number, () => void>();
 	let stopped = false;
+	let drawGuideFrame: (element: Element) => void = () => {};
+	let emitClickSparks: (point: Point, color: string) => void = () => {};
+	let stopSparks: () => void = () => {};
+	let viewportChangeHandler: (() => void) | undefined;
 
 	const sleep = (milliseconds: number) =>
 		new Promise<void>((resolve) => {
 			const timer = window.setTimeout(() => {
 				timers.delete(timer);
+				sleepResolvers.delete(timer);
 				resolve();
 			}, milliseconds);
 			timers.add(timer);
+			sleepResolvers.set(timer, resolve);
 		});
+
+	let pageShakeTimer: number | undefined;
+	const triggerPageShake = () => {
+		const target = document.querySelector<HTMLElement>('.main-container');
+		if (!target || stopped) return;
+		if (Math.random() >= 0.05) return;
+
+		target.classList.remove('is-motion-impact');
+		void target.offsetWidth;
+		target.classList.add('is-motion-impact');
+		if (pageShakeTimer !== undefined) {
+			window.clearTimeout(pageShakeTimer);
+			timers.delete(pageShakeTimer);
+		}
+		const timer = window.setTimeout(() => {
+			target.classList.remove('is-motion-impact');
+			if (pageShakeTimer === timer) pageShakeTimer = undefined;
+			timers.delete(timer);
+		}, 180);
+		pageShakeTimer = timer;
+		timers.add(timer);
+	};
 
 	const dismissLoader = (animated = false) => {
 		const loader = document.querySelector<HTMLElement>('[data-page-loader]');
@@ -76,21 +119,41 @@ async function initialiseMotion(currentPage: MotionPage) {
 		});
 	};
 
-	const finish = () => {
+	const finish = (fallback = false) => {
 		if (stopped) return;
 		stopped = true;
 		window.clearTimeout(window.__suiyanMotionTimer);
-		timers.forEach((timer) => window.clearTimeout(timer));
+		timers.forEach((timer) => {
+			window.clearTimeout(timer);
+			sleepResolvers.get(timer)?.();
+		});
+		sleepResolvers.clear();
+		timers.clear();
 		animations.forEach((animation) => animation.stop());
+		animatedElements.forEach((element) => {
+			if (!(element instanceof HTMLElement || element instanceof SVGElement)) return;
+			element.style.removeProperty('opacity');
+			element.style.removeProperty('transform');
+			element.style.removeProperty('clip-path');
+			element.style.removeProperty('will-change');
+		});
+		stopSparks();
+		document.querySelector('.is-motion-impact')?.classList.remove('is-motion-impact');
 		document.querySelector('.motion-drawing-layer')?.remove();
 		typewriters.forEach(({ element, text }) => {
 			element.textContent = text;
 			element.classList.remove('is-typing');
 		});
 		window.__suiyanFinishMotion = undefined;
+		if (viewportChangeHandler) {
+			window.removeEventListener('scroll', viewportChangeHandler);
+			window.removeEventListener('resize', viewportChangeHandler);
+			viewportChangeHandler = undefined;
+		}
 		void dismissLoader();
-		root.classList.remove('motion-active', 'motion-loading');
-		root.classList.add('motion-finished', 'motion-fallback');
+		root.classList.remove('motion-active', 'motion-loading', 'motion-shell-drawn');
+		root.classList.add('motion-finished');
+		root.classList.toggle('motion-fallback', fallback);
 	};
 
 	window.__suiyanFinishMotion = finish;
@@ -105,6 +168,7 @@ async function initialiseMotion(currentPage: MotionPage) {
 			ease: EASE,
 			...options,
 		});
+		animatedElements.add(element);
 		animations.push(animation);
 		if (track) {
 			const completion = animation.finished.catch(() => undefined);
@@ -169,12 +233,9 @@ async function initialiseMotion(currentPage: MotionPage) {
 	const scheduleTypewriter = (element: HTMLElement, delay: number, speed = 30) => {
 		const job = typewriters.find(({ element: candidate }) => candidate === element);
 		if (!job) return;
-		const completion = new Promise<void>((resolve) => {
-			const timer = window.setTimeout(() => {
-				timers.delete(timer);
-				void typeText(job, speed).finally(resolve);
-			}, delay * 1000);
-			timers.add(timer);
+		const completion = sleep(delay * 1000).then(() => {
+			if (stopped) return;
+			return typeText(job, speed);
 		});
 		pendingMotions.add(completion);
 		completion.then(() => pendingMotions.delete(completion));
@@ -186,11 +247,15 @@ async function initialiseMotion(currentPage: MotionPage) {
 		const textNode = document.createTextNode('');
 		job.element.append(textNode);
 		job.element.classList.add('is-typing');
+		const frameDelay = Math.max(24, speed);
+		const chunkSize = Math.max(1, Math.round(frameDelay / speed));
 
-		for (const character of characters) {
+		for (let index = 0; index < characters.length; index += chunkSize) {
 			if (stopped) return;
-			textNode.appendData(character);
-			await sleep(speed);
+			textNode.appendData(
+				characters.slice(index, index + chunkSize).join(''),
+			);
+			await sleep(frameDelay);
 		}
 
 		job.element.classList.remove('is-typing');
@@ -309,11 +374,16 @@ async function initialiseMotion(currentPage: MotionPage) {
 		timers.add(timer);
 	};
 
-	let drawGuideFrame: (element: Element) => void = () => {};
-
 	const revealScene = (scene: PointerScene, pointer?: Element) => {
-		if (pointer) pulsePointer(pointer);
+		if (pointer) {
+			pulsePointer(pointer);
+			const color =
+				(pointer as HTMLElement).style.getPropertyValue('--pointer-rgb') ||
+				POINTER_COLORS[0];
+			emitClickSparks(scenePoint(scene.element), color);
+		}
 		scene.reveal();
+		triggerPageShake();
 		drawGuideFrame(scene.element);
 	};
 
@@ -328,6 +398,14 @@ async function initialiseMotion(currentPage: MotionPage) {
 		const guideLayer = document.createElement('div');
 		guideLayer.className = 'motion-guide-layer';
 		layer.append(guideLayer);
+		const sparkCanvas = document.createElement('canvas');
+		sparkCanvas.className = 'motion-spark-layer';
+		layer.append(sparkCanvas);
+		const sparkContext = sparkCanvas.getContext('2d');
+		const pixelRatio = Math.min(window.devicePixelRatio || 1, 1.5);
+		sparkCanvas.width = viewportWidth * pixelRatio;
+		sparkCanvas.height = viewportHeight * pixelRatio;
+		sparkContext?.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
 
 		const randomBetween = (minimum: number, maximum: number) =>
 			minimum + Math.random() * (maximum - minimum);
@@ -400,6 +478,7 @@ async function initialiseMotion(currentPage: MotionPage) {
 		};
 
 		const maxGuideFrames = 2;
+		const maxQueuedGuideFrames = 6;
 		let activeGuideFrames = 0;
 		const guideWaiters: Array<() => void> = [];
 		const acquireGuideSlot = () => {
@@ -514,12 +593,133 @@ async function initialiseMotion(currentPage: MotionPage) {
 		};
 
 		drawGuideFrame = (element) => {
+			if (
+				activeGuideFrames + guideWaiters.length >=
+				maxGuideFrames + maxQueuedGuideFrames
+			) {
+				return;
+			}
 			const completion = drawGuideFrameEffect(element);
 			pendingMotions.add(completion);
 			completion.then(
 				() => pendingMotions.delete(completion),
 				() => pendingMotions.delete(completion),
 			);
+		};
+
+		const sparks: SparkParticle[] = [];
+		const maxSparks = 220;
+		let sparkAnimationFrame: number | undefined;
+		let resolveSparkDrain: (() => void) | undefined;
+		let lastSparkTime = 0;
+
+		const beginSparkLifecycle = () => {
+			if (resolveSparkDrain) return;
+			const completion = new Promise<void>((resolve) => {
+				resolveSparkDrain = resolve;
+			});
+			pendingMotions.add(completion);
+			completion.then(
+				() => pendingMotions.delete(completion),
+				() => pendingMotions.delete(completion),
+			);
+		};
+		const endSparkLifecycle = () => {
+			const resolve = resolveSparkDrain;
+			resolveSparkDrain = undefined;
+			resolve?.();
+		};
+
+		const renderSparks = (time: number) => {
+			if (!sparkContext) return;
+			const delta = Math.min((time - lastSparkTime) / 1000, 0.033);
+			lastSparkTime = time;
+			sparkContext.clearRect(0, 0, viewportWidth, viewportHeight);
+			sparkContext.lineCap = 'round';
+
+			for (let index = sparks.length - 1; index >= 0; index--) {
+				const particle = sparks[index];
+				particle.life -= delta;
+				if (particle.life <= 0) {
+					sparks.splice(index, 1);
+					continue;
+				}
+
+				particle.vx *= 0.982;
+				particle.vy += 360 * delta;
+				particle.x += particle.vx * delta;
+				particle.y += particle.vy * delta;
+
+				const alpha = Math.min(1, particle.life / particle.maxLife);
+				const speed = Math.hypot(particle.vx, particle.vy);
+				const tail = Math.min(9, speed * 0.025);
+				const tailX = speed > 0 ? (particle.vx / speed) * tail : 0;
+				const tailY = speed > 0 ? (particle.vy / speed) * tail : 0;
+
+				sparkContext.strokeStyle = `rgba(${particle.color}, ${alpha * 0.82})`;
+				sparkContext.lineWidth = Math.max(0.8, particle.size * 0.72);
+				sparkContext.beginPath();
+				sparkContext.moveTo(particle.x, particle.y);
+				sparkContext.lineTo(particle.x - tailX, particle.y - tailY);
+				sparkContext.stroke();
+
+				sparkContext.fillStyle = `rgba(${particle.color}, ${alpha})`;
+				sparkContext.beginPath();
+				sparkContext.arc(
+					particle.x,
+					particle.y,
+					particle.size,
+					0,
+					Math.PI * 2,
+				);
+				sparkContext.fill();
+			}
+
+			if (sparks.length > 0) {
+				sparkAnimationFrame = window.requestAnimationFrame(renderSparks);
+			} else {
+				sparkAnimationFrame = undefined;
+				endSparkLifecycle();
+			}
+		};
+
+		emitClickSparks = (point, color) => {
+			if (!sparkContext || stopped) return;
+			beginSparkLifecycle();
+
+			for (let index = 0; index < 18; index++) {
+				const angle = Math.random() * Math.PI * 2;
+				const speed = 70 + Math.random() * 190;
+				const life = 0.32 + Math.random() * 0.2;
+				sparks.push({
+					x: point.x,
+					y: point.y,
+					vx: Math.cos(angle) * speed,
+					vy: Math.sin(angle) * speed * 0.72 - 45,
+					life,
+					maxLife: life,
+					size: 0.8 + Math.random() * 1.5,
+					color,
+				});
+			}
+
+			if (sparks.length > maxSparks) {
+				sparks.splice(0, sparks.length - maxSparks);
+			}
+			if (sparkAnimationFrame === undefined) {
+				lastSparkTime = performance.now();
+				sparkAnimationFrame = window.requestAnimationFrame(renderSparks);
+			}
+		};
+
+		stopSparks = () => {
+			sparks.length = 0;
+			if (sparkAnimationFrame !== undefined) {
+				window.cancelAnimationFrame(sparkAnimationFrame);
+				sparkAnimationFrame = undefined;
+			}
+			sparkContext?.clearRect(0, 0, viewportWidth, viewportHeight);
+			endSparkLifecycle();
 		};
 
 		try {
@@ -568,6 +768,8 @@ async function initialiseMotion(currentPage: MotionPage) {
 			}
 		} finally {
 			drawGuideFrame = () => {};
+			emitClickSparks = () => {};
+			stopSparks();
 			layer.remove();
 		}
 	};
@@ -902,7 +1104,7 @@ async function initialiseMotion(currentPage: MotionPage) {
 	try {
 		const ready = await waitForPageReady();
 		if (!ready || stopped || !root.classList.contains('motion-active')) {
-			finish();
+			finish(true);
 			return;
 		}
 
@@ -910,16 +1112,22 @@ async function initialiseMotion(currentPage: MotionPage) {
 		await dismissLoader(true);
 		root.classList.remove('motion-loading');
 		if (stopped || !root.classList.contains('motion-active')) {
-			finish();
+			finish(true);
 			return;
 		}
 
+		viewportChangeHandler = () => finish(true);
+		window.addEventListener('scroll', viewportChangeHandler, { passive: true });
+		window.addEventListener('resize', viewportChangeHandler);
 		window.clearTimeout(window.__suiyanMotionTimer);
+		window.__suiyanMotionTimer = window.setTimeout(() => finish(true), 10000);
 		await runPointerJourney(buildPointerScenes());
-		await sleep(120);
-		finish();
+		if (!stopped) {
+			await sleep(120);
+			finish();
+		}
 	} catch {
-		finish();
+		finish(true);
 	}
 
 	async function waitForPageReady() {
@@ -929,14 +1137,14 @@ async function initialiseMotion(currentPage: MotionPage) {
 				new Promise<boolean>((resolve) => {
 					window.addEventListener('load', () => resolve(true), { once: true });
 				}),
-				sleep(5000).then(() => false),
+				sleep(8000).then(() => false),
 			]));
 		if (!loadReady || stopped) return false;
 
 		if ('fonts' in document) {
 			const fontsReady = await Promise.race([
 				document.fonts.ready.then(() => true),
-				sleep(1000).then(() => false),
+				sleep(1200).then(() => false),
 			]);
 			if (!fontsReady || stopped) return false;
 		}
@@ -949,7 +1157,7 @@ async function initialiseMotion(currentPage: MotionPage) {
 				Promise.allSettled(
 					criticalImages.map((image) => image.decode().catch(() => undefined)),
 				).then(() => true),
-				sleep(1000).then(() => false),
+				sleep(1200).then(() => false),
 			]);
 			if (!imagesReady || stopped) return false;
 		}
@@ -957,11 +1165,15 @@ async function initialiseMotion(currentPage: MotionPage) {
 		const loaderCycleReady = await waitForLoaderCycle();
 		if (!loaderCycleReady || stopped) return false;
 
-		await new Promise<void>((resolve) =>
-			window.requestAnimationFrame(() =>
-				window.requestAnimationFrame(() => resolve()),
+		const layoutReady = await Promise.race([
+			new Promise<boolean>((resolve) =>
+				window.requestAnimationFrame(() =>
+					window.requestAnimationFrame(() => resolve(true)),
+				),
 			),
-		);
+			sleep(500).then(() => false),
+		]);
+		if (!layoutReady) return false;
 		return !stopped && root.classList.contains('motion-active');
 	}
 
@@ -973,7 +1185,7 @@ async function initialiseMotion(currentPage: MotionPage) {
 		const elapsed = Number.isFinite(loaderStartedAt)
 			? performance.now() - loaderStartedAt
 			: 0;
-		const remaining = Math.max(500, 6500 - elapsed);
+		const remaining = Math.max(500, 10000 - elapsed);
 		return Promise.race([
 			new Promise<boolean>((resolve) => {
 				loader.addEventListener(
@@ -1008,10 +1220,10 @@ async function initialiseMotion(currentPage: MotionPage) {
 declare global {
 	interface Window {
 		__suiyanMotionTimer?: number;
-		__suiyanFinishMotion?: () => void;
+		__suiyanFinishMotion?: (fallback?: boolean) => void;
 	}
 }
 
 window.addEventListener('pageshow', (event) => {
-	if (event.persisted) window.__suiyanFinishMotion?.();
+	if (event.persisted) window.__suiyanFinishMotion?.(true);
 });
