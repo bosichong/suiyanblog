@@ -68,7 +68,6 @@ async function initialiseMotion(currentPage: MotionPage) {
 	let drawGuideFrame: (element: Element) => void = () => {};
 	let emitClickSparks: (point: Point, color: string) => void = () => {};
 	let stopSparks: () => void = () => {};
-	let viewportChangeHandler: (() => void) | undefined;
 
 	const sleep = (milliseconds: number) =>
 		new Promise<void>((resolve) => {
@@ -145,11 +144,6 @@ async function initialiseMotion(currentPage: MotionPage) {
 			element.classList.remove('is-typing');
 		});
 		window.__suiyanFinishMotion = undefined;
-		if (viewportChangeHandler) {
-			window.removeEventListener('scroll', viewportChangeHandler);
-			window.removeEventListener('resize', viewportChangeHandler);
-			viewportChangeHandler = undefined;
-		}
 		void dismissLoader();
 		root.classList.remove('motion-active', 'motion-loading', 'motion-shell-drawn');
 		root.classList.add('motion-finished');
@@ -1116,9 +1110,6 @@ async function initialiseMotion(currentPage: MotionPage) {
 			return;
 		}
 
-		viewportChangeHandler = () => finish(true);
-		window.addEventListener('scroll', viewportChangeHandler, { passive: true });
-		window.addEventListener('resize', viewportChangeHandler);
 		window.clearTimeout(window.__suiyanMotionTimer);
 		window.__suiyanMotionTimer = window.setTimeout(() => finish(true), 10000);
 		await runPointerJourney(buildPointerScenes());
@@ -1131,49 +1122,34 @@ async function initialiseMotion(currentPage: MotionPage) {
 	}
 
 	async function waitForPageReady() {
-		const loadReady =
-			document.readyState === 'complete' ||
-			(await Promise.race([
-				new Promise<boolean>((resolve) => {
-					window.addEventListener('load', () => resolve(true), { once: true });
-				}),
-				sleep(8000).then(() => false),
-			]));
-		if (!loadReady || stopped) return false;
+		const [documentReady, , loaderCycleReady] = await Promise.all([
+			new Promise<boolean>((resolve) => {
+				if (document.readyState !== 'loading') {
+					resolve(true);
+					return;
+				}
+				document.addEventListener(
+					'DOMContentLoaded',
+					() => resolve(true),
+					{ once: true },
+				);
+				sleep(1500).then(() => resolve(false));
+			}),
+			'fonts' in document
+				? Promise.race([document.fonts.ready, sleep(1200)])
+				: Promise.resolve(),
+			waitForLoaderCycle(),
+		]);
+		if (!documentReady || !loaderCycleReady || stopped) return false;
 
-		if ('fonts' in document) {
-			const fontsReady = await Promise.race([
-				document.fonts.ready.then(() => true),
-				sleep(1200).then(() => false),
-			]);
-			if (!fontsReady || stopped) return false;
-		}
-
-		const criticalImages = Array.from(document.images).filter(
-			(image) => image.loading !== 'lazy' && image.currentSrc,
-		);
-		if (criticalImages.length > 0) {
-			const imagesReady = await Promise.race([
-				Promise.allSettled(
-					criticalImages.map((image) => image.decode().catch(() => undefined)),
-				).then(() => true),
-				sleep(1200).then(() => false),
-			]);
-			if (!imagesReady || stopped) return false;
-		}
-
-		const loaderCycleReady = await waitForLoaderCycle();
-		if (!loaderCycleReady || stopped) return false;
-
-		const layoutReady = await Promise.race([
+		await Promise.race([
 			new Promise<boolean>((resolve) =>
 				window.requestAnimationFrame(() =>
 					window.requestAnimationFrame(() => resolve(true)),
 				),
 			),
-			sleep(500).then(() => false),
+			sleep(500),
 		]);
-		if (!layoutReady) return false;
 		return !stopped && root.classList.contains('motion-active');
 	}
 
@@ -1185,7 +1161,11 @@ async function initialiseMotion(currentPage: MotionPage) {
 		const elapsed = Number.isFinite(loaderStartedAt)
 			? performance.now() - loaderStartedAt
 			: 0;
-		const remaining = Math.max(500, 10000 - elapsed);
+		const remaining = Math.max(500, 6000 - elapsed);
+		const complete = () =>
+			loader.dataset.cycleComplete === 'true' ||
+			!loader.isConnected ||
+			!root.classList.contains('motion-active');
 		return Promise.race([
 			new Promise<boolean>((resolve) => {
 				loader.addEventListener(
@@ -1194,7 +1174,7 @@ async function initialiseMotion(currentPage: MotionPage) {
 					{ once: true },
 				);
 			}),
-			sleep(remaining).then(() => false),
+			sleep(remaining).then(complete),
 		]);
 	}
 

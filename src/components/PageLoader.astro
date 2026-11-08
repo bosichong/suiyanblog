@@ -414,14 +414,13 @@
 		if (!output || !status || !footer) return;
 
 		loader.dataset.startedAt = String(performance.now());
-		let generation = 0;
-		let firstCycleCompleted = loader.dataset.cycleComplete === 'true';
+		const runId = 1;
 		const wait = (milliseconds) =>
 			new Promise((resolve) => window.setTimeout(resolve, milliseconds));
-		const canContinue = (runId) =>
+		const canContinue = (currentRunId) =>
 			loader.isConnected &&
 			!loader.classList.contains('is-leaving') &&
-			generation === runId;
+			currentRunId === runId;
 
 		const createLine = (className = '') => {
 			const line = document.createElement('div');
@@ -522,8 +521,8 @@
 			await wait(50);
 
 			const codeLines = [
+				'  dom: document.readyState,',
 				'  fonts: await document.fonts.ready,',
-				'  images: await decodeCriticalImages(),',
 				'});',
 				'',
 				'const motion = page.createScanner({',
@@ -543,11 +542,11 @@
 				await wait(45);
 			}
 
-			status.textContent = '正在等待页面资源就绪';
-			footer.textContent = 'agent idle · awaiting page';
+			status.textContent = '页面结构已就绪';
+			footer.textContent = 'agent idle · ready to draw';
 			if (
 				!appendLine(
-					'> 页面上下文已就绪，等待资源加载完成后开始绘制',
+					'> 页面上下文已就绪，开始接管页面绘制',
 					'is-result',
 					runId,
 				)
@@ -558,20 +557,13 @@
 			return true;
 		};
 
-		const loop = async () => {
-			while (loader.isConnected && !loader.classList.contains('is-leaving')) {
-				const runId = ++generation;
-				const completed = await play(runId);
-				if (!completed || !canContinue(runId)) return;
-				if (!firstCycleCompleted) {
-					firstCycleCompleted = true;
-					loader.dataset.cycleComplete = 'true';
-					loader.dispatchEvent(new CustomEvent('suiyan:loader-cycle-complete'));
-				}
-				await wait(520);
-			}
+		const run = async () => {
+			const completed = await play(runId);
+			if (!completed || !canContinue(runId)) return;
+			loader.dataset.cycleComplete = 'true';
+			loader.dispatchEvent(new CustomEvent('suiyan:loader-cycle-complete'));
 		};
 
-		void loop();
+		void run();
 	})();
 </script>
