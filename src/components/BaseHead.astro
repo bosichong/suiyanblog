@@ -46,10 +46,13 @@ const { title, description, image, motionMode } = Astro.props;
 			if (reduceMotion || isBackForward) return;
 
 			document.documentElement.classList.add('motion-active');
+			document.documentElement.classList.add('motion-loading');
 			window.__suiyanMotionTimer = window.setTimeout(function () {
-				document.documentElement.classList.remove('motion-active');
-				document.documentElement.classList.add('motion-fallback');
-			}, 2500);
+				document.documentElement.classList.remove('motion-active', 'motion-loading');
+				document.documentElement.classList.add('motion-fallback', 'motion-finished');
+				var loader = document.querySelector('[data-page-loader]');
+				if (loader) loader.remove();
+			}, 10000);
 		})();
 	</script>
 )}

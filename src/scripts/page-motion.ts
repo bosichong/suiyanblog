@@ -24,13 +24,18 @@ const page = document.body.dataset.motionPage as MotionPage | undefined;
 const root = document.documentElement;
 
 if (page && root.classList.contains('motion-active')) {
-	void initialiseMotion(page);
+	void initialiseMotion(page).catch(() => {
+		window.__suiyanFinishMotion?.();
+		if (!window.__suiyanFinishMotion) {
+			root.classList.remove('motion-active', 'motion-loading');
+			root.classList.add('motion-finished', 'motion-fallback');
+			document.querySelector('[data-page-loader]')?.remove();
+		}
+	});
 }
 
 async function initialiseMotion(currentPage: MotionPage) {
-	window.clearTimeout(window.__suiyanMotionTimer);
-
-	const typewriters = collectTypewriters();
+	let typewriters: TypewriterJob[] = [];
 	const animations: AnimationPlaybackControls[] = [];
 	const pendingMotions = new Set<Promise<unknown>>();
 	const timers = new Set<number>();
@@ -45,9 +50,26 @@ async function initialiseMotion(currentPage: MotionPage) {
 			timers.add(timer);
 		});
 
+	const dismissLoader = (animated = false) => {
+		const loader = document.querySelector<HTMLElement>('[data-page-loader]');
+		if (!loader) return Promise.resolve();
+		loader.classList.add('is-leaving');
+		if (!animated) {
+			loader.remove();
+			return Promise.resolve();
+		}
+		return new Promise<void>((resolve) => {
+			window.setTimeout(() => {
+				loader.remove();
+				resolve();
+			}, 660);
+		});
+	};
+
 	const finish = () => {
 		if (stopped) return;
 		stopped = true;
+		window.clearTimeout(window.__suiyanMotionTimer);
 		timers.forEach((timer) => window.clearTimeout(timer));
 		animations.forEach((animation) => animation.stop());
 		document.querySelector('.motion-drawing-layer')?.remove();
@@ -56,8 +78,9 @@ async function initialiseMotion(currentPage: MotionPage) {
 			element.classList.remove('is-typing');
 		});
 		window.__suiyanFinishMotion = undefined;
-		root.classList.remove('motion-active');
-		root.classList.add('motion-finished');
+		void dismissLoader();
+		root.classList.remove('motion-active', 'motion-loading');
+		root.classList.add('motion-finished', 'motion-fallback');
 	};
 
 	window.__suiyanFinishMotion = finish;
@@ -236,42 +259,6 @@ async function initialiseMotion(currentPage: MotionPage) {
 		return samples;
 	};
 
-	const createEntryCurve = (from: Point, to: Point, direction: number) => {
-		const distance = Math.max(distanceBetween(from, to), 1);
-		const normalX = -(to.y - from.y) / distance;
-		const normalY = (to.x - from.x) / distance;
-		const firstBend = Math.max(30, Math.min(180, distance * 0.3)) * direction;
-		const secondBend = Math.max(18, Math.min(110, distance * 0.18)) * -direction;
-		const controlOne = {
-			x: from.x + (to.x - from.x) * 0.2 + normalX * firstBend,
-			y: from.y + (to.y - from.y) * 0.2 + normalY * firstBend,
-		};
-		const controlTwo = {
-			x: from.x + (to.x - from.x) * 0.74 + normalX * secondBend,
-			y: from.y + (to.y - from.y) * 0.74 + normalY * secondBend,
-		};
-		const samples: Point[] = [];
-
-		for (let index = 0; index <= 36; index++) {
-			const progress = index / 36;
-			const inverse = 1 - progress;
-			samples.push({
-				x:
-					inverse ** 3 * from.x +
-					3 * inverse ** 2 * progress * controlOne.x +
-					3 * inverse * progress ** 2 * controlTwo.x +
-					progress ** 3 * to.x,
-				y:
-					inverse ** 3 * from.y +
-					3 * inverse ** 2 * progress * controlOne.y +
-					3 * inverse * progress ** 2 * controlTwo.y +
-					progress ** 3 * to.y,
-			});
-		}
-
-		return samples;
-	};
-
 	const travelPointer = async (
 		pointer: Element,
 		from: Point,
@@ -312,16 +299,9 @@ async function initialiseMotion(currentPage: MotionPage) {
 		timers.add(timer);
 	};
 
-	const revealScene = async (scene: PointerScene, pointer?: Element) => {
-		const beforeReveal = new Set(pendingMotions);
+	const revealScene = (scene: PointerScene, pointer?: Element) => {
 		if (pointer) pulsePointer(pointer);
 		scene.reveal();
-		const sceneMotions = Array.from(pendingMotions).filter(
-			(motion) => !beforeReveal.has(motion),
-		);
-		if (sceneMotions.length > 0) {
-			await Promise.allSettled(sceneMotions);
-		}
 	};
 
 	const runPointerJourney = async (scenes: PointerScene[]) => {
@@ -349,33 +329,16 @@ async function initialiseMotion(currentPage: MotionPage) {
 			}
 			return { x: -margin, y: randomBetween(0, viewportHeight) };
 		};
-		const snakeEntryEnd: Point = {
-			x: viewportWidth * randomBetween(0.38, 0.62),
-			y: randomBetween(
-				Math.min(150, viewportHeight * 0.2),
-				Math.max(190, Math.min(viewportHeight * 0.42, 380)),
-			),
-		};
-		const snakeEntryPath = createEntryCurve(
-			createOutsidePoint(),
-			snakeEntryEnd,
-			Math.random() < 0.5 ? 1 : -1,
-		);
-		const snakeAnchorIndexes = Array.from({ length: 8 }, (_, index) =>
-			Math.round((index / 7) * (snakeEntryPath.length - 1)),
-		);
-		const anchors: Point[] = snakeAnchorIndexes.map((index) => ({
-			...snakeEntryPath[index],
+		const origins: Point[] = Array.from({ length: 8 }, () => ({
+			x: randomBetween(viewportWidth * 0.08, viewportWidth * 0.92),
+			y: randomBetween(viewportHeight * 0.14, viewportHeight * 0.78),
 		}));
-		const randomExitPoint = (): Point => {
-			return createOutsidePoint();
-		};
 
-		const pointers = anchors.map((anchor, index) => {
+		const pointers = origins.map((origin, index) => {
 			const pointer = document.createElement('div');
 			pointer.className = 'motion-pointer';
 			pointer.style.color = index % 3 === 0 ? 'var(--accent-dark)' : 'var(--text)';
-			pointer.style.transform = pointerTransform(anchor);
+			pointer.style.transform = pointerTransform(origin);
 			pointer.innerHTML = `
 				<svg viewBox="0 0 24 28" aria-hidden="true">
 					<path d="M2 2v20l5.3-4.8 4.1 8.5 3.8-1.8-4-8.3H19L2 2Z"
@@ -388,192 +351,74 @@ async function initialiseMotion(currentPage: MotionPage) {
 		});
 
 		document.body.append(layer);
-		const currentPositions = anchors.map((anchor) => ({ ...anchor }));
-		const footerScene = scenes.find((scene) =>
-			scene.element.hasAttribute('data-motion-footer'),
-		);
-		const workQueue = scenes.filter((scene) => scene !== footerScene);
+		const currentPositions = origins.map((origin) => ({ ...origin }));
+		const workQueue = [...scenes];
 
-		const roamPointerOnce = async (pointer: Element, pointerIndex: number) => {
+		const exitPointer = async (pointer: Element, pointerIndex: number) => {
+			pointer.classList.remove('is-working');
 			const from = currentPositions[pointerIndex];
-			const angle = Math.random() * Math.PI * 2;
-			const distance = randomBetween(70, 220);
-			const target = {
-				x: Math.min(
-					Math.max(from.x + Math.cos(angle) * distance, 24),
-					viewportWidth - 24,
-				),
-				y: Math.min(
-					Math.max(from.y + Math.sin(angle) * distance * 0.6, 40),
-					viewportHeight - 48,
-				),
-			};
-
-			await travelPointer(
-				pointer,
+			const target = createOutsidePoint();
+			const samples = createCurve(
 				from,
 				target,
-				randomBetween(0.34, 0.56),
 				Math.random() < 0.5 ? 1 : -1,
 			);
-			currentPositions[pointerIndex] = target;
+			const duration = 0.55 + Math.min(0.3, distanceBetween(from, target) / 2000);
+			await Promise.all([
+				animatePointerPath(pointer, samples, duration),
+				motionAnimate(
+					pointer,
+					{ opacity: [1, 1, 0] },
+					{ duration, ease: POINTER_EASE },
+					false,
+				).finished.catch(() => undefined),
+			]);
 		};
 
 		try {
+			let shellDrawn = false;
+			const markShellDrawn = () => {
+				if (shellDrawn) return;
+				shellDrawn = true;
+				root.classList.add('motion-shell-drawn');
+			};
+
 			await Promise.all(
 				pointers.map(async (pointer, index) => {
-					const entryEndIndex = Math.min(
-						snakeEntryPath.length - 1,
-						29 + index,
-					);
-					const entrySamples = snakeEntryPath.slice(
-						snakeAnchorIndexes[index],
-						entryEndIndex + 1,
-					);
-					const entryDuration = 0.9 - index * 0.025;
-					await Promise.all([
-						motionAnimate(
-							pointer,
-							{ opacity: [0, 1] },
-							{ duration: 0.3, delay: index * 0.035 },
-							false,
-						).finished.catch(() => undefined),
-						animatePointerPath(
-							pointer,
-							entrySamples,
-							entryDuration,
-							index * 0.035,
-						),
-					]);
-					currentPositions[index] = {
-						...snakeEntryPath[entryEndIndex],
-					};
-				}),
-			);
-			root.classList.add('motion-shell-drawn');
-			pointers.forEach((pointer) => pointer.classList.add('is-working'));
+					await sleep(index * 45);
+					if (stopped) return;
 
-			let tasksInFlight = 0;
-			await Promise.all(
-				pointers.map(async (pointer, pointerIndex) => {
-					while (workQueue.length > 0 || tasksInFlight > 0) {
+					(pointer as HTMLElement).style.opacity = '1';
+					pointer.classList.add('is-working');
+					markShellDrawn();
+
+					while (!stopped) {
 						const scene = workQueue.shift();
-						if (!scene) {
-							await roamPointerOnce(pointer, pointerIndex);
-							continue;
-						}
+						if (!scene) break;
 
-						tasksInFlight++;
-						try {
-							const current = currentPositions[pointerIndex];
-							const target = scenePoint(scene.element);
-							const duration =
-								0.34 +
-								Math.min(0.34, distanceBetween(current, target) / 1800);
-							await travelPointer(
-								pointer,
-								current,
-								target,
-								duration,
-								Math.random() < 0.5 ? 1 : -1,
-							);
-							await revealScene(scene, pointer);
-							currentPositions[pointerIndex] = target;
-						} finally {
-							tasksInFlight--;
-						}
-						await sleep(110 + Math.random() * 90);
-					}
-				}),
-			);
-
-			if (footerScene) {
-				const pointer = pointers[0];
-				let footerDone = false;
-				const idleRoaming = Promise.all(
-					pointers.slice(1).map(async (idlePointer, index) => {
-						const pointerIndex = index + 1;
-						while (!footerDone) {
-							await roamPointerOnce(idlePointer, pointerIndex);
-						}
-					}),
-				);
-
-				try {
-					const target = scenePoint(footerScene.element);
-					await travelPointer(
-						pointer,
-						currentPositions[0],
-						target,
-						0.48 +
-							Math.min(
-								0.24,
-								distanceBetween(currentPositions[0], target) / 2200,
-							),
-						Math.random() < 0.5 ? 1 : -1,
-					);
-					await revealScene(footerScene, pointer);
-					currentPositions[0] = target;
-				} finally {
-					footerDone = true;
-					await idleRoaming;
-				}
-			}
-			pointers.forEach((pointer) => pointer.classList.remove('is-working'));
-
-			const gatherCenter: Point = {
-				x: viewportWidth * randomBetween(0.43, 0.57),
-				y: Math.min(viewportHeight * randomBetween(0.58, 0.7), 560),
-			};
-			const gatherAngle = randomBetween(0, Math.PI * 2);
-			const gatherSpacing = randomBetween(14, 19);
-			const gatherPoints: Point[] = pointers.map((_, index) => ({
-				x:
-					gatherCenter.x +
-					Math.cos(gatherAngle) * (index - 3.5) * gatherSpacing,
-				y:
-					gatherCenter.y +
-					Math.sin(gatherAngle) * (index - 3.5) * gatherSpacing,
-			}));
-			await Promise.all(
-				pointers.map((pointer, index) =>
-					travelPointer(
-						pointer,
-						currentPositions[index],
-						gatherPoints[index],
-						0.4 + Math.random() * 0.14,
-						Math.random() < 0.5 ? 1 : -1,
-					),
-				),
-			);
-			gatherPoints.forEach((point, index) => {
-				currentPositions[index] = { ...point };
-			});
-
-			const snakeExitPath = createEntryCurve(
-				gatherCenter,
-				randomExitPoint(),
-				Math.random() < 0.5 ? 1 : -1,
-			);
-			await Promise.all(
-				pointers.map((pointer, index) => {
-					const samples = [
-						gatherPoints[index],
-						...snakeExitPath.slice(Math.min(index * 2, 10)),
-					];
-					const duration = 0.9 + index * 0.012;
-					const delay = index * 0.045;
-					return Promise.all([
-						animatePointerPath(pointer, samples, duration, delay),
-						motionAnimate(
+						const current = currentPositions[index];
+						const target = scenePoint(scene.element);
+						const duration =
+							0.34 + Math.min(0.34, distanceBetween(current, target) / 1800);
+						await travelPointer(
 							pointer,
-							{ opacity: [1, 1, 0.72, 0] },
-							{ duration, delay, ease: POINTER_EASE },
-							false,
-						).finished.catch(() => undefined),
-					]);
+							current,
+							target,
+							duration,
+							Math.random() < 0.5 ? 1 : -1,
+						);
+						if (stopped) return;
+						revealScene(scene, pointer);
+						currentPositions[index] = target;
+					}
+
+					if (!stopped) await exitPointer(pointer, index);
 				}),
 			);
+
+			if (!stopped) {
+				await Promise.allSettled(Array.from(pendingMotions));
+			}
 		} finally {
 			layer.remove();
 		}
@@ -695,19 +540,27 @@ async function initialiseMotion(currentPage: MotionPage) {
 
 			if (flow) {
 				const tags = Array.from(flow.querySelectorAll<HTMLElement>('[data-motion-tag]'));
-				scenes.push({
-					element: flow,
-					reveal: () => {
-						tags.forEach((item, index) => {
-							const delay = index * 0.008;
-							scanFrame(item, delay);
-							item
-								.querySelectorAll<HTMLElement>('[data-typewriter]')
-								.forEach((text) =>
-									scheduleTypewriter(text, delay + 0.1, 22),
+				const groupCount = Math.min(8, tags.length);
+				const tagGroups = Array.from({ length: groupCount }, (_, groupIndex) => {
+					const start = Math.floor((tags.length * groupIndex) / groupCount);
+					const end = Math.floor((tags.length * (groupIndex + 1)) / groupCount);
+					return tags.slice(start, end);
+				});
+
+				tagGroups.forEach((group) => {
+					const anchor = group[Math.floor(group.length / 2)];
+					scenes.push({
+						element: anchor,
+						reveal: () => {
+							group.forEach((tag, index) => {
+								const delay = index * 0.018;
+								scanFrame(tag, delay);
+								tag.querySelectorAll<HTMLElement>('[data-typewriter]').forEach(
+									(text) => scheduleTypewriter(text, delay + 0.03, 14),
 								);
-						});
-					},
+							});
+						},
+					});
 				});
 			}
 		} else if (currentPage === 'about') {
@@ -898,9 +751,92 @@ async function initialiseMotion(currentPage: MotionPage) {
 		return scenes;
 	};
 
-	await runPointerJourney(buildPointerScenes());
-	await sleep(120);
-	finish();
+	try {
+		const ready = await waitForPageReady();
+		if (!ready || stopped || !root.classList.contains('motion-active')) {
+			finish();
+			return;
+		}
+
+		typewriters = collectTypewriters();
+		await dismissLoader(true);
+		root.classList.remove('motion-loading');
+		if (stopped || !root.classList.contains('motion-active')) {
+			finish();
+			return;
+		}
+
+		window.clearTimeout(window.__suiyanMotionTimer);
+		await runPointerJourney(buildPointerScenes());
+		await sleep(120);
+		finish();
+	} catch {
+		finish();
+	}
+
+	async function waitForPageReady() {
+		const loadReady =
+			document.readyState === 'complete' ||
+			(await Promise.race([
+				new Promise<boolean>((resolve) => {
+					window.addEventListener('load', () => resolve(true), { once: true });
+				}),
+				sleep(5000).then(() => false),
+			]));
+		if (!loadReady || stopped) return false;
+
+		if ('fonts' in document) {
+			const fontsReady = await Promise.race([
+				document.fonts.ready.then(() => true),
+				sleep(1000).then(() => false),
+			]);
+			if (!fontsReady || stopped) return false;
+		}
+
+		const criticalImages = Array.from(document.images).filter(
+			(image) => image.loading !== 'lazy' && image.currentSrc,
+		);
+		if (criticalImages.length > 0) {
+			const imagesReady = await Promise.race([
+				Promise.allSettled(
+					criticalImages.map((image) => image.decode().catch(() => undefined)),
+				).then(() => true),
+				sleep(1000).then(() => false),
+			]);
+			if (!imagesReady || stopped) return false;
+		}
+
+		const loaderCycleReady = await waitForLoaderCycle();
+		if (!loaderCycleReady || stopped) return false;
+
+		await new Promise<void>((resolve) =>
+			window.requestAnimationFrame(() =>
+				window.requestAnimationFrame(() => resolve()),
+			),
+		);
+		return !stopped && root.classList.contains('motion-active');
+	}
+
+	async function waitForLoaderCycle() {
+		const loader = document.querySelector<HTMLElement>('[data-page-loader]');
+		if (!loader || loader.dataset.cycleComplete === 'true') return true;
+
+		const loaderStartedAt = Number(loader.dataset.startedAt);
+		const elapsed = Number.isFinite(loaderStartedAt)
+			? performance.now() - loaderStartedAt
+			: 0;
+		const remaining = Math.max(500, 6500 - elapsed);
+		return Promise.race([
+			new Promise<boolean>((resolve) => {
+				loader.addEventListener(
+					'suiyan:loader-cycle-complete',
+					() => resolve(true),
+					{ once: true },
+				);
+			}),
+			sleep(remaining).then(() => false),
+		]);
+	}
 
 	function collectTypewriters() {
 		const jobs: TypewriterJob[] = [];

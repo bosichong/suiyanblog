@@ -1,0 +1,570 @@
+<div
+	id="suiyan-page-loader"
+	class="suiyan-loader"
+	data-page-loader
+	role="status"
+	aria-live="polite"
+	aria-label="页面正在加载"
+>
+	<div class="suiyan-loader__window">
+		<div class="suiyan-loader__chrome">
+			<div class="suiyan-loader__lights" aria-hidden="true">
+				<span class="is-red"></span>
+				<span class="is-yellow"></span>
+				<span class="is-green"></span>
+			</div>
+			<span class="suiyan-loader__title">suiyan://motion-engine</span>
+			<span class="suiyan-loader__live">AI</span>
+		</div>
+		<div class="suiyan-loader__body">
+			<div class="suiyan-loader__output" data-terminal-output aria-hidden="true"></div>
+			<div class="suiyan-loader__agent">
+				<span class="suiyan-loader__agent-mark">AI</span>
+				<span data-terminal-status>正在连接设计代理</span>
+				<span class="suiyan-loader__typing" aria-hidden="true">
+					<i></i>
+					<i></i>
+					<i></i>
+				</span>
+			</div>
+		</div>
+		<div class="suiyan-loader__footer">
+			<span>suiyan.cc</span>
+			<span data-terminal-footer>waiting for resources</span>
+		</div>
+	</div>
+</div>
+
+<noscript>
+	<style>
+		.suiyan-loader {
+			display: none !important;
+		}
+	</style>
+</noscript>
+
+<style is:global>
+	.suiyan-loader {
+		position: fixed;
+		inset: 0;
+		z-index: 10000;
+		display: grid;
+		place-items: center;
+		padding: 24px;
+		background:
+			radial-gradient(circle at 50% 42%, rgba(125, 147, 168, 0.12), transparent 42%),
+			rgba(250, 250, 250, 0.975);
+		backdrop-filter: blur(10px);
+		transition: opacity 640ms ease, visibility 640ms ease;
+	}
+
+	.suiyan-loader.is-leaving {
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+	}
+
+	.suiyan-loader__window {
+		position: relative;
+		width: min(680px, calc(100vw - 32px));
+		overflow: hidden;
+		border: 1px solid #d7d7d3;
+		border-radius: 12px;
+		background: #fbfbfa;
+		box-shadow:
+			0 24px 70px rgba(33, 33, 33, 0.15),
+			0 1px 0 rgba(255, 255, 255, 0.9) inset;
+		color: #30333a;
+		transform-origin: top left;
+		will-change: transform, opacity;
+		animation: suiyan-loader-arrive 760ms cubic-bezier(0.16, 1, 0.3, 1);
+	}
+
+	.suiyan-loader.is-leaving .suiyan-loader__window {
+		animation: suiyan-loader-leave 640ms cubic-bezier(0.4, 0, 1, 1) forwards;
+	}
+
+	.suiyan-loader__chrome {
+		display: grid;
+		grid-template-columns: 76px 1fr 76px;
+		align-items: center;
+		min-height: 42px;
+		padding: 0 14px;
+		border-bottom: 1px solid #d9d9d5;
+		background: linear-gradient(#f5f5f2, #ecece8);
+	}
+
+	.suiyan-loader__lights {
+		display: flex;
+		gap: 8px;
+	}
+
+	.suiyan-loader__lights span {
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.16) inset;
+	}
+
+	.suiyan-loader__lights .is-red {
+		background: #ff5f57;
+	}
+
+	.suiyan-loader__lights .is-yellow {
+		background: #febc2e;
+	}
+
+	.suiyan-loader__lights .is-green {
+		background: #28c840;
+	}
+
+	.suiyan-loader__title {
+		overflow: hidden;
+		color: #777b82;
+		font-family: var(--font-mono);
+		font-size: 12px;
+		letter-spacing: 0.02em;
+		text-align: center;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.suiyan-loader__live {
+		justify-self: end;
+		padding: 2px 7px;
+		border: 1px solid rgba(94, 119, 143, 0.38);
+		border-radius: 999px;
+		background: rgba(125, 147, 168, 0.08);
+		color: #5f7487;
+		font-family: var(--font-mono);
+		font-size: 10px;
+		letter-spacing: 0.08em;
+	}
+
+	.suiyan-loader__body {
+		position: relative;
+		min-height: 340px;
+		padding: 20px 22px 18px;
+		overflow: hidden;
+		background:
+			linear-gradient(rgba(33, 33, 33, 0.035) 1px, transparent 1px) 0 0 / 100% 24px,
+			radial-gradient(circle at 82% 18%, rgba(125, 147, 168, 0.13), transparent 34%),
+			#fcfcfb;
+	}
+
+	.suiyan-loader__body::after {
+		content: "";
+		position: absolute;
+		inset: -20% 0 auto;
+		height: 32%;
+		background: linear-gradient(
+			to bottom,
+			transparent,
+			rgba(125, 147, 168, 0.12),
+			transparent
+		);
+		pointer-events: none;
+		animation: suiyan-loader-scan 4.2s linear infinite;
+	}
+
+	.suiyan-loader__output {
+		position: relative;
+		z-index: 1;
+		height: 274px;
+		margin: 0;
+		overflow: hidden;
+		color: #40444b;
+		font-family: var(--font-mono);
+		font-size: 12.5px;
+		line-height: 1.72;
+		white-space: pre-wrap;
+	}
+
+	.suiyan-loader__line {
+		min-height: 1.72em;
+		animation: suiyan-loader-line 180ms ease both;
+	}
+
+	.suiyan-loader__line.is-command {
+		color: #1f2329;
+	}
+
+	.suiyan-loader__line.is-agent {
+		color: #526f85;
+	}
+
+	.suiyan-loader__line.is-scan {
+		color: #8a8e94;
+	}
+
+	.suiyan-loader__line.is-scan strong {
+		color: #58748b;
+		font-weight: 500;
+	}
+
+	.suiyan-loader__line.is-code {
+		padding-left: 1.1em;
+		color: #61584b;
+	}
+
+	.suiyan-loader__line.is-code em {
+		color: #58748b;
+		font-style: normal;
+	}
+
+	.suiyan-loader__line.is-result {
+		color: #4d7d5a;
+	}
+
+	.suiyan-loader__line.is-typing::after {
+		content: "▋";
+		display: inline-block;
+		margin-left: 0.12em;
+		color: #6b8397;
+		animation: suiyan-loader-caret 520ms steps(1, end) infinite;
+	}
+
+	.suiyan-loader__agent {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		gap: 9px;
+		margin-top: 12px;
+		padding-top: 13px;
+		border-top: 1px solid #e2e2de;
+		color: #696d74;
+		font-family: var(--font-mono);
+		font-size: 11.5px;
+	}
+
+	.suiyan-loader__agent-mark {
+		display: inline-grid;
+		place-items: center;
+		width: 24px;
+		height: 24px;
+		border: 1px solid rgba(94, 119, 143, 0.4);
+		border-radius: 5px;
+		background: rgba(125, 147, 168, 0.07);
+		color: #58748b;
+		font-size: 9px;
+		letter-spacing: 0.04em;
+	}
+
+	.suiyan-loader__typing {
+		display: inline-flex;
+		gap: 3px;
+		margin-left: auto;
+	}
+
+	.suiyan-loader__typing i {
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background: #7c909f;
+		animation: suiyan-loader-dot 1.15s ease-in-out infinite;
+	}
+
+	.suiyan-loader__typing i:nth-child(2) {
+		animation-delay: 160ms;
+	}
+
+	.suiyan-loader__typing i:nth-child(3) {
+		animation-delay: 320ms;
+	}
+
+	.suiyan-loader__footer {
+		display: flex;
+		justify-content: space-between;
+		gap: 16px;
+		padding: 9px 14px;
+		border-top: 1px solid #dededa;
+		background: #f1f1ee;
+		color: #8a8d91;
+		font-family: var(--font-mono);
+		font-size: 10px;
+		letter-spacing: 0.03em;
+	}
+
+	@keyframes suiyan-loader-arrive {
+		from {
+			opacity: 0;
+			transform: scale(0.72);
+		}
+		to {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	@keyframes suiyan-loader-leave {
+		from {
+			opacity: 1;
+			transform: scale(1);
+		}
+		to {
+			opacity: 0;
+			transform: scale(0.72);
+		}
+	}
+
+	@keyframes suiyan-loader-scan {
+		from {
+			transform: translateY(-40%);
+		}
+		to {
+			transform: translateY(430%);
+		}
+	}
+
+	@keyframes suiyan-loader-line {
+		from {
+			opacity: 0;
+			transform: translateY(3px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes suiyan-loader-caret {
+		0%,
+		48% {
+			opacity: 1;
+		}
+		49%,
+		100% {
+			opacity: 0;
+		}
+	}
+
+	@keyframes suiyan-loader-dot {
+		0%,
+		60%,
+		100% {
+			opacity: 0.28;
+			transform: translateY(0);
+		}
+		30% {
+			opacity: 1;
+			transform: translateY(-2px);
+		}
+	}
+
+	@media (max-width: 640px) {
+		.suiyan-loader {
+			padding: 14px;
+		}
+
+		.suiyan-loader__window {
+			width: calc(100vw - 20px);
+		}
+
+		.suiyan-loader__body {
+			min-height: 310px;
+			padding: 16px 16px 14px;
+		}
+
+		.suiyan-loader__output {
+			height: 246px;
+			font-size: 11.5px;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.suiyan-loader {
+			display: none;
+		}
+
+		.suiyan-loader__window,
+		.suiyan-loader__body::after,
+		.suiyan-loader__line,
+		.suiyan-loader__typing i {
+			animation: none !important;
+		}
+	}
+</style>
+
+<script is:inline>
+	(function () {
+		const loader = document.querySelector('[data-page-loader]');
+		if (!loader) return;
+
+		if (!document.documentElement.classList.contains('motion-active')) {
+			loader.remove();
+			return;
+		}
+
+		const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		const navigationEntry = performance.getEntriesByType('navigation')[0];
+		const isBackForward = navigationEntry && navigationEntry.type === 'back_forward';
+
+		if (reduceMotion || isBackForward) {
+			loader.remove();
+			return;
+		}
+
+		const output = loader.querySelector('[data-terminal-output]');
+		const status = loader.querySelector('[data-terminal-status]');
+		const footer = loader.querySelector('[data-terminal-footer]');
+		if (!output || !status || !footer) return;
+
+		loader.dataset.startedAt = String(performance.now());
+		let generation = 0;
+		let firstCycleCompleted = loader.dataset.cycleComplete === 'true';
+		const wait = (milliseconds) =>
+			new Promise((resolve) => window.setTimeout(resolve, milliseconds));
+		const canContinue = (runId) =>
+			loader.isConnected &&
+			!loader.classList.contains('is-leaving') &&
+			generation === runId;
+
+		const createLine = (className = '') => {
+			const line = document.createElement('div');
+			line.className = `suiyan-loader__line ${className}`.trim();
+			output.append(line);
+			output.scrollTop = output.scrollHeight;
+			return line;
+		};
+
+		const typeLine = async (text, className, speed, runId) => {
+			const line = createLine(`${className} is-typing`);
+			const content = document.createElement('span');
+			line.append(content);
+			const characters = Array.from(text);
+
+			for (const character of characters) {
+				if (!canContinue(runId)) return false;
+				content.textContent += character;
+				await wait(speed);
+			}
+
+			line.classList.remove('is-typing');
+			output.scrollTop = output.scrollHeight;
+			return true;
+		};
+
+		const appendLine = (text, className, runId, render) => {
+			if (!canContinue(runId)) return false;
+			const line = createLine(className);
+			line.textContent = text;
+			if (render) render(line);
+			output.scrollTop = output.scrollHeight;
+			return true;
+		};
+
+		const play = async (runId) => {
+			output.replaceChildren();
+			status.textContent = '正在理解页面与绘制意图';
+			footer.textContent = 'waiting for resources';
+
+			if (
+				!(await typeLine('$ ai --design ./suiyan.cc', 'is-command', 24, runId))
+			) {
+				return false;
+			}
+			await wait(120);
+
+			if (
+				!appendLine(
+					'> 正在建立页面结构、字体与绘制坐标的上下文',
+					'is-agent',
+					runId,
+				)
+			) {
+				return false;
+			}
+			await wait(180);
+
+			const scans = [
+				['src/pages', 'route graph'],
+				['src/components', 'layout tree'],
+				['src/styles', 'visual tokens'],
+				['src/scripts', 'motion timeline'],
+			];
+
+			for (const [path, result] of scans) {
+				if (
+					!appendLine(`[scan] ${path}`, 'is-scan', runId, (line) => {
+						const state = document.createElement('strong');
+						state.textContent = `  ✓ ${result}`;
+						line.append(state);
+					})
+				) {
+					return false;
+				}
+				await wait(110);
+			}
+
+			if (
+				!appendLine(
+					'> 已定位绘制节点，正在生成连续扫描时间线',
+					'is-agent',
+					runId,
+				)
+			) {
+				return false;
+			}
+			await wait(140);
+
+			status.textContent = '正在编写页面绘制引擎';
+			if (!(await typeLine('const page = await preparePage({', 'is-code', 7, runId))) {
+				return false;
+			}
+			await wait(50);
+
+			const codeLines = [
+				'  fonts: await document.fonts.ready,',
+				'  images: await decodeCriticalImages(),',
+				'});',
+				'',
+				'const motion = page.createScanner({',
+				'  pointers: 8,',
+				'  stagger: 45,',
+				'});',
+				'',
+				'await motion.drawAll();',
+			];
+
+			for (const code of codeLines) {
+				if (code) {
+					if (!(await typeLine(code, 'is-code', 6, runId))) return false;
+				} else if (!appendLine('', 'is-code', runId)) {
+					return false;
+				}
+				await wait(45);
+			}
+
+			status.textContent = '正在等待页面资源就绪';
+			footer.textContent = 'agent idle · awaiting page';
+			if (
+				!appendLine(
+					'> 页面上下文已就绪，等待资源加载完成后开始绘制',
+					'is-result',
+					runId,
+				)
+			) {
+				return false;
+			}
+			await wait(750);
+			return true;
+		};
+
+		const loop = async () => {
+			while (loader.isConnected && !loader.classList.contains('is-leaving')) {
+				const runId = ++generation;
+				const completed = await play(runId);
+				if (!completed || !canContinue(runId)) return;
+				if (!firstCycleCompleted) {
+					firstCycleCompleted = true;
+					loader.dataset.cycleComplete = 'true';
+					loader.dispatchEvent(new CustomEvent('suiyan:loader-cycle-complete'));
+				}
+				await wait(520);
+			}
+		};
+
+		void loop();
+	})();
+</script>
