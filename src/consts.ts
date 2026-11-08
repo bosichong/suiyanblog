@@ -67,6 +67,7 @@ export const LINKS = [
   { site_name: '刘果', site_url: 'https://www.liu-guo.com/' },
   { site_name: '槐序的序章', site_url: 'https://prologue.dev/' },
   { site_name: '金色河流', site_url: 'https://goldenriver.site/' },
+  { site_name: '荒野菲克', site_url: 'https://ficor.net/' },
 ];
 
 // 博客聚合平台
@@ -80,7 +81,6 @@ export const BLOG_AGGREGATIONS = [
   { site_name: '博客大联盟', site_url: 'https://bo.ke/' },
   { site_name: '笔墨迹', site_url: 'https://blogscn.fun/' },
   { site_name: '你来啦！', site_url: 'https://nilai.la/' },
-  { site_name: '好站网', site_url: 'https://haozhan.wang/' },
   { site_name: '十年之约', site_url: 'https://www.foreverblog.cn' },
   { site_name: '博客汇', site_url: 'https://bloghui.com/' },
   { site_name: '中文博客琅琊榜', site_url: 'https://github.com/qianguyihao/blog-list' },

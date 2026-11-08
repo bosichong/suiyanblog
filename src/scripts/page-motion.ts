@@ -1,7 +1,7 @@
 import { animate } from 'motion/mini';
 import type { AnimationPlaybackControls } from 'motion';
 
-type MotionPage = 'home' | 'links' | 'about' | 'archive' | 'article' | 'static';
+type MotionPage = 'home' | 'links' | 'about' | 'archive' | 'article' | 'tags' | 'static';
 
 type TypewriterJob = {
 	element: HTMLElement;
@@ -682,6 +682,34 @@ async function initialiseMotion(currentPage: MotionPage) {
 						),
 				});
 			}
+		} else if (currentPage === 'tags') {
+			const header = document.querySelector<HTMLElement>('.tags-header');
+			const flow = document.querySelector<HTMLElement>('.tags-flow');
+
+			if (header) {
+				scenes.push({
+					element: header,
+					reveal: () => reveal(header, 0, { duration: 0.4, distance: 8 }),
+				});
+			}
+
+			if (flow) {
+				const tags = Array.from(flow.querySelectorAll<HTMLElement>('[data-motion-tag]'));
+				scenes.push({
+					element: flow,
+					reveal: () => {
+						tags.forEach((item, index) => {
+							const delay = index * 0.008;
+							scanFrame(item, delay);
+							item
+								.querySelectorAll<HTMLElement>('[data-typewriter]')
+								.forEach((text) =>
+									scheduleTypewriter(text, delay + 0.1, 22),
+								);
+						});
+					},
+				});
+			}
 		} else if (currentPage === 'about') {
 			const title = document.querySelector<HTMLElement>('[data-motion-page-title]');
 			const intro = document.querySelector<HTMLElement>('[data-motion-intro]');
@@ -724,12 +752,14 @@ async function initialiseMotion(currentPage: MotionPage) {
 			});
 		} else if (currentPage === 'article') {
 			const hero = document.querySelector<HTMLElement>('[data-motion-scene="article-hero"]');
-			const titleRegion = document.querySelector<HTMLElement>('.title');
 			const title = document.querySelector<HTMLElement>('[data-motion-article-title]');
 			const titleText = title?.querySelector<HTMLElement>('[data-typewriter]');
 			const metaItems = document.querySelectorAll<HTMLElement>('[data-motion-meta-item]');
 			const tagsRegion = document.querySelector<HTMLElement>('[data-motion-tags]');
-			const tags = tagsRegion?.querySelectorAll<HTMLElement>('.tag-link, .tag-more') ?? [];
+			const tags = tagsRegion?.querySelectorAll<HTMLElement>('[data-motion-article-tag]') ?? [];
+			const tagLabel = tagsRegion?.querySelector<HTMLElement>(
+				'.tag-label [data-typewriter]',
+			);
 			const body = document.querySelector<HTMLElement>('[data-motion-scene="article-body"]');
 			const feedback = document.querySelector<HTMLElement>(
 				'[data-motion-scene="article-feedback"]',
@@ -744,30 +774,70 @@ async function initialiseMotion(currentPage: MotionPage) {
 					reveal: () => reveal(hero, 0, { duration: 0.45, distance: 10 }),
 				});
 			}
-			if (titleRegion && title) {
+			if (title) {
 				scenes.push({
-					element: titleRegion,
+					element: title,
 					reveal: () => {
 						reveal(title, 0, { duration: 0.34, distance: 6 });
 						if (titleText) scheduleTypewriter(titleText, 0.08, 32);
-						metaItems.forEach((item, index) => {
-							reveal(item, 0.2 + index * 0.07, {
-								duration: 0.28,
-								distance: 4,
-							});
-						});
-						if (tagsRegion) {
-							reveal(tagsRegion, 0.36, { duration: 0.28, distance: 4 });
-							tags.forEach((tag, index) => {
-								reveal(tag, 0.4 + index * 0.045, {
-									duration: 0.24,
-									distance: 3,
-								});
-							});
-						}
 					},
 				});
 			}
+			metaItems.forEach((item) => {
+				scenes.push({
+					element: item,
+					reveal: () => {
+						reveal(item, 0, {
+							duration: 0.28,
+							distance: 4,
+						});
+						item
+							.querySelectorAll<HTMLElement>('[data-typewriter]')
+							.forEach((text, index) =>
+								scheduleTypewriter(text, 0.05 + index * 0.12, 26),
+							);
+					},
+				});
+			});
+			let tagsRegionRevealed = false;
+			if (tagLabel) {
+				scenes.push({
+					element: tagLabel,
+					reveal: () => {
+						if (tagsRegion && !tagsRegionRevealed) {
+							tagsRegionRevealed = true;
+							reveal(tagsRegion, 0, {
+								duration: 0.28,
+								distance: 4,
+							});
+						}
+						scheduleTypewriter(tagLabel, 0.05, 26);
+					},
+				});
+			}
+			tags.forEach((tag) => {
+				scenes.push({
+					element: tag,
+					reveal: () => {
+						if (tagsRegion && !tagsRegionRevealed) {
+							tagsRegionRevealed = true;
+							reveal(tagsRegion, 0, {
+								duration: 0.28,
+								distance: 4,
+							});
+						}
+						reveal(tag, 0, {
+							duration: 0.24,
+							distance: 3,
+						});
+						tag
+							.querySelectorAll<HTMLElement>('[data-typewriter]')
+							.forEach((text) =>
+								scheduleTypewriter(text, 0.05, 26),
+							);
+					},
+				});
+			});
 			[body, feedback, comments].forEach((element) => {
 				if (!element) return;
 				scenes.push({
@@ -814,7 +884,14 @@ async function initialiseMotion(currentPage: MotionPage) {
 		if (footer) {
 			scenes.push({
 				element: footer,
-				reveal: () => reveal(footer, 0, { duration: 0.38, distance: 6 }),
+				reveal: () => {
+					reveal(footer, 0, { duration: 0.38, distance: 6 });
+					footer
+						.querySelectorAll<HTMLElement>('[data-typewriter]')
+						.forEach((text, index) =>
+							scheduleTypewriter(text, 0.08 + index * 0.12, 26),
+						);
+				},
 			});
 		}
 
@@ -829,6 +906,14 @@ async function initialiseMotion(currentPage: MotionPage) {
 		const jobs: TypewriterJob[] = [];
 		document.querySelectorAll<HTMLElement>('[data-typewriter]').forEach((element) => {
 			const text = element.dataset.typeText ?? element.textContent?.trim() ?? '';
+			const articleTitle = element.closest<HTMLElement>('[data-motion-article-title]');
+			if (articleTitle) {
+				articleTitle.style.minHeight = `${articleTitle.getBoundingClientRect().height}px`;
+			}
+			if (element.hasAttribute('data-typewriter-reserve')) {
+				element.style.display = 'inline-block';
+				element.style.minWidth = `${element.getBoundingClientRect().width}px`;
+			}
 			jobs.push({ element, text });
 			element.textContent = '';
 		});

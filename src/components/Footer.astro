@@ -1,6 +1,12 @@
 ---
 import { Icon } from 'astro-icon/components';
 import { SITE_TITLE_EN, SNS_LINKS } from '../consts';
+
+interface Props {
+	typewriter?: boolean;
+}
+
+const { typewriter = false } = Astro.props;
 const today = new Date();
 ---
 
@@ -14,10 +20,14 @@ const today = new Date();
 			))}
 		</div>
 		<p class="footer-text">
-			<span class="copyright">&copy; 2017-{today.getFullYear()} {SITE_TITLE_EN}</span>
+			<span
+				class="copyright"
+				data-typewriter={typewriter || undefined}
+				data-typewriter-reserve={typewriter || undefined}
+			>&copy; 2017-{today.getFullYear()} {SITE_TITLE_EN}</span>
 			<span class="divider">|</span>
 			<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer">
-				CC BY-NC-SA 4.0
+				<span data-typewriter={typewriter || undefined} data-typewriter-reserve={typewriter || undefined}>CC BY-NC-SA 4.0</span>
 			</a>
 		</p>
 	</div>

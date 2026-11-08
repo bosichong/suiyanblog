@@ -225,7 +225,7 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 	</style>
 
 	<body data-motion-page="article">
-		<SiteShell>
+		<SiteShell typewriter>
 			<article>
 				<div class="hero-image" data-motion-scene={heroImage ? 'article-hero' : undefined}>
 					{heroImage && <Image width={1020} height={510} src={heroImage} alt={heroImageAlt || ''} />}
@@ -239,26 +239,27 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 						<div class="meta">
 							<span class="meta-item" data-motion-meta-item>
 								<Icon name="mdi:account" width={18} height={18} aria-hidden="true" />
-								{SITE_AUTHOR}
+								<span data-typewriter data-typewriter-reserve>{SITE_AUTHOR}</span>
 							</span>
 							<span class="meta-item ai-label" data-motion-meta-item>
 								<AILabelBadge level={ai_label} />
 							</span>
 							<span class="meta-item" data-motion-meta-item>
 								<Icon name="mdi:calendar" width={18} height={18} aria-hidden="true" />
-								<FormattedDate date={time} />
+								<FormattedDate date={time} typewriter />
 							</span>
 							{
 								updatedDate && (
 									<span class="meta-item updated" data-motion-meta-item>
 										<Icon name="mdi:calendar-outline" width={18} height={18} aria-hidden="true" />
-										更新于 <FormattedDate date={updatedDate} />
+										<span data-typewriter data-typewriter-reserve>更新于</span>
+										<FormattedDate date={updatedDate} typewriter />
 									</span>
 								)
 							}
 						</div>
 						<div data-motion-tags>
-							<TagList tags={tags} showLabel={true} />
+							<TagList tags={tags} showLabel={true} typewriter />
 						</div>
 					</div>
 					<div class="article-body" data-motion-scene="article-body">

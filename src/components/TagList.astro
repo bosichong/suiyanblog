@@ -5,20 +5,33 @@ interface Props {
 	tags: string[];
 	showLabel?: boolean;
 	limit?: number;
+	typewriter?: boolean;
 }
 
-const { tags, showLabel = false, limit } = Astro.props;
+const { tags, showLabel = false, limit, typewriter = false } = Astro.props;
 const displayTags = limit ? tags.slice(0, limit) : tags;
 const hasMoreTags = limit && tags.length > limit;
 ---
 
 <div class="tag-list">
-	{showLabel && <span class="tag-label">Tags:</span>}
+	{showLabel && (
+		<span class="tag-label">
+			{typewriter ? (
+				<span data-typewriter data-typewriter-reserve>Tags:</span>
+			) : (
+				'Tags:'
+			)}
+		</span>
+	)}
 	<ul class="tags">
 		{displayTags.map((tag) => (
-			<li class="tag">
+			<li class="tag" data-motion-article-tag={typewriter || undefined}>
 				<a href={`/tags/${slugify(tag)}`} class="tag-link">
-					{tag}
+					{typewriter ? (
+						<span data-typewriter data-typewriter-reserve>{tag}</span>
+					) : (
+						tag
+					)}
 				</a>
 			</li>
 		))}
