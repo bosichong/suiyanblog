@@ -5,6 +5,11 @@
 - **博客地址**：https://www.suiyan.cc/
 - **GitHub**：https://github.com/bosichong/suiyanblog
 
+## 修改与验证约定
+
+- 修改完成后直接向用户汇报结果，不主动运行编译、构建、预览、lint、类型检查、测试或其他验证命令。
+- 由用户自行测试；只有用户在当次任务中明确要求执行某项验证时，才运行对应命令。
+
 ## 技术栈
 
 - Astro 6 + TypeScript（Node ≥ 22，见 `.nvmrc`）
