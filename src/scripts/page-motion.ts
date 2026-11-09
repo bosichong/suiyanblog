@@ -1,7 +1,7 @@
 import { animate } from 'motion/mini';
 import type { AnimationPlaybackControls } from 'motion';
 
-type MotionPage = 'home' | 'links' | 'about' | 'archive' | 'article' | 'tags' | 'static';
+type MotionPage = 'home' | 'links' | 'projects' | 'about' | 'archive' | 'article' | 'tags' | 'static';
 
 type TypewriterJob = {
 	element: HTMLElement;
@@ -871,6 +871,35 @@ async function initialiseMotion(currentPage: MotionPage) {
 						),
 				});
 			}
+		} else if (currentPage === 'projects') {
+			const header = document.querySelector<HTMLElement>('[data-motion-project-header]');
+			const cards = document.querySelectorAll<HTMLElement>('[data-motion-project-card]');
+
+			if (header) {
+				scenes.push({
+					element: header,
+					reveal: () => {
+						revealFrame(header);
+						header
+							.querySelectorAll<HTMLElement>('[data-typewriter]')
+							.forEach((text, index) =>
+								scheduleTypewriter(text, index * 0.1, index === 0 ? 30 : 25),
+							);
+					},
+				});
+			}
+
+			cards.forEach((card) => {
+				scenes.push({
+					element: card,
+					reveal: () => {
+						reveal(card, 0, { duration: 0.34, distance: 7 });
+						card
+							.querySelectorAll<HTMLElement>('[data-typewriter]')
+							.forEach((text) => scheduleTypewriter(text, 0.08, 26));
+					},
+				});
+			});
 		} else if (currentPage === 'tags') {
 			const header = document.querySelector<HTMLElement>('.tags-header');
 			const flow = document.querySelector<HTMLElement>('.tags-flow');
