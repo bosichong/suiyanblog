@@ -269,6 +269,7 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 						<button
 							class="iine-button"
 							data-icon="heart"
+							data-label="点赞"
 							aria-hidden="true">
 						</button>
 					</div>
@@ -285,6 +286,11 @@ const { title, description, time, updatedDate, heroImage, heroImageAlt, tags, ai
 		<script>
 			import '../scripts/page-motion';
 		</script>
-		<script async src="https://cdn.jsdelivr.net/gh/welpo/iine@main/iine.mini.js"></script>
+		<!--
+			iine 只在 DOMContentLoaded 时初始化：
+			defer 保证脚本在事件触发前执行完（async 可能晚于事件触发，导致按钮一直空白）；
+			自托管 public/js/iine.mini.js，避免 CDN 不可达时拖慢 DOMContentLoaded。
+		-->
+		<script is:inline defer src="/js/iine.mini.js"></script>
 	</body>
 </html>
