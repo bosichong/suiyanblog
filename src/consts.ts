@@ -70,6 +70,7 @@ export const LINKS = [
   { site_name: '槐序的序章', site_url: 'https://prologue.dev/' },
   { site_name: '金色河流', site_url: 'https://goldenriver.site/' },
   { site_name: '荒野菲克', site_url: 'https://ficor.net/' },
+  { site_name: 'LiMhy_Blog', site_url: 'https://i.lilog.cn/' },
 ];
 
 // 博客聚合平台
