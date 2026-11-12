@@ -13,6 +13,10 @@ export default defineConfig({
     responsiveStyles: true,
     layout: 'constrained',
   	},
+	// Intentional tradeoff: avoid render-blocking CSS so the loader can paint before JS and fonts.
+	build: {
+		inlineStylesheets: 'always',
+	},
 	fonts: [
 		{
 			provider: fontProviders.local(),

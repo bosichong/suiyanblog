@@ -58,6 +58,11 @@ const { title, description, image, motionMode } = Astro.props;
 					'motion-shell-drawn'
 				);
 				document.documentElement.classList.add('motion-fallback', 'motion-finished');
+				var appLayout = document.querySelector('.app-layout');
+				if (appLayout instanceof HTMLElement) {
+					appLayout.inert = false;
+					appLayout.removeAttribute('aria-busy');
+				}
 				var loader = document.querySelector('[data-page-loader]');
 				if (loader) loader.remove();
 			}, 12000);

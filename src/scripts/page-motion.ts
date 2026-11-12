@@ -29,6 +29,13 @@ type PointerScene = {
 	reveal: () => void;
 };
 
+type CoreResourcesState = {
+	timedOut: boolean;
+	degraded: boolean;
+	failedResources: string[];
+	pendingResources: string[];
+};
+
 const EASE = [0.16, 1, 0.3, 1] as const;
 const POINTER_EASE = [0.37, 0, 0.63, 1] as const;
 const POINTER_COLORS = [
@@ -53,6 +60,11 @@ if (page && root.classList.contains('motion-active')) {
 		}
 		root.classList.remove('motion-active', 'motion-loading', 'motion-shell-drawn');
 		root.classList.add('motion-finished', 'motion-fallback');
+		const appLayout = document.querySelector<HTMLElement>('.app-layout');
+		if (appLayout) {
+			appLayout.inert = false;
+			appLayout.removeAttribute('aria-busy');
+		}
 		document.querySelector('[data-page-loader]')?.remove();
 	});
 }
@@ -64,6 +76,7 @@ async function initialiseMotion(currentPage: MotionPage) {
 	const pendingMotions = new Set<Promise<unknown>>();
 	const timers = new Set<number>();
 	const sleepResolvers = new Map<number, () => void>();
+	const resourceAbortController = new AbortController();
 	let stopped = false;
 	let drawGuideFrame: (element: Element) => void = () => {};
 	let emitClickSparks: (point: Point, color: string) => void = () => {};
@@ -102,10 +115,23 @@ async function initialiseMotion(currentPage: MotionPage) {
 		timers.add(timer);
 	};
 
+	const setPageBusy = (busy: boolean) => {
+		const appLayout = document.querySelector<HTMLElement>('.app-layout');
+		if (!appLayout) return;
+		appLayout.inert = busy;
+		if (busy) {
+			appLayout.setAttribute('aria-busy', 'true');
+		} else {
+			appLayout.removeAttribute('aria-busy');
+		}
+	};
+
 	const dismissLoader = (animated = false) => {
+		setPageBusy(false);
 		const loader = document.querySelector<HTMLElement>('[data-page-loader]');
 		if (!loader) return Promise.resolve();
 		loader.classList.add('is-leaving');
+		loader.setAttribute('aria-hidden', 'true');
 		if (!animated) {
 			loader.remove();
 			return Promise.resolve();
@@ -114,7 +140,7 @@ async function initialiseMotion(currentPage: MotionPage) {
 			window.setTimeout(() => {
 				loader.remove();
 				resolve();
-			}, 660);
+			}, 340);
 		});
 	};
 
@@ -1132,16 +1158,18 @@ async function initialiseMotion(currentPage: MotionPage) {
 		}
 
 		typewriters = collectTypewriters();
-		await dismissLoader(true);
+		const loader = document.querySelector<HTMLElement>('[data-page-loader]');
+		void dismissLoader(loader?.classList.contains('is-active') ?? false);
 		root.classList.remove('motion-loading');
 		if (stopped || !root.classList.contains('motion-active')) {
 			finish(true);
 			return;
 		}
 
+		const scenes = buildPointerScenes();
 		window.clearTimeout(window.__suiyanMotionTimer);
 		window.__suiyanMotionTimer = window.setTimeout(() => finish(true), 10000);
-		await runPointerJourney(buildPointerScenes());
+		await runPointerJourney(scenes);
 		if (!stopped) {
 			await sleep(120);
 			finish();
@@ -1151,60 +1179,132 @@ async function initialiseMotion(currentPage: MotionPage) {
 	}
 
 	async function waitForPageReady() {
-		const [documentReady, , loaderCycleReady] = await Promise.all([
-			new Promise<boolean>((resolve) => {
-				if (document.readyState !== 'loading') {
-					resolve(true);
-					return;
-				}
-				document.addEventListener(
-					'DOMContentLoaded',
-					() => resolve(true),
-					{ once: true },
-				);
-				sleep(1500).then(() => resolve(false));
+		const state = await Promise.race([
+			waitForCoreResources(),
+			sleep(8000).then<CoreResourcesState>(() => ({
+				timedOut: true,
+				degraded: true,
+				failedResources: [],
+				pendingResources: pendingCoreResources(),
+			})),
+		]);
+		resourceAbortController.abort();
+		window.__suiyanCoreResourcesReady = state;
+		window.dispatchEvent(
+			new CustomEvent<CoreResourcesState>('suiyan:core-resources-ready', {
+				detail: state,
 			}),
-			'fonts' in document
-				? Promise.race([document.fonts.ready, sleep(1200)])
-				: Promise.resolve(),
-			waitForLoaderCycle(),
-		]);
-		if (!documentReady || !loaderCycleReady || stopped) return false;
+		);
 
-		await Promise.race([
-			new Promise<boolean>((resolve) =>
-				window.requestAnimationFrame(() =>
-					window.requestAnimationFrame(() => resolve(true)),
+		if (stopped) return false;
+		if (!document.hidden) {
+			await Promise.race([
+				new Promise<void>((resolve) =>
+					window.requestAnimationFrame(() => resolve()),
 				),
-			),
-			sleep(500),
-		]);
-		return !stopped && root.classList.contains('motion-active');
+				sleep(100),
+			]);
+		}
+		return root.classList.contains('motion-active');
 	}
 
-	async function waitForLoaderCycle() {
-		const loader = document.querySelector<HTMLElement>('[data-page-loader]');
-		if (!loader || loader.dataset.cycleComplete === 'true') return true;
+	async function waitForCoreResources(): Promise<CoreResourcesState> {
+		if (document.readyState === 'loading') {
+			await new Promise<void>((resolve) => {
+				document.addEventListener('DOMContentLoaded', () => resolve(), { once: true });
+			});
+		}
 
-		const loaderStartedAt = Number(loader.dataset.startedAt);
-		const elapsed = Number.isFinite(loaderStartedAt)
-			? performance.now() - loaderStartedAt
-			: 0;
-		const remaining = Math.max(500, 6000 - elapsed);
-		const complete = () =>
-			loader.dataset.cycleComplete === 'true' ||
-			!loader.isConnected ||
-			!root.classList.contains('motion-active');
-		return Promise.race([
-			new Promise<boolean>((resolve) => {
-				loader.addEventListener(
-					'suiyan:loader-cycle-complete',
-					() => resolve(true),
-					{ once: true },
-				);
-			}),
-			sleep(remaining).then(complete),
-		]);
+		const stylesheets = coreStylesheets();
+		const stylesheetResults = await Promise.all(
+			stylesheets.map(async (link) => ({
+				name: `stylesheet:${link.href}`,
+				loaded: await waitForStylesheet(link, resourceAbortController.signal),
+			})),
+		);
+		const failedResources = stylesheetResults
+			.filter(({ loaded }) => !loaded)
+			.map(({ name }) => name);
+
+		if ('fonts' in document) {
+			try {
+				await document.fonts.ready;
+			} catch {
+				failedResources.push('font-set');
+			}
+			Array.from(document.fonts)
+				.filter((font) => font.status === 'error')
+				.map((font) => `font:${font.family}`)
+				.forEach((font) => failedResources.push(font));
+		}
+
+		const uniqueFailures = Array.from(new Set(failedResources));
+		return {
+			timedOut: false,
+			degraded: uniqueFailures.length > 0,
+			failedResources: uniqueFailures,
+			pendingResources: [],
+		};
+	}
+
+	function coreStylesheets() {
+		return Array.from(
+			document.querySelectorAll<HTMLLinkElement>('link[rel~="stylesheet"]'),
+		).filter((link) => {
+			if (link.disabled) return false;
+			const stylesheetUrl = new URL(link.href, window.location.href);
+			return stylesheetUrl.origin === window.location.origin;
+		});
+	}
+
+	function pendingCoreResources() {
+		const pending = coreStylesheets()
+			.filter((link) => stylesheetState(link) === 'pending')
+			.map((link) => `stylesheet:${link.href}`);
+
+		if ('fonts' in document) {
+			Array.from(document.fonts)
+				.filter((font) => font.status === 'loading')
+				.map((font) => `font:${font.family}`)
+				.forEach((font) => pending.push(font));
+		}
+
+		return Array.from(new Set(pending));
+	}
+
+	function stylesheetState(link: HTMLLinkElement): 'loaded' | 'failed' | 'pending' {
+		if (link.sheet) return 'loaded';
+
+		const resourceEntry = performance
+			.getEntriesByName(link.href, 'resource')
+			.at(-1) as (PerformanceResourceTiming & { responseStatus?: number }) | undefined;
+		const responseStatus = resourceEntry?.responseStatus;
+		if (typeof responseStatus === 'number' && responseStatus > 0) {
+			return responseStatus >= 400 ? 'failed' : 'loaded';
+		}
+		if (resourceEntry && resourceEntry.responseEnd > 0) return 'failed';
+		return 'pending';
+	}
+
+	function waitForStylesheet(link: HTMLLinkElement, signal: AbortSignal) {
+		const state = stylesheetState(link);
+		if (state !== 'pending') return Promise.resolve(state === 'loaded');
+		if (signal.aborted) return Promise.resolve(false);
+
+		return new Promise<boolean>((resolve) => {
+			const finish = (loaded: boolean) => {
+				link.removeEventListener('load', handleLoad);
+				link.removeEventListener('error', handleError);
+				signal.removeEventListener('abort', handleAbort);
+				resolve(loaded);
+			};
+			const handleLoad = () => finish(true);
+			const handleError = () => finish(false);
+			const handleAbort = () => finish(false);
+			link.addEventListener('load', handleLoad, { once: true, signal });
+			link.addEventListener('error', handleError, { once: true, signal });
+			signal.addEventListener('abort', handleAbort, { once: true });
+		});
 	}
 
 	function collectTypewriters() {
@@ -1230,6 +1330,7 @@ declare global {
 	interface Window {
 		__suiyanMotionTimer?: number;
 		__suiyanFinishMotion?: (fallback?: boolean) => void;
+		__suiyanCoreResourcesReady?: CoreResourcesState;
 	}
 }
 

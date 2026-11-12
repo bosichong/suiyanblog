@@ -5,6 +5,7 @@
 	role="status"
 	aria-live="polite"
 	aria-label="页面正在加载"
+	aria-hidden="true"
 >
 	<div class="suiyan-loader__window">
 		<div class="suiyan-loader__chrome">
@@ -55,7 +56,16 @@
 			radial-gradient(circle at 50% 42%, rgba(125, 147, 168, 0.12), transparent 42%),
 			rgba(250, 250, 250, 0.975);
 		backdrop-filter: blur(10px);
-		transition: opacity 640ms ease, visibility 640ms ease;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		transition: opacity 320ms ease, visibility 320ms ease;
+	}
+
+	.suiyan-loader.is-active {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
 	}
 
 	.suiyan-loader.is-leaving {
@@ -77,11 +87,14 @@
 		color: #30333a;
 		transform-origin: top left;
 		will-change: transform, opacity;
-		animation: suiyan-loader-arrive 760ms cubic-bezier(0.16, 1, 0.3, 1);
+	}
+
+	.suiyan-loader.is-active .suiyan-loader__window {
+		animation: suiyan-loader-arrive 380ms cubic-bezier(0.16, 1, 0.3, 1);
 	}
 
 	.suiyan-loader.is-leaving .suiyan-loader__window {
-		animation: suiyan-loader-leave 640ms cubic-bezier(0.4, 0, 1, 1) forwards;
+		animation: suiyan-loader-leave 320ms cubic-bezier(0.4, 0, 1, 1) forwards;
 	}
 
 	.suiyan-loader__chrome {
@@ -413,14 +426,75 @@
 		const footer = loader.querySelector('[data-terminal-footer]');
 		if (!output || !status || !footer) return;
 
-		loader.dataset.startedAt = String(performance.now());
-		const runId = 1;
+		const SHOW_DELAY = 150;
+		let resourcesReady = false;
+		let playbackStopped = false;
+		let generation = 0;
+		let showTimer;
+		let pageBusyObserver;
+		const playbackTimers = new Set();
+		const playbackResolvers = new Map();
 		const wait = (milliseconds) =>
-			new Promise((resolve) => window.setTimeout(resolve, milliseconds));
+			new Promise((resolve) => {
+				const timer = window.setTimeout(() => {
+					playbackTimers.delete(timer);
+					playbackResolvers.delete(timer);
+					resolve();
+				}, milliseconds);
+				playbackTimers.add(timer);
+				playbackResolvers.set(timer, resolve);
+			});
 		const canContinue = (currentRunId) =>
+			!playbackStopped &&
+			!resourcesReady &&
 			loader.isConnected &&
 			!loader.classList.contains('is-leaving') &&
-			currentRunId === runId;
+			currentRunId === generation;
+
+		const stopPlayback = () => {
+			playbackStopped = true;
+			generation += 1;
+			if (showTimer !== undefined) {
+				window.clearTimeout(showTimer);
+				showTimer = undefined;
+			}
+			playbackTimers.forEach((timer) => {
+				window.clearTimeout(timer);
+				playbackResolvers.get(timer)?.();
+			});
+			playbackTimers.clear();
+			playbackResolvers.clear();
+			pageBusyObserver?.disconnect();
+			pageBusyObserver = undefined;
+			setPageBusy(false);
+		};
+
+		const setPageBusy = (busy) => {
+			const appLayout = document.querySelector('.app-layout');
+			if (!(appLayout instanceof HTMLElement)) return false;
+			appLayout.inert = busy;
+			if (busy) {
+				appLayout.setAttribute('aria-busy', 'true');
+			} else {
+				appLayout.removeAttribute('aria-busy');
+			}
+			return true;
+		};
+
+		const watchPageBusy = () => {
+			if (setPageBusy(true)) return;
+			pageBusyObserver = new MutationObserver(() => {
+				if (!setPageBusy(true)) return;
+				pageBusyObserver?.disconnect();
+				pageBusyObserver = undefined;
+			});
+			pageBusyObserver.observe(document.body, {
+				childList: true,
+				subtree: true,
+			});
+		};
+
+		watchPageBusy();
 
 		const createLine = (className = '') => {
 			const line = document.createElement('div');
@@ -557,13 +631,48 @@
 			return true;
 		};
 
-		const run = async () => {
-			const completed = await play(runId);
-			if (!completed || !canContinue(runId)) return;
-			loader.dataset.cycleComplete = 'true';
-			loader.dispatchEvent(new CustomEvent('suiyan:loader-cycle-complete'));
+		const loop = async () => {
+			while (!resourcesReady && !playbackStopped) {
+				const runId = ++generation;
+				const completed = await play(runId);
+				if (!completed || !canContinue(runId)) return;
+				await wait(260);
+			}
 		};
 
-		void run();
+		const handleResourcesReady = (event) => {
+			if (resourcesReady) return;
+			resourcesReady = true;
+			stopPlayback();
+			const detail = event instanceof CustomEvent ? event.detail : undefined;
+			status.textContent = detail?.timedOut
+				? '核心资源加载超时，继续绘制'
+				: detail?.degraded
+					? '部分资源异常，继续绘制'
+					: '核心资源已就绪';
+			footer.textContent = 'agent ready · begin drawing';
+		};
+
+		window.addEventListener('suiyan:core-resources-ready', handleResourcesReady, {
+			once: true,
+		});
+
+		if (window.__suiyanCoreResourcesReady) {
+			handleResourcesReady(
+				new CustomEvent('suiyan:core-resources-ready', {
+					detail: window.__suiyanCoreResourcesReady,
+				}),
+			);
+			return;
+		}
+
+		showTimer = window.setTimeout(() => {
+			showTimer = undefined;
+			if (resourcesReady || playbackStopped) return;
+
+			loader.classList.add('is-active');
+			loader.setAttribute('aria-hidden', 'false');
+			void loop();
+		}, SHOW_DELAY);
 	})();
 </script>
