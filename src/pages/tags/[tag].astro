@@ -8,18 +8,39 @@ import { slugify } from '../../utils/slugify';
 
 export async function getStaticPaths() {
 	const allPosts = await getCollection('blog');
-	
-	// Get all unique tags
-	const uniqueTags = [...new Set(allPosts.flatMap((post) => post.data.tags))];
-	
-	return uniqueTags.map((tag) => {
-		const filteredPosts = allPosts
-			.filter((post) => post.data.tags.includes(tag))
-			.sort((a, b) => new Date(b.data.time).valueOf() - new Date(a.data.time).valueOf());
-		
+	const tagsBySlug = new Map<
+		string,
+		{ labelCounts: Map<string, number>; posts: typeof allPosts }
+	>();
+
+	allPosts.forEach((post) => {
+		post.data.tags.forEach((tag) => {
+			const tagSlug = slugify(tag);
+			const group = tagsBySlug.get(tagSlug) ?? {
+				labelCounts: new Map<string, number>(),
+				posts: [] as typeof allPosts,
+			};
+			group.labelCounts.set(tag, (group.labelCounts.get(tag) ?? 0) + 1);
+			group.posts.push(post);
+			tagsBySlug.set(tagSlug, group);
+		});
+	});
+
+	return Array.from(tagsBySlug.entries()).map(([tagSlug, group]) => {
+		const tagName =
+			Array.from(group.labelCounts.entries()).sort(
+				([labelA, countA], [labelB, countB]) =>
+					countB - countA || labelA.localeCompare(labelB),
+			)[0]?.[0] ?? tagSlug;
+		const posts = Array.from(
+			new Map(group.posts.map((post) => [post.id, post])).values(),
+		).sort(
+			(a, b) => new Date(b.data.time).valueOf() - new Date(a.data.time).valueOf(),
+		);
+
 		return {
-			params: { tag: slugify(tag) },
-			props: { posts: filteredPosts, tagName: tag },
+			params: { tag: tagSlug },
+			props: { posts, tagName },
 		};
 	});
 }

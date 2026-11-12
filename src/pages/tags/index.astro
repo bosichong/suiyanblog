@@ -9,20 +9,37 @@ import { slugify } from '../../utils/slugify';
 const allPosts = await getCollection('blog');
 
 // Count posts for each tag
-const tagCounts = allPosts.reduce((acc, post) => {
+const tagsBySlug = new Map<
+	string,
+	{ count: number; labelCounts: Map<string, number> }
+>();
+
+allPosts.forEach((post) => {
 	post.data.tags.forEach((tag) => {
-		acc[tag] = (acc[tag] || 0) + 1;
+		const tagSlug = slugify(tag);
+		const group = tagsBySlug.get(tagSlug) ?? {
+			count: 0,
+			labelCounts: new Map<string, number>(),
+		};
+		group.count += 1;
+		group.labelCounts.set(tag, (group.labelCounts.get(tag) ?? 0) + 1);
+		tagsBySlug.set(tagSlug, group);
 	});
-	return acc;
-}, {} as Record<string, number>);
+});
 
 // Sort tags by post count (descending) then alphabetically
-const sortedTags = Object.entries(tagCounts)
-	.sort(([a, countA], [b, countB]) => {
-		const numA = countA as number;
-		const numB = countB as number;
-		if (numB !== numA) return numB - numA;
-		return a.localeCompare(b);
+const sortedTags = Array.from(tagsBySlug.entries())
+	.map(([tagSlug, group]) => {
+		const tag =
+			Array.from(group.labelCounts.entries()).sort(
+				([labelA, countA], [labelB, countB]) =>
+					countB - countA || labelA.localeCompare(labelB),
+			)[0]?.[0] ?? tagSlug;
+		return { tag, tagSlug, count: group.count };
+	})
+	.sort((a, b) => {
+		if (b.count !== a.count) return b.count - a.count;
+		return a.tag.localeCompare(b.tag);
 	});
 ---
 
@@ -103,8 +120,8 @@ const sortedTags = Object.entries(tagCounts)
 				</div>
 				<div class="tags-flow">
 					{
-						sortedTags.map(([tag, count]) => (
-							<a href={`/tags/${slugify(tag)}`} class="tag-item" data-motion-tag>
+						sortedTags.map(({ tag, tagSlug, count }) => (
+							<a href={`/tags/${tagSlug}`} class="tag-item" data-motion-tag>
 								<span class="sr-only">{tag}（{count} 篇文章）</span>
 								<span aria-hidden="true" data-typewriter data-typewriter-reserve>{tag}({count})</span>
 							</a>
