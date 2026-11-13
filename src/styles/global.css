@@ -1,31 +1,32 @@
 /*
-  碎言博客 — 灰墨书页·现代阅读 设计系统 ("卷帙")
-  原始骨架参考 Bear Blog default.css (MIT)
+  碎言博客 — 卷帙 · Editorial Folio
+  暖纸、墨色与低饱和蓝灰构成的现代编辑排版系统。
+  原始骨架参考 Bear Blog default.css (MIT)。
 */
 
 :root {
-	/* === 语义色：背景层 === */
-	--bg: #fafafa;
-	--bg-soft: #f2f2f2;
-	--bg-overlay: #ebebeb;
+	color-scheme: light;
 
-	/* === 语义色：文字层 === */
-	--text: #212121;
-	--text-soft: #555555;
-	--text-muted: #6e6e6e;
-
-	/* === 语义色：边框层 === */
-	--border: #d8d8d8;
-	--border-soft: #e4e4e4;
-
-	/* === 语义色：强调（灰黑主色 · 雾霾蓝 hover） === */
-	--accent: #3d3d3d;
-	--accent-dark: #7d93a8;
-	--accent-soft: #edf0f4;
-	--accent-text: #ffffff;
+	/* === 颜色：暖纸、墨色、蓝灰批注 === */
+	--color-canvas: #f3f1eb;
+	--color-paper: #fffdf8;
+	--color-paper-muted: #f7f4ed;
+	--color-ink: #1f1e1a;
+	--color-ink-soft: #4d4a43;
+	--color-ink-muted: #6b675e;
+	--color-rule: #d8d2c6;
+	--color-rule-soft: #e7e2d8;
+	--color-accent: #4e6673;
+	--color-accent-strong: #344b57;
+	--color-accent-soft: #e9eef0;
+	--color-on-accent: #fffdf8;
+	--color-female: #a33b64;
+	--color-like: #b64a43;
 
 	/* === 字体 === */
-	--font-display: "LXGW WenKai", "Noto Serif SC", "Songti SC", "STSong", serif;
+	--font-display:
+		"Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong",
+		"LXGW WenKai", "SimSun", serif;
 	--font-body:
 		var(--font-atkinson), "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun",
 		"LXGW WenKai", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
@@ -33,12 +34,70 @@
 		var(--font-atkinson-mono), "LXGW WenKai Mono", "Noto Sans Mono CJK SC", "Source Code Pro", Consolas,
 		monospace;
 
-	/* === 阴影 === */
-	--shadow-sm: 0 1px 2px rgba(33, 33, 33, 0.06);
-	--shadow-md: 0 2px 8px rgba(33, 33, 33, 0.10);
-	--shadow-lg: 0 8px 24px rgba(33, 33, 33, 0.14);
+	/* === 字阶与排版节奏 === */
+	--text-caption: 0.8125rem;
+	--text-small: 0.875rem;
+	--text-base: 1rem;
+	--text-body: 1.125rem;
+	--text-lead: 1.25rem;
+	--text-h3: 1.5rem;
+	--text-h2: clamp(1.75rem, 2.8vw, 2.25rem);
+	--text-h1: clamp(2.25rem, 4.3vw, 3rem);
+	--text-display: clamp(2.5rem, 5vw, 3.5rem);
+	--leading-tight: 1.18;
+	--leading-heading: 1.3;
+	--leading-ui: 1.45;
+	--leading-body: 1.85;
+	--tracking-heading: -0.01em;
+	--tracking-body: 0.012em;
+	--tracking-label: 0.06em;
 
-	/* === 旧变量别名（保留给现有组件） === */
+	/* === 4px spacing scale === */
+	--space-1: 0.25rem;
+	--space-2: 0.5rem;
+	--space-3: 0.75rem;
+	--space-4: 1rem;
+	--space-5: 1.25rem;
+	--space-6: 1.5rem;
+	--space-8: 2rem;
+	--space-10: 2.5rem;
+	--space-12: 3rem;
+	--space-16: 4rem;
+	--space-20: 5rem;
+
+	/* === 结构尺寸 === */
+	--content-width: 720px;
+	--shell-width: 760px;
+	--page-gutter: 1rem;
+	--touch-target: 44px;
+	--radius-square: 0;
+	--radius-control: 4px;
+	--radius-pill: 999px;
+
+	/* === 阴影与动效 === */
+	--shadow-paper: 0 18px 50px rgba(31, 30, 26, 0.05);
+	--shadow-control: 0 3px 12px rgba(31, 30, 26, 0.12);
+	--shadow-overlay: 0 20px 64px rgba(31, 30, 26, 0.16);
+	--duration-fast: 140ms;
+	--duration-base: 220ms;
+	--duration-slow: 320ms;
+	--ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+	--ease-exit: cubic-bezier(0.4, 0, 1, 1);
+	--focus-ring: 2px solid var(--color-accent);
+
+	/* === 兼容别名：逐步供现有组件迁移 === */
+	--bg: var(--color-canvas);
+	--bg-soft: var(--color-paper-muted);
+	--bg-overlay: #ebe5d9;
+	--text: var(--color-ink);
+	--text-soft: var(--color-ink-soft);
+	--text-muted: var(--color-ink-muted);
+	--border: var(--color-rule);
+	--border-soft: var(--color-rule-soft);
+	--accent: var(--color-accent);
+	--accent-dark: var(--color-accent-strong);
+	--accent-soft: var(--color-accent-soft);
+	--accent-text: var(--color-on-accent);
 	--header-bg: var(--bg);
 	--nav-text: var(--text);
 	--border-color: var(--border);
@@ -47,12 +106,15 @@
 	--code-bg: var(--bg-soft);
 	--heading-color: var(--text);
 	--footer-text: var(--text-soft);
-	--black: 33, 33, 33;
-	--gray: 110, 110, 110;
-	--gray-light: 220, 220, 220;
-	--gray-dark: 33, 33, 33;
-	--gray-gradient: rgba(220, 220, 220, 30%), var(--bg);
-	--box-shadow: var(--shadow-lg);
+	--black: 31, 30, 26;
+	--gray: 107, 103, 94;
+	--gray-light: 216, 210, 198;
+	--gray-dark: 31, 30, 26;
+	--gray-gradient: rgba(216, 210, 198, 30%), var(--bg);
+	--shadow-sm: 0 1px 2px rgba(31, 30, 26, 0.05);
+	--shadow-md: var(--shadow-control);
+	--shadow-lg: var(--shadow-overlay);
+	--box-shadow: var(--shadow-paper);
 }
 
 
@@ -62,14 +124,16 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background-color: #ffffff;
-	background-image: url("/assets/stardust.png");
+	background-color: var(--color-canvas);
+	background-image:
+		linear-gradient(rgba(255, 253, 248, 0.28), rgba(243, 241, 235, 0.24)),
+		url("/assets/stardust.png");
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: var(--text-color);
-	font-size: 18px;
-	line-height: 1.8;
-	letter-spacing: 0.02em;
+	font-size: var(--text-body);
+	line-height: var(--leading-body);
+	letter-spacing: var(--tracking-body);
 	font-feature-settings: "kern" 1;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -77,10 +141,10 @@ body {
 }
 
 main {
-	width: 720px;
+	width: var(--content-width);
 	max-width: calc(100% - 2em);
 	margin: auto;
-	padding: 3em 1em;
+	padding: var(--space-12) var(--space-4);
 }
 
 /* === 纸张布局：灰底 + 居中白色圆角卡片 === */
@@ -89,16 +153,17 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 32px 20px;
+	padding: var(--space-8) var(--space-5);
 }
 
 .main-container {
 	position: relative;
 	width: 100%;
-	max-width: 760px;
-	background: #fff;
+	max-width: var(--shell-width);
+	background: var(--color-paper);
 	border: 1px solid var(--border);
-	border-radius: 0;
+	border-radius: var(--radius-square);
+	box-shadow: var(--shadow-paper);
 	overflow: hidden;
 }
 
@@ -322,29 +387,30 @@ h6 {
 	margin: 0 0 0.5rem 0;
 	color: rgb(var(--black));
 	font-family: var(--font-display);
-	line-height: 1.25;
-	letter-spacing: 0.01em;
+	font-weight: 600;
+	line-height: var(--leading-heading);
+	letter-spacing: var(--tracking-heading);
 	word-break: break-word;
+	text-wrap: balance;
 }
 h1 {
-	font-size: 2.75rem;
-	letter-spacing: -0.01em;
+	font-size: var(--text-h1);
+	line-height: var(--leading-tight);
 }
 h2 {
-	font-size: 2rem;
-	letter-spacing: -0.005em;
+	font-size: var(--text-h2);
 }
 h3 {
-	font-size: 1.5rem;
+	font-size: var(--text-h3);
 }
 h4 {
-	font-size: 1.25rem;
+	font-size: var(--text-lead);
 }
 h5 {
-	font-size: 1.1rem;
+	font-size: var(--text-base);
 }
 h6 {
-	font-size: 1rem;
+	font-size: var(--text-small);
 	color: var(--text-soft);
 }
 
@@ -358,9 +424,9 @@ a {
 	text-decoration-thickness: 1px;
 	text-underline-offset: 3px;
 	transition:
-		color 0.2s ease,
-		text-decoration-color 0.2s ease,
-		text-decoration-thickness 0.2s ease;
+		color var(--duration-fast) ease,
+		text-decoration-color var(--duration-fast) ease,
+		text-decoration-thickness var(--duration-fast) ease;
 }
 a:hover {
 	color: var(--accent-dark);
@@ -368,19 +434,20 @@ a:hover {
 	text-decoration-thickness: 2px;
 }
 a:focus-visible {
-	outline: 2px solid var(--accent);
+	outline: var(--focus-ring);
 	outline-offset: 3px;
-	border-radius: 2px;
+	border-radius: var(--radius-control);
 }
 button:focus-visible {
-	outline: 2px solid var(--accent);
+	outline: var(--focus-ring);
 	outline-offset: 2px;
 }
 
 p {
-	margin-bottom: 1.5em;
+	margin-bottom: 1.6em;
 	text-align: justify;
 	text-indent: 2em;
+	text-wrap: pretty;
 }
 .prose p {
 	margin-bottom: 1.8em;
@@ -420,7 +487,7 @@ table {
 /* 表格样式优化 */
 th,
 td {
-	padding: 0.5em 1em;
+	padding: var(--space-2) var(--space-4);
 	border: 1px solid rgb(var(--gray-light));
 	text-align: left;
 }
@@ -433,22 +500,22 @@ th {
 img {
 	max-width: 100%;
 	height: auto;
-	border-radius: 0;
+	border-radius: var(--radius-square);
 }
 
 /* === 代码：内联 + 块 === */
 code {
-	padding: 2px 6px;
+	padding: 0.125rem 0.375rem;
 	background-color: var(--code-bg);
 	border: 1px solid var(--border-soft);
-	border-radius: 4px;
+	border-radius: var(--radius-control);
 	color: var(--text);
 	font-family: var(--font-mono);
 	font-size: 0.9em;
 }
 pre {
-	padding: 1.5em;
-	border-radius: 0;
+	padding: var(--space-6);
+	border-radius: var(--radius-square);
 	background: var(--bg-soft);
 	border: 1px solid var(--border);
 }
@@ -460,10 +527,11 @@ pre > code {
 /* === blockquote：左侧细边 + 斜体 + 柔色，与正文明确区分 === */
 blockquote {
 	position: relative;
-	border-left: 3px solid var(--text-muted);
-	padding: 1em 1.5em;
-	margin: 1.5em 0;
-	border-radius: 0;
+	border-left: 3px solid var(--accent);
+	padding: var(--space-4) var(--space-6);
+	margin: 1.75em 0;
+	border-radius: var(--radius-square);
+	background: var(--color-paper-muted);
 	color: var(--text-soft);
 	font-style: italic;
 }
@@ -486,8 +554,8 @@ hr::before {
 
 @media (max-width: 720px) {
 	body {
-		font-size: 17px;
-		line-height: 1.85;
+		font-size: 1.0625rem;
+		line-height: var(--leading-body);
 	}
 	.app-layout {
 		padding: 0;
@@ -498,7 +566,11 @@ hr::before {
 		box-shadow: none;
 	}
 	main {
-		padding: 1em;
+		padding: var(--page-gutter);
+	}
+	p {
+		text-align: start;
+		text-indent: 1.5em;
 	}
 	h1 {
 		font-size: 2rem;

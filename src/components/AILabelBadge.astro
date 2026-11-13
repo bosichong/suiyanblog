@@ -60,16 +60,19 @@ const aiInfo = aiLevels.find((item) => item.level === level) || aiLevels[0];
 		position: relative;
 		display: inline-flex;
 		align-items: center;
-		gap: 0.35rem;
-		padding: 0.25rem 0.75rem;
-		font-size: 0.8rem;
+		gap: var(--space-1);
+		padding: var(--space-1) var(--space-3);
+		font-size: var(--text-caption);
 		font-weight: 500;
 		color: var(--accent-dark);
 		background: transparent;
 		border: 1px solid var(--border);
-		border-radius: 9999px;
+		border-radius: var(--radius-pill);
 		vertical-align: middle;
 		cursor: help;
+		transition:
+			border-color var(--duration-fast) ease,
+			background-color var(--duration-fast) ease;
 	}
 
 	.ai-badge svg {
@@ -77,38 +80,39 @@ const aiInfo = aiLevels.find((item) => item.level === level) || aiLevels[0];
 	}
 
 	.ai-badge:hover {
-		border-color: var(--text);
+		border-color: var(--accent);
+		background: var(--accent-soft);
 	}
 
 	/* CSS-only tooltip */
 	.ai-badge::after {
 		content: attr(data-tooltip);
 		position: absolute;
-		bottom: calc(100% + 8px);
+		bottom: calc(100% + var(--space-2));
 		left: 50%;
 		transform: translateX(-50%) translateY(4px);
-		padding: 0.4rem 0.7rem;
-		font-size: 0.75rem;
+		padding: var(--space-2) var(--space-3);
+		font-size: var(--text-caption);
 		font-weight: 400;
 		font-style: italic;
 		color: var(--text);
-		background: var(--bg);
+		background: var(--color-paper);
 		border: 1px solid var(--border);
-		border-radius: 6px;
+		border-radius: var(--radius-control);
 		white-space: nowrap;
 		opacity: 0;
 		pointer-events: none;
-		box-shadow: var(--shadow-md);
+		box-shadow: var(--shadow-control);
 		transition:
-			opacity 0.2s ease,
-			transform 0.2s ease;
+			opacity var(--duration-fast) ease,
+			transform var(--duration-fast) ease;
 		z-index: 10;
 	}
 
 	.ai-badge::before {
 		content: "";
 		position: absolute;
-		bottom: calc(100% + 2px);
+		bottom: calc(100% + 1px);
 		left: 50%;
 		transform: translateX(-50%) translateY(4px);
 		border: 6px solid transparent;
@@ -116,8 +120,8 @@ const aiInfo = aiLevels.find((item) => item.level === level) || aiLevels[0];
 		opacity: 0;
 		pointer-events: none;
 		transition:
-			opacity 0.2s ease,
-			transform 0.2s ease;
+			opacity var(--duration-fast) ease,
+			transform var(--duration-fast) ease;
 		z-index: 10;
 	}
 

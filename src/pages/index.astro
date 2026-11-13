@@ -21,22 +21,22 @@ const recentPosts = (await getCollection('blog'))
 		/>
 		<style>
 			main {
-				width: 720px;
+				width: var(--content-width);
 			}
 
 			.hero {
-				width: 720px;
+				width: var(--content-width);
 				max-width: calc(100% - 2em);
-				margin: 0 auto 3rem;
-				padding-top: 2rem;
+				margin: 0 auto var(--space-12);
+				padding-top: var(--space-8);
 				display: flex;
 				align-items: center;
-				gap: 1rem;
+				gap: var(--space-5);
 			}
 			.hero-avatar {
 				width: 4rem;
 				height: 4rem;
-				border-radius: 50%;
+				border-radius: var(--radius-pill);
 				object-fit: cover;
 				flex-shrink: 0;
 			}
@@ -44,87 +44,97 @@ const recentPosts = (await getCollection('blog'))
 				flex: 1;
 			}
 			.hero-title {
-				font-size: 1.5rem;
-				font-weight: 500;
-				line-height: 1.25;
+				font-size: var(--text-h3);
+				font-weight: 600;
+				line-height: var(--leading-heading);
 				margin: 0;
 				color: var(--text);
 				text-align: left;
 				text-indent: 0;
 			}
 			.hero-desc {
-				font-size: 0.875rem;
-				line-height: 1.25;
-				margin: 0.25rem 0 0;
-				color: var(--text-soft);
+				font-size: var(--text-small);
+				line-height: var(--leading-ui);
+				margin: var(--space-1) 0 0;
+				color: var(--text-muted);
 				text-align: left;
 				text-indent: 0;
 			}
 			@media (min-width: 721px) {
 				.hero {
-					margin-bottom: 4rem;
+					margin-bottom: var(--space-16);
 				}
 				.hero-avatar {
 					width: 5rem;
 					height: 5rem;
 				}
 				.hero-title {
-					font-size: 1.875rem;
+					font-size: 1.75rem;
 				}
 			}
 
 			.category-section {
-				margin-bottom: 3rem;
+				margin-bottom: var(--space-12);
 			}
 
 			.view-more {
 				display: block;
-				margin-top: 1rem;
+				margin-top: var(--space-6);
 				text-align: center;
 				color: var(--accent);
-				text-decoration: none;
-				font-size: 0.95rem;
-				transition: color 0.2s ease;
+				text-decoration-color: transparent;
+				font-size: var(--text-small);
+				letter-spacing: var(--tracking-label);
+				transition:
+					color var(--duration-fast) ease,
+					text-decoration-color var(--duration-fast) ease;
 			}
 
 			.view-more:hover {
 				color: var(--accent-dark);
+				text-decoration-color: currentColor;
 			}
 
 			.post-item {
 				display: flex;
 				align-items: center;
-				gap: 0.75rem;
+				gap: var(--space-3);
 				text-decoration: none;
 				color: var(--text-color);
-				padding: 0.6rem 0;
-				transition: color 0.2s ease, padding-left 0.2s ease;
+				padding: var(--space-3) 0;
+				transition: color var(--duration-fast) ease;
 			}
 			.post-item:hover {
 				color: var(--accent);
-				padding-left: 0.75rem;
 			}
 			.post-line {
 				flex: 1;
+				min-width: var(--space-5);
 				height: 1px;
 				background: var(--border-color);
+				transition: background-color var(--duration-fast) ease;
+			}
+			.post-item:hover .post-line {
+				background: var(--accent);
 			}
 			.post-title {
 				font-size: 1.125rem;
-				line-height: 1.5;
-				overflow: hidden;
-				text-overflow: ellipsis;
-				white-space: nowrap;
+				line-height: var(--leading-ui);
+				overflow: visible;
+				text-overflow: clip;
+				white-space: normal;
 				flex-shrink: 1;
 				min-width: 0;
 			}
 			.post-date {
 				color: var(--text-muted);
-				font-size: 0.9rem;
+				font-size: var(--text-small);
 				font-weight: 500;
+				font-variant-numeric: tabular-nums;
+				letter-spacing: var(--tracking-label);
 				white-space: nowrap;
 				flex-shrink: 0;
-				transition: color 0.2s ease;
+				transition: color var(--duration-fast) ease;
 			}
 			.post-item:hover .post-date {
 				color: var(--accent);
@@ -132,10 +142,14 @@ const recentPosts = (await getCollection('blog'))
 
 			@media (max-width: 720px) {
 				.post-title {
-					font-size: 1rem;
+					font-size: var(--text-base);
+					line-height: 1.5;
+					overflow: visible;
+					text-overflow: clip;
+					white-space: normal;
 				}
 				.post-date {
-					font-size: 0.85rem;
+					font-size: var(--text-caption);
 				}
 			}
 

@@ -39,14 +39,14 @@ type CoreResourcesState = {
 const EASE = [0.16, 1, 0.3, 1] as const;
 const POINTER_EASE = [0.37, 0, 0.63, 1] as const;
 const POINTER_COLORS = [
-	'82, 111, 141',
-	'177, 91, 91',
-	'73, 139, 111',
-	'176, 133, 65',
-	'126, 93, 169',
-	'62, 145, 157',
-	'184, 99, 139',
-	'105, 119, 172',
+	'78, 102, 115',
+	'52, 75, 87',
+	'107, 103, 94',
+	'132, 121, 103',
+	'89, 100, 108',
+	'74, 82, 84',
+	'116, 108, 96',
+	'63, 73, 78',
 ] as const;
 const page = document.body.dataset.motionPage as MotionPage | undefined;
 const root = document.documentElement;

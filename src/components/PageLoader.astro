@@ -53,13 +53,14 @@
 		place-items: center;
 		padding: 24px;
 		background:
-			radial-gradient(circle at 50% 42%, rgba(125, 147, 168, 0.12), transparent 42%),
-			rgba(250, 250, 250, 0.975);
-		backdrop-filter: blur(10px);
+			radial-gradient(circle at 50% 42%, rgba(78, 102, 115, 0.08), transparent 42%),
+			rgba(243, 241, 235, 0.97);
 		opacity: 0;
 		visibility: hidden;
 		pointer-events: none;
-		transition: opacity 320ms ease, visibility 320ms ease;
+		transition:
+			opacity var(--duration-slow) ease,
+			visibility var(--duration-slow) ease;
 	}
 
 	.suiyan-loader.is-active {
@@ -76,25 +77,23 @@
 
 	.suiyan-loader__window {
 		position: relative;
-		width: min(680px, calc(100vw - 32px));
+		width: min(560px, calc(100vw - 32px));
 		overflow: hidden;
-		border: 1px solid #d7d7d3;
-		border-radius: 12px;
-		background: #fbfbfa;
-		box-shadow:
-			0 24px 70px rgba(33, 33, 33, 0.15),
-			0 1px 0 rgba(255, 255, 255, 0.9) inset;
-		color: #30333a;
+		border: 1px solid var(--color-rule);
+		border-radius: var(--radius-control);
+		background: var(--color-paper);
+		box-shadow: var(--shadow-overlay);
+		color: var(--color-ink);
 		transform-origin: top left;
 		will-change: transform, opacity;
 	}
 
 	.suiyan-loader.is-active .suiyan-loader__window {
-		animation: suiyan-loader-arrive 380ms cubic-bezier(0.16, 1, 0.3, 1);
+		animation: suiyan-loader-arrive var(--duration-slow) var(--ease-standard);
 	}
 
 	.suiyan-loader.is-leaving .suiyan-loader__window {
-		animation: suiyan-loader-leave 320ms cubic-bezier(0.4, 0, 1, 1) forwards;
+		animation: suiyan-loader-leave var(--duration-slow) var(--ease-exit) forwards;
 	}
 
 	.suiyan-loader__chrome {
@@ -103,8 +102,8 @@
 		align-items: center;
 		min-height: 42px;
 		padding: 0 14px;
-		border-bottom: 1px solid #d9d9d5;
-		background: linear-gradient(#f5f5f2, #ecece8);
+		border-bottom: 1px solid var(--color-rule);
+		background: var(--color-paper-muted);
 	}
 
 	.suiyan-loader__lights {
@@ -113,27 +112,28 @@
 	}
 
 	.suiyan-loader__lights span {
-		width: 12px;
-		height: 12px;
-		border-radius: 50%;
-		box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.16) inset;
+		width: 7px;
+		height: 7px;
+		border: 1px solid var(--color-rule);
+		border-radius: var(--radius-pill);
+		background: transparent;
 	}
 
 	.suiyan-loader__lights .is-red {
-		background: #ff5f57;
+		background: var(--color-rule);
 	}
 
 	.suiyan-loader__lights .is-yellow {
-		background: #febc2e;
+		background: var(--color-rule);
 	}
 
 	.suiyan-loader__lights .is-green {
-		background: #28c840;
+		background: var(--color-rule);
 	}
 
 	.suiyan-loader__title {
 		overflow: hidden;
-		color: #777b82;
+		color: var(--color-ink-muted);
 		font-family: var(--font-mono);
 		font-size: 12px;
 		letter-spacing: 0.02em;
@@ -144,11 +144,11 @@
 
 	.suiyan-loader__live {
 		justify-self: end;
-		padding: 2px 7px;
-		border: 1px solid rgba(94, 119, 143, 0.38);
-		border-radius: 999px;
-		background: rgba(125, 147, 168, 0.08);
-		color: #5f7487;
+		padding: 2px 8px;
+		border: 1px solid var(--color-rule);
+		border-radius: var(--radius-pill);
+		background: var(--color-accent-soft);
+		color: var(--color-accent-strong);
 		font-family: var(--font-mono);
 		font-size: 10px;
 		letter-spacing: 0.08em;
@@ -156,37 +156,25 @@
 
 	.suiyan-loader__body {
 		position: relative;
-		min-height: 340px;
+		min-height: 220px;
 		padding: 20px 22px 18px;
 		overflow: hidden;
 		background:
-			linear-gradient(rgba(33, 33, 33, 0.035) 1px, transparent 1px) 0 0 / 100% 24px,
-			radial-gradient(circle at 82% 18%, rgba(125, 147, 168, 0.13), transparent 34%),
-			#fcfcfb;
+			linear-gradient(rgba(31, 30, 26, 0.035) 1px, transparent 1px) 0 0 / 100% 24px,
+			var(--color-paper);
 	}
 
 	.suiyan-loader__body::after {
-		content: "";
-		position: absolute;
-		inset: -20% 0 auto;
-		height: 32%;
-		background: linear-gradient(
-			to bottom,
-			transparent,
-			rgba(125, 147, 168, 0.12),
-			transparent
-		);
-		pointer-events: none;
-		animation: suiyan-loader-scan 4.2s linear infinite;
+		display: none;
 	}
 
 	.suiyan-loader__output {
 		position: relative;
 		z-index: 1;
-		height: 274px;
+		height: 168px;
 		margin: 0;
 		overflow: hidden;
-		color: #40444b;
+		color: var(--color-ink-soft);
 		font-family: var(--font-mono);
 		font-size: 12.5px;
 		line-height: 1.72;
@@ -199,41 +187,41 @@
 	}
 
 	.suiyan-loader__line.is-command {
-		color: #1f2329;
+		color: var(--color-ink);
 	}
 
 	.suiyan-loader__line.is-agent {
-		color: #526f85;
+		color: var(--color-accent-strong);
 	}
 
 	.suiyan-loader__line.is-scan {
-		color: #8a8e94;
+		color: var(--color-ink-muted);
 	}
 
 	.suiyan-loader__line.is-scan strong {
-		color: #58748b;
+		color: var(--color-accent);
 		font-weight: 500;
 	}
 
 	.suiyan-loader__line.is-code {
 		padding-left: 1.1em;
-		color: #61584b;
+		color: var(--color-ink-soft);
 	}
 
 	.suiyan-loader__line.is-code em {
-		color: #58748b;
+		color: var(--color-accent);
 		font-style: normal;
 	}
 
 	.suiyan-loader__line.is-result {
-		color: #4d7d5a;
+		color: var(--color-accent-strong);
 	}
 
 	.suiyan-loader__line.is-typing::after {
 		content: "▋";
 		display: inline-block;
 		margin-left: 0.12em;
-		color: #6b8397;
+		color: var(--color-accent);
 		animation: suiyan-loader-caret 520ms steps(1, end) infinite;
 	}
 
@@ -245,8 +233,8 @@
 		gap: 9px;
 		margin-top: 12px;
 		padding-top: 13px;
-		border-top: 1px solid #e2e2de;
-		color: #696d74;
+		border-top: 1px solid var(--color-rule-soft);
+		color: var(--color-ink-muted);
 		font-family: var(--font-mono);
 		font-size: 11.5px;
 	}
@@ -256,10 +244,10 @@
 		place-items: center;
 		width: 24px;
 		height: 24px;
-		border: 1px solid rgba(94, 119, 143, 0.4);
-		border-radius: 5px;
-		background: rgba(125, 147, 168, 0.07);
-		color: #58748b;
+		border: 1px solid var(--color-rule);
+		border-radius: var(--radius-control);
+		background: var(--color-accent-soft);
+		color: var(--color-accent-strong);
 		font-size: 9px;
 		letter-spacing: 0.04em;
 	}
@@ -273,8 +261,8 @@
 	.suiyan-loader__typing i {
 		width: 4px;
 		height: 4px;
-		border-radius: 50%;
-		background: #7c909f;
+		border-radius: var(--radius-pill);
+		background: var(--color-accent);
 		animation: suiyan-loader-dot 1.15s ease-in-out infinite;
 	}
 
@@ -291,9 +279,9 @@
 		justify-content: space-between;
 		gap: 16px;
 		padding: 9px 14px;
-		border-top: 1px solid #dededa;
-		background: #f1f1ee;
-		color: #8a8d91;
+		border-top: 1px solid var(--color-rule);
+		background: var(--color-paper-muted);
+		color: var(--color-ink-muted);
 		font-family: var(--font-mono);
 		font-size: 10px;
 		letter-spacing: 0.03em;
@@ -302,7 +290,7 @@
 	@keyframes suiyan-loader-arrive {
 		from {
 			opacity: 0;
-			transform: scale(0.72);
+			transform: scale(0.96);
 		}
 		to {
 			opacity: 1;
@@ -317,16 +305,7 @@
 		}
 		to {
 			opacity: 0;
-			transform: scale(0.72);
-		}
-	}
-
-	@keyframes suiyan-loader-scan {
-		from {
-			transform: translateY(-40%);
-		}
-		to {
-			transform: translateY(430%);
+			transform: scale(0.96);
 		}
 	}
 
@@ -375,12 +354,12 @@
 		}
 
 		.suiyan-loader__body {
-			min-height: 310px;
+			min-height: 210px;
 			padding: 16px 16px 14px;
 		}
 
 		.suiyan-loader__output {
-			height: 246px;
+			height: 150px;
 			font-size: 11.5px;
 		}
 	}

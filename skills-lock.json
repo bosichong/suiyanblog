@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "skills": {
+    "frontend-design": {
+      "source": "Hitbullets/codex-skills",
+      "sourceType": "github",
+      "skillPath": "codex-frontend-design/skills/frontend-design/SKILL.md",
+      "computedHash": "d935d7d88ab9da227551fd11abac7646b01bbf41ad8207c2bfd71a88876f606d"
+    },
+    "playwright": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "skillPath": "skills/.curated/playwright/SKILL.md",
+      "computedHash": "d4ba899ecfb8c4b72c52bf11527e308ae07427483380feae0d518ea7d09bb844"
+    },
+    "ui-ux-pro-max": {
+      "source": "Hitbullets/codex-skills",
+      "sourceType": "github",
+      "skillPath": "codex-frontend-design/skills/ui-ux-pro-max/SKILL.md",
+      "computedHash": "992d8ab0ff59e0ed808e9c9fa64375871e79b2d0fe70a36d3654e4a77653eb12",
+      "installMode": "copy"
+    }
+  }
+}

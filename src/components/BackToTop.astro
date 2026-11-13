@@ -17,19 +17,25 @@
 <style>
 	.back-to-top {
 		position: fixed;
-		top: 1rem;
+		top: var(--space-4);
 		left: 50%;
 		transform: translateX(-50%);
 		z-index: 1000;
 		display: none;
-		padding: 0.75rem;
+		width: var(--touch-target);
+		height: var(--touch-target);
+		padding: 0;
 		border: 1px solid var(--border-color);
-		border-radius: 50%;
-		background: var(--header-bg);
+		border-radius: var(--radius-pill);
+		background: var(--color-paper);
 		color: var(--text-soft);
 		cursor: pointer;
-		box-shadow: var(--shadow-md);
-		transition: all 0.25s ease;
+		box-shadow: var(--shadow-control);
+		transition:
+			background-color var(--duration-fast) ease,
+			border-color var(--duration-fast) ease,
+			color var(--duration-fast) ease,
+			transform var(--duration-fast) ease;
 	}
 
 	.back-to-top:hover {
@@ -37,7 +43,6 @@
 		color: var(--accent-text);
 		border-color: var(--accent);
 		transform: translateX(-50%) translateY(-2px);
-		box-shadow: var(--shadow-lg);
 	}
 
 	.back-to-top.show {

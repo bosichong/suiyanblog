@@ -26,11 +26,11 @@ import {
 		/>
 		<style>
 			main {
-				width: 720px;
+				width: var(--content-width);
 			}
 
 			section {
-				margin-bottom: 3rem;
+				margin-bottom: var(--space-12);
 			}
 
 			section:last-child {
@@ -38,23 +38,25 @@ import {
 			}
 
 			hgroup {
-				margin-bottom: 2rem;
-				padding: 2rem;
-				background: transparent;
+				margin-bottom: var(--space-8);
+				padding: var(--space-8);
+				background: var(--color-paper-muted);
 				border: 1px solid var(--border);
-				border-radius: 0;
+				border-radius: var(--radius-square);
 			}
 
 			hgroup h2 {
-				font-size: 1.75rem;
-				margin-bottom: 0.75rem;
+				font-size: var(--text-h2);
+				margin-bottom: var(--space-3);
 				color: var(--heading-color);
 			}
 
 			hgroup p {
 				color: var(--footer-text);
-				font-size: 1rem;
-				line-height: 1.6;
+				font-size: var(--text-base);
+				line-height: var(--leading-ui);
+				text-align: left;
+				text-indent: 0;
 			}
 
 			/* 宽屏：三列卡片式网格 */
@@ -64,14 +66,16 @@ import {
 				margin: 0;
 				display: grid;
 				grid-template-columns: repeat(3, minmax(0, 1fr));
-				gap: 0.6rem;
+				gap: var(--space-2);
 			}
 
 			.link-list li {
 				display: flex;
 				min-width: 0;
 				border: 1px solid var(--border);
-				transition: border-color 0.2s ease, background-color 0.2s ease;
+				transition:
+					border-color var(--duration-fast) ease,
+					background-color var(--duration-fast) ease;
 			}
 
 			.link-list li:hover,
@@ -85,11 +89,11 @@ import {
 				flex: 1 1 auto;
 				align-items: center;
 				justify-content: space-between;
-				gap: 0.6rem;
-				padding: 0.8rem 0.85rem;
+				gap: var(--space-2);
+				padding: var(--space-3) var(--space-4);
 				color: var(--heading-color);
 				text-decoration: none;
-				transition: color 0.2s ease;
+				transition: color var(--duration-fast) ease;
 			}
 
 			.link-list a:hover {
@@ -99,12 +103,14 @@ import {
 			.site-name {
 				display: inline-flex;
 				align-items: center;
-				gap: 0.3rem;
+				gap: var(--space-1);
 				min-width: 0;
+				font-size: var(--text-small);
+				line-height: var(--leading-ui);
 			}
 
 			.site-name--female {
-				color: #d81b60;
+				color: var(--color-female);
 			}
 
 			.female-icon {
@@ -115,7 +121,7 @@ import {
 				flex-shrink: 0;
 				color: var(--footer-text);
 				opacity: 0.6;
-				transition: color 0.2s ease, opacity 0.2s ease;
+				transition: color var(--duration-fast) ease, opacity var(--duration-fast) ease;
 			}
 
 			.link-list a:hover .external-icon {
@@ -124,25 +130,20 @@ import {
 			}
 
 			.divider {
-				margin: 3rem 0;
+				margin: var(--space-12) 0;
 				border: none;
 				height: 1px;
-				background: linear-gradient(
-					to right,
-					transparent,
-					var(--border-color),
-					transparent
-				);
+				background: var(--border-color);
 			}
 
 			/* 移动端 / 窄屏：恢复一行一个 */
 			@media (max-width: 720px) {
 				hgroup {
-					padding: 1.5rem;
+					padding: var(--space-6);
 				}
 
 				hgroup h2 {
-					font-size: 1.5rem;
+					font-size: var(--text-h3);
 				}
 
 				.link-list {
@@ -164,13 +165,12 @@ import {
 
 				.link-list a {
 					flex: 1 1 auto;
-					padding: 0.8rem 0.25rem;
-					transition: color 0.2s ease, padding-left 0.2s ease;
+					padding: var(--space-3) var(--space-1);
+					transition: color var(--duration-fast) ease;
 				}
 
 				.link-list a:hover {
 					color: var(--accent);
-					padding-left: 0.75rem;
 				}
 			}
 		</style>

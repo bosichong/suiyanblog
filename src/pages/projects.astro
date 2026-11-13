@@ -25,31 +25,33 @@ const pageDescription = PROJECTS_PAGE_DESCRIPTION;
 		/>
 		<style>
 			main {
-				width: 720px;
+				width: var(--content-width);
 			}
 
 			section {
-				margin-bottom: 3rem;
+				margin-bottom: var(--space-12);
 			}
 
 			hgroup {
-				margin-bottom: 2rem;
-				padding: 2rem;
-				background: transparent;
+				margin-bottom: var(--space-8);
+				padding: var(--space-8);
+				background: var(--color-paper-muted);
 				border: 1px solid var(--border);
-				border-radius: 0;
+				border-radius: var(--radius-square);
 			}
 
 			hgroup h2 {
-				font-size: 1.75rem;
-				margin-bottom: 0.75rem;
+				font-size: var(--text-h2);
+				margin-bottom: var(--space-3);
 				color: var(--heading-color);
 			}
 
 			hgroup p {
 				color: var(--footer-text);
-				font-size: 1rem;
-				line-height: 1.6;
+				font-size: var(--text-base);
+				line-height: var(--leading-ui);
+				text-align: left;
+				text-indent: 0;
 			}
 
 			.project-list {
@@ -58,51 +60,58 @@ const pageDescription = PROJECTS_PAGE_DESCRIPTION;
 				margin: 0;
 				display: flex;
 				flex-direction: column;
-				gap: 1rem;
+				gap: var(--space-4);
 			}
 
 			.project-card {
 				position: relative;
-				padding: 1.25rem;
-				background: transparent;
+				padding: var(--space-6);
+				background: var(--color-paper);
 				border: 1px solid var(--border);
-				border-radius: 0;
-				transition: transform 0.2s ease, border-color 0.2s ease;
+				border-radius: var(--radius-square);
+				transition:
+					border-color var(--duration-fast) ease,
+					background-color var(--duration-fast) ease;
 				overflow: hidden;
 			}
 
 			.project-card:hover,
 			.project-card:focus-within {
-				transform: translateY(-2px);
 				border-color: var(--accent);
+				background: color-mix(in srgb, var(--color-paper-muted) 48%, var(--color-paper));
 			}
 
 			.project-header {
 				display: flex;
 				align-items: center;
-				gap: 0.5rem;
-				margin-bottom: 0.5rem;
+				gap: var(--space-2);
+				margin-bottom: var(--space-2);
+			}
+
+			.project-header svg {
+				color: var(--accent);
 			}
 
 			.project-name {
-				font-size: 1.1rem;
+				font-family: var(--font-display);
+				font-size: 1.125rem;
 				font-weight: 600;
 				color: var(--heading-color);
 			}
 
 			.project-desc {
-				color: var(--footer-text);
-				font-size: 0.85rem;
-				line-height: 1.5;
-				margin: 0 0 0.75rem 0;
+				color: var(--text-soft);
+				font-size: var(--text-small);
+				line-height: var(--leading-ui);
+				margin: 0 0 var(--space-4) 0;
 			}
 
 			.project-meta {
 				display: flex;
 				flex-wrap: wrap;
 				align-items: center;
-				gap: 0.75rem;
-				margin-bottom: 0.5rem;
+				gap: var(--space-3);
+				margin-bottom: var(--space-2);
 			}
 
 			.project-meta:last-child {
@@ -112,9 +121,9 @@ const pageDescription = PROJECTS_PAGE_DESCRIPTION;
 			.meta-label {
 				display: inline-flex;
 				align-items: center;
-				gap: 0.3rem;
+				gap: var(--space-1);
 				color: var(--text-muted);
-				font-size: 0.78rem;
+				font-size: var(--text-caption);
 				flex-shrink: 0;
 			}
 
@@ -122,7 +131,7 @@ const pageDescription = PROJECTS_PAGE_DESCRIPTION;
 				display: inline-flex;
 				flex-wrap: wrap;
 				align-items: center;
-				gap: 0.4rem;
+				gap: var(--space-2);
 				min-width: 0;
 			}
 
@@ -130,45 +139,50 @@ const pageDescription = PROJECTS_PAGE_DESCRIPTION;
 			.demo-link {
 				display: inline-flex;
 				align-items: center;
-				gap: 0.2rem;
+				gap: var(--space-1);
 				max-width: 100%;
-				padding: 0.15rem 0.5rem;
-				background: rgba(var(--black), 5%);
-				border-radius: 4px;
-				font-size: 0.78rem;
-				color: var(--text-color);
-				text-decoration: none;
+				padding: var(--space-1) var(--space-2);
+				background: transparent;
+				border: 1px solid var(--border);
+				border-radius: var(--radius-control);
+				font-size: var(--text-caption);
+				color: var(--text-soft);
+				text-decoration-color: transparent;
 				overflow-wrap: anywhere;
-				transition: background-color 0.2s ease, color 0.2s ease;
+				transition:
+					background-color var(--duration-fast) ease,
+					border-color var(--duration-fast) ease,
+					color var(--duration-fast) ease;
 			}
 
 			.repo-link:hover,
 			.repo-link:focus-visible,
 			.demo-link:hover,
 			.demo-link:focus-visible {
-				background: var(--accent);
-				color: var(--accent-text);
+				background: var(--accent-soft);
+				border-color: var(--accent);
+				color: var(--accent-dark);
 			}
 
 			@media (max-width: 720px) {
 				hgroup {
-					padding: 1.5rem;
+					padding: var(--space-6);
 				}
 
 				hgroup h2 {
-					font-size: 1.5rem;
+					font-size: var(--text-h3);
 				}
 
 				.project-card {
-					padding: 1rem;
+					padding: var(--space-5);
 				}
 
 				.project-name {
-					font-size: 1rem;
+					font-size: var(--text-base);
 				}
 
 				.project-desc {
-					font-size: 0.8rem;
+					font-size: var(--text-small);
 				}
 			}
 		</style>

@@ -19,8 +19,8 @@ import { Icon } from 'astro-icon/components';
 			}
 			
 			main {
-				width: 720px;
-				padding-top: 2rem;
+				width: var(--content-width);
+				padding-top: var(--space-8);
 				max-width: 100%;
 				margin: 0 auto;
 			}
@@ -28,17 +28,17 @@ import { Icon } from 'astro-icon/components';
 			@media (max-width: 768px) {
 				main {
 					width: 100%;
-					padding: 1rem 1rem;
+					padding: var(--space-4);
 				}
 			}
 			
 			.search-container {
-				margin-bottom: 3rem;
+				margin-bottom: var(--space-12);
 			}
 			
 			.search-input-wrapper {
 				position: relative;
-				margin-bottom: 2rem;
+				margin-bottom: var(--space-8);
 				max-width: 100%;
 			}
 			
@@ -54,19 +54,24 @@ import { Icon } from 'astro-icon/components';
 			
 			.search-input {
 				width: 100%;
-				padding: 1rem 1rem 1rem 3rem;
-				font-size: 1.1rem;
-				border: 2px solid var(--border-color);
-				border-radius: 0;
-				background: transparent;
+				padding: var(--space-4) var(--space-4) var(--space-4) var(--space-12);
+				font-family: var(--font-body);
+				font-size: var(--text-base);
+				border: 1px solid var(--border);
+				border-radius: var(--radius-control);
+				background: var(--color-paper-muted);
 				color: var(--text-color);
-				transition: all 0.3s ease;
+				transition:
+					border-color var(--duration-fast) ease,
+					background-color var(--duration-fast) ease,
+					box-shadow var(--duration-fast) ease;
 			}
 			
-			.search-input:focus {
-				outline: none;
+			.search-input:focus-visible {
+				outline: var(--focus-ring);
+				outline-offset: 2px;
 				border-color: var(--accent);
-				box-shadow: 0 0 0 3px rgba(var(--gray), 10%);
+				background: var(--color-paper);
 			}
 			
 			.search-input::placeholder {
@@ -76,54 +81,58 @@ import { Icon } from 'astro-icon/components';
 			.search-results {
 				display: flex;
 				flex-direction: column;
-				gap: 1.5rem;
+				gap: var(--space-3);
 			}
 			
 			.search-result-item {
-				padding: 1rem;
-				background: transparent;
+				padding: var(--space-5);
+				background: var(--color-paper);
 				border: 1px solid var(--border);
-				border-radius: 0;
-				transition: all 0.3s ease;
+				border-radius: var(--radius-square);
+				transition:
+					border-color var(--duration-fast) ease,
+					background-color var(--duration-fast) ease;
 				text-decoration: none;
 				color: inherit;
 			}
 			
 			.search-result-item:hover {
-				border-color: var(--text);
-				transform: translateY(-2px);
+				border-color: var(--accent);
+				background: var(--color-paper-muted);
 			}
 			
 			.result-title {
-				font-size: 1.25rem;
-				font-weight: 700;
+				font-family: var(--font-display);
+				font-size: var(--text-lead);
+				font-weight: 600;
 				color: var(--heading-color);
-				margin-bottom: 0.5rem;
+				margin-bottom: var(--space-2);
 			}
 			
 			.result-meta {
 				display: flex;
 				align-items: center;
-				gap: 0.5rem;
-				font-size: 0.9rem;
+				gap: var(--space-2);
+				font-size: var(--text-small);
 				color: var(--footer-text);
 			}
 			
 			.result-date {
 				display: flex;
 				align-items: center;
-				gap: 0.25rem;
+				gap: var(--space-1);
+				font-variant-numeric: tabular-nums;
 			}
 			
 			.no-results {
 				text-align: center;
-				padding: 3rem;
+				padding: var(--space-12);
 				color: var(--footer-text);
 			}
 			
 			.loading {
 				text-align: center;
-				padding: 2rem;
+				padding: var(--space-8);
 				color: var(--footer-text);
 			}
 			
@@ -134,12 +143,12 @@ import { Icon } from 'astro-icon/components';
 			@media (max-width: 768px) {
 				main {
 					width: 100%;
-					padding: 1rem 1rem;
+					padding: var(--space-4);
 				}
 				
 				.search-input {
-					font-size: 0.9rem;
-					padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+					font-size: var(--text-small);
+					padding: var(--space-3) var(--space-3) var(--space-3) var(--space-10);
 				}
 				
 				.search-icon {
@@ -149,11 +158,11 @@ import { Icon } from 'astro-icon/components';
 				}
 				
 				.result-title {
-					font-size: 1rem;
+					font-size: var(--text-base);
 				}
 				
 				.search-result-item {
-					padding: 0.875rem;
+					padding: var(--space-4);
 				}
 			}
 		</style>
@@ -169,6 +178,7 @@ import { Icon } from 'astro-icon/components';
 							type="text" 
 							id="searchInput" 
 							class="search-input" 
+							aria-label="搜索文章"
 							placeholder="搜索文章标题、描述或标签..." 
 							autocomplete="off"
 						/>

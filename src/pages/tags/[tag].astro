@@ -59,68 +59,75 @@ const { posts, tagName } = Astro.props;
 		/>
 		<style>
 			main {
-				width: 720px;
+				width: var(--content-width);
 			}
 			.tag-header {
 				text-align: center;
-				margin-bottom: 3rem;
+				margin-bottom: var(--space-12);
 			}
 			.tag-header h1 {
-				margin-bottom: 0.5rem;
-				font-size: 3rem;
+				margin-bottom: var(--space-2);
+				font-size: var(--text-h1);
 			}
 			.tag-header .subtitle {
 				color: var(--footer-text);
-				font-size: 1.2rem;
+				font-size: var(--text-base);
+				line-height: var(--leading-ui);
 				margin: 0;
+				text-align: center;
+				text-indent: 0;
 			}
 			.tag-badge {
 				display: inline-block;
-				padding: 0.5rem 1.5rem;
-				background: var(--accent);
-				color: white;
-				border-radius: 9999px;
-				font-size: 1.25rem;
+				padding: var(--space-2) var(--space-5);
+				background: var(--accent-soft);
+				color: var(--accent-dark);
+				border: 1px solid var(--border);
+				border-radius: var(--radius-pill);
+				font-size: var(--text-lead);
 				font-weight: 600;
-				margin: 1rem 0;
+				margin: var(--space-4) 0;
 			}
 
 			.post-item {
 				display: flex;
 				align-items: center;
-				gap: 0.75rem;
-				padding: 0.6rem 0;
+				gap: var(--space-3);
+				padding: var(--space-3) 0;
 				text-decoration: none;
 				color: var(--text-color);
 			}
 			.post-line {
 				flex: 1;
+				min-width: var(--space-5);
 				height: 1px;
 				background: var(--border-color);
-				transition: background 0.2s ease;
+				transition: background-color var(--duration-fast) ease;
 			}
 			.post-item:hover .post-line {
-				background: var(--text);
+				background: var(--accent);
 			}
 			.post-title {
 				font-size: 1.125rem;
-				line-height: 1.5;
-				overflow: hidden;
-				text-overflow: ellipsis;
-				white-space: nowrap;
+				line-height: var(--leading-ui);
+				overflow: visible;
+				text-overflow: clip;
+				white-space: normal;
 				flex-shrink: 1;
 				min-width: 0;
 			}
 			.post-date {
 				color: var(--text-muted);
-				font-size: 0.9rem;
+				font-size: var(--text-small);
 				font-weight: 500;
+				font-variant-numeric: tabular-nums;
+				letter-spacing: var(--tracking-label);
 				white-space: nowrap;
 				flex-shrink: 0;
-				transition: color 0.2s ease;
+				transition: color var(--duration-fast) ease;
 			}
 			.post-item:hover .post-date {
-				color: var(--text);
+				color: var(--accent);
 			}
 			.posts-separator {
 				border: none;
@@ -136,14 +143,18 @@ const { posts, tagName } = Astro.props;
 					font-size: 1rem;
 				}
 				.tag-badge {
-					font-size: 1rem;
-					padding: 0.375rem 1rem;
+					font-size: var(--text-base);
+					padding: var(--space-1) var(--space-4);
 				}
 				.post-title {
-					font-size: 1rem;
+					font-size: var(--text-base);
+					line-height: 1.5;
+					overflow: visible;
+					text-overflow: clip;
+					white-space: normal;
 				}
 				.post-date {
-					font-size: 0.85rem;
+					font-size: var(--text-caption);
 				}
 			}
 		</style>

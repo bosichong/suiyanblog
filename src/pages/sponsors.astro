@@ -33,63 +33,65 @@ const sponsorConfig = {
 		/>
 		<style>
 			main {
-				width: 720px;
+				width: var(--content-width);
 				max-width: calc(100% - 2em);
 				margin: 0 auto;
 			}
 			
 			.sponsor-intro {
-				background: transparent;
+				background: var(--color-paper-muted);
 				border: 1px solid var(--border);
-				padding: 2rem;
-				border-radius: 0;
-				margin: 2rem 0;
+				padding: var(--space-8);
+				border-radius: var(--radius-square);
+				margin: var(--space-8) 0;
 				white-space: pre-line;
-				line-height: 1.8;
+				line-height: var(--leading-body);
 			}
 			
 			.sponsor-code {
 				text-align: center;
-				margin: 2rem 0;
+				margin: var(--space-8) 0;
 			}
 			
 			.sponsor-code img {
 				max-width: 300px;
-				border-radius: 0;
-				box-shadow: var(--box-shadow);
+				border: 1px solid var(--border);
+				border-radius: var(--radius-square);
+				box-shadow: none;
 			}
 			
 			.sponsor-records {
-				margin: 2rem 0;
+				margin: var(--space-8) 0;
+				overflow-x: auto;
 			}
 			
 			.sponsor-records table {
 				width: 100%;
+				min-width: 36rem;
 				border-collapse: collapse;
 				display: table;
-				overflow-x: visible;
 			}
 			
 			.sponsor-records th,
 			.sponsor-records td {
-				padding: 0.75rem 1rem;
+				padding: var(--space-3) var(--space-4);
 				border: 1px solid var(--border-color);
 				text-align: left;
 			}
 			
 			.sponsor-records th {
-				background: rgba(var(--gray), 5%);
+				background: var(--color-paper-muted);
 				font-weight: 600;
 			}
 			
 			.sponsor-records tr:hover {
-				background: rgba(var(--gray), 3%);
+				background: color-mix(in srgb, var(--color-paper-muted) 70%, transparent);
 			}
 			
 			.no-records {
 				text-align: center;
-				padding: 2rem;
-				color: rgb(var(--gray));
+				padding: var(--space-8);
+				color: var(--color-ink-muted);
 			}
 		</style>
 	</head>
