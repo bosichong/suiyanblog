@@ -10,9 +10,9 @@ export const HOME_POSTS_COUNT = 20;
 
 // 页面标题和描述
 export const LINKS_PAGE_TITLE = 'Links';
-export const LINKS_PAGE_DESCRIPTION = '能出现在这里说明你已经很流弊了！';
+export const LINKS_PAGE_DESCRIPTION = '能出现在这个列表说明你已经很流弊了！';
 export const BLOG_AGGREGATION_TITLE = '博客聚合';
-export const BLOG_AGGREGATION_DESCRIPTION = '一些优秀的博客聚合平台（也有不优秀的），排名随机，可以发现更多有趣的独立博客。';
+export const BLOG_AGGREGATION_DESCRIPTION = '一些优秀的博客聚合平台，方便你发现更多有趣的博客。';
 export const PROJECTS_PAGE_TITLE = 'Projects';
 export const PROJECTS_PAGE_DESCRIPTION = '这里收录了我的一些开源项目，涵盖 Python、JavaScript、Godot 等不同技术栈。';
 
@@ -20,7 +20,7 @@ export const PROJECTS_PAGE_DESCRIPTION = '这里收录了我的一些开源项�
 // 导航菜单项
 export const MENU_ITEMS = [
   { name: 'Home', href: '/', icon: 'home' },
-  { name: 'Tags', href: '/tags', icon: 'tag' },
+  // { name: 'Tags', href: '/tags', icon: 'tag' },
   { name: 'Projects', href: '/projects', icon: 'folder-open' },
   { name: 'Links', href: '/links', icon: 'link-variant' },
   { name: 'About', href: '/about', icon: 'information-outline' },
