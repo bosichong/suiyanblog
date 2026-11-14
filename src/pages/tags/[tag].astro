@@ -110,9 +110,9 @@ const { posts, tagName } = Astro.props;
 			.post-title {
 				font-size: 1.125rem;
 				line-height: var(--leading-ui);
-				overflow: visible;
-				text-overflow: clip;
-				white-space: normal;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
 				flex-shrink: 1;
 				min-width: 0;
 			}
@@ -134,6 +134,22 @@ const { posts, tagName } = Astro.props;
 				border-top: 1px solid var(--border-color);
 				margin: 0;
 			}
+			.more-tags {
+				display: block;
+				margin-top: var(--space-6);
+				text-align: center;
+				color: var(--accent);
+				text-decoration-color: transparent;
+				font-size: var(--text-small);
+				letter-spacing: var(--tracking-label);
+				transition:
+					color var(--duration-fast) ease,
+					text-decoration-color var(--duration-fast) ease;
+			}
+			.more-tags:hover {
+				color: var(--accent-dark);
+				text-decoration-color: currentColor;
+			}
 
 			@media (max-width: 720px) {
 				.tag-header h1 {
@@ -149,9 +165,9 @@ const { posts, tagName } = Astro.props;
 				.post-title {
 					font-size: var(--text-base);
 					line-height: 1.5;
-					overflow: visible;
-					text-overflow: clip;
-					white-space: normal;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
 				}
 				.post-date {
 					font-size: var(--text-caption);
@@ -178,6 +194,7 @@ const { posts, tagName } = Astro.props;
 					   ))
 				   }
 				   </div>
+				<a href="/tags" class="more-tags" data-motion-scene>「更多标签」</a>
 			</section>
 		</SiteShell>
 		<script>

@@ -144,9 +144,9 @@ const lastUpdated = allPosts[0]?.data.time ? new Date(allPosts[0].data.time) : n
 			.post-title {
 				font-size: 1.125rem;
 				line-height: var(--leading-ui);
-				overflow: visible;
-				text-overflow: clip;
-				white-space: normal;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
 				flex-shrink: 1;
 				min-width: 0;
 			}
@@ -208,9 +208,9 @@ const lastUpdated = allPosts[0]?.data.time ? new Date(allPosts[0].data.time) : n
 				.post-title {
 					font-size: var(--text-base);
 					line-height: 1.5;
-					overflow: visible;
-					text-overflow: clip;
-					white-space: normal;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
 				}
 				.post-date {
 					font-size: var(--text-caption);

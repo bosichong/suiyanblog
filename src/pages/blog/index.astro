@@ -130,6 +130,9 @@ const posts = (await getCollection('blog')).sort(
 				font-size: var(--text-h2);
 				font-weight: 600;
 				margin-bottom: var(--space-3);
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
 			}
 			.description {
 				margin: 0;
