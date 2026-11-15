@@ -12,7 +12,7 @@ export const HOME_POSTS_COUNT = 20;
 export const LINKS_PAGE_TITLE = 'Links';
 export const LINKS_PAGE_DESCRIPTION = '能出现在这个列表说明你已经很流弊了！';
 export const BLOG_AGGREGATION_TITLE = '博客聚合';
-export const BLOG_AGGREGATION_DESCRIPTION = '一些优秀的博客聚合平台，方便你发现更多有趣的博客。';
+export const BLOG_AGGREGATION_DESCRIPTION = '一些优秀的博客聚合平台，方便发现更多有趣的博客。';
 export const PROJECTS_PAGE_TITLE = 'Projects';
 export const PROJECTS_PAGE_DESCRIPTION = '这里收录了我的一些开源项目，涵盖 Python、JavaScript、Godot 等不同技术栈。';
 
