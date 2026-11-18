@@ -95,6 +95,7 @@ import { Icon } from 'astro-icon/components';
 		text-decoration: none;
 	}
 	.internal-links a {
+		position: relative;
 		width: var(--touch-target);
 		height: var(--touch-target);
 		justify-content: center;
@@ -111,7 +112,22 @@ import { Icon } from 'astro-icon/components';
 	}
 	.internal-links a.active {
 		color: var(--accent-dark);
-		border-bottom-color: currentColor;
+	}
+	.internal-links a::after {
+		content: "";
+		position: absolute;
+		left: 10px;
+		right: 10px;
+		bottom: 7px;
+		height: 1px;
+		background: currentColor;
+		transform: scaleX(0);
+		transform-origin: left center;
+		transition: transform var(--duration-base) var(--ease-standard);
+	}
+	.internal-links a.active::after {
+		transform: scaleX(1);
+		animation: suiyan-nav-line-in 280ms var(--ease-standard);
 	}
 	.internal-links {
 		display: flex;
@@ -164,5 +180,44 @@ import { Icon } from 'astro-icon/components';
 	.skip-link:focus {
 		left: 0;
 		top: 0;
+	}
+
+	@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+		.internal-links a:hover svg,
+		.search-link:hover svg {
+			animation: suiyan-nav-icon-glitch 120ms steps(2, end);
+		}
+	}
+
+	@keyframes suiyan-nav-icon-glitch {
+		0%,
+		100% {
+			transform: translate3d(0, 0, 0);
+			filter: none;
+		}
+		36% {
+			transform: translate3d(-1px, 0, 0);
+			filter: drop-shadow(1px 0 var(--glitch-red));
+		}
+		68% {
+			transform: translate3d(1px, 0, 0);
+			filter: drop-shadow(-1px 0 var(--glitch-cyan));
+		}
+	}
+
+	@keyframes suiyan-nav-line-in {
+		from {
+			transform: scaleX(0);
+		}
+		to {
+			transform: scaleX(1);
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.internal-links a::after {
+			transition: none;
+			animation: none;
+		}
 	}
 </style>

@@ -40,6 +40,57 @@ const recentPosts = (await getCollection('blog'))
 				object-fit: cover;
 				flex-shrink: 0;
 			}
+			.hero-avatar-link {
+				position: relative;
+				display: block;
+				flex-shrink: 0;
+				border-radius: var(--radius-pill);
+				overflow: hidden;
+				line-height: 0;
+				isolation: isolate;
+			}
+			.hero-avatar-link::before,
+			.hero-avatar-link::after {
+				content: "";
+				position: absolute;
+				inset: 0;
+				z-index: 1;
+				opacity: 0;
+				pointer-events: none;
+			}
+			.hero-avatar-link::before {
+				background:
+					linear-gradient(
+						180deg,
+						transparent 24%,
+						color-mix(in srgb, var(--glitch-red) 42%, transparent) 24% 30%,
+						transparent 30% 62%,
+						color-mix(in srgb, var(--glitch-cyan) 38%, transparent) 62% 67%,
+						transparent 67%
+					);
+			}
+			.hero-avatar-link::after {
+				top: 48%;
+				bottom: auto;
+				height: 1px;
+				background: linear-gradient(
+					90deg,
+					transparent,
+					var(--glitch-cyan),
+					var(--color-paper),
+					var(--glitch-red),
+					transparent
+				);
+			}
+			.hero-avatar-link.is-avatar-glitching img {
+				animation: suiyan-avatar-image-glitch 260ms steps(3, end);
+			}
+			.hero-avatar-link.is-avatar-glitching::before {
+				animation: suiyan-avatar-strips 260ms steps(3, end);
+			}
+			.hero-avatar-link.is-avatar-glitching::after {
+				animation: suiyan-avatar-scan 260ms ease-out;
+			}
 			.hero-text {
 				flex: 1;
 			}
@@ -108,14 +159,32 @@ const recentPosts = (await getCollection('blog'))
 				color: var(--accent);
 			}
 			.post-line {
+				position: relative;
 				flex: 1;
 				min-width: var(--space-5);
 				height: 1px;
 				background: var(--border-color);
 				transition: background-color var(--duration-fast) ease;
+				overflow: hidden;
 			}
 			.post-item:hover .post-line {
 				background: var(--accent);
+			}
+			.post-line::after {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background: linear-gradient(
+					90deg,
+					transparent,
+					var(--color-paper) 46%,
+					var(--glitch-cyan) 50%,
+					var(--color-paper) 54%,
+					transparent
+				);
+				opacity: 0;
+				transform: translate3d(-105%, 0, 0);
+				pointer-events: none;
 			}
 			.post-title {
 				font-size: 1.125rem;
@@ -153,19 +222,127 @@ const recentPosts = (await getCollection('blog'))
 				}
 			}
 
+			@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+				.post-item:hover .post-line::after {
+					animation: suiyan-home-line-scan 260ms ease-out both;
+				}
+			}
+
+			@keyframes suiyan-home-line-scan {
+				0% {
+					opacity: 0;
+					transform: translate3d(-105%, 0, 0);
+				}
+				18% {
+					opacity: 0.9;
+				}
+				100% {
+					opacity: 0;
+					transform: translate3d(105%, 0, 0);
+				}
+			}
+
+			@keyframes suiyan-avatar-image-glitch {
+				0%,
+				100% {
+					transform: translate3d(0, 0, 0);
+					filter: none;
+					clip-path: inset(0 0 0 0 round 50%);
+				}
+				24% {
+					transform: translate3d(-1px, 0, 0);
+					filter: contrast(1.12) saturate(0.76);
+					clip-path: inset(22% 0 58% 0 round 50%);
+				}
+				58% {
+					transform: translate3d(1px, 0, 0);
+					filter: contrast(1.16) saturate(0.66);
+					clip-path: inset(0 0 0 0 round 50%);
+				}
+			}
+
+			@keyframes suiyan-avatar-strips {
+				0%,
+				100% {
+					opacity: 0;
+					transform: translate3d(0, 0, 0);
+				}
+				28% {
+					opacity: 0.82;
+					transform: translate3d(-2px, 0, 0);
+				}
+				62% {
+					opacity: 0.58;
+					transform: translate3d(2px, 0, 0);
+				}
+			}
+
+			@keyframes suiyan-avatar-scan {
+				0% {
+					opacity: 0;
+					transform: translate3d(-110%, 0, 0);
+				}
+				28% {
+					opacity: 0.9;
+				}
+				100% {
+					opacity: 0;
+					transform: translate3d(110%, 0, 0);
+				}
+			}
+
+			@media (prefers-reduced-motion: reduce) {
+				.post-line::after {
+					display: none;
+				}
+				.hero-avatar-link::before,
+				.hero-avatar-link::after {
+					display: none;
+				}
+				.hero-avatar-link img {
+					animation: none;
+				}
+			}
+
 		</style>
 	</head>
 	<body data-motion-page="home">
 		<SiteShell>
 			<header class="hero" data-motion-frame>
-				<a href="/" data-motion-avatar>
+				<a
+					href="/"
+					class="hero-avatar-link"
+					data-motion-avatar
+					data-glitch-visual="avatar"
+					data-glitch-on="idle"
+					data-glitch-group="avatar"
+					data-glitch-introduce
+				>
 					<img src="/assets/images/avatar.jpg" alt={SITE_AUTHOR} class="hero-avatar" loading="eager" fetchpriority="high" decoding="async" width="80" height="80" />
 				</a>
 				<div class="hero-text" data-motion-content>
-					<p class="hero-title">{SITE_TITLE}</p>
+					<p class="hero-title">
+						<span class="sr-only">{SITE_TITLE}</span>
+						<span
+							aria-hidden="true"
+							data-glitch-text="rgb"
+							data-glitch-on="mount"
+							data-glitch-after="ambient"
+							data-glitch-showcase="brand"
+							data-glitch-chance="0.35"
+						>{SITE_TITLE}</span>
+					</p>
 					<p class="hero-desc">
 						<span class="sr-only">{SITE_DESCRIPTION}</span>
-						<span aria-hidden="true" data-typewriter>{SITE_DESCRIPTION}</span>
+						<span
+							aria-hidden="true"
+							data-typewriter
+							data-glitch-text="rgb"
+							data-glitch-on="idle"
+							data-glitch-group="intro"
+							data-glitch-introduce
+							data-glitch-idle-chance="0.6"
+						>{SITE_DESCRIPTION}</span>
 					</p>
 				</div>
 			</header>
@@ -176,7 +353,17 @@ const recentPosts = (await getCollection('blog'))
 							<span class="sr-only">
 								{post.data.title}，{formatDateShort(post.data.time)}
 							</span>
-							<span aria-hidden="true" data-typewriter>{post.data.title}</span>
+							<span
+								aria-hidden="true"
+								data-typewriter
+								data-glitch-text="micro"
+								data-glitch-on="idle hover"
+								data-glitch-group="title"
+								data-glitch-introduce
+								data-glitch-idle-chance="0.6"
+								data-glitch-hover-chance="0.32"
+								data-glitch-cooldown="2500"
+							>{post.data.title}</span>
 						</span>
 						<div class="post-line" aria-hidden="true"></div>
 						<time class="post-date" datetime={post.data.time} aria-hidden="true">

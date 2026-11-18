@@ -101,6 +101,30 @@ const sortedTags = Array.from(tagsBySlug.entries())
 				outline: var(--focus-ring);
 				outline-offset: 2px;
 			}
+
+			@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+				.tag-item:hover,
+				.tag-item:focus-visible {
+					animation: suiyan-tag-glitch 150ms steps(2, end);
+				}
+			}
+
+			@keyframes suiyan-tag-glitch {
+				0%,
+				100% {
+					transform: translate3d(0, 0, 0);
+					text-shadow: none;
+				}
+				32% {
+					transform: translate3d(-1px, 0, 0);
+					text-shadow: 1px 0 var(--glitch-red), -1px 0 var(--glitch-cyan);
+				}
+				68% {
+					transform: translate3d(1px, 0, 0);
+					text-shadow: none;
+				}
+			}
+
 			@media (max-width: 720px) {
 				.tags-header h1 {
 					font-size: 2rem;
@@ -114,6 +138,13 @@ const sortedTags = Array.from(tagsBySlug.entries())
 				.tag-item {
 					padding: 0.1875rem 0.625rem;
 					font-size: var(--text-caption);
+				}
+			}
+
+			@media (prefers-reduced-motion: reduce) {
+				.tag-item:hover,
+				.tag-item:focus-visible {
+					animation: none;
 				}
 			}
 		</style>

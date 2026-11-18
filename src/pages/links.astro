@@ -200,7 +200,14 @@ import {
 										class:list={['site-name', { 'site-name--female': link.is_female }]}
 										aria-hidden="true"
 									>
-										<span data-typewriter>{link.site_name}</span>
+										<span
+											data-typewriter
+											data-glitch-text="micro"
+											data-glitch-on="idle hover"
+											data-glitch-idle-chance="0.6"
+											data-glitch-hover-chance="0.3"
+											data-glitch-cooldown="2500"
+										>{link.site_name}</span>
 										{link.is_female && (
 											<Icon
 												name="mdi:gender-female"
@@ -243,7 +250,14 @@ import {
 								<a href={link.site_url} target="_blank" rel="noopener noreferrer">
 									<span class="sr-only">{link.site_name}</span>
 									<span class="site-name" aria-hidden="true">
-										<span data-typewriter>{link.site_name}</span>
+										<span
+											data-typewriter
+											data-glitch-text="micro"
+											data-glitch-on="idle hover"
+											data-glitch-idle-chance="0.6"
+											data-glitch-hover-chance="0.3"
+											data-glitch-cooldown="2500"
+										>{link.site_name}</span>
 									</span>
 									<svg class="external-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 										<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />

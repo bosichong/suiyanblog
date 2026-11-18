@@ -208,7 +208,13 @@ const pageDescription = PROJECTS_PAGE_DESCRIPTION;
 									<Icon name="mdi:folder-open" width={20} height={20} aria-hidden="true" />
 									<span class="project-name">
 										<span class="sr-only">{project.name}</span>
-										<span aria-hidden="true" data-typewriter>{project.name}</span>
+										<span
+											aria-hidden="true"
+											data-typewriter
+											data-glitch-text="micro"
+											data-glitch-on="hover"
+											data-glitch-chance="0.32"
+										>{project.name}</span>
 									</span>
 								</div>
 								<p class="project-desc">{project.description}</p>

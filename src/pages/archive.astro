@@ -121,6 +121,7 @@ const lastUpdated = allPosts[0]?.data.time ? new Date(allPosts[0].data.time) : n
 			details[open] summary::after {
 				content: '-';
 				transform: rotate(180deg);
+				animation: suiyan-archive-toggle 140ms steps(2, end);
 			}
 			
 			.post-item {
@@ -187,6 +188,44 @@ const lastUpdated = allPosts[0]?.data.time ? new Date(allPosts[0].data.time) : n
 				font-size: var(--text-small);
 				font-weight: 500;
 			}
+
+			details[open] .post-item {
+				animation: suiyan-archive-row-in 220ms var(--ease-standard) both;
+			}
+			details[open] .post-item:nth-of-type(2) { animation-delay: 18ms; }
+			details[open] .post-item:nth-of-type(3) { animation-delay: 36ms; }
+			details[open] .post-item:nth-of-type(4) { animation-delay: 54ms; }
+			details[open] .post-item:nth-of-type(5) { animation-delay: 72ms; }
+			details[open] .post-item:nth-of-type(6) { animation-delay: 90ms; }
+			details[open] .post-item:nth-of-type(7) { animation-delay: 108ms; }
+			details[open] .post-item:nth-of-type(8) { animation-delay: 126ms; }
+			details[open] .post-item:nth-of-type(9) { animation-delay: 144ms; }
+			details[open] .post-item:nth-of-type(10) { animation-delay: 162ms; }
+			details[open] .post-item:nth-of-type(n + 11) { animation-delay: 180ms; }
+
+			@keyframes suiyan-archive-toggle {
+				0% {
+					opacity: 0.35;
+					transform: translate3d(-1px, -2px, 0) rotate(150deg);
+				}
+				100% {
+					opacity: 1;
+					transform: translate3d(0, 0, 0) rotate(180deg);
+				}
+			}
+
+			@keyframes suiyan-archive-row-in {
+				from {
+					opacity: 0;
+					transform: translate3d(-4px, 0, 0);
+					clip-path: inset(0 100% 0 0);
+				}
+				to {
+					opacity: 1;
+					transform: translate3d(0, 0, 0);
+					clip-path: inset(0 0 0 0);
+				}
+			}
 			
 			@media (max-width: 720px) {
 				.archive-header h1 {
@@ -214,6 +253,13 @@ const lastUpdated = allPosts[0]?.data.time ? new Date(allPosts[0].data.time) : n
 				}
 				.post-date {
 					font-size: var(--text-caption);
+				}
+			}
+
+			@media (prefers-reduced-motion: reduce) {
+				details[open] summary::after,
+				details[open] .post-item {
+					animation: none;
 				}
 			}
 		</style>

@@ -100,6 +100,29 @@ const hasMoreTags = limit && tags.length > limit;
 		outline-offset: 2px;
 	}
 
+	@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+		.tag-link:hover,
+		.tag-link:focus-visible {
+			animation: suiyan-tag-list-glitch 150ms steps(2, end);
+		}
+	}
+
+	@keyframes suiyan-tag-list-glitch {
+		0%,
+		100% {
+			transform: translate3d(0, 0, 0);
+			text-shadow: none;
+		}
+		32% {
+			transform: translate3d(-1px, 0, 0);
+			text-shadow: 1px 0 var(--glitch-red), -1px 0 var(--glitch-cyan);
+		}
+		68% {
+			transform: translate3d(1px, 0, 0);
+			text-shadow: none;
+		}
+	}
+
 	.tag-more {
 		display: inline-block;
 		padding: var(--space-1) var(--space-3);
@@ -124,6 +147,13 @@ const hasMoreTags = limit && tags.length > limit;
 		.tag-link {
 			padding: 0.1875rem 0.625rem;
 			font-size: var(--text-caption);
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.tag-link:hover,
+		.tag-link:focus-visible {
+			animation: none;
 		}
 	}
 </style>

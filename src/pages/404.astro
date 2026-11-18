@@ -93,7 +93,16 @@ import { SITE_TITLE } from '../consts';
 					<img src="/assets/images/404.avif" alt="404" class="error-image" />
 					<div class="error-text">
 						<p>错误 404</p>
-						<h1>页面未找到</h1>
+						<h1>
+							<span class="sr-only">页面未找到</span>
+							<span
+								aria-hidden="true"
+								data-glitch-text="rgb"
+								data-glitch-on="idle"
+								data-glitch-idle-chance="0.45"
+								data-glitch-cooldown="3000"
+							>页面未找到</span>
+						</h1>
 						<p>抱歉，您访问的页面不存在。</p>
 						<a href="/" class="back-home">返回首页</a>
 					</div>

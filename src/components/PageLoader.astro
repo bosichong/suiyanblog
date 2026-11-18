@@ -383,6 +383,19 @@
 		const loader = document.querySelector('[data-page-loader]');
 		if (!loader) return;
 
+		try {
+			const glitchArrival = Number(
+				window.sessionStorage.getItem('suiyan:glitch-arrival') ?? 0,
+			);
+			if (Date.now() - glitchArrival < 2000) {
+				window.sessionStorage.removeItem('suiyan:glitch-arrival');
+				loader.remove();
+				return;
+			}
+		} catch {
+			// sessionStorage 不可用时继续使用正常加载器。
+		}
+
 		if (
 			!document.body.dataset.motionPage ||
 			!document.documentElement.classList.contains('motion-active')

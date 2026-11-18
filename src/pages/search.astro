@@ -41,6 +41,27 @@ import { Icon } from 'astro-icon/components';
 				margin-bottom: var(--space-8);
 				max-width: 100%;
 			}
+
+			.search-input-wrapper::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: -1px;
+				height: 1px;
+				background: linear-gradient(
+					90deg,
+					transparent,
+					var(--glitch-cyan) 42%,
+					var(--color-paper) 50%,
+					var(--glitch-red) 58%,
+					transparent
+				);
+				opacity: 0;
+				transform: scaleX(0.12);
+				transform-origin: left center;
+				pointer-events: none;
+			}
 			
 			.search-icon {
 				position: absolute;
@@ -94,7 +115,14 @@ import { Icon } from 'astro-icon/components';
 					background-color var(--duration-fast) ease;
 				text-decoration: none;
 				color: inherit;
+				animation: suiyan-search-result-in 220ms var(--ease-standard) both;
 			}
+			.search-result-item:nth-child(2) { animation-delay: 24ms; }
+			.search-result-item:nth-child(3) { animation-delay: 48ms; }
+			.search-result-item:nth-child(4) { animation-delay: 72ms; }
+			.search-result-item:nth-child(5) { animation-delay: 96ms; }
+			.search-result-item:nth-child(6) { animation-delay: 120ms; }
+			.search-result-item:nth-child(n + 7) { animation-delay: 144ms; }
 			
 			.search-result-item:hover {
 				border-color: var(--accent);
@@ -166,6 +194,48 @@ import { Icon } from 'astro-icon/components';
 				
 				.search-result-item {
 					padding: var(--space-4);
+				}
+			}
+
+			@media (prefers-reduced-motion: no-preference) {
+				.search-input-wrapper:focus-within::after {
+					animation: suiyan-search-focus-scan 260ms ease-out both;
+				}
+			}
+
+			@keyframes suiyan-search-result-in {
+				from {
+					opacity: 0;
+					transform: translate3d(0, 5px, 0);
+					clip-path: inset(0 100% 0 0);
+				}
+				to {
+					opacity: 1;
+					transform: translate3d(0, 0, 0);
+					clip-path: inset(0 0 0 0);
+				}
+			}
+
+			@keyframes suiyan-search-focus-scan {
+				0% {
+					opacity: 0;
+					transform: scaleX(0.12);
+				}
+				24% {
+					opacity: 0.82;
+				}
+				100% {
+					opacity: 0;
+					transform: scaleX(1);
+				}
+			}
+
+			@media (prefers-reduced-motion: reduce) {
+				.search-input-wrapper::after {
+					display: none;
+				}
+				.search-result-item {
+					animation: none;
 				}
 			}
 		</style>
@@ -296,7 +366,15 @@ import { Icon } from 'astro-icon/components';
 					
 					return `
 						<a href="${result.url}" class="search-result-item">
-							<div class="result-title">${result.title}</div>
+							<div class="result-title">
+								<span class="sr-only">${result.title}</span>
+								<span
+									aria-hidden="true"
+									data-glitch-text="micro"
+									data-glitch-on="hover"
+									data-glitch-chance="0.3"
+								>${result.title}</span>
+							</div>
 							<div class="result-meta">
 								<div class="result-date">
 									<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
