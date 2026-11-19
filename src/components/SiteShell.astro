@@ -3,7 +3,6 @@ import Header from './Header.astro';
 import Footer from './Footer.astro';
 import BackToTop from './BackToTop.astro';
 import PageLoader from './PageLoader.astro';
-import PaperDamage from './PaperDamage.astro';
 
 interface Props {
 	typewriter?: boolean;
@@ -15,7 +14,6 @@ const { typewriter = false } = Astro.props;
 <PageLoader />
 <div class="app-layout">
 	<div class="main-container">
-		<PaperDamage />
 		<Header />
 		<main id="main">
 			<slot />
