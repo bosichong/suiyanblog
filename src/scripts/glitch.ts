@@ -3,18 +3,20 @@ type GlitchMode = 'micro' | 'rgb';
 
 const GLITCH_CHARACTERS = ['#', '_', '/', '0', '1', '▌'] as const;
 const DEFAULT_CHANCES: Record<GlitchTrigger, number> = {
-	hover: 0.32,
-	idle: 0.6,
-	mount: 0.35,
+	hover: 0.38,
+	idle: 0.78,
+	mount: 0.7,
 };
-const DEFAULT_COOLDOWN = 2000;
-const IDLE_SHOWCASE_MIN_DELAY = 1800;
-const IDLE_SHOWCASE_MAX_DELAY = 3000;
-const IDLE_INTRO_MIN_DELAY = 3500;
-const IDLE_INTRO_MAX_DELAY = 5000;
-const IDLE_MIN_DELAY = 5500;
-const IDLE_MAX_DELAY = 9000;
-const HOVER_PAGE_COOLDOWN = 900;
+const DEFAULT_COOLDOWN = 1600;
+const IDLE_SHOWCASE_MIN_DELAY = 700;
+const IDLE_SHOWCASE_MAX_DELAY = 1300;
+const IDLE_INTRO_MIN_DELAY = 1400;
+const IDLE_INTRO_MAX_DELAY = 2400;
+const IDLE_MIN_DELAY = 2600;
+const IDLE_MAX_DELAY = 4800;
+const IDLE_MISS_MIN_DELAY = 900;
+const IDLE_MISS_MAX_DELAY = 1500;
+const HOVER_PAGE_COOLDOWN = 700;
 const PAGE_TRANSITION_MISSES_KEY = 'suiyan:page-transition-misses';
 const SHOWCASE_STORAGE_PREFIX = 'suiyan:glitch-showcase:';
 
@@ -278,7 +280,7 @@ function chooseIdleCandidate(candidates: HTMLElement[]) {
 	};
 }
 
-function scheduleIdleGlitch() {
+function scheduleIdleGlitch(retryAfterMiss = false) {
 	window.clearTimeout(idleTimer);
 	idleTimer = undefined;
 	if (!ambientReady || reduceMotion.matches || document.hidden) return;
@@ -288,13 +290,16 @@ function scheduleIdleGlitch() {
 			element.hasAttribute('data-glitch-introduce') &&
 			!introducedIdleGroups.has(getIdleGroup(element)),
 	);
-	const delay = idleShowcasePending
-		? IDLE_SHOWCASE_MIN_DELAY +
-			Math.random() * (IDLE_SHOWCASE_MAX_DELAY - IDLE_SHOWCASE_MIN_DELAY)
-		: introductionPending
-			? IDLE_INTRO_MIN_DELAY +
-				Math.random() * (IDLE_INTRO_MAX_DELAY - IDLE_INTRO_MIN_DELAY)
-			: IDLE_MIN_DELAY + Math.random() * (IDLE_MAX_DELAY - IDLE_MIN_DELAY);
+	const delay = retryAfterMiss
+		? IDLE_MISS_MIN_DELAY +
+			Math.random() * (IDLE_MISS_MAX_DELAY - IDLE_MISS_MIN_DELAY)
+		: idleShowcasePending
+			? IDLE_SHOWCASE_MIN_DELAY +
+				Math.random() * (IDLE_SHOWCASE_MAX_DELAY - IDLE_SHOWCASE_MIN_DELAY)
+			: introductionPending
+				? IDLE_INTRO_MIN_DELAY +
+					Math.random() * (IDLE_INTRO_MAX_DELAY - IDLE_INTRO_MIN_DELAY)
+				: IDLE_MIN_DELAY + Math.random() * (IDLE_MAX_DELAY - IDLE_MIN_DELAY);
 	idleTimer = window.setTimeout(() => {
 		const candidates = Array.from(idleElements).filter(
 			(element) =>
@@ -303,6 +308,7 @@ function scheduleIdleGlitch() {
 				canTrigger(element, 'idle'),
 		);
 		const selection = chooseIdleCandidate(candidates);
+		let missedChance = false;
 		if (selection) {
 			const needsIntroduction =
 				selection.element.hasAttribute('data-glitch-introduce') &&
@@ -316,13 +322,15 @@ function scheduleIdleGlitch() {
 				if (idleShowcasePending) idleShowcasePending = false;
 				if (needsIntroduction) introducedIdleGroups.add(selection.group);
 				lastIdleGroup = selection.group;
+			} else if (!needsIntroduction && !idleShowcasePending) {
+				missedChance = true;
 			}
 		} else if (idleShowcasePending) {
 			window.clearTimeout(idleTimer);
 			idleTimer = window.setTimeout(scheduleIdleGlitch, 1200);
 			return;
 		}
-		scheduleIdleGlitch();
+		scheduleIdleGlitch(missedChance);
 	}, delay);
 }
 

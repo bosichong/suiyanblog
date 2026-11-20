@@ -4,9 +4,9 @@
 // 博客基本信息
 export const SITE_TITLE = '碎言';
 export const SITE_TITLE_EN = 'SuiYan';
-export const SITE_DESCRIPTION = '记录一些碎言片语，记录一些奇怪的想法和生活点滴。';
+export const SITE_DESCRIPTION = '在这里，我写下一些碎言片语，记录一些奇怪的想法和生活点滴。';
 export const SITE_AUTHOR = 'J.sky';
-export const HOME_POSTS_COUNT = 20;
+export const HOME_POSTS_COUNT = 16;
 
 // 页面标题和描述
 export const LINKS_PAGE_TITLE = 'Links';
