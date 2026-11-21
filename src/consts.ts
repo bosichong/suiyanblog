@@ -4,7 +4,7 @@
 // 博客基本信息
 export const SITE_TITLE = '碎言';
 export const SITE_TITLE_EN = 'SuiYan';
-export const SITE_DESCRIPTION = '在这里，我写下一些碎言片语，记录一些奇怪的想法和生活点滴。';
+export const SITE_DESCRIPTION = '「代码构造秩序，故障揭示真实。算法推演世界，信仰重构未来。」';
 export const SITE_AUTHOR = 'J.sky';
 export const HOME_POSTS_COUNT = 16;
 
