@@ -11,8 +11,8 @@ export const HOME_POSTS_COUNT = 16;
 // 页面标题和描述
 export const LINKS_PAGE_TITLE = '记忆碎片';
 export const LINKS_PAGE_DESCRIPTION = '随机散落在这个世界角落里的意识与思想的碎片。';
-export const BLOG_AGGREGATION_TITLE = '信仰的聚合';
-export const BLOG_AGGREGATION_DESCRIPTION = '方便发现更多有趣的灵魂。';
+export const BLOG_AGGREGATION_TITLE = '信仰聚合';
+export const BLOG_AGGREGATION_DESCRIPTION = '发现更多有趣的灵魂。';
 export const PROJECTS_PAGE_TITLE = '源代码';
 export const PROJECTS_PAGE_DESCRIPTION = '一些并不完整的代码，用途不一，努力重构中。';
 
