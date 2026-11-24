@@ -91,7 +91,7 @@ const commentsConfig = JSON.stringify(COMMENTS_CONFIG);
 		container.appendChild(twikooDiv);
 		
 		const script = document.createElement('script');
-		script.src = '/js/twikoo.min.js';
+		script.src = '/js/twikoo.min.js?v=2.0.17';
 		script.onload = () => {
 			(window as any).twikoo?.init({
 				envId: config.twikoo.envId,
