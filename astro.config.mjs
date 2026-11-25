@@ -68,6 +68,7 @@ export default defineConfig({
 					'magnify',
 					'pencil',
 					'microphone',
+					'spellcheck',
 					'auto-fix',
 					'hand-wave',
 					'robot',

@@ -16,7 +16,7 @@ const blog = defineCollection({
 			heroImageAlt: z.string().optional(),
 			// Tags are required, at least one tag must be provided
 			tags: z.array(z.string()).min(1, "At least one tag is required"),
-			// AI创作标识等级 (0-4)，对应 HAND, VOICE, POLISH, DUET, AUTO
+			// AI创作标识等级 (0-4)，对应 HAND, FIX, POLISH, DUET, AUTO
 			ai_label: z.number().min(0).max(4).optional().default(0),
 		}),
 });

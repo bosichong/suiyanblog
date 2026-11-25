@@ -83,7 +83,7 @@ async function main() {
   // 4. AI 标识
   console.log('\nAI 标识:');
   console.log('  0. HAND - 手写·每一个字都由作者亲手敲出');
-  console.log('  1. VOICE - 口述·语音转文字，AI负责修正');
+  console.log('  1. FIX - 修正·人类生成内容，AI负责修正');
   console.log('  2. POLISH - 润色·核心由作者完成，AI辅助');
   console.log('  3. DUET - 协奏·人与AI共创，互相启发');
   console.log('  4. AUTO - 自动·AI主导生成，人类审核');
